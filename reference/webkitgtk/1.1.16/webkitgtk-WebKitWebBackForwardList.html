@@ -1,0 +1,627 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitWebBackForwardList</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="WebKitGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="webkitgtk-WebKitWebSettings.html" title="WebKitWebSettings">
+<link rel="next" href="webkitgtk-WebKitWebHistoryItem.html" title="WebKitWebHistoryItem">
+<meta name="generator" content="GTK-Doc V1.11 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="chapter" href="ch01.html" title="Class Overview">
+<link rel="chapter" href="ch02.html" title="Running WebKitGTK+-based programs">
+<link rel="index" href="index-all.html" title="Index">
+<link rel="index" href="index-deprecated.html" title="Index of deprecated symbols">
+<link rel="index" href="index-1.0.1.html" title="Index of new symbols in 1.0.1">
+<link rel="index" href="index-1.0.2.html" title="Index of new symbols in 1.0.2">
+<link rel="index" href="index-1.0.3.html" title="Index of new symbols in 1.0.3">
+<link rel="index" href="index-1.1.1.html" title="Index of new symbols in 1.1.1">
+<link rel="index" href="index-1.1.2.html" title="Index of new symbols in 1.1.2">
+<link rel="index" href="index-1.1.3.html" title="Index of new symbols in 1.1.3">
+<link rel="index" href="index-1.1.4.html" title="Index of new symbols in 1.1.4">
+<link rel="index" href="index-1.1.5.html" title="Index of new symbols in 1.1.5">
+<link rel="index" href="index-1.1.6.html" title="Index of new symbols in 1.1.6">
+<link rel="index" href="index-1.1.7.html" title="Index of new symbols in 1.1.7">
+<link rel="index" href="index-1.1.8.html" title="Index of new symbols in 1.1.8">
+<link rel="index" href="index-1.1.10.html" title="Index of new symbols in 1.1.10">
+<link rel="index" href="index-1.1.11.html" title="Index of new symbols in 1.1.11">
+<link rel="index" href="index-1.1.13.html" title="Index of new symbols in 1.1.13">
+<link rel="index" href="index-1.1.14.html" title="Index of new symbols in 1.1.14">
+<link rel="index" href="index-1.1.15.html" title="Index of new symbols in 1.1.15">
+<link rel="index" href="index-1.1.16.html" title="Index of new symbols in 1.1.16">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="webkitgtk-WebKitWebSettings.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">WebKitGTK+ Reference Manual</th>
+<td><a accesskey="n" href="webkitgtk-WebKitWebHistoryItem.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#webkitgtk-WebKitWebBackForwardList.synopsis" class="shortcut">Top</a>
+                 | 
+                <a href="#webkitgtk-WebKitWebBackForwardList.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry" title="WebKitWebBackForwardList">
+<a name="webkitgtk-WebKitWebBackForwardList"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="webkitgtk-WebKitWebBackForwardList.top_of_page"></a>WebKitWebBackForwardList</span></h2>
+<p>WebKitWebBackForwardList — The history of a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a></p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="webkitgtk-WebKitWebBackForwardList.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+                    <a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList">WebKitWebBackForwardList</a>;
+void                <a class="link" href="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-add-item" title="webkit_web_back_forward_list_add_item ()">webkit_web_back_forward_list_add_item</a>
+                                                        (<a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList">WebKitWebBackForwardList</a> *web_back_forward_list,
+                                                         <a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem">WebKitWebHistoryItem</a> *history_item);
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            <a class="link" href="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-contains-item" title="webkit_web_back_forward_list_contains_item ()">webkit_web_back_forward_list_contains_item</a>
+                                                        (<a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList">WebKitWebBackForwardList</a> *web_back_forward_list,
+                                                         <a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem">WebKitWebHistoryItem</a> *history_item);
+<a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem">WebKitWebHistoryItem</a> * <a class="link" href="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-get-back-item" title="webkit_web_back_forward_list_get_back_item ()">webkit_web_back_forward_list_get_back_item</a>
+                                                        (<a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList">WebKitWebBackForwardList</a> *web_back_forward_list);
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+>gint</a>                <a class="link" href="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-get-back-length" title="webkit_web_back_forward_list_get_back_length ()">webkit_web_back_forward_list_get_back_length</a>
+                                                        (<a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList">WebKitWebBackForwardList</a> *web_back_forward_list);
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"
+>GList</a> *             <a class="link" href="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-get-back-list-with-limit" title="webkit_web_back_forward_list_get_back_list_with_limit ()">webkit_web_back_forward_list_get_back_list_with_limit</a>
+                                                        (<a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList">WebKitWebBackForwardList</a> *web_back_forward_list,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+>gint</a> limit);
+<a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem">WebKitWebHistoryItem</a> * <a class="link" href="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-get-current-item" title="webkit_web_back_forward_list_get_current_item ()">webkit_web_back_forward_list_get_current_item</a>
+                                                        (<a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList">WebKitWebBackForwardList</a> *web_back_forward_list);
+<a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem">WebKitWebHistoryItem</a> * <a class="link" href="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-get-forward-item" title="webkit_web_back_forward_list_get_forward_item ()">webkit_web_back_forward_list_get_forward_item</a>
+                                                        (<a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList">WebKitWebBackForwardList</a> *web_back_forward_list);
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+>gint</a>                <a class="link" href="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-get-forward-length" title="webkit_web_back_forward_list_get_forward_length ()">webkit_web_back_forward_list_get_forward_length</a>
+                                                        (<a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList">WebKitWebBackForwardList</a> *web_back_forward_list);
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"
+>GList</a> *             <a class="link" href="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-get-forward-list-with-limit" title="webkit_web_back_forward_list_get_forward_list_with_limit ()">webkit_web_back_forward_list_get_forward_list_with_limit</a>
+                                                        (<a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList">WebKitWebBackForwardList</a> *web_back_forward_list,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+>gint</a> limit);
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+>gint</a>                <a class="link" href="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-get-limit" title="webkit_web_back_forward_list_get_limit ()">webkit_web_back_forward_list_get_limit</a>
+                                                        (<a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList">WebKitWebBackForwardList</a> *web_back_forward_list);
+<a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem">WebKitWebHistoryItem</a> * <a class="link" href="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-get-nth-item" title="webkit_web_back_forward_list_get_nth_item ()">webkit_web_back_forward_list_get_nth_item</a>
+                                                        (<a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList">WebKitWebBackForwardList</a> *web_back_forward_list,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+>gint</a> index);
+void                <a class="link" href="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-go-back" title="webkit_web_back_forward_list_go_back ()">webkit_web_back_forward_list_go_back</a>
+                                                        (<a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList">WebKitWebBackForwardList</a> *web_back_forward_list);
+void                <a class="link" href="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-go-forward" title="webkit_web_back_forward_list_go_forward ()">webkit_web_back_forward_list_go_forward</a>
+                                                        (<a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList">WebKitWebBackForwardList</a> *web_back_forward_list);
+void                <a class="link" href="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-go-to-item" title="webkit_web_back_forward_list_go_to_item ()">webkit_web_back_forward_list_go_to_item</a>
+                                                        (<a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList">WebKitWebBackForwardList</a> *web_back_forward_list,
+                                                         <a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem">WebKitWebHistoryItem</a> *history_item);
+<a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList">WebKitWebBackForwardList</a> * <a class="link" href="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-new-with-web-view" title="webkit_web_back_forward_list_new_with_web_view ()">webkit_web_back_forward_list_new_with_web_view</a>
+                                                        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);
+void                <a class="link" href="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-set-limit" title="webkit_web_back_forward_list_set_limit ()">webkit_web_back_forward_list_set_limit</a>
+                                                        (<a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList">WebKitWebBackForwardList</a> *web_back_forward_list,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+>gint</a> limit);
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="webkitgtk-WebKitWebBackForwardList.description"></a><h2>Description</h2>
+<p>
+</p>
+<div class="informalexample"><pre class="programlisting">
+/* Get the WebKitWebBackForwardList from the WebKitWebView */
+WebKitWebBackForwardList *back_forward_list = webkit_web_view_get_back_forward_list (my_web_view);
+WebKitWebHistoryItem *item = webkit_web_back_forward_list_get_current_item (back_forward_list);
+
+/* Do something with a WebKitWebHistoryItem */
+g_print("%p", item);
+
+/* Control some parameters */
+WebKitWebBackForwardList *back_forward_list = webkit_web_view_get_back_forward_list (my_web_view);
+webkit_web_back_forward_list_set_limit (back_forward_list, 30);
+</pre></div>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="webkitgtk-WebKitWebBackForwardList.details"></a><h2>Details</h2>
+<div class="refsect2" title="WebKitWebBackForwardList">
+<a name="WebKitWebBackForwardList"></a><h3>WebKitWebBackForwardList</h3>
+<pre class="programlisting">typedef struct {
+    GObject parent_instance;
+} WebKitWebBackForwardList;
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_back_forward_list_add_item ()">
+<a name="webkit-web-back-forward-list-add-item"></a><h3>webkit_web_back_forward_list_add_item ()</h3>
+<pre class="programlisting">void                webkit_web_back_forward_list_add_item
+                                                        (<a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList">WebKitWebBackForwardList</a> *web_back_forward_list,
+                                                         <a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem">WebKitWebHistoryItem</a> *history_item);</pre>
+<p>
+Adds the item to the <a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList"><span class="type">WebKitWebBackForwardList</span></a>.
+</p>
+<p>
+The <em class="parameter"><code>webBackForwardList</code></em> will add a reference to the <em class="parameter"><code>webHistoryItem</code></em>, so you
+don't need to keep a reference once you've added it to the list.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_back_forward_list</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList"><span class="type">WebKitWebBackForwardList</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>history_item</code></em> :</span></p></td>
+<td> the <a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem"><span class="type">WebKitWebHistoryItem</span></a> to add
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.1.1</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_back_forward_list_contains_item ()">
+<a name="webkit-web-back-forward-list-contains-item"></a><h3>webkit_web_back_forward_list_contains_item ()</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            webkit_web_back_forward_list_contains_item
+                                                        (<a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList">WebKitWebBackForwardList</a> *web_back_forward_list,
+                                                         <a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem">WebKitWebHistoryItem</a> *history_item);</pre>
+<p>
+Checks if <em class="parameter"><code>web_history_item</code></em> is in the back forward list
+</p>
+<p>
+Return: <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE--CAPS"
+><code class="literal">TRUE</code></a> if <em class="parameter"><code>web_history_item</code></em> is in the back forward list, <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE--CAPS"
+><code class="literal">FALSE</code></a> if it doesn't</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_back_forward_list</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList"><span class="type">WebKitWebBackForwardList</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>history_item</code></em> :</span></p></td>
+<td> the <a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem"><span class="type">WebKitWebHistoryItem</span></a> to check
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_back_forward_list_get_back_item ()">
+<a name="webkit-web-back-forward-list-get-back-item"></a><h3>webkit_web_back_forward_list_get_back_item ()</h3>
+<pre class="programlisting"><a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem">WebKitWebHistoryItem</a> * webkit_web_back_forward_list_get_back_item
+                                                        (<a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList">WebKitWebBackForwardList</a> *web_back_forward_list);</pre>
+<p>
+Returns the item that precedes the current item</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_back_forward_list</code></em> :</span></p></td>
+<td> a <span class="type">WebBackForwardList</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the <a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem"><span class="type">WebKitWebHistoryItem</span></a> preceding the current item
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_back_forward_list_get_back_length ()">
+<a name="webkit-web-back-forward-list-get-back-length"></a><h3>webkit_web_back_forward_list_get_back_length ()</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+>gint</a>                webkit_web_back_forward_list_get_back_length
+                                                        (<a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList">WebKitWebBackForwardList</a> *web_back_forward_list);</pre>
+<p>
+Returns the number of items that preced the current item.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_back_forward_list</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList"><span class="type">WebKitWebBackForwardList</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+><span class="type">gint</span></a> corresponding to the number of items preceding the current item
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_back_forward_list_get_back_list_with_limit ()">
+<a name="webkit-web-back-forward-list-get-back-list-with-limit"></a><h3>webkit_web_back_forward_list_get_back_list_with_limit ()</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"
+>GList</a> *             webkit_web_back_forward_list_get_back_list_with_limit
+                                                        (<a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList">WebKitWebBackForwardList</a> *web_back_forward_list,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+>gint</a> limit);</pre>
+<p>
+Returns a list of items that precede the current item, limited by <em class="parameter"><code>limit</code></em></p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_back_forward_list</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList"><span class="type">WebKitWebBackForwardList</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>limit</code></em> :</span></p></td>
+<td> the number of items to retrieve
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a <a
+href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"
+><span class="type">GList</span></a> of items preceding the current item, limited by <em class="parameter"><code>limit</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_back_forward_list_get_current_item ()">
+<a name="webkit-web-back-forward-list-get-current-item"></a><h3>webkit_web_back_forward_list_get_current_item ()</h3>
+<pre class="programlisting"><a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem">WebKitWebHistoryItem</a> * webkit_web_back_forward_list_get_current_item
+                                                        (<a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList">WebKitWebBackForwardList</a> *web_back_forward_list);</pre>
+<p>
+Returns the current item.
+</p>
+<p>
+Returns a NULL value if the back forward list is empty</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_back_forward_list</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList"><span class="type">WebKitWebBackForwardList</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem"><span class="type">WebKitWebHistoryItem</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_back_forward_list_get_forward_item ()">
+<a name="webkit-web-back-forward-list-get-forward-item"></a><h3>webkit_web_back_forward_list_get_forward_item ()</h3>
+<pre class="programlisting"><a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem">WebKitWebHistoryItem</a> * webkit_web_back_forward_list_get_forward_item
+                                                        (<a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList">WebKitWebBackForwardList</a> *web_back_forward_list);</pre>
+<p>
+Returns the item that succeeds the current item.
+</p>
+<p>
+Returns a NULL value if there nothing that succeeds the current item</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_back_forward_list</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList"><span class="type">WebKitWebBackForwardList</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem"><span class="type">WebKitWebHistoryItem</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_back_forward_list_get_forward_length ()">
+<a name="webkit-web-back-forward-list-get-forward-length"></a><h3>webkit_web_back_forward_list_get_forward_length ()</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+>gint</a>                webkit_web_back_forward_list_get_forward_length
+                                                        (<a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList">WebKitWebBackForwardList</a> *web_back_forward_list);</pre>
+<p>
+Returns the number of items that succeed the current item.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_back_forward_list</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList"><span class="type">WebKitWebBackForwardList</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+><span class="type">gint</span></a> corresponding to the nuber of items succeeding the current item
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_back_forward_list_get_forward_list_with_limit ()">
+<a name="webkit-web-back-forward-list-get-forward-list-with-limit"></a><h3>webkit_web_back_forward_list_get_forward_list_with_limit ()</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"
+>GList</a> *             webkit_web_back_forward_list_get_forward_list_with_limit
+                                                        (<a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList">WebKitWebBackForwardList</a> *web_back_forward_list,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+>gint</a> limit);</pre>
+<p>
+Returns a list of items that succeed the current item, limited by <em class="parameter"><code>limit</code></em></p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_back_forward_list</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList"><span class="type">WebKitWebBackForwardList</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>limit</code></em> :</span></p></td>
+<td> the number of items to retrieve
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a <a
+href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"
+><span class="type">GList</span></a> of items succeeding the current item, limited by <em class="parameter"><code>limit</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_back_forward_list_get_limit ()">
+<a name="webkit-web-back-forward-list-get-limit"></a><h3>webkit_web_back_forward_list_get_limit ()</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+>gint</a>                webkit_web_back_forward_list_get_limit
+                                                        (<a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList">WebKitWebBackForwardList</a> *web_back_forward_list);</pre>
+<p>
+Returns the maximum limit of the back forward list.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_back_forward_list</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList"><span class="type">WebKitWebBackForwardList</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+><span class="type">gint</span></a> indicating the number of <span class="type">WebHistoryItem</span> the back forward list can hold
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_back_forward_list_get_nth_item ()">
+<a name="webkit-web-back-forward-list-get-nth-item"></a><h3>webkit_web_back_forward_list_get_nth_item ()</h3>
+<pre class="programlisting"><a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem">WebKitWebHistoryItem</a> * webkit_web_back_forward_list_get_nth_item
+                                                        (<a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList">WebKitWebBackForwardList</a> *web_back_forward_list,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+>gint</a> index);</pre>
+<p>
+Returns the item at a given index relative to the current item.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_back_forward_list</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList"><span class="type">WebKitWebBackForwardList</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>index</code></em> :</span></p></td>
+<td> the index of the item
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the <a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem"><span class="type">WebKitWebHistoryItem</span></a> located at the specified index relative to the current item
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_back_forward_list_go_back ()">
+<a name="webkit-web-back-forward-list-go-back"></a><h3>webkit_web_back_forward_list_go_back ()</h3>
+<pre class="programlisting">void                webkit_web_back_forward_list_go_back
+                                                        (<a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList">WebKitWebBackForwardList</a> *web_back_forward_list);</pre>
+<p>
+Steps backward in the back forward list</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>web_back_forward_list</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList"><span class="type">WebKitWebBackForwardList</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_back_forward_list_go_forward ()">
+<a name="webkit-web-back-forward-list-go-forward"></a><h3>webkit_web_back_forward_list_go_forward ()</h3>
+<pre class="programlisting">void                webkit_web_back_forward_list_go_forward
+                                                        (<a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList">WebKitWebBackForwardList</a> *web_back_forward_list);</pre>
+<p>
+Steps forward in the back forward list</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>web_back_forward_list</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList"><span class="type">WebKitWebBackForwardList</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_back_forward_list_go_to_item ()">
+<a name="webkit-web-back-forward-list-go-to-item"></a><h3>webkit_web_back_forward_list_go_to_item ()</h3>
+<pre class="programlisting">void                webkit_web_back_forward_list_go_to_item
+                                                        (<a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList">WebKitWebBackForwardList</a> *web_back_forward_list,
+                                                         <a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem">WebKitWebHistoryItem</a> *history_item);</pre>
+<p>
+Go to the specified <em class="parameter"><code>web_history_item</code></em> in the back forward list</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_back_forward_list</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList"><span class="type">WebKitWebBackForwardList</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>history_item</code></em> :</span></p></td>
+<td> the <a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem"><span class="type">WebKitWebHistoryItem</span></a> to go to
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_back_forward_list_new_with_web_view ()">
+<a name="webkit-web-back-forward-list-new-with-web-view"></a><h3>webkit_web_back_forward_list_new_with_web_view ()</h3>
+<pre class="programlisting"><a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList">WebKitWebBackForwardList</a> * webkit_web_back_forward_list_new_with_web_view
+                                                        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);</pre>
+<p>
+Creates an instance of the back forward list with a controlling <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a></p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> the back forward list's <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList"><span class="type">WebKitWebBackForwardList</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_back_forward_list_set_limit ()">
+<a name="webkit-web-back-forward-list-set-limit"></a><h3>webkit_web_back_forward_list_set_limit ()</h3>
+<pre class="programlisting">void                webkit_web_back_forward_list_set_limit
+                                                        (<a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList">WebKitWebBackForwardList</a> *web_back_forward_list,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+>gint</a> limit);</pre>
+<p>
+Sets the maximum limit of the back forward list. If the back forward list
+exceeds its capacity, items will be removed everytime a new item has been
+added.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_back_forward_list</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList"><span class="type">WebKitWebBackForwardList</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>limit</code></em> :</span></p></td>
+<td> the limit to set the back forward list to
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" title="See Also">
+<a name="webkitgtk-WebKitWebBackForwardList.see-also"></a><h2>See Also</h2>
+#WebKitWebView, <a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem"><span class="type">WebKitWebHistoryItem</span></a>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.11</div>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitNetworkRequest</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.1">
+<link rel="home" href="index.html" title="WebKitGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="webkitgtk-WebKitWebPolicyDecision.html" title="WebKitWebPolicyDecision">
+<link rel="next" href="webkitgtk-WebKitWebInspector.html" title="WebKitWebInspector">
+<meta name="generator" content="GTK-Doc V1.11 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="chapter" href="ch01.html" title="Class Overview">
+<link rel="chapter" href="ch02.html" title="Running WebKitGTK+-based programs">
+<link rel="index" href="index-all.html" title="Index">
+<link rel="index" href="index-deprecated.html" title="Index of deprecated symbols">
+<link rel="index" href="index-1.0.1.html" title="Index of new symbols in 1.0.1">
+<link rel="index" href="index-1.0.2.html" title="Index of new symbols in 1.0.2">
+<link rel="index" href="index-1.0.3.html" title="Index of new symbols in 1.0.3">
+<link rel="index" href="index-1.1.1.html" title="Index of new symbols in 1.1.1">
+<link rel="index" href="index-1.1.2.html" title="Index of new symbols in 1.1.2">
+<link rel="index" href="index-1.1.3.html" title="Index of new symbols in 1.1.3">
+<link rel="index" href="index-1.1.4.html" title="Index of new symbols in 1.1.4">
+<link rel="index" href="index-1.1.5.html" title="Index of new symbols in 1.1.5">
+<link rel="index" href="index-1.1.6.html" title="Index of new symbols in 1.1.6">
+<link rel="index" href="index-1.1.7.html" title="Index of new symbols in 1.1.7">
+<link rel="index" href="index-1.1.8.html" title="Index of new symbols in 1.1.8">
+<link rel="index" href="index-1.1.10.html" title="Index of new symbols in 1.1.10">
+<link rel="index" href="index-1.1.11.html" title="Index of new symbols in 1.1.11">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="webkitgtk-WebKitWebPolicyDecision.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">WebKitGTK+ Reference Manual</th>
+<td><a accesskey="n" href="webkitgtk-WebKitWebInspector.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#webkitgtk-WebKitNetworkRequest.synopsis" class="shortcut">Top</a>
+                 | 
+                <a href="#webkitgtk-WebKitNetworkRequest.description" class="shortcut">Description</a>
+                 | 
+                <a href="#webkitgtk-WebKitNetworkRequest.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry" title="WebKitNetworkRequest">
+<a name="webkitgtk-WebKitNetworkRequest"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="webkitgtk-WebKitNetworkRequest.top_of_page"></a>WebKitNetworkRequest</span></h2>
+<p>WebKitNetworkRequest — The target of a navigation request</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="webkitgtk-WebKitNetworkRequest.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+                    <a class="link" href="webkitgtk-WebKitNetworkRequest.html#WebKitNetworkRequest" title="WebKitNetworkRequest">WebKitNetworkRequest</a>;
+const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *       <a class="link" href="webkitgtk-WebKitNetworkRequest.html#webkit-network-request-get-uri" title="webkit_network_request_get_uri ()">webkit_network_request_get_uri</a>      (<a class="link" href="webkitgtk-WebKitNetworkRequest.html#WebKitNetworkRequest" title="WebKitNetworkRequest">WebKitNetworkRequest</a> *request);
+<a
+href="../libsoup-2.4/SoupMessage.html"
+>SoupMessage</a> *       <a class="link" href="webkitgtk-WebKitNetworkRequest.html#webkit-network-request-get-message" title="webkit_network_request_get_message ()">webkit_network_request_get_message</a>  (<a class="link" href="webkitgtk-WebKitNetworkRequest.html#WebKitNetworkRequest" title="WebKitNetworkRequest">WebKitNetworkRequest</a> *request);
+void                <a class="link" href="webkitgtk-WebKitNetworkRequest.html#webkit-network-request-set-uri" title="webkit_network_request_set_uri ()">webkit_network_request_set_uri</a>      (<a class="link" href="webkitgtk-WebKitNetworkRequest.html#WebKitNetworkRequest" title="WebKitNetworkRequest">WebKitNetworkRequest</a> *request,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *uri);
+</pre>
+</div>
+<div class="refsect1" title="Properties">
+<a name="webkitgtk-WebKitNetworkRequest.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="webkitgtk-WebKitNetworkRequest.html#WebKitNetworkRequest--message" title='The "message" property'>message</a>"                  <a
+href="../libsoup-2.4/SoupMessage.html"
+>SoupMessage</a>*          : Read / Write / Construct Only
+  "<a class="link" href="webkitgtk-WebKitNetworkRequest.html#WebKitNetworkRequest--uri" title='The "uri" property'>uri</a>"                      <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="webkitgtk-WebKitNetworkRequest.description"></a><h2>Description</h2>
+<p>
+This class represents the network related aspects of a navigation
+request. Currently this is only the uri of the target. In the future
+the state of the web form might be added.
+Currently this object is only used along with the
+<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-navigation-requested" title='The "navigation-requested" signal'><span class="type">"navigation-requested"</span></a> signal.</p>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="webkitgtk-WebKitNetworkRequest.details"></a><h2>Details</h2>
+<div class="refsect2" title="WebKitNetworkRequest">
+<a name="WebKitNetworkRequest"></a><h3>WebKitNetworkRequest</h3>
+<pre class="programlisting">typedef struct {
+    GObject parent_instance;
+} WebKitNetworkRequest;
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_network_request_get_uri ()">
+<a name="webkit-network-request-get-uri"></a><h3>webkit_network_request_get_uri ()</h3>
+<pre class="programlisting">const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *       webkit_network_request_get_uri      (<a class="link" href="webkitgtk-WebKitNetworkRequest.html#WebKitNetworkRequest" title="WebKitNetworkRequest">WebKitNetworkRequest</a> *request);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>request</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitNetworkRequest.html#WebKitNetworkRequest" title="WebKitNetworkRequest"><span class="type">WebKitNetworkRequest</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the uri of the <a class="link" href="webkitgtk-WebKitNetworkRequest.html#WebKitNetworkRequest" title="WebKitNetworkRequest"><span class="type">WebKitNetworkRequest</span></a>
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.0.0</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_network_request_get_message ()">
+<a name="webkit-network-request-get-message"></a><h3>webkit_network_request_get_message ()</h3>
+<pre class="programlisting"><a
+href="../libsoup-2.4/SoupMessage.html"
+>SoupMessage</a> *       webkit_network_request_get_message  (<a class="link" href="webkitgtk-WebKitNetworkRequest.html#WebKitNetworkRequest" title="WebKitNetworkRequest">WebKitNetworkRequest</a> *request);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>request</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_network_request_set_uri ()">
+<a name="webkit-network-request-set-uri"></a><h3>webkit_network_request_set_uri ()</h3>
+<pre class="programlisting">void                webkit_network_request_set_uri      (<a class="link" href="webkitgtk-WebKitNetworkRequest.html#WebKitNetworkRequest" title="WebKitNetworkRequest">WebKitNetworkRequest</a> *request,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *uri);</pre>
+<p>
+Sets the URI held and used by the given request. When the request
+has an associated <a
+href="../libsoup-2.4/SoupMessage.html"
+><span class="type">SoupMessage</span></a>, its URI will also be set by this
+call.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>request</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitNetworkRequest.html#WebKitNetworkRequest" title="WebKitNetworkRequest"><span class="type">WebKitNetworkRequest</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>uri</code></em> :</span></p></td>
+<td> an URI
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" title="Property Details">
+<a name="webkitgtk-WebKitNetworkRequest.property-details"></a><h2>Property Details</h2>
+<div class="refsect2" title='The "message" property'>
+<a name="WebKitNetworkRequest--message"></a><h3>The <code class="literal">"message"</code> property</h3>
+<pre class="programlisting">  "message"                  <a
+href="../libsoup-2.4/SoupMessage.html"
+>SoupMessage</a>*          : Read / Write / Construct Only</pre>
+<p>
+The <a
+href="../libsoup-2.4/SoupMessage.html"
+><span class="type">SoupMessage</span></a> that backs the request.</p>
+<p>
+</p>
+<p>Since 1.1.10</p>
+</div>
+<hr>
+<div class="refsect2" title='The "uri" property'>
+<a name="WebKitNetworkRequest--uri"></a><h3>The <code class="literal">"uri"</code> property</h3>
+<pre class="programlisting">  "uri"                      <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write</pre>
+<p>
+The URI to which the request will be made.</p>
+<p>
+</p>
+<p>Default value: NULL</p>
+<p>Since 1.1.10</p>
+</div>
+</div>
+<div class="refsect1" title="See Also">
+<a name="webkitgtk-WebKitNetworkRequest.see-also"></a><h2>See Also</h2>
+#WebKitWebView::navigation-requested
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.11</div>
+</body>
+</html>

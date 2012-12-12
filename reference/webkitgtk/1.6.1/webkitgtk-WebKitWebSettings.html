@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitWebSettings</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="WebKitGTK+ Reference Manual">
+<link rel="up" href="ch02.html" title="Class Overview">
+<link rel="prev" href="webkitgtk-WebKitWebFrame.html" title="WebKitWebFrame">
+<link rel="next" href="webkitgtk-WebKitWebBackForwardList.html" title="WebKitWebBackForwardList">
+<meta name="generator" content="GTK-Doc V1.18.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="webkitgtk-WebKitWebFrame.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch02.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">WebKitGTK+ Reference Manual</th>
+<td><a accesskey="n" href="webkitgtk-WebKitWebBackForwardList.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#webkitgtk-WebKitWebSettings.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#webkitgtk-WebKitWebSettings.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="webkitgtk-WebKitWebSettings"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="webkitgtk-WebKitWebSettings.top_of_page"></a>WebKitWebSettings</span></h2>
+<p>WebKitWebSettings — Control the behaviour of a <a class="link" href="webkitgtk-webkitwebview.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a></p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="webkitgtk-WebKitWebSettings.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings">WebKitWebSettings</a>;
+enum                <a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitEditingBehavior" title="enum WebKitEditingBehavior">WebKitEditingBehavior</a>;
+<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings"><span class="returnvalue">WebKitWebSettings</span></a> * <a class="link" href="webkitgtk-WebKitWebSettings.html#webkit-web-settings-copy" title="webkit_web_settings_copy ()">webkit_web_settings_copy</a>            (<em class="parameter"><code><a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings"><span class="type">WebKitWebSettings</span></a> *web_settings</code></em>);
+<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings"><span class="returnvalue">WebKitWebSettings</span></a> * <a class="link" href="webkitgtk-WebKitWebSettings.html#webkit-web-settings-new" title="webkit_web_settings_new ()">webkit_web_settings_new</a>             (<em class="parameter"><code><span class="type">void</span></code></em>);
+const <span class="returnvalue">gchar</span> *       <a class="link" href="webkitgtk-WebKitWebSettings.html#webkit-web-settings-get-user-agent" title="webkit_web_settings_get_user_agent ()">webkit_web_settings_get_user_agent</a>  (<em class="parameter"><code><a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings"><span class="type">WebKitWebSettings</span></a> *web_settings</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="webkitgtk-WebKitWebSettings.description"></a><h2>Description</h2>
+<p>
+<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings"><span class="type">WebKitWebSettings</span></a> can be applied to a <a class="link" href="webkitgtk-webkitwebview.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a> to control text encoding, 
+color, font sizes, printing mode, script support, loading of images and various other things. 
+After creation, a <a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings"><span class="type">WebKitWebSettings</span></a> object contains default settings. 
+</p>
+<p>
+</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3
+4
+5
+6</pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="comment">/*</span><span class="comment"> Create a new websettings and disable java script </span><span class="comment">*/</span>
+WebKitWebSettings *settings = webkit_web_settings_new ();
+g_object_set (G_OBJECT(settings), <span class="number">&quot;enable-scripts&quot;</span>, FALSE, <span class="number">NULL</span>);
+
+<span class="comment">/*</span><span class="comment"> Apply the result </span><span class="comment">*/</span>
+webkit_web_view_set_settings (WEBKIT_WEB_VIEW(my_webview), settings);</pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="webkitgtk-WebKitWebSettings.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitWebSettings"></a><h3>WebKitWebSettings</h3>
+<pre class="programlisting">typedef struct {
+    GObject parent_instance;
+} WebKitWebSettings;
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitEditingBehavior"></a><h3>enum WebKitEditingBehavior</h3>
+<pre class="programlisting">typedef enum {
+    WEBKIT_EDITING_BEHAVIOR_MAC,
+    WEBKIT_EDITING_BEHAVIOR_WINDOWS,
+    WEBKIT_EDITING_BEHAVIOR_UNIX
+} WebKitEditingBehavior;
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-settings-copy"></a><h3>webkit_web_settings_copy ()</h3>
+<pre class="programlisting"><a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings"><span class="returnvalue">WebKitWebSettings</span></a> * webkit_web_settings_copy            (<em class="parameter"><code><a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings"><span class="type">WebKitWebSettings</span></a> *web_settings</code></em>);</pre>
+<p>
+Copies an existing <a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings"><span class="type">WebKitWebSettings</span></a> instance.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_settings</code></em> :</span></p></td>
+<td>a <a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings"><span class="type">WebKitWebSettings</span></a> to copy.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a new <a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings"><span class="type">WebKitWebSettings</span></a> instance. <span class="annotation">[<a href="http://foldoc.org/transfer%20full"><span class="acronym">transfer full</span></a>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-settings-new"></a><h3>webkit_web_settings_new ()</h3>
+<pre class="programlisting"><a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings"><span class="returnvalue">WebKitWebSettings</span></a> * webkit_web_settings_new             (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Creates a new <a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings"><span class="type">WebKitWebSettings</span></a> instance with default values. It must
+be manually attached to a WebView.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a new <a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings"><span class="type">WebKitWebSettings</span></a> instance</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-settings-get-user-agent"></a><h3>webkit_web_settings_get_user_agent ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *       webkit_web_settings_get_user_agent  (<em class="parameter"><code><a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings"><span class="type">WebKitWebSettings</span></a> *web_settings</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_settings</code></em> :</span></p></td>
+<td>a <a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings"><span class="type">WebKitWebSettings</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the User-Agent string currently used by the web view(s) associated
+with the <em class="parameter"><code>web_settings</code></em>.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.1.11</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18.1</div>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE book PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "">
+<book xmlns="http://www.devhelp.net/book" title="WebKit2GTK+ Reference Manual" link="index.html" author="" name="webkit2gtk" version="2" language="c">
+  <chapters>
+    <sub name="Class Overview" link="ch01.html">
+      <sub name="WebKitWebContext" link="WebKitWebContext.html"/>
+      <sub name="WebKitWebView" link="WebKitWebView.html"/>
+      <sub name="WebKitWebViewBase" link="WebKitWebViewBase.html"/>
+      <sub name="WebKitWebLoaderClient" link="WebKitWebLoaderClient.html"/>
+      <sub name="WebKitBackForwardList" link="WebKitBackForwardList.html"/>
+      <sub name="WebKitBackForwardListItem" link="WebKitBackForwardListItem.html"/>
+      <sub name="WebKitSettings" link="WebKitSettings.html"/>
+      <sub name="WebKitURIRequest" link="WebKitURIRequest.html"/>
+      <sub name="WebKitURIResponse" link="WebKitURIResponse.html"/>
+      <sub name="WebKitWindowProperties" link="WebKitWindowProperties.html"/>
+      <sub name="WebKitError" link="webkit2gtk-WebKitError.html"/>
+    </sub>
+    <sub name="Index" link="index-all.html"/>
+    <sub name="Annotation Glossary" link="annotation-glossary.html"/>
+  </chapters>
+  <functions>
+    <keyword type="struct" name="struct WebKitWebContext" link="WebKitWebContext.html#WebKitWebContext-struct"/>
+    <keyword type="enum" name="enum WebKitCacheModel" link="WebKitWebContext.html#WebKitCacheModel"/>
+    <keyword type="function" name="webkit_web_context_get_default ()" link="WebKitWebContext.html#webkit-web-context-get-default"/>
+    <keyword type="function" name="webkit_web_context_get_cache_model ()" link="WebKitWebContext.html#webkit-web-context-get-cache-model"/>
+    <keyword type="function" name="webkit_web_context_set_cache_model ()" link="WebKitWebContext.html#webkit-web-context-set-cache-model"/>
+    <keyword type="struct" name="WebKitWebView" link="WebKitWebView.html#WebKitWebView-struct"/>
+    <keyword type="function" name="webkit_web_view_new ()" link="WebKitWebView.html#webkit-web-view-new"/>
+    <keyword type="function" name="webkit_web_view_new_with_context ()" link="WebKitWebView.html#webkit-web-view-new-with-context"/>
+    <keyword type="function" name="webkit_web_view_get_context ()" link="WebKitWebView.html#webkit-web-view-get-context"/>
+    <keyword type="function" name="webkit_web_view_get_loader_client ()" link="WebKitWebView.html#webkit-web-view-get-loader-client"/>
+    <keyword type="function" name="webkit_web_view_set_loader_client ()" link="WebKitWebView.html#webkit-web-view-set-loader-client"/>
+    <keyword type="function" name="webkit_web_view_load_uri ()" link="WebKitWebView.html#webkit-web-view-load-uri"/>
+    <keyword type="function" name="webkit_web_view_load_html ()" link="WebKitWebView.html#webkit-web-view-load-html"/>
+    <keyword type="function" name="webkit_web_view_load_plain_text ()" link="WebKitWebView.html#webkit-web-view-load-plain-text"/>
+    <keyword type="function" name="webkit_web_view_load_alternate_html ()" link="WebKitWebView.html#webkit-web-view-load-alternate-html"/>
+    <keyword type="function" name="webkit_web_view_load_request ()" link="WebKitWebView.html#webkit-web-view-load-request"/>
+    <keyword type="function" name="webkit_web_view_can_go_back ()" link="WebKitWebView.html#webkit-web-view-can-go-back"/>
+    <keyword type="function" name="webkit_web_view_go_back ()" link="WebKitWebView.html#webkit-web-view-go-back"/>
+    <keyword type="function" name="webkit_web_view_can_go_forward ()" link="WebKitWebView.html#webkit-web-view-can-go-forward"/>
+    <keyword type="function" name="webkit_web_view_go_forward ()" link="WebKitWebView.html#webkit-web-view-go-forward"/>
+    <keyword type="function" name="webkit_web_view_get_title ()" link="WebKitWebView.html#webkit-web-view-get-title"/>
+    <keyword type="function" name="webkit_web_view_reload ()" link="WebKitWebView.html#webkit-web-view-reload"/>
+    <keyword type="function" name="webkit_web_view_reload_bypass_cache ()" link="WebKitWebView.html#webkit-web-view-reload-bypass-cache"/>
+    <keyword type="function" name="webkit_web_view_stop_loading ()" link="WebKitWebView.html#webkit-web-view-stop-loading"/>
+    <keyword type="function" name="webkit_web_view_get_estimated_load_progress ()" link="WebKitWebView.html#webkit-web-view-get-estimated-load-progress"/>
+    <keyword type="function" name="webkit_web_view_get_custom_charset ()" link="WebKitWebView.html#webkit-web-view-get-custom-charset"/>
+    <keyword type="function" name="webkit_web_view_set_custom_charset ()" link="WebKitWebView.html#webkit-web-view-set-custom-charset"/>
+    <keyword type="function" name="webkit_web_view_get_back_forward_list ()" link="WebKitWebView.html#webkit-web-view-get-back-forward-list"/>
+    <keyword type="function" name="webkit_web_view_go_to_back_forward_list_item ()" link="WebKitWebView.html#webkit-web-view-go-to-back-forward-list-item"/>
+    <keyword type="function" name="webkit_web_view_get_uri ()" link="WebKitWebView.html#webkit-web-view-get-uri"/>
+    <keyword type="function" name="webkit_web_view_set_settings ()" link="WebKitWebView.html#webkit-web-view-set-settings"/>
+    <keyword type="function" name="webkit_web_view_get_settings ()" link="WebKitWebView.html#webkit-web-view-get-settings"/>
+    <keyword type="function" name="webkit_web_view_get_window_properties ()" link="WebKitWebView.html#webkit-web-view-get-window-properties"/>
+    <keyword type="property" name="The &quot;estimated-load-progress&quot; property" link="WebKitWebView.html#WebKitWebView--estimated-load-progress"/>
+    <keyword type="property" name="The &quot;title&quot; property" link="WebKitWebView.html#WebKitWebView--title"/>
+    <keyword type="property" name="The &quot;uri&quot; property" link="WebKitWebView.html#WebKitWebView--uri"/>
+    <keyword type="property" name="The &quot;web-context&quot; property" link="WebKitWebView.html#WebKitWebView--web-context"/>
+    <keyword type="signal" name="The &quot;close&quot; signal" link="WebKitWebView.html#WebKitWebView-close"/>
+    <keyword type="signal" name="The &quot;create&quot; signal" link="WebKitWebView.html#WebKitWebView-create"/>
+    <keyword type="signal" name="The &quot;ready-to-show&quot; signal" link="WebKitWebView.html#WebKitWebView-ready-to-show"/>
+    <keyword type="signal" name="The &quot;script-alert&quot; signal" link="WebKitWebView.html#WebKitWebView-script-alert"/>
+    <keyword type="signal" name="The &quot;script-confirm&quot; signal" link="WebKitWebView.html#WebKitWebView-script-confirm"/>
+    <keyword type="signal" name="The &quot;script-prompt&quot; signal" link="WebKitWebView.html#WebKitWebView-script-prompt"/>
+    <keyword type="struct" name="struct WebKitWebViewBase" link="WebKitWebViewBase.html#WebKitWebViewBase-struct"/>
+    <keyword type="struct" name="WebKitWebLoaderClient" link="WebKitWebLoaderClient.html#WebKitWebLoaderClient-struct"/>
+    <keyword type="signal" name="The &quot;load-committed&quot; signal" link="WebKitWebLoaderClient.html#WebKitWebLoaderClient-load-committed"/>
+    <keyword type="signal" name="The &quot;load-failed&quot; signal" link="WebKitWebLoaderClient.html#WebKitWebLoaderClient-load-failed"/>
+    <keyword type="signal" name="The &quot;load-finished&quot; signal" link="WebKitWebLoaderClient.html#WebKitWebLoaderClient-load-finished"/>
+    <keyword type="signal" name="The &quot;provisional-load-failed&quot; signal" link="WebKitWebLoaderClient.html#WebKitWebLoaderClient-provisional-load-failed"/>
+    <keyword type="signal" name="The &quot;provisional-load-received-server-redirect&quot; signal" link="WebKitWebLoaderClient.html#WebKitWebLoaderClient-provisional-load-received-server-redirect"/>
+    <keyword type="signal" name="The &quot;provisional-load-started&quot; signal" link="WebKitWebLoaderClient.html#WebKitWebLoaderClient-provisional-load-started"/>
+    <keyword type="struct" name="struct WebKitBackForwardList" link="WebKitBackForwardList.html#WebKitBackForwardList-struct"/>
+    <keyword type="function" name="webkit_back_forward_list_get_length ()" link="WebKitBackForwardList.html#webkit-back-forward-list-get-length"/>
+    <keyword type="function" name="webkit_back_forward_list_get_current_item ()" link="WebKitBackForwardList.html#webkit-back-forward-list-get-current-item"/>
+    <keyword type="function" name="webkit_back_forward_list_get_back_item ()" link="WebKitBackForwardList.html#webkit-back-forward-list-get-back-item"/>
+    <keyword type="function" name="webkit_back_forward_list_get_forward_item ()" link="WebKitBackForwardList.html#webkit-back-forward-list-get-forward-item"/>
+    <keyword type="function" name="webkit_back_forward_list_get_nth_item ()" link="WebKitBackForwardList.html#webkit-back-forward-list-get-nth-item"/>
+    <keyword type="function" name="webkit_back_forward_list_get_back_list ()" link="WebKitBackForwardList.html#webkit-back-forward-list-get-back-list"/>
+    <keyword type="function" name="webkit_back_forward_list_get_back_list_with_limit ()" link="WebKitBackForwardList.html#webkit-back-forward-list-get-back-list-with-limit"/>
+    <keyword type="function" name="webkit_back_forward_list_get_forward_list ()" link="WebKitBackForwardList.html#webkit-back-forward-list-get-forward-list"/>
+    <keyword type="function" name="webkit_back_forward_list_get_forward_list_with_limit ()" link="WebKitBackForwardList.html#webkit-back-forward-list-get-forward-list-with-limit"/>
+    <keyword type="signal" name="The &quot;changed&quot; signal" link="WebKitBackForwardList.html#WebKitBackForwardList-changed"/>
+    <keyword type="struct" name="struct WebKitBackForwardListItem" link="WebKitBackForwardListItem.html#WebKitBackForwardListItem-struct"/>
+    <keyword type="function" name="webkit_back_forward_list_item_get_title ()" link="WebKitBackForwardListItem.html#webkit-back-forward-list-item-get-title"/>
+    <keyword type="function" name="webkit_back_forward_list_item_get_uri ()" link="WebKitBackForwardListItem.html#webkit-back-forward-list-item-get-uri"/>
+    <keyword type="function" name="webkit_back_forward_list_item_get_original_uri ()" link="WebKitBackForwardListItem.html#webkit-back-forward-list-item-get-original-uri"/>
+    <keyword type="struct" name="struct WebKitSettings" link="WebKitSettings.html#WebKitSettings-struct"/>
+    <keyword type="function" name="webkit_settings_new ()" link="WebKitSettings.html#webkit-settings-new"/>
+    <keyword type="function" name="webkit_settings_new_with_settings ()" link="WebKitSettings.html#webkit-settings-new-with-settings"/>
+    <keyword type="function" name="webkit_settings_get_auto_load_images ()" link="WebKitSettings.html#webkit-settings-get-auto-load-images"/>
+    <keyword type="function" name="webkit_settings_set_auto_load_images ()" link="WebKitSettings.html#webkit-settings-set-auto-load-images"/>
+    <keyword type="function" name="webkit_settings_get_enable_frame_flattening ()" link="WebKitSettings.html#webkit-settings-get-enable-frame-flattening"/>
+    <keyword type="function" name="webkit_settings_set_enable_frame_flattening ()" link="WebKitSettings.html#webkit-settings-set-enable-frame-flattening"/>
+    <keyword type="function" name="webkit_settings_get_enable_html5_database ()" link="WebKitSettings.html#webkit-settings-get-enable-html5-database"/>
+    <keyword type="function" name="webkit_settings_set_enable_html5_database ()" link="WebKitSettings.html#webkit-settings-set-enable-html5-database"/>
+    <keyword type="function" name="webkit_settings_get_enable_html5_local_storage ()" link="WebKitSettings.html#webkit-settings-get-enable-html5-local-storage"/>
+    <keyword type="function" name="webkit_settings_set_enable_html5_local_storage ()" link="WebKitSettings.html#webkit-settings-set-enable-html5-local-storage"/>
+    <keyword type="function" name="webkit_settings_get_enable_hyperlink_auditing ()" link="WebKitSettings.html#webkit-settings-get-enable-hyperlink-auditing"/>
+    <keyword type="function" name="webkit_settings_set_enable_hyperlink_auditing ()" link="WebKitSettings.html#webkit-settings-set-enable-hyperlink-auditing"/>
+    <keyword type="function" name="webkit_settings_get_enable_java ()" link="WebKitSettings.html#webkit-settings-get-enable-java"/>
+    <keyword type="function" name="webkit_settings_set_enable_java ()" link="WebKitSettings.html#webkit-settings-set-enable-java"/>
+    <keyword type="function" name="webkit_settings_get_enable_javascript ()" link="WebKitSettings.html#webkit-settings-get-enable-javascript"/>
+    <keyword type="function" name="webkit_settings_set_enable_javascript ()" link="WebKitSettings.html#webkit-settings-set-enable-javascript"/>
+    <keyword type="function" name="webkit_settings_get_enable_offline_web_application_cache ()" link="WebKitSettings.html#webkit-settings-get-enable-offline-web-application-cache"/>
+    <keyword type="function" name="webkit_settings_set_enable_offline_web_application_cache ()" link="WebKitSettings.html#webkit-settings-set-enable-offline-web-application-cache"/>
+    <keyword type="function" name="webkit_settings_get_enable_plugins ()" link="WebKitSettings.html#webkit-settings-get-enable-plugins"/>
+    <keyword type="function" name="webkit_settings_set_enable_plugins ()" link="WebKitSettings.html#webkit-settings-set-enable-plugins"/>
+    <keyword type="function" name="webkit_settings_get_enable_xss_auditor ()" link="WebKitSettings.html#webkit-settings-get-enable-xss-auditor"/>
+    <keyword type="function" name="webkit_settings_set_enable_xss_auditor ()" link="WebKitSettings.html#webkit-settings-set-enable-xss-auditor"/>
+    <keyword type="function" name="webkit_settings_get_javascript_can_open_windows_automatically ()" link="WebKitSettings.html#webkit-settings-get-javascript-can-open-windows-automatically"/>
+    <keyword type="function" name="webkit_settings_set_javascript_can_open_windows_automatically ()" link="WebKitSettings.html#webkit-settings-set-javascript-can-open-windows-automatically"/>
+    <keyword type="function" name="webkit_settings_get_load_icons_ignoring_image_load_setting ()" link="WebKitSettings.html#webkit-settings-get-load-icons-ignoring-image-load-setting"/>
+    <keyword type="function" name="webkit_settings_set_load_icons_ignoring_image_load_setting ()" link="WebKitSettings.html#webkit-settings-set-load-icons-ignoring-image-load-setting"/>
+    <keyword type="function" name="webkit_settings_get_default_font_family ()" link="WebKitSettings.html#webkit-settings-get-default-font-family"/>
+    <keyword type="function" name="webkit_settings_set_default_font_family ()" link="WebKitSettings.html#webkit-settings-set-default-font-family"/>
+    <keyword type="function" name="webkit_settings_get_monospace_font_family ()" link="WebKitSettings.html#webkit-settings-get-monospace-font-family"/>
+    <keyword type="function" name="webkit_settings_set_monospace_font_family ()" link="WebKitSettings.html#webkit-settings-set-monospace-font-family"/>
+    <keyword type="function" name="webkit_settings_get_serif_font_family ()" link="WebKitSettings.html#webkit-settings-get-serif-font-family"/>
+    <keyword type="function" name="webkit_settings_set_serif_font_family ()" link="WebKitSettings.html#webkit-settings-set-serif-font-family"/>
+    <keyword type="function" name="webkit_settings_get_sans_serif_font_family ()" link="WebKitSettings.html#webkit-settings-get-sans-serif-font-family"/>
+    <keyword type="function" name="webkit_settings_set_sans_serif_font_family ()" link="WebKitSettings.html#webkit-settings-set-sans-serif-font-family"/>
+    <keyword type="function" name="webkit_settings_get_cursive_font_family ()" link="WebKitSettings.html#webkit-settings-get-cursive-font-family"/>
+    <keyword type="function" name="webkit_settings_set_cursive_font_family ()" link="WebKitSettings.html#webkit-settings-set-cursive-font-family"/>
+    <keyword type="function" name="webkit_settings_get_fantasy_font_family ()" link="WebKitSettings.html#webkit-settings-get-fantasy-font-family"/>
+    <keyword type="function" name="webkit_settings_set_fantasy_font_family ()" link="WebKitSettings.html#webkit-settings-set-fantasy-font-family"/>
+    <keyword type="function" name="webkit_settings_get_pictograph_font_family ()" link="WebKitSettings.html#webkit-settings-get-pictograph-font-family"/>
+    <keyword type="function" name="webkit_settings_set_pictograph_font_family ()" link="WebKitSettings.html#webkit-settings-set-pictograph-font-family"/>
+    <keyword type="function" name="webkit_settings_get_default_font_size ()" link="WebKitSettings.html#webkit-settings-get-default-font-size"/>
+    <keyword type="function" name="webkit_settings_set_default_font_size ()" link="WebKitSettings.html#webkit-settings-set-default-font-size"/>
+    <keyword type="function" name="webkit_settings_get_default_monospace_font_size ()" link="WebKitSettings.html#webkit-settings-get-default-monospace-font-size"/>
+    <keyword type="function" name="webkit_settings_set_default_monospace_font_size ()" link="WebKitSettings.html#webkit-settings-set-default-monospace-font-size"/>
+    <keyword type="function" name="webkit_settings_get_minimum_font_size ()" link="WebKitSettings.html#webkit-settings-get-minimum-font-size"/>
+    <keyword type="function" name="webkit_settings_set_minimum_font_size ()" link="WebKitSettings.html#webkit-settings-set-minimum-font-size"/>
+    <keyword type="function" name="webkit_settings_get_default_charset ()" link="WebKitSettings.html#webkit-settings-get-default-charset"/>
+    <keyword type="function" name="webkit_settings_set_default_charset ()" link="WebKitSettings.html#webkit-settings-set-default-charset"/>
+    <keyword type="function" name="webkit_settings_get_enable_private_browsing ()" link="WebKitSettings.html#webkit-settings-get-enable-private-browsing"/>
+    <keyword type="function" name="webkit_settings_set_enable_private_browsing ()" link="WebKitSettings.html#webkit-settings-set-enable-private-browsing"/>
+    <keyword type="function" name="webkit_settings_get_enable_developer_extras ()" link="WebKitSettings.html#webkit-settings-get-enable-developer-extras"/>
+    <keyword type="function" name="webkit_settings_set_enable_developer_extras ()" link="WebKitSettings.html#webkit-settings-set-enable-developer-extras"/>
+    <keyword type="function" name="webkit_settings_get_enable_resizable_text_areas ()" link="WebKitSettings.html#webkit-settings-get-enable-resizable-text-areas"/>
+    <keyword type="function" name="webkit_settings_set_enable_resizable_text_areas ()" link="WebKitSettings.html#webkit-settings-set-enable-resizable-text-areas"/>
+    <keyword type="function" name="webkit_settings_get_enable_tabs_to_links ()" link="WebKitSettings.html#webkit-settings-get-enable-tabs-to-links"/>
+    <keyword type="function" name="webkit_settings_set_enable_tabs_to_links ()" link="WebKitSettings.html#webkit-settings-set-enable-tabs-to-links"/>
+    <keyword type="function" name="webkit_settings_get_enable_dns_prefetching ()" link="WebKitSettings.html#webkit-settings-get-enable-dns-prefetching"/>
+    <keyword type="function" name="webkit_settings_set_enable_dns_prefetching ()" link="WebKitSettings.html#webkit-settings-set-enable-dns-prefetching"/>
+    <keyword type="function" name="webkit_settings_get_enable_caret_browsing ()" link="WebKitSettings.html#webkit-settings-get-enable-caret-browsing"/>
+    <keyword type="function" name="webkit_settings_set_enable_caret_browsing ()" link="WebKitSettings.html#webkit-settings-set-enable-caret-browsing"/>
+    <keyword type="function" name="webkit_settings_get_enable_fullscreen ()" link="WebKitSettings.html#webkit-settings-get-enable-fullscreen"/>
+    <keyword type="function" name="webkit_settings_set_enable_fullscreen ()" link="WebKitSettings.html#webkit-settings-set-enable-fullscreen"/>
+    <keyword type="property" name="The &quot;auto-load-images&quot; property" link="WebKitSettings.html#WebKitSettings--auto-load-images"/>
+    <keyword type="property" name="The &quot;cursive-font-family&quot; property" link="WebKitSettings.html#WebKitSettings--cursive-font-family"/>
+    <keyword type="property" name="The &quot;default-charset&quot; property" link="WebKitSettings.html#WebKitSettings--default-charset"/>
+    <keyword type="property" name="The &quot;default-font-family&quot; property" link="WebKitSettings.html#WebKitSettings--default-font-family"/>
+    <keyword type="property" name="The &quot;default-font-size&quot; property" link="WebKitSettings.html#WebKitSettings--default-font-size"/>
+    <keyword type="property" name="The &quot;default-monospace-font-size&quot; property" link="WebKitSettings.html#WebKitSettings--default-monospace-font-size"/>
+    <keyword type="property" name="The &quot;enable-caret-browsing&quot; property" link="WebKitSettings.html#WebKitSettings--enable-caret-browsing"/>
+    <keyword type="property" name="The &quot;enable-developer-extras&quot; property" link="WebKitSettings.html#WebKitSettings--enable-developer-extras"/>
+    <keyword type="property" name="The &quot;enable-dns-prefetching&quot; property" link="WebKitSettings.html#WebKitSettings--enable-dns-prefetching"/>
+    <keyword type="property" name="The &quot;enable-frame-flattening&quot; property" link="WebKitSettings.html#WebKitSettings--enable-frame-flattening"/>
+    <keyword type="property" name="The &quot;enable-fullscreen&quot; property" link="WebKitSettings.html#WebKitSettings--enable-fullscreen"/>
+    <keyword type="property" name="The &quot;enable-html5-database&quot; property" link="WebKitSettings.html#WebKitSettings--enable-html5-database"/>
+    <keyword type="property" name="The &quot;enable-html5-local-storage&quot; property" link="WebKitSettings.html#WebKitSettings--enable-html5-local-storage"/>
+    <keyword type="property" name="The &quot;enable-hyperlink-auditing&quot; property" link="WebKitSettings.html#WebKitSettings--enable-hyperlink-auditing"/>
+    <keyword type="property" name="The &quot;enable-java&quot; property" link="WebKitSettings.html#WebKitSettings--enable-java"/>
+    <keyword type="property" name="The &quot;enable-javascript&quot; property" link="WebKitSettings.html#WebKitSettings--enable-javascript"/>
+    <keyword type="property" name="The &quot;enable-offline-web-application-cache&quot; property" link="WebKitSettings.html#WebKitSettings--enable-offline-web-application-cache"/>
+    <keyword type="property" name="The &quot;enable-plugins&quot; property" link="WebKitSettings.html#WebKitSettings--enable-plugins"/>
+    <keyword type="property" name="The &quot;enable-private-browsing&quot; property" link="WebKitSettings.html#WebKitSettings--enable-private-browsing"/>
+    <keyword type="property" name="The &quot;enable-resizable-text-areas&quot; property" link="WebKitSettings.html#WebKitSettings--enable-resizable-text-areas"/>
+    <keyword type="property" name="The &quot;enable-tabs-to-links&quot; property" link="WebKitSettings.html#WebKitSettings--enable-tabs-to-links"/>
+    <keyword type="property" name="The &quot;enable-xss-auditor&quot; property" link="WebKitSettings.html#WebKitSettings--enable-xss-auditor"/>
+    <keyword type="property" name="The &quot;fantasy-font-family&quot; property" link="WebKitSettings.html#WebKitSettings--fantasy-font-family"/>
+    <keyword type="property" name="The &quot;javascript-can-open-windows-automatically&quot; property" link="WebKitSettings.html#WebKitSettings--javascript-can-open-windows-automatically"/>
+    <keyword type="property" name="The &quot;load-icons-ignoring-image-load-setting&quot; property" link="WebKitSettings.html#WebKitSettings--load-icons-ignoring-image-load-setting"/>
+    <keyword type="property" name="The &quot;minimum-font-size&quot; property" link="WebKitSettings.html#WebKitSettings--minimum-font-size"/>
+    <keyword type="property" name="The &quot;monospace-font-family&quot; property" link="WebKitSettings.html#WebKitSettings--monospace-font-family"/>
+    <keyword type="property" name="The &quot;pictograph-font-family&quot; property" link="WebKitSettings.html#WebKitSettings--pictograph-font-family"/>
+    <keyword type="property" name="The &quot;sans-serif-font-family&quot; property" link="WebKitSettings.html#WebKitSettings--sans-serif-font-family"/>
+    <keyword type="property" name="The &quot;serif-font-family&quot; property" link="WebKitSettings.html#WebKitSettings--serif-font-family"/>
+    <keyword type="struct" name="struct WebKitURIRequest" link="WebKitURIRequest.html#WebKitURIRequest-struct"/>
+    <keyword type="function" name="webkit_uri_request_new ()" link="WebKitURIRequest.html#webkit-uri-request-new"/>
+    <keyword type="function" name="webkit_uri_request_get_uri ()" link="WebKitURIRequest.html#webkit-uri-request-get-uri"/>
+    <keyword type="property" name="The &quot;uri&quot; property" link="WebKitURIRequest.html#WebKitURIRequest--uri"/>
+    <keyword type="struct" name="struct WebKitURIResponse" link="WebKitURIResponse.html#WebKitURIResponse-struct"/>
+    <keyword type="function" name="webkit_uri_response_get_uri ()" link="WebKitURIResponse.html#webkit-uri-response-get-uri"/>
+    <keyword type="function" name="webkit_uri_response_get_status_code ()" link="WebKitURIResponse.html#webkit-uri-response-get-status-code"/>
+    <keyword type="function" name="webkit_uri_response_get_content_length ()" link="WebKitURIResponse.html#webkit-uri-response-get-content-length"/>
+    <keyword type="property" name="The &quot;content-length&quot; property" link="WebKitURIResponse.html#WebKitURIResponse--content-length"/>
+    <keyword type="property" name="The &quot;status-code&quot; property" link="WebKitURIResponse.html#WebKitURIResponse--status-code"/>
+    <keyword type="property" name="The &quot;uri&quot; property" link="WebKitURIResponse.html#WebKitURIResponse--uri"/>
+    <keyword type="struct" name="struct WebKitWindowProperties" link="WebKitWindowProperties.html#WebKitWindowProperties-struct"/>
+    <keyword type="function" name="webkit_window_properties_get_geometry ()" link="WebKitWindowProperties.html#webkit-window-properties-get-geometry"/>
+    <keyword type="function" name="webkit_window_properties_get_toolbar_visible ()" link="WebKitWindowProperties.html#webkit-window-properties-get-toolbar-visible"/>
+    <keyword type="function" name="webkit_window_properties_get_statusbar_visible ()" link="WebKitWindowProperties.html#webkit-window-properties-get-statusbar-visible"/>
+    <keyword type="function" name="webkit_window_properties_get_scrollbars_visible ()" link="WebKitWindowProperties.html#webkit-window-properties-get-scrollbars-visible"/>
+    <keyword type="function" name="webkit_window_properties_get_menubar_visible ()" link="WebKitWindowProperties.html#webkit-window-properties-get-menubar-visible"/>
+    <keyword type="function" name="webkit_window_properties_get_locationbar_visible ()" link="WebKitWindowProperties.html#webkit-window-properties-get-locationbar-visible"/>
+    <keyword type="function" name="webkit_window_properties_get_resizable ()" link="WebKitWindowProperties.html#webkit-window-properties-get-resizable"/>
+    <keyword type="function" name="webkit_window_properties_get_fullscreen ()" link="WebKitWindowProperties.html#webkit-window-properties-get-fullscreen"/>
+    <keyword type="property" name="The &quot;fullscreen&quot; property" link="WebKitWindowProperties.html#WebKitWindowProperties--fullscreen"/>
+    <keyword type="property" name="The &quot;geometry&quot; property" link="WebKitWindowProperties.html#WebKitWindowProperties--geometry"/>
+    <keyword type="property" name="The &quot;locationbar-visible&quot; property" link="WebKitWindowProperties.html#WebKitWindowProperties--locationbar-visible"/>
+    <keyword type="property" name="The &quot;menubar-visible&quot; property" link="WebKitWindowProperties.html#WebKitWindowProperties--menubar-visible"/>
+    <keyword type="property" name="The &quot;resizable&quot; property" link="WebKitWindowProperties.html#WebKitWindowProperties--resizable"/>
+    <keyword type="property" name="The &quot;scrollbars-visible&quot; property" link="WebKitWindowProperties.html#WebKitWindowProperties--scrollbars-visible"/>
+    <keyword type="property" name="The &quot;statusbar-visible&quot; property" link="WebKitWindowProperties.html#WebKitWindowProperties--statusbar-visible"/>
+    <keyword type="property" name="The &quot;toolbar-visible&quot; property" link="WebKitWindowProperties.html#WebKitWindowProperties--toolbar-visible"/>
+    <keyword type="macro" name="WEBKIT_NETWORK_ERROR" link="webkit2gtk-WebKitError.html#WEBKIT-NETWORK-ERROR:CAPS"/>
+    <keyword type="macro" name="WEBKIT_PLUGIN_ERROR" link="webkit2gtk-WebKitError.html#WEBKIT-PLUGIN-ERROR:CAPS"/>
+    <keyword type="macro" name="WEBKIT_POLICY_ERROR" link="webkit2gtk-WebKitError.html#WEBKIT-POLICY-ERROR:CAPS"/>
+    <keyword type="enum" name="enum WebKitNetworkError" link="webkit2gtk-WebKitError.html#WebKitNetworkError"/>
+    <keyword type="enum" name="enum WebKitPluginError" link="webkit2gtk-WebKitError.html#WebKitPluginError"/>
+    <keyword type="enum" name="enum WebKitPolicyError" link="webkit2gtk-WebKitError.html#WebKitPolicyError"/>
+    <keyword type="function" name="webkit_network_error_quark ()" link="webkit2gtk-WebKitError.html#webkit-network-error-quark"/>
+    <keyword type="function" name="webkit_plugin_error_quark ()" link="webkit2gtk-WebKitError.html#webkit-plugin-error-quark"/>
+    <keyword type="function" name="webkit_policy_error_quark ()" link="webkit2gtk-WebKitError.html#webkit-policy-error-quark"/>
+    <keyword type="constant" name="WEBKIT_CACHE_MODEL_DOCUMENT_VIEWER" link="WebKitWebContext.html#WEBKIT-CACHE-MODEL-DOCUMENT-VIEWER:CAPS"/>
+    <keyword type="constant" name="WEBKIT_CACHE_MODEL_WEB_BROWSER" link="WebKitWebContext.html#WEBKIT-CACHE-MODEL-WEB-BROWSER:CAPS"/>
+    <keyword type="constant" name="WEBKIT_CACHE_MODEL_DOCUMENT_BROWSER" link="WebKitWebContext.html#WEBKIT-CACHE-MODEL-DOCUMENT-BROWSER:CAPS"/>
+    <keyword type="constant" name="WEBKIT_NETWORK_ERROR_FAILED" link="webkit2gtk-WebKitError.html#WEBKIT-NETWORK-ERROR-FAILED:CAPS"/>
+    <keyword type="constant" name="WEBKIT_NETWORK_ERROR_TRANSPORT" link="webkit2gtk-WebKitError.html#WEBKIT-NETWORK-ERROR-TRANSPORT:CAPS"/>
+    <keyword type="constant" name="WEBKIT_NETWORK_ERROR_UNKNOWN_PROTOCOL" link="webkit2gtk-WebKitError.html#WEBKIT-NETWORK-ERROR-UNKNOWN-PROTOCOL:CAPS"/>
+    <keyword type="constant" name="WEBKIT_NETWORK_ERROR_CANCELLED" link="webkit2gtk-WebKitError.html#WEBKIT-NETWORK-ERROR-CANCELLED:CAPS"/>
+    <keyword type="constant" name="WEBKIT_NETWORK_ERROR_FILE_DOES_NOT_EXIST" link="webkit2gtk-WebKitError.html#WEBKIT-NETWORK-ERROR-FILE-DOES-NOT-EXIST:CAPS"/>
+    <keyword type="constant" name="WEBKIT_PLUGIN_ERROR_FAILED" link="webkit2gtk-WebKitError.html#WEBKIT-PLUGIN-ERROR-FAILED:CAPS"/>
+    <keyword type="constant" name="WEBKIT_PLUGIN_ERROR_CANNOT_FIND_PLUGIN" link="webkit2gtk-WebKitError.html#WEBKIT-PLUGIN-ERROR-CANNOT-FIND-PLUGIN:CAPS"/>
+    <keyword type="constant" name="WEBKIT_PLUGIN_ERROR_CANNOT_LOAD_PLUGIN" link="webkit2gtk-WebKitError.html#WEBKIT-PLUGIN-ERROR-CANNOT-LOAD-PLUGIN:CAPS"/>
+    <keyword type="constant" name="WEBKIT_PLUGIN_ERROR_JAVA_UNAVAILABLE" link="webkit2gtk-WebKitError.html#WEBKIT-PLUGIN-ERROR-JAVA-UNAVAILABLE:CAPS"/>
+    <keyword type="constant" name="WEBKIT_PLUGIN_ERROR_CONNECTION_CANCELLED" link="webkit2gtk-WebKitError.html#WEBKIT-PLUGIN-ERROR-CONNECTION-CANCELLED:CAPS"/>
+    <keyword type="constant" name="WEBKIT_PLUGIN_ERROR_WILL_HANDLE_LOAD" link="webkit2gtk-WebKitError.html#WEBKIT-PLUGIN-ERROR-WILL-HANDLE-LOAD:CAPS"/>
+    <keyword type="constant" name="WEBKIT_POLICY_ERROR_FAILED" link="webkit2gtk-WebKitError.html#WEBKIT-POLICY-ERROR-FAILED:CAPS"/>
+    <keyword type="constant" name="WEBKIT_POLICY_ERROR_CANNOT_SHOW_MIME_TYPE" link="webkit2gtk-WebKitError.html#WEBKIT-POLICY-ERROR-CANNOT-SHOW-MIME-TYPE:CAPS"/>
+    <keyword type="constant" name="WEBKIT_POLICY_ERROR_CANNOT_SHOW_URI" link="webkit2gtk-WebKitError.html#WEBKIT-POLICY-ERROR-CANNOT-SHOW-URI:CAPS"/>
+    <keyword type="constant" name="WEBKIT_POLICY_ERROR_FRAME_LOAD_INTERRUPTED_BY_POLICY_CHANGE" link="webkit2gtk-WebKitError.html#WEBKIT-POLICY-ERROR-FRAME-LOAD-INTERRUPTED-BY-POLICY-CHANGE:CAPS"/>
+    <keyword type="constant" name="WEBKIT_POLICY_ERROR_CANNOT_USE_RESTRICTED_PORT" link="webkit2gtk-WebKitError.html#WEBKIT-POLICY-ERROR-CANNOT-USE-RESTRICTED-PORT:CAPS"/>
+  </functions>
+</book>

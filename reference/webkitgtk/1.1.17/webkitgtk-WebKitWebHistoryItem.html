@@ -1,0 +1,438 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitWebHistoryItem</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="WebKitGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="webkitgtk-WebKitWebBackForwardList.html" title="WebKitWebBackForwardList">
+<link rel="next" href="webkitgtk-WebKitWebNavigationAction.html" title="WebKitWebNavigationAction">
+<meta name="generator" content="GTK-Doc V1.11 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="chapter" href="ch01.html" title="Class Overview">
+<link rel="chapter" href="ch02.html" title="Running WebKitGTK+-based programs">
+<link rel="index" href="index-all.html" title="Index">
+<link rel="index" href="index-deprecated.html" title="Index of deprecated symbols">
+<link rel="index" href="index-1.0.1.html" title="Index of new symbols in 1.0.1">
+<link rel="index" href="index-1.0.2.html" title="Index of new symbols in 1.0.2">
+<link rel="index" href="index-1.0.3.html" title="Index of new symbols in 1.0.3">
+<link rel="index" href="index-1.1.1.html" title="Index of new symbols in 1.1.1">
+<link rel="index" href="index-1.1.2.html" title="Index of new symbols in 1.1.2">
+<link rel="index" href="index-1.1.3.html" title="Index of new symbols in 1.1.3">
+<link rel="index" href="index-1.1.4.html" title="Index of new symbols in 1.1.4">
+<link rel="index" href="index-1.1.5.html" title="Index of new symbols in 1.1.5">
+<link rel="index" href="index-1.1.6.html" title="Index of new symbols in 1.1.6">
+<link rel="index" href="index-1.1.7.html" title="Index of new symbols in 1.1.7">
+<link rel="index" href="index-1.1.8.html" title="Index of new symbols in 1.1.8">
+<link rel="index" href="index-1.1.10.html" title="Index of new symbols in 1.1.10">
+<link rel="index" href="index-1.1.11.html" title="Index of new symbols in 1.1.11">
+<link rel="index" href="index-1.1.13.html" title="Index of new symbols in 1.1.13">
+<link rel="index" href="index-1.1.14.html" title="Index of new symbols in 1.1.14">
+<link rel="index" href="index-1.1.15.html" title="Index of new symbols in 1.1.15">
+<link rel="index" href="index-1.1.16.html" title="Index of new symbols in 1.1.16">
+<link rel="index" href="index-1.1.17.html" title="Index of new symbols in 1.1.17">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="webkitgtk-WebKitWebBackForwardList.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">WebKitGTK+ Reference Manual</th>
+<td><a accesskey="n" href="webkitgtk-WebKitWebNavigationAction.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#webkitgtk-WebKitWebHistoryItem.synopsis" class="shortcut">Top</a>
+                 | 
+                <a href="#webkitgtk-WebKitWebHistoryItem.description" class="shortcut">Description</a>
+                 | 
+                <a href="#webkitgtk-WebKitWebHistoryItem.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry" title="WebKitWebHistoryItem">
+<a name="webkitgtk-WebKitWebHistoryItem"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="webkitgtk-WebKitWebHistoryItem.top_of_page"></a>WebKitWebHistoryItem</span></h2>
+<p>WebKitWebHistoryItem — One item of the <a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList"><span class="type">WebKitWebBackForwardList</span></a> and or global history</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="webkitgtk-WebKitWebHistoryItem.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+                    <a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem">WebKitWebHistoryItem</a>;
+const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *       <a class="link" href="webkitgtk-WebKitWebHistoryItem.html#webkit-web-history-item-get-alternate-title" title="webkit_web_history_item_get_alternate_title ()">webkit_web_history_item_get_alternate_title</a>
+                                                        (<a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem">WebKitWebHistoryItem</a> *web_history_item);
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"
+>gdouble</a>             <a class="link" href="webkitgtk-WebKitWebHistoryItem.html#webkit-web-history-item-get-last-visited-time" title="webkit_web_history_item_get_last_visited_time ()">webkit_web_history_item_get_last_visited_time</a>
+                                                        (<a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem">WebKitWebHistoryItem</a> *web_history_item);
+const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *       <a class="link" href="webkitgtk-WebKitWebHistoryItem.html#webkit-web-history-item-get-original-uri" title="webkit_web_history_item_get_original_uri ()">webkit_web_history_item_get_original_uri</a>
+                                                        (<a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem">WebKitWebHistoryItem</a> *web_history_item);
+const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *       <a class="link" href="webkitgtk-WebKitWebHistoryItem.html#webkit-web-history-item-get-title" title="webkit_web_history_item_get_title ()">webkit_web_history_item_get_title</a>   (<a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem">WebKitWebHistoryItem</a> *web_history_item);
+const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *       <a class="link" href="webkitgtk-WebKitWebHistoryItem.html#webkit-web-history-item-get-uri" title="webkit_web_history_item_get_uri ()">webkit_web_history_item_get_uri</a>     (<a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem">WebKitWebHistoryItem</a> *web_history_item);
+<a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem">WebKitWebHistoryItem</a> * <a class="link" href="webkitgtk-WebKitWebHistoryItem.html#webkit-web-history-item-new" title="webkit_web_history_item_new ()">webkit_web_history_item_new</a>      (void);
+<a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem">WebKitWebHistoryItem</a> * <a class="link" href="webkitgtk-WebKitWebHistoryItem.html#webkit-web-history-item-new-with-data" title="webkit_web_history_item_new_with_data ()">webkit_web_history_item_new_with_data</a>
+                                                        (const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *uri,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *title);
+void                <a class="link" href="webkitgtk-WebKitWebHistoryItem.html#webkit-web-history-item-set-alternate-title" title="webkit_web_history_item_set_alternate_title ()">webkit_web_history_item_set_alternate_title</a>
+                                                        (<a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem">WebKitWebHistoryItem</a> *web_history_item,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *title);
+</pre>
+</div>
+<div class="refsect1" title="Properties">
+<a name="webkitgtk-WebKitWebHistoryItem.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem--alternate-title" title='The "alternate-title" property'>alternate-title</a>"          <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write
+  "<a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem--last-visited-time" title='The "last-visited-time" property'>last-visited-time</a>"        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read
+  "<a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem--original-uri" title='The "original-uri" property'>original-uri</a>"             <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read
+  "<a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem--title" title='The "title" property'>title</a>"                    <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read
+  "<a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem--uri" title='The "uri" property'>uri</a>"                      <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="webkitgtk-WebKitWebHistoryItem.description"></a><h2>Description</h2>
+<p>
+A history item consists out of a title and a uri. It can be part of the
+<a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList"><span class="type">WebKitWebBackForwardList</span></a> and the global history. The global history is used
+for coloring the links of visited sites.  <span class="type">WebKitHistoryItem</span>'s constructed with
+<a class="link" href="webkitgtk-WebKitWebHistoryItem.html#webkit-web-history-item-new" title="webkit_web_history_item_new ()"><span class="type">webkit_web_history_item_new</span></a> and <a class="link" href="webkitgtk-WebKitWebHistoryItem.html#webkit-web-history-item-new-with-data" title="webkit_web_history_item_new_with_data ()"><span class="type">webkit_web_history_item_new_with_data</span></a> are
+automatically added to the global history.
+</p>
+<p>
+</p>
+<div class="informalexample"><pre class="programlisting">
+/* Inject a visited page into the global history */
+webkit_web_history_item_new_with_data("http://www.gnome.org/", "GNOME: The Free Software Desktop Project");
+webkit_web_history_item_new_with_data("http://www.webkit.org/", "The WebKit Open Source Project");
+</pre></div>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="webkitgtk-WebKitWebHistoryItem.details"></a><h2>Details</h2>
+<div class="refsect2" title="WebKitWebHistoryItem">
+<a name="WebKitWebHistoryItem"></a><h3>WebKitWebHistoryItem</h3>
+<pre class="programlisting">typedef struct {
+    GObject parent_instance;
+} WebKitWebHistoryItem;
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_history_item_get_alternate_title ()">
+<a name="webkit-web-history-item-get-alternate-title"></a><h3>webkit_web_history_item_get_alternate_title ()</h3>
+<pre class="programlisting">const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *       webkit_web_history_item_get_alternate_title
+                                                        (<a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem">WebKitWebHistoryItem</a> *web_history_item);</pre>
+<p>
+Returns the alternate title of <em class="parameter"><code>web_history_item</code></em></p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_history_item</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem"><span class="type">WebKitWebHistoryItem</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the alternate title of <em class="parameter"><code>web_history_item</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_history_item_get_last_visited_time ()">
+<a name="webkit-web-history-item-get-last-visited-time"></a><h3>webkit_web_history_item_get_last_visited_time ()</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"
+>gdouble</a>             webkit_web_history_item_get_last_visited_time
+                                                        (<a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem">WebKitWebHistoryItem</a> *web_history_item);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_history_item</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_history_item_get_original_uri ()">
+<a name="webkit-web-history-item-get-original-uri"></a><h3>webkit_web_history_item_get_original_uri ()</h3>
+<pre class="programlisting">const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *       webkit_web_history_item_get_original_uri
+                                                        (<a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem">WebKitWebHistoryItem</a> *web_history_item);</pre>
+<p>
+Returns the original URI of <em class="parameter"><code>web_history_item</code></em>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_history_item</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem"><span class="type">WebKitWebHistoryItem</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the original URI of <em class="parameter"><code>web_history_item</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_history_item_get_title ()">
+<a name="webkit-web-history-item-get-title"></a><h3>webkit_web_history_item_get_title ()</h3>
+<pre class="programlisting">const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *       webkit_web_history_item_get_title   (<a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem">WebKitWebHistoryItem</a> *web_history_item);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_history_item</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem"><span class="type">WebKitWebHistoryItem</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the page title of <em class="parameter"><code>web_history_item</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_history_item_get_uri ()">
+<a name="webkit-web-history-item-get-uri"></a><h3>webkit_web_history_item_get_uri ()</h3>
+<pre class="programlisting">const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *       webkit_web_history_item_get_uri     (<a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem">WebKitWebHistoryItem</a> *web_history_item);</pre>
+<p>
+Returns the URI of <em class="parameter"><code>this</code></em></p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_history_item</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem"><span class="type">WebKitWebHistoryItem</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the URI of <em class="parameter"><code>web_history_item</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_history_item_new ()">
+<a name="webkit-web-history-item-new"></a><h3>webkit_web_history_item_new ()</h3>
+<pre class="programlisting"><a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem">WebKitWebHistoryItem</a> * webkit_web_history_item_new      (void);</pre>
+<p>
+Creates a new <a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem"><span class="type">WebKitWebHistoryItem</span></a> instance</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the new <a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem"><span class="type">WebKitWebHistoryItem</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_history_item_new_with_data ()">
+<a name="webkit-web-history-item-new-with-data"></a><h3>webkit_web_history_item_new_with_data ()</h3>
+<pre class="programlisting"><a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem">WebKitWebHistoryItem</a> * webkit_web_history_item_new_with_data
+                                                        (const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *uri,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *title);</pre>
+<p>
+Creates a new <a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem"><span class="type">WebKitWebHistoryItem</span></a> with the given URI and title</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>uri</code></em> :</span></p></td>
+<td> the uri of the page
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>title</code></em> :</span></p></td>
+<td> the title of the page
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the new <a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem"><span class="type">WebKitWebHistoryItem</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_history_item_set_alternate_title ()">
+<a name="webkit-web-history-item-set-alternate-title"></a><h3>webkit_web_history_item_set_alternate_title ()</h3>
+<pre class="programlisting">void                webkit_web_history_item_set_alternate_title
+                                                        (<a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem">WebKitWebHistoryItem</a> *web_history_item,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *title);</pre>
+<p>
+Sets an alternate title for <em class="parameter"><code>web_history_item</code></em></p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_history_item</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem"><span class="type">WebKitWebHistoryItem</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>title</code></em> :</span></p></td>
+<td> the alternate title for <em class="parameter"><code>this</code></em> history item
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" title="Property Details">
+<a name="webkitgtk-WebKitWebHistoryItem.property-details"></a><h2>Property Details</h2>
+<div class="refsect2" title='The "alternate-title" property'>
+<a name="WebKitWebHistoryItem--alternate-title"></a><h3>The <code class="literal">"alternate-title"</code> property</h3>
+<pre class="programlisting">  "alternate-title"          <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write</pre>
+<p>
+The alternate title of the history item.</p>
+<p>
+</p>
+<p>Default value: NULL</p>
+<p>Since 1.0.2</p>
+</div>
+<hr>
+<div class="refsect2" title='The "last-visited-time" property'>
+<a name="WebKitWebHistoryItem--last-visited-time"></a><h3>The <code class="literal">"last-visited-time"</code> property</h3>
+<pre class="programlisting">  "last-visited-time"        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read</pre>
+<p>
+The time at which the history item was last visited.</p>
+<p>
+</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+<p>Since 1.0.2</p>
+</div>
+<hr>
+<div class="refsect2" title='The "original-uri" property'>
+<a name="WebKitWebHistoryItem--original-uri"></a><h3>The <code class="literal">"original-uri"</code> property</h3>
+<pre class="programlisting">  "original-uri"             <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read</pre>
+<p>
+The original URI of the history item.</p>
+<p>
+</p>
+<p>Default value: NULL</p>
+<p>Since 1.0.2</p>
+</div>
+<hr>
+<div class="refsect2" title='The "title" property'>
+<a name="WebKitWebHistoryItem--title"></a><h3>The <code class="literal">"title"</code> property</h3>
+<pre class="programlisting">  "title"                    <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read</pre>
+<p>
+The title of the history item.</p>
+<p>
+</p>
+<p>Default value: NULL</p>
+<p>Since 1.0.2</p>
+</div>
+<hr>
+<div class="refsect2" title='The "uri" property'>
+<a name="WebKitWebHistoryItem--uri"></a><h3>The <code class="literal">"uri"</code> property</h3>
+<pre class="programlisting">  "uri"                      <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read</pre>
+<p>
+The URI of the history item.</p>
+<p>
+</p>
+<p>Default value: NULL</p>
+<p>Since 1.0.2</p>
+</div>
+</div>
+<div class="refsect1" title="See Also">
+<a name="webkitgtk-WebKitWebHistoryItem.see-also"></a><h2>See Also</h2>
+#WebKitWebBackForwardList
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.11</div>
+</body>
+</html>

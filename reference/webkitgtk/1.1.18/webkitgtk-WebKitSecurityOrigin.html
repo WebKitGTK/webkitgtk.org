@@ -1,0 +1,352 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitSecurityOrigin</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="WebKitGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="webkitgtk-WebKitSoupAuthDialog.html" title="WebKitSoupAuthDialog">
+<link rel="next" href="webkitgtk-WebKitWebWindowFeatures.html" title="WebKitWebWindowFeatures">
+<meta name="generator" content="GTK-Doc V1.11 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="chapter" href="ch01.html" title="Class Overview">
+<link rel="chapter" href="ch02.html" title="Running WebKitGTK+-based programs">
+<link rel="index" href="index-all.html" title="Index">
+<link rel="index" href="index-deprecated.html" title="Index of deprecated symbols">
+<link rel="index" href="index-1.0.1.html" title="Index of new symbols in 1.0.1">
+<link rel="index" href="index-1.0.2.html" title="Index of new symbols in 1.0.2">
+<link rel="index" href="index-1.0.3.html" title="Index of new symbols in 1.0.3">
+<link rel="index" href="index-1.1.1.html" title="Index of new symbols in 1.1.1">
+<link rel="index" href="index-1.1.2.html" title="Index of new symbols in 1.1.2">
+<link rel="index" href="index-1.1.3.html" title="Index of new symbols in 1.1.3">
+<link rel="index" href="index-1.1.4.html" title="Index of new symbols in 1.1.4">
+<link rel="index" href="index-1.1.5.html" title="Index of new symbols in 1.1.5">
+<link rel="index" href="index-1.1.6.html" title="Index of new symbols in 1.1.6">
+<link rel="index" href="index-1.1.7.html" title="Index of new symbols in 1.1.7">
+<link rel="index" href="index-1.1.8.html" title="Index of new symbols in 1.1.8">
+<link rel="index" href="index-1.1.10.html" title="Index of new symbols in 1.1.10">
+<link rel="index" href="index-1.1.11.html" title="Index of new symbols in 1.1.11">
+<link rel="index" href="index-1.1.13.html" title="Index of new symbols in 1.1.13">
+<link rel="index" href="index-1.1.14.html" title="Index of new symbols in 1.1.14">
+<link rel="index" href="index-1.1.15.html" title="Index of new symbols in 1.1.15">
+<link rel="index" href="index-1.1.16.html" title="Index of new symbols in 1.1.16">
+<link rel="index" href="index-1.1.17.html" title="Index of new symbols in 1.1.17">
+<link rel="index" href="index-1.1.18.html" title="Index of new symbols in 1.1.18">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="webkitgtk-WebKitSoupAuthDialog.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">WebKitGTK+ Reference Manual</th>
+<td><a accesskey="n" href="webkitgtk-WebKitWebWindowFeatures.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#webkitgtk-WebKitSecurityOrigin.synopsis" class="shortcut">Top</a>
+                 | 
+                <a href="#webkitgtk-WebKitSecurityOrigin.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry" title="WebKitSecurityOrigin">
+<a name="webkitgtk-WebKitSecurityOrigin"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="webkitgtk-WebKitSecurityOrigin.top_of_page"></a>WebKitSecurityOrigin</span></h2>
+<p>WebKitSecurityOrigin — A security boundary for web sites</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="webkitgtk-WebKitSecurityOrigin.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+                    <a class="link" href="webkitgtk-WebKitSecurityOrigin.html#WebKitSecurityOrigin" title="WebKitSecurityOrigin">WebKitSecurityOrigin</a>;
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"
+>GList</a> *             <a class="link" href="webkitgtk-WebKitSecurityOrigin.html#webkit-security-origin-get-all-web-databases" title="webkit_security_origin_get_all_web_databases ()">webkit_security_origin_get_all_web_databases</a>
+                                                        (<a class="link" href="webkitgtk-WebKitSecurityOrigin.html#WebKitSecurityOrigin" title="WebKitSecurityOrigin">WebKitSecurityOrigin</a> *securityOrigin);
+const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *       <a class="link" href="webkitgtk-WebKitSecurityOrigin.html#webkit-security-origin-get-host" title="webkit_security_origin_get_host ()">webkit_security_origin_get_host</a>     (<a class="link" href="webkitgtk-WebKitSecurityOrigin.html#WebKitSecurityOrigin" title="WebKitSecurityOrigin">WebKitSecurityOrigin</a> *securityOrigin);
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"
+>guint</a>               <a class="link" href="webkitgtk-WebKitSecurityOrigin.html#webkit-security-origin-get-port" title="webkit_security_origin_get_port ()">webkit_security_origin_get_port</a>     (<a class="link" href="webkitgtk-WebKitSecurityOrigin.html#WebKitSecurityOrigin" title="WebKitSecurityOrigin">WebKitSecurityOrigin</a> *securityOrigin);
+const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *       <a class="link" href="webkitgtk-WebKitSecurityOrigin.html#webkit-security-origin-get-protocol" title="webkit_security_origin_get_protocol ()">webkit_security_origin_get_protocol</a> (<a class="link" href="webkitgtk-WebKitSecurityOrigin.html#WebKitSecurityOrigin" title="WebKitSecurityOrigin">WebKitSecurityOrigin</a> *securityOrigin);
+<a
+href="/usr/share/gtk-doc/html/gobject/gobject-Type-Information.html#GType"
+>GType</a>               <a class="link" href="webkitgtk-WebKitSecurityOrigin.html#webkit-security-origin-get-type" title="webkit_security_origin_get_type ()">webkit_security_origin_get_type</a>     (void);
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint64"
+>guint64</a>             <a class="link" href="webkitgtk-WebKitSecurityOrigin.html#webkit-security-origin-get-web-database-quota" title="webkit_security_origin_get_web_database_quota ()">webkit_security_origin_get_web_database_quota</a>
+                                                        (<a class="link" href="webkitgtk-WebKitSecurityOrigin.html#WebKitSecurityOrigin" title="WebKitSecurityOrigin">WebKitSecurityOrigin</a> *securityOrigin);
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint64"
+>guint64</a>             <a class="link" href="webkitgtk-WebKitSecurityOrigin.html#webkit-security-origin-get-web-database-usage" title="webkit_security_origin_get_web_database_usage ()">webkit_security_origin_get_web_database_usage</a>
+                                                        (<a class="link" href="webkitgtk-WebKitSecurityOrigin.html#WebKitSecurityOrigin" title="WebKitSecurityOrigin">WebKitSecurityOrigin</a> *securityOrigin);
+void                <a class="link" href="webkitgtk-WebKitSecurityOrigin.html#webkit-security-origin-set-web-database-quota" title="webkit_security_origin_set_web_database_quota ()">webkit_security_origin_set_web_database_quota</a>
+                                                        (<a class="link" href="webkitgtk-WebKitSecurityOrigin.html#WebKitSecurityOrigin" title="WebKitSecurityOrigin">WebKitSecurityOrigin</a> *securityOrigin,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint64"
+>guint64</a> quota);
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="webkitgtk-WebKitSecurityOrigin.description"></a><h2>Description</h2>
+<p>
+<a class="link" href="webkitgtk-WebKitSecurityOrigin.html#WebKitSecurityOrigin" title="WebKitSecurityOrigin"><span class="type">WebKitSecurityOrigin</span></a> is a representation of a security domain defined
+by web sites. An origin consists of a host name, a protocol, and a port
+number. Web sites with the same security origin can access each other's
+resources for client-side scripting or database access.
+</p>
+<p>
+Use <a class="link" href="webkitgtk-WebKitWebFrame.html#webkit-web-frame-get-security-origin" title="webkit_web_frame_get_security_origin ()"><span class="type">webkit_web_frame_get_security_origin</span></a> to get the security origin of a
+<a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitWebFrame" title="WebKitWebFrame"><span class="type">WebKitWebFrame</span></a>.
+</p>
+<p>
+Database quotas and usages are also defined per security origin. The
+cumulative disk usage of an origin's databases may be retrieved with
+<a class="link" href="webkitgtk-WebKitSecurityOrigin.html#webkit-security-origin-get-web-database-usage" title="webkit_security_origin_get_web_database_usage ()"><span class="type">webkit_security_origin_get_web_database_usage</span></a>. An origin's quota can be
+adjusted with <a class="link" href="webkitgtk-WebKitSecurityOrigin.html#webkit-security-origin-set-web-database-quota" title="webkit_security_origin_set_web_database_quota ()"><span class="type">webkit_security_origin_set_web_database_quota</span></a>.</p>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="webkitgtk-WebKitSecurityOrigin.details"></a><h2>Details</h2>
+<div class="refsect2" title="WebKitSecurityOrigin">
+<a name="WebKitSecurityOrigin"></a><h3>WebKitSecurityOrigin</h3>
+<pre class="programlisting">typedef struct {
+    GObject parent_instance;
+} WebKitSecurityOrigin;
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_security_origin_get_all_web_databases ()">
+<a name="webkit-security-origin-get-all-web-databases"></a><h3>webkit_security_origin_get_all_web_databases ()</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"
+>GList</a> *             webkit_security_origin_get_all_web_databases
+                                                        (<a class="link" href="webkitgtk-WebKitSecurityOrigin.html#WebKitSecurityOrigin" title="WebKitSecurityOrigin">WebKitSecurityOrigin</a> *securityOrigin);</pre>
+<p>
+Returns a list of all Web Databases in the security origin.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>securityOrigin</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a <span class="type">Glist</span> of databases in the security origin.
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.1.14</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_security_origin_get_host ()">
+<a name="webkit-security-origin-get-host"></a><h3>webkit_security_origin_get_host ()</h3>
+<pre class="programlisting">const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *       webkit_security_origin_get_host     (<a class="link" href="webkitgtk-WebKitSecurityOrigin.html#WebKitSecurityOrigin" title="WebKitSecurityOrigin">WebKitSecurityOrigin</a> *securityOrigin);</pre>
+<p>
+Returns the hostname for the security origin.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>securityOrigin</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the hostname for the security origin
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.1.14</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_security_origin_get_port ()">
+<a name="webkit-security-origin-get-port"></a><h3>webkit_security_origin_get_port ()</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"
+>guint</a>               webkit_security_origin_get_port     (<a class="link" href="webkitgtk-WebKitSecurityOrigin.html#WebKitSecurityOrigin" title="WebKitSecurityOrigin">WebKitSecurityOrigin</a> *securityOrigin);</pre>
+<p>
+Returns the port for the security origin.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>securityOrigin</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the port for the security origin
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.1.14</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_security_origin_get_protocol ()">
+<a name="webkit-security-origin-get-protocol"></a><h3>webkit_security_origin_get_protocol ()</h3>
+<pre class="programlisting">const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *       webkit_security_origin_get_protocol (<a class="link" href="webkitgtk-WebKitSecurityOrigin.html#WebKitSecurityOrigin" title="WebKitSecurityOrigin">WebKitSecurityOrigin</a> *securityOrigin);</pre>
+<p>
+Returns the protocol for the security origin.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>securityOrigin</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the protocol for the security origin
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.1.14</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_security_origin_get_type ()">
+<a name="webkit-security-origin-get-type"></a><h3>webkit_security_origin_get_type ()</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/gobject/gobject-Type-Information.html#GType"
+>GType</a>               webkit_security_origin_get_type     (void);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_security_origin_get_web_database_quota ()">
+<a name="webkit-security-origin-get-web-database-quota"></a><h3>webkit_security_origin_get_web_database_quota ()</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint64"
+>guint64</a>             webkit_security_origin_get_web_database_quota
+                                                        (<a class="link" href="webkitgtk-WebKitSecurityOrigin.html#WebKitSecurityOrigin" title="WebKitSecurityOrigin">WebKitSecurityOrigin</a> *securityOrigin);</pre>
+<p>
+Returns the quota for Web Database storage of the security origin
+in bytes.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>securityOrigin</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the Web Database quota
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.1.14</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_security_origin_get_web_database_usage ()">
+<a name="webkit-security-origin-get-web-database-usage"></a><h3>webkit_security_origin_get_web_database_usage ()</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint64"
+>guint64</a>             webkit_security_origin_get_web_database_usage
+                                                        (<a class="link" href="webkitgtk-WebKitSecurityOrigin.html#WebKitSecurityOrigin" title="WebKitSecurityOrigin">WebKitSecurityOrigin</a> *securityOrigin);</pre>
+<p>
+Returns the cumulative size of all Web Database database's in the origin
+in bytes.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>securityOrigin</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the cumulative size of all databases 
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.1.14</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_security_origin_set_web_database_quota ()">
+<a name="webkit-security-origin-set-web-database-quota"></a><h3>webkit_security_origin_set_web_database_quota ()</h3>
+<pre class="programlisting">void                webkit_security_origin_set_web_database_quota
+                                                        (<a class="link" href="webkitgtk-WebKitSecurityOrigin.html#WebKitSecurityOrigin" title="WebKitSecurityOrigin">WebKitSecurityOrigin</a> *securityOrigin,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint64"
+>guint64</a> quota);</pre>
+<p>
+Adjust the quota for Web Database storage of the security origin</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>securityOrigin</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>quota</code></em> :</span></p></td>
+<td> a new Web Database quota in bytes
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.1.14</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.11</div>
+</body>
+</html>

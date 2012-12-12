@@ -1,0 +1,1123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitWebView</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="WebKit2GTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitWebContext.html" title="WebKitWebContext">
+<link rel="next" href="WebKitWebViewBase.html" title="WebKitWebViewBase">
+<meta name="generator" content="GTK-Doc V1.18.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="WebKitWebContext.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">WebKit2GTK+ Reference Manual</th>
+<td><a accesskey="n" href="WebKitWebViewBase.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#WebKitWebView.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitWebView.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitWebView.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitWebView.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#WebKitWebView.properties" class="shortcut">Properties</a>
+                   | 
+                  <a href="#WebKitWebView.signals" class="shortcut">Signals</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="WebKitWebView"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitWebView.top_of_page"></a>WebKitWebView</span></h2>
+<p>WebKitWebView</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitWebView.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitWebView.html#WebKitWebView-struct" title="WebKitWebView">WebKitWebView</a>;
+<span class="returnvalue">GtkWidget</span> *         <a class="link" href="WebKitWebView.html#webkit-web-view-new" title="webkit_web_view_new ()">webkit_web_view_new</a>                 (<em class="parameter"><code><span class="type">void</span></code></em>);
+<span class="returnvalue">GtkWidget</span> *         <a class="link" href="WebKitWebView.html#webkit-web-view-new-with-context" title="webkit_web_view_new_with_context ()">webkit_web_view_new_with_context</a>    (<em class="parameter"><code><a class="link" href="WebKitWebContext.html" title="WebKitWebContext"><span class="type">WebKitWebContext</span></a> *context</code></em>);
+<a class="link" href="WebKitWebContext.html" title="WebKitWebContext"><span class="returnvalue">WebKitWebContext</span></a> *  <a class="link" href="WebKitWebView.html#webkit-web-view-get-context" title="webkit_web_view_get_context ()">webkit_web_view_get_context</a>         (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);
+<a class="link" href="WebKitWebLoaderClient.html" title="WebKitWebLoaderClient"><span class="returnvalue">WebKitWebLoaderClient</span></a> * <a class="link" href="WebKitWebView.html#webkit-web-view-get-loader-client" title="webkit_web_view_get_loader_client ()">webkit_web_view_get_loader_client</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitWebView.html#webkit-web-view-set-loader-client" title="webkit_web_view_set_loader_client ()">webkit_web_view_set_loader_client</a>   (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitWebLoaderClient.html" title="WebKitWebLoaderClient"><span class="type">WebKitWebLoaderClient</span></a> *loader_client</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitWebView.html#webkit-web-view-load-uri" title="webkit_web_view_load_uri ()">webkit_web_view_load_uri</a>            (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *uri</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitWebView.html#webkit-web-view-load-html" title="webkit_web_view_load_html ()">webkit_web_view_load_html</a>           (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *content</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *base_uri</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitWebView.html#webkit-web-view-load-plain-text" title="webkit_web_view_load_plain_text ()">webkit_web_view_load_plain_text</a>     (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *plain_text</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitWebView.html#webkit-web-view-load-alternate-html" title="webkit_web_view_load_alternate_html ()">webkit_web_view_load_alternate_html</a> (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *content</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *base_uri</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *unreachable_uri</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitWebView.html#webkit-web-view-load-request" title="webkit_web_view_load_request ()">webkit_web_view_load_request</a>        (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitURIRequest.html" title="WebKitURIRequest"><span class="type">WebKitURIRequest</span></a> *request</code></em>);
+<span class="returnvalue">gboolean</span>            <a class="link" href="WebKitWebView.html#webkit-web-view-can-go-back" title="webkit_web_view_can_go_back ()">webkit_web_view_can_go_back</a>         (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitWebView.html#webkit-web-view-go-back" title="webkit_web_view_go_back ()">webkit_web_view_go_back</a>             (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);
+<span class="returnvalue">gboolean</span>            <a class="link" href="WebKitWebView.html#webkit-web-view-can-go-forward" title="webkit_web_view_can_go_forward ()">webkit_web_view_can_go_forward</a>      (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitWebView.html#webkit-web-view-go-forward" title="webkit_web_view_go_forward ()">webkit_web_view_go_forward</a>          (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);
+const <span class="returnvalue">gchar</span> *       <a class="link" href="WebKitWebView.html#webkit-web-view-get-title" title="webkit_web_view_get_title ()">webkit_web_view_get_title</a>           (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitWebView.html#webkit-web-view-reload" title="webkit_web_view_reload ()">webkit_web_view_reload</a>              (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitWebView.html#webkit-web-view-reload-bypass-cache" title="webkit_web_view_reload_bypass_cache ()">webkit_web_view_reload_bypass_cache</a> (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitWebView.html#webkit-web-view-stop-loading" title="webkit_web_view_stop_loading ()">webkit_web_view_stop_loading</a>        (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);
+<span class="returnvalue">gdouble</span>             <a class="link" href="WebKitWebView.html#webkit-web-view-get-estimated-load-progress" title="webkit_web_view_get_estimated_load_progress ()">webkit_web_view_get_estimated_load_progress</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);
+const <span class="returnvalue">gchar</span> *       <a class="link" href="WebKitWebView.html#webkit-web-view-get-custom-charset" title="webkit_web_view_get_custom_charset ()">webkit_web_view_get_custom_charset</a>  (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitWebView.html#webkit-web-view-set-custom-charset" title="webkit_web_view_set_custom_charset ()">webkit_web_view_set_custom_charset</a>  (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *charset</code></em>);
+<a class="link" href="WebKitBackForwardList.html" title="WebKitBackForwardList"><span class="returnvalue">WebKitBackForwardList</span></a> * <a class="link" href="WebKitWebView.html#webkit-web-view-get-back-forward-list" title="webkit_web_view_get_back_forward_list ()">webkit_web_view_get_back_forward_list</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitWebView.html#webkit-web-view-go-to-back-forward-list-item" title="webkit_web_view_go_to_back_forward_list_item ()">webkit_web_view_go_to_back_forward_list_item</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitBackForwardListItem.html" title="WebKitBackForwardListItem"><span class="type">WebKitBackForwardListItem</span></a> *list_item</code></em>);
+const <span class="returnvalue">gchar</span> *       <a class="link" href="WebKitWebView.html#webkit-web-view-get-uri" title="webkit_web_view_get_uri ()">webkit_web_view_get_uri</a>             (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitWebView.html#webkit-web-view-set-settings" title="webkit_web_view_set_settings ()">webkit_web_view_set_settings</a>        (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="type">WebKitSettings</span></a> *settings</code></em>);
+<a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="returnvalue">WebKitSettings</span></a> *    <a class="link" href="WebKitWebView.html#webkit-web-view-get-settings" title="webkit_web_view_get_settings ()">webkit_web_view_get_settings</a>        (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);
+<a class="link" href="WebKitWindowProperties.html" title="WebKitWindowProperties"><span class="returnvalue">WebKitWindowProperties</span></a> * <a class="link" href="WebKitWebView.html#webkit-web-view-get-window-properties" title="webkit_web_view_get_window_properties ()">webkit_web_view_get_window_properties</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitWebView.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GObject
+   +----GInitiallyUnowned
+         +----GtkWidget
+               +----GtkContainer
+                     +----<a class="link" href="WebKitWebViewBase.html" title="WebKitWebViewBase">WebKitWebViewBase</a>
+                           +----WebKitWebView
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitWebView.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+WebKitWebView implements
+ AtkImplementorIface and  GtkBuildable.</p>
+</div>
+<div class="refsect1">
+<a name="WebKitWebView.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitWebView.html#WebKitWebView--estimated-load-progress" title='The "estimated-load-progress" property'>estimated-load-progress</a>"  <span class="type">gdouble</span>               : Read
+  "<a class="link" href="WebKitWebView.html#WebKitWebView--title" title='The "title" property'>title</a>"                    <span class="type">gchar</span>*                : Read
+  "<a class="link" href="WebKitWebView.html#WebKitWebView--uri" title='The "uri" property'>uri</a>"                      <span class="type">gchar</span>*                : Read
+  "<a class="link" href="WebKitWebView.html#WebKitWebView--web-context" title='The "web-context" property'>web-context</a>"              <a class="link" href="WebKitWebContext.html" title="WebKitWebContext"><span class="type">WebKitWebContext</span></a>*     : Read / Write / Construct Only
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitWebView.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitWebView.html#WebKitWebView-close" title='The "close" signal'>close</a>"                                          : <code class="literal">Run Last</code>
+  "<a class="link" href="WebKitWebView.html#WebKitWebView-create" title='The "create" signal'>create</a>"                                         : <code class="literal">Run Last</code>
+  "<a class="link" href="WebKitWebView.html#WebKitWebView-ready-to-show" title='The "ready-to-show" signal'>ready-to-show</a>"                                  : <code class="literal">Run Last</code>
+  "<a class="link" href="WebKitWebView.html#WebKitWebView-script-alert" title='The "script-alert" signal'>script-alert</a>"                                   : <code class="literal">Run Last</code>
+  "<a class="link" href="WebKitWebView.html#WebKitWebView-script-confirm" title='The "script-confirm" signal'>script-confirm</a>"                                 : <code class="literal">Run Last</code>
+  "<a class="link" href="WebKitWebView.html#WebKitWebView-script-prompt" title='The "script-prompt" signal'>script-prompt</a>"                                  : <code class="literal">Run Last</code>
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitWebView.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitWebView.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitWebView-struct"></a><h3>WebKitWebView</h3>
+<pre class="programlisting">typedef struct _WebKitWebView WebKitWebView;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-new"></a><h3>webkit_web_view_new ()</h3>
+<pre class="programlisting"><span class="returnvalue">GtkWidget</span> *         webkit_web_view_new                 (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Creates a new <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> with the default <a class="link" href="WebKitWebContext.html" title="WebKitWebContext"><span class="type">WebKitWebContext</span></a>.
+See also <a class="link" href="WebKitWebView.html#webkit-web-view-new-with-context" title="webkit_web_view_new_with_context ()"><code class="function">webkit_web_view_new_with_context()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The newly created <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> widget</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-new-with-context"></a><h3>webkit_web_view_new_with_context ()</h3>
+<pre class="programlisting"><span class="returnvalue">GtkWidget</span> *         webkit_web_view_new_with_context    (<em class="parameter"><code><a class="link" href="WebKitWebContext.html" title="WebKitWebContext"><span class="type">WebKitWebContext</span></a> *context</code></em>);</pre>
+<p>
+Creates a new <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> with the given <a class="link" href="WebKitWebContext.html" title="WebKitWebContext"><span class="type">WebKitWebContext</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>context</code></em> :</span></p></td>
+<td>the <a class="link" href="WebKitWebContext.html" title="WebKitWebContext"><span class="type">WebKitWebContext</span></a> to be used by the <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The newly created <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> widget</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-get-context"></a><h3>webkit_web_view_get_context ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitWebContext.html" title="WebKitWebContext"><span class="returnvalue">WebKitWebContext</span></a> *  webkit_web_view_get_context         (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+<p>
+Gets the web context of <em class="parameter"><code>web_view</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the <a class="link" href="WebKitWebContext.html" title="WebKitWebContext"><span class="type">WebKitWebContext</span></a> of the view. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-get-loader-client"></a><h3>webkit_web_view_get_loader_client ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitWebLoaderClient.html" title="WebKitWebLoaderClient"><span class="returnvalue">WebKitWebLoaderClient</span></a> * webkit_web_view_get_loader_client
+                                                        (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+<p>
+Returns the <a class="link" href="WebKitWebLoaderClient.html" title="WebKitWebLoaderClient"><span class="type">WebKitWebLoaderClient</span></a> of <em class="parameter"><code>web_view</code></em>. You can use it
+to monitor the status of load operations happening on <em class="parameter"><code>web_view</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the <a class="link" href="WebKitWebLoaderClient.html" title="WebKitWebLoaderClient"><span class="type">WebKitWebLoaderClient</span></a> of <em class="parameter"><code>web_view</code></em>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-set-loader-client"></a><h3>webkit_web_view_set_loader_client ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_web_view_set_loader_client   (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitWebLoaderClient.html" title="WebKitWebLoaderClient"><span class="type">WebKitWebLoaderClient</span></a> *loader_client</code></em>);</pre>
+<p>
+Sets the <a class="link" href="WebKitWebLoaderClient.html" title="WebKitWebLoaderClient"><span class="type">WebKitWebLoaderClient</span></a> that the view will use during
+load operations.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>loader_client</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebLoaderClient.html" title="WebKitWebLoaderClient"><span class="type">WebKitWebLoaderClient</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-load-uri"></a><h3>webkit_web_view_load_uri ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_web_view_load_uri            (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *uri</code></em>);</pre>
+<p>
+Requests loading of the specified URI string.
+You can monitor the status of the load operation using the
+<a class="link" href="WebKitWebLoaderClient.html" title="WebKitWebLoaderClient"><span class="type">WebKitWebLoaderClient</span></a> of <em class="parameter"><code>web_view</code></em>. See <a class="link" href="WebKitWebView.html#webkit-web-view-get-loader-client" title="webkit_web_view_get_loader_client ()"><code class="function">webkit_web_view_get_loader_client()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>uri</code></em> :</span></p></td>
+<td>an URI string</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-load-html"></a><h3>webkit_web_view_load_html ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_web_view_load_html           (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *content</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *base_uri</code></em>);</pre>
+<p>
+Load the given <em class="parameter"><code>content</code></em> string with the specified <em class="parameter"><code>base_uri</code></em>. 
+Relative URLs in the <em class="parameter"><code>content</code></em> will be resolved against <em class="parameter"><code>base_uri</code></em>.
+When <em class="parameter"><code>base_uri</code></em> is <code class="literal">NULL</code>, it defaults to "about:blank". The mime type 
+of the document will be "text/html". You can monitor the status of 
+the load operation using the <a class="link" href="WebKitWebLoaderClient.html" title="WebKitWebLoaderClient"><span class="type">WebKitWebLoaderClient</span></a> of <em class="parameter"><code>web_view</code></em>. 
+See <a class="link" href="WebKitWebView.html#webkit-web-view-get-loader-client" title="webkit_web_view_get_loader_client ()"><code class="function">webkit_web_view_get_loader_client()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>content</code></em> :</span></p></td>
+<td>The HTML string to load</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>base_uri</code></em> :</span></p></td>
+<td>The base URI for relative locations or <code class="literal">NULL</code>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-load-plain-text"></a><h3>webkit_web_view_load_plain_text ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_web_view_load_plain_text     (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *plain_text</code></em>);</pre>
+<p>
+Load the specified <em class="parameter"><code>plain_text</code></em> string into <em class="parameter"><code>web_view</code></em>. The mime type of
+document will be "text/plain". You can monitor  the status of the load 
+operation using the <a class="link" href="WebKitWebLoaderClient.html" title="WebKitWebLoaderClient"><span class="type">WebKitWebLoaderClient</span></a> of <em class="parameter"><code>web_view</code></em>. 
+See <a class="link" href="WebKitWebView.html#webkit-web-view-get-loader-client" title="webkit_web_view_get_loader_client ()"><code class="function">webkit_web_view_get_loader_client()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>plain_text</code></em> :</span></p></td>
+<td>The plain text to load</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-load-alternate-html"></a><h3>webkit_web_view_load_alternate_html ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_web_view_load_alternate_html (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *content</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *base_uri</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *unreachable_uri</code></em>);</pre>
+<p>
+Request loading of an alternate content for a URI that is unreachable. This allows clients
+to display page-loading errors in the <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> itself. This is typically called from
+<a class="link" href="WebKitWebLoaderClient.html#WebKitWebLoaderClient-provisional-load-failed" title='The "provisional-load-failed" signal'><span class="type">"provisional-load-failed"</span></a> or <a class="link" href="WebKitWebLoaderClient.html#WebKitWebLoaderClient-load-failed" title='The "load-failed" signal'><span class="type">"load-failed"</span></a>
+signals.
+When called from those signals this method will preserve the back-forward list. The URI passed in
+<em class="parameter"><code>base_uri</code></em> has to be an absolute URI.
+You can monitor the status of the load operation using the
+<a class="link" href="WebKitWebLoaderClient.html" title="WebKitWebLoaderClient"><span class="type">WebKitWebLoaderClient</span></a> of <em class="parameter"><code>web_view</code></em>. See <a class="link" href="WebKitWebView.html#webkit-web-view-get-loader-client" title="webkit_web_view_get_loader_client ()"><code class="function">webkit_web_view_get_loader_client()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>content</code></em> :</span></p></td>
+<td>the alternate content to display as the main page of the <em class="parameter"><code>web_view</code></em>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>base_uri</code></em> :</span></p></td>
+<td>the base URI for relative locations</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>unreachable_uri</code></em> :</span></p></td>
+<td>the URI for the alternate page content</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-load-request"></a><h3>webkit_web_view_load_request ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_web_view_load_request        (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitURIRequest.html" title="WebKitURIRequest"><span class="type">WebKitURIRequest</span></a> *request</code></em>);</pre>
+<p>
+Requests loading of the specified <a class="link" href="WebKitURIRequest.html" title="WebKitURIRequest"><span class="type">WebKitURIRequest</span></a>.
+You can monitor the status of the load operation using the
+<a class="link" href="WebKitWebLoaderClient.html" title="WebKitWebLoaderClient"><span class="type">WebKitWebLoaderClient</span></a> of <em class="parameter"><code>web_view</code></em>. See <a class="link" href="WebKitWebView.html#webkit-web-view-get-loader-client" title="webkit_web_view_get_loader_client ()"><code class="function">webkit_web_view_get_loader_client()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>request</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitURIRequest.html" title="WebKitURIRequest"><span class="type">WebKitURIRequest</span></a> to load</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-can-go-back"></a><h3>webkit_web_view_can_go_back ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>            webkit_web_view_can_go_back         (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+<p>
+Determines whether <em class="parameter"><code>web_view</code></em> has a previous history item.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<code class="literal">TRUE</code> if able to move back or <code class="literal">FALSE</code> otherwise.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-go-back"></a><h3>webkit_web_view_go_back ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_web_view_go_back             (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+<p>
+Loads the previous history item.
+You can monitor the status of the load operation using the
+<a class="link" href="WebKitWebLoaderClient.html" title="WebKitWebLoaderClient"><span class="type">WebKitWebLoaderClient</span></a> of <em class="parameter"><code>web_view</code></em>. See <a class="link" href="WebKitWebView.html#webkit-web-view-get-loader-client" title="webkit_web_view_get_loader_client ()"><code class="function">webkit_web_view_get_loader_client()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-can-go-forward"></a><h3>webkit_web_view_can_go_forward ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>            webkit_web_view_can_go_forward      (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+<p>
+Determines whether <em class="parameter"><code>web_view</code></em> has a next history item.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<code class="literal">TRUE</code> if able to move forward or <code class="literal">FALSE</code> otherwise.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-go-forward"></a><h3>webkit_web_view_go_forward ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_web_view_go_forward          (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+<p>
+Loads the next history item.
+You can monitor the status of the load operation using the
+<a class="link" href="WebKitWebLoaderClient.html" title="WebKitWebLoaderClient"><span class="type">WebKitWebLoaderClient</span></a> of <em class="parameter"><code>web_view</code></em>. See <a class="link" href="WebKitWebView.html#webkit-web-view-get-loader-client" title="webkit_web_view_get_loader_client ()"><code class="function">webkit_web_view_get_loader_client()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-get-title"></a><h3>webkit_web_view_get_title ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *       webkit_web_view_get_title           (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+<p>
+Gets the value of the <a class="link" href="WebKitWebView.html#WebKitWebView--title" title='The "title" property'><span class="type">"title"</span></a> property.
+You can connect to notify::title signal of <em class="parameter"><code>web_view</code></em> to 
+be notified when the title has been received.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The main frame document title of <em class="parameter"><code>web_view</code></em>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-reload"></a><h3>webkit_web_view_reload ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_web_view_reload              (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+<p>
+Reloads the current contents of <em class="parameter"><code>web_view</code></em>.
+See also <a class="link" href="WebKitWebView.html#webkit-web-view-reload-bypass-cache" title="webkit_web_view_reload_bypass_cache ()"><code class="function">webkit_web_view_reload_bypass_cache()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-reload-bypass-cache"></a><h3>webkit_web_view_reload_bypass_cache ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_web_view_reload_bypass_cache (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+<p>
+Reloads the current contents of <em class="parameter"><code>web_view</code></em> without
+using any cached data.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-stop-loading"></a><h3>webkit_web_view_stop_loading ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_web_view_stop_loading        (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+<p>
+Stops any ongoing loading operation in <em class="parameter"><code>web_view</code></em>.
+This method does nothing if no content is being loaded.
+If there is a loading operation in progress, it will be cancelled and
+<a class="link" href="WebKitWebLoaderClient.html#WebKitWebLoaderClient-provisional-load-failed" title='The "provisional-load-failed" signal'><span class="type">"provisional-load-failed"</span></a> or
+<a class="link" href="WebKitWebLoaderClient.html#WebKitWebLoaderClient-load-failed" title='The "load-failed" signal'><span class="type">"load-failed"</span></a> will be emitted on the current
+<a class="link" href="WebKitWebLoaderClient.html" title="WebKitWebLoaderClient"><span class="type">WebKitWebLoaderClient</span></a> with <a class="link" href="webkit2gtk-WebKitError.html#WEBKIT-NETWORK-ERROR-CANCELLED:CAPS"><code class="literal">WEBKIT_NETWORK_ERROR_CANCELLED</code></a> error.
+See also <a class="link" href="WebKitWebView.html#webkit-web-view-get-loader-client" title="webkit_web_view_get_loader_client ()"><code class="function">webkit_web_view_get_loader_client()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-get-estimated-load-progress"></a><h3>webkit_web_view_get_estimated_load_progress ()</h3>
+<pre class="programlisting"><span class="returnvalue">gdouble</span>             webkit_web_view_get_estimated_load_progress
+                                                        (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+<p>
+Gets the value of the <a class="link" href="WebKitWebView.html#WebKitWebView--estimated-load-progress" title='The "estimated-load-progress" property'><span class="type">"estimated-load-progress"</span></a> property.
+You can monitor the estimated progress of a load operation by
+connecting to the notify::estimated-load-progress signal of <em class="parameter"><code>web_view</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>an estimate of the of the percent complete for a document
+load as a range from 0.0 to 1.0.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-get-custom-charset"></a><h3>webkit_web_view_get_custom_charset ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *       webkit_web_view_get_custom_charset  (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+<p>
+Returns the current custom character encoding name of <em class="parameter"><code>web_view</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the current custom character encoding name or <code class="literal">NULL</code> if no
+custom character encoding has been set.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-set-custom-charset"></a><h3>webkit_web_view_set_custom_charset ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_web_view_set_custom_charset  (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">gchar</span> *charset</code></em>);</pre>
+<p>
+Sets the current custom character encoding override of <em class="parameter"><code>web_view</code></em>. The custom
+character encoding will override any text encoding detected via HTTP headers or
+META tags. Calling this method will stop any current load operation and reload the
+current page. Setting the custom character encoding to <code class="literal">NULL</code> removes the character
+encoding override.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>charset</code></em> :</span></p></td>
+<td>a character encoding name or <code class="literal">NULL</code>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-get-back-forward-list"></a><h3>webkit_web_view_get_back_forward_list ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitBackForwardList.html" title="WebKitBackForwardList"><span class="returnvalue">WebKitBackForwardList</span></a> * webkit_web_view_get_back_forward_list
+                                                        (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+<p>
+Obtains the <a class="link" href="WebKitBackForwardList.html" title="WebKitBackForwardList"><span class="type">WebKitBackForwardList</span></a> associated with the given <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>. The
+<a class="link" href="WebKitBackForwardList.html" title="WebKitBackForwardList"><span class="type">WebKitBackForwardList</span></a> is owned by the <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the <a class="link" href="WebKitBackForwardList.html" title="WebKitBackForwardList"><span class="type">WebKitBackForwardList</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-go-to-back-forward-list-item"></a><h3>webkit_web_view_go_to_back_forward_list_item ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_web_view_go_to_back_forward_list_item
+                                                        (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitBackForwardListItem.html" title="WebKitBackForwardListItem"><span class="type">WebKitBackForwardListItem</span></a> *list_item</code></em>);</pre>
+<p>
+Loads the specific history item <em class="parameter"><code>list_item</code></em>.
+You can monitor the status of the load operation using the
+<a class="link" href="WebKitWebLoaderClient.html" title="WebKitWebLoaderClient"><span class="type">WebKitWebLoaderClient</span></a> of <em class="parameter"><code>web_view</code></em>. See <a class="link" href="WebKitWebView.html#webkit-web-view-get-loader-client" title="webkit_web_view_get_loader_client ()"><code class="function">webkit_web_view_get_loader_client()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>list_item</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitBackForwardListItem.html" title="WebKitBackForwardListItem"><span class="type">WebKitBackForwardListItem</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-get-uri"></a><h3>webkit_web_view_get_uri ()</h3>
+<pre class="programlisting">const <span class="returnvalue">gchar</span> *       webkit_web_view_get_uri             (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+<p>
+Returns the current active URI of <em class="parameter"><code>web_view</code></em>. The active URI might change during
+a load operation:
+</p>
+<p>
+</p>
+<div class="orderedlist"><ol class="orderedlist" type="1">
+<li class="listitem"><p>
+  When nothing has been loaded yet on <em class="parameter"><code>web_view</code></em> the active URI is <code class="literal">NULL</code>.
+</p></li>
+<li class="listitem">
+<p>
+  When a new load operation starts the active URI is the requested URI:
+  </p>
+<div class="itemizedlist"><ul class="itemizedlist" type="disc">
+<li class="listitem"><p>
+    If the load operation was started by <a class="link" href="WebKitWebView.html#webkit-web-view-load-uri" title="webkit_web_view_load_uri ()"><code class="function">webkit_web_view_load_uri()</code></a>,
+    the requested URI is the given one.
+  </p></li>
+<li class="listitem"><p>
+    If the load operation was started by <a class="link" href="WebKitWebView.html#webkit-web-view-load-alternate-html" title="webkit_web_view_load_alternate_html ()"><code class="function">webkit_web_view_load_alternate_html()</code></a>,
+    the requested URI is "about:blank".
+  </p></li>
+<li class="listitem"><p>
+    If the load operation was started by <a class="link" href="WebKitWebView.html#webkit-web-view-go-back" title="webkit_web_view_go_back ()"><code class="function">webkit_web_view_go_back()</code></a> or
+    <a class="link" href="WebKitWebView.html#webkit-web-view-go-forward" title="webkit_web_view_go_forward ()"><code class="function">webkit_web_view_go_forward()</code></a>, the requested URI is the original URI
+    of the previous/next item in the <a class="link" href="WebKitBackForwardList.html" title="WebKitBackForwardList"><span class="type">WebKitBackForwardList</span></a> of <em class="parameter"><code>web_view</code></em>.
+  </p></li>
+<li class="listitem"><p>
+    If the load operation was started by
+    <a class="link" href="WebKitWebView.html#webkit-web-view-go-to-back-forward-list-item" title="webkit_web_view_go_to_back_forward_list_item ()"><code class="function">webkit_web_view_go_to_back_forward_list_item()</code></a>, the requested URI
+    is the opriginal URI of the given <a class="link" href="WebKitBackForwardListItem.html" title="WebKitBackForwardListItem"><span class="type">WebKitBackForwardListItem</span></a>.
+  </p></li>
+</ul></div>
+<p>
+</p>
+</li>
+<li class="listitem"><p>
+  If there is a server redirection during the load operation,
+  the active URI is the redirected URI. When the signal
+  <a class="link" href="WebKitWebLoaderClient.html#WebKitWebLoaderClient-provisional-load-received-server-redirect" title='The "provisional-load-received-server-redirect" signal'><span class="type">"provisional-load-received-server-redirect"</span></a>
+  is emitted, the active URI is already updated to the redirected URI.
+</p></li>
+<li class="listitem"><p>
+  When the signal <a class="link" href="WebKitWebLoaderClient.html#WebKitWebLoaderClient-load-committed" title='The "load-committed" signal'><span class="type">"load-committed"</span></a> is emitted,
+  the active URI is the final one and it will not change unless
+  a new load operation is started or a navigation action within the
+  same page is performed.
+</p></li>
+</ol></div>
+<p>
+</p>
+<p>
+You can monitor the active URI by connecting to the notify::uri
+signal of <em class="parameter"><code>web_view</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the current active URI of <em class="parameter"><code>web_view</code></em> or <code class="literal">NULL</code>
+if nothing has been loaded yet.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-set-settings"></a><h3>webkit_web_view_set_settings ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_web_view_set_settings        (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="type">WebKitSettings</span></a> *settings</code></em>);</pre>
+<p>
+Sets the <a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="type">WebKitSettings</span></a> to be applied to <em class="parameter"><code>web_view</code></em>. The
+existing <a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="type">WebKitSettings</span></a> of <em class="parameter"><code>web_view</code></em> will be replaced by
+<em class="parameter"><code>settings</code></em>. New settings are applied immediately on <em class="parameter"><code>web_view</code></em>.
+The same <a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="type">WebKitSettings</span></a> object can be shared
+by multiple <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>s.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>settings</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="type">WebKitSettings</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-get-settings"></a><h3>webkit_web_view_get_settings ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="returnvalue">WebKitSettings</span></a> *    webkit_web_view_get_settings        (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+<p>
+Gets the <a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="type">WebKitSettings</span></a> currently applied to <em class="parameter"><code>web_view</code></em>.
+If no other <a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="type">WebKitSettings</span></a> have been explicitly applied to
+<em class="parameter"><code>web_view</code></em> with <a class="link" href="WebKitWebView.html#webkit-web-view-set-settings" title="webkit_web_view_set_settings ()"><code class="function">webkit_web_view_set_settings()</code></a>, the default
+<a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="type">WebKitSettings</span></a> will be returned. This method always returns
+a valid <a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="type">WebKitSettings</span></a> object.
+To modify any of the <em class="parameter"><code>web_view</code></em> settings, you can either create
+a new <a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="type">WebKitSettings</span></a> object with <a class="link" href="WebKitSettings.html#webkit-settings-new" title="webkit_settings_new ()"><code class="function">webkit_settings_new()</code></a>, setting
+the desired preferences, and then replace the existing <em class="parameter"><code>web_view</code></em>
+settings with <a class="link" href="WebKitWebView.html#webkit-web-view-set-settings" title="webkit_web_view_set_settings ()"><code class="function">webkit_web_view_set_settings()</code></a> or get the existing
+<em class="parameter"><code>web_view</code></em> settings and update it directly. <a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="type">WebKitSettings</span></a> objects
+can be shared by multiple <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>s, so modifying
+the settings of a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> would affect other
+<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>s using the same <a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="type">WebKitSettings</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the <a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="type">WebKitSettings</span></a> attached to <em class="parameter"><code>web_view</code></em>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-get-window-properties"></a><h3>webkit_web_view_get_window_properties ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitWindowProperties.html" title="WebKitWindowProperties"><span class="returnvalue">WebKitWindowProperties</span></a> * webkit_web_view_get_window_properties
+                                                        (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+<p>
+Get the <a class="link" href="WebKitWindowProperties.html" title="WebKitWindowProperties"><span class="type">WebKitWindowProperties</span></a> object containing the properties
+that the window containing <em class="parameter"><code>web_view</code></em> should have.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the <a class="link" href="WebKitWindowProperties.html" title="WebKitWindowProperties"><span class="type">WebKitWindowProperties</span></a> of <em class="parameter"><code>web_view</code></em>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitWebView.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitWebView--estimated-load-progress"></a><h3>The <code class="literal">"estimated-load-progress"</code> property</h3>
+<pre class="programlisting">  "estimated-load-progress"  <span class="type">gdouble</span>               : Read</pre>
+<p>
+An estimate of the percent completion for the current loading operation.
+This value will range from 0.0 to 1.0 and, once a load completes,
+will remain at 1.0 until a new load starts, at which point it
+will be reset to 0.0.
+The value is an estimate based on the total number of bytes expected
+to be received for a document, including all its possible subresources
+and child documents.
+</p>
+<p>Allowed values: [0,1]</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView--title"></a><h3>The <code class="literal">"title"</code> property</h3>
+<pre class="programlisting">  "title"                    <span class="type">gchar</span>*                : Read</pre>
+<p>
+The main frame document title of this <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>. If
+the title has not been received yet, it will be <code class="literal">NULL</code>.
+</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView--uri"></a><h3>The <code class="literal">"uri"</code> property</h3>
+<pre class="programlisting">  "uri"                      <span class="type">gchar</span>*                : Read</pre>
+<p>
+The current active URI of the <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>.
+See <a class="link" href="WebKitWebView.html#webkit-web-view-get-uri" title="webkit_web_view_get_uri ()"><code class="function">webkit_web_view_get_uri()</code></a> for more details.
+</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView--web-context"></a><h3>The <code class="literal">"web-context"</code> property</h3>
+<pre class="programlisting">  "web-context"              <a class="link" href="WebKitWebContext.html" title="WebKitWebContext"><span class="type">WebKitWebContext</span></a>*     : Read / Write / Construct Only</pre>
+<p>
+The <a class="link" href="WebKitWebContext.html" title="WebKitWebContext"><span class="type">WebKitWebContext</span></a> of the view.
+</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitWebView.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="WebKitWebView-close"></a><h3>The <code class="literal">"close"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *webView,
+                                                        <span class="type">gpointer</span>       user_data)      : <code class="literal">Run Last</code></pre>
+<p>
+Emitted when closing a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> is requested. This occurs when a
+call is made from JavaScript's <code class="function">window.close</code> function.
+It is the owner's responsibility to handle this signal to hide or
+destroy the <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>, if necessary.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>webView</code></em> :</span></p></td>
+<td>the <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> on which the signal is emitted</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView-create"></a><h3>The <code class="literal">"create"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">GtkWidget</span>*          user_function                      (<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view,
+                                                        <span class="type">gpointer</span>       user_data)      : <code class="literal">Run Last</code></pre>
+<p>
+Emitted when the creation of a new <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> is requested.
+If this signal is handled the signal handler should return the
+newly created <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>.
+</p>
+<p>
+The new <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> should not be displayed to the user
+until the <a class="link" href="WebKitWebView.html#WebKitWebView-ready-to-show" title='The "ready-to-show" signal'><span class="type">"ready-to-show"</span></a> signal is emitted.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>the <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> on which the signal is emitted</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a newly allocated <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> widget
+or <code class="literal">NULL</code> to propagate the event further. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView-ready-to-show"></a><h3>The <code class="literal">"ready-to-show"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view,
+                                                        <span class="type">gpointer</span>       user_data)      : <code class="literal">Run Last</code></pre>
+<p>
+Emitted after <a class="link" href="WebKitWebView.html#WebKitWebView-create" title='The "create" signal'><span class="type">"create"</span></a> on the newly created <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+when it should be displayed to the user. When this signal is emitted
+all the information about how the window should look, including
+size, position, whether the location, status and scrollbars
+should be displayed, is already set on the <a class="link" href="WebKitWindowProperties.html" title="WebKitWindowProperties"><span class="type">WebKitWindowProperties</span></a>
+of <em class="parameter"><code>web_view</code></em>. See also <a class="link" href="WebKitWebView.html#webkit-web-view-get-window-properties" title="webkit_web_view_get_window_properties ()"><code class="function">webkit_web_view_get_window_properties()</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>the <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> on which the signal is emitted</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView-script-alert"></a><h3>The <code class="literal">"script-alert"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>            user_function                      (<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view,
+                                                        <span class="type">gchar</span>         *message,
+                                                        <span class="type">gpointer</span>       user_data)      : <code class="literal">Run Last</code></pre>
+<p>
+Emitted when JavaScript code calls <code class="function">window.alert</code>. If the
+signal is not handled a message dialog with a single Close button will be
+shown with the message text.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>the <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> on which the signal is emitted</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>message</code></em> :</span></p></td>
+<td>the message text</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<code class="literal">TRUE</code> to stop other handlers from being invoked for the event.
+<code class="literal">FALSE</code> to propagate the event further.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView-script-confirm"></a><h3>The <code class="literal">"script-confirm"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>            user_function                      (<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view,
+                                                        <span class="type">gchar</span>         *message,
+                                                        <span class="type">gpointer</span>       confirmed,
+                                                        <span class="type">gpointer</span>       user_data)      : <code class="literal">Run Last</code></pre>
+<p>
+Emitted when JavaScript code calls <code class="function">confirm</code>. If the
+signal is not handled a message dialog with OK and Cancel buttons will be
+shown with the message text. If OK button is clicked <em class="parameter"><code>confirmed</code></em> will be
+set to <code class="literal">TRUE</code>, otherwise it will be <code class="literal">FALSE</code>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>the <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> on which the signal is emitted</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>message</code></em> :</span></p></td>
+<td>the message text</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>confirmed</code></em> :</span></p></td>
+<td>return location for confirm dialog response. <span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<code class="literal">TRUE</code> to stop other handlers from being invoked for the event.
+<code class="literal">FALSE</code> to propagate the event further.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView-script-prompt"></a><h3>The <code class="literal">"script-prompt"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>            user_function                      (<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view,
+                                                        <span class="type">gchar</span>         *message,
+                                                        <span class="type">gchar</span>         *text,
+                                                        <span class="type">gpointer</span>       Returns,
+                                                        <span class="type">gpointer</span>       user_data)      : <code class="literal">Run Last</code></pre>
+<p>
+Emitted when JavaScript code calls <code class="function">prompt</code>. If the
+signal is not handled a message dialog with OK and Cancel buttons and
+a text entry will be shown with the message text. If OK button is clicked
+<em class="parameter"><code>text</code></em> will contain the text entered by the user, otherwise it will be <code class="literal">NULL</code>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>the <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> on which the signal is emitted</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>message</code></em> :</span></p></td>
+<td>the message text
+<em class="parameter"><code>default</code></em> (allow-none): the default text</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>text</code></em> :</span></p></td>
+<td>return location for prompt dialog text response. <span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<code class="literal">TRUE</code> to stop other handlers from being invoked for the event.
+<code class="literal">FALSE</code> to propagate the event further.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18.1</div>
+</body>
+</html>

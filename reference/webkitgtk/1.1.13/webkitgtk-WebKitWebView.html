@@ -1,0 +1,3757 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitWebView</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="WebKitGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="ch01.html" title="Class Overview">
+<link rel="next" href="webkitgtk-WebKitWebFrame.html" title="WebKitWebFrame">
+<meta name="generator" content="GTK-Doc V1.11 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="chapter" href="ch01.html" title="Class Overview">
+<link rel="chapter" href="ch02.html" title="Running WebKitGTK+-based programs">
+<link rel="index" href="index-all.html" title="Index">
+<link rel="index" href="index-deprecated.html" title="Index of deprecated symbols">
+<link rel="index" href="index-1.0.1.html" title="Index of new symbols in 1.0.1">
+<link rel="index" href="index-1.0.2.html" title="Index of new symbols in 1.0.2">
+<link rel="index" href="index-1.0.3.html" title="Index of new symbols in 1.0.3">
+<link rel="index" href="index-1.1.1.html" title="Index of new symbols in 1.1.1">
+<link rel="index" href="index-1.1.2.html" title="Index of new symbols in 1.1.2">
+<link rel="index" href="index-1.1.3.html" title="Index of new symbols in 1.1.3">
+<link rel="index" href="index-1.1.4.html" title="Index of new symbols in 1.1.4">
+<link rel="index" href="index-1.1.5.html" title="Index of new symbols in 1.1.5">
+<link rel="index" href="index-1.1.6.html" title="Index of new symbols in 1.1.6">
+<link rel="index" href="index-1.1.7.html" title="Index of new symbols in 1.1.7">
+<link rel="index" href="index-1.1.8.html" title="Index of new symbols in 1.1.8">
+<link rel="index" href="index-1.1.10.html" title="Index of new symbols in 1.1.10">
+<link rel="index" href="index-1.1.11.html" title="Index of new symbols in 1.1.11">
+<link rel="index" href="index-1.1.13.html" title="Index of new symbols in 1.1.13">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ch01.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">WebKitGTK+ Reference Manual</th>
+<td><a accesskey="n" href="webkitgtk-WebKitWebFrame.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#webkitgtk-WebKitWebView.synopsis" class="shortcut">Top</a>
+                 | 
+                <a href="#webkitgtk-WebKitWebView.description" class="shortcut">Description</a>
+                 | 
+                <a href="#webkitgtk-WebKitWebView.properties" class="shortcut">Properties</a>
+                 | 
+                <a href="#webkitgtk-WebKitWebView.signals" class="shortcut">Signals</a>
+</td></tr>
+</table>
+<div class="refentry" title="WebKitWebView">
+<a name="webkitgtk-WebKitWebView"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="webkitgtk-WebKitWebView.top_of_page"></a>WebKitWebView</span></h2>
+<p>WebKitWebView — The central class of the WebKitGTK+ API</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="webkitgtk-WebKitWebView.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+enum                <a class="link" href="webkitgtk-WebKitWebView.html#WebKitNavigationResponse" title="enum WebKitNavigationResponse">WebKitNavigationResponse</a>;
+enum                <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebViewTargetInfo" title="enum WebKitWebViewTargetInfo">WebKitWebViewTargetInfo</a>;
+                    <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a>;
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-can-copy-clipboard" title="webkit_web_view_can_copy_clipboard ()">webkit_web_view_can_copy_clipboard</a>  (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-can-cut-clipboard" title="webkit_web_view_can_cut_clipboard ()">webkit_web_view_can_cut_clipboard</a>   (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-can-go-back" title="webkit_web_view_can_go_back ()">webkit_web_view_can_go_back</a>         (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-can-go-back-or-forward" title="webkit_web_view_can_go_back_or_forward ()">webkit_web_view_can_go_back_or_forward</a>
+                                                        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+>gint</a> steps);
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-can-go-forward" title="webkit_web_view_can_go_forward ()">webkit_web_view_can_go_forward</a>      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-can-paste-clipboard" title="webkit_web_view_can_paste_clipboard ()">webkit_web_view_can_paste_clipboard</a> (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-can-show-mime-type" title="webkit_web_view_can_show_mime_type ()">webkit_web_view_can_show_mime_type</a>  (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *mime_type);
+void                <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-copy-clipboard" title="webkit_web_view_copy_clipboard ()">webkit_web_view_copy_clipboard</a>      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);
+void                <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-cut-clipboard" title="webkit_web_view_cut_clipboard ()">webkit_web_view_cut_clipboard</a>       (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);
+void                <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-delete-selection" title="webkit_web_view_delete_selection ()">webkit_web_view_delete_selection</a>    (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);
+void                <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-execute-script" title="webkit_web_view_execute_script ()">webkit_web_view_execute_script</a>      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *script);
+<a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList">WebKitWebBackForwardList</a> * <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-get-back-forward-list" title="webkit_web_view_get_back_forward_list ()">webkit_web_view_get_back_forward_list</a>
+                                                        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);
+<a
+href="../gtk/gtk-Selections.html#GtkTargetList"
+>GtkTargetList</a> *     <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-get-copy-target-list" title="webkit_web_view_get_copy_target_list ()">webkit_web_view_get_copy_target_list</a>
+                                                        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);
+const char *        <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-get-custom-encoding" title="webkit_web_view_get_custom_encoding ()">webkit_web_view_get_custom_encoding</a> (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *webView);
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-get-editable" title="webkit_web_view_get_editable ()">webkit_web_view_get_editable</a>        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);
+const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *       <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-get-encoding" title="webkit_web_view_get_encoding ()">webkit_web_view_get_encoding</a>        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *webView);
+<a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitWebFrame" title="WebKitWebFrame">WebKitWebFrame</a> *    <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-get-focused-frame" title="webkit_web_view_get_focused_frame ()">webkit_web_view_get_focused_frame</a>   (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-get-full-content-zoom" title="webkit_web_view_get_full_content_zoom ()">webkit_web_view_get_full_content_zoom</a>
+                                                        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);
+<a class="link" href="webkitgtk-WebKitWebInspector.html#WebKitWebInspector" title="WebKitWebInspector">WebKitWebInspector</a> * <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-get-inspector" title="webkit_web_view_get_inspector ()">webkit_web_view_get_inspector</a>      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);
+<a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitLoadStatus" title="enum WebKitLoadStatus">WebKitLoadStatus</a>    <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-get-load-status" title="webkit_web_view_get_load_status ()">webkit_web_view_get_load_status</a>     (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);
+<a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitWebFrame" title="WebKitWebFrame">WebKitWebFrame</a> *    <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-get-main-frame" title="webkit_web_view_get_main_frame ()">webkit_web_view_get_main_frame</a>      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);
+<a
+href="../gtk/gtk-Selections.html#GtkTargetList"
+>GtkTargetList</a> *     <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-get-paste-target-list" title="webkit_web_view_get_paste_target_list ()">webkit_web_view_get_paste_target_list</a>
+                                                        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"
+>gdouble</a>             <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-get-progress" title="webkit_web_view_get_progress ()">webkit_web_view_get_progress</a>        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);
+<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings">WebKitWebSettings</a> * <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-get-settings" title="webkit_web_view_get_settings ()">webkit_web_view_get_settings</a>        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);
+const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *       <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-get-title" title="webkit_web_view_get_title ()">webkit_web_view_get_title</a>           (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-get-transparent" title="webkit_web_view_get_transparent ()">webkit_web_view_get_transparent</a>     (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);
+const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *       <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-get-uri" title="webkit_web_view_get_uri ()">webkit_web_view_get_uri</a>             (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"
+>gfloat</a>              <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-get-zoom-level" title="webkit_web_view_get_zoom_level ()">webkit_web_view_get_zoom_level</a>      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);
+void                <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-go-back" title="webkit_web_view_go_back ()">webkit_web_view_go_back</a>             (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);
+void                <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-go-back-or-forward" title="webkit_web_view_go_back_or_forward ()">webkit_web_view_go_back_or_forward</a>  (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+>gint</a> steps);
+void                <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-go-forward" title="webkit_web_view_go_forward ()">webkit_web_view_go_forward</a>          (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-go-to-back-forward-item" title="webkit_web_view_go_to_back_forward_item ()">webkit_web_view_go_to_back_forward_item</a>
+                                                        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         <a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem">WebKitWebHistoryItem</a> *item);
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-has-selection" title="webkit_web_view_has_selection ()">webkit_web_view_has_selection</a>       (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);
+void                <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-load-html-string" title="webkit_web_view_load_html_string ()">webkit_web_view_load_html_string</a>    (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *content,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *base_uri);
+void                <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-load-request" title="webkit_web_view_load_request ()">webkit_web_view_load_request</a>        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         <a class="link" href="webkitgtk-WebKitNetworkRequest.html#WebKitNetworkRequest" title="WebKitNetworkRequest">WebKitNetworkRequest</a> *request);
+void                <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-load-string" title="webkit_web_view_load_string ()">webkit_web_view_load_string</a>         (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *content,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *mime_type,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *encoding,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *base_uri);
+void                <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-load-uri" title="webkit_web_view_load_uri ()">webkit_web_view_load_uri</a>            (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *uri);
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"
+>guint</a>               <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-mark-text-matches" title="webkit_web_view_mark_text_matches ()">webkit_web_view_mark_text_matches</a>   (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *string,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> case_sensitive,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"
+>guint</a> limit);
+void                <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-move-cursor" title="webkit_web_view_move_cursor ()">webkit_web_view_move_cursor</a>         (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *webView,
+                                                         <a
+href="../gtk/gtk-Standard-Enumerations.html#GtkMovementStep"
+>GtkMovementStep</a> step,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+>gint</a> count);
+<a
+href="../gtk/GtkWidget.html"
+>GtkWidget</a> *         <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-new" title="webkit_web_view_new ()">webkit_web_view_new</a>                 (void);
+void                <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-open" title="webkit_web_view_open ()">webkit_web_view_open</a>                (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *uri);
+void                <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-paste-clipboard" title="webkit_web_view_paste_clipboard ()">webkit_web_view_paste_clipboard</a>     (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);
+void                <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-reload" title="webkit_web_view_reload ()">webkit_web_view_reload</a>              (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);
+void                <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-reload-bypass-cache" title="webkit_web_view_reload_bypass_cache ()">webkit_web_view_reload_bypass_cache</a> (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-search-text" title="webkit_web_view_search_text ()">webkit_web_view_search_text</a>         (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *text,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> case_sensitive,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> forward,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> wrap);
+void                <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-select-all" title="webkit_web_view_select_all ()">webkit_web_view_select_all</a>          (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);
+void                <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-set-custom-encoding" title="webkit_web_view_set_custom_encoding ()">webkit_web_view_set_custom_encoding</a> (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *webView,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *encoding);
+void                <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-set-editable" title="webkit_web_view_set_editable ()">webkit_web_view_set_editable</a>        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> flag);
+void                <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-set-full-content-zoom" title="webkit_web_view_set_full_content_zoom ()">webkit_web_view_set_full_content_zoom</a>
+                                                        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> full_content_zoom);
+void                <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-set-highlight-text-matches" title="webkit_web_view_set_highlight_text_matches ()">webkit_web_view_set_highlight_text_matches</a>
+                                                        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> highlight);
+void                <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-set-maintains-back-forward-list" title="webkit_web_view_set_maintains_back_forward_list ()">webkit_web_view_set_maintains_back_forward_list</a>
+                                                        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> flag);
+void                <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-set-settings" title="webkit_web_view_set_settings ()">webkit_web_view_set_settings</a>        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         <a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings">WebKitWebSettings</a> *settings);
+void                <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-set-transparent" title="webkit_web_view_set_transparent ()">webkit_web_view_set_transparent</a>     (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> flag);
+void                <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-set-zoom-level" title="webkit_web_view_set_zoom_level ()">webkit_web_view_set_zoom_level</a>      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"
+>gfloat</a> zoom_level);
+void                <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-stop-loading" title="webkit_web_view_stop_loading ()">webkit_web_view_stop_loading</a>        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);
+void                <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-unmark-text-matches" title="webkit_web_view_unmark_text_matches ()">webkit_web_view_unmark_text_matches</a> (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);
+void                <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-zoom-in" title="webkit_web_view_zoom_in ()">webkit_web_view_zoom_in</a>             (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);
+void                <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-zoom-out" title="webkit_web_view_zoom_out ()">webkit_web_view_zoom_out</a>            (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);
+<a class="link" href="webkitgtk-WebKitWebWindowFeatures.html#WebKitWebWindowFeatures" title="WebKitWebWindowFeatures">WebKitWebWindowFeatures</a> * <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-get-window-features" title="webkit_web_view_get_window_features ()">webkit_web_view_get_window_features</a>
+                                                        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);
+</pre>
+</div>
+<div class="refsect1" title="Properties">
+<a name="webkitgtk-WebKitWebView.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView--copy-target-list" title='The "copy-target-list" property'>copy-target-list</a>"         <a
+href="../gtk/gtk-Selections.html#GtkTargetList"
+>GtkTargetList</a>*        : Read
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView--custom-encoding" title='The "custom-encoding" property'>custom-encoding</a>"          <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView--editable" title='The "editable" property'>editable</a>"                 <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView--encoding" title='The "encoding" property'>encoding</a>"                 <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView--full-content-zoom" title='The "full-content-zoom" property'>full-content-zoom</a>"        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView--load-status" title='The "load-status" property'>load-status</a>"              <a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitLoadStatus" title="enum WebKitLoadStatus">WebKitLoadStatus</a>      : Read
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView--paste-target-list" title='The "paste-target-list" property'>paste-target-list</a>"        <a
+href="../gtk/gtk-Selections.html#GtkTargetList"
+>GtkTargetList</a>*        : Read
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView--progress" title='The "progress" property'>progress</a>"                 <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView--settings" title='The "settings" property'>settings</a>"                 <a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings">WebKitWebSettings</a>*    : Read / Write
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView--title" title='The "title" property'>title</a>"                    <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView--transparent" title='The "transparent" property'>transparent</a>"              <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView--uri" title='The "uri" property'>uri</a>"                      <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView--web-inspector" title='The "web-inspector" property'>web-inspector</a>"            <a class="link" href="webkitgtk-WebKitWebInspector.html#WebKitWebInspector" title="WebKitWebInspector">WebKitWebInspector</a>*   : Read
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView--window-features" title='The "window-features" property'>window-features</a>"          <a class="link" href="webkitgtk-WebKitWebWindowFeatures.html#WebKitWebWindowFeatures" title="WebKitWebWindowFeatures">WebKitWebWindowFeatures</a>*  : Read / Write
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView--zoom-level" title='The "zoom-level" property'>zoom-level</a>"               <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"
+>gfloat</a>                : Read / Write
+</pre>
+</div>
+<div class="refsect1" title="Signals">
+<a name="webkitgtk-WebKitWebView.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-close-web-view" title='The "close-web-view" signal'>close-web-view</a>"                                 : Run Last
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-console-message" title='The "console-message" signal'>console-message</a>"                                : Run Last
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-copy-clipboard" title='The "copy-clipboard" signal'>copy-clipboard</a>"                                 : Run Last / Action
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-create-plugin-widget" title='The "create-plugin-widget" signal'>create-plugin-widget</a>"                           : Run Last / Action
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-create-web-view" title='The "create-web-view" signal'>create-web-view</a>"                                : Run Last
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-cut-clipboard" title='The "cut-clipboard" signal'>cut-clipboard</a>"                                  : Run Last / Action
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-download-requested" title='The "download-requested" signal'>download-requested</a>"                             : Run Last
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-hovering-over-link" title='The "hovering-over-link" signal'>hovering-over-link</a>"                             : Run Last
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-icon-loaded" title='The "icon-loaded" signal'>icon-loaded</a>"                                    : Run Last
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-load-committed" title='The "load-committed" signal'>load-committed</a>"                                 : Run Last
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-load-error" title='The "load-error" signal'>load-error</a>"                                     : Run Last
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-load-finished" title='The "load-finished" signal'>load-finished</a>"                                  : Run Last
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-load-progress-changed" title='The "load-progress-changed" signal'>load-progress-changed</a>"                          : Run Last
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-load-started" title='The "load-started" signal'>load-started</a>"                                   : Run Last
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-mime-type-policy-decision-requested" title='The "mime-type-policy-decision-requested" signal'>mime-type-policy-decision-requested</a>"            : Run Last
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-move-cursor" title='The "move-cursor" signal'>move-cursor</a>"                                    : Run Last / Action
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-navigation-policy-decision-requested" title='The "navigation-policy-decision-requested" signal'>navigation-policy-decision-requested</a>"           : Run Last
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-navigation-requested" title='The "navigation-requested" signal'>navigation-requested</a>"                           : Run Last
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-new-window-policy-decision-requested" title='The "new-window-policy-decision-requested" signal'>new-window-policy-decision-requested</a>"           : Run Last
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-paste-clipboard" title='The "paste-clipboard" signal'>paste-clipboard</a>"                                : Run Last / Action
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-populate-popup" title='The "populate-popup" signal'>populate-popup</a>"                                 : Run Last
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-print-requested" title='The "print-requested" signal'>print-requested</a>"                                : Run Last
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-script-alert" title='The "script-alert" signal'>script-alert</a>"                                   : Run Last
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-script-confirm" title='The "script-confirm" signal'>script-confirm</a>"                                 : Run Last
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-script-prompt" title='The "script-prompt" signal'>script-prompt</a>"                                  : Run Last
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-select-all" title='The "select-all" signal'>select-all</a>"                                     : Run Last / Action
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-selection-changed" title='The "selection-changed" signal'>selection-changed</a>"                              : Run Last
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-set-scroll-adjustments" title='The "set-scroll-adjustments" signal'>set-scroll-adjustments</a>"                         : Run Last / Action
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-status-bar-text-changed" title='The "status-bar-text-changed" signal'>status-bar-text-changed</a>"                        : Run Last
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-title-changed" title='The "title-changed" signal'>title-changed</a>"                                  : Run Last
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-web-view-ready" title='The "web-view-ready" signal'>web-view-ready</a>"                                 : Run Last
+  "<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-window-object-cleared" title='The "window-object-cleared" signal'>window-object-cleared</a>"                          : Run Last
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="webkitgtk-WebKitWebView.description"></a><h2>Description</h2>
+<p>
+<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a> is the central class of the WebKitGTK+ API. It is a
+<a
+href="../gtk/GtkWidget.html"
+><span class="type">GtkWidget</span></a> implementing the scrolling interface which means you can
+embed in a <a
+href="../gtk/GtkScrolledWindow.html"
+><span class="type">GtkScrolledWindow</span></a>. It is responsible for managing the
+drawing of the content, forwarding of events. You can load any URI
+into the <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a> or any kind of data string. With <a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings"><span class="type">WebKitWebSettings</span></a>
+you can control various aspects of the rendering and loading of the content.
+Each <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a> has exactly one <a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitWebFrame" title="WebKitWebFrame"><span class="type">WebKitWebFrame</span></a> as main frame. A
+<a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitWebFrame" title="WebKitWebFrame"><span class="type">WebKitWebFrame</span></a> can have n children.
+</p>
+<p>
+</p>
+<pre class="programlisting">
+/* Create the widgets */
+GtkWidget *main_window = gtk_window_new (GTK_WIDGET_TOPLEVEL);
+GtkWidget *scrolled_window = gtk_scrolled_window_new (NULL, NULL);
+GtkWidget *web_view = webkit_web_view_new ();
+
+/* Place the WebKitWebView in the GtkScrolledWindow */
+gtk_container_add (GTK_CONTAINER (scrolled_window), web_view);
+gtk_container_add (GTK_CONTAINER (main_window), scrolled_window);
+
+/* Open a webpage */
+webkit_web_view_load_uri (WEBKIT_WEB_VIEW (web_view), "http://www.gnome.org");
+
+/* Show the result */
+gtk_window_set_default_size (GTK_WINDOW (main_window), 800, 600);
+gtk_widget_show_all (main_window);
+</pre>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="webkitgtk-WebKitWebView.details"></a><h2>Details</h2>
+<div class="refsect2" title="enum WebKitNavigationResponse">
+<a name="WebKitNavigationResponse"></a><h3>enum WebKitNavigationResponse</h3>
+<pre class="programlisting">typedef enum {
+    WEBKIT_NAVIGATION_RESPONSE_ACCEPT,
+    WEBKIT_NAVIGATION_RESPONSE_IGNORE,
+    WEBKIT_NAVIGATION_RESPONSE_DOWNLOAD
+} WebKitNavigationResponse;
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="enum WebKitWebViewTargetInfo">
+<a name="WebKitWebViewTargetInfo"></a><h3>enum WebKitWebViewTargetInfo</h3>
+<pre class="programlisting">typedef enum
+{
+    WEBKIT_WEB_VIEW_TARGET_INFO_HTML,
+    WEBKIT_WEB_VIEW_TARGET_INFO_TEXT,
+    WEBKIT_WEB_VIEW_TARGET_INFO_IMAGE,
+    WEBKIT_WEB_VIEW_TARGET_INFO_URI_LIST,
+    WEBKIT_WEB_VIEW_TARGET_INFO_NETSCAPE_URL
+} WebKitWebViewTargetInfo;
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="WebKitWebView">
+<a name="WebKitWebView"></a><h3>WebKitWebView</h3>
+<pre class="programlisting">typedef struct {
+    GtkContainer parent_instance;
+} WebKitWebView;
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_can_copy_clipboard ()">
+<a name="webkit-web-view-can-copy-clipboard"></a><h3>webkit_web_view_can_copy_clipboard ()</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            webkit_web_view_can_copy_clipboard  (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_can_cut_clipboard ()">
+<a name="webkit-web-view-can-cut-clipboard"></a><h3>webkit_web_view_can_cut_clipboard ()</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            webkit_web_view_can_cut_clipboard   (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_can_go_back ()">
+<a name="webkit-web-view-can-go-back"></a><h3>webkit_web_view_can_go_back ()</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            webkit_web_view_can_go_back         (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);</pre>
+<p>
+Determines whether <span class="type">web_view</span> has a previous history item.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE--CAPS"
+><code class="literal">TRUE</code></a> if able to move back, <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE--CAPS"
+><code class="literal">FALSE</code></a> otherwise
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_can_go_back_or_forward ()">
+<a name="webkit-web-view-can-go-back-or-forward"></a><h3>webkit_web_view_can_go_back_or_forward ()</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            webkit_web_view_can_go_back_or_forward
+                                                        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+>gint</a> steps);</pre>
+<p>
+Determines whether <span class="type">web_view</span> has a history item of <em class="parameter"><code>steps</code></em>. Negative values
+represent steps backward while positive values represent steps forward.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>steps</code></em> :</span></p></td>
+<td> the number of steps
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE--CAPS"
+><code class="literal">TRUE</code></a> if able to move back or forward the given number of
+steps, <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE--CAPS"
+><code class="literal">FALSE</code></a> otherwise
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_can_go_forward ()">
+<a name="webkit-web-view-can-go-forward"></a><h3>webkit_web_view_can_go_forward ()</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            webkit_web_view_can_go_forward      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);</pre>
+<p>
+Determines whether <span class="type">web_view</span> has a next history item.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE--CAPS"
+><code class="literal">TRUE</code></a> if able to move forward, <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE--CAPS"
+><code class="literal">FALSE</code></a> otherwise
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_can_paste_clipboard ()">
+<a name="webkit-web-view-can-paste-clipboard"></a><h3>webkit_web_view_can_paste_clipboard ()</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            webkit_web_view_can_paste_clipboard (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_can_show_mime_type ()">
+<a name="webkit-web-view-can-show-mime-type"></a><h3>webkit_web_view_can_show_mime_type ()</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            webkit_web_view_can_show_mime_type  (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *mime_type);</pre>
+<p>
+This functions returns whether or not a MIME type can be displayed using this view.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>mime_type</code></em> :</span></p></td>
+<td> a MIME type
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+><span class="type">gboolean</span></a> indicating if the MIME type can be displayed
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.0.3</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_copy_clipboard ()">
+<a name="webkit-web-view-copy-clipboard"></a><h3>webkit_web_view_copy_clipboard ()</h3>
+<pre class="programlisting">void                webkit_web_view_copy_clipboard      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);</pre>
+<p>
+Copies the current selection inside the <em class="parameter"><code>web_view</code></em> to the clipboard.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_cut_clipboard ()">
+<a name="webkit-web-view-cut-clipboard"></a><h3>webkit_web_view_cut_clipboard ()</h3>
+<pre class="programlisting">void                webkit_web_view_cut_clipboard       (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);</pre>
+<p>
+Cuts the current selection inside the <em class="parameter"><code>web_view</code></em> to the clipboard.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_delete_selection ()">
+<a name="webkit-web-view-delete-selection"></a><h3>webkit_web_view_delete_selection ()</h3>
+<pre class="programlisting">void                webkit_web_view_delete_selection    (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);</pre>
+<p>
+Deletes the current selection inside the <em class="parameter"><code>web_view</code></em>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_execute_script ()">
+<a name="webkit-web-view-execute-script"></a><h3>webkit_web_view_execute_script ()</h3>
+<pre class="programlisting">void                webkit_web_view_execute_script      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *script);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>script</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_get_back_forward_list ()">
+<a name="webkit-web-view-get-back-forward-list"></a><h3>webkit_web_view_get_back_forward_list ()</h3>
+<pre class="programlisting"><a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList">WebKitWebBackForwardList</a> * webkit_web_view_get_back_forward_list
+                                                        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);</pre>
+<p>
+Returns a <a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList"><span class="type">WebKitWebBackForwardList</span></a></p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the <a class="link" href="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList" title="WebKitWebBackForwardList"><span class="type">WebKitWebBackForwardList</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_get_copy_target_list ()">
+<a name="webkit-web-view-get-copy-target-list"></a><h3>webkit_web_view_get_copy_target_list ()</h3>
+<pre class="programlisting"><a
+href="../gtk/gtk-Selections.html#GtkTargetList"
+>GtkTargetList</a> *     webkit_web_view_get_copy_target_list
+                                                        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);</pre>
+<p>
+This function returns the list of targets this <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a> can
+provide for clipboard copying and as DND source. The targets in the list are
+added with <code class="literal">info</code> values from the <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebViewTargetInfo" title="enum WebKitWebViewTargetInfo"><span class="type">WebKitWebViewTargetInfo</span></a> enum,
+using <a
+href="../gtk/gtk-Selections.html#gtk-target-list-add"
+><code class="function">gtk_target_list_add()</code></a> and
+<a
+href="../gtk/gtk-Selections.html#gtk-target-list-add-text-targets"
+><code class="function">gtk_target_list_add_text_targets()</code></a>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the <a
+href="../gtk/gtk-Selections.html#GtkTargetList"
+><span class="type">GtkTargetList</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_get_custom_encoding ()">
+<a name="webkit-web-view-get-custom-encoding"></a><h3>webkit_web_view_get_custom_encoding ()</h3>
+<pre class="programlisting">const char *        webkit_web_view_get_custom_encoding (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *webView);</pre>
+<p>
+Returns the current encoding of the <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>, not the default-encoding
+of WebKitWebSettings.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>webView</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a string containing the current custom encoding for <em class="parameter"><code>web_view</code></em>, or <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL--CAPS"
+><code class="literal">NULL</code></a> if there's none set.
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.1.1</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_get_editable ()">
+<a name="webkit-web-view-get-editable"></a><h3>webkit_web_view_get_editable ()</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            webkit_web_view_get_editable        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);</pre>
+<p>
+Returns whether the user is allowed to edit the document.
+</p>
+<p>
+Returns <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE--CAPS"
+><code class="literal">TRUE</code></a> if <em class="parameter"><code>web_view</code></em> allows the user to edit the HTML document, <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE--CAPS"
+><code class="literal">FALSE</code></a> if
+it doesn't. You can change <em class="parameter"><code>web_view</code></em>'s document programmatically regardless of
+this setting.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+><span class="type">gboolean</span></a> indicating the editable state
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_get_encoding ()">
+<a name="webkit-web-view-get-encoding"></a><h3>webkit_web_view_get_encoding ()</h3>
+<pre class="programlisting">const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *       webkit_web_view_get_encoding        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *webView);</pre>
+<p>
+Returns the default encoding of the <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>webView</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the default encoding
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.1.1</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_get_focused_frame ()">
+<a name="webkit-web-view-get-focused-frame"></a><h3>webkit_web_view_get_focused_frame ()</h3>
+<pre class="programlisting"><a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitWebFrame" title="WebKitWebFrame">WebKitWebFrame</a> *    webkit_web_view_get_focused_frame   (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);</pre>
+<p>
+Returns the frame that has focus or an active text selection.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> The focused <a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitWebFrame" title="WebKitWebFrame"><span class="type">WebKitWebFrame</span></a> or <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL--CAPS"
+><code class="literal">NULL</code></a> if no frame is focused
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_get_full_content_zoom ()">
+<a name="webkit-web-view-get-full-content-zoom"></a><h3>webkit_web_view_get_full_content_zoom ()</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            webkit_web_view_get_full_content_zoom
+                                                        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);</pre>
+<p>
+Returns whether the zoom level affects only text or all elements.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE--CAPS"
+><code class="literal">FALSE</code></a> if only text should be scaled (the default),
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE--CAPS"
+><code class="literal">TRUE</code></a> if the full content of the view should be scaled.
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.0.1</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_get_inspector ()">
+<a name="webkit-web-view-get-inspector"></a><h3>webkit_web_view_get_inspector ()</h3>
+<pre class="programlisting"><a class="link" href="webkitgtk-WebKitWebInspector.html#WebKitWebInspector" title="WebKitWebInspector">WebKitWebInspector</a> * webkit_web_view_get_inspector      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);</pre>
+<p>
+Obtains the <a class="link" href="webkitgtk-WebKitWebInspector.html#WebKitWebInspector" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a> associated with the
+<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>. Every <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a> object has a
+<a class="link" href="webkitgtk-WebKitWebInspector.html#WebKitWebInspector" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a> object attached to it as soon as it is created,
+so this function will only return NULL if the argument is not a
+valid <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the <a class="link" href="webkitgtk-WebKitWebInspector.html#WebKitWebInspector" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a> instance associated with the
+<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>; <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL--CAPS"
+><code class="literal">NULL</code></a> is only returned if the argument is not a
+valid <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>.
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.0.3</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_get_load_status ()">
+<a name="webkit-web-view-get-load-status"></a><h3>webkit_web_view_get_load_status ()</h3>
+<pre class="programlisting"><a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitLoadStatus" title="enum WebKitLoadStatus">WebKitLoadStatus</a>    webkit_web_view_get_load_status     (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);</pre>
+<p>
+Determines the current status of the load.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.1.7</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_get_main_frame ()">
+<a name="webkit-web-view-get-main-frame"></a><h3>webkit_web_view_get_main_frame ()</h3>
+<pre class="programlisting"><a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitWebFrame" title="WebKitWebFrame">WebKitWebFrame</a> *    webkit_web_view_get_main_frame      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_get_paste_target_list ()">
+<a name="webkit-web-view-get-paste-target-list"></a><h3>webkit_web_view_get_paste_target_list ()</h3>
+<pre class="programlisting"><a
+href="../gtk/gtk-Selections.html#GtkTargetList"
+>GtkTargetList</a> *     webkit_web_view_get_paste_target_list
+                                                        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);</pre>
+<p>
+This function returns the list of targets this <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a> can
+provide for clipboard pasting and as DND destination. The targets in the list are
+added with <code class="literal">info</code> values from the <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebViewTargetInfo" title="enum WebKitWebViewTargetInfo"><span class="type">WebKitWebViewTargetInfo</span></a> enum,
+using <a
+href="../gtk/gtk-Selections.html#gtk-target-list-add"
+><code class="function">gtk_target_list_add()</code></a> and
+<a
+href="../gtk/gtk-Selections.html#gtk-target-list-add-text-targets"
+><code class="function">gtk_target_list_add_text_targets()</code></a>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the <a
+href="../gtk/gtk-Selections.html#GtkTargetList"
+><span class="type">GtkTargetList</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_get_progress ()">
+<a name="webkit-web-view-get-progress"></a><h3>webkit_web_view_get_progress ()</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"
+>gdouble</a>             webkit_web_view_get_progress        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);</pre>
+<p>
+Determines the current progress of the load.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.1.7</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_get_settings ()">
+<a name="webkit-web-view-get-settings"></a><h3>webkit_web_view_get_settings ()</h3>
+<pre class="programlisting"><a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings">WebKitWebSettings</a> * webkit_web_view_get_settings        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_get_title ()">
+<a name="webkit-web-view-get-title"></a><h3>webkit_web_view_get_title ()</h3>
+<pre class="programlisting">const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *       webkit_web_view_get_title           (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);</pre>
+<p>
+Returns the <em class="parameter"><code>web_view</code></em>'s document title</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the title of <em class="parameter"><code>web_view</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.1.4</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_get_transparent ()">
+<a name="webkit-web-view-get-transparent"></a><h3>webkit_web_view_get_transparent ()</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            webkit_web_view_get_transparent     (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);</pre>
+<p>
+Returns whether the <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a> has a transparent background.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE--CAPS"
+><code class="literal">FALSE</code></a> when the <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a> draws a solid background
+(the default), otherwise <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE--CAPS"
+><code class="literal">TRUE</code></a>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_get_uri ()">
+<a name="webkit-web-view-get-uri"></a><h3>webkit_web_view_get_uri ()</h3>
+<pre class="programlisting">const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *       webkit_web_view_get_uri             (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);</pre>
+<p>
+Returns the current URI of the contents displayed by the <em class="parameter"><code>web_view</code></em></p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the URI of <em class="parameter"><code>web_view</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.1.4</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_get_zoom_level ()">
+<a name="webkit-web-view-get-zoom-level"></a><h3>webkit_web_view_get_zoom_level ()</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"
+>gfloat</a>              webkit_web_view_get_zoom_level      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);</pre>
+<p>
+Returns the zoom level of <em class="parameter"><code>web_view</code></em>, i.e. the factor by which elements in
+the page are scaled with respect to their original size.
+If the "full-content-zoom" property is set to <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE--CAPS"
+><code class="literal">FALSE</code></a> (the default)
+the zoom level changes the text size, or if <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE--CAPS"
+><code class="literal">TRUE</code></a>, scales all
+elements in the page.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the zoom level of <em class="parameter"><code>web_view</code></em>
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.0.1</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_go_back ()">
+<a name="webkit-web-view-go-back"></a><h3>webkit_web_view_go_back ()</h3>
+<pre class="programlisting">void                webkit_web_view_go_back             (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);</pre>
+<p>
+Loads the previous history item.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_go_back_or_forward ()">
+<a name="webkit-web-view-go-back-or-forward"></a><h3>webkit_web_view_go_back_or_forward ()</h3>
+<pre class="programlisting">void                webkit_web_view_go_back_or_forward  (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+>gint</a> steps);</pre>
+<p>
+Loads the history item that is the number of <em class="parameter"><code>steps</code></em> away from the current
+item. Negative values represent steps backward while positive values
+represent steps forward.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>steps</code></em> :</span></p></td>
+<td> the number of steps
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_go_forward ()">
+<a name="webkit-web-view-go-forward"></a><h3>webkit_web_view_go_forward ()</h3>
+<pre class="programlisting">void                webkit_web_view_go_forward          (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);</pre>
+<p>
+Loads the next history item.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_go_to_back_forward_item ()">
+<a name="webkit-web-view-go-to-back-forward-item"></a><h3>webkit_web_view_go_to_back_forward_item ()</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            webkit_web_view_go_to_back_forward_item
+                                                        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         <a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem">WebKitWebHistoryItem</a> *item);</pre>
+<p>
+Go to the specified <a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem"><span class="type">WebKitWebHistoryItem</span></a></p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>item</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem" title="WebKitWebHistoryItem"><span class="type">WebKitWebHistoryItem</span></a>*
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE--CAPS"
+><code class="literal">TRUE</code></a> if loading of item is successful, <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE--CAPS"
+><code class="literal">FALSE</code></a> if not
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_has_selection ()">
+<a name="webkit-web-view-has-selection"></a><h3>webkit_web_view_has_selection ()</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            webkit_web_view_has_selection       (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);</pre>
+<p>
+Determines whether text was selected.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE--CAPS"
+><code class="literal">TRUE</code></a> if there is selected text, <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE--CAPS"
+><code class="literal">FALSE</code></a> if not
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_load_html_string ()">
+<a name="webkit-web-view-load-html-string"></a><h3>webkit_web_view_load_html_string ()</h3>
+<pre class="programlisting">void                webkit_web_view_load_html_string    (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *content,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *base_uri);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>content</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>base_uri</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_load_request ()">
+<a name="webkit-web-view-load-request"></a><h3>webkit_web_view_load_request ()</h3>
+<pre class="programlisting">void                webkit_web_view_load_request        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         <a class="link" href="webkitgtk-WebKitNetworkRequest.html#WebKitNetworkRequest" title="WebKitNetworkRequest">WebKitNetworkRequest</a> *request);</pre>
+<p>
+Requests loading of the specified asynchronous client request.
+</p>
+<p>
+Creates a provisional data source that will transition to a committed data
+source once any data has been received. Use <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-stop-loading" title="webkit_web_view_stop_loading ()"><code class="function">webkit_web_view_stop_loading()</code></a> to
+stop the load.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>request</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitNetworkRequest.html#WebKitNetworkRequest" title="WebKitNetworkRequest"><span class="type">WebKitNetworkRequest</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.1.1</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_load_string ()">
+<a name="webkit-web-view-load-string"></a><h3>webkit_web_view_load_string ()</h3>
+<pre class="programlisting">void                webkit_web_view_load_string         (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *content,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *mime_type,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *encoding,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *base_uri);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>content</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>mime_type</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>encoding</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>base_uri</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_load_uri ()">
+<a name="webkit-web-view-load-uri"></a><h3>webkit_web_view_load_uri ()</h3>
+<pre class="programlisting">void                webkit_web_view_load_uri            (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *uri);</pre>
+<p>
+Requests loading of the specified URI string.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>uri</code></em> :</span></p></td>
+<td> an URI string
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.1.1</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_mark_text_matches ()">
+<a name="webkit-web-view-mark-text-matches"></a><h3>webkit_web_view_mark_text_matches ()</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"
+>guint</a>               webkit_web_view_mark_text_matches   (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *string,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> case_sensitive,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"
+>guint</a> limit);</pre>
+<p>
+Attempts to highlight all occurances of <span class="type">string</span> inside <span class="type">web_view</span>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>string</code></em> :</span></p></td>
+<td> a string to look for
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>case_sensitive</code></em> :</span></p></td>
+<td> whether to respect the case of text
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>limit</code></em> :</span></p></td>
+<td> the maximum number of strings to look for or <code class="literal">0</code> for all
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the number of strings highlighted
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_move_cursor ()">
+<a name="webkit-web-view-move-cursor"></a><h3>webkit_web_view_move_cursor ()</h3>
+<pre class="programlisting">void                webkit_web_view_move_cursor         (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *webView,
+                                                         <a
+href="../gtk/gtk-Standard-Enumerations.html#GtkMovementStep"
+>GtkMovementStep</a> step,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+>gint</a> count);</pre>
+<p>
+Move the cursor in <em class="parameter"><code>view</code></em> as described by <em class="parameter"><code>step</code></em> and <em class="parameter"><code>count</code></em>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>webView</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>step</code></em> :</span></p></td>
+<td> a <a
+href="../gtk/gtk-Standard-Enumerations.html#GtkMovementStep"
+><span class="type">GtkMovementStep</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>count</code></em> :</span></p></td>
+<td> integer describing the direction of the movement. 1 for forward, -1 for backwards.
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.1.4</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_new ()">
+<a name="webkit-web-view-new"></a><h3>webkit_web_view_new ()</h3>
+<pre class="programlisting"><a
+href="../gtk/GtkWidget.html"
+>GtkWidget</a> *         webkit_web_view_new                 (void);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_open ()">
+<a name="webkit-web-view-open"></a><h3>webkit_web_view_open ()</h3>
+<pre class="programlisting">void                webkit_web_view_open                (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *uri);</pre>
+<div class="warning" title="Warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">webkit_web_view_open</code> has been deprecated since version 1.1.1 and should not be used in newly-written code. Use <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-load-uri" title="webkit_web_view_load_uri ()"><code class="function">webkit_web_view_load_uri()</code></a> instead.</p>
+</div>
+<p>
+Requests loading of the specified URI string.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>uri</code></em> :</span></p></td>
+<td> an URI
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_paste_clipboard ()">
+<a name="webkit-web-view-paste-clipboard"></a><h3>webkit_web_view_paste_clipboard ()</h3>
+<pre class="programlisting">void                webkit_web_view_paste_clipboard     (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);</pre>
+<p>
+Pastes the current contents of the clipboard to the <em class="parameter"><code>web_view</code></em>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_reload ()">
+<a name="webkit-web-view-reload"></a><h3>webkit_web_view_reload ()</h3>
+<pre class="programlisting">void                webkit_web_view_reload              (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_reload_bypass_cache ()">
+<a name="webkit-web-view-reload-bypass-cache"></a><h3>webkit_web_view_reload_bypass_cache ()</h3>
+<pre class="programlisting">void                webkit_web_view_reload_bypass_cache (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);</pre>
+<p>
+Reloads the <em class="parameter"><code>web_view</code></em> without using any cached data.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 1.0.3</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_search_text ()">
+<a name="webkit-web-view-search-text"></a><h3>webkit_web_view_search_text ()</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            webkit_web_view_search_text         (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *text,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> case_sensitive,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> forward,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> wrap);</pre>
+<p>
+Looks for a specified string inside <span class="type">web_view</span>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>text</code></em> :</span></p></td>
+<td> a string to look for
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>case_sensitive</code></em> :</span></p></td>
+<td> whether to respect the case of text
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>forward</code></em> :</span></p></td>
+<td> whether to find forward or not
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>wrap</code></em> :</span></p></td>
+<td> whether to continue looking at the beginning after reaching the end
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE--CAPS"
+><code class="literal">TRUE</code></a> on success or <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE--CAPS"
+><code class="literal">FALSE</code></a> on failure
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_select_all ()">
+<a name="webkit-web-view-select-all"></a><h3>webkit_web_view_select_all ()</h3>
+<pre class="programlisting">void                webkit_web_view_select_all          (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);</pre>
+<p>
+Attempts to select everything inside the <em class="parameter"><code>web_view</code></em>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_set_custom_encoding ()">
+<a name="webkit-web-view-set-custom-encoding"></a><h3>webkit_web_view_set_custom_encoding ()</h3>
+<pre class="programlisting">void                webkit_web_view_set_custom_encoding (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *webView,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *encoding);</pre>
+<p>
+Sets the current <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a> encoding, without modifying the default one,
+and reloads the page.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>webView</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>encoding</code></em> :</span></p></td>
+<td> the new encoding, or <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL--CAPS"
+><code class="literal">NULL</code></a> to restore the default encoding
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.1.1</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_set_editable ()">
+<a name="webkit-web-view-set-editable"></a><h3>webkit_web_view_set_editable ()</h3>
+<pre class="programlisting">void                webkit_web_view_set_editable        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> flag);</pre>
+<p>
+Sets whether <em class="parameter"><code>web_view</code></em> allows the user to edit its HTML document.
+</p>
+<p>
+If <em class="parameter"><code>flag</code></em> is <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE--CAPS"
+><code class="literal">TRUE</code></a>, <em class="parameter"><code>web_view</code></em> allows the user to edit the document. If <em class="parameter"><code>flag</code></em> is
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE--CAPS"
+><code class="literal">FALSE</code></a>, an element in <em class="parameter"><code>web_view</code></em>'s document can only be edited if the
+CONTENTEDITABLE attribute has been set on the element or one of its parent
+elements. You can change <em class="parameter"><code>web_view</code></em>'s document programmatically regardless of
+this setting. By default a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a> is not editable.
+</p>
+<p>
+Normally, an HTML document is not editable unless the elements within the
+document are editable. This function provides a low-level way to make the
+contents of a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a> editable without altering the document or DOM
+structure.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>flag</code></em> :</span></p></td>
+<td> a <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+><span class="type">gboolean</span></a> indicating the editable state
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_set_full_content_zoom ()">
+<a name="webkit-web-view-set-full-content-zoom"></a><h3>webkit_web_view_set_full_content_zoom ()</h3>
+<pre class="programlisting">void                webkit_web_view_set_full_content_zoom
+                                                        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> full_content_zoom);</pre>
+<p>
+Sets whether the zoom level affects only text or all elements.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>full_content_zoom</code></em> :</span></p></td>
+<td> <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE--CAPS"
+><code class="literal">FALSE</code></a> if only text should be scaled (the default),
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE--CAPS"
+><code class="literal">TRUE</code></a> if the full content of the view should be scaled.
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.0.1</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_set_highlight_text_matches ()">
+<a name="webkit-web-view-set-highlight-text-matches"></a><h3>webkit_web_view_set_highlight_text_matches ()</h3>
+<pre class="programlisting">void                webkit_web_view_set_highlight_text_matches
+                                                        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> highlight);</pre>
+<p>
+Highlights text matches previously marked by webkit_web_view_mark_text_matches.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>highlight</code></em> :</span></p></td>
+<td> whether to highlight text matches
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_set_maintains_back_forward_list ()">
+<a name="webkit-web-view-set-maintains-back-forward-list"></a><h3>webkit_web_view_set_maintains_back_forward_list ()</h3>
+<pre class="programlisting">void                webkit_web_view_set_maintains_back_forward_list
+                                                        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> flag);</pre>
+<p>
+Set the view to maintain a back or forward list of history items.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>flag</code></em> :</span></p></td>
+<td> to tell the view to maintain a back or forward list
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_set_settings ()">
+<a name="webkit-web-view-set-settings"></a><h3>webkit_web_view_set_settings ()</h3>
+<pre class="programlisting">void                webkit_web_view_set_settings        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         <a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings">WebKitWebSettings</a> *settings);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>settings</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_set_transparent ()">
+<a name="webkit-web-view-set-transparent"></a><h3>webkit_web_view_set_transparent ()</h3>
+<pre class="programlisting">void                webkit_web_view_set_transparent     (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> flag);</pre>
+<p>
+Sets whether the <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a> has a transparent background.
+</p>
+<p>
+Pass <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE--CAPS"
+><code class="literal">FALSE</code></a> to have the <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a> draw a solid background
+(the default), otherwise <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE--CAPS"
+><code class="literal">TRUE</code></a>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>flag</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_set_zoom_level ()">
+<a name="webkit-web-view-set-zoom-level"></a><h3>webkit_web_view_set_zoom_level ()</h3>
+<pre class="programlisting">void                webkit_web_view_set_zoom_level      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"
+>gfloat</a> zoom_level);</pre>
+<p>
+Sets the zoom level of <em class="parameter"><code>web_view</code></em>, i.e. the factor by which elements in
+the page are scaled with respect to their original size.
+If the "full-content-zoom" property is set to <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE--CAPS"
+><code class="literal">FALSE</code></a> (the default)
+the zoom level changes the text size, or if <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE--CAPS"
+><code class="literal">TRUE</code></a>, scales all
+elements in the page.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>zoom_level</code></em> :</span></p></td>
+<td> the new zoom level
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.0.1</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_stop_loading ()">
+<a name="webkit-web-view-stop-loading"></a><h3>webkit_web_view_stop_loading ()</h3>
+<pre class="programlisting">void                webkit_web_view_stop_loading        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_unmark_text_matches ()">
+<a name="webkit-web-view-unmark-text-matches"></a><h3>webkit_web_view_unmark_text_matches ()</h3>
+<pre class="programlisting">void                webkit_web_view_unmark_text_matches (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);</pre>
+<p>
+Removes highlighting previously set by webkit_web_view_mark_text_matches.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_zoom_in ()">
+<a name="webkit-web-view-zoom-in"></a><h3>webkit_web_view_zoom_in ()</h3>
+<pre class="programlisting">void                webkit_web_view_zoom_in             (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);</pre>
+<p>
+Increases the zoom level of <em class="parameter"><code>web_view</code></em>. The current zoom
+level is incremented by the value of the "zoom-step"
+property of the <a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings"><span class="type">WebKitWebSettings</span></a> associated with <em class="parameter"><code>web_view</code></em>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 1.0.1</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_zoom_out ()">
+<a name="webkit-web-view-zoom-out"></a><h3>webkit_web_view_zoom_out ()</h3>
+<pre class="programlisting">void                webkit_web_view_zoom_out            (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);</pre>
+<p>
+Decreases the zoom level of <em class="parameter"><code>web_view</code></em>. The current zoom
+level is decremented by the value of the "zoom-step"
+property of the <a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings"><span class="type">WebKitWebSettings</span></a> associated with <em class="parameter"><code>web_view</code></em>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 1.0.1</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_view_get_window_features ()">
+<a name="webkit-web-view-get-window-features"></a><h3>webkit_web_view_get_window_features ()</h3>
+<pre class="programlisting"><a class="link" href="webkitgtk-WebKitWebWindowFeatures.html#WebKitWebWindowFeatures" title="WebKitWebWindowFeatures">WebKitWebWindowFeatures</a> * webkit_web_view_get_window_features
+                                                        (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view);</pre>
+<p>
+Returns the instance of <a class="link" href="webkitgtk-WebKitWebWindowFeatures.html#WebKitWebWindowFeatures" title="WebKitWebWindowFeatures"><span class="type">WebKitWebWindowFeatures</span></a> held by the given
+<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the <a class="link" href="webkitgtk-WebKitWebWindowFeatures.html#WebKitWebWindowFeatures" title="WebKitWebWindowFeatures"><span class="type">WebKitWebWindowFeatures</span></a>
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.0.3</p>
+</div>
+</div>
+<div class="refsect1" title="Property Details">
+<a name="webkitgtk-WebKitWebView.property-details"></a><h2>Property Details</h2>
+<div class="refsect2" title='The "copy-target-list" property'>
+<a name="WebKitWebView--copy-target-list"></a><h3>The <code class="literal">"copy-target-list"</code> property</h3>
+<pre class="programlisting">  "copy-target-list"         <a
+href="../gtk/gtk-Selections.html#GtkTargetList"
+>GtkTargetList</a>*        : Read</pre>
+<p>
+The list of targets this web view supports for clipboard copying.</p>
+<p>
+</p>
+<p>Since 1.0.2</p>
+</div>
+<hr>
+<div class="refsect2" title='The "custom-encoding" property'>
+<a name="WebKitWebView--custom-encoding"></a><h3>The <code class="literal">"custom-encoding"</code> property</h3>
+<pre class="programlisting">  "custom-encoding"          <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write</pre>
+<p>
+The custom encoding of the web view.</p>
+<p>
+</p>
+<p>Default value: NULL</p>
+<p>Since 1.1.2</p>
+</div>
+<hr>
+<div class="refsect2" title='The "editable" property'>
+<a name="WebKitWebView--editable"></a><h3>The <code class="literal">"editable"</code> property</h3>
+<pre class="programlisting">  "editable"                 <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write</pre>
+<p>Whether content can be modified by the user.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "encoding" property'>
+<a name="WebKitWebView--encoding"></a><h3>The <code class="literal">"encoding"</code> property</h3>
+<pre class="programlisting">  "encoding"                 <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read</pre>
+<p>
+The default encoding of the web view.</p>
+<p>
+</p>
+<p>Default value: NULL</p>
+<p>Since 1.1.2</p>
+</div>
+<hr>
+<div class="refsect2" title='The "full-content-zoom" property'>
+<a name="WebKitWebView--full-content-zoom"></a><h3>The <code class="literal">"full-content-zoom"</code> property</h3>
+<pre class="programlisting">  "full-content-zoom"        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write</pre>
+<p>
+Whether the full content is scaled when zooming.</p>
+<p>
+</p>
+<p>Default value: FALSE</p>
+<p>Since 1.0.1</p>
+</div>
+<hr>
+<div class="refsect2" title='The "load-status" property'>
+<a name="WebKitWebView--load-status"></a><h3>The <code class="literal">"load-status"</code> property</h3>
+<pre class="programlisting">  "load-status"              <a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitLoadStatus" title="enum WebKitLoadStatus">WebKitLoadStatus</a>      : Read</pre>
+<p>
+Determines the current status of the load.</p>
+<p>
+</p>
+<p>Default value: WEBKIT_LOAD_FINISHED</p>
+<p>Since 1.1.7</p>
+</div>
+<hr>
+<div class="refsect2" title='The "paste-target-list" property'>
+<a name="WebKitWebView--paste-target-list"></a><h3>The <code class="literal">"paste-target-list"</code> property</h3>
+<pre class="programlisting">  "paste-target-list"        <a
+href="../gtk/gtk-Selections.html#GtkTargetList"
+>GtkTargetList</a>*        : Read</pre>
+<p>
+The list of targets this web view supports for clipboard pasting.</p>
+<p>
+</p>
+<p>Since 1.0.2</p>
+</div>
+<hr>
+<div class="refsect2" title='The "progress" property'>
+<a name="WebKitWebView--progress"></a><h3>The <code class="literal">"progress"</code> property</h3>
+<pre class="programlisting">  "progress"                 <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gdouble"
+>gdouble</a>               : Read</pre>
+<p>
+Determines the current progress of the load.</p>
+<p>
+</p>
+<p>Allowed values: [0,1]</p>
+<p>Default value: 1</p>
+<p>Since 1.1.7</p>
+</div>
+<hr>
+<div class="refsect2" title='The "settings" property'>
+<a name="WebKitWebView--settings"></a><h3>The <code class="literal">"settings"</code> property</h3>
+<pre class="programlisting">  "settings"                 <a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings">WebKitWebSettings</a>*    : Read / Write</pre>
+<p>An associated WebKitWebSettings instance.</p>
+</div>
+<hr>
+<div class="refsect2" title='The "title" property'>
+<a name="WebKitWebView--title"></a><h3>The <code class="literal">"title"</code> property</h3>
+<pre class="programlisting">  "title"                    <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read</pre>
+<p>
+</p>
+<p>
+</p>
+<p>Default value: NULL</p>
+<p>Since 1.1.4</p>
+</div>
+<hr>
+<div class="refsect2" title='The "transparent" property'>
+<a name="WebKitWebView--transparent"></a><h3>The <code class="literal">"transparent"</code> property</h3>
+<pre class="programlisting">  "transparent"              <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write</pre>
+<p>Whether content has a transparent background.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "uri" property'>
+<a name="WebKitWebView--uri"></a><h3>The <code class="literal">"uri"</code> property</h3>
+<pre class="programlisting">  "uri"                      <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read</pre>
+<p>
+</p>
+<p>
+</p>
+<p>Default value: NULL</p>
+<p>Since 1.1.4</p>
+</div>
+<hr>
+<div class="refsect2" title='The "web-inspector" property'>
+<a name="WebKitWebView--web-inspector"></a><h3>The <code class="literal">"web-inspector"</code> property</h3>
+<pre class="programlisting">  "web-inspector"            <a class="link" href="webkitgtk-WebKitWebInspector.html#WebKitWebInspector" title="WebKitWebInspector">WebKitWebInspector</a>*   : Read</pre>
+<p>
+The associated WebKitWebInspector instance.</p>
+<p>
+</p>
+<p>Since 1.0.3</p>
+</div>
+<hr>
+<div class="refsect2" title='The "window-features" property'>
+<a name="WebKitWebView--window-features"></a><h3>The <code class="literal">"window-features"</code> property</h3>
+<pre class="programlisting">  "window-features"          <a class="link" href="webkitgtk-WebKitWebWindowFeatures.html#WebKitWebWindowFeatures" title="WebKitWebWindowFeatures">WebKitWebWindowFeatures</a>*  : Read / Write</pre>
+<p>
+An associated WebKitWebWindowFeatures instance.</p>
+<p>
+</p>
+<p>Since 1.0.3</p>
+</div>
+<hr>
+<div class="refsect2" title='The "zoom-level" property'>
+<a name="WebKitWebView--zoom-level"></a><h3>The <code class="literal">"zoom-level"</code> property</h3>
+<pre class="programlisting">  "zoom-level"               <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"
+>gfloat</a>                : Read / Write</pre>
+<p>
+The level of zoom of the content.</p>
+<p>
+</p>
+<p>Allowed values: &gt;= G_MINFLOAT</p>
+<p>Default value: 1</p>
+<p>Since 1.0.1</p>
+</div>
+</div>
+<div class="refsect1" title="Signal Details">
+<a name="webkitgtk-WebKitWebView.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2" title='The "close-web-view" signal'>
+<a name="WebKitWebView-close-web-view"></a><h3>The <code class="literal">"close-web-view"</code> signal</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            user_function                      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>       user_data)      : Run Last</pre>
+<p>
+Emitted when closing a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a> is requested. This occurs when a
+call is made from JavaScript's window.close function. The default
+signal handler does not do anything. It is the owner's responsibility
+to hide or delete the web view, if necessary.
+</p>
+<p>
+Since 1.1.11</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> the object on which the signal is emitted
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>return</code></em> :</span></p></td>
+<td> <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE--CAPS"
+><code class="literal">TRUE</code></a> to stop handlers from being invoked for the event or
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE--CAPS"
+><code class="literal">FALSE</code></a> to propagate the event furter
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title='The "console-message" signal'>
+<a name="WebKitWebView-console-message"></a><h3>The <code class="literal">"console-message"</code> signal</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            user_function                      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>         *message,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+>gint</a>           line,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>         *source_id,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>       user_data)      : Run Last</pre>
+<p>
+A JavaScript console message was created.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> the object on which the signal is emitted
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>message</code></em> :</span></p></td>
+<td> the message text
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>line</code></em> :</span></p></td>
+<td> the line where the error occured
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>source_id</code></em> :</span></p></td>
+<td> the source id
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>return</code></em> :</span></p></td>
+<td> TRUE to stop other handlers from being invoked for the event. FALSE to propagate the event further.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title='The "copy-clipboard" signal'>
+<a name="WebKitWebView-copy-clipboard"></a><h3>The <code class="literal">"copy-clipboard"</code> signal</h3>
+<pre class="programlisting">void                user_function                      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>       user_data)      : Run Last / Action</pre>
+<p>
+The <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-copy-clipboard" title='The "copy-clipboard" signal'><span class="type">"copy-clipboard"</span></a> signal is a keybinding signal which gets emitted to
+copy the selection to the clipboard.
+</p>
+<p>
+The default bindings for this signal are Ctrl-c and Ctrl-Insert.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> the object which received the signal
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title='The "create-plugin-widget" signal'>
+<a name="WebKitWebView-create-plugin-widget"></a><h3>The <code class="literal">"create-plugin-widget"</code> signal</h3>
+<pre class="programlisting"><a
+href="../gtk/GtkWidget.html"
+>GtkWidget</a>*          user_function                      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>         *mime_type,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>         *uri,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Hash-Tables.html#GHashTable"
+>GHashTable</a>    *param,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>       user_data)      : Run Last / Action</pre>
+<p>
+The <span class="type">"create-plugin"</span> signal will be emitted to
+create a plugin widget for embed or object HTML tags. This
+allows to embed a GtkWidget as a plugin into HTML content. In
+case of a textual selection of the GtkWidget WebCore will attempt
+to set the property value of "webkit-widget-is-selected". This can
+be used to draw a visual indicator of the selection.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> the object which received the signal
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>mime_type</code></em> :</span></p></td>
+<td> the mimetype of the requested object
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>uri</code></em> :</span></p></td>
+<td> the URI to load
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>param</code></em> :</span></p></td>
+<td> a <a
+href="/usr/share/gtk-doc/html/glib/glib-Hash-Tables.html#GHashTable"
+><span class="type">GHashTable</span></a> with additional attributes (strings)
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Since 1.1.8</p>
+</div>
+<hr>
+<div class="refsect2" title='The "create-web-view" signal'>
+<a name="WebKitWebView-create-web-view"></a><h3>The <code class="literal">"create-web-view"</code> signal</h3>
+<pre class="programlisting"><a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a>*      user_function                      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a>  *web_view,
+                                                        <a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitWebFrame" title="WebKitWebFrame">WebKitWebFrame</a> *frame,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>        user_data)      : Run Last</pre>
+<p>
+Emitted when the creation of a new window is requested.
+If this signal is handled the signal handler should return the
+newly created <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>.
+</p>
+<p>
+The new <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a> should not be displayed to the user
+until the <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-web-view-ready" title='The "web-view-ready" signal'><span class="type">"web-view-ready"</span></a> signal is emitted.
+</p>
+<p>
+The signal handlers should not try to deal with the reference count for
+the new <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>. The widget to which the widget is added will
+handle that.
+</p>
+<p>
+Since 1.0.3</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> the object on which the signal is emitted
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>frame</code></em> :</span></p></td>
+<td> the <a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitWebFrame" title="WebKitWebFrame"><span class="type">WebKitWebFrame</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>return</code></em> :</span></p></td>
+<td> a newly allocated <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a> or <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL--CAPS"
+><code class="literal">NULL</code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title='The "cut-clipboard" signal'>
+<a name="WebKitWebView-cut-clipboard"></a><h3>The <code class="literal">"cut-clipboard"</code> signal</h3>
+<pre class="programlisting">void                user_function                      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>       user_data)      : Run Last / Action</pre>
+<p>
+The <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-cut-clipboard" title='The "cut-clipboard" signal'><span class="type">"cut-clipboard"</span></a> signal is a keybinding signal which gets emitted to
+cut the selection to the clipboard.
+</p>
+<p>
+The default bindings for this signal are Ctrl-x and Shift-Delete.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> the object which received the signal
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title='The "download-requested" signal'>
+<a name="WebKitWebView-download-requested"></a><h3>The <code class="literal">"download-requested"</code> signal</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            user_function                      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                        <a
+href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>       *download,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>       user_data)      : Run Last</pre>
+<p>
+A new Download is being requested. By default, if the signal is
+not handled, the download is cancelled. Notice that while
+handling this signal you must set the target URI using
+<code class="function">webkit_download_set_target_uri()</code>.
+</p>
+<p>
+If you intend to handle downloads yourself rather than using
+the <a class="link" href="webkitgtk-WebKitDownload.html#WebKitDownload" title="WebKitDownload"><span class="type">WebKitDownload</span></a> helper object you must handle this signal,
+and return <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE--CAPS"
+><code class="literal">FALSE</code></a>.
+</p>
+<p>
+Also, keep in mind that the default policy for WebKitGTK+ is to
+ignore files with a MIME type that it does not know how to
+handle, which means this signal won't be emitted in the default
+setup. One way to trigger downloads is to connect to
+WebKitWebView::mime-type-policy-decision-requested and call
+<a class="link" href="webkitgtk-WebKitWebPolicyDecision.html#webkit-web-policy-decision-download" title="webkit_web_policy_decision_download ()"><code class="function">webkit_web_policy_decision_download()</code></a> on the
+<a class="link" href="webkitgtk-WebKitWebPolicyDecision.html#WebKitWebPolicyDecision" title="WebKitWebPolicyDecision"><span class="type">WebKitWebPolicyDecision</span></a> in the parameter list for the kind of
+files you want your application to download (a common solution
+is to download anything that WebKit can't handle, which you can
+figure out by using <a class="link" href="webkitgtk-WebKitWebView.html#webkit-web-view-can-show-mime-type" title="webkit_web_view_can_show_mime_type ()"><code class="function">webkit_web_view_can_show_mime_type()</code></a>).</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> the object on which the signal is emitted
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>download</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitDownload.html#WebKitDownload" title="WebKitDownload"><span class="type">WebKitDownload</span></a> object that lets you control the
+download process
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>return</code></em> :</span></p></td>
+<td> <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE--CAPS"
+><code class="literal">TRUE</code></a> if the download should be performed, <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE--CAPS"
+><code class="literal">FALSE</code></a> to cancel it.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Since 1.1.2</p>
+</div>
+<hr>
+<div class="refsect2" title='The "hovering-over-link" signal'>
+<a name="WebKitWebView-hovering-over-link"></a><h3>The <code class="literal">"hovering-over-link"</code> signal</h3>
+<pre class="programlisting">void                user_function                      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>         *title,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>         *uri,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>       user_data)      : Run Last</pre>
+<p>
+When the cursor is over a link, this signal is emitted.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> the object on which the signal is emitted
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>title</code></em> :</span></p></td>
+<td> the link's title
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>uri</code></em> :</span></p></td>
+<td> the URI the link points to
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title='The "icon-loaded" signal'>
+<a name="WebKitWebView-icon-loaded"></a><h3>The <code class="literal">"icon-loaded"</code> signal</h3>
+<pre class="programlisting">void                user_function                      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *webkitwebview,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>       user_data)          : Run Last</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>webkitwebview</code></em> :</span></p></td>
+<td>the object which received the signal.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title='The "load-committed" signal'>
+<a name="WebKitWebView-load-committed"></a><h3>The <code class="literal">"load-committed"</code> signal</h3>
+<pre class="programlisting">void                user_function                      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a>  *web_view,
+                                                        <a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitWebFrame" title="WebKitWebFrame">WebKitWebFrame</a> *frame,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>        user_data)      : Run Last</pre>
+<p>
+When a <a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitWebFrame" title="WebKitWebFrame"><span class="type">WebKitWebFrame</span></a> loaded the first data this signal is emitted.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> the object on which the signal is emitted
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>frame</code></em> :</span></p></td>
+<td> the main frame that received the first data
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title='The "load-error" signal'>
+<a name="WebKitWebView-load-error"></a><h3>The <code class="literal">"load-error"</code> signal</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            user_function                      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a>  *web_view,
+                                                        <a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitWebFrame" title="WebKitWebFrame">WebKitWebFrame</a> *web_frame,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>          *uri,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>        web_error,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>        user_data)      : Run Last</pre>
+<p>
+An error occurred while loading. By default, if the signal is not
+handled, the <em class="parameter"><code>web_view</code></em> will display a stock error page. You need to
+handle the signal if you want to provide your own error page.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> the object on which the signal is emitted
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_frame</code></em> :</span></p></td>
+<td> the <a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitWebFrame" title="WebKitWebFrame"><span class="type">WebKitWebFrame</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>uri</code></em> :</span></p></td>
+<td> the URI that triggered the error
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_error</code></em> :</span></p></td>
+<td> the <a
+href="/usr/share/gtk-doc/html/glib/glib-Error-Reporting.html#GError"
+><span class="type">GError</span></a> that was triggered
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Since 1.1.6</p>
+</div>
+<hr>
+<div class="refsect2" title='The "load-finished" signal'>
+<a name="WebKitWebView-load-finished"></a><h3>The <code class="literal">"load-finished"</code> signal</h3>
+<pre class="programlisting">void                user_function                      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a>  *webkitwebview,
+                                                        <a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitWebFrame" title="WebKitWebFrame">WebKitWebFrame</a> *arg1,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>        user_data)          : Run Last</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>webkitwebview</code></em> :</span></p></td>
+<td>the object which received the signal.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg1</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title='The "load-progress-changed" signal'>
+<a name="WebKitWebView-load-progress-changed"></a><h3>The <code class="literal">"load-progress-changed"</code> signal</h3>
+<pre class="programlisting">void                user_function                      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+>gint</a>           progress,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>       user_data)      : Run Last</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> the <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>progress</code></em> :</span></p></td>
+<td> the global progress
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title='The "load-started" signal'>
+<a name="WebKitWebView-load-started"></a><h3>The <code class="literal">"load-started"</code> signal</h3>
+<pre class="programlisting">void                user_function                      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a>  *web_view,
+                                                        <a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitWebFrame" title="WebKitWebFrame">WebKitWebFrame</a> *frame,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>        user_data)      : Run Last</pre>
+<p>
+When a <a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitWebFrame" title="WebKitWebFrame"><span class="type">WebKitWebFrame</span></a> begins to load this signal is emitted.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> the object on which the signal is emitted
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>frame</code></em> :</span></p></td>
+<td> the frame going to do the load
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title='The "mime-type-policy-decision-requested" signal'>
+<a name="WebKitWebView-mime-type-policy-decision-requested"></a><h3>The <code class="literal">"mime-type-policy-decision-requested"</code> signal</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            user_function                      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a>           *web_view,
+                                                        <a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitWebFrame" title="WebKitWebFrame">WebKitWebFrame</a>          *frame,
+                                                        <a class="link" href="webkitgtk-WebKitNetworkRequest.html#WebKitNetworkRequest" title="WebKitNetworkRequest">WebKitNetworkRequest</a>    *request,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>                   *mimetype,
+                                                        <a class="link" href="webkitgtk-WebKitWebPolicyDecision.html#WebKitWebPolicyDecision" title="WebKitWebPolicyDecision">WebKitWebPolicyDecision</a> *policy_decision,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>                 user_data)            : Run Last</pre>
+<p>
+Decide whether or not to display the given MIME type.  If this
+signal is not handled, the default behavior is to show the
+content of the requested URI if WebKit can show this MIME
+type; if WebKit is not able to show the MIME type nothing
+happens.
+</p>
+<p>
+Notice that if you return TRUE, meaning that you handled the
+signal, you are expected to have decided what to do, by calling
+<a class="link" href="webkitgtk-WebKitWebPolicyDecision.html#webkit-web-policy-decision-ignore" title="webkit_web_policy_decision_ignore ()"><code class="function">webkit_web_policy_decision_ignore()</code></a>,
+<a class="link" href="webkitgtk-WebKitWebPolicyDecision.html#webkit-web-policy-decision-use" title="webkit_web_policy_decision_use ()"><code class="function">webkit_web_policy_decision_use()</code></a>, or
+<a class="link" href="webkitgtk-WebKitWebPolicyDecision.html#webkit-web-policy-decision-download" title="webkit_web_policy_decision_download ()"><code class="function">webkit_web_policy_decision_download()</code></a> on the <em class="parameter"><code>policy_decision</code></em>
+object.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> the object on which the signal is emitted
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>frame</code></em> :</span></p></td>
+<td> the <a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitWebFrame" title="WebKitWebFrame"><span class="type">WebKitWebFrame</span></a> that required the policy decision
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>request</code></em> :</span></p></td>
+<td> a WebKitNetworkRequest
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>mimetype</code></em> :</span></p></td>
+<td> the MIME type attempted to load
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>policy_decision</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebPolicyDecision.html#WebKitWebPolicyDecision" title="WebKitWebPolicyDecision"><span class="type">WebKitWebPolicyDecision</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>return</code></em> :</span></p></td>
+<td> TRUE if a decision was made, FALSE to have the
+         default behavior apply
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Since 1.0.3</p>
+</div>
+<hr>
+<div class="refsect2" title='The "move-cursor" signal'>
+<a name="WebKitWebView-move-cursor"></a><h3>The <code class="literal">"move-cursor"</code> signal</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            user_function                      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a>  *web_view,
+                                                        <a
+href="../gtk/gtk-Standard-Enumerations.html#GtkMovementStep"
+>GtkMovementStep</a> step,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+>gint</a>            count,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>        user_data)      : Run Last / Action</pre>
+<p>
+The <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-move-cursor" title='The "move-cursor" signal'><span class="type">"move-cursor"</span></a> will be emitted to apply the
+cursor movement described by its parameters to the <em class="parameter"><code>view</code></em>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> the object which received the signal
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>step</code></em> :</span></p></td>
+<td> the type of movement, one of <a
+href="../gtk/gtk-Standard-Enumerations.html#GtkMovementStep"
+><span class="type">GtkMovementStep</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>count</code></em> :</span></p></td>
+<td> an integer indicating the subtype of movement. Currently
+        the permitted values are '1' = forward, '-1' = backwards.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Since 1.1.4</p>
+</div>
+<hr>
+<div class="refsect2" title='The "navigation-policy-decision-requested" signal'>
+<a name="WebKitWebView-navigation-policy-decision-requested"></a><h3>The <code class="literal">"navigation-policy-decision-requested"</code> signal</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            user_function                      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a>             *web_view,
+                                                        <a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitWebFrame" title="WebKitWebFrame">WebKitWebFrame</a>            *frame,
+                                                        <a class="link" href="webkitgtk-WebKitNetworkRequest.html#WebKitNetworkRequest" title="WebKitNetworkRequest">WebKitNetworkRequest</a>      *request,
+                                                        <a class="link" href="webkitgtk-WebKitWebNavigationAction.html#WebKitWebNavigationAction" title="WebKitWebNavigationAction">WebKitWebNavigationAction</a> *navigation_action,
+                                                        <a class="link" href="webkitgtk-WebKitWebPolicyDecision.html#WebKitWebPolicyDecision" title="WebKitWebPolicyDecision">WebKitWebPolicyDecision</a>   *policy_decision,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>                   user_data)              : Run Last</pre>
+<p>
+Emitted when <em class="parameter"><code>frame</code></em> requests a navigation to another page.
+If this signal is not handled, the default behavior is to allow the
+navigation.
+</p>
+<p>
+Notice that if you return TRUE, meaning that you handled the
+signal, you are expected to have decided what to do, by calling
+<a class="link" href="webkitgtk-WebKitWebPolicyDecision.html#webkit-web-policy-decision-ignore" title="webkit_web_policy_decision_ignore ()"><code class="function">webkit_web_policy_decision_ignore()</code></a>,
+<a class="link" href="webkitgtk-WebKitWebPolicyDecision.html#webkit-web-policy-decision-use" title="webkit_web_policy_decision_use ()"><code class="function">webkit_web_policy_decision_use()</code></a>, or
+<a class="link" href="webkitgtk-WebKitWebPolicyDecision.html#webkit-web-policy-decision-download" title="webkit_web_policy_decision_download ()"><code class="function">webkit_web_policy_decision_download()</code></a> on the <em class="parameter"><code>policy_decision</code></em>
+object.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> the object on which the signal is emitted
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>frame</code></em> :</span></p></td>
+<td> the <a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitWebFrame" title="WebKitWebFrame"><span class="type">WebKitWebFrame</span></a> that required the navigation
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>request</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitNetworkRequest.html#WebKitNetworkRequest" title="WebKitNetworkRequest"><span class="type">WebKitNetworkRequest</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>navigation_action</code></em> :</span></p></td>
+<td> a <span class="type">WebKitWebNavigation</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>policy_decision</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebPolicyDecision.html#WebKitWebPolicyDecision" title="WebKitWebPolicyDecision"><span class="type">WebKitWebPolicyDecision</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>return</code></em> :</span></p></td>
+<td> TRUE if a decision was made, FALSE to have the
+         default behavior apply
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Since 1.0.3</p>
+</div>
+<hr>
+<div class="refsect2" title='The "navigation-requested" signal'>
+<a name="WebKitWebView-navigation-requested"></a><h3>The <code class="literal">"navigation-requested"</code> signal</h3>
+<pre class="programlisting"><a class="link" href="webkitgtk-WebKitWebView.html#WebKitNavigationResponse" title="enum WebKitNavigationResponse">WebKitNavigationResponse</a>user_function                      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a>        *web_view,
+                                                        <a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitWebFrame" title="WebKitWebFrame">WebKitWebFrame</a>       *frame,
+                                                        <a class="link" href="webkitgtk-WebKitNetworkRequest.html#WebKitNetworkRequest" title="WebKitNetworkRequest">WebKitNetworkRequest</a> *request,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>              user_data)      : Run Last</pre>
+<p>
+Emitted when <em class="parameter"><code>frame</code></em> requests a navigation to another page.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> the object on which the signal is emitted
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>frame</code></em> :</span></p></td>
+<td> the <a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitWebFrame" title="WebKitWebFrame"><span class="type">WebKitWebFrame</span></a> that required the navigation
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>request</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitNetworkRequest.html#WebKitNetworkRequest" title="WebKitNetworkRequest"><span class="type">WebKitNetworkRequest</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>return</code></em> :</span></p></td>
+<td> a WebKitNavigationResponse
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title='The "new-window-policy-decision-requested" signal'>
+<a name="WebKitWebView-new-window-policy-decision-requested"></a><h3>The <code class="literal">"new-window-policy-decision-requested"</code> signal</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            user_function                      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a>             *web_view,
+                                                        <a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitWebFrame" title="WebKitWebFrame">WebKitWebFrame</a>            *frame,
+                                                        <a class="link" href="webkitgtk-WebKitNetworkRequest.html#WebKitNetworkRequest" title="WebKitNetworkRequest">WebKitNetworkRequest</a>      *request,
+                                                        <a class="link" href="webkitgtk-WebKitWebNavigationAction.html#WebKitWebNavigationAction" title="WebKitWebNavigationAction">WebKitWebNavigationAction</a> *navigation_action,
+                                                        <a class="link" href="webkitgtk-WebKitWebPolicyDecision.html#WebKitWebPolicyDecision" title="WebKitWebPolicyDecision">WebKitWebPolicyDecision</a>   *policy_decision,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>                   user_data)              : Run Last</pre>
+<p>
+Emitted when <em class="parameter"><code>frame</code></em> requests opening a new window. With this
+signal the browser can use the context of the request to decide
+about the new window. If the request is not handled the default
+behavior is to allow opening the new window to load the URI,
+which will cause a create-web-view signal emission where the
+browser handles the new window action but without information
+of the context that caused the navigation. The following
+navigation-policy-decision-requested emissions will load the
+page after the creation of the new window just with the
+information of this new navigation context, without any
+information about the action that made this new window to be
+opened.
+</p>
+<p>
+Notice that if you return TRUE, meaning that you handled the
+signal, you are expected to have decided what to do, by calling
+<a class="link" href="webkitgtk-WebKitWebPolicyDecision.html#webkit-web-policy-decision-ignore" title="webkit_web_policy_decision_ignore ()"><code class="function">webkit_web_policy_decision_ignore()</code></a>,
+<a class="link" href="webkitgtk-WebKitWebPolicyDecision.html#webkit-web-policy-decision-use" title="webkit_web_policy_decision_use ()"><code class="function">webkit_web_policy_decision_use()</code></a>, or
+<a class="link" href="webkitgtk-WebKitWebPolicyDecision.html#webkit-web-policy-decision-download" title="webkit_web_policy_decision_download ()"><code class="function">webkit_web_policy_decision_download()</code></a> on the <em class="parameter"><code>policy_decision</code></em>
+object.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> the object on which the signal is emitted
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>frame</code></em> :</span></p></td>
+<td> the <a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitWebFrame" title="WebKitWebFrame"><span class="type">WebKitWebFrame</span></a> that required the navigation
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>request</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitNetworkRequest.html#WebKitNetworkRequest" title="WebKitNetworkRequest"><span class="type">WebKitNetworkRequest</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>navigation_action</code></em> :</span></p></td>
+<td> a <span class="type">WebKitWebNavigation</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>policy_decision</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebPolicyDecision.html#WebKitWebPolicyDecision" title="WebKitWebPolicyDecision"><span class="type">WebKitWebPolicyDecision</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>return</code></em> :</span></p></td>
+<td> TRUE if a decision was made, FALSE to have the
+         default behavior apply
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Since 1.1.4</p>
+</div>
+<hr>
+<div class="refsect2" title='The "paste-clipboard" signal'>
+<a name="WebKitWebView-paste-clipboard"></a><h3>The <code class="literal">"paste-clipboard"</code> signal</h3>
+<pre class="programlisting">void                user_function                      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>       user_data)      : Run Last / Action</pre>
+<p>
+The <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-paste-clipboard" title='The "paste-clipboard" signal'><span class="type">"paste-clipboard"</span></a> signal is a keybinding signal which gets emitted to
+paste the contents of the clipboard into the Web view.
+</p>
+<p>
+The default bindings for this signal are Ctrl-v and Shift-Insert.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> the object which received the signal
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title='The "populate-popup" signal'>
+<a name="WebKitWebView-populate-popup"></a><h3>The <code class="literal">"populate-popup"</code> signal</h3>
+<pre class="programlisting">void                user_function                      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                        <a
+href="../gtk/GtkMenu.html"
+>GtkMenu</a>       *menu,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>       user_data)      : Run Last</pre>
+<p>
+When a context menu is about to be displayed this signal is emitted.
+</p>
+<p>
+Add menu items to <span class="type">menu</span> to extend the context menu.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> the object on which the signal is emitted
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>menu</code></em> :</span></p></td>
+<td> the context menu
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title='The "print-requested" signal'>
+<a name="WebKitWebView-print-requested"></a><h3>The <code class="literal">"print-requested"</code> signal</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            user_function                      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a>  *web_view,
+                                                        <a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitWebFrame" title="WebKitWebFrame">WebKitWebFrame</a> *web_frame,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>        user_data)      : Run Last</pre>
+<p>
+Emitted when printing is requested by the frame, usually
+because of a javascript call. When handling this signal you
+should call <a class="link" href="webkitgtk-WebKitWebFrame.html#webkit-web-frame-print-full" title="webkit_web_frame_print_full ()"><code class="function">webkit_web_frame_print_full()</code></a> or
+<a class="link" href="webkitgtk-WebKitWebFrame.html#webkit-web-frame-print" title="webkit_web_frame_print ()"><code class="function">webkit_web_frame_print()</code></a> to do the actual printing.
+</p>
+<p>
+The default handler will present a print dialog and carry a
+print operation. Notice that this means that if you intend to
+ignore a print request you must connect to this signal, and
+return <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE--CAPS"
+><code class="literal">TRUE</code></a>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> the object in which the signal is emitted
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_frame</code></em> :</span></p></td>
+<td> the frame that is requesting to be printed
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>return</code></em> :</span></p></td>
+<td> <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE--CAPS"
+><code class="literal">TRUE</code></a> if the print request has been handled, <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE--CAPS"
+><code class="literal">FALSE</code></a> if
+the default handler should run
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Since 1.1.5</p>
+</div>
+<hr>
+<div class="refsect2" title='The "script-alert" signal'>
+<a name="WebKitWebView-script-alert"></a><h3>The <code class="literal">"script-alert"</code> signal</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            user_function                      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a>  *web_view,
+                                                        <a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitWebFrame" title="WebKitWebFrame">WebKitWebFrame</a> *frame,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>          *message,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>        user_data)      : Run Last</pre>
+<p>
+A JavaScript alert dialog was created.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> the object on which the signal is emitted
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>frame</code></em> :</span></p></td>
+<td> the relevant frame
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>message</code></em> :</span></p></td>
+<td> the message text
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>return</code></em> :</span></p></td>
+<td> TRUE to stop other handlers from being invoked for the event. FALSE to propagate the event further.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title='The "script-confirm" signal'>
+<a name="WebKitWebView-script-confirm"></a><h3>The <code class="literal">"script-confirm"</code> signal</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            user_function                      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a>  *web_view,
+                                                        <a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitWebFrame" title="WebKitWebFrame">WebKitWebFrame</a> *frame,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>          *message,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>        confirmed,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>        user_data)      : Run Last</pre>
+<p>
+A JavaScript confirm dialog was created, providing Yes and No buttons.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> the object on which the signal is emitted
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>frame</code></em> :</span></p></td>
+<td> the relevant frame
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>message</code></em> :</span></p></td>
+<td> the message text
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>confirmed</code></em> :</span></p></td>
+<td> whether the dialog has been confirmed
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>return</code></em> :</span></p></td>
+<td> TRUE to stop other handlers from being invoked for the event. FALSE to propagate the event further.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title='The "script-prompt" signal'>
+<a name="WebKitWebView-script-prompt"></a><h3>The <code class="literal">"script-prompt"</code> signal</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            user_function                      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a>  *web_view,
+                                                        <a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitWebFrame" title="WebKitWebFrame">WebKitWebFrame</a> *frame,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>          *message,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>          *default,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>        text,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>        user_data)      : Run Last</pre>
+<p>
+A JavaScript prompt dialog was created, providing an entry to input text.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> the object on which the signal is emitted
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>frame</code></em> :</span></p></td>
+<td> the relevant frame
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>message</code></em> :</span></p></td>
+<td> the message text
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>default</code></em> :</span></p></td>
+<td> the default value
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>text</code></em> :</span></p></td>
+<td> To be filled with the return value or NULL if the dialog was cancelled.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>return</code></em> :</span></p></td>
+<td> TRUE to stop other handlers from being invoked for the event. FALSE to propagate the event further.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title='The "select-all" signal'>
+<a name="WebKitWebView-select-all"></a><h3>The <code class="literal">"select-all"</code> signal</h3>
+<pre class="programlisting">void                user_function                      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>       user_data)      : Run Last / Action</pre>
+<p>
+The <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-select-all" title='The "select-all" signal'><span class="type">"select-all"</span></a> signal is a keybinding signal which gets emitted to
+select the complete contents of the text view.
+</p>
+<p>
+The default bindings for this signal is Ctrl-a.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> the object which received the signal
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title='The "selection-changed" signal'>
+<a name="WebKitWebView-selection-changed"></a><h3>The <code class="literal">"selection-changed"</code> signal</h3>
+<pre class="programlisting">void                user_function                      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *webkitwebview,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>       user_data)          : Run Last</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>webkitwebview</code></em> :</span></p></td>
+<td>the object which received the signal.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title='The "set-scroll-adjustments" signal'>
+<a name="WebKitWebView-set-scroll-adjustments"></a><h3>The <code class="literal">"set-scroll-adjustments"</code> signal</h3>
+<pre class="programlisting">void                user_function                      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *webkitwebview,
+                                                        <a
+href="../gtk/GtkAdjustment.html"
+>GtkAdjustment</a> *arg1,
+                                                        <a
+href="../gtk/GtkAdjustment.html"
+>GtkAdjustment</a> *arg2,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>       user_data)          : Run Last / Action</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>webkitwebview</code></em> :</span></p></td>
+<td>the object which received the signal.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg1</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg2</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title='The "status-bar-text-changed" signal'>
+<a name="WebKitWebView-status-bar-text-changed"></a><h3>The <code class="literal">"status-bar-text-changed"</code> signal</h3>
+<pre class="programlisting">void                user_function                      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *webkitwebview,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>         *arg1,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>       user_data)          : Run Last</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>webkitwebview</code></em> :</span></p></td>
+<td>the object which received the signal.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>arg1</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title='The "title-changed" signal'>
+<a name="WebKitWebView-title-changed"></a><h3>The <code class="literal">"title-changed"</code> signal</h3>
+<pre class="programlisting">void                user_function                      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a>  *web_view,
+                                                        <a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitWebFrame" title="WebKitWebFrame">WebKitWebFrame</a> *frame,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>          *title,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>        user_data)      : Run Last</pre>
+<p>
+When a <a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitWebFrame" title="WebKitWebFrame"><span class="type">WebKitWebFrame</span></a> changes the document title this signal is emitted.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> the object on which the signal is emitted
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>frame</code></em> :</span></p></td>
+<td> the main frame
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>title</code></em> :</span></p></td>
+<td> the new title
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title='The "web-view-ready" signal'>
+<a name="WebKitWebView-web-view-ready"></a><h3>The <code class="literal">"web-view-ready"</code> signal</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            user_function                      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *web_view,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>       user_data)      : Run Last</pre>
+<p>
+Emitted after <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView-create-web-view" title='The "create-web-view" signal'><span class="type">"create-web-view"</span></a> when the new <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+should be displayed to the user. When this signal is emitted
+all the information about how the window should look, including
+size, position, whether the location, status and scroll bars
+should be displayed, is already set on the
+<a class="link" href="webkitgtk-WebKitWebWindowFeatures.html#WebKitWebWindowFeatures" title="WebKitWebWindowFeatures"><span class="type">WebKitWebWindowFeatures</span></a> object contained by the <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>.
+</p>
+<p>
+Notice that some of that information may change during the life
+time of the window, so you may want to connect to the ::notify
+signal of the <a class="link" href="webkitgtk-WebKitWebWindowFeatures.html#WebKitWebWindowFeatures" title="WebKitWebWindowFeatures"><span class="type">WebKitWebWindowFeatures</span></a> object to handle those.
+</p>
+<p>
+Since 1.0.3</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> the object on which the signal is emitted
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>return</code></em> :</span></p></td>
+<td> <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE--CAPS"
+><code class="literal">TRUE</code></a> to stop other handlers from being invoked for
+the event, <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#FALSE--CAPS"
+><code class="literal">FALSE</code></a> to propagate the event further
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title='The "window-object-cleared" signal'>
+<a name="WebKitWebView-window-object-cleared"></a><h3>The <code class="literal">"window-object-cleared"</code> signal</h3>
+<pre class="programlisting">void                user_function                      (<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a>  *web_view,
+                                                        <a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitWebFrame" title="WebKitWebFrame">WebKitWebFrame</a> *frame,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>        context,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>        arg3,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>        user_data)      : Run Last</pre>
+<p>
+<em class="parameter"><code>window_object</code></em>: the <span class="type">JSObjectRef</span> representing the frame's JavaScript
+window object
+</p>
+<p>
+Emitted when the JavaScript window object in a <a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitWebFrame" title="WebKitWebFrame"><span class="type">WebKitWebFrame</span></a> has been
+cleared in preparation for a new load. This is the preferred place to
+set custom properties on the window object using the JavaScriptCore API.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> the object on which the signal is emitted
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>frame</code></em> :</span></p></td>
+<td> the <a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitWebFrame" title="WebKitWebFrame"><span class="type">WebKitWebFrame</span></a> to which <em class="parameter"><code>window_object</code></em> belongs
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>context</code></em> :</span></p></td>
+<td> the <span class="type">JSGlobalContextRef</span> holding the global object and other
+execution state; equivalent to the return value of
+webkit_web_frame_get_global_context(<em class="parameter"><code>frame</code></em>)
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" title="See Also">
+<a name="webkitgtk-WebKitWebView.see-also"></a><h2>See Also</h2>
+#WebKitWebSettings, <a class="link" href="webkitgtk-WebKitWebFrame.html#WebKitWebFrame" title="WebKitWebFrame"><span class="type">WebKitWebFrame</span></a>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.11</div>
+</body>
+</html>

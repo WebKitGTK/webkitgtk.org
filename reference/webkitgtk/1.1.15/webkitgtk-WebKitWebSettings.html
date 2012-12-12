@@ -1,0 +1,736 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitWebSettings</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="WebKitGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="webkitgtk-WebKitWebFrame.html" title="WebKitWebFrame">
+<link rel="next" href="webkitgtk-WebKitWebBackForwardList.html" title="WebKitWebBackForwardList">
+<meta name="generator" content="GTK-Doc V1.11 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="chapter" href="ch01.html" title="Class Overview">
+<link rel="chapter" href="ch02.html" title="Running WebKitGTK+-based programs">
+<link rel="index" href="index-all.html" title="Index">
+<link rel="index" href="index-deprecated.html" title="Index of deprecated symbols">
+<link rel="index" href="index-1.0.1.html" title="Index of new symbols in 1.0.1">
+<link rel="index" href="index-1.0.2.html" title="Index of new symbols in 1.0.2">
+<link rel="index" href="index-1.0.3.html" title="Index of new symbols in 1.0.3">
+<link rel="index" href="index-1.1.1.html" title="Index of new symbols in 1.1.1">
+<link rel="index" href="index-1.1.2.html" title="Index of new symbols in 1.1.2">
+<link rel="index" href="index-1.1.3.html" title="Index of new symbols in 1.1.3">
+<link rel="index" href="index-1.1.4.html" title="Index of new symbols in 1.1.4">
+<link rel="index" href="index-1.1.5.html" title="Index of new symbols in 1.1.5">
+<link rel="index" href="index-1.1.6.html" title="Index of new symbols in 1.1.6">
+<link rel="index" href="index-1.1.7.html" title="Index of new symbols in 1.1.7">
+<link rel="index" href="index-1.1.8.html" title="Index of new symbols in 1.1.8">
+<link rel="index" href="index-1.1.10.html" title="Index of new symbols in 1.1.10">
+<link rel="index" href="index-1.1.11.html" title="Index of new symbols in 1.1.11">
+<link rel="index" href="index-1.1.13.html" title="Index of new symbols in 1.1.13">
+<link rel="index" href="index-1.1.14.html" title="Index of new symbols in 1.1.14">
+<link rel="index" href="index-1.1.15.html" title="Index of new symbols in 1.1.15">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="webkitgtk-WebKitWebFrame.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">WebKitGTK+ Reference Manual</th>
+<td><a accesskey="n" href="webkitgtk-WebKitWebBackForwardList.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#webkitgtk-WebKitWebSettings.synopsis" class="shortcut">Top</a>
+                 | 
+                <a href="#webkitgtk-WebKitWebSettings.description" class="shortcut">Description</a>
+                 | 
+                <a href="#webkitgtk-WebKitWebSettings.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry" title="WebKitWebSettings">
+<a name="webkitgtk-WebKitWebSettings"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="webkitgtk-WebKitWebSettings.top_of_page"></a>WebKitWebSettings</span></h2>
+<p>WebKitWebSettings — Control the behaviour of a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a></p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="webkitgtk-WebKitWebSettings.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+enum                <a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitEditingBehavior" title="enum WebKitEditingBehavior">WebKitEditingBehavior</a>;
+                    <a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings">WebKitWebSettings</a>;
+<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings">WebKitWebSettings</a> * <a class="link" href="webkitgtk-WebKitWebSettings.html#webkit-web-settings-copy" title="webkit_web_settings_copy ()">webkit_web_settings_copy</a>            (<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings">WebKitWebSettings</a> *web_settings);
+<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings">WebKitWebSettings</a> * <a class="link" href="webkitgtk-WebKitWebSettings.html#webkit-web-settings-new" title="webkit_web_settings_new ()">webkit_web_settings_new</a>             (void);
+const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *       <a class="link" href="webkitgtk-WebKitWebSettings.html#webkit-web-settings-get-user-agent" title="webkit_web_settings_get_user_agent ()">webkit_web_settings_get_user_agent</a>  (<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings">WebKitWebSettings</a> *web_settings);
+</pre>
+</div>
+<div class="refsect1" title="Properties">
+<a name="webkitgtk-WebKitWebSettings.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--auto-load-images" title='The "auto-load-images" property'>auto-load-images</a>"         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct
+  "<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--auto-shrink-images" title='The "auto-shrink-images" property'>auto-shrink-images</a>"       <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct
+  "<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--cursive-font-family" title='The "cursive-font-family" property'>cursive-font-family</a>"      <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write / Construct
+  "<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--default-encoding" title='The "default-encoding" property'>default-encoding</a>"         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write / Construct
+  "<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--default-font-family" title='The "default-font-family" property'>default-font-family</a>"      <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write / Construct
+  "<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--default-font-size" title='The "default-font-size" property'>default-font-size</a>"        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write / Construct
+  "<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--default-monospace-font-size" title='The "default-monospace-font-size" property'>default-monospace-font-size</a>" <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write / Construct
+  "<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--editing-behavior" title='The "editing-behavior" property'>editing-behavior</a>"         <a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitEditingBehavior" title="enum WebKitEditingBehavior">WebKitEditingBehavior</a>  : Read / Write / Construct
+  "<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--enable-caret-browsing" title='The "enable-caret-browsing" property'>enable-caret-browsing</a>"    <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct
+  "<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--enable-developer-extras" title='The "enable-developer-extras" property'>enable-developer-extras</a>"  <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct
+  "<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--enable-html5-database" title='The "enable-html5-database" property'>enable-html5-database</a>"    <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct
+  "<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--enable-html5-local-storage" title='The "enable-html5-local-storage" property'>enable-html5-local-storage</a>" <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct
+  "<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--enable-offline-web-application-cache" title='The "enable-offline-web-application-cache" property'>enable-offline-web-application-cache</a>" <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct
+  "<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--enable-page-cache" title='The "enable-page-cache" property'>enable-page-cache</a>"        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct
+  "<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--enable-plugins" title='The "enable-plugins" property'>enable-plugins</a>"           <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct
+  "<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--enable-private-browsing" title='The "enable-private-browsing" property'>enable-private-browsing</a>"  <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct
+  "<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--enable-scripts" title='The "enable-scripts" property'>enable-scripts</a>"           <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct
+  "<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--enable-spell-checking" title='The "enable-spell-checking" property'>enable-spell-checking</a>"    <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct
+  "<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--enable-universal-access-from-file-uris" title='The "enable-universal-access-from-file-uris" property'>enable-universal-access-from-file-uris</a>" <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct
+  "<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--enable-web-sockets" title='The "enable-web-sockets" property'>enable-web-sockets</a>"       <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct
+  "<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--enable-xss-auditor" title='The "enable-xss-auditor" property'>enable-xss-auditor</a>"       <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct
+  "<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--enforce-96-dpi" title='The "enforce-96-dpi" property'>enforce-96-dpi</a>"           <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct
+  "<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--fantasy-font-family" title='The "fantasy-font-family" property'>fantasy-font-family</a>"      <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write / Construct
+  "<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--javascript-can-open-windows-automatically" title='The "javascript-can-open-windows-automatically" property'>javascript-can-open-windows-automatically</a>" <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct
+  "<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--minimum-font-size" title='The "minimum-font-size" property'>minimum-font-size</a>"        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write / Construct
+  "<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--minimum-logical-font-size" title='The "minimum-logical-font-size" property'>minimum-logical-font-size</a>" <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write / Construct
+  "<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--monospace-font-family" title='The "monospace-font-family" property'>monospace-font-family</a>"    <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write / Construct
+  "<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--print-backgrounds" title='The "print-backgrounds" property'>print-backgrounds</a>"        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct
+  "<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--resizable-text-areas" title='The "resizable-text-areas" property'>resizable-text-areas</a>"     <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct
+  "<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--sans-serif-font-family" title='The "sans-serif-font-family" property'>sans-serif-font-family</a>"   <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write / Construct
+  "<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--serif-font-family" title='The "serif-font-family" property'>serif-font-family</a>"        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write / Construct
+  "<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--spell-checking-languages" title='The "spell-checking-languages" property'>spell-checking-languages</a>" <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write / Construct
+  "<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--user-agent" title='The "user-agent" property'>user-agent</a>"               <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write / Construct
+  "<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--user-stylesheet-uri" title='The "user-stylesheet-uri" property'>user-stylesheet-uri</a>"      <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write / Construct
+  "<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--zoom-step" title='The "zoom-step" property'>zoom-step</a>"                <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"
+>gfloat</a>                : Read / Write / Construct
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="webkitgtk-WebKitWebSettings.description"></a><h2>Description</h2>
+<p>
+<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings"><span class="type">WebKitWebSettings</span></a> can be applied to a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a> to control
+the to be used text encoding, color, font sizes, printing mode,
+script support, loading of images and various other things.
+</p>
+<p>
+</p>
+<div class="informalexample"><pre class="programlisting">
+/* Create a new websettings and disable java script */
+WebKitWebSettings *settings = webkit_web_settings_new ();
+g_object_set (G_OBJECT(settings), "enable-scripts", FALSE, NULL);
+
+/* Apply the result */
+webkit_web_view_set_settings (WEBKIT_WEB_VIEW(my_webview), settings);
+</pre></div>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="webkitgtk-WebKitWebSettings.details"></a><h2>Details</h2>
+<div class="refsect2" title="enum WebKitEditingBehavior">
+<a name="WebKitEditingBehavior"></a><h3>enum WebKitEditingBehavior</h3>
+<pre class="programlisting">typedef enum {
+    WEBKIT_EDITING_BEHAVIOR_MAC,
+    WEBKIT_EDITING_BEHAVIOR_WINDOWS
+} WebKitEditingBehavior;
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="WebKitWebSettings">
+<a name="WebKitWebSettings"></a><h3>WebKitWebSettings</h3>
+<pre class="programlisting">typedef struct {
+    GObject parent_instance;
+} WebKitWebSettings;
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_settings_copy ()">
+<a name="webkit-web-settings-copy"></a><h3>webkit_web_settings_copy ()</h3>
+<pre class="programlisting"><a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings">WebKitWebSettings</a> * webkit_web_settings_copy            (<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings">WebKitWebSettings</a> *web_settings);</pre>
+<p>
+Copies an existing <a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings"><span class="type">WebKitWebSettings</span></a> instance.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_settings</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a new <a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings"><span class="type">WebKitWebSettings</span></a> instance
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_settings_new ()">
+<a name="webkit-web-settings-new"></a><h3>webkit_web_settings_new ()</h3>
+<pre class="programlisting"><a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings">WebKitWebSettings</a> * webkit_web_settings_new             (void);</pre>
+<p>
+Creates a new <a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings"><span class="type">WebKitWebSettings</span></a> instance with default values. It must
+be manually attached to a WebView.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a new <a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings"><span class="type">WebKitWebSettings</span></a> instance
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_settings_get_user_agent ()">
+<a name="webkit-web-settings-get-user-agent"></a><h3>webkit_web_settings_get_user_agent ()</h3>
+<pre class="programlisting">const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *       webkit_web_settings_get_user_agent  (<a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings">WebKitWebSettings</a> *web_settings);</pre>
+<p>
+</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_settings</code></em> :</span></p></td>
+<td> a <a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings"><span class="type">WebKitWebSettings</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the User-Agent string currently used by the web view(s) associated
+with the <em class="parameter"><code>web_settings</code></em>.
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.1.11</p>
+</div>
+</div>
+<div class="refsect1" title="Property Details">
+<a name="webkitgtk-WebKitWebSettings.property-details"></a><h2>Property Details</h2>
+<div class="refsect2" title='The "auto-load-images" property'>
+<a name="WebKitWebSettings--auto-load-images"></a><h3>The <code class="literal">"auto-load-images"</code> property</h3>
+<pre class="programlisting">  "auto-load-images"         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct</pre>
+<p>Load images automatically.</p>
+<p>Default value: TRUE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "auto-shrink-images" property'>
+<a name="WebKitWebSettings--auto-shrink-images"></a><h3>The <code class="literal">"auto-shrink-images"</code> property</h3>
+<pre class="programlisting">  "auto-shrink-images"       <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct</pre>
+<p>Automatically shrink standalone images to fit.</p>
+<p>Default value: TRUE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "cursive-font-family" property'>
+<a name="WebKitWebSettings--cursive-font-family"></a><h3>The <code class="literal">"cursive-font-family"</code> property</h3>
+<pre class="programlisting">  "cursive-font-family"      <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write / Construct</pre>
+<p>The default Cursive font family used to display text.</p>
+<p>Default value: "serif"</p>
+</div>
+<hr>
+<div class="refsect2" title='The "default-encoding" property'>
+<a name="WebKitWebSettings--default-encoding"></a><h3>The <code class="literal">"default-encoding"</code> property</h3>
+<pre class="programlisting">  "default-encoding"         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write / Construct</pre>
+<p>The default encoding used to display text.</p>
+<p>Default value: "iso-8859-1"</p>
+</div>
+<hr>
+<div class="refsect2" title='The "default-font-family" property'>
+<a name="WebKitWebSettings--default-font-family"></a><h3>The <code class="literal">"default-font-family"</code> property</h3>
+<pre class="programlisting">  "default-font-family"      <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write / Construct</pre>
+<p>The default font family used to display text.</p>
+<p>Default value: "sans-serif"</p>
+</div>
+<hr>
+<div class="refsect2" title='The "default-font-size" property'>
+<a name="WebKitWebSettings--default-font-size"></a><h3>The <code class="literal">"default-font-size"</code> property</h3>
+<pre class="programlisting">  "default-font-size"        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write / Construct</pre>
+<p>The default font size used to display text.</p>
+<p>Allowed values: &gt;= 5</p>
+<p>Default value: 12</p>
+</div>
+<hr>
+<div class="refsect2" title='The "default-monospace-font-size" property'>
+<a name="WebKitWebSettings--default-monospace-font-size"></a><h3>The <code class="literal">"default-monospace-font-size"</code> property</h3>
+<pre class="programlisting">  "default-monospace-font-size" <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write / Construct</pre>
+<p>The default font size used to display monospace text.</p>
+<p>Allowed values: &gt;= 5</p>
+<p>Default value: 10</p>
+</div>
+<hr>
+<div class="refsect2" title='The "editing-behavior" property'>
+<a name="WebKitWebSettings--editing-behavior"></a><h3>The <code class="literal">"editing-behavior"</code> property</h3>
+<pre class="programlisting">  "editing-behavior"         <a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitEditingBehavior" title="enum WebKitEditingBehavior">WebKitEditingBehavior</a>  : Read / Write / Construct</pre>
+<p>
+This setting controls various editing behaviors that differ
+between platforms and that have been combined in two groups,
+'Mac' and 'Windows'. Some examples:
+</p>
+<p>
+ 1) Clicking below the last line of an editable area puts the
+caret at the end of the last line on Mac, but in the middle of
+the last line on Windows.
+</p>
+<p>
+ 2) Pushing down the arrow key on the last line puts the caret
+ at the end of the last line on Mac, but does nothing on
+ Windows. A similar case exists on the top line.</p>
+<p>
+</p>
+<p>Default value: WEBKIT_EDITING_BEHAVIOR_MAC</p>
+<p>Since 1.1.13</p>
+</div>
+<hr>
+<div class="refsect2" title='The "enable-caret-browsing" property'>
+<a name="WebKitWebSettings--enable-caret-browsing"></a><h3>The <code class="literal">"enable-caret-browsing"</code> property</h3>
+<pre class="programlisting">  "enable-caret-browsing"    <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct</pre>
+<p>
+Whether to enable caret browsing mode.</p>
+<p>
+</p>
+<p>Default value: FALSE</p>
+<p>Since 1.1.6</p>
+</div>
+<hr>
+<div class="refsect2" title='The "enable-developer-extras" property'>
+<a name="WebKitWebSettings--enable-developer-extras"></a><h3>The <code class="literal">"enable-developer-extras"</code> property</h3>
+<pre class="programlisting">  "enable-developer-extras"  <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct</pre>
+<p>
+Whether developer extensions should be enabled. This enables,
+for now, the Web Inspector, which can be controlled using the
+<a class="link" href="webkitgtk-WebKitWebInspector.html#WebKitWebInspector" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a> instance held by the <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a> this
+setting is enabled for.</p>
+<p>
+</p>
+<p>Default value: FALSE</p>
+<p>Since 1.0.3</p>
+</div>
+<hr>
+<div class="refsect2" title='The "enable-html5-database" property'>
+<a name="WebKitWebSettings--enable-html5-database"></a><h3>The <code class="literal">"enable-html5-database"</code> property</h3>
+<pre class="programlisting">  "enable-html5-database"    <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct</pre>
+<p>
+Whether to enable HTML5 client-side SQL database support. Client-side
+SQL database allows web pages to store structured data and be able to
+use SQL to manipulate that data asynchronously.</p>
+<p>
+</p>
+<p>Default value: TRUE</p>
+<p>Since 1.1.8</p>
+</div>
+<hr>
+<div class="refsect2" title='The "enable-html5-local-storage" property'>
+<a name="WebKitWebSettings--enable-html5-local-storage"></a><h3>The <code class="literal">"enable-html5-local-storage"</code> property</h3>
+<pre class="programlisting">  "enable-html5-local-storage" <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct</pre>
+<p>
+Whether to enable HTML5 localStorage support. localStorage provides
+simple synchronous storage access.</p>
+<p>
+</p>
+<p>Default value: TRUE</p>
+<p>Since 1.1.8</p>
+</div>
+<hr>
+<div class="refsect2" title='The "enable-offline-web-application-cache" property'>
+<a name="WebKitWebSettings--enable-offline-web-application-cache"></a><h3>The <code class="literal">"enable-offline-web-application-cache"</code> property</h3>
+<pre class="programlisting">  "enable-offline-web-application-cache" <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct</pre>
+<p>
+Whether to enable HTML5 offline web application cache support. Offline
+Web Application Cache ensures web applications are available even when
+the user is not connected to the network.</p>
+<p>
+</p>
+<p>Default value: TRUE</p>
+<p>Since 1.1.13</p>
+</div>
+<hr>
+<div class="refsect2" title='The "enable-page-cache" property'>
+<a name="WebKitWebSettings--enable-page-cache"></a><h3>The <code class="literal">"enable-page-cache"</code> property</h3>
+<pre class="programlisting">  "enable-page-cache"        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct</pre>
+<p>Whether to enable the page cache.</p>
+<p>Default value: TRUE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "enable-plugins" property'>
+<a name="WebKitWebSettings--enable-plugins"></a><h3>The <code class="literal">"enable-plugins"</code> property</h3>
+<pre class="programlisting">  "enable-plugins"           <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct</pre>
+<p>Enable embedded plugin objects.</p>
+<p>Default value: TRUE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "enable-private-browsing" property'>
+<a name="WebKitWebSettings--enable-private-browsing"></a><h3>The <code class="literal">"enable-private-browsing"</code> property</h3>
+<pre class="programlisting">  "enable-private-browsing"  <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct</pre>
+<p>
+Whether to enable private browsing mode. Private browsing mode prevents
+WebKit from updating the global history and storing any session
+information e.g., on-disk cache, as well as suppressing any messages
+from being printed into the (javascript) console.
+</p>
+<p>
+This is currently experimental for WebKitGtk.</p>
+<p>
+</p>
+<p>Default value: FALSE</p>
+<p>Since 1.1.2</p>
+</div>
+<hr>
+<div class="refsect2" title='The "enable-scripts" property'>
+<a name="WebKitWebSettings--enable-scripts"></a><h3>The <code class="literal">"enable-scripts"</code> property</h3>
+<pre class="programlisting">  "enable-scripts"           <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct</pre>
+<p>Enable embedded scripting languages.</p>
+<p>Default value: TRUE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "enable-spell-checking" property'>
+<a name="WebKitWebSettings--enable-spell-checking"></a><h3>The <code class="literal">"enable-spell-checking"</code> property</h3>
+<pre class="programlisting">  "enable-spell-checking"    <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct</pre>
+<p>
+Whether to enable spell checking while typing.</p>
+<p>
+</p>
+<p>Default value: FALSE</p>
+<p>Since 1.1.6</p>
+</div>
+<hr>
+<div class="refsect2" title='The "enable-universal-access-from-file-uris" property'>
+<a name="WebKitWebSettings--enable-universal-access-from-file-uris"></a><h3>The <code class="literal">"enable-universal-access-from-file-uris"</code> property</h3>
+<pre class="programlisting">  "enable-universal-access-from-file-uris" <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct</pre>
+<p>
+Whether to allow files loaded through file:// URIs universal access to
+all pages.</p>
+<p>
+</p>
+<p>Default value: FALSE</p>
+<p>Since 1.1.13</p>
+</div>
+<hr>
+<div class="refsect2" title='The "enable-web-sockets" property'>
+<a name="WebKitWebSettings--enable-web-sockets"></a><h3>The <code class="literal">"enable-web-sockets"</code> property</h3>
+<pre class="programlisting">  "enable-web-sockets"       <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct</pre>
+<p>
+Whether to enable support for Web Sockets.
+</p>
+<p>
+Implementation of Web Sockets is currently considered experimental.
+Name of this property and the behavior could change in the future.</p>
+<p>
+</p>
+<p>Default value: FALSE</p>
+<p>Since 1.1.16</p>
+</div>
+<hr>
+<div class="refsect2" title='The "enable-xss-auditor" property'>
+<a name="WebKitWebSettings--enable-xss-auditor"></a><h3>The <code class="literal">"enable-xss-auditor"</code> property</h3>
+<pre class="programlisting">  "enable-xss-auditor"       <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct</pre>
+<p>
+Whether to enable the XSS Auditor. This feature filters some kinds of
+reflective XSS attacks on vulnerable web sites.</p>
+<p>
+</p>
+<p>Default value: TRUE</p>
+<p>Since 1.1.11</p>
+</div>
+<hr>
+<div class="refsect2" title='The "enforce-96-dpi" property'>
+<a name="WebKitWebSettings--enforce-96-dpi"></a><h3>The <code class="literal">"enforce-96-dpi"</code> property</h3>
+<pre class="programlisting">  "enforce-96-dpi"           <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct</pre>
+<p>
+Enforce a resolution of 96 DPI. This is meant for compatibility
+with web pages which cope badly with different screen resolutions
+and for automated testing.
+Web browsers and applications that typically display arbitrary
+content from the web should provide a preference for this.</p>
+<p>
+</p>
+<p>Default value: FALSE</p>
+<p>Since 1.0.3</p>
+</div>
+<hr>
+<div class="refsect2" title='The "fantasy-font-family" property'>
+<a name="WebKitWebSettings--fantasy-font-family"></a><h3>The <code class="literal">"fantasy-font-family"</code> property</h3>
+<pre class="programlisting">  "fantasy-font-family"      <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write / Construct</pre>
+<p>The default Fantasy font family used to display text.</p>
+<p>Default value: "serif"</p>
+</div>
+<hr>
+<div class="refsect2" title='The "javascript-can-open-windows-automatically" property'>
+<a name="WebKitWebSettings--javascript-can-open-windows-automatically"></a><h3>The <code class="literal">"javascript-can-open-windows-automatically"</code> property</h3>
+<pre class="programlisting">  "javascript-can-open-windows-automatically" <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct</pre>
+<p>
+Whether JavaScript can open popup windows automatically without user
+intervention.</p>
+<p>
+</p>
+<p>Default value: FALSE</p>
+<p>Since 1.1.11</p>
+</div>
+<hr>
+<div class="refsect2" title='The "minimum-font-size" property'>
+<a name="WebKitWebSettings--minimum-font-size"></a><h3>The <code class="literal">"minimum-font-size"</code> property</h3>
+<pre class="programlisting">  "minimum-font-size"        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write / Construct</pre>
+<p>The minimum font size used to display text.</p>
+<p>Allowed values: &gt;= 1</p>
+<p>Default value: 5</p>
+</div>
+<hr>
+<div class="refsect2" title='The "minimum-logical-font-size" property'>
+<a name="WebKitWebSettings--minimum-logical-font-size"></a><h3>The <code class="literal">"minimum-logical-font-size"</code> property</h3>
+<pre class="programlisting">  "minimum-logical-font-size" <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+>gint</a>                  : Read / Write / Construct</pre>
+<p>The minimum logical font size used to display text.</p>
+<p>Allowed values: &gt;= 1</p>
+<p>Default value: 5</p>
+</div>
+<hr>
+<div class="refsect2" title='The "monospace-font-family" property'>
+<a name="WebKitWebSettings--monospace-font-family"></a><h3>The <code class="literal">"monospace-font-family"</code> property</h3>
+<pre class="programlisting">  "monospace-font-family"    <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write / Construct</pre>
+<p>The default font family used to display monospace text.</p>
+<p>Default value: "monospace"</p>
+</div>
+<hr>
+<div class="refsect2" title='The "print-backgrounds" property'>
+<a name="WebKitWebSettings--print-backgrounds"></a><h3>The <code class="literal">"print-backgrounds"</code> property</h3>
+<pre class="programlisting">  "print-backgrounds"        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct</pre>
+<p>Whether background images should be printed.</p>
+<p>Default value: TRUE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "resizable-text-areas" property'>
+<a name="WebKitWebSettings--resizable-text-areas"></a><h3>The <code class="literal">"resizable-text-areas"</code> property</h3>
+<pre class="programlisting">  "resizable-text-areas"     <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write / Construct</pre>
+<p>Whether text areas are resizable.</p>
+<p>Default value: TRUE</p>
+</div>
+<hr>
+<div class="refsect2" title='The "sans-serif-font-family" property'>
+<a name="WebKitWebSettings--sans-serif-font-family"></a><h3>The <code class="literal">"sans-serif-font-family"</code> property</h3>
+<pre class="programlisting">  "sans-serif-font-family"   <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write / Construct</pre>
+<p>The default Sans Serif font family used to display text.</p>
+<p>Default value: "sans-serif"</p>
+</div>
+<hr>
+<div class="refsect2" title='The "serif-font-family" property'>
+<a name="WebKitWebSettings--serif-font-family"></a><h3>The <code class="literal">"serif-font-family"</code> property</h3>
+<pre class="programlisting">  "serif-font-family"        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write / Construct</pre>
+<p>The default Serif font family used to display text.</p>
+<p>Default value: "serif"</p>
+</div>
+<hr>
+<div class="refsect2" title='The "spell-checking-languages" property'>
+<a name="WebKitWebSettings--spell-checking-languages"></a><h3>The <code class="literal">"spell-checking-languages"</code> property</h3>
+<pre class="programlisting">  "spell-checking-languages" <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write / Construct</pre>
+<p>
+The languages to be used for spell checking, separated by commas.
+</p>
+<p>
+The locale string typically is in the form lang_COUNTRY, where lang
+is an ISO-639 language code, and COUNTRY is an ISO-3166 country code.
+For instance, sv_FI for Swedish as written in Finland or pt_BR
+for Portuguese as written in Brazil.
+</p>
+<p>
+If no value is specified then the value returned by
+gtk_get_default_language will be used.</p>
+<p>
+</p>
+<p>Default value: NULL</p>
+<p>Since 1.1.6</p>
+</div>
+<hr>
+<div class="refsect2" title='The "user-agent" property'>
+<a name="WebKitWebSettings--user-agent"></a><h3>The <code class="literal">"user-agent"</code> property</h3>
+<pre class="programlisting">  "user-agent"               <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write / Construct</pre>
+<p>
+The User-Agent string used by WebKitGtk.
+</p>
+<p>
+This will return a default User-Agent string if a custom string wasn't
+provided by the application. Setting this property to a NULL value or
+an empty string will result in the User-Agent string being reset to the
+default value.</p>
+<p>
+</p>
+<p>Default value: "Mozilla/5.0 (X11; U; Linux x86_64; c) AppleWebKit/531.2+ (KHTML, like Gecko) Safari/531.2+"</p>
+<p>Since 1.1.11</p>
+</div>
+<hr>
+<div class="refsect2" title='The "user-stylesheet-uri" property'>
+<a name="WebKitWebSettings--user-stylesheet-uri"></a><h3>The <code class="literal">"user-stylesheet-uri"</code> property</h3>
+<pre class="programlisting">  "user-stylesheet-uri"      <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read / Write / Construct</pre>
+<p>The URI of a stylesheet that is applied to every page.</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2" title='The "zoom-step" property'>
+<a name="WebKitWebSettings--zoom-step"></a><h3>The <code class="literal">"zoom-step"</code> property</h3>
+<pre class="programlisting">  "zoom-step"                <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gfloat"
+>gfloat</a>                : Read / Write / Construct</pre>
+<p>
+The value by which the zoom level is changed when zooming in or out.</p>
+<p>
+</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0.1</p>
+<p>Since 1.0.1</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.11</div>
+</body>
+</html>

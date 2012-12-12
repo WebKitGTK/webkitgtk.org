@@ -1,0 +1,116 @@
+body {
+  color: #000;
+  background: #CCD0CB;
+  width: 45em;
+  margin: 0 auto;
+  font-family: sans-serif;
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+  color: #3465a4;
+}
+
+a:hover {
+  border-bottom: 1px dotted;
+}
+
+a img, a:hover img {
+  border: 0 none;
+}
+
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover {
+  border-bottom: none;
+}
+
+h2, h2 a {
+  color: #cc0000;
+  margin-top: 1em;
+  margin-bottom: 0.1em;
+}
+
+p {
+  margin-top: 0.0em;
+  margin-bottom: 0.7em;
+  vertical-align: middle;
+}
+
+#header {
+  background-color: #98CD4F;
+  height: 5.0em;
+  padding: 1.0em;
+  text-align: center;
+}
+
+#header h1 {
+  font-size: 3.0em;
+  color: #fff;
+  opacity: 0.9;
+  text-shadow: #78A041 0.1em 0.1em 0.1em;
+  display: inline;
+}
+
+#container {
+  background: #fff;
+}
+
+code, pre {
+  background: #CCD0CB;
+  padding: 0.4em;
+}
+pre {
+  padding-left: 1.5em;
+}
+
+#menu {
+  background: #000;
+  color: #fff;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  text-align: center;
+}
+
+#menu a {
+  color: #fff;
+}
+
+#menu table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#menu td {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.current {
+  font-weight: bold;
+}
+
+#content {
+  padding: 1em 3.5em 2.5em 3.5em;
+  line-height: 1.5em;
+}
+
+#content a {
+  line-height: 1.5em;
+  font-weight: bold;
+}
+
+#footer {
+  clear: both;
+  padding: 0.5em;
+  background: #98CD4F;
+  color: #1C4018;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.warning {
+  border: 1px solid;
+  padding: 15px 10px 15px 30px;
+  color: #D63301;
+  background-color: #FFCCBA;
+}

@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitWebResource</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="WebKitGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="webkitgtk-WebKitWebDataSource.html" title="WebKitWebDataSource">
+<link rel="next" href="webkitgtk-webkitdownload.html" title="WebKitDownload">
+<meta name="generator" content="GTK-Doc V1.14 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="webkitgtk-WebKitWebDataSource.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">WebKitGTK+ Reference Manual</th>
+<td><a accesskey="n" href="webkitgtk-webkitdownload.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#webkitgtk-WebKitWebResource.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#webkitgtk-WebKitWebResource.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry" title="WebKitWebResource">
+<a name="webkitgtk-WebKitWebResource"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="webkitgtk-WebKitWebResource.top_of_page"></a>WebKitWebResource</span></h2>
+<p>WebKitWebResource — Represents a downloaded URI.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="webkitgtk-WebKitWebResource.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="webkitgtk-WebKitWebResource.html#WebKitWebResource" title="WebKitWebResource">WebKitWebResource</a>;
+<a href="/usr/share/gtk-doc/html/glib/glib-Strings.html#GString"><span class="returnvalue">GString</span></a> *           <a class="link" href="webkitgtk-WebKitWebResource.html#webkit-web-resource-get-data" title="webkit_web_resource_get_data ()">webkit_web_resource_get_data</a>        (<em class="parameter"><code><a class="link" href="webkitgtk-WebKitWebResource.html#WebKitWebResource" title="WebKitWebResource"><span class="type">WebKitWebResource</span></a> *web_resource</code></em>);
+const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="webkitgtk-WebKitWebResource.html#webkit-web-resource-get-encoding" title="webkit_web_resource_get_encoding ()">webkit_web_resource_get_encoding</a>    (<em class="parameter"><code><a class="link" href="webkitgtk-WebKitWebResource.html#WebKitWebResource" title="WebKitWebResource"><span class="type">WebKitWebResource</span></a> *web_resource</code></em>);
+const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="webkitgtk-WebKitWebResource.html#webkit-web-resource-get-frame-name" title="webkit_web_resource_get_frame_name ()">webkit_web_resource_get_frame_name</a>  (<em class="parameter"><code><a class="link" href="webkitgtk-WebKitWebResource.html#WebKitWebResource" title="WebKitWebResource"><span class="type">WebKitWebResource</span></a> *web_resource</code></em>);
+const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="webkitgtk-WebKitWebResource.html#webkit-web-resource-get-mime-type" title="webkit_web_resource_get_mime_type ()">webkit_web_resource_get_mime_type</a>   (<em class="parameter"><code><a class="link" href="webkitgtk-WebKitWebResource.html#WebKitWebResource" title="WebKitWebResource"><span class="type">WebKitWebResource</span></a> *web_resource</code></em>);
+<a href="/usr/share/gtk-doc/html/gobject/gobject-Type-Information.html#GType"><span class="returnvalue">GType</span></a>               <a class="link" href="webkitgtk-WebKitWebResource.html#webkit-web-resource-get-type" title="webkit_web_resource_get_type ()">webkit_web_resource_get_type</a>        (<em class="parameter"><code><span class="type">void</span></code></em>);
+const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="webkitgtk-WebKitWebResource.html#webkit-web-resource-get-uri" title="webkit_web_resource_get_uri ()">webkit_web_resource_get_uri</a>         (<em class="parameter"><code><a class="link" href="webkitgtk-WebKitWebResource.html#WebKitWebResource" title="WebKitWebResource"><span class="type">WebKitWebResource</span></a> *web_resource</code></em>);
+<a class="link" href="webkitgtk-WebKitWebResource.html#WebKitWebResource" title="WebKitWebResource"><span class="returnvalue">WebKitWebResource</span></a> * <a class="link" href="webkitgtk-WebKitWebResource.html#webkit-web-resource-new" title="webkit_web_resource_new ()">webkit_web_resource_new</a>             (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *data</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gssize"><span class="type">gssize</span></a> size</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *uri</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *mime_type</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *encoding</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *frame_name</code></em>);
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="webkitgtk-WebKitWebResource.description"></a><h2>Description</h2>
+<p>
+A web resource encapsulates the data of the download as well as the URI,
+MIME type and frame name of the resource.
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="webkitgtk-WebKitWebResource.details"></a><h2>Details</h2>
+<div class="refsect2" title="WebKitWebResource">
+<a name="WebKitWebResource"></a><h3>WebKitWebResource</h3>
+<pre class="programlisting">typedef struct {
+    GObject parent_instance;
+} WebKitWebResource;
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_resource_get_data ()">
+<a name="webkit-web-resource-get-data"></a><h3>webkit_web_resource_get_data ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Strings.html#GString"><span class="returnvalue">GString</span></a> *           webkit_web_resource_get_data        (<em class="parameter"><code><a class="link" href="webkitgtk-WebKitWebResource.html#WebKitWebResource" title="WebKitWebResource"><span class="type">WebKitWebResource</span></a> *web_resource</code></em>);</pre>
+<p>
+Returns the data of the <em class="parameter"><code>webResource</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_resource</code></em> :</span></p></td>
+<td>a <a class="link" href="webkitgtk-WebKitWebResource.html#WebKitWebResource" title="WebKitWebResource"><span class="type">WebKitWebResource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a <a href="/usr/share/gtk-doc/html/glib/glib-Strings.html#GString"><span class="type">GString</span></a> containing the character data of the <em class="parameter"><code>webResource</code></em>.
+The string is owned by WebKit and should not be freed or destroyed.
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.1.14</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_resource_get_encoding ()">
+<a name="webkit-web-resource-get-encoding"></a><h3>webkit_web_resource_get_encoding ()</h3>
+<pre class="programlisting">const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       webkit_web_resource_get_encoding    (<em class="parameter"><code><a class="link" href="webkitgtk-WebKitWebResource.html#WebKitWebResource" title="WebKitWebResource"><span class="type">WebKitWebResource</span></a> *web_resource</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_resource</code></em> :</span></p></td>
+<td>a <a class="link" href="webkitgtk-WebKitWebResource.html#WebKitWebResource" title="WebKitWebResource"><span class="type">WebKitWebResource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the encoding name of the resource
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.1.14</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_resource_get_frame_name ()">
+<a name="webkit-web-resource-get-frame-name"></a><h3>webkit_web_resource_get_frame_name ()</h3>
+<pre class="programlisting">const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       webkit_web_resource_get_frame_name  (<em class="parameter"><code><a class="link" href="webkitgtk-WebKitWebResource.html#WebKitWebResource" title="WebKitWebResource"><span class="type">WebKitWebResource</span></a> *web_resource</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_resource</code></em> :</span></p></td>
+<td>a <a class="link" href="webkitgtk-WebKitWebResource.html#WebKitWebResource" title="WebKitWebResource"><span class="type">WebKitWebResource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the frame name of the resource.
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.1.14</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_resource_get_mime_type ()">
+<a name="webkit-web-resource-get-mime-type"></a><h3>webkit_web_resource_get_mime_type ()</h3>
+<pre class="programlisting">const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       webkit_web_resource_get_mime_type   (<em class="parameter"><code><a class="link" href="webkitgtk-WebKitWebResource.html#WebKitWebResource" title="WebKitWebResource"><span class="type">WebKitWebResource</span></a> *web_resource</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_resource</code></em> :</span></p></td>
+<td>a <a class="link" href="webkitgtk-WebKitWebResource.html#WebKitWebResource" title="WebKitWebResource"><span class="type">WebKitWebResource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the MIME type of the resource
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.1.14</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_resource_get_type ()">
+<a name="webkit-web-resource-get-type"></a><h3>webkit_web_resource_get_type ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/gobject/gobject-Type-Information.html#GType"><span class="returnvalue">GType</span></a>               webkit_web_resource_get_type        (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_resource_get_uri ()">
+<a name="webkit-web-resource-get-uri"></a><h3>webkit_web_resource_get_uri ()</h3>
+<pre class="programlisting">const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       webkit_web_resource_get_uri         (<em class="parameter"><code><a class="link" href="webkitgtk-WebKitWebResource.html#WebKitWebResource" title="WebKitWebResource"><span class="type">WebKitWebResource</span></a> *web_resource</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_resource</code></em> :</span></p></td>
+<td>a <a class="link" href="webkitgtk-WebKitWebResource.html#WebKitWebResource" title="WebKitWebResource"><span class="type">WebKitWebResource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the URI of the resource
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.1.14</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_resource_new ()">
+<a name="webkit-web-resource-new"></a><h3>webkit_web_resource_new ()</h3>
+<pre class="programlisting"><a class="link" href="webkitgtk-WebKitWebResource.html#WebKitWebResource" title="WebKitWebResource"><span class="returnvalue">WebKitWebResource</span></a> * webkit_web_resource_new             (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *data</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gssize"><span class="type">gssize</span></a> size</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *uri</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *mime_type</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *encoding</code></em>,
+                                                         <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *frame_name</code></em>);</pre>
+<p>
+Returns a new <a class="link" href="webkitgtk-WebKitWebResource.html#WebKitWebResource" title="WebKitWebResource"><span class="type">WebKitWebResource</span></a>. The <em class="parameter"><code>encoding</code></em> can be <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. The
+<em class="parameter"><code>frame_name</code></em> argument can be used if the resource represents contents of an
+entire HTML frame, otherwise pass <a href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data</code></em> :</span></p></td>
+<td>the data to initialize the <a class="link" href="webkitgtk-WebKitWebResource.html#WebKitWebResource" title="WebKitWebResource"><span class="type">WebKitWebResource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>size</code></em> :</span></p></td>
+<td>the length of <em class="parameter"><code>data</code></em>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>uri</code></em> :</span></p></td>
+<td>the uri of the <a class="link" href="webkitgtk-WebKitWebResource.html#WebKitWebResource" title="WebKitWebResource"><span class="type">WebKitWebResource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>mime_type</code></em> :</span></p></td>
+<td>the MIME type of the <a class="link" href="webkitgtk-WebKitWebResource.html#WebKitWebResource" title="WebKitWebResource"><span class="type">WebKitWebResource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>encoding</code></em> :</span></p></td>
+<td>the text encoding name of the <a class="link" href="webkitgtk-WebKitWebResource.html#WebKitWebResource" title="WebKitWebResource"><span class="type">WebKitWebResource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>frame_name</code></em> :</span></p></td>
+<td>the frame name of the <a class="link" href="webkitgtk-WebKitWebResource.html#WebKitWebResource" title="WebKitWebResource"><span class="type">WebKitWebResource</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a new <a class="link" href="webkitgtk-WebKitWebResource.html#WebKitWebResource" title="WebKitWebResource"><span class="type">WebKitWebResource</span></a>
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.1.14</p>
+</div>
+</div>
+<div class="refsect1" title="See Also">
+<a name="webkitgtk-WebKitWebResource.see-also"></a><h2>See Also</h2>
+<a class="link" href="webkitgtk-WebKitWebDataSource.html#WebKitWebDataSource" title="WebKitWebDataSource"><span class="type">WebKitWebDataSource</span></a>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.14</div>
+</body>
+</html>

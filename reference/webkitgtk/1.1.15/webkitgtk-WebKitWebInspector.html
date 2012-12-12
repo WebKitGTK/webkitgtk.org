@@ -1,0 +1,488 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitWebInspector</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="WebKitGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="webkitgtk-WebKitNetworkResponse.html" title="WebKitNetworkResponse">
+<link rel="next" href="webkitgtk-WebKitWebDatabase.html" title="WebKitWebDatabase">
+<meta name="generator" content="GTK-Doc V1.11 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="chapter" href="ch01.html" title="Class Overview">
+<link rel="chapter" href="ch02.html" title="Running WebKitGTK+-based programs">
+<link rel="index" href="index-all.html" title="Index">
+<link rel="index" href="index-deprecated.html" title="Index of deprecated symbols">
+<link rel="index" href="index-1.0.1.html" title="Index of new symbols in 1.0.1">
+<link rel="index" href="index-1.0.2.html" title="Index of new symbols in 1.0.2">
+<link rel="index" href="index-1.0.3.html" title="Index of new symbols in 1.0.3">
+<link rel="index" href="index-1.1.1.html" title="Index of new symbols in 1.1.1">
+<link rel="index" href="index-1.1.2.html" title="Index of new symbols in 1.1.2">
+<link rel="index" href="index-1.1.3.html" title="Index of new symbols in 1.1.3">
+<link rel="index" href="index-1.1.4.html" title="Index of new symbols in 1.1.4">
+<link rel="index" href="index-1.1.5.html" title="Index of new symbols in 1.1.5">
+<link rel="index" href="index-1.1.6.html" title="Index of new symbols in 1.1.6">
+<link rel="index" href="index-1.1.7.html" title="Index of new symbols in 1.1.7">
+<link rel="index" href="index-1.1.8.html" title="Index of new symbols in 1.1.8">
+<link rel="index" href="index-1.1.10.html" title="Index of new symbols in 1.1.10">
+<link rel="index" href="index-1.1.11.html" title="Index of new symbols in 1.1.11">
+<link rel="index" href="index-1.1.13.html" title="Index of new symbols in 1.1.13">
+<link rel="index" href="index-1.1.14.html" title="Index of new symbols in 1.1.14">
+<link rel="index" href="index-1.1.15.html" title="Index of new symbols in 1.1.15">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="webkitgtk-WebKitNetworkResponse.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">WebKitGTK+ Reference Manual</th>
+<td><a accesskey="n" href="webkitgtk-WebKitWebDatabase.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#webkitgtk-WebKitWebInspector.synopsis" class="shortcut">Top</a>
+                 | 
+                <a href="#webkitgtk-WebKitWebInspector.description" class="shortcut">Description</a>
+                 | 
+                <a href="#webkitgtk-WebKitWebInspector.properties" class="shortcut">Properties</a>
+                 | 
+                <a href="#webkitgtk-WebKitWebInspector.signals" class="shortcut">Signals</a>
+</td></tr>
+</table>
+<div class="refentry" title="WebKitWebInspector">
+<a name="webkitgtk-WebKitWebInspector"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="webkitgtk-WebKitWebInspector.top_of_page"></a>WebKitWebInspector</span></h2>
+<p>WebKitWebInspector — Access to the WebKit Inspector</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv" title="Synopsis">
+<a name="webkitgtk-WebKitWebInspector.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+                    <a class="link" href="webkitgtk-WebKitWebInspector.html#WebKitWebInspector" title="WebKitWebInspector">WebKitWebInspector</a>;
+const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *       <a class="link" href="webkitgtk-WebKitWebInspector.html#webkit-web-inspector-get-inspected-uri" title="webkit_web_inspector_get_inspected_uri ()">webkit_web_inspector_get_inspected_uri</a>
+                                                        (<a class="link" href="webkitgtk-WebKitWebInspector.html#WebKitWebInspector" title="WebKitWebInspector">WebKitWebInspector</a> *web_inspector);
+<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *     <a class="link" href="webkitgtk-WebKitWebInspector.html#webkit-web-inspector-get-web-view" title="webkit_web_inspector_get_web_view ()">webkit_web_inspector_get_web_view</a>   (<a class="link" href="webkitgtk-WebKitWebInspector.html#WebKitWebInspector" title="WebKitWebInspector">WebKitWebInspector</a> *web_inspector);
+</pre>
+</div>
+<div class="refsect1" title="Properties">
+<a name="webkitgtk-WebKitWebInspector.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="webkitgtk-WebKitWebInspector.html#WebKitWebInspector--inspected-uri" title='The "inspected-uri" property'>inspected-uri</a>"            <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read
+  "<a class="link" href="webkitgtk-WebKitWebInspector.html#WebKitWebInspector--javascript-profiling-enabled" title='The "javascript-profiling-enabled" property'>javascript-profiling-enabled</a>" <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write
+  "<a class="link" href="webkitgtk-WebKitWebInspector.html#WebKitWebInspector--web-view" title='The "web-view" property'>web-view</a>"                 <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a>*        : Read
+</pre>
+</div>
+<div class="refsect1" title="Signals">
+<a name="webkitgtk-WebKitWebInspector.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="webkitgtk-WebKitWebInspector.html#WebKitWebInspector-attach-window" title='The "attach-window" signal'>attach-window</a>"                                  : Run Last
+  "<a class="link" href="webkitgtk-WebKitWebInspector.html#WebKitWebInspector-close-window" title='The "close-window" signal'>close-window</a>"                                   : Run Last
+  "<a class="link" href="webkitgtk-WebKitWebInspector.html#WebKitWebInspector-detach-window" title='The "detach-window" signal'>detach-window</a>"                                  : Run Last
+  "<a class="link" href="webkitgtk-WebKitWebInspector.html#WebKitWebInspector-finished" title='The "finished" signal'>finished</a>"                                       : Run Last
+  "<a class="link" href="webkitgtk-WebKitWebInspector.html#WebKitWebInspector-inspect-web-view" title='The "inspect-web-view" signal'>inspect-web-view</a>"                               : Run Last
+  "<a class="link" href="webkitgtk-WebKitWebInspector.html#WebKitWebInspector-show-window" title='The "show-window" signal'>show-window</a>"                                    : Run Last
+</pre>
+</div>
+<div class="refsect1" title="Description">
+<a name="webkitgtk-WebKitWebInspector.description"></a><h2>Description</h2>
+<p>
+The WebKit Inspector is a graphical tool to inspect and change
+the content of a <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a>. It also includes an interactive
+JavaScriptDebugger. Using this class one can get a GtkWidget which
+can be embedded into an application to show the inspector.
+</p>
+<p>
+The inspector is available when the <a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings" title="WebKitWebSettings"><span class="type">WebKitWebSettings</span></a> of the
+<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a> has set the <a class="link" href="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--enable-developer-extras" title='The "enable-developer-extras" property'><span class="type">"enable-developer-extras"</span></a>
+to true otherwise no inspector is available.
+</p>
+<p>
+</p>
+<div class="informalexample"><pre class="programlisting">
+/* Enable the developer extras */
+WebKitWebSettings *setting = webkit_web_view_get_settings (WEBKIT_WEB_VIEW(my_webview));
+g_object_set (G_OBJECT(settings), "enable-developer-extras", TRUE, NULL);
+
+/* load some data or reload to be able to inspect the page*/
+webkit_web_view_open (WEBKIT_WEB_VIEW(my_webview), "http://www.gnome.org");
+
+/* Embed the inspector somewhere */
+WebKitWebInspector *inspector = webkit_web_view_get_inspector (WEBKIT_WEB_VIEW(my_webview));
+g_signal_connect (G_OBJECT (inspector), "inspect-web-view", G_CALLBACK(create_gtk_window_around_it), NULL);
+g_signal_connect (G_OBJECT (inspector), "show-window", G_CALLBACK(show_inpector_window), NULL));
+g_signal_connect (G_OBJECT (inspector), "notify::inspected-uri", G_CALLBACK(inspected_uri_changed_do_stuff), NULL);
+</pre></div>
+<p>
+</p>
+</div>
+<div class="refsect1" title="Details">
+<a name="webkitgtk-WebKitWebInspector.details"></a><h2>Details</h2>
+<div class="refsect2" title="WebKitWebInspector">
+<a name="WebKitWebInspector"></a><h3>WebKitWebInspector</h3>
+<pre class="programlisting">typedef struct {
+    GObject parent_instance;
+
+    WebKitWebInspectorPrivate* priv;
+} WebKitWebInspector;
+</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_inspector_get_inspected_uri ()">
+<a name="webkit-web-inspector-get-inspected-uri"></a><h3>webkit_web_inspector_get_inspected_uri ()</h3>
+<pre class="programlisting">const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *       webkit_web_inspector_get_inspected_uri
+                                                        (<a class="link" href="webkitgtk-WebKitWebInspector.html#WebKitWebInspector" title="WebKitWebInspector">WebKitWebInspector</a> *web_inspector);</pre>
+<p>
+Obtains the URI that is currently being inspected.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_inspector</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a pointer to the URI as an internally allocated string; it
+should not be freed, modified or stored.
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.0.3</p>
+</div>
+<hr>
+<div class="refsect2" title="webkit_web_inspector_get_web_view ()">
+<a name="webkit-web-inspector-get-web-view"></a><h3>webkit_web_inspector_get_web_view ()</h3>
+<pre class="programlisting"><a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a> *     webkit_web_inspector_get_web_view   (<a class="link" href="webkitgtk-WebKitWebInspector.html#WebKitWebInspector" title="WebKitWebInspector">WebKitWebInspector</a> *web_inspector);</pre>
+<p>
+Obtains the <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a> that is used to render the
+inspector. The <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a> instance is created by the
+application, by handling the <a class="link" href="webkitgtk-WebKitWebInspector.html#WebKitWebInspector-inspect-web-view" title='The "inspect-web-view" signal'><span class="type">"inspect-web-view"</span></a> signal. This means
+that this method may return <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL--CAPS"
+><code class="literal">NULL</code></a> if the user hasn't inspected
+anything.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_inspector</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a> instance that is used to render the
+inspector or <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL--CAPS"
+><code class="literal">NULL</code></a> if it is not yet created.
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.0.3</p>
+</div>
+</div>
+<div class="refsect1" title="Property Details">
+<a name="webkitgtk-WebKitWebInspector.property-details"></a><h2>Property Details</h2>
+<div class="refsect2" title='The "inspected-uri" property'>
+<a name="WebKitWebInspector--inspected-uri"></a><h3>The <code class="literal">"inspected-uri"</code> property</h3>
+<pre class="programlisting">  "inspected-uri"            <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*                : Read</pre>
+<p>
+The URI that is currently being inspected.</p>
+<p>
+</p>
+<p>Default value: NULL</p>
+<p>Since 1.0.3</p>
+</div>
+<hr>
+<div class="refsect2" title='The "javascript-profiling-enabled" property'>
+<a name="WebKitWebInspector--javascript-profiling-enabled"></a><h3>The <code class="literal">"javascript-profiling-enabled"</code> property</h3>
+<pre class="programlisting">  "javascript-profiling-enabled" <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>              : Read / Write</pre>
+<p>
+This is enabling JavaScript profiling in the Inspector. This means
+that Console.profiles will return the profiles.</p>
+<p>
+</p>
+<p>Default value: FALSE</p>
+<p>Since 1.1.1</p>
+</div>
+<hr>
+<div class="refsect2" title='The "web-view" property'>
+<a name="WebKitWebInspector--web-view"></a><h3>The <code class="literal">"web-view"</code> property</h3>
+<pre class="programlisting">  "web-view"                 <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a>*        : Read</pre>
+<p>
+The Web View that renders the Web Inspector itself.</p>
+<p>
+</p>
+<p>Since 1.0.3</p>
+</div>
+</div>
+<div class="refsect1" title="Signal Details">
+<a name="webkitgtk-WebKitWebInspector.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2" title='The "attach-window" signal'>
+<a name="WebKitWebInspector-attach-window"></a><h3>The <code class="literal">"attach-window"</code> signal</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            user_function                      (<a class="link" href="webkitgtk-WebKitWebInspector.html#WebKitWebInspector" title="WebKitWebInspector">WebKitWebInspector</a> *web_inspector,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>            user_data)          : Run Last</pre>
+<p>
+Emitted when the inspector should appear at the same window as
+the <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a> being inspected.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_inspector</code></em> :</span></p></td>
+<td> the object on which the signal is emitted
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>return</code></em> :</span></p></td>
+<td> <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE--CAPS"
+><code class="literal">TRUE</code></a> if the signal has been handled
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Since 1.0.3</p>
+</div>
+<hr>
+<div class="refsect2" title='The "close-window" signal'>
+<a name="WebKitWebInspector-close-window"></a><h3>The <code class="literal">"close-window"</code> signal</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            user_function                      (<a class="link" href="webkitgtk-WebKitWebInspector.html#WebKitWebInspector" title="WebKitWebInspector">WebKitWebInspector</a> *web_inspector,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>            user_data)          : Run Last</pre>
+<p>
+Emitted when the inspector window should be closed. You can
+destroy the window or hide it so that it can be displayed again
+by handling <a class="link" href="webkitgtk-WebKitWebInspector.html#WebKitWebInspector-show-window" title='The "show-window" signal'><span class="type">"show-window"</span></a> later on.
+</p>
+<p>
+Notice that the inspected <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a> may no longer exist
+when this signal is emitted.
+</p>
+<p>
+Notice, too, that if you decide to destroy the window,
+<a class="link" href="webkitgtk-WebKitWebInspector.html#WebKitWebInspector-inspect-web-view" title='The "inspect-web-view" signal'><span class="type">"inspect-web-view"</span></a> will be emmited again, when the user
+inspects an element.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_inspector</code></em> :</span></p></td>
+<td> the object on which the signal is emitted
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>return</code></em> :</span></p></td>
+<td> <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE--CAPS"
+><code class="literal">TRUE</code></a> if the signal has been handled
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Since 1.0.3</p>
+</div>
+<hr>
+<div class="refsect2" title='The "detach-window" signal'>
+<a name="WebKitWebInspector-detach-window"></a><h3>The <code class="literal">"detach-window"</code> signal</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            user_function                      (<a class="link" href="webkitgtk-WebKitWebInspector.html#WebKitWebInspector" title="WebKitWebInspector">WebKitWebInspector</a> *web_inspector,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>            user_data)          : Run Last</pre>
+<p>
+Emitted when the inspector should appear in a separate window.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_inspector</code></em> :</span></p></td>
+<td> the object on which the signal is emitted
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>return</code></em> :</span></p></td>
+<td> <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE--CAPS"
+><code class="literal">TRUE</code></a> if the signal has been handled
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Since 1.0.3</p>
+</div>
+<hr>
+<div class="refsect2" title='The "finished" signal'>
+<a name="WebKitWebInspector-finished"></a><h3>The <code class="literal">"finished"</code> signal</h3>
+<pre class="programlisting">void                user_function                      (<a class="link" href="webkitgtk-WebKitWebInspector.html#WebKitWebInspector" title="WebKitWebInspector">WebKitWebInspector</a> *web_inspector,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>            user_data)          : Run Last</pre>
+<p>
+Emitted when the inspection is done. You should release your
+references on the inspector at this time. The inspected
+<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a> may no longer exist when this signal is emitted.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_inspector</code></em> :</span></p></td>
+<td> the object on which the signal is emitted
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Since 1.0.3</p>
+</div>
+<hr>
+<div class="refsect2" title='The "inspect-web-view" signal'>
+<a name="WebKitWebInspector-inspect-web-view"></a><h3>The <code class="literal">"inspect-web-view"</code> signal</h3>
+<pre class="programlisting"><a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a>*      user_function                      (<a class="link" href="webkitgtk-WebKitWebInspector.html#WebKitWebInspector" title="WebKitWebInspector">WebKitWebInspector</a> *web_inspector,
+                                                        <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView">WebKitWebView</a>      *web_view,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>            user_data)          : Run Last</pre>
+<p>
+Emitted when the user activates the 'inspect' context menu item
+to inspect a web view. The application which is interested in
+the inspector should create a window, or otherwise add the
+<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a> it creates to an existing window.
+</p>
+<p>
+You don't need to handle the reference count of the
+<a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a> instance you create; the widget to which you add
+it will do that.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_inspector</code></em> :</span></p></td>
+<td> the object on which the signal is emitted
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td> the <span class="type">WebKitWeb</span> which will be inspected
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>return</code></em> :</span></p></td>
+<td> a newly allocated <a class="link" href="webkitgtk-WebKitWebView.html#WebKitWebView" title="WebKitWebView"><span class="type">WebKitWebView</span></a> or <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#NULL--CAPS"
+><code class="literal">NULL</code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Since 1.0.3</p>
+</div>
+<hr>
+<div class="refsect2" title='The "show-window" signal'>
+<a name="WebKitWebInspector-show-window"></a><h3>The <code class="literal">"show-window"</code> signal</h3>
+<pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            user_function                      (<a class="link" href="webkitgtk-WebKitWebInspector.html#WebKitWebInspector" title="WebKitWebInspector">WebKitWebInspector</a> *web_inspector,
+                                                        <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"
+>gpointer</a>            user_data)          : Run Last</pre>
+<p>
+Emitted when the inspector window should be displayed. Notice
+that the window must have been created already by handling
+<a class="link" href="webkitgtk-WebKitWebInspector.html#WebKitWebInspector-inspect-web-view" title='The "inspect-web-view" signal'><span class="type">"inspect-web-view"</span></a>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_inspector</code></em> :</span></p></td>
+<td> the object on which the signal is emitted
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>return</code></em> :</span></p></td>
+<td> <a
+href="/usr/share/gtk-doc/html/glib/glib-Standard-Macros.html#TRUE--CAPS"
+><code class="literal">TRUE</code></a> if the signal has been handled
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Since 1.0.3</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.11</div>
+</body>
+</html>

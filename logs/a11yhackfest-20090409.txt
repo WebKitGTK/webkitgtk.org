@@ -1,0 +1,1260 @@
+(09:20:33) The topic for #webkit-gtk is: WebKit GTK+ port 
+http://webkitgtk.org/ | WebKitGTK+ 1.1.4 is here! 
+http://webkitgtk.org/webkit-1.1.4.tar.gz | docs: 
+http://webkitgtk.org/reference/ | Faster way to SVN checkout: 
+http://iki.fi/zuh/fetch-webkit.sh | Wishlist for 1.1.5: 18608 24961 
+24960 24844 24724
+(09:23:02) xan: WillieWalker: hi! :)
+(09:23:30) WillieWalker: xan: you around?  I grabbed the latest stuff 
+from svn trunk and it blew my build away because some dependency was 
+added regarding new C++0x support.  I couldn't find the ChangeLog entry 
+that described this, so I'm searching trac.webkit.org for an svn version 
+that I can use.  I'm guessing it was revision 42345 that destroyed 
+things for me, so I'm grabbing 42335 right now.
+(09:23:52) xan: WillieWalker: heh
+(09:23:55) xan: WillieWalker: I just fixed that
+(09:24:03) xan: WillieWalker: trunk builds ok now
+(09:24:05) WillieWalker: Aha!
+(09:24:18) WillieWalker: OK.  I'll pull from trunk again.
+(09:24:22) xan: I also pushed another bunch of patches, should be closer 
+to the whole patch now
+(09:24:25) xan: still not there though
+(09:25:45) ***WillieWalker pulls from trunk.  The build takes a *long* 
+time on my machine.  Hope it will be ready by 14:00UTC.
+(09:26:18) xan: yeah
+(09:26:24) xan: if you have several cores use -jX, helps a lot
+(09:26:34) xan: (in case you were not doing that already)
+(09:27:51) WillieWalker: I have an old Tecra M2 laptop I'm using. 
+Building WebKit on OpenSolaris is a bit of a struggle due to differences 
+in how C++ is handled.  I think SunCC is a bit more picky.
+(09:28:33) erikos left the room (quit: Remote closed the connection).
+(09:28:51) WillieWalker: xan: have you used accerciser yet?
+(09:29:06) xan: WillieWalker: yes, I'm using it to see how the patch 
+improves things
+(09:29:28) WillieWalker: xan: nice!  Getting familar with accerciser and 
+the AT-SPI is very important.
+(09:29:53) xan: you can more or less see the whole page already, but 
+everything is very broken :)
+(09:30:00) WillieWalker: xan: have you also looked at how Gecko exposes 
+things via the AT-SPI?
+(09:30:16) xan: no, I should do that. Could you do a crash-course on how 
+to use firefox with a11y?
+(09:30:31) bdash_ [n=bdash@redstone.bdash.net.nz] entered the room.
+(09:30:59) WillieWalker: xan: sure -- that would be perfect.  It would 
+also not require me to have WebKit built by 14:00UTC.  ;-)
+(09:31:08) xan: :)
+(09:31:10) bdash left the room (quit: Read error: 104 (Connection reset 
+by peer)).
+(09:31:55) ***WillieWalker wonders if I should try to set up a vnc 
+session and forward a port to my machine so we can look at things together.
+(09:33:09) xan: hm, that might work, although I've never used any vnc client
+(09:33:44) xan: guess vino is the one to use
+(09:33:58) johanbr left the room (quit: Connection timed out).
+(09:36:19) xan: ah, no, vino is the server
+(09:36:47) xan: vinagre is the client. Funny names...
+(09:36:53) WillieWalker: or vncviewer
+(09:37:02) xan: (I guess you only get the joke if you speak spanish though)
+(09:37:49) _mathrick is now known as mathrick
+(09:39:28) zdobersek: xan: wine and vinegar?
+(09:39:31) msanchez left the room (quit: "Leaving.").
+(09:40:31) xan: zdobersek: yeah
+(09:40:42) xan: well, the "joke"
+(09:41:07) msanchez [n=mario@cm25077.red.mundo-r.com] entered the room.
+(09:43:16) zdobersek: xan: also, about 
+https://bugs.webkit.org/show_bug.cgi?id=23642#c8 , 
+createDragImageFromImage specifically - getGdkPixbuf is as the name of 
+the function is used because of consistency - Mac port has getNSImage, 
+Windows port getHBITMAP and similar.
+(09:44:33) xan: zdobersek: I see. It's just that I had to check the 
+source to actually see what was going on, which is not a good thing in 
+general I think.
+(09:44:46) xan: maybe we can raise the point to the apple/window guys
+(09:45:37) zdobersek: xan: there's also getCGImageRef existing, probably 
+a lot more descriptive in this case.
+(09:46:00) xan: yeah
+(09:51:42) WillieWalker: xan: OK - I'm using Minefield 3.6a1pre
+(09:51:52) mbarnes [n=mbarnes@nat/redhat/x-d7a496a4680975a2] entered the 
+room.
+(09:52:20) WillieWalker: xan: 
+http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-trunk/firefox-3.6a1pre.en-US.linux-i686.tar.bz2
+(09:53:34) xan: 3.6?
+(09:53:37) xan: wow...
+(09:53:41) API [n=API@cm167041.red91-116.mundo-r.com] entered the room.
+(09:54:15) WillieWalker: xan: 6 letters...which correspond to the 
+letters 2-7 of the name of this channel (1-based indexing).
+(09:54:58) WillieWalker: xan: the AT-SPI infrastructure had some changes 
+that ended up requiring some changed in Firefox.  So, 3.6 has the changes.
+(09:55:17) WillieWalker: 3.0.7 ends up with a basically empty hierarchy.
+(09:55:56) xan: and 3.5?
+(09:56:29) WillieWalker: 3.5 might be OK.
+(09:56:38) mikkel: Why do I get "libtool: line 847: X--tag=CXX: command 
+not found" and a bunch more. I'm using "libtool-1.5.26-4.fc10.i386" ?
+(09:57:02) xan: I don't seem to be able to connect to your server
+(09:57:12) WillieWalker: xan: If you run it and look at it with 
+accerciser, you'll know pretty quickly if the hierachy is not very deep.
+(09:57:18) xan: authentication failed, tried with the '-' in the name 
+and without :p
+(09:57:57) mikkel: http://pastebin.com/d7be9304
+(09:59:02) xan: yeah, 3.5 seems to show stuff
+(09:59:29) xan: mikkel: need libtool2
+(10:00:43) xan: I'll use 3.6 anyway, that way we'll use the same
+(10:04:01) WillieWalker: xan: Hey!  I see it really is 14:00UTC.  I was 
+mixed up.
+(10:04:15) xan: yep
+(10:04:25) WillieWalker: I was thinking we were going to start at 
+12:00PM EDT - I did the math all wrog.
+(10:04:29) WillieWalker: wrong, even.
+(10:04:44) WillieWalker: So...let's see.  How about we start with some 
+introductions?
+(10:04:46) xan: I thought it started one hour ago here, I did the math 
+wrong too
+(10:04:53) xan: sure
+(10:05:10) WillieWalker: I'll go first -- I'm Willie Walker, I'm the 
+GNOME a11y lead and I also lead the Orca screen reader project.
+(10:05:20) WillieWalker: xan?
+(10:05:27) Logging started. Future messages in this conversation will be 
+logged.
+(10:05:35) xan: Well, I'm Xan Lopez and I hack on WebKitGTK+ and Epiphany :)
+(10:05:54) ***xan looks at API
+(10:05:57) WillieWalker: who else do we have that is going to 
+participate today?
+(10:06:07) API: hi Im Alejandro Pi�eiro
+(10:06:32) API: I work on Igalia, and try give some advices to Xan 
+related to a11y at random
+(10:06:45) API: I have some experience on a11y due HAIL,
+(10:06:52) xan: He's the resident a11y guru as far as I'm concerned :)
+(10:06:52) API: but zero on Webkit :|
+(10:07:13) behdad: can /me see that too?
+(10:07:35) ***behdad grabs coffee
+(10:07:42) WillieWalker: Hey behdad!
+(10:07:51) WillieWalker: API - do you have a pointer to HAIL?
+(10:08:06) erikos [n=erikos@p54ACC201.dip.t-dialin.net] entered the room.
+(10:08:08) API: HAIL = Hildon Accessibility Implementation Library
+(10:08:18) API: is like GAIL but for the Hildon widget stack
+(10:08:43) WillieWalker: API - ahh cool.  It talks to ATK, right?
+(10:08:59) API: yes, of course
+(10:09:07) API: and extends a lot of GAIL objects
+(10:09:16) WillieWalker: API - awesome.  So, you know ATK and GAIL 
+better than I do, I'm sure.  :-)
+(10:09:17) API: using the "indirect" way
+(10:09:47) API: not sure ;), but thanks
+(10:10:08) WillieWalker: OK - so, anyone else joining us today?
+(10:11:47) xan: does not seem so, or maybe they are late
+(10:12:18) mikkel: xan, Oka
+(10:12:39) mikkel: rebuilding with libtool2. Always on the edge :)
+(10:12:41) WillieWalker: Eeeks - someone at my door.  btb
+(10:12:43) WillieWalker: brb
+(10:12:43) ***erikos is here a bit for listening
+(10:12:46) tomeu: couple of Sugar developers lurking here
+(10:13:34) joanmarie [n=jd@c-24-61-92-135.hsd1.nh.comcast.net] entered 
+the room.
+(10:13:34) ***reinouts hangs out here of interest for epiphany developments
+(10:14:02) WillieWalker: sorry - unexpected visitors.  brb very shortly.
+(10:14:14) xan: heh
+(10:14:22) ***xan prepares a quick coffee too
+(10:16:56) API: in viewonly mode?
+(10:17:09) WillieWalker: yeah - I can make it so you can muck with it if 
+you want.
+(10:19:34) xan: it seems it got stuck on my side
+(10:19:35) xan: mmm
+(10:19:36) ***xan reconnects
+(10:20:25) xan: heh, still the same hour and minute
+(10:20:28) xan: wtf :D
+(10:20:43) xan: do you live inside a black hole singularity by any chance?
+(10:22:04) herzi [n=herzi@port-10245.pppoe.wtnet.de] entered the room.
+(10:22:44) herz1 left the room (quit: Read error: 104 (Connection reset 
+by peer)).
+(10:23:58) ***WillieWalker back
+(10:24:01) WillieWalker: sorry about that.
+(10:24:16) WillieWalker: OK - so, do you want me to allow you to control 
+the mouse/keyboard?
+(10:24:48) WillieWalker: Ah - you're all good.
+(10:25:07) WillieWalker: OK - so, would you like to look at some Firefox 
+stuff with accerciser?
+(10:25:51) joanmarie left the room.
+(10:25:53) ech0s7 left the room (quit: "Sto andando via").
+(10:26:01) xan: if you want to go quickly through it, yeah
+(10:26:07) joanmarie [n=jd@c-24-61-92-135.hsd1.nh.comcast.net] entered 
+the room.
+joanmarie jonner
+(10:26:17) xan: I see that it just works, so that's good, I thought it'd 
+require some messing around with it
+(10:26:36) WillieWalker: hey guys - welcome joanmarie -- she's a huge 
+community contributor for Orca.  AWESOME contributor.
+(10:26:39) xan: my VNC client seems to be stuck half an hour ago though, 
+not sure why
+(10:26:50) xan: hi joanmarie
+(10:26:56) joanmarie: hey guys
+(10:26:58) ech0s7 [n=ech0s7@93-47-149-31.ip113.fastwebnet.it] entered 
+the room.
+(10:27:25) WillieWalker: joanmarie: just about ready to go through a 
+view of firefox via accerciser.
+(10:27:51) WillieWalker: So...xan can you connect?
+(10:27:53) janm left the room (quit: Read error: 110 (Connection timed 
+out)).
+(10:28:03) ***WillieWalker wonders if he should kill the svn co of 
+webkit trunk.
+(10:28:27) xan: WillieWalker: I'm not in?
+(10:29:09) xan: it seems to connect but I get a static image afaict
+(10:29:15) WillieWalker: xan: are you seeing updates on my machine?
+(10:29:36) xan: I don't think so
+(10:29:38) API: we are supposed to be seing the minefield about?
+(10:29:44) xan: yeah, I see that too
+(10:29:53) xan: and your clocked hasn't moved in half an hour
+(10:29:56) xan: small detail that
+(10:30:00) joanmarie: WillieWalker: I just connected but I am seeing 
+what API and xan are (and your clock says it's 9:56 AM)
+(10:30:42) WillieWalker: Crap.
+(10:30:46) WillieWalker: I can try to restart it.
+(10:30:48) joanmarie: xan NH is like a singularity
+(10:31:02) xan: 17:21 < xan> do you live inside a black hole singularity 
+by any chance?
+(10:31:08) xan: the obvious joke!
+(10:31:08) ***joanmarie lives about 6 miles from WillieWalker it turns out
+(10:31:27) xan: :)
+(10:31:44) joanmarie: xan I laughed :-)
+(10:32:01) xan: ah, you were in the channel, ok
+(10:32:07) xan: I thought we both came up with the same thing ;)
+(10:32:18) WillieWalker: well...the mouse control works fine....
+(10:32:20) joanmarie: xan: Nah, I'm not that smart.
+(10:32:37) xan: WillieWalker: restart the server maybe? shrug
+(10:32:38) WillieWalker: someone try moving their mouse on my display...
+(10:33:03) ferulo [n=fherrera@8.118.222.87.dynamic.jazztel.es] entered 
+the room.
+(10:33:05) WillieWalker: yep - you moved it.  you moved a terminal 
+window around.
+(10:33:05) xan: I'm doing that...
+(10:33:11) xan: ok
+(10:33:25) xan: still can't see anything thought
+(10:33:36) API: i'm doing that too
+(10:33:39) WillieWalker: OK - I'll try to kick it in the p ants.
+(10:33:58) WillieWalker: if you guys would stop moving my mouse, that 
+is...  :-)
+(10:34:03) xan: heh
+(10:35:00) xan: ok, you kicked us out now
+(10:35:02) monreal [n=lithium@87.182.104.166] entered the room.
+(10:35:20) WillieWalker: OK- try to connect again.
+(10:35:27) mjog left the room (quit: Read error: 110 (Connection timed 
+out)).
+(10:35:45) xan: much better now
+(10:35:56) WillieWalker: but -- it's still not updating.
+(10:35:58) WillieWalker: crap.
+(10:36:07) xan: I see the mouse moving
+(10:36:11) xan: type something in the terminal?
+(10:36:27) WillieWalker: I typed ls
+(10:36:35) xan: ok, it does not work
+(10:36:38) API: hmm, I don't see it
+(10:36:51) xan: what was the name of the other client?
+(10:36:54) xan: vnclient?
+(10:37:03) WillieWalker: vncviewer isn't working, either.
+(10:37:11) WillieWalker: It must be the server.
+(10:37:12) xan: ok
+(10:37:22) WillieWalker: OK, well, that sucks.
+(10:37:24) xan: well, I guess no VNC then
+(10:37:34) WillieWalker: So, let's shoot for writing things.  :-(
+(10:37:42) xan: do very vivid descriptions
+(10:37:55) WillieWalker: So, how about we kind of start with a top down 
+view?
+(10:38:16) xan: right
+(10:39:15) WillieWalker: When you look at Firefox in accerciser, you'll 
+end up seeing the document frame buried in there.
+(10:39:34) WillieWalker: The hierarchy is...
+(10:40:00) WillieWalker: Minefield->panel->scroll pane->internal 
+frame->document frame.
+(10:40:04) xan: yep
+(10:40:08) WillieWalker: Cool.
+(10:40:33) WillieWalker: Now, take a look at the Interface viewer tab in 
+accerciser for the document frame.
+(10:40:36) ech0s7 left the room (quit: "Sto andando via").
+(10:40:39) xan: ok, one thing, is it important to have the same names 
+than gecko?
+(10:40:45) xan: 'internal frame' and 'document frame'
+(10:40:50) xan: for, say, Orca
+(10:40:51) WillieWalker: Those are roles.
+(10:40:56) xan: aha
+(10:41:00) WillieWalker: so you should use the standard role names.
+(10:41:04) xan: ok
+(10:41:10) xan: is it written anywhere? or just do as you see
+(10:41:30) ***WillieWalker looks for FF's docs in this space...
+(10:41:57) WillieWalker: 
+https://developer.mozilla.org/En/Accessibility/AT-APIs/AT-SPI_HTML_Examples
+(10:42:08) WillieWalker: 
+https://developer.mozilla.org/En/Accessibility/AT-APIs
+(10:42:15) WillieWalker: 
+https://developer.mozilla.org/en/Accessibility/AT-SPI_Support
+(10:42:32) WillieWalker: Those tend to be OK.  They might be out of date.
+(10:42:47) ech0s7 [n=ech0s7@93.47.149.31] entered the room.
+(10:42:52) xan: ok, looks pretty good, thanks
+(10:43:13) WillieWalker: Oh yeah - in Firefox, you need to press F7 to 
+enable caret browsing.
+(10:43:21) xan: yeah
+(10:43:25) xan: been there
+(10:43:27) WillieWalker: Cool.
+(10:43:34) xan: btw, caret browsing is broken with forms, at least in 3.0.x
+(10:43:37) xan: do you know that?
+(10:43:48) ***xan tries with 3.6
+(10:44:01) joanmarie: xan caret browsing in FF is broken in many places ;-)
+(10:44:02) WillieWalker: xan: In Orca, we need to write a lot of stuff 
+to workaround the Gecok caret navigation code.
+(10:44:16) WillieWalker: If you guys take caret browsing seriously, I 
+will love you.
+(10:44:20) xan: yeah, same thing
+(10:44:28) WillieWalker: So...now
+(10:44:39) WillieWalker: let's take a look at the Interface Viewer tab.
+(10:44:42) xan: joanmarie: yeah, I noticed while working on the webkit 
+version :)
+(10:45:07) WillieWalker: We're back at the document frame.  Let's look 
+at the "text" triangle.  Expand it.
+(10:45:23) WillieWalker: You will see this funky little rectangle with 
+"obj" inside it.
+(10:45:29) xan: yep
+(10:45:40) WillieWalker: That's an embedded object character.
+(10:45:53) xan: cool, what does that mean
+(10:46:14) WillieWalker: What Gecko's a11y implementation does is put an 
+EOC (embedded object character) in place for each child.
+(10:46:52) WillieWalker: This allows it to express text provided by the 
+object along with positional information for where text is provided by 
+the children.
+(10:47:20) xan: mmm, ok, practical example?
+(10:47:22) WillieWalker: So...we should try to pick a URL we can all go 
+to and look at in accerciser/Gecko.
+(10:47:52) WillieWalker: Anyone have suggestions for a simple page?
+(10:48:08) xan: http://www.google.com/intl/en/ ?
+(10:48:25) WillieWalker: OK - sounds good.  Let's go there.
+(10:49:16) WillieWalker: So...look at the document frame.
+(10:49:25) WillieWalker: You'll see 5 EOCs.
+(10:49:33) xan: yes
+(10:49:36) WillieWalker: You'll also see that the document frame has 5 
+children.
+(10:49:48) xan: aha
+(10:49:56) WillieWalker: Each EOC maps to a child.
+(10:50:17) WillieWalker: Take a look at the first child.
+(10:50:35) WillieWalker: It's text says "Web EOC EOC EOC EOC..."
+(10:50:42) xan: yes
+(10:51:00) WillieWalker: So, that object is providing the text "Web " 
+and it's children are providing more.
+(10:51:12) kenneth_ left the room (quit: Read error: 104 (Connection 
+reset by peer)).
+(10:51:39) xan: right, so [OBJ] is just a placeholder for whatever text 
+the child might have. How do applications use this?
+(10:51:45) WillieWalker: So, now you see somewhat how Gecko is 
+presenting text and mapping it back to the objects.
+(10:52:11) WillieWalker: [OBJ] is a Gecko convention for showing where 
+the text is being inserted from a child node.
+(10:52:32) WillieWalker: We call them EOC's.  The [OBJ] is the same thing.
+(10:53:07) WillieWalker: It's a unicode object - u+fffc
+(10:53:17) xan: heh, was about to ask that
+(10:53:21) xan: ok
+(10:53:26) WillieWalker: or maybe fffd.
+(10:53:42) WillieWalker: 
+http://www.fileformat.info/info/unicode/char/fffc/index.htm
+(10:53:43) xan: should be in the docs I guess?
+(10:53:54) xan: ok, thanks
+(10:54:07) ***xan amazed by unicode as usual
+(10:54:30) erikos left the room (quit: "is going to his honeycomb").
+(10:54:39) WillieWalker: So...that's the basic overview of the 
+hierarchy.  Everything is still roles and objects and such, but the text 
+has that EOC trick.
+(10:55:04) WillieWalker: Make sense?
+(10:55:12) xan: so, for screen readers like Orca, I guess the basic 
+stuff is to get the hierarchy and the text right, right?
+(10:55:22) WillieWalker: That's part of the battle.
+(10:55:43) WillieWalker: Then, delivering events is also very important 
+and so it good caret navigation.
+(10:56:01) API: so this means that Orca doesnt require that AtkComponent 
+shows a correct position of the text?
+(10:56:03) xan: and the roles I guess, otherwise the web looks like a 
+giant text blob I suppose
+(10:56:15) API: I mean that currently AtkComponent have some fails about 
+that
+joanmarie jonner
+(10:56:59) ***WillieWalker needs to look at the code.  I know we need 
+good information about text position and such.  Not so sure about the 
+component boundaries.  joanmarie - do you know off the top of your head?
+(10:57:19) joanmarie: WillieWalker: We look at component boundaries
+(10:57:32) joanmarie: WillieWalker: getExtents method
+(10:58:11) ***xan takes notes
+(10:58:15) WillieWalker: yep - we use it a lot /me did a grep for 
+queryComponent in the code.
+(10:58:51) alexga [n=alex@185.Red-88-24-40.staticIP.rima-tde.net] 
+entered the room.
+(10:58:57) API: joanmarie: absolute or relative ?
+(10:59:14) API: (although I still didn't check if both are failing)
+(10:59:15) joanmarie: API absolute *I believe*
+(10:59:34) API: ok, anyway both should work ...
+(10:59:37) WillieWalker: we also use getTextRangeExtents a lot.
+(10:59:45) mhutch [n=mhutchin@opensuse/member/MJHutchinson] entered the 
+room.
+(10:59:51) WillieWalker: most, if not all, the work with extents is 
+absolute.
+(11:00:11) API: yeah, I notice, some crashes appear here with the 
+current code
+(11:00:27) API: ok, thanks
+(11:00:44) xan: ok, more things that we should pay attention to? :)
+(11:00:49) zecke: bbl
+(11:01:14) xan: I guess everything is important to some extent, but 
+remark the basic things so I know what to focus on at first
+(11:01:19) xan: seems to me there's a lot to cover
+(11:03:36) WillieWalker: Well...lots of stuff to watch.  :-)
+(11:03:37) joanmarie: xan, I haven't looked at the WebKit a11y code in a 
+while (yeah, I suck). BUT: 1) Focus and object:state-changed:focused 
+events when moving amongst focusable objects
+(11:04:01) WillieWalker: So...want to take a look at some events in the 
+event viewer?
+(11:04:03) joanmarie: 2) caret-moved events when navigating
+(11:04:50) joanmarie: WillieWalker: I think that would be an excellent 
+idea given what I just suggested ;-)
+(11:05:09) xan: yeah, let's do that
+(11:05:24) WillieWalker: So...go to the "Event Monitor" tab of accerciser.
+(11:05:48) WillieWalker: Make sure your Firefox app is highlighted in 
+the list on the left hand side.
+(11:06:21) WillieWalker: In the event monitor, select the "Selected 
+application" radio button under the "Source" area.
+(11:06:40) WillieWalker: Now, select the "focus" checkbox.
+(11:06:52) xan: aha
+(11:07:07) WillieWalker: And, under the "object" triangle, select 
+"text-caret-moved"
+(11:07:28) WillieWalker: These are two very important events.
+(11:08:07) WillieWalker: Now, having made sure you pressed F7 to enable 
+caret navigation in Firefox, go back to our URL 
+http://www.google.com/intl/en/
+(11:08:33) TofuLinden [n=chatzill@66.165.31.249] entered the room.
+(11:08:37) WillieWalker: Press Ctrl+home
+(11:08:59) mhutch left the room (quit: "Ex-Chat").
+(11:09:11) xan: I think you forgot to say I have to press "Monitor events" ?
+(11:09:14) WillieWalker: Now, press the right arrow key and observe the 
+accerciser event monitor window (if possible)
+(11:09:24) nteon [n=nteon@ool-44c77091.dyn.optonline.net] entered the room.
+(11:09:24) WillieWalker: Oh yeah, it *should* be selected by default.
+(11:09:45) WillieWalker: It's a toggle button that's pressed or not 
+pressed.  If it's dark, it's monitoring.
+(11:09:51) xan: ok, it wasn't here
+(11:09:53) ***xan presses
+(11:10:32) johanbr [n=j@JBrannlund2.MathStat.Dal.Ca] entered the room.
+(11:10:51) xan: yeah, it works, the events appear there
+(11:11:06) WillieWalker: Now...arrow around.  You'll see caret moved 
+events when you navigate.  When things like links get focus, you'll also 
+see focus events.
+(11:11:26) xan: yep
+(11:11:38) WillieWalker: In the caret moved events, you'll get the index 
+of the new caret location in the text for the object.
+(11:12:02) WillieWalker: Now press Tab.  You should see similar things.
+(11:12:31) xan: yes
+(11:12:43) WillieWalker: Now...we can talk about 
+object:state-changed:focused events.
+(11:12:57) WillieWalker: They should be paired with focus events in a way.
+(11:13:11) WillieWalker: The focus events tell us that an object got focus.
+(11:13:39) WillieWalker: The object:state-changed:focused tell us when 
+an object gains or loses focus, depending upon the extra info in the event.
+(11:14:20) xan: ok, should I mark that one then?
+(11:14:25) WillieWalker: the extra info in this case is "detail1"
+(11:14:45) mhutch [n=mhutchin@opensuse/member/MJHutchinson] entered the 
+room.
+(11:14:47) WillieWalker: Sure - mark it.  You can also unselect the 
+caret one just to keep things clearer.
+(11:15:10) xan: detail1? there can be detail2? like 
+object:state-changed:detail1:detail2
+(11:15:11) xan: or?
+(11:15:33) WillieWalker: xan: naw...they are delivered as part of the event.
+(11:15:42) WillieWalker: So, event.detail1 and event.detail2
+(11:15:54) xan: ok
+(11:16:25) WillieWalker: There's event.detail1, event.detail2, and 
+event.any_data for each event.  Depending upon the event, the fields can 
+be relevant or irrelevant.
+(11:17:01) kov [n=kov@debian/developer/kov] entered the room.
+(11:17:37) WillieWalker: So, I think you'll see that Gecko seems to only 
+give us object:state-changed:focused events when an object gets focus 
+and not when it loses focus.
+joanmarie johanbr jonner
+joanmarie johanbr jonner
+(11:17:44) WillieWalker: joanmarie: do you see that as well?
+(11:18:09) joanmarie: WillieWalker: I'm not looking atm but I think we 
+get the object:state-changed:focused for when they give up focus as well
+(11:18:12) ***joanmarie tries
+(11:18:53) ***WillieWalker not seeing it in 3.6a1pre
+(11:18:53) joanmarie: WillieWalker: Ok now I'm not seeing that
+(11:19:06) joanmarie: WillieWalker: I'm seeing what you are. Something 
+must've changed
+(11:19:37) xan: so when it gains focus it's 1,0 and when it loses it's 
+0,1? or what do the numbers mean
+(11:19:54) xan: I think I'm only getting one signal too
+(11:19:56) joanmarie: We *expect* to get the 
+object:state-changed:focused with detail1 == 0 when objects give up 
+focus, BUT I don't think we actively use/check for that in Orca atm
+(11:20:00) WillieWalker: detail1 says the current state -- 1=focus, 
+0=nofocus
+(11:20:23) xan: yeah, not getting any with detail1 0
+(11:21:22) WillieWalker: xan: so, anyhow...you now have some really good 
+skills: 1) you can use accerciser to look at the hierarchy and you know 
+the EOC trick Gecko uses and 2) you can use accerciser to look at 
+events.  That totally rocks.
+(11:21:48) API: so this missing detail 0 is a new bug on Gecko a11y support?
+(11:22:00) WillieWalker: API: one of the bugs.  :-)
+(11:22:05) joanmarie: API yeah I would say so
+(11:22:10) xan: WillieWalker: right :)
+(11:22:14) xan: it's pretty neat
+(11:22:15) ***joanmarie will investigate and file a(nother) bug
+(11:22:44) WillieWalker: So...now....this is just the surface, but we 
+should talk about ideas and plans.  You OK with doing that now?
+(11:23:02) xan: maybe you could quickly show how to use Orca?
+(11:23:12) WillieWalker: Sure!
+(11:23:14) API: yeah, this is agood idea, I take
+(11:23:15) API: a look
+joanmarie johanbr jonner
+(11:23:22) API: and Im not sure how to use that
+(11:23:26) xan: same here :]
+(11:23:30) API: I tried the braille monitor
+(11:23:32) WillieWalker: joanmarie: can you give a quick rundown of Orca 
+and FF?
+(11:23:37) API: this is what we should use?
+(11:23:45) joanmarie: sure
+(11:23:53) zdobersek left the room (quit: "Leaving.").
+(11:24:24) joanmarie: WillieWalker: starting from where?
+(11:24:48) zecke left the room (quit: Read error: 110 (Connection timed 
+out)).
+(11:25:08) xan: I have never used Orca in my life, so I guess "from the 
+beginning"? :)
+joanmarie johanbr jonner
+(11:25:19) WillieWalker: :-)
+(11:26:20) API: for, example, what are the tools more usefuls from the 
+developer POV
+(11:26:41) thunderbyte left the room (quit: Read error: 113 (No route to 
+host)).
+(11:26:42) API: can we forget about the spech, for example?
+(11:26:47) zdobersek [n=zan@cpe-92-37-73-187.dynamic.amis.net] entered 
+the room.
+(11:26:49) joanmarie: i.e. what do API and xan know about Orca already? :-)
+(11:26:49) ***joanmarie wonders if she is still connected
+(11:26:54) xan: well, I basically want to know how to use Orca a bit, so 
+I can know what is supposed to work and what not while I implement the 
+support in webkit
+joanmarie johanbr jonner
+(11:27:07) WillieWalker: joanmarie: aha - OK.  From the beginning as xan 
+said.  :-)
+(11:27:07) API: I have just installed it
+(11:27:16) API: and tried the braille monitor in order
+(11:27:17) xan: not much, I think it's meant to read stuff from the 
+screen, but that's about it
+(11:27:19) API: to see any information
+(11:27:34) API: what information should we see using that?
+(11:27:38) API: it is enough ?
+(11:28:07) joanmarie: xan I gather you have Orca? :-)
+(11:28:20) xan: I do
+(11:28:28) joanmarie: oops uber lag
+(11:28:31) ***joanmarie catches up
+(11:29:02) joanmarie: Okay... caught up :-)
+(11:29:29) joanmarie: I think you'll find the speech handy for quickly 
+figuring out what is working and isn't. For instance....
+(11:29:51) joanmarie: If you are emitting the correct focus and 
+state-changed:focused events, as you press tab, Orca should announce 
+where you've landed
+(11:30:08) joanmarie: similarly, if you are emitting the correct 
+caret-moved events, Orca should announce the new location as you arrow
+(11:30:21) joanmarie: if Orca isn't, it might be an Orca bug; or it 
+might be you :-)
+(11:30:23) xan: ok, so, I launch the application without parameters, I 
+get a small window
+(11:30:29) xan: should it work already?
+(11:30:30) joanmarie: yup
+(11:30:33) xan: I'm not getting anything
+(11:30:34) joanmarie: is it talking?
+(11:30:40) xan: nope
+(11:30:51) joanmarie: press the preferences button
+(11:31:08) xan: right
+(11:31:20) joanmarie: xan I assume you enabled assistive technologies 
+for your session?
+(11:31:50) xan: not for the whole session, I'm launching the apps with 
+GTK_MODULES=gail:atk-bridge
+(11:31:53) xan: not enough?
+(11:32:04) xan: at least it works for firefox and accerciser
+(11:32:10) xan: and epiphany/webkit
+(11:32:29) ***joanmarie thinks she is lagging again
+(11:32:39) ***xan pushes the bits harder
+(11:33:27) Joanmarie1 [n=jd@c-24-61-92-135.hsd1.nh.comcast.net] entered 
+the room.
+(11:33:37) Joanmarie1: switched boxes
+(11:34:07) xan: what was the last thing you read?
+(11:34:15) Joanmarie1: xan that you were getting nothing
+(11:34:43) xan: 18:32 < joanmarie> xan I assume you enabled assistive 
+technologies for your session?
+(11:34:47) xan: 18:32 < xan> not for the whole session, I'm launching 
+the apps with GTK_MODULES=gail:atk-bridge
+(11:34:50) xan: 18:33 < xan> not enough?
+(11:34:52) xan: 18:33 < xan> at least it works for firefox and accerciser
+(11:34:55) xan: 18:33 < xan> and epiphany/webkit
+(11:34:56) xan: mmm, wait, it says it can't find the canberra module, it 
+must be that
+(11:34:56) Joanmarie1: heh stupid lag
+(11:35:16) xan: you use canberra for sound right?
+(11:35:18) Joanmarie1: if you don't have at enabled for your whole 
+session, Orca will not be happy (or speak)
+(11:35:28) Joanmarie1: I didn't think so :-)
+(11:35:35) xan: hm, ok
+(11:35:57) Joanmarie1: xan but I've never tried Orca without ats enabled
+(11:36:03) xan: mmm, actually the dialog says it's enabled
+(11:36:16) Joanmarie1: if you switch to Firefox and tab amongst the 
+links etc, does orca speak?
+(11:36:16) xan: Enable assistive technologies is checked :)
+(11:36:43) xan: not really, no
+(11:36:45) xan: API: do you anything?
+(11:36:46) Joanmarie1: :-(
+(11:37:09) Joanmarie1: xan if you press the preferences button and then 
+go to the speech page, do you have synthesizers listed?
+(11:37:29) xan: one, Festival
+(11:37:40) API: im able to listen something, but anyway
+(11:37:43) Joanmarie1: and Festival is installed on your machine right?
+(11:37:49) Joanmarie1: API so you have speech?
+(11:37:50) API: I was not able to do that inside the jhbuild session
+(11:38:03) API: on my own desktop
+(11:38:18) API: I least, I listen something talking very fast
+(11:38:36) xan: yeah, it is
+(11:39:28) API: ups
+(11:39:30) API: infapi00@remigio:~$ orca
+(11:39:30) API: TIMEOUT: something has hung.  Aborting.
+(11:39:50) API: it start to talk but then it hangs
+(11:40:01) API: I tried the command line to see what happened
+(11:41:37) ***Joanmarie1 looks for link on Orca wiki for docs
+(11:41:37) Joanmarie1: API if you press the preferences button and go to 
+the speech page, you can slow it down
+(11:41:37) Joanmarie1: and even if it's not working, I can still give 
+you a crash course
+(11:41:38) Joanmarie1: basically, what we'd hope to have occur are the 
+following:
+(11:41:40) Joanmarie1: 1) As you tab amongst objects in webkit, Orca 
+speaks their name and role
+(11:41:44) Joanmarie1: 2) As you arrow around in text in webkit, Orca 
+speaks the new location. Thus, if you press left/right we should speak 
+the new character; up/down, the new line
+(11:41:49) Joanmarie1: 3) If you change the state of an object (e.g. 
+press the space bar to toggle the state of a checkbox), Orca should 
+speak the new state
+(11:41:56) Joanmarie1: what I do to test is close my eyes and try to 
+navigate on a familiar page. If I can't figure out where I am, it's a 
+problem .... somewhere :-)
+(11:42:01) Joanmarie1: bleh
+(11:42:05) API: hmm, I'm not able to go to the preferences button, it 
+hangs before
+(11:42:31) ***Joanmarie1 thinks
+(11:42:46) xan: ok, if it should just work that's what I wanted to know
+(11:42:53) xan: I'll try to figure out what's going on here :)
+(11:42:58) Joanmarie1: xan it should -- if you ahve AT's enabled
+(11:43:09) Joanmarie1: xan maybe you enabled them but didn't log out?
+(11:43:23) API: joanmarie1, and on jhbuild, how do you do?
+(11:43:34) xan: it was enabled when I checked, but I can try
+(11:43:39) Joanmarie1: API I'm not familiar with jhbuild I'm afraid
+(11:43:40) xan: I'm getting lots of these btw: http://pastebin.com/m7c05c2b7
+(11:43:46) xan: let me try to re-login, brb
+(11:43:49) xan left the room (quit: "leaving").
+(11:44:03) API: ah ok, I thought that you develop orca inside a jhbuild 
+shell
+(11:44:21) Joanmarie1: pyatspi errors :-(
+(11:44:29) WillieWalker: Which OS are you guys using?
+(11:44:31) Joanmarie1: oh that mouse review stuff might be  aproblem
+(11:45:34) Joanmarie1: API in your ~/.orca/user-settings.py, what do you 
+have for orca.settings.enableMouseReview
+(11:45:36) API: Im using a ubuntu 8.10
+(11:45:46) Joanmarie1: I'd set it to False
+(11:45:56) Joanmarie1: (you can do that via prefs, but not if you're 
+hanging)
+(11:46:10) xan [n=xan@cs78225040.pp.htv.fi] entered the room.
+(11:47:00) xan: still nothing I'm afraid
+(11:47:04) API: trying...
+(11:47:05) Joanmarie1: btw: http://live.gnome.org/Orca/DownloadInstall
+(11:47:07) WillieWalker: 8.10 should be OK.  Jaunty might be better.
+(11:47:15) WillieWalker: xan: does test-speech work for you?
+(11:47:46) ***WillieWalker also suggests rm -rf ~/.orca and just 
+rerunning the Orca setup again.
+(11:48:12) WillieWalker: In addition, what other apps are you running on 
+the desktop?  Emacs is known to cause bad hangs.
+(11:48:31) xan: WillieWalker: trying
+(11:48:45) xan: WillieWalker: which test should I try?
+(11:49:12) API: yes, I know that problem with Emacs ... I will try to 
+close it
+(11:49:13) ferulo: xan: try test-speech
+(11:49:16) ferulo: from gnome-speech
+(11:49:16) WillieWalker: xan run "test-speech" and just see if you can 
+get anything to speak.
+(11:49:25) xan: yeah, I mean once I'm inside
+(11:49:36) xan: there's Parameter test, callback test...
+(11:49:40) xan: none seem to get any sound for me
+(11:49:55) API: wow, the problem was the emacs ...
+(11:49:59) WillieWalker: xan: that blows.  It should be speaking once 
+you get to those tests.
+(11:50:05) Joanmarie1: heh API
+(11:50:27) Joanmarie1: API I forgot about that. I use emacs-x rather 
+than emacs-gtk
+(11:50:39) ***WillieWalker remembers the horrors of Ubuntu and audio.
+(11:50:44) xan: ok, then festival is borken
+(11:50:49) xan: I'm using fedora 10 actually
+(11:51:03) WillieWalker: Aha...don't know much about Fedora.
+(11:51:11) ferulo: xan: yum install gnome-speech-espeak
+(11:51:21) ferulo: try using that backend
+(11:51:43) xan: ok, trying
+(11:53:09) xan: nope :(
+(11:53:21) WillieWalker: xan: does any audio work?
+(11:53:25) xan: heh, sure
+(11:53:38) ferulo: do you get any error while runing test-speech?
+(11:53:38) xan: if I run it with pasuspender it fails to start, hmmm
+(11:53:43) xan: no, no errors
+(11:53:52) WillieWalker: xan: how about the command: espeak "hello"
+(11:54:29) xan: a bunch of errors about pulseaudio
+(11:54:43) ferulo: ;)
+(11:54:47) WillieWalker: Ahh...you have that virus installed on your 
+machine.  Sorry to hear that.
+(11:54:51) WillieWalker: ;-)
+(11:55:10) WillieWalker: OK - we can try something different.
+(11:55:17) WillieWalker: Open an xterm.
+(11:55:28) xan: mmm, what, I can't see the process
+(11:55:34) xan: ferulo: what's the process name for the pulseaudio daemon?
+(11:55:37) ferulo: xan: you are running pulseaudio from a jhbuild 
+install instead of Fedora10 system one?
+(11:55:44) xan: maybe the problem is that it's not actually running or 
+something
+(11:55:48) ferulo: pulseaudio
+(11:55:48) xan: I'm using the fedora 10 one
+(11:55:54) ferulo: it should be started by demand
+(11:56:04) ferulo: so you have the system daemon but the jhbuild libraries?
+(11:56:22) ferulo: try running espeak "hello" out ot the jhbuild session
+(11:56:24) xan: whoooooooah
+(11:56:29) xan: ok, works now
+(11:56:37) xan: my .pulse directory had wrong permissions
+(11:56:39) Joanmarie1: woohoo
+(11:56:39) xan: WEIRD!
+(11:56:54) ***WillieWalker yeah!
+(11:56:58) xan: I'm getting EVERYTHING now
+(11:57:02) ferulo: haha
+(11:57:04) ***xan kills the voice
+(11:57:23) Joanmarie1: so it's all good?
+(11:57:45) xan: yeah
+(11:57:47) xan: can't make the voice stop
+(11:57:51) xan: but it's good
+(11:57:52) Joanmarie1: hit control
+(11:57:56) API: ok, now Im see a lot of things
+(11:58:02) API: and on the braille reader too
+(11:58:05) Joanmarie1: things?
+(11:58:12) API: the name and role properly
+(11:58:16) Joanmarie1: yup!
+(11:58:22) API: currently with webkit is shows less information
+(11:58:26) API: (using the current patch)
+(11:58:27) Joanmarie1: :-)
+(11:59:24) Joanmarie1: I'll try to build webkit (and get the patch) 
+tonight and get some feedback back to you. Been swamped lately
+(11:59:38) xan left the room (quit: Read error: 104 (Connection reset by 
+peer)).
+joanmarie Joanmarie1 johanbr jonner
+joanmarie Joanmarie1
+(11:59:48) Joanmarie1: anyhoo, to test, like I said, just arrow and tab 
+around and see what Orca says/displays on the braille monitor
+(11:59:54) Joanmarie1: oops we lost xan
+(12:00:14) Joanmarie1: in the meantime.... something I find helpful for 
+debugging:
+(12:00:23) API: well, xan has been spliting the first uber patch
+(12:00:36) API: now there are several little patches
+(12:00:39) Joanmarie1: orca preferences are stored in 
+~/.orca/user-settings.py
+(12:01:09) Joanmarie1: in addition, you can make more permanent settings 
+changes by creating a ~/.orca/orca-customizations.py
+(12:01:26) Joanmarie1: My orca-customizations.py: 
+http://pastebin.com/m34ecb42e
+(12:01:32) xan [n=xan@cs78225040.pp.htv.fi] entered the room.
+(12:01:34) WillieWalker: http://live.gnome.org/Orca/Debugging
+(12:01:39) xan: holy crap
+(12:01:44) xan: it actually killed my session
+(12:01:49) xan: this is Skynet
+(12:02:27) ferulo: pulseaudio _is_ Skynet
+(12:02:31) Joanmarie1: xan: My ~/.orca/orca-customizations.py: 
+http://pastebin.com/m34ecb42e
+(12:02:48) Joanmarie1: what that does is cause tons and tons of debuggin 
+info to be dumped to a file
+(12:02:56) xan: this is insanely cool
+(12:03:03) Joanmarie1: http://pastebin.com/m1f81c1f1 is an example of 
+one event
+(12:03:11) Joanmarie1: at the top you see I pressed tab
+(12:03:31) Joanmarie1: then there's a bunch about what Orca is doing 
+(braille generators)
+(12:03:44) xan: it even does small pauses for commas :)
+(12:03:46) Joanmarie1: what orca displays (BRAILLE LINE and VISIBLE)
+(12:03:53) Joanmarie1: xan that's your synth
+(12:03:57) xan: yeah
+(12:04:02) Joanmarie1: and at the bottom, what orca speaks
+(12:04:37) Joanmarie1: So.... If you've enabled that debug output, you 
+can tab around in webkit and if things are not spoken, look in the 
+debug.out. See if a) the events are there and b) what Orca did or didn't do
+(12:04:51) Joanmarie1: if you see the right events and Orca ignored 
+them, it's an Orca bug :-)
+(12:05:06) Joanmarie1: if you see the keypresses, but not the events 
+it's a webkit bug :-)
+(12:05:22) API: ok, so it seems that is a really good idea to get orca 
+working inside the jhbuild session
+(12:05:40) Joanmarie1: api Yeah, I think so.
+(12:05:53) aroben_ [n=aroben@unaffiliated/aroben] entered the room.
+(12:06:16) Joanmarie1: the reality is that even if you guys do *perfect* 
+a11y support, we will still need to do things on our end to make access 
+for blind users compelling and efficient
+(12:06:25) aroben_ is now known as aroben
+(12:06:48) Joanmarie1: and if y'all are testing webkit with Orca, you 
+can help us find the Orca bugs we need to fix so that we work well with 
+webkit :-)
+(12:07:16) xan: I guess at first we should aim to work more or less the 
+same than firefox
+(12:07:27) xan: do you have many workarounds to support it?
+(12:07:37) Joanmarie1: xan you mean in Orca for FF?
+(12:07:41) xan: yes
+(12:07:41) Joanmarie1: if so, heck ya
+(12:07:46) Joanmarie1: tons and tons of code
+(12:07:54) xan: hm hm
+(12:07:57) Joanmarie1: much of which is work arounds for broken navigation
+(12:08:02) Joanmarie1: :-)
+(12:08:11) xan: ok, so if we get things right it should work without that?
+(12:08:19) Joanmarie1: the basics should
+(12:08:22) xan: do you actually check if it's firefox that's running?
+(12:08:23) Joanmarie1: i.e. tabbing and arrowing
+(12:08:30) xan: ie, will we get the workarounds
+(12:08:40) Joanmarie1: we look at the toolkit and app
+(12:08:46) Joanmarie1: so you're safe :-)
+(12:08:49) xan: ok, so we won't
+(12:08:57) WillieWalker: xan: which you probably don't want.  :-)
+(12:09:00) Joanmarie1: the work arounds are not necessarily things you want
+(12:09:10) Joanmarie1: because they're work arounds for gecko oddities
+(12:09:23) xan: well, no idea, maybe webkit will have similar issues
+(12:09:25) xan: I really don't know
+(12:09:32) Joanmarie1: xan but I will build webkit, get the patches, try 
+to keep up to date and start writing support in Orca
+(12:09:44) WillieWalker: xan: it'll probably have different issues.  :-)
+joanmarie Joanmarie1 johanbr jonner
+joanmarie Joanmarie1
+(12:10:00) agust left the room (quit: "Ex-Chat").
+(12:10:01) WillieWalker: So, Joanmarie1 is now getting near something 
+I'd like to talk about.
+(12:10:07) Joanmarie1: WillieWalker: we should probably open a metabug 
+in GNOME's bugzilla
+(12:10:22) Joanmarie1: (place for us to post patches for the webkit guys)
+(12:10:24) WillieWalker: I'd like to talk about how we can move forward.
+joanmarie Joanmarie1 johanbr jonner
+joanmarie Joanmarie1
+(12:10:33) WillieWalker: Joanmarie1: sure thing.
+(12:10:43) xan: Joanmarie1: it's probably best to use bugs.webkit.org if 
+they are WebKit issues
+(12:10:52) reinouts left the room (quit: Remote closed the connection).
+(12:10:55) Joanmarie1: xan, no I mean orca bugs/support
+(12:11:02) xan: oh, ok, sure
+(12:11:04) Joanmarie1: xan as we create "work arounds"/enhancements
+(12:11:04) ***WillieWalker opening bug...
+(12:12:34) ignacius left the room (quit: "Ex-Chat").
+(12:13:00) joanmarie left the room.
+(12:13:25) WillieWalker: http://bugzilla.gnome.org/show_bug.cgi?id=578509
+(12:13:30) kov left the room (quit: "Ex-Chat").
+(12:13:46) WillieWalker: OK - so, I think we're past the intro stage and 
+we can talk about next steps.  What do you guys think?
+(12:14:14) xan: yes
+(12:14:29) WillieWalker: Excellent.  So, my hopes are these:
+(12:14:44) kov [n=kov@debian/developer/kov] entered the room.
+(12:14:59) ***kov trying to catch up a bit =)
+(12:15:03) WillieWalker: 1) You guys have some good knowledge now to 
+test/experiment.  We can answer questions and help you learn more as 
+needed, but I'm hoping you can run with this.
+(12:15:47) WillieWalker: 2) It would be great to use the Gecko output 
+(i.e., how Gecko exposes itself to assistive technologies) as a model to 
+reduce a lot of the work assistive technologies like Orca have to do.
+(12:16:22) WillieWalker: 3) There's two sides of the a11y story for the 
+web -- 1) exposing things via ATK and 2) support for ARIA.
+(12:16:57) WillieWalker: So...how equipped are you guys to running with 
+the ATK implementation as well as supporting ARIA?
+(12:17:19) xan: I don't really know much about ARIA
+(12:17:40) xan: but from the looks of it my plate is going to be full 
+with ATK in this cycle at least (until 2.28)
+(12:18:35) xan: about 2), it sounds very reasonable, I'll try to do that 
+as long as it's a sane approach. If I need to do some huge 
+hack/modification to mimic gecko maybe we can talk about it (this is all 
+speculative, maybe I won't need to do that)
+(12:18:44) WillieWalker: xan: so...that means you're signed up to do the 
+ATK implementation for WebKit?
+(12:19:09) xan: yes, I'm going to have this as my primary focus until 
+it's good enough for us to get into GNOME at least
+(12:19:13) xan: :)
+(12:19:21) WillieWalker: xan: way cool!  You guys rock.
+(12:19:40) WillieWalker: xan: who is your employer?
+(12:19:46) xan: Igalia
+alexga alp API aroben
+alexga alp
+(12:19:56) WillieWalker: same as alp?
+(12:20:04) xan: no, Alp has his own company
+(12:20:07) xan: Nuanti
+(12:20:21) WillieWalker: Right.  OK.  Where is Igalia?  Extramadura?
+(12:20:30) ***WillieWalker apologies for misspelling.
+(12:20:34) xan: Galicia, northwest, up from Portugal
+(12:20:36) API: is in Spain, but in Galicia
+(12:20:47) xan: http://en.wikipedia.org/wiki/Galicia_(Spain)
+(12:20:51) xan: I live in Finland anyway :p
+(12:20:55) WillieWalker: Up where land is valued by how much corn it can 
+produce?
+(12:20:59) xan: (but I happen to be from Galicia too)
+(12:21:25) WillieWalker: Is ONCE funding this in any way?
+(12:21:38) xan: not that I know :)
+(12:22:27) ***xan note to self, hit ONCE for money
+(12:22:44) WillieWalker: OK.  So...we have you on the hook for ATK.  How 
+about API?
+(12:23:14) API: well, xan can focus on that
+(12:23:18) API: but as I said before
+(12:23:25) ech0s7 left the room (quit: "Sto andando via").
+(12:23:29) API: I only have time for some random helps here and there
+(12:23:47) xan: yeah, he's busy with other projects unfortunately, but 
+he's helping me when I bother him
+(12:24:10) API: anyway, xan is the one with experience in browsers
+(12:24:20) WillieWalker: OK.  So...it sounds like you'll focus hard on 
+ATK in general and then ARIA later.
+(12:24:27) API: I only have experience in hail and some little in gail
+(12:24:49) xan: WillieWalker: do you have any IRC channel I can join?
+(12:24:54) WillieWalker: Now...can you describe the expectations you 
+have of the Orca team?
+(12:25:20) WillieWalker: xan: I try to hang out on #a11y and #orca on 
+irc.gnome.org, but I end up getting pounced on all day.
+(12:25:32) WillieWalker: xan: so, I sometimes hide and just deal with 
+things via e-mail.
+(12:25:58) xan: ok, is Joanmarie1 there usually?
+(12:26:11) WillieWalker: heh - she hides, too.
+(12:26:18) xan: mmm, ok
+(12:26:20) Joanmarie1: I have a day job I'm afraid. But I'm usually 
+online as joanie and/or joanmarie
+(12:26:32) Joanmarie1: I'm also on aim 24/7 (jdfromnh)
+(12:27:04) xan: well, I "expect" to get some help from you in general, 
+today's session was awesome, really useful
+(12:27:24) WillieWalker: xan: cool.  We can definitely help.
+(12:27:24) xan: and also to tell me if I'm doing something stupid, which 
+I probably will
+(12:27:42) WillieWalker: OK - so that means you'd like us to remain 
+current with the WebKit trunk, right?
+(12:27:46) xan: and what do you consider a priority, as I don't really know
+(12:27:55) xan: yeah, as far as you can
+(12:28:14) Joanmarie1: xan if you add yourself to the CC list of the 
+meta bug WillieWalker filed in GNOME, any changes I make to Orca for 
+better webkit support will be added to that bug
+(12:28:16) WillieWalker: OK.  For priority, I think getting the ATK 
+implementation working and good caret navigation working would be awesom.
+(12:28:30) WillieWalker: xan - I can add you now.
+(12:28:48) xan: ok. I continued alp's patch, IHMO it's about as 
+functional as what gecko has now.
+(12:29:04) WillieWalker: xan - you're added.
+(12:29:06) xan: but I need some help from Apple guys to fix interaction 
+with forms, it needs some changes in the core code I think
+(12:29:13) xan: I'll try to continue that too
+(12:29:16) xan: WillieWalker: thanks
+(12:29:20) WillieWalker: Oops. You're not.  You need to make a GNOME 
+bugzilla account.
+(12:29:35) xan: if you give me the number I can CC myself
+(12:29:44) WillieWalker: http://bugzilla.gnome.org/show_bug.cgi?id=578509
+(12:30:25) xan: also, I heard orca is not happy with emacs?
+(12:30:28) xan: we need to fix that ;)
+(12:30:34) API: well, afaik
+(12:30:38) API: all the a11y support
+(12:30:40) Joanmarie1: xan if you use emacs-x it's ok
+(12:30:44) xan: ok, added
+(12:30:53) xan: Joanmarie1: I use emacs-gtk
+(12:30:54) Joanmarie1: it's only the "accessible" emacs that's 
+problematic ;-)
+(12:30:59) API: http://bugzilla.gnome.org/show_bug.cgi?id=392889
+(12:31:02) Joanmarie1: yup, that's the bad one :-)
+(12:31:03) kov: with accessibility enabled, emacs usually makes my X 
+hang when I alt-tab
+(12:31:14) xan: eek
+(12:31:16) kov: then I need to switch to a console, and back to have my 
+X back
+(12:31:17) API: kov, is just the bug I paste ;)
+(12:31:19) Joanmarie1: emacs-x seems just as functional as the gtk one
+(12:31:22) WillieWalker: sometimes you can get out of the hang by 
+pressing the Caps Lock key on and off.
+(12:31:24) kov: API: =)
+(12:31:39) xan: crap, we need to fix this
+(12:32:20) WillieWalker: xan: if you guys fix that, it would be AWESOME. 
+  I wrestle wth it all the time.
+(12:32:53) xan: I hope it doesn't require hacking on Emacs, if I need to 
+sign the FSF papers for copyright assignment it will take ages :)
+(12:33:02) Joanmarie1: heh
+(12:33:11) WillieWalker: The bug seems to blame metacity.
+(12:33:18) xan: ok, I'm using emacs-gtk with a11y enabled and nothing 
+has hanged so far
+(12:33:43) API: xan, I think that this happens
+(12:33:45) xan: mmm, ok, anything else?
+(12:33:46) WillieWalker: xan: API: any of you going to GUADEC?
+(12:33:53) API: when emacs is on the at-spi-registry
+(12:33:56) ech0s7 [n=ech0s7@93-47-149-31.ip113.fastwebnet.it] entered 
+the room.
+(12:33:57) xan: yeah, I will
+(12:33:59) API: as you are runnig all by hand
+(12:34:05) kov: that may go away with the dbus port? hehe
+(12:34:05) API: probably you have no problem
+(12:34:11) xan: hm, ok
+(12:34:21) API: williewalker: probably yes
+(12:34:25) WillieWalker: Would there be value in doing an a11y BOF to 
+discuss things such as WebKit a11y and Bonobo/CORBA deprecation?
+(12:34:40) WillieWalker: I'd like to do it, but my fear is that it is 
+too late in the 2.28 cycle by then.
+(12:35:00) xan: well, WebKit a11y has to happen for 2.28, otherwise we 
+won't be there
+(12:35:01) WillieWalker: But, then again, it is good planning for GNOME 
+3.0, which is where Bonobo/CORBA disappear.
+(12:35:07) xan: no idea about Bonobo/CORBA
+(12:35:23) diegoe [n=diego@190.232.44.187] entered the room.
+(12:35:27) WillieWalker: The Bonobo/CORBA deprecation is part of the 
+inspiration for AT-SPI/D-Bus.
+(12:35:42) diegoe left the room (quit: Read error: 104 (Connection reset 
+by peer)).
+(12:35:49) diegoe [n=diego@190.232.44.187] entered the room.
+(12:36:11) xan: but we can sure meet to chat about WebKit a11y
+(12:36:14) xan: formally or informally
+(12:36:31) WillieWalker: OK.  I'm not sure if I'm going yet.  My travel 
+budget is on fumes at the moment.
+(12:37:10) WillieWalker: Plus, the Canary Islands seems to be one of the 
+hardest places to get to from the US.
+(12:37:30) API: well, the bonobo/corba deprecation shouldn't affect the 
+webkit a11y support
+(12:37:33) API: afaik, the new
+(12:37:35) xan: well, it's just one more jump than going to Spain
+(12:37:37) API: at-spi/dbus
+(12:37:48) API: will only require changes on the at apps
+(12:37:50) xan: so you'll have to switch planes once I guess
+(12:37:55) API: or im wrong?
+(12:38:03) WillieWalker: API: you're about right.
+(12:38:32) WillieWalker: API: I've set up a meeting with Sun, Novell, 
+and Codethink to meet at the Sun offices in Ireland the week of Apr 20th.
+(12:39:00) WillieWalker: My goal for that is to figure out where 
+AT-SPI/D-Bus stands and then figure out how to complete the work for 
+GNOME 3.0.
+(12:39:47) WillieWalker: Should hopefully be *very* productive.  Li Yuan 
+(the AT-SPI maintainer) is coming in from Beijing, which will be 
+awesome.  He's a good dude.
+(12:39:59) API: well, the last new I have is the mail that mark doffman 
+sent to the desktop-devel list
+(12:40:05) API: as far as i remember
+(12:40:05) ***diegoe enjoying lag
+(12:40:16) API: he said that at apps will require to be modified
+(12:40:41) WillieWalker: Maybe, maybe not.  The current implementation 
+kind of just drops in place for accerciser.
+(12:40:53) WillieWalker: But...
+(12:40:59) WillieWalker: C-based AT's will have issues right now.
+(12:41:22) WillieWalker: That is, libcspi has not been ported yet and 
+there are no plans to do so right now.
+(12:41:51) WillieWalker: We're thinking either just porting the C-based 
+AT's directly to D-Bus or just porting a subset of libcspi based upon 
+what the current C-based AT's use.
+(12:42:36) WillieWalker: I think GOK is the only C-based AT that 
+actually uses libcspi extensively.  The rest only seem to make a handful 
+of libcspi references.
+(12:43:05) xan: ok, so from the webkit side the switch shoudn't have any 
+influence right?
+(12:43:12) xan: I hope I won't get sucked into the rewrite vortex :)
+(12:43:13) API: aha, but focusing on webkit, I suppose that this doesn't 
+affect
+(12:43:20) WillieWalker: As long as you talk to ATK, you should be OK.
+(12:43:25) xan: ok, great
+(12:43:26) API: as far as the brigde is reimplemented
+(12:43:43) API: I mean, that it is the bridge who should manage all that 
+thinks
+(12:43:46) API: I guess
+(12:44:15) diegoe_ [n=diego@190.232.249.2] entered the room.
+(12:44:24) WillieWalker: API: you are correct.  There's also Java that 
+needs to be addressed (it has it's own CORBA-based bridge for a11y).
+(12:44:24) diegoe left the room (quit: Read error: 104 (Connection reset 
+by peer)).
+(12:44:45) WillieWalker: We're looking to do a Java/JNI layer that talks 
+to ATK.
+(12:44:55) kov left the room (quit: Remote closed the connection).
+(12:45:25) WillieWalker: In any case, WebKit a11y will be pretty cool. 
+It will be the "new" thing that happens while the rest of the GNOME 
+world is trashing in the rewrite of the entire a11y infrastructure.
+(12:45:25) kov [n=kov@debian/developer/kov] entered the room.
+(12:46:31) xan: heh, yes, it's definitely going to be 'new' ('new' = 
+buggy ;))
+(12:46:48) WillieWalker: OK - so, if we hang on just a little longer, 
+Eitan might join us.
+(12:47:10) WillieWalker: Eitan is the author of accerciser, and also the 
+author of speclenium which is a tool we haven't talked about yet.  :-)
+(12:47:20) WillieWalker: http://monotonous.org/specular/
+(12:47:27) xan: I think I have used speclenium once
+(12:47:30) xan: to do web testing?
+(12:47:34) WillieWalker: xan: yep!
+(12:47:39) xan: yeah
+(12:48:03) xan: cool, so when we are done with this it will also work 
+with webkit?
+(12:48:07) xan: potentially at least
+(12:48:13) xan: it had a firefox extension IIRC
+(12:48:18) WillieWalker: xan: the API delta tool should be of interest 
+for your first pass at the work.
+(12:48:48) diegoe_: kov: janm said he was working on error reporting
+(12:48:58) kov: diegoe_: awesome =)
+(12:49:27) xan: WillieWalker: I see
+(12:49:29) diegoe_: i guess that leaves me spelling only for now
+(12:49:38) xan: WillieWalker: sounds useful indeed
+(12:49:47) kov: diegoe_: well, then finish that up =)
+(12:49:53) kov: diegoe_: let's have it for 1.1.6 =P
+(12:50:02) xan: .6? .5!
+(12:50:07) xan: diegoe_: you have four days
+(12:50:19) WillieWalker: xan: yep - I think it can give you a thorough 
+analysis of a FF vs. WebKit hierarchy.  I think.
+(12:50:26) xan: WillieWalker: right
+(12:51:53) Cwiiis left the room (quit: "Ex-Chat").
+(12:55:27) xan: WillieWalker: random question: what is AtkStateSet used 
+for in a11y apps?
+(12:55:52) WillieWalker: We use it to see if things have focus, are 
+expanded, checked, etc.
+(12:56:18) WillieWalker: xan: so, it let's us know, for example, if a 
+check box is checked.
+(12:56:52) WillieWalker: xan: it also lets us know if things are painted 
+on the screen (i.e., state "showing").
+(12:56:57) xan: so I guess only a subset of them has any relevance in 
+Orca for example
+(12:57:00) xan: not all states
+(12:57:10) ***WillieWalker looks...
+(12:57:44) WillieWalker: 
+http://svn.gnome.org/svn/at-spi/trunk/idl/Accessibility_State.idl
+(12:58:15) WillieWalker: Orca uses many of them, but not all.
+(12:58:39) xan: ok, was just wondering, because there are some that it 
+seems it's not entirely obvious how to implement in webkit
+(12:58:46) xan: I'll check Orca to see which ones it needs then
+(12:59:01) WillieWalker: You also need to be careful because GOK needs 
+some, too.
+(12:59:19) xan: right, I guess eventually you want them all
+(12:59:47) WillieWalker: xan: when in doubt, chase the lizard.
+(13:00:04) WillieWalker: translation: try to use the same states as Gecko.
+(13:00:24) xan: right :)
+(13:04:13) janm [n=jmalonzo@ppp121-44-33-74.lns10.syd7.internode.on.net] 
+entered the room.
+(13:06:22) diegoe_: kov: would you repeat to me what was the problem 
+with the spell checking and words? I don't have interwebs now
+(13:07:39) kov: diegoe_: you mean the expectations of that function?
+(13:08:17) kov: diegoe_: if you give it " apple kov tree" it has to 
+return start = 7, length = 3
+(13:10:51) diegoe_: you are a misspelling i can see
+(13:14:27) xan: WillieWalker: we can probably wrap it up now? or is 
+there something else you want to talk about
+(13:15:32) ***WillieWalker phone call...
+(13:15:51) ***WillieWalker let's hang until half past the hour to see if 
+eitan shows up
+(13:16:15) xan: ok
+(13:16:25) ***diegoe_ webless
+(13:16:31) diegoe_: how i hate the guys downstairs for this
+(13:17:38) xan: mmm
+(13:17:45) xan: you steal their connection?
+(13:17:48) xan: or the other way around
+(13:18:48) diegoe_: we are renting the first floor, and dad shared them 
+connection w/o asking me
+(13:19:02) diegoe_: so it was sort of ok since they were using it rarely
+(13:19:11) diegoe_: later they started to use file sharing, and left it 
+online all day
+(13:19:28) xan: cap their bandwidth?
+(13:19:28) diegoe_: needless to say that killed my usage
+(13:19:38) diegoe_: can't, my router is cheap :(
+(13:19:50) diegoe_: now they connected a ROUTER
+(13:19:52) xan: kick them in the ass and make them cap their bandwidth
+(13:20:11) diegoe_: and every time i take them down they came up to complain
+(13:20:23) diegoe_: i already told my parents that i'm pissed and can't 
+work like this, but they haven't made anything
+(13:20:23) Company: bandwidth capping is easy even with cheap routers
+(13:20:28) kov: diegoe_: better than my mom who decided to change 
+providers without talking to me =P
+(13:20:32) diegoe_: Company: instruct me please
+(13:20:36) Company: you still have the "unplug" option
+(13:20:39) kov: of course nothing worked right, and now I'm internet-less
+(13:20:44) diegoe_: been using it, but they are loud
+(13:20:51) kov: which is why I haven't been ircing as much, btw
+(13:21:54) Company: sheesh
+(13:22:08) Company: you people should all get along better
+(13:22:15) ***kov thinks it's a good thing he's moving again =P
+(13:22:24) diegoe_: kov: to recall, first time it goes only through 
+'apple' and stops there, right?
+(13:22:57) kov: diegoe_: no, it checks apple, doesn't find a problem, 
+then it checks 'kov', and returns start =7, length=3
+(13:23:10) kov: and yeah, I'm a mispelling lol
+(13:23:12) diegoe_: no, right now
+(13:23:24) diegoe_: first time it stops after apple here
+(13:23:34) diegoe_: only on second try it goes to the end and correctly 
+marks kov
+(13:23:44) janm left the room (quit: barjavel.freenode.net 
+irc.freenode.net).
+(13:23:44) herzi left the room (quit: barjavel.freenode.net 
+irc.freenode.net).
+(13:23:44) lisppaste7 left the room (quit: barjavel.freenode.net 
+irc.freenode.net).
+(13:24:35) kov: diegoe_: ok, but the function is probably being given 
+"apple", then " kov"
+(13:24:48) kov: because you are using check while you type
+(13:25:17) kov: then it first returns -1, 0, which means it found no 
+problem, for "apple", and it returns 1, 3, for " kov"
+(13:25:29) diegoe_: i'm doing this: 1. type 'apple kov tree'; 2. right 
+click and select 'check document now' 3. see it stop at apple
+(13:25:38) kov: exactly
+(13:25:48) kov: that's wrong behavior
+(13:26:02) kov: it should stop at kov =)
+(13:26:33) herzi [n=herzi@port-10245.pppoe.wtnet.de] entered the room.
+(13:26:36) kov: returning 7, 3
+(13:27:00) diegoe_: ** (lt-GtkLauncher:26171): DEBUG: checking spelling 
+of string -apple kov tree-, 14
+(13:27:01) diegoe_: ** (lt-GtkLauncher:26171): DEBUG: revisando -apple- 
+(5) = 0
+(13:29:30) kov: diegoe_: yes, that is what needs fixing in that code
+(13:29:53) diegoe_: iirc it needed to internally go through all the 
+words, right?
+(13:29:58) kov: right
+(13:30:07) diegoe_: because in that particular case, it's being fed a 
+phrase and not words
+(13:30:09) kov: it needs to check one by one, and return the first bad 
+it finds
+(13:33:28) diegoe_: ok, so i was thinking on having some sort of array 
+where i could store the pointers to the beginning of each word
+(13:34:13) mathrick left the room (quit: Read error: 104 (Connection 
+reset by peer)).
+(13:34:24) diegoe_: although i'm not really sure now
+(13:35:00) diegoe_: i could iterate over the chars, and when i found a 
+letter following a punctuation or space i would consider that a new word 
+beginning
+(13:35:48) krit [n=dirk@f053084127.adsl.alicedsl.de] entered the room.
+(13:35:48) xan: man, I don't know the details of this, but it's *very* 
+strange that you are supposed to do the parsing here IMHO
+(13:36:09) diegoe_: we had that philosophical talk at #webkit some weeks ago
+(13:36:16) xan: splitting words gets very complex if you take into 
+account all the languages, that's why we have libraries to do that
+(13:36:31) diegoe_: agree
+(13:36:32) xan: yeah, do we really decided that you were supposed to do 
+this?
+(13:36:36) xan: I don't recall that
+(13:36:36) krit: hi all
+(13:36:45) kov: xan: the thing is apple's spelling checking library 
+takes whole phrases
+(13:36:57) krit: xan: kov: is the a11ky talk over?
+(13:37:00) kov: xan: and returns the first bad word, exactly like the 
+webcore api
+(13:37:37) xan: kov: and we don't have anything like that?
+(13:37:57) kov: enchant doesn't seem to have anything like that; you can 
+only check for single words
+(13:38:08) xan: we should check what other apps do then
+(13:38:10) kov: krit: people are still hanging around, but most of the 
+talking has been done, afaik =)
+(13:38:29) ***diegoe_ checks empathy
+(13:38:29) xan: and at the very least use a library to do the word breaking
+(13:38:33) diegoe_: btw
+(13:38:33) krit: kov: had some lessons in the uni. Can you send me a log?
+(13:38:44) API: well, yes and related to webkit-a11y, I must go, see you
+(13:39:04) kov: krit: my log is not complete, unfortunately, I hope xan 
+will send us something =)
+(13:39:04) diegoe_: i have this doubt, if i read someone's else code 
+(free code) and later use such ideas (not copy pasted, but inspired) in 
+my own code
+(13:39:11) diegoe_: does that need a mention?
+(13:39:28) API left the room (quit: "Leaving").
+(13:39:40) xan: diegoe_: there's no yes/no answer, but usually yes
+(13:39:45) krit: xan: could you please send your log to us later? (kov, me)
+(13:39:47) diegoe_: because for example, i took the idea of a struct for 
+SpellLanguage from empathy, but only that
+(13:40:30) xan: krit: I just realized irssi ignored me when I told it to 
+log the chat :S
+(13:40:46) xan: I think I know what's going on, my $HOME is a bit 
+screwed up because of the backup restore
+(13:40:55) krit: :-/
+(13:40:57) xan: WillieWalker: did you log the hackfest?
+(13:41:10) WillieWalker: Hi xan: I believe I did.  Let me check....
+(13:41:43) WillieWalker: Yep!
+(13:41:50) krit: phew!
+(13:42:03) diegoe_: they are changing the eth cable
+(13:42:04) WillieWalker: I can send it out as soon as I figure out where 
+the heck it was saved on my machine.
+(13:42:05) diegoe_: hohovie

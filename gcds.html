@@ -1,0 +1,211 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<style type="text/css">
+li {
+  margin: 15px;
+}
+.currentslide {
+  position: absolute;
+  left: 50px;
+  top: -10px;
+  display: block;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-duration: 3s;
+  -webkit-transform: translate(0, 0) rotate(-90deg);
+  rotate: -10deg;
+}
+#demovideo {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-duration: 6s;
+  -webkit-transform: translate(0, 0) rotate(0);
+}
+</style>
+<script type="text/javascript">
+  var current_slide = 0;
+  function hide_slide() {
+    if (current_slide > 0) {
+      div = document.getElementById('' + current_slide)
+      if (!div) {
+        return false;
+      }
+      setTimeout(function () {
+        div.style.webkitTransform = 'translate(-100px, -100px) rotate(-90deg)';
+        setTimeout(function () {
+          div.style.display = 'none';
+        }, 1000);
+      }, 100);
+    }
+    return true;
+  }
+  function previous_slide() {
+    if (!hide_slide())
+      return;
+
+    current_slide = current_slide - 1;
+
+    if (current_slide < 1)
+      current_slide = 1;
+
+    show_slide();
+  }
+  function next_slide() {
+    if (!hide_slide())
+      return;
+
+    current_slide = current_slide + 1;
+    if (document.getElementById('' + current_slide) == null) {
+      current_slide = current_slide - 1;
+    }
+
+    show_slide();
+
+    if (current_slide == 6) {
+      video = document.getElementById('demovideo');
+      video.style.display = 'block';
+      video.setAttribute('src', 'gcds.ogg');
+      setTimeout(function () {
+        video.style.webkitTransform = 'translate(-200px, 100px) rotate(10deg)';
+      }, 5000);
+    }
+  }
+  function show_slide() {
+    var div = document.getElementById('' + current_slide);
+    div.style.display = 'block';
+    div.setAttribute('class', 'currentslide');
+    setTimeout(function () {
+      div.style.webkitTransform = 'translate(0, 0) rotate(0deg)';
+    }, 100);
+  }
+  function on_key_down() {
+    if (event.keyCode == 37) {
+      previous_slide();
+    } else if (event.keyCode == 39 || event.keyCode == 32) {
+      next_slide();
+    }
+  }
+</script>
+</head>
+
+<body onload="next_slide()" onkeyDown="on_key_down()">
+
+<video id="demovideo" controls autoplay style="display: none">
+</video>
+
+<div class="slide" id="1" style="display: none" onclick="next_slide()">
+  <h1>What is WebKitGTK+ anyway?</h1>
+
+  <p>
+
+  <p><b>GCDS 2009</b></p>
+
+  <ul>
+    <li>Christian Dywan</li>
+    <li>Gustavo Noronha Silva</li>
+    <li>Xan Lopez</li>
+  </ul>
+</div>
+
+<div class="slide" id="2" style="display: none" onclick="next_slide()">
+  <h1>What is WebKitGTK+?</h1>
+
+  <ul>
+    <li>Fork of KHTML started by Apple, now with contributors all over the place.</li>
+    <li>Shared base, with ports being built from the same tree, with different build systems.</li>
+    <li>Rendering backend built with cairo.</li>
+    <li>Resource loading backend built with libsoup.</li>
+    <li>A regular GtkWidget which you can add to your GtkScrolledWindow and profit.</li>
+    <li>Includes JavaScriptCore, powered by SquirrelFish Extreme, which includes a cross-platform C API.</li>
+  </ul>
+</div>
+
+<div class="slide" id="3" style="display: none" onclick="next_slide()">
+  <h1>Why are we working on it?</h1>
+
+  <ul>
+    <li>Because it's fun!</li>
+    <li>The WebKit project has a clear focus on being embedded, which is something naturally aligned with our 
+needs.</li>
+    <li>It's less focused on a single product that drives it.</li>
+    <li>The fact that there are multiple forces pushing it makes it need to accomodate many different needs, 
+bringing flexibility.</li>
+    <li>It allows us to build on our platform instead of duplicating it</li>
+    <ul>
+      <li>Cairo for rendering</li>
+      <li>Pango for fonts</li>
+      <li>GTK+ for theming/widgets</li>
+      <li>Soup for networking</li>
+      <li>Keyring for auth storage</li>
+    </ul>
+  </ul>
+</div>
+
+<div class="slide" id="4" style="display: none" onclick="next_slide()">
+  <h1>Release planning</h1>
+
+  <ul>
+    <li>We'll release for GNOME every 6 months</li>
+    <li>But might not branch from trunk that often.</li>
+    <li>An API is declared stable when it ships in a new stable release.</li>
+    <li>We can, and will break APIs during development cycles (this is how GTK+ works today).</li>
+    <li>After an API is declared deprecated, we'll remove it from stable releases after a reasonable amount of 
+time (think, two major releases).</li>
+  </ul>
+</div>
+
+<div class="slide" id="5" style="display: none" onclick="next_slide()">
+  <h1 class="centered">DEMO</h1>
+
+  <p><a href="gcds.c">Demo source code</a></p>
+</div>
+
+<div class="slide" id="6" style="display: none" onclick="next_slide()">
+  <h1>Current Focus</h1>
+
+  <ul>
+    <li>Accessibility</li>
+    <li>Basic features required by Epiphany and Midori</li>
+    <li>Improving libsoup so that it is able to handle a browser's needs</li>
+    <ul>
+      <li>Content Sniffing</li>
+      <li>Content Encoding</li>
+      <li>Disk Caching</li>
+    </ul>
+  </ul>
+</div>
+
+<div class="slide" id="7" style="display: none" onclick="next_slide()">
+  <h1>Future work</h1>
+
+  <ul>
+    <li>DOM bindings</li>
+    <li>Pango backend by default (no freetype)</li>
+    <li>Improve HTML5 video/audio support</li>
+    <li>More libsoup work</li>
+  </ul>
+</div>
+
+<div class="slide" id="8" style="display: none" onclick="next_slide()">
+  <h1>Contact</h1>
+
+  <ul>
+    <li>#webkit and #webkit-gtk on irc.freenode.org</li>
+    <li>webkit-gtk and webkit-dev mailing lists at lists.webkit.org</li>
+    <li>http://www.webkit.org/</li>
+    <li>http://www.webkitgtk.org/</li>
+    <li>http://trac.webkit.org/wiki/HackingGtk</li>
+  </ul>
+</div>
+
+<div class="slide" id="9" style="display: none" onclick="next_slide()">
+  <h1>Questions?</h1>
+</div>
+
+</body>
+</html>
+

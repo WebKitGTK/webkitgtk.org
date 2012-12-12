@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE book PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "">
+<book xmlns="http://www.devhelp.net/book" title="WebKitGTK+ Reference Manual" link="index.html" author="" name="webkitgtk">
+  <chapters>
+    <sub name="Class Overview" link="ch01.html">
+      <sub name="WebKitWebView" link="webkitgtk-WebKitWebView.html"/>
+      <sub name="WebKitWebFrame" link="webkitgtk-WebKitWebFrame.html"/>
+      <sub name="WebKitWebBackForwardList" link="webkitgtk-WebKitWebBackForwardList.html"/>
+      <sub name="WebKitWebHistoryItem" link="webkitgtk-WebKitWebHistoryItem.html"/>
+      <sub name="WebKitWebNavigationAction" link="webkitgtk-WebKitWebNavigationAction.html"/>
+      <sub name="WebKitWebPolicyDecision" link="webkitgtk-WebKitWebPolicyDecision.html"/>
+      <sub name="WebKitNetworkRequest" link="webkitgtk-WebKitNetworkRequest.html"/>
+      <sub name="WebKitNetworkResponse" link="webkitgtk-WebKitNetworkResponse.html"/>
+      <sub name="WebKitWebInspector" link="webkitgtk-WebKitWebInspector.html"/>
+      <sub name="WebKitWebDatabase" link="webkitgtk-WebKitWebDatabase.html"/>
+      <sub name="WebKitWebDataSource" link="webkitgtk-WebKitWebDataSource.html"/>
+      <sub name="WebKitWebResource" link="webkitgtk-WebKitWebResource.html"/>
+      <sub name="WebKitDownload" link="webkitgtk-WebKitDownload.html"/>
+      <sub name="WebKitHitTestResult" link="webkitgtk-WebKitHitTestResult.html"/>
+      <sub name="WebKitSoupAuthDialog" link="webkitgtk-WebKitSoupAuthDialog.html"/>
+      <sub name="WebKitSecurityOrigin" link="webkitgtk-WebKitSecurityOrigin.html"/>
+      <sub name="WebKitWebWindowFeatures" link="webkitgtk-WebKitWebWindowFeatures.html"/>
+      <sub name="webkitcachemodel" link="webkitgtk-webkitcachemodel.html"/>
+    </sub>
+    <sub name="Running WebKitGTK+-based programs" link="ch02.html">
+      <sub name="Environment" link="webkit-environment.html"/>
+    </sub>
+    <sub name="Index" link="index-all.html"/>
+    <sub name="Index of deprecated symbols" link="index-deprecated.html"/>
+    <sub name="Index of new symbols in 1.0.1" link="index-1.0.1.html"/>
+    <sub name="Index of new symbols in 1.0.2" link="index-1.0.2.html"/>
+    <sub name="Index of new symbols in 1.0.3" link="index-1.0.3.html"/>
+    <sub name="Index of new symbols in 1.1.1" link="index-1.1.1.html"/>
+    <sub name="Index of new symbols in 1.1.2" link="index-1.1.2.html"/>
+    <sub name="Index of new symbols in 1.1.3" link="index-1.1.3.html"/>
+    <sub name="Index of new symbols in 1.1.4" link="index-1.1.4.html"/>
+    <sub name="Index of new symbols in 1.1.5" link="index-1.1.5.html"/>
+    <sub name="Index of new symbols in 1.1.6" link="index-1.1.6.html"/>
+    <sub name="Index of new symbols in 1.1.7" link="index-1.1.7.html"/>
+    <sub name="Index of new symbols in 1.1.8" link="index-1.1.8.html"/>
+    <sub name="Index of new symbols in 1.1.10" link="index-1.1.10.html"/>
+    <sub name="Index of new symbols in 1.1.11" link="index-1.1.11.html"/>
+    <sub name="Index of new symbols in 1.1.13" link="index-1.1.13.html"/>
+    <sub name="Index of new symbols in 1.1.14" link="index-1.1.14.html"/>
+    <sub name="Index of new symbols in 1.1.15" link="index-1.1.15.html"/>
+    <sub name="Index of new symbols in 1.1.16" link="index-1.1.16.html"/>
+    <sub name="Index of new symbols in 1.1.17" link="index-1.1.17.html"/>
+    <sub name="Index of new symbols in 1.1.18" link="index-1.1.18.html"/>
+    <sub name="Index of new symbols in 1.1.20" link="index-1.1.20.html"/>
+  </chapters>
+  <functions>
+    <function name="enum WebKitNavigationResponse" link="webkitgtk-WebKitWebView.html#WebKitNavigationResponse"/>
+    <function name="enum WebKitWebViewTargetInfo" link="webkitgtk-WebKitWebView.html#WebKitWebViewTargetInfo"/>
+    <function name="WebKitWebView" link="webkitgtk-WebKitWebView.html#WebKitWebView"/>
+    <function name="webkit_web_view_can_copy_clipboard ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-can-copy-clipboard"/>
+    <function name="webkit_web_view_can_cut_clipboard ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-can-cut-clipboard"/>
+    <function name="webkit_web_view_can_go_back ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-can-go-back"/>
+    <function name="webkit_web_view_can_go_back_or_forward ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-can-go-back-or-forward"/>
+    <function name="webkit_web_view_can_go_forward ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-can-go-forward"/>
+    <function name="webkit_web_view_can_paste_clipboard ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-can-paste-clipboard"/>
+    <function name="webkit_web_view_can_redo ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-can-redo"/>
+    <function name="webkit_web_view_can_show_mime_type ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-can-show-mime-type"/>
+    <function name="webkit_web_view_can_undo ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-can-undo"/>
+    <function name="webkit_web_view_copy_clipboard ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-copy-clipboard"/>
+    <function name="webkit_web_view_cut_clipboard ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-cut-clipboard"/>
+    <function name="webkit_web_view_delete_selection ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-delete-selection"/>
+    <function name="webkit_web_view_execute_script ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-execute-script"/>
+    <function name="webkit_web_view_get_back_forward_list ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-get-back-forward-list"/>
+    <function name="webkit_web_view_get_copy_target_list ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-get-copy-target-list"/>
+    <function name="webkit_web_view_get_custom_encoding ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-get-custom-encoding"/>
+    <function name="webkit_web_view_get_editable ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-get-editable"/>
+    <function name="webkit_web_view_get_encoding ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-get-encoding"/>
+    <function name="webkit_web_view_get_focused_frame ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-get-focused-frame"/>
+    <function name="webkit_web_view_get_full_content_zoom ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-get-full-content-zoom"/>
+    <function name="webkit_web_view_get_hit_test_result ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-get-hit-test-result"/>
+    <function name="webkit_web_view_get_icon_uri ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-get-icon-uri"/>
+    <function name="webkit_web_view_get_inspector ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-get-inspector"/>
+    <function name="webkit_web_view_get_load_status ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-get-load-status"/>
+    <function name="webkit_web_view_get_main_frame ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-get-main-frame"/>
+    <function name="webkit_web_view_get_paste_target_list ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-get-paste-target-list"/>
+    <function name="webkit_web_view_get_progress ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-get-progress"/>
+    <function name="webkit_web_view_get_settings ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-get-settings"/>
+    <function name="webkit_web_view_get_title ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-get-title"/>
+    <function name="webkit_web_view_get_transparent ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-get-transparent"/>
+    <function name="webkit_web_view_get_uri ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-get-uri"/>
+    <function name="webkit_web_view_get_view_source_mode ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-get-view-source-mode"/>
+    <function name="webkit_web_view_get_zoom_level ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-get-zoom-level"/>
+    <function name="webkit_web_view_go_back ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-go-back"/>
+    <function name="webkit_web_view_go_back_or_forward ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-go-back-or-forward"/>
+    <function name="webkit_web_view_go_forward ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-go-forward"/>
+    <function name="webkit_web_view_go_to_back_forward_item ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-go-to-back-forward-item"/>
+    <function name="webkit_web_view_has_selection ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-has-selection"/>
+    <function name="webkit_web_view_load_html_string ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-load-html-string"/>
+    <function name="webkit_web_view_load_request ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-load-request"/>
+    <function name="webkit_web_view_load_string ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-load-string"/>
+    <function name="webkit_web_view_load_uri ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-load-uri"/>
+    <function name="webkit_web_view_mark_text_matches ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-mark-text-matches"/>
+    <function name="webkit_web_view_move_cursor ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-move-cursor"/>
+    <function name="webkit_web_view_new ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-new"/>
+    <function name="webkit_web_view_open ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-open"/>
+    <function name="webkit_web_view_paste_clipboard ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-paste-clipboard"/>
+    <function name="webkit_web_view_redo ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-redo"/>
+    <function name="webkit_web_view_reload ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-reload"/>
+    <function name="webkit_web_view_reload_bypass_cache ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-reload-bypass-cache"/>
+    <function name="webkit_web_view_search_text ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-search-text"/>
+    <function name="webkit_web_view_select_all ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-select-all"/>
+    <function name="webkit_web_view_set_custom_encoding ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-set-custom-encoding"/>
+    <function name="webkit_web_view_set_editable ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-set-editable"/>
+    <function name="webkit_web_view_set_full_content_zoom ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-set-full-content-zoom"/>
+    <function name="webkit_web_view_set_highlight_text_matches ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-set-highlight-text-matches"/>
+    <function name="webkit_web_view_set_maintains_back_forward_list ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-set-maintains-back-forward-list"/>
+    <function name="webkit_web_view_set_settings ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-set-settings"/>
+    <function name="webkit_web_view_set_transparent ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-set-transparent"/>
+    <function name="webkit_web_view_set_view_source_mode ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-set-view-source-mode"/>
+    <function name="webkit_web_view_set_zoom_level ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-set-zoom-level"/>
+    <function name="webkit_web_view_stop_loading ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-stop-loading"/>
+    <function name="webkit_web_view_undo ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-undo"/>
+    <function name="webkit_web_view_unmark_text_matches ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-unmark-text-matches"/>
+    <function name="webkit_web_view_zoom_in ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-zoom-in"/>
+    <function name="webkit_web_view_zoom_out ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-zoom-out"/>
+    <function name="webkit_web_view_get_window_features ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-get-window-features"/>
+    <function name="The &quot;copy-target-list&quot; property" link="webkitgtk-WebKitWebView.html#WebKitWebView--copy-target-list"/>
+    <function name="The &quot;custom-encoding&quot; property" link="webkitgtk-WebKitWebView.html#WebKitWebView--custom-encoding"/>
+    <function name="The &quot;editable&quot; property" link="webkitgtk-WebKitWebView.html#WebKitWebView--editable"/>
+    <function name="The &quot;encoding&quot; property" link="webkitgtk-WebKitWebView.html#WebKitWebView--encoding"/>
+    <function name="The &quot;full-content-zoom&quot; property" link="webkitgtk-WebKitWebView.html#WebKitWebView--full-content-zoom"/>
+    <function name="The &quot;icon-uri&quot; property" link="webkitgtk-WebKitWebView.html#WebKitWebView--icon-uri"/>
+    <function name="The &quot;im-context&quot; property" link="webkitgtk-WebKitWebView.html#WebKitWebView--im-context"/>
+    <function name="The &quot;load-status&quot; property" link="webkitgtk-WebKitWebView.html#WebKitWebView--load-status"/>
+    <function name="The &quot;paste-target-list&quot; property" link="webkitgtk-WebKitWebView.html#WebKitWebView--paste-target-list"/>
+    <function name="The &quot;progress&quot; property" link="webkitgtk-WebKitWebView.html#WebKitWebView--progress"/>
+    <function name="The &quot;settings&quot; property" link="webkitgtk-WebKitWebView.html#WebKitWebView--settings"/>
+    <function name="The &quot;title&quot; property" link="webkitgtk-WebKitWebView.html#WebKitWebView--title"/>
+    <function name="The &quot;transparent&quot; property" link="webkitgtk-WebKitWebView.html#WebKitWebView--transparent"/>
+    <function name="The &quot;uri&quot; property" link="webkitgtk-WebKitWebView.html#WebKitWebView--uri"/>
+    <function name="The &quot;web-inspector&quot; property" link="webkitgtk-WebKitWebView.html#WebKitWebView--web-inspector"/>
+    <function name="The &quot;window-features&quot; property" link="webkitgtk-WebKitWebView.html#WebKitWebView--window-features"/>
+    <function name="The &quot;zoom-level&quot; property" link="webkitgtk-WebKitWebView.html#WebKitWebView--zoom-level"/>
+    <function name="The &quot;close-web-view&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-close-web-view"/>
+    <function name="The &quot;console-message&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-console-message"/>
+    <function name="The &quot;copy-clipboard&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-copy-clipboard"/>
+    <function name="The &quot;create-plugin-widget&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-create-plugin-widget"/>
+    <function name="The &quot;create-web-view&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-create-web-view"/>
+    <function name="The &quot;cut-clipboard&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-cut-clipboard"/>
+    <function name="The &quot;database-quota-exceeded&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-database-quota-exceeded"/>
+    <function name="The &quot;download-requested&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-download-requested"/>
+    <function name="The &quot;hovering-over-link&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-hovering-over-link"/>
+    <function name="The &quot;icon-loaded&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-icon-loaded"/>
+    <function name="The &quot;load-committed&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-load-committed"/>
+    <function name="The &quot;load-error&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-load-error"/>
+    <function name="The &quot;load-finished&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-load-finished"/>
+    <function name="The &quot;load-progress-changed&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-load-progress-changed"/>
+    <function name="The &quot;load-started&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-load-started"/>
+    <function name="The &quot;mime-type-policy-decision-requested&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-mime-type-policy-decision-requested"/>
+    <function name="The &quot;move-cursor&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-move-cursor"/>
+    <function name="The &quot;navigation-policy-decision-requested&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-navigation-policy-decision-requested"/>
+    <function name="The &quot;navigation-requested&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-navigation-requested"/>
+    <function name="The &quot;new-window-policy-decision-requested&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-new-window-policy-decision-requested"/>
+    <function name="The &quot;paste-clipboard&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-paste-clipboard"/>
+    <function name="The &quot;populate-popup&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-populate-popup"/>
+    <function name="The &quot;print-requested&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-print-requested"/>
+    <function name="The &quot;redo&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-redo"/>
+    <function name="The &quot;resource-request-starting&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-resource-request-starting"/>
+    <function name="The &quot;script-alert&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-script-alert"/>
+    <function name="The &quot;script-confirm&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-script-confirm"/>
+    <function name="The &quot;script-prompt&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-script-prompt"/>
+    <function name="The &quot;select-all&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-select-all"/>
+    <function name="The &quot;selection-changed&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-selection-changed"/>
+    <function name="The &quot;set-scroll-adjustments&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-set-scroll-adjustments"/>
+    <function name="The &quot;status-bar-text-changed&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-status-bar-text-changed"/>
+    <function name="The &quot;title-changed&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-title-changed"/>
+    <function name="The &quot;undo&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-undo"/>
+    <function name="The &quot;web-view-ready&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-web-view-ready"/>
+    <function name="The &quot;window-object-cleared&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-window-object-cleared"/>
+    <function name="enum WebKitLoadStatus" link="webkitgtk-WebKitWebFrame.html#WebKitLoadStatus"/>
+    <function name="WebKitWebFrame" link="webkitgtk-WebKitWebFrame.html#WebKitWebFrame"/>
+    <function name="webkit_web_frame_find_frame ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-find-frame"/>
+    <function name="webkit_web_frame_get_data_source ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-get-data-source"/>
+    <function name="webkit_web_frame_get_global_context ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-get-global-context"/>
+    <function name="webkit_web_frame_get_horizontal_scrollbar_policy ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-get-horizontal-scrollbar-policy"/>
+    <function name="webkit_web_frame_get_load_status ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-get-load-status"/>
+    <function name="webkit_web_frame_get_name ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-get-name"/>
+    <function name="webkit_web_frame_get_network_response ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-get-network-response"/>
+    <function name="webkit_web_frame_get_parent ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-get-parent"/>
+    <function name="webkit_web_frame_get_provisional_data_source ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-get-provisional-data-source"/>
+    <function name="webkit_web_frame_get_security_origin ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-get-security-origin"/>
+    <function name="webkit_web_frame_get_title ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-get-title"/>
+    <function name="webkit_web_frame_get_uri ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-get-uri"/>
+    <function name="webkit_web_frame_get_vertical_scrollbar_policy ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-get-vertical-scrollbar-policy"/>
+    <function name="webkit_web_frame_get_web_view ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-get-web-view"/>
+    <function name="webkit_web_frame_load_alternate_string ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-load-alternate-string"/>
+    <function name="webkit_web_frame_load_request ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-load-request"/>
+    <function name="webkit_web_frame_load_string ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-load-string"/>
+    <function name="webkit_web_frame_load_uri ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-load-uri"/>
+    <function name="webkit_web_frame_new ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-new"/>
+    <function name="webkit_web_frame_print ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-print"/>
+    <function name="webkit_web_frame_print_full ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-print-full"/>
+    <function name="webkit_web_frame_reload ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-reload"/>
+    <function name="webkit_web_frame_stop_loading ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-stop-loading"/>
+    <function name="WebKitWebBackForwardList" link="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList"/>
+    <function name="webkit_web_back_forward_list_add_item ()" link="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-add-item"/>
+    <function name="webkit_web_back_forward_list_contains_item ()" link="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-contains-item"/>
+    <function name="webkit_web_back_forward_list_get_back_item ()" link="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-get-back-item"/>
+    <function name="webkit_web_back_forward_list_get_back_length ()" link="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-get-back-length"/>
+    <function name="webkit_web_back_forward_list_get_back_list_with_limit ()" link="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-get-back-list-with-limit"/>
+    <function name="webkit_web_back_forward_list_get_current_item ()" link="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-get-current-item"/>
+    <function name="webkit_web_back_forward_list_get_forward_item ()" link="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-get-forward-item"/>
+    <function name="webkit_web_back_forward_list_get_forward_length ()" link="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-get-forward-length"/>
+    <function name="webkit_web_back_forward_list_get_forward_list_with_limit ()" link="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-get-forward-list-with-limit"/>
+    <function name="webkit_web_back_forward_list_get_limit ()" link="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-get-limit"/>
+    <function name="webkit_web_back_forward_list_get_nth_item ()" link="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-get-nth-item"/>
+    <function name="webkit_web_back_forward_list_go_back ()" link="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-go-back"/>
+    <function name="webkit_web_back_forward_list_go_forward ()" link="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-go-forward"/>
+    <function name="webkit_web_back_forward_list_go_to_item ()" link="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-go-to-item"/>
+    <function name="webkit_web_back_forward_list_new_with_web_view ()" link="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-new-with-web-view"/>
+    <function name="webkit_web_back_forward_list_set_limit ()" link="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-set-limit"/>
+    <function name="WebKitWebHistoryItem" link="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem"/>
+    <function name="webkit_web_history_item_copy ()" link="webkitgtk-WebKitWebHistoryItem.html#webkit-web-history-item-copy"/>
+    <function name="webkit_web_history_item_get_alternate_title ()" link="webkitgtk-WebKitWebHistoryItem.html#webkit-web-history-item-get-alternate-title"/>
+    <function name="webkit_web_history_item_get_last_visited_time ()" link="webkitgtk-WebKitWebHistoryItem.html#webkit-web-history-item-get-last-visited-time"/>
+    <function name="webkit_web_history_item_get_original_uri ()" link="webkitgtk-WebKitWebHistoryItem.html#webkit-web-history-item-get-original-uri"/>
+    <function name="webkit_web_history_item_get_title ()" link="webkitgtk-WebKitWebHistoryItem.html#webkit-web-history-item-get-title"/>
+    <function name="webkit_web_history_item_get_uri ()" link="webkitgtk-WebKitWebHistoryItem.html#webkit-web-history-item-get-uri"/>
+    <function name="webkit_web_history_item_new ()" link="webkitgtk-WebKitWebHistoryItem.html#webkit-web-history-item-new"/>
+    <function name="webkit_web_history_item_new_with_data ()" link="webkitgtk-WebKitWebHistoryItem.html#webkit-web-history-item-new-with-data"/>
+    <function name="webkit_web_history_item_set_alternate_title ()" link="webkitgtk-WebKitWebHistoryItem.html#webkit-web-history-item-set-alternate-title"/>
+    <function name="The &quot;alternate-title&quot; property" link="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem--alternate-title"/>
+    <function name="The &quot;last-visited-time&quot; property" link="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem--last-visited-time"/>
+    <function name="The &quot;original-uri&quot; property" link="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem--original-uri"/>
+    <function name="The &quot;title&quot; property" link="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem--title"/>
+    <function name="The &quot;uri&quot; property" link="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem--uri"/>
+    <function name="WebKitWebNavigationAction" link="webkitgtk-WebKitWebNavigationAction.html#WebKitWebNavigationAction"/>
+    <function name="enum WebKitWebNavigationReason" link="webkitgtk-WebKitWebNavigationAction.html#WebKitWebNavigationReason"/>
+    <function name="webkit_web_navigation_action_get_button ()" link="webkitgtk-WebKitWebNavigationAction.html#webkit-web-navigation-action-get-button"/>
+    <function name="webkit_web_navigation_action_get_modifier_state ()" link="webkitgtk-WebKitWebNavigationAction.html#webkit-web-navigation-action-get-modifier-state"/>
+    <function name="webkit_web_navigation_action_get_original_uri ()" link="webkitgtk-WebKitWebNavigationAction.html#webkit-web-navigation-action-get-original-uri"/>
+    <function name="webkit_web_navigation_action_get_reason ()" link="webkitgtk-WebKitWebNavigationAction.html#webkit-web-navigation-action-get-reason"/>
+    <function name="webkit_web_navigation_action_get_target_frame ()" link="webkitgtk-WebKitWebNavigationAction.html#webkit-web-navigation-action-get-target-frame"/>
+    <function name="webkit_web_navigation_action_get_type ()" link="webkitgtk-WebKitWebNavigationAction.html#webkit-web-navigation-action-get-type"/>
+    <function name="webkit_web_navigation_action_set_original_uri ()" link="webkitgtk-WebKitWebNavigationAction.html#webkit-web-navigation-action-set-original-uri"/>
+    <function name="webkit_web_navigation_action_set_reason ()" link="webkitgtk-WebKitWebNavigationAction.html#webkit-web-navigation-action-set-reason"/>
+    <function name="WebKitWebPolicyDecision" link="webkitgtk-WebKitWebPolicyDecision.html#WebKitWebPolicyDecision"/>
+    <function name="webkit_web_policy_decision_download ()" link="webkitgtk-WebKitWebPolicyDecision.html#webkit-web-policy-decision-download"/>
+    <function name="webkit_web_policy_decision_get_type ()" link="webkitgtk-WebKitWebPolicyDecision.html#webkit-web-policy-decision-get-type"/>
+    <function name="webkit_web_policy_decision_ignore ()" link="webkitgtk-WebKitWebPolicyDecision.html#webkit-web-policy-decision-ignore"/>
+    <function name="webkit_web_policy_decision_use ()" link="webkitgtk-WebKitWebPolicyDecision.html#webkit-web-policy-decision-use"/>
+    <function name="WebKitNetworkRequest" link="webkitgtk-WebKitNetworkRequest.html#WebKitNetworkRequest"/>
+    <function name="webkit_network_request_new ()" link="webkitgtk-WebKitNetworkRequest.html#webkit-network-request-new"/>
+    <function name="webkit_network_request_get_uri ()" link="webkitgtk-WebKitNetworkRequest.html#webkit-network-request-get-uri"/>
+    <function name="webkit_network_request_get_message ()" link="webkitgtk-WebKitNetworkRequest.html#webkit-network-request-get-message"/>
+    <function name="webkit_network_request_set_uri ()" link="webkitgtk-WebKitNetworkRequest.html#webkit-network-request-set-uri"/>
+    <function name="The &quot;message&quot; property" link="webkitgtk-WebKitNetworkRequest.html#WebKitNetworkRequest--message"/>
+    <function name="The &quot;uri&quot; property" link="webkitgtk-WebKitNetworkRequest.html#WebKitNetworkRequest--uri"/>
+    <function name="WebKitNetworkResponse" link="webkitgtk-WebKitNetworkResponse.html#WebKitNetworkResponse"/>
+    <function name="webkit_network_response_get_uri ()" link="webkitgtk-WebKitNetworkResponse.html#webkit-network-response-get-uri"/>
+    <function name="webkit_network_response_get_message ()" link="webkitgtk-WebKitNetworkResponse.html#webkit-network-response-get-message"/>
+    <function name="webkit_network_response_set_uri ()" link="webkitgtk-WebKitNetworkResponse.html#webkit-network-response-set-uri"/>
+    <function name="WebKitWebInspector" link="webkitgtk-WebKitWebInspector.html#WebKitWebInspector"/>
+    <function name="webkit_web_inspector_get_inspected_uri ()" link="webkitgtk-WebKitWebInspector.html#webkit-web-inspector-get-inspected-uri"/>
+    <function name="webkit_web_inspector_get_web_view ()" link="webkitgtk-WebKitWebInspector.html#webkit-web-inspector-get-web-view"/>
+    <function name="webkit_web_inspector_inspect_coordinates ()" link="webkitgtk-WebKitWebInspector.html#webkit-web-inspector-inspect-coordinates"/>
+    <function name="webkit_web_inspector_show ()" link="webkitgtk-WebKitWebInspector.html#webkit-web-inspector-show"/>
+    <function name="webkit_web_inspector_close ()" link="webkitgtk-WebKitWebInspector.html#webkit-web-inspector-close"/>
+    <function name="The &quot;inspected-uri&quot; property" link="webkitgtk-WebKitWebInspector.html#WebKitWebInspector--inspected-uri"/>
+    <function name="The &quot;javascript-profiling-enabled&quot; property" link="webkitgtk-WebKitWebInspector.html#WebKitWebInspector--javascript-profiling-enabled"/>
+    <function name="The &quot;timeline-profiling-enabled&quot; property" link="webkitgtk-WebKitWebInspector.html#WebKitWebInspector--timeline-profiling-enabled"/>
+    <function name="The &quot;web-view&quot; property" link="webkitgtk-WebKitWebInspector.html#WebKitWebInspector--web-view"/>
+    <function name="The &quot;attach-window&quot; signal" link="webkitgtk-WebKitWebInspector.html#WebKitWebInspector-attach-window"/>
+    <function name="The &quot;close-window&quot; signal" link="webkitgtk-WebKitWebInspector.html#WebKitWebInspector-close-window"/>
+    <function name="The &quot;detach-window&quot; signal" link="webkitgtk-WebKitWebInspector.html#WebKitWebInspector-detach-window"/>
+    <function name="The &quot;finished&quot; signal" link="webkitgtk-WebKitWebInspector.html#WebKitWebInspector-finished"/>
+    <function name="The &quot;inspect-web-view&quot; signal" link="webkitgtk-WebKitWebInspector.html#WebKitWebInspector-inspect-web-view"/>
+    <function name="The &quot;show-window&quot; signal" link="webkitgtk-WebKitWebInspector.html#WebKitWebInspector-show-window"/>
+    <function name="WebKitWebDatabase" link="webkitgtk-WebKitWebDatabase.html#WebKitWebDatabase"/>
+    <function name="webkit_web_database_get_display_name ()" link="webkitgtk-WebKitWebDatabase.html#webkit-web-database-get-display-name"/>
+    <function name="webkit_web_database_get_expected_size ()" link="webkitgtk-WebKitWebDatabase.html#webkit-web-database-get-expected-size"/>
+    <function name="webkit_web_database_get_filename ()" link="webkitgtk-WebKitWebDatabase.html#webkit-web-database-get-filename"/>
+    <function name="webkit_web_database_get_name ()" link="webkitgtk-WebKitWebDatabase.html#webkit-web-database-get-name"/>
+    <function name="webkit_web_database_get_security_origin ()" link="webkitgtk-WebKitWebDatabase.html#webkit-web-database-get-security-origin"/>
+    <function name="webkit_web_database_get_size ()" link="webkitgtk-WebKitWebDatabase.html#webkit-web-database-get-size"/>
+    <function name="webkit_web_database_remove ()" link="webkitgtk-WebKitWebDatabase.html#webkit-web-database-remove"/>
+    <function name="WebKitWebDataSource" link="webkitgtk-WebKitWebDataSource.html#WebKitWebDataSource"/>
+    <function name="webkit_web_data_source_get_data ()" link="webkitgtk-WebKitWebDataSource.html#webkit-web-data-source-get-data"/>
+    <function name="webkit_web_data_source_get_encoding ()" link="webkitgtk-WebKitWebDataSource.html#webkit-web-data-source-get-encoding"/>
+    <function name="webkit_web_data_source_get_initial_request ()" link="webkitgtk-WebKitWebDataSource.html#webkit-web-data-source-get-initial-request"/>
+    <function name="webkit_web_data_source_get_main_resource ()" link="webkitgtk-WebKitWebDataSource.html#webkit-web-data-source-get-main-resource"/>
+    <function name="webkit_web_data_source_get_request ()" link="webkitgtk-WebKitWebDataSource.html#webkit-web-data-source-get-request"/>
+    <function name="webkit_web_data_source_get_subresources ()" link="webkitgtk-WebKitWebDataSource.html#webkit-web-data-source-get-subresources"/>
+    <function name="webkit_web_data_source_get_unreachable_uri ()" link="webkitgtk-WebKitWebDataSource.html#webkit-web-data-source-get-unreachable-uri"/>
+    <function name="webkit_web_data_source_get_web_frame ()" link="webkitgtk-WebKitWebDataSource.html#webkit-web-data-source-get-web-frame"/>
+    <function name="webkit_web_data_source_is_loading ()" link="webkitgtk-WebKitWebDataSource.html#webkit-web-data-source-is-loading"/>
+    <function name="webkit_web_data_source_new ()" link="webkitgtk-WebKitWebDataSource.html#webkit-web-data-source-new"/>
+    <function name="WebKitWebResource" link="webkitgtk-WebKitWebResource.html#WebKitWebResource"/>
+    <function name="webkit_web_resource_get_data ()" link="webkitgtk-WebKitWebResource.html#webkit-web-resource-get-data"/>
+    <function name="webkit_web_resource_get_encoding ()" link="webkitgtk-WebKitWebResource.html#webkit-web-resource-get-encoding"/>
+    <function name="webkit_web_resource_get_frame_name ()" link="webkitgtk-WebKitWebResource.html#webkit-web-resource-get-frame-name"/>
+    <function name="webkit_web_resource_get_mime_type ()" link="webkitgtk-WebKitWebResource.html#webkit-web-resource-get-mime-type"/>
+    <function name="webkit_web_resource_get_type ()" link="webkitgtk-WebKitWebResource.html#webkit-web-resource-get-type"/>
+    <function name="webkit_web_resource_get_uri ()" link="webkitgtk-WebKitWebResource.html#webkit-web-resource-get-uri"/>
+    <function name="webkit_web_resource_new ()" link="webkitgtk-WebKitWebResource.html#webkit-web-resource-new"/>
+    <function name="enum WebKitDownloadError" link="webkitgtk-WebKitDownload.html#WebKitDownloadError"/>
+    <function name="enum WebKitDownloadStatus" link="webkitgtk-WebKitDownload.html#WebKitDownloadStatus"/>
+    <function name="WebKitDownload" link="webkitgtk-WebKitDownload.html#WebKitDownload"/>
+    <function name="webkit_download_cancel ()" link="webkitgtk-WebKitDownload.html#webkit-download-cancel"/>
+    <function name="webkit_download_get_current_size ()" link="webkitgtk-WebKitDownload.html#webkit-download-get-current-size"/>
+    <function name="webkit_download_get_destination_uri ()" link="webkitgtk-WebKitDownload.html#webkit-download-get-destination-uri"/>
+    <function name="webkit_download_get_elapsed_time ()" link="webkitgtk-WebKitDownload.html#webkit-download-get-elapsed-time"/>
+    <function name="webkit_download_get_network_request ()" link="webkitgtk-WebKitDownload.html#webkit-download-get-network-request"/>
+    <function name="webkit_download_get_network_response ()" link="webkitgtk-WebKitDownload.html#webkit-download-get-network-response"/>
+    <function name="webkit_download_get_progress ()" link="webkitgtk-WebKitDownload.html#webkit-download-get-progress"/>
+    <function name="webkit_download_get_status ()" link="webkitgtk-WebKitDownload.html#webkit-download-get-status"/>
+    <function name="webkit_download_get_suggested_filename ()" link="webkitgtk-WebKitDownload.html#webkit-download-get-suggested-filename"/>
+    <function name="webkit_download_get_total_size ()" link="webkitgtk-WebKitDownload.html#webkit-download-get-total-size"/>
+    <function name="webkit_download_get_uri ()" link="webkitgtk-WebKitDownload.html#webkit-download-get-uri"/>
+    <function name="webkit_download_new ()" link="webkitgtk-WebKitDownload.html#webkit-download-new"/>
+    <function name="webkit_download_set_destination_uri ()" link="webkitgtk-WebKitDownload.html#webkit-download-set-destination-uri"/>
+    <function name="webkit_download_start ()" link="webkitgtk-WebKitDownload.html#webkit-download-start"/>
+    <function name="The &quot;current-size&quot; property" link="webkitgtk-WebKitDownload.html#WebKitDownload--current-size"/>
+    <function name="The &quot;destination-uri&quot; property" link="webkitgtk-WebKitDownload.html#WebKitDownload--destination-uri"/>
+    <function name="The &quot;network-request&quot; property" link="webkitgtk-WebKitDownload.html#WebKitDownload--network-request"/>
+    <function name="The &quot;network-response&quot; property" link="webkitgtk-WebKitDownload.html#WebKitDownload--network-response"/>
+    <function name="The &quot;progress&quot; property" link="webkitgtk-WebKitDownload.html#WebKitDownload--progress"/>
+    <function name="The &quot;status&quot; property" link="webkitgtk-WebKitDownload.html#WebKitDownload--status"/>
+    <function name="The &quot;suggested-filename&quot; property" link="webkitgtk-WebKitDownload.html#WebKitDownload--suggested-filename"/>
+    <function name="The &quot;total-size&quot; property" link="webkitgtk-WebKitDownload.html#WebKitDownload--total-size"/>
+    <function name="The &quot;error&quot; signal" link="webkitgtk-WebKitDownload.html#WebKitDownload-error"/>
+    <function name="WebKitHitTestResult" link="webkitgtk-WebKitHitTestResult.html#WebKitHitTestResult"/>
+    <function name="enum WebKitHitTestResultContext" link="webkitgtk-WebKitHitTestResult.html#WebKitHitTestResultContext"/>
+    <function name="WebKitSoupAuthDialog" link="webkitgtk-WebKitSoupAuthDialog.html#WebKitSoupAuthDialog"/>
+    <function name="WebKitSecurityOrigin" link="webkitgtk-WebKitSecurityOrigin.html#WebKitSecurityOrigin"/>
+    <function name="webkit_security_origin_get_all_web_databases ()" link="webkitgtk-WebKitSecurityOrigin.html#webkit-security-origin-get-all-web-databases"/>
+    <function name="webkit_security_origin_get_host ()" link="webkitgtk-WebKitSecurityOrigin.html#webkit-security-origin-get-host"/>
+    <function name="webkit_security_origin_get_port ()" link="webkitgtk-WebKitSecurityOrigin.html#webkit-security-origin-get-port"/>
+    <function name="webkit_security_origin_get_protocol ()" link="webkitgtk-WebKitSecurityOrigin.html#webkit-security-origin-get-protocol"/>
+    <function name="webkit_security_origin_get_type ()" link="webkitgtk-WebKitSecurityOrigin.html#webkit-security-origin-get-type"/>
+    <function name="webkit_security_origin_get_web_database_quota ()" link="webkitgtk-WebKitSecurityOrigin.html#webkit-security-origin-get-web-database-quota"/>
+    <function name="webkit_security_origin_get_web_database_usage ()" link="webkitgtk-WebKitSecurityOrigin.html#webkit-security-origin-get-web-database-usage"/>
+    <function name="webkit_security_origin_set_web_database_quota ()" link="webkitgtk-WebKitSecurityOrigin.html#webkit-security-origin-set-web-database-quota"/>
+    <function name="WebKitWebWindowFeatures" link="webkitgtk-WebKitWebWindowFeatures.html#WebKitWebWindowFeatures"/>
+    <function name="webkit_web_window_features_equal ()" link="webkitgtk-WebKitWebWindowFeatures.html#webkit-web-window-features-equal"/>
+    <function name="webkit_web_window_features_new ()" link="webkitgtk-WebKitWebWindowFeatures.html#webkit-web-window-features-new"/>
+    <function name="The &quot;fullscreen&quot; property" link="webkitgtk-WebKitWebWindowFeatures.html#WebKitWebWindowFeatures--fullscreen"/>
+    <function name="The &quot;height&quot; property" link="webkitgtk-WebKitWebWindowFeatures.html#WebKitWebWindowFeatures--height"/>
+    <function name="The &quot;locationbar-visible&quot; property" link="webkitgtk-WebKitWebWindowFeatures.html#WebKitWebWindowFeatures--locationbar-visible"/>
+    <function name="The &quot;menubar-visible&quot; property" link="webkitgtk-WebKitWebWindowFeatures.html#WebKitWebWindowFeatures--menubar-visible"/>
+    <function name="The &quot;scrollbar-visible&quot; property" link="webkitgtk-WebKitWebWindowFeatures.html#WebKitWebWindowFeatures--scrollbar-visible"/>
+    <function name="The &quot;statusbar-visible&quot; property" link="webkitgtk-WebKitWebWindowFeatures.html#WebKitWebWindowFeatures--statusbar-visible"/>
+    <function name="The &quot;toolbar-visible&quot; property" link="webkitgtk-WebKitWebWindowFeatures.html#WebKitWebWindowFeatures--toolbar-visible"/>
+    <function name="The &quot;width&quot; property" link="webkitgtk-WebKitWebWindowFeatures.html#WebKitWebWindowFeatures--width"/>
+    <function name="The &quot;x&quot; property" link="webkitgtk-WebKitWebWindowFeatures.html#WebKitWebWindowFeatures--x"/>
+    <function name="The &quot;y&quot; property" link="webkitgtk-WebKitWebWindowFeatures.html#WebKitWebWindowFeatures--y"/>
+    <function name="enum WebKitCacheModel" link="webkitgtk-webkitcachemodel.html#WebKitCacheModel"/>
+    <function name="webkit_get_cache_model ()" link="webkitgtk-webkitcachemodel.html#webkit-get-cache-model"/>
+    <function name="webkit_set_cache_model ()" link="webkitgtk-webkitcachemodel.html#webkit-set-cache-model"/>
+    <function name="Logging" link="webkit-environment.html#id565630"/>
+  </functions>
+</book>

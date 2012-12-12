@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE book PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "">
+<book xmlns="http://www.devhelp.net/book" title="WebKitGTK+ Reference Manual" link="index.html" author="" name="webkitgtk" version="2" language="c">
+  <chapters>
+    <sub name="Class Overview" link="ch01.html">
+      <sub name="WebKitWebView" link="webkitgtk-WebKitWebView.html"/>
+      <sub name="WebKitWebFrame" link="webkitgtk-WebKitWebFrame.html"/>
+      <sub name="WebKitWebSettings" link="webkitgtk-WebKitWebSettings.html"/>
+      <sub name="WebKitWebBackForwardList" link="webkitgtk-WebKitWebBackForwardList.html"/>
+      <sub name="WebKitWebHistoryItem" link="webkitgtk-WebKitWebHistoryItem.html"/>
+      <sub name="WebKitWebNavigationAction" link="webkitgtk-WebKitWebNavigationAction.html"/>
+      <sub name="WebKitWebPolicyDecision" link="webkitgtk-WebKitWebPolicyDecision.html"/>
+      <sub name="WebKitNetworkRequest" link="webkitgtk-WebKitNetworkRequest.html"/>
+      <sub name="WebKitWebInspector" link="webkitgtk-WebKitWebInspector.html"/>
+      <sub name="WebKitDownload" link="webkitgtk-WebKitDownload.html"/>
+      <sub name="WebKitSoupAuthDialog" link="webkitgtk-WebKitSoupAuthDialog.html"/>
+      <sub name="WebKitWebWindowFeatures" link="webkitgtk-WebKitWebWindowFeatures.html"/>
+    </sub>
+    <sub name="Running WebKitGTK+-based programs" link="ch02.html">
+      <sub name="Environment" link="webkit-environment.html"/>
+    </sub>
+    <sub name="Index" link="index-all.html"/>
+    <sub name="Index of deprecated symbols" link="index-deprecated.html"/>
+    <sub name="Index of new symbols in 1.0.1" link="index-1.0.1.html"/>
+    <sub name="Index of new symbols in 1.0.2" link="index-1.0.2.html"/>
+    <sub name="Index of new symbols in 1.0.3" link="index-1.0.3.html"/>
+    <sub name="Index of new symbols in 1.1.1" link="index-1.1.1.html"/>
+    <sub name="Index of new symbols in 1.1.2" link="index-1.1.2.html"/>
+    <sub name="Index of new symbols in 1.1.3" link="index-1.1.3.html"/>
+    <sub name="Index of new symbols in 1.1.4" link="index-1.1.4.html"/>
+    <sub name="Index of new symbols in 1.1.5" link="index-1.1.5.html"/>
+  </chapters>
+  <functions>
+    <keyword type="enum" name="enum WebKitNavigationResponse" link="webkitgtk-WebKitWebView.html#WebKitNavigationResponse"/>
+    <keyword type="enum" name="enum WebKitWebViewTargetInfo" link="webkitgtk-WebKitWebView.html#WebKitWebViewTargetInfo"/>
+    <keyword type="struct" name="WebKitWebView" link="webkitgtk-WebKitWebView.html#WebKitWebView"/>
+    <keyword type="function" name="webkit_web_view_can_copy_clipboard ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-can-copy-clipboard"/>
+    <keyword type="function" name="webkit_web_view_can_cut_clipboard ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-can-cut-clipboard"/>
+    <keyword type="function" name="webkit_web_view_can_go_back ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-can-go-back"/>
+    <keyword type="function" name="webkit_web_view_can_go_back_or_forward ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-can-go-back-or-forward"/>
+    <keyword type="function" name="webkit_web_view_can_go_forward ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-can-go-forward"/>
+    <keyword type="function" name="webkit_web_view_can_paste_clipboard ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-can-paste-clipboard"/>
+    <keyword type="function" name="webkit_web_view_can_show_mime_type ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-can-show-mime-type" since="1.0.3"/>
+    <keyword type="function" name="webkit_web_view_copy_clipboard ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-copy-clipboard"/>
+    <keyword type="function" name="webkit_web_view_cut_clipboard ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-cut-clipboard"/>
+    <keyword type="function" name="webkit_web_view_delete_selection ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-delete-selection"/>
+    <keyword type="function" name="webkit_web_view_execute_script ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-execute-script"/>
+    <keyword type="function" name="webkit_web_view_get_back_forward_list ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-get-back-forward-list"/>
+    <keyword type="function" name="webkit_web_view_get_copy_target_list ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-get-copy-target-list"/>
+    <keyword type="function" name="webkit_web_view_get_custom_encoding ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-get-custom-encoding" since="1.1.1"/>
+    <keyword type="function" name="webkit_web_view_get_editable ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-get-editable"/>
+    <keyword type="function" name="webkit_web_view_get_encoding ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-get-encoding" since="1.1.1"/>
+    <keyword type="function" name="webkit_web_view_get_focused_frame ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-get-focused-frame"/>
+    <keyword type="function" name="webkit_web_view_get_full_content_zoom ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-get-full-content-zoom" since="1.0.1"/>
+    <keyword type="function" name="webkit_web_view_get_inspector ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-get-inspector" since="1.0.3"/>
+    <keyword type="function" name="webkit_web_view_get_main_frame ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-get-main-frame"/>
+    <keyword type="function" name="webkit_web_view_get_paste_target_list ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-get-paste-target-list"/>
+    <keyword type="function" name="webkit_web_view_get_settings ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-get-settings"/>
+    <keyword type="function" name="webkit_web_view_get_title ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-get-title" since="1.1.4"/>
+    <keyword type="function" name="webkit_web_view_get_transparent ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-get-transparent"/>
+    <keyword type="function" name="webkit_web_view_get_uri ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-get-uri" since="1.1.4"/>
+    <keyword type="function" name="webkit_web_view_get_zoom_level ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-get-zoom-level" since="1.0.1"/>
+    <keyword type="function" name="webkit_web_view_go_back ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-go-back"/>
+    <keyword type="function" name="webkit_web_view_go_back_or_forward ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-go-back-or-forward"/>
+    <keyword type="function" name="webkit_web_view_go_forward ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-go-forward"/>
+    <keyword type="function" name="webkit_web_view_go_to_back_forward_item ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-go-to-back-forward-item"/>
+    <keyword type="function" name="webkit_web_view_has_selection ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-has-selection"/>
+    <keyword type="function" name="webkit_web_view_load_html_string ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-load-html-string"/>
+    <keyword type="function" name="webkit_web_view_load_request ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-load-request" since="1.1.1"/>
+    <keyword type="function" name="webkit_web_view_load_string ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-load-string"/>
+    <keyword type="function" name="webkit_web_view_load_uri ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-load-uri" since="1.1.1"/>
+    <keyword type="function" name="webkit_web_view_mark_text_matches ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-mark-text-matches"/>
+    <keyword type="function" name="webkit_web_view_move_cursor ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-move-cursor" since="1.1.4"/>
+    <keyword type="function" name="webkit_web_view_new ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-new"/>
+    <keyword type="function" name="webkit_web_view_open ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-open" deprecated="1.1.1: Use webkit_web_view_load_uri() instead."/>
+    <keyword type="function" name="webkit_web_view_paste_clipboard ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-paste-clipboard"/>
+    <keyword type="function" name="webkit_web_view_reload ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-reload"/>
+    <keyword type="function" name="webkit_web_view_reload_bypass_cache ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-reload-bypass-cache" since="1.0.3"/>
+    <keyword type="function" name="webkit_web_view_search_text ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-search-text"/>
+    <keyword type="function" name="webkit_web_view_select_all ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-select-all"/>
+    <keyword type="function" name="webkit_web_view_set_custom_encoding ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-set-custom-encoding" since="1.1.1"/>
+    <keyword type="function" name="webkit_web_view_set_editable ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-set-editable"/>
+    <keyword type="function" name="webkit_web_view_set_full_content_zoom ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-set-full-content-zoom" since="1.0.1"/>
+    <keyword type="function" name="webkit_web_view_set_highlight_text_matches ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-set-highlight-text-matches"/>
+    <keyword type="function" name="webkit_web_view_set_maintains_back_forward_list ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-set-maintains-back-forward-list"/>
+    <keyword type="function" name="webkit_web_view_set_settings ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-set-settings"/>
+    <keyword type="function" name="webkit_web_view_set_transparent ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-set-transparent"/>
+    <keyword type="function" name="webkit_web_view_set_zoom_level ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-set-zoom-level" since="1.0.1"/>
+    <keyword type="function" name="webkit_web_view_stop_loading ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-stop-loading"/>
+    <keyword type="function" name="webkit_web_view_unmark_text_matches ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-unmark-text-matches"/>
+    <keyword type="function" name="webkit_web_view_zoom_in ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-zoom-in" since="1.0.1"/>
+    <keyword type="function" name="webkit_web_view_zoom_out ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-zoom-out" since="1.0.1"/>
+    <keyword type="function" name="webkit_web_view_get_window_features ()" link="webkitgtk-WebKitWebView.html#webkit-web-view-get-window-features" since="1.0.3"/>
+    <keyword type="property" name="The &quot;copy-target-list&quot; property" link="webkitgtk-WebKitWebView.html#WebKitWebView--copy-target-list"/>
+    <keyword type="property" name="The &quot;custom-encoding&quot; property" link="webkitgtk-WebKitWebView.html#WebKitWebView--custom-encoding"/>
+    <keyword type="property" name="The &quot;editable&quot; property" link="webkitgtk-WebKitWebView.html#WebKitWebView--editable"/>
+    <keyword type="property" name="The &quot;encoding&quot; property" link="webkitgtk-WebKitWebView.html#WebKitWebView--encoding"/>
+    <keyword type="property" name="The &quot;full-content-zoom&quot; property" link="webkitgtk-WebKitWebView.html#WebKitWebView--full-content-zoom"/>
+    <keyword type="property" name="The &quot;paste-target-list&quot; property" link="webkitgtk-WebKitWebView.html#WebKitWebView--paste-target-list"/>
+    <keyword type="property" name="The &quot;settings&quot; property" link="webkitgtk-WebKitWebView.html#WebKitWebView--settings"/>
+    <keyword type="property" name="The &quot;title&quot; property" link="webkitgtk-WebKitWebView.html#WebKitWebView--title"/>
+    <keyword type="property" name="The &quot;transparent&quot; property" link="webkitgtk-WebKitWebView.html#WebKitWebView--transparent"/>
+    <keyword type="property" name="The &quot;uri&quot; property" link="webkitgtk-WebKitWebView.html#WebKitWebView--uri"/>
+    <keyword type="property" name="The &quot;web-inspector&quot; property" link="webkitgtk-WebKitWebView.html#WebKitWebView--web-inspector"/>
+    <keyword type="property" name="The &quot;window-features&quot; property" link="webkitgtk-WebKitWebView.html#WebKitWebView--window-features"/>
+    <keyword type="property" name="The &quot;zoom-level&quot; property" link="webkitgtk-WebKitWebView.html#WebKitWebView--zoom-level"/>
+    <keyword type="signal" name="The &quot;console-message&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-console-message"/>
+    <keyword type="signal" name="The &quot;copy-clipboard&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-copy-clipboard"/>
+    <keyword type="signal" name="The &quot;create-web-view&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-create-web-view"/>
+    <keyword type="signal" name="The &quot;cut-clipboard&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-cut-clipboard"/>
+    <keyword type="signal" name="The &quot;download-requested&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-download-requested"/>
+    <keyword type="signal" name="The &quot;hovering-over-link&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-hovering-over-link"/>
+    <keyword type="signal" name="The &quot;icon-loaded&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-icon-loaded"/>
+    <keyword type="signal" name="The &quot;load-committed&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-load-committed"/>
+    <keyword type="signal" name="The &quot;load-finished&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-load-finished"/>
+    <keyword type="signal" name="The &quot;load-progress-changed&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-load-progress-changed"/>
+    <keyword type="signal" name="The &quot;load-started&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-load-started"/>
+    <keyword type="signal" name="The &quot;mime-type-policy-decision-requested&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-mime-type-policy-decision-requested"/>
+    <keyword type="signal" name="The &quot;move-cursor&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-move-cursor"/>
+    <keyword type="signal" name="The &quot;navigation-policy-decision-requested&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-navigation-policy-decision-requested"/>
+    <keyword type="signal" name="The &quot;navigation-requested&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-navigation-requested"/>
+    <keyword type="signal" name="The &quot;new-window-policy-decision-requested&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-new-window-policy-decision-requested"/>
+    <keyword type="signal" name="The &quot;paste-clipboard&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-paste-clipboard"/>
+    <keyword type="signal" name="The &quot;populate-popup&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-populate-popup"/>
+    <keyword type="signal" name="The &quot;print-requested&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-print-requested"/>
+    <keyword type="signal" name="The &quot;script-alert&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-script-alert"/>
+    <keyword type="signal" name="The &quot;script-confirm&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-script-confirm"/>
+    <keyword type="signal" name="The &quot;script-prompt&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-script-prompt"/>
+    <keyword type="signal" name="The &quot;select-all&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-select-all"/>
+    <keyword type="signal" name="The &quot;selection-changed&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-selection-changed"/>
+    <keyword type="signal" name="The &quot;set-scroll-adjustments&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-set-scroll-adjustments"/>
+    <keyword type="signal" name="The &quot;status-bar-text-changed&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-status-bar-text-changed"/>
+    <keyword type="signal" name="The &quot;title-changed&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-title-changed"/>
+    <keyword type="signal" name="The &quot;web-view-ready&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-web-view-ready"/>
+    <keyword type="signal" name="The &quot;window-object-cleared&quot; signal" link="webkitgtk-WebKitWebView.html#WebKitWebView-window-object-cleared"/>
+    <keyword type="struct" name="WebKitWebFrame" link="webkitgtk-WebKitWebFrame.html#WebKitWebFrame"/>
+    <keyword type="function" name="webkit_web_frame_find_frame ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-find-frame"/>
+    <keyword type="function" name="webkit_web_frame_get_global_context ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-get-global-context"/>
+    <keyword type="function" name="webkit_web_frame_get_name ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-get-name"/>
+    <keyword type="function" name="webkit_web_frame_get_parent ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-get-parent"/>
+    <keyword type="function" name="webkit_web_frame_get_title ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-get-title"/>
+    <keyword type="function" name="webkit_web_frame_get_uri ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-get-uri"/>
+    <keyword type="function" name="webkit_web_frame_get_web_view ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-get-web-view"/>
+    <keyword type="function" name="webkit_web_frame_load_request ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-load-request"/>
+    <keyword type="function" name="webkit_web_frame_load_string ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-load-string" since="1.1.1"/>
+    <keyword type="function" name="webkit_web_frame_load_uri ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-load-uri" since="1.1.1"/>
+    <keyword type="function" name="webkit_web_frame_new ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-new" deprecated=""/>
+    <keyword type="function" name="webkit_web_frame_print ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-print" since="1.1.5"/>
+    <keyword type="function" name="webkit_web_frame_print_full ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-print-full" since="1.1.5"/>
+    <keyword type="function" name="webkit_web_frame_reload ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-reload"/>
+    <keyword type="function" name="webkit_web_frame_stop_loading ()" link="webkitgtk-WebKitWebFrame.html#webkit-web-frame-stop-loading"/>
+    <keyword type="struct" name="WebKitWebSettings" link="webkitgtk-WebKitWebSettings.html#WebKitWebSettings"/>
+    <keyword type="function" name="webkit_web_settings_copy ()" link="webkitgtk-WebKitWebSettings.html#webkit-web-settings-copy"/>
+    <keyword type="function" name="webkit_web_settings_new ()" link="webkitgtk-WebKitWebSettings.html#webkit-web-settings-new"/>
+    <keyword type="property" name="The &quot;auto-load-images&quot; property" link="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--auto-load-images"/>
+    <keyword type="property" name="The &quot;auto-shrink-images&quot; property" link="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--auto-shrink-images"/>
+    <keyword type="property" name="The &quot;cursive-font-family&quot; property" link="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--cursive-font-family"/>
+    <keyword type="property" name="The &quot;default-encoding&quot; property" link="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--default-encoding"/>
+    <keyword type="property" name="The &quot;default-font-family&quot; property" link="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--default-font-family"/>
+    <keyword type="property" name="The &quot;default-font-size&quot; property" link="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--default-font-size"/>
+    <keyword type="property" name="The &quot;default-monospace-font-size&quot; property" link="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--default-monospace-font-size"/>
+    <keyword type="property" name="The &quot;enable-developer-extras&quot; property" link="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--enable-developer-extras"/>
+    <keyword type="property" name="The &quot;enable-plugins&quot; property" link="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--enable-plugins"/>
+    <keyword type="property" name="The &quot;enable-private-browsing&quot; property" link="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--enable-private-browsing"/>
+    <keyword type="property" name="The &quot;enable-scripts&quot; property" link="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--enable-scripts"/>
+    <keyword type="property" name="The &quot;enforce-96-dpi&quot; property" link="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--enforce-96-dpi"/>
+    <keyword type="property" name="The &quot;fantasy-font-family&quot; property" link="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--fantasy-font-family"/>
+    <keyword type="property" name="The &quot;minimum-font-size&quot; property" link="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--minimum-font-size"/>
+    <keyword type="property" name="The &quot;minimum-logical-font-size&quot; property" link="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--minimum-logical-font-size"/>
+    <keyword type="property" name="The &quot;monospace-font-family&quot; property" link="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--monospace-font-family"/>
+    <keyword type="property" name="The &quot;print-backgrounds&quot; property" link="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--print-backgrounds"/>
+    <keyword type="property" name="The &quot;resizable-text-areas&quot; property" link="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--resizable-text-areas"/>
+    <keyword type="property" name="The &quot;sans-serif-font-family&quot; property" link="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--sans-serif-font-family"/>
+    <keyword type="property" name="The &quot;serif-font-family&quot; property" link="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--serif-font-family"/>
+    <keyword type="property" name="The &quot;user-stylesheet-uri&quot; property" link="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--user-stylesheet-uri"/>
+    <keyword type="property" name="The &quot;zoom-step&quot; property" link="webkitgtk-WebKitWebSettings.html#WebKitWebSettings--zoom-step"/>
+    <keyword type="struct" name="WebKitWebBackForwardList" link="webkitgtk-WebKitWebBackForwardList.html#WebKitWebBackForwardList"/>
+    <keyword type="function" name="webkit_web_back_forward_list_add_item ()" link="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-add-item" since="1.1.1"/>
+    <keyword type="function" name="webkit_web_back_forward_list_contains_item ()" link="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-contains-item"/>
+    <keyword type="function" name="webkit_web_back_forward_list_get_back_item ()" link="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-get-back-item"/>
+    <keyword type="function" name="webkit_web_back_forward_list_get_back_length ()" link="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-get-back-length"/>
+    <keyword type="function" name="webkit_web_back_forward_list_get_back_list_with_limit ()" link="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-get-back-list-with-limit"/>
+    <keyword type="function" name="webkit_web_back_forward_list_get_current_item ()" link="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-get-current-item"/>
+    <keyword type="function" name="webkit_web_back_forward_list_get_forward_item ()" link="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-get-forward-item"/>
+    <keyword type="function" name="webkit_web_back_forward_list_get_forward_length ()" link="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-get-forward-length"/>
+    <keyword type="function" name="webkit_web_back_forward_list_get_forward_list_with_limit ()" link="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-get-forward-list-with-limit"/>
+    <keyword type="function" name="webkit_web_back_forward_list_get_limit ()" link="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-get-limit"/>
+    <keyword type="function" name="webkit_web_back_forward_list_get_nth_item ()" link="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-get-nth-item"/>
+    <keyword type="function" name="webkit_web_back_forward_list_go_back ()" link="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-go-back"/>
+    <keyword type="function" name="webkit_web_back_forward_list_go_forward ()" link="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-go-forward"/>
+    <keyword type="function" name="webkit_web_back_forward_list_go_to_item ()" link="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-go-to-item"/>
+    <keyword type="function" name="webkit_web_back_forward_list_new_with_web_view ()" link="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-new-with-web-view"/>
+    <keyword type="function" name="webkit_web_back_forward_list_set_limit ()" link="webkitgtk-WebKitWebBackForwardList.html#webkit-web-back-forward-list-set-limit"/>
+    <keyword type="struct" name="WebKitWebHistoryItem" link="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem"/>
+    <keyword type="function" name="webkit_web_history_item_get_alternate_title ()" link="webkitgtk-WebKitWebHistoryItem.html#webkit-web-history-item-get-alternate-title"/>
+    <keyword type="function" name="webkit_web_history_item_get_last_visited_time ()" link="webkitgtk-WebKitWebHistoryItem.html#webkit-web-history-item-get-last-visited-time"/>
+    <keyword type="function" name="webkit_web_history_item_get_original_uri ()" link="webkitgtk-WebKitWebHistoryItem.html#webkit-web-history-item-get-original-uri"/>
+    <keyword type="function" name="webkit_web_history_item_get_title ()" link="webkitgtk-WebKitWebHistoryItem.html#webkit-web-history-item-get-title"/>
+    <keyword type="function" name="webkit_web_history_item_get_uri ()" link="webkitgtk-WebKitWebHistoryItem.html#webkit-web-history-item-get-uri"/>
+    <keyword type="function" name="webkit_web_history_item_new ()" link="webkitgtk-WebKitWebHistoryItem.html#webkit-web-history-item-new"/>
+    <keyword type="function" name="webkit_web_history_item_new_with_data ()" link="webkitgtk-WebKitWebHistoryItem.html#webkit-web-history-item-new-with-data"/>
+    <keyword type="function" name="webkit_web_history_item_set_alternate_title ()" link="webkitgtk-WebKitWebHistoryItem.html#webkit-web-history-item-set-alternate-title"/>
+    <keyword type="property" name="The &quot;alternate-title&quot; property" link="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem--alternate-title"/>
+    <keyword type="property" name="The &quot;last-visited-time&quot; property" link="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem--last-visited-time"/>
+    <keyword type="property" name="The &quot;original-uri&quot; property" link="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem--original-uri"/>
+    <keyword type="property" name="The &quot;title&quot; property" link="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem--title"/>
+    <keyword type="property" name="The &quot;uri&quot; property" link="webkitgtk-WebKitWebHistoryItem.html#WebKitWebHistoryItem--uri"/>
+    <keyword type="struct" name="WebKitWebNavigationAction" link="webkitgtk-WebKitWebNavigationAction.html#WebKitWebNavigationAction"/>
+    <keyword type="enum" name="enum WebKitWebNavigationReason" link="webkitgtk-WebKitWebNavigationAction.html#WebKitWebNavigationReason"/>
+    <keyword type="function" name="webkit_web_navigation_action_get_button ()" link="webkitgtk-WebKitWebNavigationAction.html#webkit-web-navigation-action-get-button" since="1.0.3"/>
+    <keyword type="function" name="webkit_web_navigation_action_get_modifier_state ()" link="webkitgtk-WebKitWebNavigationAction.html#webkit-web-navigation-action-get-modifier-state" since="1.0.3"/>
+    <keyword type="function" name="webkit_web_navigation_action_get_original_uri ()" link="webkitgtk-WebKitWebNavigationAction.html#webkit-web-navigation-action-get-original-uri" since="1.0.3"/>
+    <keyword type="function" name="webkit_web_navigation_action_get_reason ()" link="webkitgtk-WebKitWebNavigationAction.html#webkit-web-navigation-action-get-reason" since="1.0.3"/>
+    <keyword type="function" name="webkit_web_navigation_action_get_type ()" link="webkitgtk-WebKitWebNavigationAction.html#webkit-web-navigation-action-get-type"/>
+    <keyword type="function" name="webkit_web_navigation_action_set_original_uri ()" link="webkitgtk-WebKitWebNavigationAction.html#webkit-web-navigation-action-set-original-uri" since="1.0.3"/>
+    <keyword type="function" name="webkit_web_navigation_action_set_reason ()" link="webkitgtk-WebKitWebNavigationAction.html#webkit-web-navigation-action-set-reason" since="1.0.3"/>
+    <keyword type="struct" name="WebKitWebPolicyDecision" link="webkitgtk-WebKitWebPolicyDecision.html#WebKitWebPolicyDecision"/>
+    <keyword type="function" name="webkit_web_policy_decision_download ()" link="webkitgtk-WebKitWebPolicyDecision.html#webkit-web-policy-decision-download" since="1.0.3"/>
+    <keyword type="function" name="webkit_web_policy_decision_get_type ()" link="webkitgtk-WebKitWebPolicyDecision.html#webkit-web-policy-decision-get-type"/>
+    <keyword type="function" name="webkit_web_policy_decision_ignore ()" link="webkitgtk-WebKitWebPolicyDecision.html#webkit-web-policy-decision-ignore" since="1.0.3"/>
+    <keyword type="function" name="webkit_web_policy_decision_use ()" link="webkitgtk-WebKitWebPolicyDecision.html#webkit-web-policy-decision-use" since="1.0.3"/>
+    <keyword type="struct" name="WebKitNetworkRequest" link="webkitgtk-WebKitNetworkRequest.html#WebKitNetworkRequest"/>
+    <keyword type="function" name="webkit_network_request_get_uri ()" link="webkitgtk-WebKitNetworkRequest.html#webkit-network-request-get-uri" since="1.0.0"/>
+    <keyword type="struct" name="WebKitWebInspector" link="webkitgtk-WebKitWebInspector.html#WebKitWebInspector"/>
+    <keyword type="function" name="webkit_web_inspector_get_inspected_uri ()" link="webkitgtk-WebKitWebInspector.html#webkit-web-inspector-get-inspected-uri" since="1.0.3"/>
+    <keyword type="function" name="webkit_web_inspector_get_web_view ()" link="webkitgtk-WebKitWebInspector.html#webkit-web-inspector-get-web-view" since="1.0.3"/>
+    <keyword type="property" name="The &quot;inspected-uri&quot; property" link="webkitgtk-WebKitWebInspector.html#WebKitWebInspector--inspected-uri"/>
+    <keyword type="property" name="The &quot;javascript-profiling-enabled&quot; property" link="webkitgtk-WebKitWebInspector.html#WebKitWebInspector--javascript-profiling-enabled"/>
+    <keyword type="property" name="The &quot;web-view&quot; property" link="webkitgtk-WebKitWebInspector.html#WebKitWebInspector--web-view"/>
+    <keyword type="signal" name="The &quot;attach-window&quot; signal" link="webkitgtk-WebKitWebInspector.html#WebKitWebInspector-attach-window"/>
+    <keyword type="signal" name="The &quot;close-window&quot; signal" link="webkitgtk-WebKitWebInspector.html#WebKitWebInspector-close-window"/>
+    <keyword type="signal" name="The &quot;detach-window&quot; signal" link="webkitgtk-WebKitWebInspector.html#WebKitWebInspector-detach-window"/>
+    <keyword type="signal" name="The &quot;finished&quot; signal" link="webkitgtk-WebKitWebInspector.html#WebKitWebInspector-finished"/>
+    <keyword type="signal" name="The &quot;inspect-web-view&quot; signal" link="webkitgtk-WebKitWebInspector.html#WebKitWebInspector-inspect-web-view"/>
+    <keyword type="signal" name="The &quot;show-window&quot; signal" link="webkitgtk-WebKitWebInspector.html#WebKitWebInspector-show-window"/>
+    <keyword type="struct" name="WebKitDownload" link="webkitgtk-WebKitDownload.html#WebKitDownload"/>
+    <keyword type="function" name="webkit_download_cancel ()" link="webkitgtk-WebKitDownload.html#webkit-download-cancel" since="1.1.2"/>
+    <keyword type="function" name="webkit_download_get_current_size ()" link="webkitgtk-WebKitDownload.html#webkit-download-get-current-size" since="1.1.2"/>
+    <keyword type="function" name="webkit_download_get_destination_uri ()" link="webkitgtk-WebKitDownload.html#webkit-download-get-destination-uri" since="1.1.2"/>
+    <keyword type="function" name="webkit_download_get_elapsed_time ()" link="webkitgtk-WebKitDownload.html#webkit-download-get-elapsed-time" since="1.1.2"/>
+    <keyword type="function" name="webkit_download_get_network_request ()" link="webkitgtk-WebKitDownload.html#webkit-download-get-network-request" since="1.1.2"/>
+    <keyword type="function" name="webkit_download_get_progress ()" link="webkitgtk-WebKitDownload.html#webkit-download-get-progress" since="1.1.2"/>
+    <keyword type="function" name="webkit_download_get_status ()" link="webkitgtk-WebKitDownload.html#webkit-download-get-status" since="1.1.2"/>
+    <keyword type="function" name="webkit_download_get_suggested_filename ()" link="webkitgtk-WebKitDownload.html#webkit-download-get-suggested-filename" since="1.1.2"/>
+    <keyword type="function" name="webkit_download_get_total_size ()" link="webkitgtk-WebKitDownload.html#webkit-download-get-total-size" since="1.1.2"/>
+    <keyword type="function" name="webkit_download_get_uri ()" link="webkitgtk-WebKitDownload.html#webkit-download-get-uri" since="1.1.2"/>
+    <keyword type="function" name="webkit_download_new ()" link="webkitgtk-WebKitDownload.html#webkit-download-new" since="1.1.2"/>
+    <keyword type="function" name="webkit_download_set_destination_uri ()" link="webkitgtk-WebKitDownload.html#webkit-download-set-destination-uri" since="1.1.2"/>
+    <keyword type="function" name="webkit_download_start ()" link="webkitgtk-WebKitDownload.html#webkit-download-start" since="1.1.2"/>
+    <keyword type="struct" name="WebKitSoupAuthDialog" link="webkitgtk-WebKitSoupAuthDialog.html#WebKitSoupAuthDialog"/>
+    <keyword type="struct" name="WebKitWebWindowFeatures" link="webkitgtk-WebKitWebWindowFeatures.html#WebKitWebWindowFeatures"/>
+    <keyword type="function" name="webkit_web_window_features_equal ()" link="webkitgtk-WebKitWebWindowFeatures.html#webkit-web-window-features-equal"/>
+    <keyword type="function" name="webkit_web_window_features_new ()" link="webkitgtk-WebKitWebWindowFeatures.html#webkit-web-window-features-new"/>
+    <keyword type="property" name="The &quot;fullscreen&quot; property" link="webkitgtk-WebKitWebWindowFeatures.html#WebKitWebWindowFeatures--fullscreen"/>
+    <keyword type="property" name="The &quot;height&quot; property" link="webkitgtk-WebKitWebWindowFeatures.html#WebKitWebWindowFeatures--height"/>
+    <keyword type="property" name="The &quot;locationbar-visible&quot; property" link="webkitgtk-WebKitWebWindowFeatures.html#WebKitWebWindowFeatures--locationbar-visible"/>
+    <keyword type="property" name="The &quot;menubar-visible&quot; property" link="webkitgtk-WebKitWebWindowFeatures.html#WebKitWebWindowFeatures--menubar-visible"/>
+    <keyword type="property" name="The &quot;scrollbar-visible&quot; property" link="webkitgtk-WebKitWebWindowFeatures.html#WebKitWebWindowFeatures--scrollbar-visible"/>
+    <keyword type="property" name="The &quot;statusbar-visible&quot; property" link="webkitgtk-WebKitWebWindowFeatures.html#WebKitWebWindowFeatures--statusbar-visible"/>
+    <keyword type="property" name="The &quot;toolbar-visible&quot; property" link="webkitgtk-WebKitWebWindowFeatures.html#WebKitWebWindowFeatures--toolbar-visible"/>
+    <keyword type="property" name="The &quot;width&quot; property" link="webkitgtk-WebKitWebWindowFeatures.html#WebKitWebWindowFeatures--width"/>
+    <keyword type="property" name="The &quot;x&quot; property" link="webkitgtk-WebKitWebWindowFeatures.html#WebKitWebWindowFeatures--x"/>
+    <keyword type="property" name="The &quot;y&quot; property" link="webkitgtk-WebKitWebWindowFeatures.html#WebKitWebWindowFeatures--y"/>
+    <keyword type="" name="Logging" link="webkit-environment.html#id2699390"/>
+  </functions>
+</book>

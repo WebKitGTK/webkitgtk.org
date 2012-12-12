@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitWebLoaderClient</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="WebKit2GTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitWebViewBase.html" title="WebKitWebViewBase">
+<link rel="next" href="WebKitBackForwardList.html" title="WebKitBackForwardList">
+<meta name="generator" content="GTK-Doc V1.18.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="WebKitWebViewBase.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">WebKit2GTK+ Reference Manual</th>
+<td><a accesskey="n" href="WebKitBackForwardList.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#WebKitWebLoaderClient.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitWebLoaderClient.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitWebLoaderClient.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitWebLoaderClient.signals" class="shortcut">Signals</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="WebKitWebLoaderClient"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitWebLoaderClient.top_of_page"></a>WebKitWebLoaderClient</span></h2>
+<p>WebKitWebLoaderClient</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitWebLoaderClient.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitWebLoaderClient.html#WebKitWebLoaderClient-struct" title="WebKitWebLoaderClient">WebKitWebLoaderClient</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitWebLoaderClient.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GObject
+   +----WebKitWebLoaderClient
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitWebLoaderClient.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitWebLoaderClient.html#WebKitWebLoaderClient-load-committed" title='The "load-committed" signal'>load-committed</a>"                                 : <code class="literal">Run Last</code>
+  "<a class="link" href="WebKitWebLoaderClient.html#WebKitWebLoaderClient-load-failed" title='The "load-failed" signal'>load-failed</a>"                                    : <code class="literal">Run Last</code>
+  "<a class="link" href="WebKitWebLoaderClient.html#WebKitWebLoaderClient-load-finished" title='The "load-finished" signal'>load-finished</a>"                                  : <code class="literal">Run Last</code>
+  "<a class="link" href="WebKitWebLoaderClient.html#WebKitWebLoaderClient-provisional-load-failed" title='The "provisional-load-failed" signal'>provisional-load-failed</a>"                        : <code class="literal">Run Last</code>
+  "<a class="link" href="WebKitWebLoaderClient.html#WebKitWebLoaderClient-provisional-load-received-server-redirect" title='The "provisional-load-received-server-redirect" signal'>provisional-load-received-server-redirect</a>"      : <code class="literal">Run Last</code>
+  "<a class="link" href="WebKitWebLoaderClient.html#WebKitWebLoaderClient-provisional-load-started" title='The "provisional-load-started" signal'>provisional-load-started</a>"                       : <code class="literal">Run Last</code>
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitWebLoaderClient.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitWebLoaderClient.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitWebLoaderClient-struct"></a><h3>WebKitWebLoaderClient</h3>
+<pre class="programlisting">typedef struct _WebKitWebLoaderClient WebKitWebLoaderClient;</pre>
+<p>
+</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitWebLoaderClient.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="WebKitWebLoaderClient-load-committed"></a><h3>The <code class="literal">"load-committed"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>            user_function                      (<a class="link" href="WebKitWebLoaderClient.html" title="WebKitWebLoaderClient"><span class="type">WebKitWebLoaderClient</span></a> *loader_client,
+                                                        <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>         *web_view,
+                                                        <span class="type">gpointer</span>               user_data)          : <code class="literal">Run Last</code></pre>
+<p>
+This signal is emitted when content starts arriving for a page load.
+The necessary transport requirements are stabilished, and the
+load is being performed.
+</p>
+<p>
+This signal is emitted after <a class="link" href="WebKitWebLoaderClient.html#WebKitWebLoaderClient-provisional-load-started" title='The "provisional-load-started" signal'><span class="type">"provisional-load-started"</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>loader_client</code></em> :</span></p></td>
+<td>the <a class="link" href="WebKitWebLoaderClient.html" title="WebKitWebLoaderClient"><span class="type">WebKitWebLoaderClient</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>the <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> associated with this event</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<code class="literal">TRUE</code> to stop other handlers from being invoked for the event.
+<code class="literal">FALSE</code> to propagate the event further.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebLoaderClient-load-failed"></a><h3>The <code class="literal">"load-failed"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>            user_function                      (<a class="link" href="WebKitWebLoaderClient.html" title="WebKitWebLoaderClient"><span class="type">WebKitWebLoaderClient</span></a> *loader_client,
+                                                        <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>         *web_view,
+                                                        <span class="type">gchar</span>                 *error,
+                                                        <span class="type">gpointer</span>               Returns,
+                                                        <span class="type">gpointer</span>               user_data)          : <code class="literal">Run Last</code></pre>
+<p>
+This signal is emitted when an error occurs loading a committed data source.
+By default, if the signal is not handled, a stock error page will be displayed.
+You need to handle the signal if you want to provide your own error page. This
+signal finishes the load so no other signals will be emitted after this one.
+</p>
+<p>
+This signal is emitted after <a class="link" href="WebKitWebLoaderClient.html#WebKitWebLoaderClient-load-committed" title='The "load-committed" signal'><span class="type">"load-committed"</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>loader_client</code></em> :</span></p></td>
+<td>the <a class="link" href="WebKitWebLoaderClient.html" title="WebKitWebLoaderClient"><span class="type">WebKitWebLoaderClient</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>the <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> associated with this event</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>the <span class="type">GError</span> that was triggered</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<code class="literal">TRUE</code> to stop other handlers from being invoked for the event.
+<code class="literal">FALSE</code> to propagate the event further.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebLoaderClient-load-finished"></a><h3>The <code class="literal">"load-finished"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>            user_function                      (<a class="link" href="WebKitWebLoaderClient.html" title="WebKitWebLoaderClient"><span class="type">WebKitWebLoaderClient</span></a> *loader_client,
+                                                        <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>         *web_view,
+                                                        <span class="type">gpointer</span>               user_data)          : <code class="literal">Run Last</code></pre>
+<p>
+This signal is emitted when a page load completes, that is, when all
+the resources are done loading with no error. In case of errors
+during loading, the load finishes when either
+<a class="link" href="WebKitWebLoaderClient.html#WebKitWebLoaderClient-provisional-load-failed" title='The "provisional-load-failed" signal'><span class="type">"provisional-load-failed"</span></a> or <a class="link" href="WebKitWebLoaderClient.html#WebKitWebLoaderClient-load-failed" title='The "load-failed" signal'><span class="type">"load-failed"</span></a>
+are emitted.
+</p>
+<p>
+This signal is emitted after <a class="link" href="WebKitWebLoaderClient.html#WebKitWebLoaderClient-load-committed" title='The "load-committed" signal'><span class="type">"load-committed"</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>loader_client</code></em> :</span></p></td>
+<td>the <a class="link" href="WebKitWebLoaderClient.html" title="WebKitWebLoaderClient"><span class="type">WebKitWebLoaderClient</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>the <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> associated with this event</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<code class="literal">TRUE</code> to stop other handlers from being invoked for the event.
+<code class="literal">FALSE</code> to propagate the event further.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebLoaderClient-provisional-load-failed"></a><h3>The <code class="literal">"provisional-load-failed"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>            user_function                      (<a class="link" href="WebKitWebLoaderClient.html" title="WebKitWebLoaderClient"><span class="type">WebKitWebLoaderClient</span></a> *loader_client,
+                                                        <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>         *web_view,
+                                                        <span class="type">gchar</span>                 *error,
+                                                        <span class="type">gpointer</span>               Returns,
+                                                        <span class="type">gpointer</span>               user_data)          : <code class="literal">Run Last</code></pre>
+<p>
+This signal is emitted when an error occurs when starting to
+load data for a page. By default, if the signal is not handled,
+a stock error page will be displayed. You need to handle the signal
+if you want to provide your own error page. This signal finishes the
+load so no other signals will be emitted after this one.
+</p>
+<p>
+This signal is emitted after <a class="link" href="WebKitWebLoaderClient.html#WebKitWebLoaderClient-provisional-load-started" title='The "provisional-load-started" signal'><span class="type">"provisional-load-started"</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>loader_client</code></em> :</span></p></td>
+<td>the <a class="link" href="WebKitWebLoaderClient.html" title="WebKitWebLoaderClient"><span class="type">WebKitWebLoaderClient</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>the <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> associated with this event</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>the <span class="type">GError</span> that was triggered</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<code class="literal">TRUE</code> to stop other handlers from being invoked for the event.
+<code class="literal">FALSE</code> to propagate the event further.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebLoaderClient-provisional-load-received-server-redirect"></a><h3>The <code class="literal">"provisional-load-received-server-redirect"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>            user_function                      (<a class="link" href="WebKitWebLoaderClient.html" title="WebKitWebLoaderClient"><span class="type">WebKitWebLoaderClient</span></a> *loader_client,
+                                                        <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>         *web_view,
+                                                        <span class="type">gpointer</span>               user_data)          : <code class="literal">Run Last</code></pre>
+<p>
+This signal is emitted when a provisional data source
+receives a server redirect.
+</p>
+<p>
+This signal is emitted after <a class="link" href="WebKitWebLoaderClient.html#WebKitWebLoaderClient-provisional-load-started" title='The "provisional-load-started" signal'><span class="type">"provisional-load-started"</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>loader_client</code></em> :</span></p></td>
+<td>the <a class="link" href="WebKitWebLoaderClient.html" title="WebKitWebLoaderClient"><span class="type">WebKitWebLoaderClient</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>the <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> associated with this event</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<code class="literal">TRUE</code> to stop other handlers from being invoked for the event.
+<code class="literal">FALSE</code> to propagate the event further.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebLoaderClient-provisional-load-started"></a><h3>The <code class="literal">"provisional-load-started"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>            user_function                      (<a class="link" href="WebKitWebLoaderClient.html" title="WebKitWebLoaderClient"><span class="type">WebKitWebLoaderClient</span></a> *loader_client,
+                                                        <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>         *web_view,
+                                                        <span class="type">gpointer</span>               user_data)          : <code class="literal">Run Last</code></pre>
+<p>
+This signal is emitted when new load request is made.
+No data has been received yet, empty structures have
+been allocated to perform the load; the load may still
+fail for transport issues such as not being able to
+resolve a name, or connect to a port.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>loader_client</code></em> :</span></p></td>
+<td>the <a class="link" href="WebKitWebLoaderClient.html" title="WebKitWebLoaderClient"><span class="type">WebKitWebLoaderClient</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_view</code></em> :</span></p></td>
+<td>the <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> associated with this event</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<code class="literal">TRUE</code> to stop other handlers from being invoked for the event.
+<code class="literal">FALSE</code> to propagate the event further.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18.1</div>
+</body>
+</html>

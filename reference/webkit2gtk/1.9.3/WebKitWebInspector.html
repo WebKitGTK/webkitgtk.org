@@ -1,0 +1,465 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitWebInspector</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="WebKit2GTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitPlugin.html" title="WebKitPlugin">
+<link rel="next" href="index-all.html" title="Index">
+<meta name="generator" content="GTK-Doc V1.18.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="WebKitPlugin.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">WebKit2GTK+ Reference Manual</th>
+<td><a accesskey="n" href="index-all.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#WebKitWebInspector.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitWebInspector.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitWebInspector.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitWebInspector.properties" class="shortcut">Properties</a>
+                   | 
+                  <a href="#WebKitWebInspector.signals" class="shortcut">Signals</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="WebKitWebInspector"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitWebInspector.top_of_page"></a>WebKitWebInspector</span></h2>
+<p>WebKitWebInspector</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitWebInspector.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="WebKitWebInspector.html#WebKitWebInspector-struct" title="struct WebKitWebInspector">WebKitWebInspector</a>;
+<a class="link" href="WebKitWebViewBase.html" title="WebKitWebViewBase"><span class="returnvalue">WebKitWebViewBase</span></a> * <a class="link" href="WebKitWebInspector.html#webkit-web-inspector-get-web-view" title="webkit_web_inspector_get_web_view ()">webkit_web_inspector_get_web_view</a>   (<em class="parameter"><code><a class="link" href="WebKitWebInspector.html" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a> *inspector</code></em>);
+const <span class="returnvalue">char</span> *        <a class="link" href="WebKitWebInspector.html#webkit-web-inspector-get-inspected-uri" title="webkit_web_inspector_get_inspected_uri ()">webkit_web_inspector_get_inspected_uri</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitWebInspector.html" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a> *inspector</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitWebInspector.html#webkit-web-inspector-is-attached" title="webkit_web_inspector_is_attached ()">webkit_web_inspector_is_attached</a>    (<em class="parameter"><code><a class="link" href="WebKitWebInspector.html" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a> *inspector</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitWebInspector.html#webkit-web-inspector-attach" title="webkit_web_inspector_attach ()">webkit_web_inspector_attach</a>         (<em class="parameter"><code><a class="link" href="WebKitWebInspector.html" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a> *inspector</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitWebInspector.html#webkit-web-inspector-detach" title="webkit_web_inspector_detach ()">webkit_web_inspector_detach</a>         (<em class="parameter"><code><a class="link" href="WebKitWebInspector.html" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a> *inspector</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitWebInspector.html#webkit-web-inspector-show" title="webkit_web_inspector_show ()">webkit_web_inspector_show</a>           (<em class="parameter"><code><a class="link" href="WebKitWebInspector.html" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a> *inspector</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitWebInspector.html#webkit-web-inspector-close" title="webkit_web_inspector_close ()">webkit_web_inspector_close</a>          (<em class="parameter"><code><a class="link" href="WebKitWebInspector.html" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a> *inspector</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               <a class="link" href="WebKitWebInspector.html#webkit-web-inspector-get-attached-height" title="webkit_web_inspector_get_attached_height ()">webkit_web_inspector_get_attached_height</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitWebInspector.html" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a> *inspector</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitWebInspector.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----WebKitWebInspector
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitWebInspector.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitWebInspector.html#WebKitWebInspector--attached-height" title='The "attached-height" property'>attached-height</a>"          <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                 : Read
+  "<a class="link" href="WebKitWebInspector.html#WebKitWebInspector--inspected-uri" title='The "inspected-uri" property'>inspected-uri</a>"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitWebInspector.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitWebInspector.html#WebKitWebInspector-attach" title='The "attach" signal'>attach</a>"                                         : <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
+  "<a class="link" href="WebKitWebInspector.html#WebKitWebInspector-bring-to-front" title='The "bring-to-front" signal'>bring-to-front</a>"                                 : <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
+  "<a class="link" href="WebKitWebInspector.html#WebKitWebInspector-closed" title='The "closed" signal'>closed</a>"                                         : <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
+  "<a class="link" href="WebKitWebInspector.html#WebKitWebInspector-detach" title='The "detach" signal'>detach</a>"                                         : <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
+  "<a class="link" href="WebKitWebInspector.html#WebKitWebInspector-open-window" title='The "open-window" signal'>open-window</a>"                                    : <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitWebInspector.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitWebInspector.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitWebInspector-struct"></a><h3>struct WebKitWebInspector</h3>
+<pre class="programlisting">struct WebKitWebInspector;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-inspector-get-web-view"></a><h3>webkit_web_inspector_get_web_view ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitWebViewBase.html" title="WebKitWebViewBase"><span class="returnvalue">WebKitWebViewBase</span></a> * webkit_web_inspector_get_web_view   (<em class="parameter"><code><a class="link" href="WebKitWebInspector.html" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a> *inspector</code></em>);</pre>
+<p>
+Get the <a class="link" href="WebKitWebViewBase.html" title="WebKitWebViewBase"><span class="type">WebKitWebViewBase</span></a> used to display the inspector.
+This might be <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the inspector hasn't been loaded yet,
+or it has been closed.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>inspector</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebInspector.html" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the <a class="link" href="WebKitWebViewBase.html" title="WebKitWebViewBase"><span class="type">WebKitWebViewBase</span></a> used to display the inspector or <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-inspector-get-inspected-uri"></a><h3>webkit_web_inspector_get_inspected_uri ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *        webkit_web_inspector_get_inspected_uri
+                                                        (<em class="parameter"><code><a class="link" href="WebKitWebInspector.html" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a> *inspector</code></em>);</pre>
+<p>
+Get the URI that is currently being inspected. This can be <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if
+nothing has been loaded yet in the inspected view, if the inspector
+has been closed or when inspected view was loaded from a HTML string
+instead of a URI.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>inspector</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebInspector.html" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the URI that is currently being inspected or <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-inspector-is-attached"></a><h3>webkit_web_inspector_is_attached ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_web_inspector_is_attached    (<em class="parameter"><code><a class="link" href="WebKitWebInspector.html" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a> *inspector</code></em>);</pre>
+<p>
+Whether the <em class="parameter"><code>inspector</code></em> view is currently attached to the same window that contains
+the inspected view.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>inspector</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebInspector.html" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>inspector</code></em> is currently attached or <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-inspector-attach"></a><h3>webkit_web_inspector_attach ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_web_inspector_attach         (<em class="parameter"><code><a class="link" href="WebKitWebInspector.html" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a> *inspector</code></em>);</pre>
+<p>
+Request <em class="parameter"><code>inspector</code></em> to be attached. The signal <a class="link" href="WebKitWebInspector.html#WebKitWebInspector-attach" title='The "attach" signal'><span class="type">"attach"</span></a>
+will be emitted. If the inspector is already attached it does nothing.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>inspector</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebInspector.html" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-inspector-detach"></a><h3>webkit_web_inspector_detach ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_web_inspector_detach         (<em class="parameter"><code><a class="link" href="WebKitWebInspector.html" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a> *inspector</code></em>);</pre>
+<p>
+Request <em class="parameter"><code>inspector</code></em> to be detached. The signal <a class="link" href="WebKitWebInspector.html#WebKitWebInspector-detach" title='The "detach" signal'><span class="type">"detach"</span></a>
+will be emitted. If the inspector is already detached it does nothing.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>inspector</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebInspector.html" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-inspector-show"></a><h3>webkit_web_inspector_show ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_web_inspector_show           (<em class="parameter"><code><a class="link" href="WebKitWebInspector.html" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a> *inspector</code></em>);</pre>
+<p>
+Request <em class="parameter"><code>inspector</code></em> to be shown.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>inspector</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebInspector.html" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-inspector-close"></a><h3>webkit_web_inspector_close ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_web_inspector_close          (<em class="parameter"><code><a class="link" href="WebKitWebInspector.html" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a> *inspector</code></em>);</pre>
+<p>
+Request <em class="parameter"><code>inspector</code></em> to be closed.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>inspector</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebInspector.html" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-inspector-get-attached-height"></a><h3>webkit_web_inspector_get_attached_height ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               webkit_web_inspector_get_attached_height
+                                                        (<em class="parameter"><code><a class="link" href="WebKitWebInspector.html" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a> *inspector</code></em>);</pre>
+<p>
+Get the height that the inspector view should have when
+it's attached. If the inspector view is not attached this
+returns 0.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>inspector</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebInspector.html" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the height of the inspector view when attached</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitWebInspector.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitWebInspector--attached-height"></a><h3>The <code class="literal">"attached-height"</code> property</h3>
+<pre class="programlisting">  "attached-height"          <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                 : Read</pre>
+<p>
+The height that the inspector view should have when it is attached.
+</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebInspector--inspected-uri"></a><h3>The <code class="literal">"inspected-uri"</code> property</h3>
+<pre class="programlisting">  "inspected-uri"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>
+The URI that is currently being inspected.
+</p>
+<p>Default value: NULL</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitWebInspector.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="WebKitWebInspector-attach"></a><h3>The <code class="literal">"attach"</code> signal</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            user_function                      (<a class="link" href="WebKitWebInspector.html" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a> *inspector,
+                                                        <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>            user_data)      : <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a></pre>
+<p>
+Emitted when the inspector is requested to be attached to the window
+where the inspected web view is.
+If this signal is not handled the inspector view will be automatically
+attached to the inspected view, so you only need to handle this signal
+if you want to attach the inspector view yourself (for example, to add
+the inspector view to a browser tab).
+</p>
+<p>
+To prevent the inspector vew from being attached you can connect to this
+signal and simply return <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>inspector</code></em> :</span></p></td>
+<td>the <a class="link" href="WebKitWebInspector.html" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a> on which the signal is emitted</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to stop other handlers from being invoked for the event.
+<a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to propagate the event further.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebInspector-bring-to-front"></a><h3>The <code class="literal">"bring-to-front"</code> signal</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            user_function                      (<a class="link" href="WebKitWebInspector.html" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a> *inspector,
+                                                        <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>            user_data)      : <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a></pre>
+<p>
+Emitted when the inspector should be shown.
+</p>
+<p>
+If the inspector is not attached the inspector window should be shown
+on top of any other windows.
+If the inspector is attached the inspector view should be made visible.
+For example, if the inspector view is attached using a tab in a browser
+window, the browser window should be raised and the tab containing the
+inspector view should be the active one.
+In both cases, if this signal is not handled, the default implementation
+calls <a href="http://developer.gnome.org/gtk3/stable/GtkWindow.html#gtk-window-present"><code class="function">gtk_window_present()</code></a> on the current toplevel <a href="http://developer.gnome.org/gtk3/stable/GtkWindow.html"><span class="type">GtkWindow</span></a> of the
+inspector view.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>inspector</code></em> :</span></p></td>
+<td>the <a class="link" href="WebKitWebInspector.html" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a> on which the signal is emitted</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to stop other handlers from being invoked for the event.
+<a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to propagate the event further.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebInspector-closed"></a><h3>The <code class="literal">"closed"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="WebKitWebInspector.html" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a> *inspector,
+                                                        <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>            user_data)      : <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a></pre>
+<p>
+Emitted when the inspector page is closed. If you are using your own
+inspector window, you should connect to this signal and destroy your
+window.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>inspector</code></em> :</span></p></td>
+<td>the <a class="link" href="WebKitWebInspector.html" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a> on which the signal is emitted</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebInspector-detach"></a><h3>The <code class="literal">"detach"</code> signal</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            user_function                      (<a class="link" href="WebKitWebInspector.html" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a> *inspector,
+                                                        <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>            user_data)      : <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a></pre>
+<p>
+Emitted when the inspector is requested to be detached from the window
+it is currently attached to. The inspector is detached when the inspector page
+is about to be closed, and this signal is emitted right before
+<a class="link" href="WebKitWebInspector.html#WebKitWebInspector-closed" title='The "closed" signal'><span class="type">"closed"</span></a>, or when the user clicks on the detach button
+in the inspector view to show the inspector in a separate window. In this case
+the signal <a class="link" href="WebKitWebInspector.html#WebKitWebInspector-open-window" title='The "open-window" signal'><span class="type">"open-window"</span></a> is emitted after this one.
+</p>
+<p>
+To prevent the inspector vew from being detached you can connect to this
+signal and simply return <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>inspector</code></em> :</span></p></td>
+<td>the <a class="link" href="WebKitWebInspector.html" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a> on which the signal is emitted</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to stop other handlers from being invoked for the event.
+<a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to propagate the event further.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebInspector-open-window"></a><h3>The <code class="literal">"open-window"</code> signal</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            user_function                      (<a class="link" href="WebKitWebInspector.html" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a> *inspector,
+                                                        <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>            user_data)      : <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a></pre>
+<p>
+Emitted when the inspector is requested to open in a separate window.
+If this signal is not handled, a <a href="http://developer.gnome.org/gtk3/stable/GtkWindow.html"><span class="type">GtkWindow</span></a> with the inspector will be
+created and shown, so you only need to handle this signal if you want
+to use your own window.
+This signal is emitted after <a class="link" href="WebKitWebInspector.html#WebKitWebInspector-detach" title='The "detach" signal'><span class="type">"detach"</span></a> to show
+the inspector in a separate window after being detached.
+</p>
+<p>
+To prevent the inspector from being shown you can connect to this
+signal and simply return <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>inspector</code></em> :</span></p></td>
+<td>the <a class="link" href="WebKitWebInspector.html" title="WebKitWebInspector"><span class="type">WebKitWebInspector</span></a> on which the signal is emitted</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> to stop other handlers from being invoked for the event.
+<a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> to propagate the event further.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18.1</div>
+</body>
+</html>
