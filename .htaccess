@@ -1,0 +1,14 @@
+<FILES .htaccess>
+order allow,deny
+deny from all
+</FILES>
+
+<FILES README.md>
+order allow,deny
+deny from all
+</FILES>
+
+<FILES webkit-release>
+order allow,deny
+deny from all
+</FILES>

@@ -1,0 +1,611 @@
+#!/usr/bin/env python
+
+import tarfile
+import re
+import errno, os, re, sys
+import lzma
+import shutil
+import tempfile
+from datetime import date
+
+def human_size(size):
+    for x in ['bytes','KB','MB','GB','TB']:
+        if size < 1024.0:
+            return "%3.1f%s" % (size, x)
+        size /= 1024.0
+    return None
+
+def hexdigest(fd, h):
+    f = open(fd, 'rb')
+    retval = h(f.read()).hexdigest()
+    f.close()
+    return retval
+
+# Copied from git://git.gnome.org/sysadmin-bin/ftpadmin
+# to support xz tarballs
+class _LZMAProxy:
+    """Small proxy class that enables external file object
+       support for "r:lzma" and "w:lzma" modes. This is actually
+       a workaround for a limitation in lzma module's LZMAFile
+       class which (unlike gzip.GzipFile) has no support for
+       a file object argument.
+    """
+
+    blocksize = 16 * 1024
+
+    def __init__(self, fileobj, mode):
+        self.fileobj = fileobj
+        self.mode = mode
+        self.name = getattr(self.fileobj, "name", None)
+        self.init()
+
+    def init(self):
+        self.pos = 0
+        if self.mode == "r":
+            self.lzmaobj = lzma.LZMADecompressor()
+            self.fileobj.seek(0)
+            self.buf = ""
+        else:
+            self.lzmaobj = lzma.LZMACompressor()
+
+    def read(self, size):
+        b = [self.buf]
+        x = len(self.buf)
+        while x < size:
+            raw = self.fileobj.read(self.blocksize)
+            if not raw:
+                break
+            try:
+                data = self.lzmaobj.decompress(raw)
+            except EOFError:
+                break
+            b.append(data)
+            x += len(data)
+        self.buf = "".join(b)
+
+        buf = self.buf[:size]
+        self.buf = self.buf[size:]
+        self.pos += len(buf)
+        return buf
+
+    def seek(self, pos):
+        if pos < self.pos:
+            self.init()
+        self.read(pos - self.pos)
+
+
+class XzTarFile(tarfile.TarFile):
+
+    OPEN_METH = tarfile.TarFile.OPEN_METH.copy()
+    OPEN_METH["xz"] = "xzopen"
+
+    @classmethod
+    def xzopen(cls, name, mode="r", fileobj=None, **kwargs):
+        """Open gzip compressed tar archive name for reading or writing.
+           Appending is not allowed.
+        """
+        if len(mode) > 1 or mode not in "rw":
+            raise ValueError("mode must be 'r' or 'w'")
+
+        if fileobj is not None:
+            fileobj = _LMZAProxy(fileobj, mode)
+        else:
+            fileobj = lzma.LZMAFile(name, mode)
+
+        try:
+            # lzma doesn't immediately return an error
+            # try and read a bit of data to determine if it is a valid xz file
+            fileobj.read(_LZMAProxy.blocksize)
+            fileobj.seek(0)
+            t = cls.taropen(name, mode, fileobj, **kwargs)
+        except IOError:
+            raise tarfile.ReadError("not a xz file")
+        except lzma.error:
+            raise tarfile.ReadError("not a xz file")
+        t._extfileobj = False
+        return t
+
+if not hasattr(tarfile.TarFile, 'xvopen'):
+    tarfile.open = XzTarFile.open
+
+
+class WebKitTarball:
+    REQUIREMENTS = [ ('GTK2', 'gtk+'),
+                     ('GAIL2', 'gail'),
+                     ('GLIB', 'glib'),
+                     ('LIBSOUP', 'libsoup'),
+                     ('CAIRO', 'cairo'),
+                     ('LIBXML', 'libxml'),
+                     ('FONTCONFIG', 'fontconfig'),
+                     ('FREETYPE2', 'FreeType2') ]
+    OPTIONAL_REQUIREMENTS = [ ('GTK3', 'gtk+'),
+                              ('GAIL3', 'gail'),
+                              ('LIBXSLT', 'libxslt'),
+                              ('SQLITE', 'SQLite'),
+                              ('GSTREAMER_0_10', 'gstreamer'),
+                              ('GSTREAMER_0_10_PLUGINS_BASE', 'gstreamer-plugin-base'),
+                              ('ENCHANT', 'enchant'),
+                              ('LIBFFTW', 'libfftw')]
+
+    def __init__(self, tarball):
+        self._tarball = tarball
+        self._size = None
+        self._sha256sum = None
+        self._md5sum = None
+
+        self._tar = tarfile.open(tarball)
+        self._basedir = self._tar.getmembers()[0].name
+        configure = self._tar.getmember(os.path.join(self._basedir, 'configure'))
+        configure_file = self._tar.extractfile(configure)
+
+        pattern = re.compile('^(.+)_REQUIRED_VERSION=(.+)$')
+
+        self._minimum_versions = {}
+        for line in configure_file.readlines():
+            line = line.strip(' \t\n')
+            if not line:
+                continue
+
+            if 'WEBKIT_MAJOR_VERSION=' in line:
+                self._major = int(line.split('=', 1)[1])
+                continue
+            if 'WEBKIT_MINOR_VERSION=' in line:
+                self._minor = int(line.split('=', 1)[1])
+                continue
+            if 'WEBKIT_MICRO_VERSION=' in line:
+                self._micro = int(line.split('=', 1)[1])
+                continue
+
+            match = pattern.match(line)
+            if not match:
+                continue
+
+            name, version = match.groups()
+            self._minimum_versions[name.strip()] = version.strip()
+
+        configure_file.close()
+
+    def delete(self):
+        os.unlink(self._tarball)
+        self._tarball = None
+
+    def get_version(self):
+        return self._major, self._minor, self._micro
+
+    def get_version_str(self):
+        return "%d.%d.%d" % (self._major, self._minor, self._micro)
+
+    def is_stable(self):
+        return self._minor % 2 == 0
+
+    def is_unstable(self):
+        return not self.is_stable()
+
+    def get_tarball(self):
+        return self._tarball
+
+    def get_name(self):
+        return os.path.basename(self._tarball)
+
+    def get_path(self):
+        return self._tarball
+
+    def get_size(self):
+        if self._size is None:
+            stat = os.stat(self._tarball)
+            self._size = stat.st_size
+        return self._size
+
+    def get_sha256sum(self):
+        if self._sha256sum is None:
+            from hashlib import sha256
+            self._sha256sum = hexdigest(self._tarball, sha256)
+        return self._sha256sum
+
+    def get_md5sum(self):
+        if self._md5sum is None:
+            from hashlib import md5
+            self._md5sum = hexdigest(self._tarball, md5)
+        return self._md5sum
+
+    def get_news(self):
+        retval = ''
+
+        news = self._tar.getmember(os.path.join(self._basedir, 'NEWS'))
+        news_file = self._tar.extractfile(news)
+
+        separator = re.compile("^=+$")
+        n_separator = 0
+        ignore_next = False
+        ignore_empty = True
+        for line in news_file.readlines():
+            if ignore_empty and not line.strip(' \n'):
+                continue
+
+            if ignore_next:
+                ignore_next = False
+                continue
+
+            if separator.match(line.strip()):
+                n_separator += 1
+                if n_separator == 1:
+                    ignore_next = True
+                elif n_separator == 3:
+                    break
+                continue
+
+            if line.strip().startswith("What's new in WebKitGTK+"):
+                ignore_empty = False
+                continue
+
+            retval += line
+
+        news_file.close()
+
+        return retval
+
+    def get_required_version(self, dependency):
+        return self._minimum_versions[dependency]
+
+    def extract_docs(self, path, wk_pkg):
+        docdir = os.path.join(self._basedir, 'Documentation', wk_pkg, "html")
+        for member in self._tar.getmembers():
+            if not os.path.dirname(member.name) == docdir:
+                continue
+
+            source = self._tar.extractfile(member)
+            dest = open(os.path.join(path, os.path.basename(member.name)), 'w')
+            dest.write(source.read())
+            dest.close()
+            source.close()
+
+
+class WebKitRelease:
+
+    WK1_PKG_NAME = "webkitgtk"
+    WK2_PKG_NAME = "webkit2gtk"
+    RELEASE_BASE_URL = "http://webkitgtk.org/"
+    DOCS_BASE_DIR = "reference"
+    ONLINE_DOCS_BASE_URL = "http://developer.gnome.org"
+
+    def __init__(self, tarball):
+        self._tarball = WebKitTarball(tarball)
+
+    def _get_announcement_text(self):
+        body = ''
+        major, minor, micro = self._tarball.get_version()
+        is_stable = self._tarball.is_stable()
+
+        # Header
+        body += "WebKitGTK+ %d.%d.%d is available for download at:\n" % (major, minor, micro)
+        body += "\n"
+        body += "%s%s (%s)\n" % (self.RELEASE_BASE_URL, self._tarball.get_name(), human_size(self._tarball.get_size()))
+        body += "   md5sum: %s\n" % (self._tarball.get_md5sum())
+        body += "   sha256sum: %s\n" % (self._tarball.get_sha256sum())
+        body += "\n"
+
+        body += "This is "
+        if micro == 1:
+            body += "the first "
+        else:
+            body += "a "
+        if is_stable:
+            body += "bug fix release in the stable "
+        else:
+            body += "development release leading toward "
+        # FIXME this doesn't work if we bump to WebKit 2.x
+        body += "%d.%d series.\n" % (major, minor + 1)
+        body += "\n"
+
+        # NEWS
+        whatsnew = "What's new in the WebKitGTK+ %d.%d.%d release?\n" % (major, minor, micro)
+        body += whatsnew
+        body += "=" * (len(whatsnew) - 1)
+        body += "\n"
+        body += self._tarball.get_news()
+
+        # What's WebKitGTK+
+        whatswkgtk = "What is WebKitGTK+?\n"
+        body += whatswkgtk
+        body += "=" * (len(whatswkgtk) - 1)
+        body += "\n"
+        body += '''
+WebKitGTK+ is the GNOME platform port of the WebKit rendering engine.
+Offering WebKit's full functionality through a set of GObject-based
+APIs, it is suitable for projects requiring any kind of web
+integration, from hybrid HTML/CSS applications to full-fledged web
+browsers.
+'''
+        body += "\n"
+
+        # Requirements
+        reqs = "Requirements\n"
+        body += reqs
+        body += "=" * (len(reqs) - 1)
+        body += "\n\n"
+        for key, name in WebKitTarball.REQUIREMENTS:
+            body += "%s >= %s\n" % (name, self._tarball.get_required_version(key))
+        body += "\n"
+
+        body += "Depending on your configuration options WebKitGTK+ may also depend on:\n"
+        body += "\n"
+
+        for key, name in WebKitTarball.OPTIONAL_REQUIREMENTS:
+            body += "%s >= %s\n" % (name, self._tarball.get_required_version(key))
+        body += "\n"
+
+        # More info
+        morinfo = "More information\n"
+        body += morinfo
+        body += "=" * (len(morinfo) - 1)
+        body += "\n"
+        body +='''
+If you want to know more about the project or get in touch with us
+you may:
+
+- Visit our website at http://www.webkitgtk.org, or the upstream
+  site at http://www.webkit.org. People interested in contributing
+  should read: http://www.webkit.org/coding/contributing.html.
+
+- Browse the bug list at http://bugs.webkit.org, WebKitGTK+ bugs are
+  typically prefixed by "[GTK]." A bug report with a minimal,
+  reproducible test case is often just as valuable as a patch.
+
+- Join the #webkit and #webkitgtk+ IRC channels at irc.freenode.net.
+
+- Subscribe to the WebKitGTK+ mailing list,
+  http://lists.webkit.org/mailman/listinfo.cgi/webkit-gtk, or the
+  WebKit development mailing list,
+  http://lists.webkit.org/mailman/listinfo.cgi/webkit-dev
+'''
+        body += "\n"
+
+        # Thanks
+        thanks = "Thanks\n"
+        body += thanks
+        body += "=" * (len(thanks) - 1)
+        body += "\n"
+        #FIXME: are they really so many to list?
+        body += '''
+Thanks to all the contributors who made possible this release, they
+are far too many to list!
+'''
+        body += "\n"
+
+        # Footer
+        body += "The WebKitGTK+ team,\n"
+        body += date.strftime(date.today(), "%B %d, %Y")
+        body += "\n"
+
+        return body
+
+    def send_announcement(self, send = True, email_from = None):
+        if send:
+            import smtplib
+            from email.mime.text import MIMEText
+
+            msg = MIMEText(self._get_announcement_text())
+            msg.set_charset('utf-8')
+            msg['Subject'] = 'WebKitGTK+ %s released!' % (self._tarball.get_version_str())
+            msg['From'] = email_from
+            msg['To'] = 'webkit-gtk@lists.webkit.org'
+            msg['Cc'] = 'gnome-announce-list@gnome.org'
+
+            sys.stdout.write(msg.as_string())
+            sys.stdout.write("\n")
+            sys.stdout.write("Send email? [Y/n]: ")
+            response = raw_input()
+            if response and response[0] not in ('y', 'Y'):
+                return
+
+            smtp = smtplib.SMTP('localhost')
+            smtp.sendmail(email_from, ['webkit-gtk@lists.webkit.org'], msg.as_string())
+            smtp.quit()
+
+            return
+
+        sys.stdout.write("\n")
+        sys.stdout.write("============================== CUT HERE ==============================\n")
+        sys.stdout.write(self._get_announcement_text())
+        sys.stdout.write("============================== CUT HERE ==============================\n")
+        sys.stdout.write("\n")
+        sys.stdout.flush()
+
+    def _rebase_docs(self, docdir, wk_pkg):
+        subs = {}
+        xref_map = {
+                'libsoup-2.4' : 'libsoup'
+        }
+
+        def rebase_link(match):
+            href = match.group(1)
+            if not href.startswith('../'):
+                return '<a href="%s' % href
+
+            match = re.search(r'^\.\./(.*)/([^/]+)', href)
+            if not match:
+                return '<a href="%s' % href
+
+            try:
+                module = xref_map[match.group(1)]
+            except KeyError:
+                module = match.group(1)
+
+            sub = '%s -> %s/%s/stable/' % (match.group(1), WebKitRelease.ONLINE_DOCS_BASE_URL, module)
+            subs.setdefault(sub, 0)
+            subs[sub] += 1
+
+            return '<a href="%s/%s/stable/%s' % (WebKitRelease.ONLINE_DOCS_BASE_URL, module, match.group(2))
+
+        for filename in os.listdir(docdir):
+            if not filename.endswith('.html'):
+                continue
+
+            path = os.path.join(docdir, filename)
+            tmp_file = tempfile.NamedTemporaryFile(delete=False)
+            fd = open(path, 'r')
+            tmp_file.write(re.sub(r'<a href=[\'"]?([^\'" >]+)', rebase_link, fd.read()))
+            fd.close()
+            tmp_file.close()
+
+            shutil.move(tmp_file.name, path)
+
+        for sub in subs:
+            print "%s (%d)" % (sub, subs[sub])
+
+    def _create_doc_tarball(self, docdir, tar_path):
+        tar = tarfile.open(tar_path, 'w:gz')
+        basedir = os.path.splitext(os.path.splitext(os.path.basename(tar_path))[0])[0]
+        for f in os.listdir(docdir):
+            # Don't include tgz symlink of a previous run
+            if f == 'webkitgtk-html.tar.gz':
+                continue
+
+            file_path = os.path.join(docdir, f)
+            member = tar.gettarinfo(file_path, '%s/%s' % (basedir, f))
+            tar.addfile(member, open(file_path))
+        tar.close()
+
+    def install_docs(self, outputdir):
+        version = self._tarball.get_version_str()
+        for wk_pkg in [self.WK1_PKG_NAME, self.WK2_PKG_NAME]:
+            docdir = os.path.join(outputdir, self.DOCS_BASE_DIR, wk_pkg, version)
+            try:
+                os.makedirs(docdir)
+            except OSError as e:
+                if e.errno != errno.EEXIST:
+                    raise
+
+            self._tarball.extract_docs(docdir, wk_pkg)
+
+            self._rebase_docs(docdir, wk_pkg)
+
+            doc_tarball = os.path.join(os.path.dirname(docdir), wk_pkg + "-html-" + version + ".tar.gz")
+            self._create_doc_tarball(docdir, doc_tarball)
+
+            # Create symlinks
+            if self._tarball.is_stable():
+                symlink = os.path.join(os.path.dirname(docdir), "stable")
+            else:
+                symlink = os.path.join(os.path.dirname(docdir), "unstable")
+
+            if os.path.islink(symlink):
+                if os.readlink(symlink) != version:
+                    os.unlink(symlink)
+            try:
+                os.symlink(version, symlink)
+            except OSError as e:
+                if e.errno != errno.EEXIST:
+                    raise
+
+            symlink = os.path.join(docdir, "%s-html.tar.gz" % (wk_pkg))
+            try:
+                os.symlink(os.path.join(os.path.pardir, os.path.basename(doc_tarball)), symlink);
+            except OSError as e:
+                if e.errno != errno.EEXIST:
+                    raise
+
+    def install_tarball(self, tarballsdir):
+        tarball = os.path.join(tarballsdir, self._tarball.get_name())
+        if os.path.exists(tarball):
+            from hashlib import md5
+            if self._tarball.get_md5sum() == hexdigest(tarball, md5):
+                # Already installed
+                return
+
+        try:
+            os.makedirs(tarballsdir)
+        except OSError as e:
+            if e.errno != errno.EEXIST:
+                raise
+
+        shutil.copyfile(self._tarball.get_tarball(), tarball)
+
+    def update_website(self, websitedir):
+        # TODO
+        pass
+
+    def release(self, outputdir, websitedir, send_email, email_from = None):
+        sys.stdout.write("Releasing WebKitGTK+ %s\n" % (self._tarball.get_version_str()))
+
+        sys.stdout.write("Copying tarball %s to %s: " % (self._tarball.get_name(), outputdir))
+        self.install_tarball(outputdir)
+        sys.stdout.write("done\n");
+
+        sys.stdout.write("Updating docs: ")
+        self.install_docs(outputdir)
+        sys.stdout.write("done\n");
+
+        sys.stdout.write("Updating website: ")
+        self.update_website(websitedir)
+        sys.stdout.write("done\n");
+
+        sys.stdout.write("Sending announcement email: ")
+        self.send_announcement(send_email, email_from)
+        if send_email:
+            sys.stdout.write("done\n");
+
+        sys.stdout.write("Deleting tarball %s: " % (self._tarball.get_name()))
+        self._tarball.delete()
+        sys.stdout.write("done\n");
+
+if __name__ == '__main__':
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        prog = 'webkit-release',
+        usage = '%(prog)s [options ...] command [command-options ...] tarball')
+    parser.add_argument('-o', '--output-dir',
+                        action = 'store', dest = 'output-dir', default = '.',
+                        help = 'Output directory [.]')
+
+    subparsers = parser.add_subparsers(dest = 'command')
+
+    subparsers.add_parser('install-tarball', help = 'Intall sources tarball').add_argument('tarball')
+    subparsers.add_parser('install-docs', help = 'Install API documentation').add_argument('tarball')
+
+    subparser = subparsers.add_parser('update-website', help = 'Update website')
+    subparser.add_argument('--website-dir', dest = 'website-dir', default = 'wwwroot',
+                           help = 'Website directory [wwwroot]')
+    subparser.add_argument('tarball')
+
+    subparser = subparsers.add_parser('send-announcement', help = 'Send annoucement email')
+    subparser.add_argument('-n', '--no-send',
+                           action = 'store_true', dest = 'no-send', default = False,
+                           help = 'Print the email contents instead of sending email')
+    subparser.add_argument('-f', '--from',
+                           action = 'store', dest = 'from',
+                           help = 'Sender email address')
+    subparser.add_argument('tarball')
+
+    subparser = subparsers.add_parser('release', help = 'Release a new tarball')
+    subparser.add_argument('--website-dir', dest = 'website-dir', default = 'wwwroot',
+                           help = 'Website directory [wwwroot]')
+    subparser.add_argument('-n', '--no-send',
+                           action = 'store_true', dest = 'no-send', default = False,
+                           help = 'Print the email contents instead of sending email')
+    subparser.add_argument('-f', '--from',
+                           action = 'store', dest = 'from',
+                           help = 'Sender email address')
+    subparser.add_argument('tarball')
+
+    ns = parser.parse_args()
+    options = vars(ns)
+    command = options['command']
+
+    if 'no-send' in options and not options['no-send'] and options['from'] is None:
+        sys.stderr.write("Error: --from option is required when --no-send is not present\n")
+        sys.exit(1)
+
+    wk = WebKitRelease(options['tarball'])
+    if command == 'send-announcement':
+        wk.send_announcement(not options['no-send'], options['from'])
+    elif command == 'install-docs':
+        wk.install_docs(options['output-dir'])
+    elif command == 'install-tarball':
+        wk.install_tarball(options['output-dir'])
+    elif command == 'update-website':
+        wk.update_website(options['website-dir'])
+    elif command == 'release':
+        wk.release(options['output-dir'], options['website-dir'], not options['no-send'], options['from'])
+
