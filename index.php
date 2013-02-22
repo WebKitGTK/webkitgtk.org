@@ -109,7 +109,7 @@
 
         <p>You can also download the latest development release:</p>
 
-        <p><a href="releases/webkitgtk-1.11.5.tar.xz">WebKitGTK+ 1.11.5 (9.1 MB)</a></p>
+        <p><a href="releases/webkitgtk-1.11.90.tar.xz">WebKitGTK+ 1.11.90 (9.3 MB)</a></p>
 
         <p>Or checkout the development tree of WebKit from svn:</p>
 
