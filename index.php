@@ -151,31 +151,8 @@
 	 </p>
 
 	<h3>Developing</h3>
-        <p>For a good starting point see the <a href="http://trac.webkit.org/wiki/HackingGtk"
-           >Hacker's guide to WebKitGTK+</a>.</p>
-
-        <p>After <a href="/?page=download">fetching the sources</a> you can build WebKitGTK+ from the source tree like this:</p>
-
-        <p><pre>mkdir WebKitBuild
-cd WebKitBuild
-../autogen.sh
-make</pre></p>
-
-        <p>The build is pretty much a normal autotools build, so you can look
-           at <code>configure --help</code> for build options or spefify
-           <code>--prefix=/usr</code>.</p>
-
-        <p>Have a look at the <a href="http://webkit.org/coding/coding-style.html"
-           >Coding Style</a> used in WebKit.</p>
-
-	<h3>Testing</h3>
-        <p>Run regression tests:</p>
-
-        <p><pre>WebKitBuild/Programs/DumpRenderTree</pre></p>
-
-        <p><pre>WebKitBuild/Programs/UnitTests</pre></p>
-
-        <p><pre>WebKitBuild/Programs/GtkLauncher</pre></p>
+        <p>To build and test WebKitGTK+, following the <a href="http://trac.webkit.org/wiki/BuildingGtk">instructions on the wiki</a>.
+           For another good starting point see the <a href="http://trac.webkit.org/wiki/HackingGtk">Hacker's guide to WebKitGTK+</a>.</p>
 
         <?php
           break;
