@@ -151,7 +151,7 @@
 	 </p>
 
 	<h3>Developing</h3>
-        <p>To build and test WebKitGTK+, following the <a href="http://trac.webkit.org/wiki/BuildingGtk">instructions on the wiki</a>.
+        <p>To build and test WebKitGTK+, follow the <a href="http://trac.webkit.org/wiki/BuildingGtk">instructions on the wiki</a>.
            For another good starting point see the <a href="http://trac.webkit.org/wiki/HackingGtk">Hacker's guide to WebKitGTK+</a>.</p>
 
         <?php
