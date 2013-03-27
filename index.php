@@ -75,13 +75,13 @@
         <p>We provide complete documentation of the public API, with examples
            when possible by using gtk-doc.</p>
 
-        <p><a href="http://webkitgtk.org/reference/webkitgtk/stable/index.html">API Reference for developers (stable)</a></p>
-	<p><a href="http://webkitgtk.org/reference/webkitgtk/unstable/index.html">API Reference for developers (unstable)</a></p>
+        <p><a href="http://webkitgtk.org/reference/webkit2gtk/stable/index.html">API Reference for developers (stable)</a></p>
+	<p><a href="http://webkitgtk.org/reference/webkit2gtk/unstable/index.html">API Reference for developers (unstable)</a></p>
 
-	<p>WebKit2 preliminary API documentation. Take into account that WebKit2 is still under development, 
-           so the API might change.</p>
+	<p>WebKit1 API documentation. Take into account that WebKit1
+           is in maintenance mode so the API is unlikely to change.</p>
 
-	<p><a href="http://webkitgtk.org/reference/webkit2gtk/unstable/index.html">WebKit2 preliminary API Reference for developers (unstable)</a></p>
+	<p><a href="http://webkitgtk.org/reference/webkitgtk/stable/index.html">WebKit1 API Reference for developers</a></p>
 
 	<h3>Additional documentation</h3>
 	<p><a href="http://webkitgtk.org/Cookbook 0.1b.pdf">Cook book (PDF)</a>, by Bob Murphy</p>
@@ -99,11 +99,11 @@
 
         <p>Download the current stable release of WebKitGTK+:</p>
 
-        <p><a href="releases/webkitgtk-1.10.2.tar.xz">WebKitGTK+ 1.10.2 (8.6 MB)</a></p>
+        <p><a href="releases/webkitgtk-2.0.0.tar.xz">WebKitGTK+ 2.0.0 (9.4 MB)</a></p>
 
         <p>The stable tree is maintained in the svn repository at webkit.org:</p>
 
-        <p><pre>svn co http://svn.webkit.org/repository/webkit/releases/WebKitGTK/webkit-1.10</pre></p>
+        <p><pre>svn co http://svn.webkit.org/repository/webkit/releases/WebKitGTK/webkit-2.0</pre></p>
 
         <h3>Development tree</h3>
 
