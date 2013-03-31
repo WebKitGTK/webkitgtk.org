@@ -305,16 +305,21 @@ class WebKitRelease:
         body += "\n"
 
         body += "This is "
-        if micro == 1:
+        if micro == 1 or micro == 0:
             body += "the first "
         else:
             body += "a "
         if is_stable:
-            body += "bug fix release in the stable "
+            if micro == 0:
+                body += "stable release in the "
+            else:
+                body += "bug fix release in the stable "
         else:
             body += "development release leading toward "
-        # FIXME this doesn't work if we bump to WebKit 2.x
-        body += "%d.%d series.\n" % (major, minor + 1)
+        if is_stable:
+            body += "%d.%d series.\n" % (major, minor)
+        else:
+            body += "%d.%d series.\n" % (major, minor + 1)
         body += "\n"
 
         # NEWS
