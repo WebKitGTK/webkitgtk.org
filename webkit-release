@@ -110,22 +110,26 @@ if not hasattr(tarfile.TarFile, 'xvopen'):
 
 
 class WebKitTarball:
-    REQUIREMENTS = [ ('GTK2', 'gtk+'),
-                     ('GAIL2', 'gail'),
-                     ('GLIB', 'glib'),
-                     ('LIBSOUP', 'libsoup'),
-                     ('CAIRO', 'cairo'),
-                     ('LIBXML', 'libxml'),
-                     ('FONTCONFIG', 'fontconfig'),
-                     ('FREETYPE2', 'FreeType2') ]
-    OPTIONAL_REQUIREMENTS = [ ('GTK3', 'gtk+'),
-                              ('GAIL3', 'gail'),
-                              ('LIBXSLT', 'libxslt'),
-                              ('SQLITE', 'SQLite'),
-                              ('GSTREAMER_0_10', 'gstreamer'),
-                              ('GSTREAMER_0_10_PLUGINS_BASE', 'gstreamer-plugin-base'),
-                              ('ENCHANT', 'enchant'),
-                              ('LIBFFTW', 'libfftw')]
+    REQUIREMENTS = [ ('gtk3', 'gtk+'),
+                     ('gail3', 'gail'),
+                     ('glib', 'glib'),
+                     ('libsoup', 'libsoup'),
+                     ('cairo', 'cairo'),
+                     ('pango', 'pango'),
+                     ('libxml', 'libxml'),
+                     ('fontconfig', 'fontconfig'),
+                     ('freetype2', 'FreeType2'),
+                     ('libsecret', 'libsecret') ]
+    OPTIONAL_REQUIREMENTS = [ ('gtk2', 'gtk+'),
+                              ('gail2', 'gail'),
+                              ('gobject_introspection', 'GObject introspection'),
+                              ('libxslt', 'libxslt'),
+                              ('sqlite', 'SQLite'),
+                              ('gstreamer', 'gstreamer'),
+                              ('gstreamer_plugins_base', 'gstreamer-plugins-base'),
+                              ('enchant', 'enchant'),
+                              ('clutter', 'Clutter'),
+                              ('clutter_gtk', 'Clutter GTK+') ]
 
     def __init__(self, tarball):
         self._tarball = tarball
@@ -135,35 +139,51 @@ class WebKitTarball:
 
         self._tar = tarfile.open(tarball)
         self._basedir = self._tar.getmembers()[0].name
-        configure = self._tar.getmember(os.path.join(self._basedir, 'configure'))
-        configure_file = self._tar.extractfile(configure)
 
-        pattern = re.compile('^(.+)_REQUIRED_VERSION=(.+)$')
+        self._parse_versions()
+
+    def _parse_versions(self):
+        versions = self._tar.getmember(os.path.join(self._basedir, 'Source', 'autotools', 'Versions.m4'))
+        versions_file = self._tar.extractfile(versions)
+
+        major_version_pattern = re.compile('^m4_define\(\[webkit_major_version\], \[(.+)\]\)$')
+        minor_version_pattern = re.compile('^m4_define\(\[webkit_minor_version\], \[(.+)\]\)$')
+        micro_version_pattern = re.compile('^m4_define\(\[webkit_micro_version\], \[(.+)\]\)$')
+        required_version_pattern = re.compile('^m4_define\(\[(.+)_required_version\], \[(.+)\]\)$')
 
         self._minimum_versions = {}
-        for line in configure_file.readlines():
+        self._major = self._minor = self._micro = None
+        for line in versions_file.readlines():
             line = line.strip(' \t\n')
             if not line:
                 continue
 
-            if 'WEBKIT_MAJOR_VERSION=' in line:
-                self._major = int(line.split('=', 1)[1])
-                continue
-            if 'WEBKIT_MINOR_VERSION=' in line:
-                self._minor = int(line.split('=', 1)[1])
-                continue
-            if 'WEBKIT_MICRO_VERSION=' in line:
-                self._micro = int(line.split('=', 1)[1])
-                continue
+            if self._major is None:
+                match = major_version_pattern.match(line)
+                if match:
+                    self._major = int(match.group(1))
+                    continue
 
-            match = pattern.match(line)
+            if self._minor is None:
+                match = minor_version_pattern.match(line)
+                if match:
+                    self._minor = int(match.group(1))
+                    continue
+
+            if self._micro is None:
+                match = micro_version_pattern.match(line)
+                if match:
+                    self._micro = int(match.group(1))
+                    continue
+
+            match = required_version_pattern.match(line)
             if not match:
                 continue
 
             name, version = match.groups()
             self._minimum_versions[name.strip()] = version.strip()
 
-        configure_file.close()
+        versions_file.close()
 
     def delete(self):
         os.unlink(self._tarball)
@@ -324,14 +344,22 @@ browsers.
         body += "=" * (len(reqs) - 1)
         body += "\n\n"
         for key, name in WebKitTarball.REQUIREMENTS:
-            body += "%s >= %s\n" % (name, self._tarball.get_required_version(key))
+            body += name
+            try:
+                body += " >= %s\n" % self._tarball.get_required_version(key)
+            except KeyError:
+                body += "\n"
         body += "\n"
 
         body += "Depending on your configuration options WebKitGTK+ may also depend on:\n"
         body += "\n"
 
         for key, name in WebKitTarball.OPTIONAL_REQUIREMENTS:
-            body += "%s >= %s\n" % (name, self._tarball.get_required_version(key))
+            body += name
+            try:
+                body += " >= %s\n" % self._tarball.get_required_version(key)
+            except KeyError:
+                body += "\n"
         body += "\n"
 
         # More info
