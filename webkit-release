@@ -284,7 +284,7 @@ class WebKitRelease:
 
     WK1_PKG_NAME = "webkitgtk"
     WK2_PKG_NAME = "webkit2gtk"
-    RELEASE_BASE_URL = "http://webkitgtk.org/"
+    RELEASE_BASE_URL = "http://webkitgtk.org/releases/"
     DOCS_BASE_DIR = "reference"
     ONLINE_DOCS_BASE_URL = "http://developer.gnome.org"
 
