@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>{{ page.main-title }} - The WebKitGTK+ Project</title>
+    <link rel="stylesheet" type="text/css" media="all" href="/style.css">
+    <link rel="stylesheet" type="text/css" media="all" href="/news.css">
+
+    <link rel="alternate" type="application/rss+xml" title="Subscribe to WebKitGTK+ news (RSS feed)" href="/rss.xml" />
+    <link rel="alternate" type="application/atom+xml" title="Subscribe to WebKitGTK+ news (Atom feed)" href="/atom.xml" />
+
+</head>
+
+<body class="mozilla linux"
+    id="{{ page.section }}">
+
+    <!-- accessibility access -->
+    <div id="accessibility_access">
+        <ul>
+            <li><a href="#container">Go to page content</a></li>
+            <li><a href="#top_bar">Go to main menu</a></li>
+        </ul>
+    </div>
+
+    <!-- global gnome.org domain bar -->
+    <div id="global_domain_bar">
+        <div class="maxwidth">
+            <div class="tab webkit">
+                <a class="root" href="http://www.webkit.org/">webkit.org</a>
+            </div>
+            <div class="tab">
+                <a class="root" href="http://www.gnome.org/">GNOME.org</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- header -->
+    <div id="header" class="container_12">
+        <div id="logo" class="grid_3">
+            <h1><a title="Go to home page" href="http://webkitgtk.org/">WebKitGTK+</a></h1>
+        </div>
+        <div id="top_bar" class="grid_9">
+            <div class="left">
+                <div class="menu">
+                    <ul>
+                        <li class="about"><a href="/">About</a></li>
+                        <li class="news"><a href="/news.html">News</a></li>
+                        <li class="documentation"><a href="/documentation.html">Documentation</a></li>
+                        <li class="download"><a href="/download.html">Download</a></li>
+                        <li class="contribute"><a href="/contribute.html">Contribute</a></li>
+                        <li class="contact"><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <!-- container -->
+    <div id="container" class="two_columns">
+        <div class="container_12">
+
+            <div class="page_title">
+                <hgroup>
+                <div class="breadcrumb"></div>
+                <h1>{{ page.main-title }}</h1>
+                </hgroup>
+            </div>
+
+            {{ content }}
+
+            <!-- footer artwork -->
+            <div id="footer_art" class="grid_12 default">
+            &nbsp;
+            </div>
+
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <!-- footer grass -->
+    <div id="footer_grass">
+        &nbsp;
+    </div>
+
+    <!-- footer -->
+    <div id="footer">
+        <div class="container_12">
+            <div class="links grid_9">
+                <div class="menu">
+                    <ul>
+                        <li><a href="/">About</a></li>
+                        <li><a href="/news.html">News</a></li>
+                        <li><a href="/documentation.html">Documentation</a></li>
+                        <li><a href="/download.html">Download</a></li>
+                        <li><a href="/contribute.html">Contribute</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- footnotes -->
+            <div id="footnotes" class="grid_9">
+                Copyright © 2009‒2013 <strong class="gnome_logo">The WebKitGTK+ Team</strong><br>
+                <small>
+                    Hosting kindly provided by <a href="http://www.igalia.com/">Igalia</a>.
+                    Powered by <a href="http://jekyllrb.com/">Jekyll</a>.
+                </small>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+    </div>
+
+</body>
+</html>
