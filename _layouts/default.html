@@ -1,117 +1,118 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html>
 
 <head>
-
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>{{ page.main-title }} - The WebKitGTK+ Project</title>
-    <link rel="stylesheet" type="text/css" media="all" href="/style.css">
-    <link rel="stylesheet" type="text/css" media="all" href="/news.css">
+    <title>The WebKitGTK+ Project</title>
+    <link rel="stylesheet" type="text/css" media="all" href="style.css">
 
     <link rel="alternate" type="application/rss+xml" title="Subscribe to WebKitGTK+ news (RSS feed)" href="/rss.xml" />
     <link rel="alternate" type="application/atom+xml" title="Subscribe to WebKitGTK+ news (Atom feed)" href="/atom.xml" />
 
 </head>
 
-<body class="mozilla linux"
-    id="{{ page.section }}">
-
-    <!-- accessibility access -->
-    <div id="accessibility_access">
-        <ul>
-            <li><a href="#container">Go to page content</a></li>
-            <li><a href="#top_bar">Go to main menu</a></li>
-        </ul>
-    </div>
-
-    <!-- global gnome.org domain bar -->
-    <div id="global_domain_bar">
-        <div class="maxwidth">
-            <div class="tab webkit">
-                <a class="root" href="http://www.webkit.org/">webkit.org</a>
-            </div>
-            <div class="tab">
-                <a class="root" href="http://www.gnome.org/">GNOME.org</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- header -->
-    <div id="header" class="container_12">
-        <div id="logo" class="grid_3">
-            <h1><a title="Go to home page" href="http://webkitgtk.org/">WebKitGTK+</a></h1>
-        </div>
-        <div id="top_bar" class="grid_9">
-            <div class="left">
-                <div class="menu">
-                    <ul>
-                        <li class="about"><a href="/">About</a></li>
-                        <li class="news"><a href="/news.html">News</a></li>
-                        <li class="documentation"><a href="/documentation.html">Documentation</a></li>
-                        <li class="download"><a href="/download.html">Download</a></li>
-                        <li class="contribute"><a href="/contribute.html">Contribute</a></li>
-                        <li class="contact"><a href="/contact.html">Contact</a></li>
-                    </ul>
+<body id="{{ page.section }}">
+    <div id="main_wrapper">
+        <div id="global_domain_bar">
+            <div class="maxwidth">
+                <div class="tab webkit">
+                    <a class="root" href="http://www.webkit.org/">webkit.org</a>
+                </div>
+                <div class="tab">
+                    <a class="root" href="http://www.gnome.org/">GNOME.org</a>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="clearfix"></div>
+        <div id="title_bar">
+            <div class="maxwidth">
+                <span id="site_title">WebKitGTK+</span>
+            </div>
+        </div>
 
-    <!-- container -->
-    <div id="container" class="two_columns">
-        <div class="container_12">
-
-            <div class="page_title">
-                <hgroup>
-                <div class="breadcrumb"></div>
-                <h1>{{ page.main-title }}</h1>
-                </hgroup>
+        <div id="container" class="two_columns max_width">
+            <div class="content">
+                {{ content }}
             </div>
 
-            {{ content }}
+            <div class="sidebar">
+                <div class="subtle_box">
+                    <div class="section">
+                        <div class="header download"><span>Releases</span></div>
+                        <ul>
+                            <li><span class="subheader">&#8227; Stable tarball</span>
+                                <p><a href="releases/webkitgtk-2.0.0.tar.xz">WebKitGTK+ 2.0.0</a></p>
+                            </li>
+                            <li><span class="subheader">&#8227; Unstable tarball</span>
+                                <p><a href="releases/webkitgtk-1.11.92.tar.xz">WebKitGTK+ 1.11.92</a></p>
+                            </li>
+                            <li><span class="subheader">(<a href="releases/">more</a>)</span>
+                        </ul>
+                    </div>
 
-            <!-- footer artwork -->
-            <div id="footer_art" class="grid_12 default">
-            &nbsp;
+                    <div class="section">
+                        <div class="header documentation"><span>Documentation</span></div>
+                        <ul>
+                            <li><span class="subheader">&#8227; Stable API Reference</span>
+                                <p>
+                                    <a href="http://webkitgtk.org/reference/webkit2gtk/stable/index.html">WebKit2</a> &mdash;
+                                    <a href="http://webkitgtk.org/reference/webkitgtk/stable/index.html">WebKit1</a>
+                                </p>
+                            </li>
+                            <li><span class="subheader">&#8227; Unstable API Reference</span>
+                                <p>
+                                    <a href="http://webkitgtk.org/reference/webkit2gtk/stable/index.html">WebKit2</a> &mdash;
+                                    <a href="http://webkitgtk.org/reference/webkitgtk/stable/index.html">WebKit1</a>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <div class="header contact"><span>Contact</span></div>
+                        <ul>
+                            <li><span class="subheader">&#8227; Mailing lists</span>
+                                <p><a href="http://lists.webkit.org/mailman/listinfo/webkit-gtk">webkitgtk-dev</a></p>
+                                <p><a href="http://lists.webkit.org/mailman/listinfo/webkit-help">webkit-help</a></p>
+                                <p><a href="http://lists.webkit.org/mailman/listinfo/webkit-dev">webkit-dev</a></p>
+                            </li>
+                            <li><span class="subheader">&#8227; #webkitgtk+ on freenode</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <div class="header contribute"><span>Contribute</span></div>
+                        <ul>
+                            <li class="subheader">&#8227; <a href="https://bugs.webkit.org/enter_bug.cgi?assigned_to=webkit-unassigned%40lists.webkit.org&attachurl=&blocked=&bug_file_loc=http://&bug_severity=Normal&bug_status=NEW&comment=&component=WebKit%20Gtk&contenttypeentry=&contenttypemethod=autodetect&contenttypeselection=text/plain&data=&dependson=&description=&flag_type-1=X&flag_type-3=X&flag_type-4=X&form_name=enter_bug&keywords=GTK&maketemplate=Remember%20values%20as%20bookmarkable%20template&op_sys=Linux&priority=P3&product=WebKit&rep_platform=PC&short_desc=%5BGTK%5D%20">File a bug</a></li>
+                            <li class="subheader">&#8227; <a href="http://www.webkit.org/building/checkout.html">Get the code</a></li>
+                            <li class="subheader">&#8227; <a href="http://trac.webkit.org/wiki/BuildingGtk">How to build</a></li>
+                            <li class="subheader">&#8227; <a href="http://www.webkit.org/coding/contributing.html">How to submit code</a></li>
+                            <li class="subheader">&#8227; <a href="http://trac.webkit.org/wiki/WebKitGTK/2.0.x">Stable branch</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <div class="header news"><span>Latest News</span></div>
+                        <ul class="navigation_list">
+                            {% for post in site.posts limit:3 %}
+                                <li>
+                                    <span class="date">{{ post.date | date_to_string }}</span>
+                                    <a href="{{ post.url }}">{{ post.title }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                </div>
             </div>
 
         </div>
     </div>
 
-    <div class="clearfix"></div>
-
-    <!-- footer grass -->
-    <div id="footer_grass">
-        &nbsp;
-    </div>
-
-    <!-- footer -->
     <div id="footer">
-        <div class="container_12">
-            <div class="links grid_9">
-                <div class="menu">
-                    <ul>
-                        <li><a href="/">About</a></li>
-                        <li><a href="/news.html">News</a></li>
-                        <li><a href="/documentation.html">Documentation</a></li>
-                        <li><a href="/download.html">Download</a></li>
-                        <li><a href="/contribute.html">Contribute</a></li>
-                        <li><a href="/contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- footnotes -->
-            <div id="footnotes" class="grid_9">
-                Copyright © 2009‒2013 <strong class="gnome_logo">The WebKitGTK+ Team</strong><br>
-                <small>
-                    Hosting kindly provided by <a href="http://www.igalia.com/">Igalia</a>.
-                    Powered by <a href="http://jekyllrb.com/">Jekyll</a>.
-                </small>
-            </div>
-
+        <div class="maxwidth">
+            <span class="left">Copyright © 2009‒2013 The WebKitGTK+ Team</span>
+            <span class="right">Hosting kindly provided by <a href="http://www.igalia.com/">Igalia</a>.</span>
             <div class="clear"></div>
         </div>
     </div>

@@ -4,29 +4,34 @@ main-title: About
 section: about
 ---
 
-<div class="content">
-    <h2>What is WebKitGTK+ anyway?</h2>
-    <p>WebKitGTK+ is the port of the portable web rendering engine
-    <a href="http://webkit.org/">WebKit</a> to the GTK+ platform. Random tidbits
-    about WebKitGTK+ can be found at
-    <a href="http://live.gnome.org/WebKitGtk">GNOME’s Wiki</a>.</p>
-    <br />
-    <div class="clear"></div>
-</div>
+<style>
+    .about_section {
+        margin-bottom: 20px;
+    }
+</style>
 
-<div class="sidebar">
+<h2>Web content rendering for the Gnome Platform</h2>
+<img src="images/screenshot.png"/>
+<p class="about_section">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+</p>
 
-    <div class="subtle_box">
-        <h4>Latets News</h4>
+<h2>Web process separation</h2>
+<p class="about_section">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+</p>
 
-    <ul class="navigation_list">
-        {% for post in site.posts limit:3 %}
-            <li>
-                <span class="date">{{ post.date | date_to_string }}</span>
-                <a href="{{ post.url }}">{{ post.title }}</a>
-            </li>
-        {% endfor %}
-    </ul>
+<h2>Accessible</h2>
+<p class="about_section">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+</p>
 
-    </div>
-</div>
+<h2>Support for audio and video</h2>
+<p class="about_section">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+</p>
+
+<h2>3D CSS transformations and accelerated rendering</h2>
+<p class="about_section">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+</p>
