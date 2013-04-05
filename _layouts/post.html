@@ -1,35 +1,7 @@
 ---
 layout: default
-main-title: News
-section: news
 ---
 
-<div class="content">
-    <div class="news_title">
-        <p class="date">{{ page.date | date_to_long_string }}</p>
-        <h2>{{ page.title }}</h2>
-    </div>
-    {{ content }}
-    <div class="clear"></div>
-</div>
+<h2>{{ page.title }}</h2>
 
-<div class="sidebar">
-
-    <a class="action_button" href="/news.html" style="display: block; text-align: center; margin-bottom: 20px;">Read the archives...</a>
-
-    <div class="subtle_box">
-        <h4>Connect with WebKitGTK+</h4>
-
-        <div class="social_network_icons">
-            <ul>
-                <li>
-                    <a href="http://twitter.com/webkitgtk">
-                    <img src="/images/social_networks/twitter.png" alt="Twitter" />
-                    Twitter
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-</div>
+{{ content }}

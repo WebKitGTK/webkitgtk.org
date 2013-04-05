@@ -3,15 +3,15 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>The WebKitGTK+ Project</title>
-    <link rel="stylesheet" type="text/css" media="all" href="style.css">
+    <title>{% if page.title %} {{ page.title }} - {% endif %}{{ site.name }}</title>
+    <link rel="stylesheet" type="text/css" media="all" href="/style.css">
 
     <link rel="alternate" type="application/rss+xml" title="Subscribe to WebKitGTK+ news (RSS feed)" href="/rss.xml" />
     <link rel="alternate" type="application/atom+xml" title="Subscribe to WebKitGTK+ news (Atom feed)" href="/atom.xml" />
 
 </head>
 
-<body id="{{ page.section }}">
+<body>
     <div id="main_wrapper">
         <div id="global_domain_bar">
             <div class="maxwidth">
@@ -26,7 +26,7 @@
 
         <div id="title_bar">
             <div class="maxwidth">
-                <span id="site_title">WebKitGTK+</span>
+                <span id="site_title"><a href="/">WebKitGTK+</a></span>
             </div>
         </div>
 

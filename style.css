@@ -61,6 +61,21 @@ a:visited {
    color: #5d396e;
 }
 
+h1 {
+    margin: 0 0 6px;
+    font-family: 'Open Sans Semi Bold', Arial, sans-serif;
+    font-size: 35px;
+    text-shadow: 0 1px 0 #fff;
+    line-height: normal;
+}
+
+h2 {
+    margin: 0 0 6px;
+    font-family: 'Open Sans Semi Bold', Arial, sans-serif;
+    font-size: 25px;
+    text-shadow: 0 1px 0 #fff;
+}
+
 .left {
     float: left;
 }
@@ -86,7 +101,10 @@ a:visited {
     background: #383d42;
 }
 
-#title_bar span {
+#title_bar span,
+#title_bar span a,
+#title_bar span a:hover,
+#title_bar span a:visited {
     vertical-align: middle;
     line-height: 55px;
 
@@ -95,6 +113,7 @@ a:visited {
     font-family: 'Open Sans Semi Bold', Arial, sans-serif;
     font-size: 30px;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 1);
+    text-decoration: none;
 }
 
 #global_domain_bar .maxwidth {
@@ -146,15 +165,6 @@ a:visited {
 
 #global_domain_bar .tab.webkit a.root {
     background: url(images/webkit-favicon.ico) 0 0 no-repeat
-}
-
-h2 {
-    margin: 0 0 6px;
-
-    font-family: 'Open Sans Semi Bold', Arial, sans-serif;
-    font-size: 25px;
-    text-shadow: 0 1px 0 #fff;
-    line-height: normal;
 }
 
 #container {
@@ -237,6 +247,7 @@ h2 {
 
 .subtle_box li {
     margin-bottom: 0.5ex;
+    list-style: none;
 }
 
 .subtle_box li p {
