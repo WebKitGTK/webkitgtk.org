@@ -38,6 +38,18 @@
             <div class="sidebar">
                 <div class="subtle_box">
                     <div class="section">
+                        <div class="header news"><span>Latest News</span></div>
+                        <ul class="navigation_list">
+                            {% for post in site.posts limit:3 %}
+                                <li>
+                                    <span class="date">{{ post.date | date_to_string }}</span>
+                                    <a href="{{ post.url }}">{{ post.title }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                    <div class="section">
                         <div class="header download"><span>Releases</span></div>
                         <ul>
                             <li><span class="subheader">&#8227; Stable tarball</span>
@@ -88,18 +100,6 @@
                             <li class="subheader">&#8227; <a href="http://trac.webkit.org/wiki/BuildingGtk">How to build</a></li>
                             <li class="subheader">&#8227; <a href="http://www.webkit.org/coding/contributing.html">How to submit code</a></li>
                             <li class="subheader">&#8227; <a href="http://trac.webkit.org/wiki/WebKitGTK/2.0.x">Stable branch</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="section">
-                        <div class="header news"><span>Latest News</span></div>
-                        <ul class="navigation_list">
-                            {% for post in site.posts limit:3 %}
-                                <li>
-                                    <span class="date">{{ post.date | date_to_string }}</span>
-                                    <a href="{{ post.url }}">{{ post.title }}</a>
-                                </li>
-                            {% endfor %}
                         </ul>
                     </div>
 
