@@ -1,0 +1,7 @@
+#!/bin/sh
+jekyll
+
+# Jekyll doesn't move symlinks, so we do it manually.
+cp -P reference/webkit2gtk/stable _site/reference/webkit2gtk/stable
+cp -P reference/webkitgtk/stable _site/reference/webkitgtk/stable
+cp -P webkit-*tar* _site
