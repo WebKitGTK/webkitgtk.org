@@ -2,7 +2,7 @@
 layout: default
 ---
 
-![Screenshot of Epiphany using WebKitGTK+]({{ site.url }}/images/screenshot.png)
+![Screenshot of Epiphany using WebKitGTK+](/images/screenshot.png)
 
 ## Web content rendering for the GNOME Platform##
 
