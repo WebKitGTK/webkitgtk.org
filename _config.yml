@@ -1,5 +1,5 @@
 name: The WebKitGTK+ Project
 url: http://webkitgtk.org
 
-webkit2gtk-version: 2.0.0
-webkitgtk-version: 1.9.2
+stable-release-version: 2.0.0
+unstable-release-version: 1.11.92
