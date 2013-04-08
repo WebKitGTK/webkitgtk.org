@@ -70,10 +70,14 @@ h1 {
 }
 
 h2 {
-    margin: 0 0 6px;
+    margin: 20px 0 10px;
     font-family: 'Open Sans Semi Bold', Arial, sans-serif;
     font-size: 25px;
     text-shadow: 0 1px 0 #fff;
+}
+
+p {
+    margin-bottom: 15px;
 }
 
 .left {
@@ -197,6 +201,10 @@ h2 {
 
 #container.two_columns .sidebar {
     width: 270px;
+}
+
+.sidebar p {
+    margin-bottom: 0;
 }
 
 .subtle_box {
