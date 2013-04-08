@@ -76,10 +76,6 @@ h2 {
     text-shadow: 0 1px 0 #fff;
 }
 
-p {
-    margin-bottom: 15px;
-}
-
 .left {
     float: left;
 }
@@ -201,10 +197,6 @@ p {
 
 #container.two_columns .sidebar {
     width: 270px;
-}
-
-.sidebar p {
-    margin-bottom: 0;
 }
 
 .subtle_box {
