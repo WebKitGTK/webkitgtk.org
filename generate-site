@@ -5,3 +5,6 @@ jekyll
 cp -P reference/webkit2gtk/stable _site/reference/webkit2gtk/stable
 cp -P reference/webkitgtk/stable _site/reference/webkitgtk/stable
 cp -P webkit-*tar* _site
+
+# Copying many files is expensive.
+ln -s ../releases _site/releases
