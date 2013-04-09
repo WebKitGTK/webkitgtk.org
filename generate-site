@@ -4,6 +4,8 @@ jekyll
 # Jekyll doesn't move symlinks, so we do it manually.
 cp -P reference/webkit2gtk/stable _site/reference/webkit2gtk/stable
 cp -P reference/webkitgtk/stable _site/reference/webkitgtk/stable
+cp -P reference/webkit2gtk/unstable _site/reference/webkit2gtk/unstable
+cp -P reference/webkitgtk/unstable _site/reference/webkitgtk/unstable
 cp -P webkit-*tar* _site
 
 # Copying many files is expensive.
