@@ -167,6 +167,14 @@ h2 {
     background: url(images/webkit-favicon.ico) 0 0 no-repeat
 }
 
+#global_domain_bar .tab.twitter {
+    margin-right: 232px;
+}
+
+#global_domain_bar .tab.twitter a.root {
+    background: url(images/twitter-favicon.ico) 0 0 no-repeat
+}
+
 #container {
     padding-top: 20px;
     color: #555;
