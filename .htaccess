@@ -1,14 +1,9 @@
-<FILES .htaccess>
-order allow,deny
-deny from all
-</FILES>
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+</IfModule>
 
-<FILES README.md>
-order allow,deny
-deny from all
-</FILES>
-
-<FILES webkit-release>
-order allow,deny
-deny from all
-</FILES>
