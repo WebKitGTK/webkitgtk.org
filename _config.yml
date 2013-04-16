@@ -2,5 +2,5 @@ name: The WebKitGTK+ Project
 url: http://webkitgtk.org
 exclude: ['README.md', 'generate-site', 'releases', 'webkit-release']
 
-stable-release-version: 2.0.0
+stable-release-version: 2.0.1
 unstable-release-version: 1.11.92
