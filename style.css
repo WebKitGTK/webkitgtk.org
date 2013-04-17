@@ -215,6 +215,7 @@ h3 {
 
 #container.two_columns .sidebar {
     width: 270px;
+    text-align: left;
 }
 
 .subtle_box {
