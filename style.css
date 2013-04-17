@@ -24,6 +24,8 @@ html {
     color: #2e3436;
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 14px;
+
+    text-align: justify;
 }
 
 body {
@@ -207,8 +209,8 @@ h3 {
 }
 
 #container.two_columns .content {
-    width: 675px;
-    padding-right: 15px;
+    width: 665px;
+    padding-right: 25px;
 }
 
 #container.two_columns .sidebar {
