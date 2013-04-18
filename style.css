@@ -24,8 +24,6 @@ html {
     color: #2e3436;
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 14px;
-
-    text-align: justify;
 }
 
 body {
@@ -205,6 +203,7 @@ h3 {
 }
 
 #container .content {
+    text-align: justify;
     width: 940px;
 }
 
@@ -215,7 +214,6 @@ h3 {
 
 #container.two_columns .sidebar {
     width: 270px;
-    text-align: left;
 }
 
 .subtle_box {
