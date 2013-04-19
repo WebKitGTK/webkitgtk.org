@@ -1,2 +1,7 @@
 releases
 _site/
+
+# Planet
+_cache/
+_planet/
+*.tmplc

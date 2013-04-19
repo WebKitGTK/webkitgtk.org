@@ -175,12 +175,13 @@ h3 {
     background: url(images/webkit-favicon.ico) 0 0 no-repeat
 }
 
-#global_domain_bar .tab.twitter {
+#global_domain_bar .tab.none {
     margin-right: 232px;
 }
 
-#global_domain_bar .tab.twitter a.root {
-    background: url(images/twitter-favicon.ico) 0 0 no-repeat
+#global_domain_bar .tab.none a.root {
+    background: none;
+    padding-left: 0;
 }
 
 #container {
@@ -227,6 +228,10 @@ h3 {
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
 }
 
+.subtle_box:not(:last-child) {
+    margin-bottom: 50px;
+}
+
 .subtle_box .section:not(:last-child) {
     margin-bottom: 30px;
 }
@@ -251,6 +256,9 @@ h3 {
 .subtle_box .contact { background: url(images/contact.png) 0 center no-repeat; }
 .subtle_box .contribute { background: url(images/heart.png) 0 center no-repeat; }
 .subtle_box .news { background: url(images/bolt.png) 0 center no-repeat; }
+.subtle_box .feeds { background: url(images/group.png) 0 center no-repeat; }
+.subtle_box .subscribe { background: url(images/wheel.png) 0 center no-repeat; }
+.subtle_box .rss { background: url(images/rss.png) 0 center no-repeat; }
 
 .subtle_box .subheader {
     font-weight: bold;
@@ -286,5 +294,23 @@ h3 {
     line-height: 3.5ex;
 }
 
-.news {
+/* Planet */
+.clear {
+    clear: both;
+}
+
+.date {
+    float: right;
+    font-size: 110%;
+    font-weight: bold;
+    margin: 0.4em;
+    margin: 0px 0px 0px 10px !important;
+}
+
+.author {
+    font-weight: bold;
+}
+
+h2 a {
+    text-decoration: none;
 }
