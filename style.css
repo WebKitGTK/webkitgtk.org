@@ -192,7 +192,7 @@ h3 {
     min-height: 240px;
 
     padding-bottom: 5ex;
-    overflow: auto;
+    overflow: hidden;
 }
 
 #container .content,
