@@ -137,6 +137,7 @@ class WebKitTarball:
         self._size = None
         self._sha256sum = None
         self._md5sum = None
+        self._sha1sum = None
 
         self._tar = tarfile.open(tarball)
         self._basedir = self._tar.getmembers()[0].name
@@ -228,6 +229,12 @@ class WebKitTarball:
             from hashlib import md5
             self._md5sum = hexdigest(self._tarball, md5)
         return self._md5sum
+
+    def get_sha1sum(self):
+        if self._sha1sum is None:
+            from hashlib import sha1
+            self._sha1sum = hexdigest(self._tarball, sha1)
+        return self._sha1sum
 
     def get_news(self):
         retval = []
