@@ -553,21 +553,40 @@ are far too many to list!
                 if e.errno != errno.EEXIST:
                     raise
 
-    def install_tarball(self, tarballsdir):
-        tarball = os.path.join(tarballsdir, self._tarball.get_name())
-        if os.path.exists(tarball):
-            from hashlib import md5
-            if self._tarball.get_md5sum() == hexdigest(tarball, md5):
-                # Already installed
-                return
+    def install_tarball(self, host, releases_dir):
+        tarball_name = self._tarball.get_name()
+        command = ['ssh', host, 'test ! -e %s/%s' % (releases_dir, tarball_name)]
+        if subprocess.call(command) != 0:
+            sys.stderr.write("Found: %s:%s/%s. This should never happen\n" % (host, releases_dir, tarball_name))
+            sys.exit(1)
 
-        try:
-            os.makedirs(tarballsdir)
-        except OSError as e:
-            if e.errno != errno.EEXIST:
-                raise
+        tarball_file = self._tarball.get_tarball()
 
-        shutil.copyfile(self._tarball.get_tarball(), tarball)
+        # Create sha1 file.
+        sha1_file = tarball_file + ".sha1"
+        tmp = tempfile.NamedTemporaryFile(delete=False)
+        tmp.write("%s  %s\n" % (self._tarball.get_sha1sum(), tarball_name))
+        tmp.close()
+        shutil.move(tmp.name, sha1_file)
+
+        # Sign the sha1 file.
+        gpg_file = sha1_file + ".asc"
+        subprocess.call(['gpg', '--armor', '--sign', sha1_file])
+
+        # Upload tarball, sha1 and gpg files.
+        command = ['scp', tarball_file, sha1_file, gpg_file, '%s:%s' % (host, releases_dir)]
+        if subprocess.call(command) != 0:
+            sys.stderr.write("Error uploading %s to %s:%s\n" % (tarball_file, host, releases_dir))
+            sys.exit(1)
+
+        # Create the LATEST symlink.
+        if self._tarball.is_stable():
+            symlink_prefix = "LATEST-STABLE-"
+        else:
+            symlink_prefix = "LATEST-UNSTABLE-"
+        latest = symlink_prefix + self._tarball.get_version_str()
+        command = ['ssh', host, 'rm -f %s/%s[0-9]* && ln -s %s %s/%s' % (releases_dir, symlink_prefix, tarball_name, releases_dir, latest)]
+        subprocess.call(command)
 
     def _update_config_file(self, website_dir):
         config_file = os.path.join(website_dir, "_config.yml")
@@ -680,7 +699,13 @@ if __name__ == '__main__':
 
     subparsers = parser.add_subparsers(dest = 'command')
 
-    subparsers.add_parser('install-tarball', help = 'Intall sources tarball').add_argument('tarball')
+    subparser = subparsers.add_parser('install-tarball', help = 'Intall sources tarball')
+    subparser.add_argument('--host', dest = 'host', default = 'localhost',
+                           help = 'Host to upload the tarball')
+    subparser.add_argument('--releases-dir', dest = 'releases-dir', default = '/var/www/webkitgtkdotorg/releases',
+                           help = 'Directory to upload the tarball')
+    subparser.add_argument('tarball')
+
     subparsers.add_parser('install-docs', help = 'Install API documentation').add_argument('tarball')
 
     subparser = subparsers.add_parser('update-website', help = 'Update website')
@@ -722,7 +747,7 @@ if __name__ == '__main__':
     elif command == 'install-docs':
         wk.install_docs(options['output-dir'])
     elif command == 'install-tarball':
-        wk.install_tarball(options['output-dir'])
+        wk.install_tarball(options['host'], options['releases-dir'])
     elif command == 'update-website':
         wk.update_website(options['website-dir'])
     elif command == 'release':
