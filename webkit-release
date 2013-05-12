@@ -293,7 +293,6 @@ class WebKitRelease:
     WK1_PKG_NAME = "webkitgtk"
     WK2_PKG_NAME = "webkit2gtk"
     RELEASE_BASE_URL = "http://webkitgtk.org/releases/"
-    DOCS_BASE_DIR = "reference"
     ONLINE_DOCS_BASE_URL = "http://developer.gnome.org"
 
     def __init__(self, tarball):
@@ -514,10 +513,10 @@ are far too many to list!
             tar.addfile(member, open(file_path))
         tar.close()
 
-    def install_docs(self, outputdir):
+    def install_docs(self, docs_dir):
         version = self._tarball.get_version_str()
         for wk_pkg in [self.WK1_PKG_NAME, self.WK2_PKG_NAME]:
-            docdir = os.path.join(outputdir, self.DOCS_BASE_DIR, wk_pkg, version)
+            docdir = os.path.join(docs_dir, wk_pkg, version)
             try:
                 os.makedirs(docdir)
             except OSError as e:
@@ -611,8 +610,8 @@ are far too many to list!
     def _add_new_docs(self, website_dir):
         is_stable = self._tarball.is_stable()
         version = self._tarball.get_version_str()
-        wk1_docs_dir = os.path.join(self.DOCS_BASE_DIR, self.WK1_PKG_NAME)
-        wk2_docs_dir = os.path.join(self.DOCS_BASE_DIR, self.WK2_PKG_NAME)
+        wk1_docs_dir = os.path.join(website_dir, "reference", self.WK1_PKG_NAME)
+        wk2_docs_dir = os.path.join(website_dir, "reference", self.WK2_PKG_NAME)
 
         doc_files = []
         if is_stable:
@@ -706,7 +705,10 @@ if __name__ == '__main__':
                            help = 'Directory to upload the tarball')
     subparser.add_argument('tarball')
 
-    subparsers.add_parser('install-docs', help = 'Install API documentation').add_argument('tarball')
+    subparser = subparsers.add_parser('install-docs', help = 'Install API documentation')
+    subparser.add_argument('--docs-dir', dest = 'docs-dir', default = 'reference',
+                           help = 'Directory to install the docs')
+    subparser.add_argument('tarball')
 
     subparser = subparsers.add_parser('update-website', help = 'Update website')
     subparser.add_argument('--website-dir', dest = 'website-dir', default = '.',
@@ -745,11 +747,11 @@ if __name__ == '__main__':
     if command == 'send-announcement':
         wk.send_announcement(not options['no-send'], options['from'])
     elif command == 'install-docs':
-        wk.install_docs(options['output-dir'])
+        wk.install_docs(options['docs-dir'])
     elif command == 'install-tarball':
         wk.install_tarball(options['host'], options['releases-dir'])
     elif command == 'update-website':
         wk.update_website(options['website-dir'])
     elif command == 'release':
-        wk.release(options['output-dir'], options['website-dir'], not options['no-send'], options['from'])
+        wk.release(options['docs-dir'], options['website-dir'], not options['no-send'], options['from'])
 
