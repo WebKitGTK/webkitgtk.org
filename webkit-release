@@ -229,7 +229,7 @@ class WebKitTarball:
         return self._md5sum
 
     def get_news(self):
-        retval = ''
+        retval = []
 
         news = self._tar.getmember(os.path.join(self._basedir, 'NEWS'))
         news_file = self._tar.extractfile(news)
@@ -258,7 +258,7 @@ class WebKitTarball:
                 ignore_empty = False
                 continue
 
-            retval += line
+            retval.append(line)
 
         news_file.close()
 
@@ -334,7 +334,7 @@ class WebKitRelease:
         body += whatsnew
         body += "=" * (len(whatsnew) - 1)
         body += "\n"
-        body += self._tarball.get_news()
+        body += "".join(self._tarball.get_news())
 
         # What's WebKitGTK+
         whatswkgtk = "What is WebKitGTK+?\n"
