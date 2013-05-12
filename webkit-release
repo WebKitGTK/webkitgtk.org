@@ -598,8 +598,8 @@ if __name__ == '__main__':
     subparsers.add_parser('install-docs', help = 'Install API documentation').add_argument('tarball')
 
     subparser = subparsers.add_parser('update-website', help = 'Update website')
-    subparser.add_argument('--website-dir', dest = 'website-dir', default = 'wwwroot',
-                           help = 'Website directory [wwwroot]')
+    subparser.add_argument('--website-dir', dest = 'website-dir', default = '.',
+                           help = 'Website directory [.]')
     subparser.add_argument('tarball')
 
     subparser = subparsers.add_parser('send-announcement', help = 'Send annoucement email')
