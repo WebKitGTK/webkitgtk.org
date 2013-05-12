@@ -5,6 +5,7 @@ import re
 import errno, os, re, sys
 import lzma
 import shutil
+import subprocess
 import tempfile
 from datetime import date
 
@@ -561,9 +562,80 @@ are far too many to list!
 
         shutil.copyfile(self._tarball.get_tarball(), tarball)
 
-    def update_website(self, websitedir):
-        # TODO
-        pass
+    def _update_config_file(self, website_dir):
+        config_file = os.path.join(website_dir, "_config.yml")
+        is_stable = self._tarball.is_stable()
+        version = self._tarball.get_version_str()
+
+        fd = open(config_file, 'r')
+        tmp = tempfile.NamedTemporaryFile(delete=False)
+        for line in fd.readlines():
+            if is_stable and line.startswith("stable-release-version:"):
+                tmp.write("stable-release-version: %s\n" % version)
+            elif not is_stable and line.startswith("unstable-release-version:"):
+                tmp.write("unstable-release-version:  %s\n" % version)
+            else:
+                tmp.write(line)
+        fd.close()
+        tmp.close()
+
+        shutil.move(tmp.name, config_file)
+        subprocess.call(['git', 'add', config_file])
+
+    def _add_new_docs(self, website_dir):
+        is_stable = self._tarball.is_stable()
+        version = self._tarball.get_version_str()
+        wk1_docs_dir = os.path.join(self.DOCS_BASE_DIR, self.WK1_PKG_NAME)
+        wk2_docs_dir = os.path.join(self.DOCS_BASE_DIR, self.WK2_PKG_NAME)
+
+        doc_files = []
+        if is_stable:
+            doc_files.extend([os.path.join(wk1_docs_dir, "stable"), os.path.join(wk2_docs_dir, "stable")])
+        else:
+            doc_files.extend([os.path.join(wk1_docs_dir, "unstable"), os.path.join(wk2_docs_dir, "unstable")])
+
+        doc_files.extend([os.path.join(wk1_docs_dir, self.WK1_PKG_NAME + "-html-" + version + ".tar.gz"),
+                          os.path.join(wk2_docs_dir, self.WK2_PKG_NAME + "-html-" + version + ".tar.gz")])
+
+        doc_files.extend([os.path.join(wk1_docs_dir, version), os.path.join(wk2_docs_dir, version)])
+
+        subprocess.call(['git', 'add'] + doc_files)
+
+    def _write_post(self, website_dir):
+        version = self._tarball.get_version_str()
+        post_name = date.strftime(date.today(), "%Y-%m-%d") + "-webkitgtk%s-released.md" % version
+        post_file = os.path.join(website_dir, "_posts", post_name)
+
+        post = "---\n"
+        post += "layout: post\n"
+        post += "title: WebKitGTK+ %s released!\n" % version
+        post += "---\n\n"
+
+        post += self._get_release_description()
+        post += "\n"
+
+        post += "### What's new in the WebKitGTK+ %s release?\n" % version
+        post += "\n"
+        post += "".join([l[1:] for l in self._tarball.get_news()])
+        post += "\n"
+
+        post += "Thanks to all the contributors who made possible this release."
+
+        tmp = tempfile.NamedTemporaryFile(delete=False)
+        tmp.write(post)
+        tmp.close()
+
+        shutil.move(tmp.name, post_file)
+        subprocess.call(['git', 'add', post_file])
+
+    def update_website(self, website_dir):
+        self._update_config_file(website_dir)
+        self._add_new_docs(website_dir)
+        self._write_post(website_dir)
+
+        p = subprocess.Popen(['git', 'commit', '-m', "Release: %s" % self._tarball.get_version_str()], stdout=subprocess.PIPE)
+        if p.wait() == 0:
+            sys.stdout.write("Website changes committed, run git push to update the website\n")
 
     def release(self, outputdir, websitedir, send_email, email_from = None):
         sys.stdout.write("Releasing WebKitGTK+ %s\n" % (self._tarball.get_version_str()))
