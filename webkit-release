@@ -495,7 +495,9 @@ are far too many to list!
             fd.close()
             tmp_file.close()
 
+            mode = os.stat(path).st_mode
             shutil.move(tmp_file.name, path)
+            os.chmod(path, mode)
 
         for sub in subs:
             print "%s (%d)" % (sub, subs[sub])
@@ -566,7 +568,9 @@ are far too many to list!
         tmp = tempfile.NamedTemporaryFile(delete=False)
         tmp.write("%s  %s\n" % (self._tarball.get_sha1sum(), tarball_name))
         tmp.close()
+        mode = os.stat(tarball_file).st_mode
         shutil.move(tmp.name, sha1_file)
+        os.chmod(sha1_file, mode)
 
         # Sign the sha1 file.
         gpg_file = sha1_file + ".asc"
@@ -604,7 +608,9 @@ are far too many to list!
         fd.close()
         tmp.close()
 
+        mode = os.stat(config_file).st_mode
         shutil.move(tmp.name, config_file)
+        os.chmod(config_file, mode)
         subprocess.call(['git', 'add', config_file])
 
     def _add_new_docs(self, website_dir):
@@ -651,6 +657,7 @@ are far too many to list!
         tmp.close()
 
         shutil.move(tmp.name, post_file)
+        os.chmod(post_file, 0644)
         subprocess.call(['git', 'add', post_file])
 
     def update_website(self, website_dir):
