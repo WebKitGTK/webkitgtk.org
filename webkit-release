@@ -582,6 +582,10 @@ are far too many to list!
             sys.stderr.write("Error uploading %s to %s:%s\n" % (tarball_file, host, releases_dir))
             sys.exit(1)
 
+        # Remove generated files.
+        os.unlink(sha1_file)
+        os.unlink(gpg_file)
+
         # Create the LATEST symlink.
         if self._tarball.is_stable():
             symlink_prefix = "LATEST-STABLE-"
