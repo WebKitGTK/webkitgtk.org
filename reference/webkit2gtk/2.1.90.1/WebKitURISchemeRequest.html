@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitURISchemeRequest</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKit2GTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitWebInspector.html" title="WebKitWebInspector">
+<link rel="next" href="webkit2gtk-WebKitVersion.html" title="WebKitVersion">
+<meta name="generator" content="GTK-Doc V1.19 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="WebKitWebInspector.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">WebKit2GTK+ Reference Manual</th>
+<td><a accesskey="n" href="webkit2gtk-WebKitVersion.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#WebKitURISchemeRequest.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitURISchemeRequest.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitURISchemeRequest.object-hierarchy" class="shortcut">Object Hierarchy</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="WebKitURISchemeRequest"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitURISchemeRequest.top_of_page"></a>WebKitURISchemeRequest</span></h2>
+<p>WebKitURISchemeRequest — Represents a URI scheme request</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitURISchemeRequest.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="WebKitURISchemeRequest.html#WebKitURISchemeRequest-struct" title="struct WebKitURISchemeRequest">WebKitURISchemeRequest</a>;
+const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="WebKitURISchemeRequest.html#webkit-uri-scheme-request-get-scheme" title="webkit_uri_scheme_request_get_scheme ()">webkit_uri_scheme_request_get_scheme</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitURISchemeRequest.html" title="WebKitURISchemeRequest"><span class="type">WebKitURISchemeRequest</span></a> *request</code></em>);
+const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="WebKitURISchemeRequest.html#webkit-uri-scheme-request-get-uri" title="webkit_uri_scheme_request_get_uri ()">webkit_uri_scheme_request_get_uri</a>   (<em class="parameter"><code><a class="link" href="WebKitURISchemeRequest.html" title="WebKitURISchemeRequest"><span class="type">WebKitURISchemeRequest</span></a> *request</code></em>);
+const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="WebKitURISchemeRequest.html#webkit-uri-scheme-request-get-path" title="webkit_uri_scheme_request_get_path ()">webkit_uri_scheme_request_get_path</a>  (<em class="parameter"><code><a class="link" href="WebKitURISchemeRequest.html" title="WebKitURISchemeRequest"><span class="type">WebKitURISchemeRequest</span></a> *request</code></em>);
+<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="returnvalue">WebKitWebView</span></a> *     <a class="link" href="WebKitURISchemeRequest.html#webkit-uri-scheme-request-get-web-view" title="webkit_uri_scheme_request_get_web_view ()">webkit_uri_scheme_request_get_web_view</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitURISchemeRequest.html" title="WebKitURISchemeRequest"><span class="type">WebKitURISchemeRequest</span></a> *request</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitURISchemeRequest.html#webkit-uri-scheme-request-finish" title="webkit_uri_scheme_request_finish ()">webkit_uri_scheme_request_finish</a>    (<em class="parameter"><code><a class="link" href="WebKitURISchemeRequest.html" title="WebKitURISchemeRequest"><span class="type">WebKitURISchemeRequest</span></a> *request</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GInputStream.html"><span class="type">GInputStream</span></a> *stream</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint64"><span class="type">gint64</span></a> stream_length</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *mime_type</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitURISchemeRequest.html#webkit-uri-scheme-request-finish-error" title="webkit_uri_scheme_request_finish_error ()">webkit_uri_scheme_request_finish_error</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitURISchemeRequest.html" title="WebKitURISchemeRequest"><span class="type">WebKitURISchemeRequest</span></a> *request</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> *error</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitURISchemeRequest.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="../gobject/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----WebKitURISchemeRequest
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitURISchemeRequest.description"></a><h2>Description</h2>
+<p>
+If you register a particular URI scheme in a <a class="link" href="WebKitWebContext.html" title="WebKitWebContext"><span class="type">WebKitWebContext</span></a>,
+using <a class="link" href="WebKitWebContext.html#webkit-web-context-register-uri-scheme" title="webkit_web_context_register_uri_scheme ()"><code class="function">webkit_web_context_register_uri_scheme()</code></a>, you have to provide
+a <a class="link" href="WebKitWebContext.html#WebKitURISchemeRequestCallback" title="WebKitURISchemeRequestCallback ()"><span class="type">WebKitURISchemeRequestCallback</span></a>. After that, when a URI request
+is made with that particular scheme, your callback will be
+called. There you will be able to access properties such as the
+scheme, the URI and path, and the <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> that initiated the
+request, and also finish the request with
+<a class="link" href="WebKitURISchemeRequest.html#webkit-uri-scheme-request-finish" title="webkit_uri_scheme_request_finish ()"><code class="function">webkit_uri_scheme_request_finish()</code></a>.
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitURISchemeRequest.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitURISchemeRequest-struct"></a><h3>struct WebKitURISchemeRequest</h3>
+<pre class="programlisting">struct WebKitURISchemeRequest;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-uri-scheme-request-get-scheme"></a><h3>webkit_uri_scheme_request_get_scheme ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       webkit_uri_scheme_request_get_scheme
+                                                        (<em class="parameter"><code><a class="link" href="WebKitURISchemeRequest.html" title="WebKitURISchemeRequest"><span class="type">WebKitURISchemeRequest</span></a> *request</code></em>);</pre>
+<p>
+Get the URI scheme of <em class="parameter"><code>request</code></em>
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>request</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitURISchemeRequest.html" title="WebKitURISchemeRequest"><span class="type">WebKitURISchemeRequest</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the URI scheme of <em class="parameter"><code>request</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-uri-scheme-request-get-uri"></a><h3>webkit_uri_scheme_request_get_uri ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       webkit_uri_scheme_request_get_uri   (<em class="parameter"><code><a class="link" href="WebKitURISchemeRequest.html" title="WebKitURISchemeRequest"><span class="type">WebKitURISchemeRequest</span></a> *request</code></em>);</pre>
+<p>
+Get the URI of <em class="parameter"><code>request</code></em>
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>request</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitURISchemeRequest.html" title="WebKitURISchemeRequest"><span class="type">WebKitURISchemeRequest</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the full URI of <em class="parameter"><code>request</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-uri-scheme-request-get-path"></a><h3>webkit_uri_scheme_request_get_path ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       webkit_uri_scheme_request_get_path  (<em class="parameter"><code><a class="link" href="WebKitURISchemeRequest.html" title="WebKitURISchemeRequest"><span class="type">WebKitURISchemeRequest</span></a> *request</code></em>);</pre>
+<p>
+Get the URI path of <em class="parameter"><code>request</code></em>
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>request</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitURISchemeRequest.html" title="WebKitURISchemeRequest"><span class="type">WebKitURISchemeRequest</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the URI path of <em class="parameter"><code>request</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-uri-scheme-request-get-web-view"></a><h3>webkit_uri_scheme_request_get_web_view ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="returnvalue">WebKitWebView</span></a> *     webkit_uri_scheme_request_get_web_view
+                                                        (<em class="parameter"><code><a class="link" href="WebKitURISchemeRequest.html" title="WebKitURISchemeRequest"><span class="type">WebKitURISchemeRequest</span></a> *request</code></em>);</pre>
+<p>
+Get the <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> that initiated the request.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>request</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitURISchemeRequest.html" title="WebKitURISchemeRequest"><span class="type">WebKitURISchemeRequest</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> that initiated <em class="parameter"><code>request</code></em>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-uri-scheme-request-finish"></a><h3>webkit_uri_scheme_request_finish ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_uri_scheme_request_finish    (<em class="parameter"><code><a class="link" href="WebKitURISchemeRequest.html" title="WebKitURISchemeRequest"><span class="type">WebKitURISchemeRequest</span></a> *request</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GInputStream.html"><span class="type">GInputStream</span></a> *stream</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint64"><span class="type">gint64</span></a> stream_length</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *mime_type</code></em>);</pre>
+<p>
+Finish a <a class="link" href="WebKitURISchemeRequest.html" title="WebKitURISchemeRequest"><span class="type">WebKitURISchemeRequest</span></a> by setting the contents of the request and its mime type.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>request</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitURISchemeRequest.html" title="WebKitURISchemeRequest"><span class="type">WebKitURISchemeRequest</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>stream</code></em> :</span></p></td>
+<td>a <a href="../gio/GInputStream.html"><span class="type">GInputStream</span></a> to read the contents of the request</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>stream_length</code></em> :</span></p></td>
+<td>the length of the stream or -1 if not known</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>mime_type</code></em> :</span></p></td>
+<td>the content type of the stream or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if not known. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-uri-scheme-request-finish-error"></a><h3>webkit_uri_scheme_request_finish_error ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_uri_scheme_request_finish_error
+                                                        (<em class="parameter"><code><a class="link" href="WebKitURISchemeRequest.html" title="WebKitURISchemeRequest"><span class="type">WebKitURISchemeRequest</span></a> *request</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> *error</code></em>);</pre>
+<p>
+Finish a <a class="link" href="WebKitURISchemeRequest.html" title="WebKitURISchemeRequest"><span class="type">WebKitURISchemeRequest</span></a> with a <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>request</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitURISchemeRequest.html" title="WebKitURISchemeRequest"><span class="type">WebKitURISchemeRequest</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>a <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> that will be passed to the <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.2</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19</div>
+</body>
+</html>
