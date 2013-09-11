@@ -724,7 +724,7 @@ if __name__ == '__main__':
 
     subparsers = parser.add_subparsers(dest = 'command')
 
-    subparser = subparsers.add_parser('install-tarball', help = 'Intall sources tarball')
+    subparser = subparsers.add_parser('install-tarball', help = 'Install sources tarball')
     subparser.add_argument('--host', dest = 'host', default = 'localhost',
                            help = 'Host to upload the tarball')
     subparser.add_argument('--releases-dir', dest = 'releases-dir', default = '/var/www/webkitgtkdotorg/releases',
