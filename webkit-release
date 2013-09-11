@@ -151,10 +151,12 @@ class WebKitTarball:
         major_version_pattern = re.compile('^m4_define\(\[webkit_major_version\], \[(.+)\]\)$')
         minor_version_pattern = re.compile('^m4_define\(\[webkit_minor_version\], \[(.+)\]\)$')
         micro_version_pattern = re.compile('^m4_define\(\[webkit_micro_version\], \[(.+)\]\)$')
+        patch_version_pattern = re.compile('^m4_define\(\[webkit_patch_version\], \[(.+)\]\)$')
         required_version_pattern = re.compile('^m4_define\(\[(.+)_required_version\], \[(.+)\]\)$')
 
         self._minimum_versions = {}
         self._major = self._minor = self._micro = None
+        self._patch = None
         for line in versions_file.readlines():
             line = line.strip(' \t\n')
             if not line:
@@ -178,6 +180,12 @@ class WebKitTarball:
                     self._micro = int(match.group(1))
                     continue
 
+            if self._patch is None and not self._minimum_versions:
+                match = patch_version_pattern.match(line)
+                if match:
+                    self._patch = int(match.group(1))
+                    continue
+
             match = required_version_pattern.match(line)
             if not match:
                 continue
@@ -191,11 +199,20 @@ class WebKitTarball:
         os.unlink(self._tarball)
         self._tarball = None
 
+    def is_patched(self):
+        return self._patch is not None
+
     def get_version(self):
-        return self._major, self._minor, self._micro
+        if self.is_patched():
+            return self._major, self._minor, self._micro, self._patch
+        return self._major, self._minor, self._micro, 0
 
     def get_version_str(self):
-        return "%d.%d.%d" % (self._major, self._minor, self._micro)
+        version_str = "%d.%d.%d" % (self._major, self._minor, self._micro)
+        if self.is_patched():
+            version_str += ".%d" % self._patch
+
+        return version_str
 
     def is_stable(self):
         return self._minor % 2 == 0
@@ -299,7 +316,7 @@ class WebKitRelease:
         self._tarball = WebKitTarball(tarball)
 
     def _get_release_description(self):
-        major, minor, micro = self._tarball.get_version()
+        major, minor, micro, patch = self._tarball.get_version()
         is_stable = self._tarball.is_stable()
 
         description = "This is "
