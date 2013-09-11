@@ -606,7 +606,7 @@ are far too many to list!
             if is_stable and line.startswith("stable-release-version:"):
                 tmp.write("stable-release-version: %s\n" % version)
             elif not is_stable and line.startswith("unstable-release-version:"):
-                tmp.write("unstable-release-version:  %s\n" % version)
+                tmp.write("unstable-release-version: %s\n" % version)
             else:
                 tmp.write(line)
         fd.close()
