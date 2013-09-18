@@ -1,0 +1,346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitWebViewGroup</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKit2GTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitSecurityManager.html" title="WebKitSecurityManager">
+<link rel="next" href="ch02.html" title="Web Extensions">
+<meta name="generator" content="GTK-Doc V1.18.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="WebKitSecurityManager.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">WebKit2GTK+ Reference Manual</th>
+<td><a accesskey="n" href="ch02.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#WebKitWebViewGroup.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitWebViewGroup.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitWebViewGroup.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitWebViewGroup.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="WebKitWebViewGroup"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitWebViewGroup.top_of_page"></a>WebKitWebViewGroup</span></h2>
+<p>WebKitWebViewGroup — Group of web views</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitWebViewGroup.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="WebKitWebViewGroup.html#WebKitWebViewGroup-struct" title="struct WebKitWebViewGroup">WebKitWebViewGroup</a>;
+enum                <a class="link" href="WebKitWebViewGroup.html#WebKitInjectedContentFrames" title="enum WebKitInjectedContentFrames">WebKitInjectedContentFrames</a>;
+<a class="link" href="WebKitWebViewGroup.html" title="WebKitWebViewGroup"><span class="returnvalue">WebKitWebViewGroup</span></a> * <a class="link" href="WebKitWebViewGroup.html#webkit-web-view-group-new" title="webkit_web_view_group_new ()">webkit_web_view_group_new</a>          (<em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);
+const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="WebKitWebViewGroup.html#webkit-web-view-group-get-name" title="webkit_web_view_group_get_name ()">webkit_web_view_group_get_name</a>      (<em class="parameter"><code><a class="link" href="WebKitWebViewGroup.html" title="WebKitWebViewGroup"><span class="type">WebKitWebViewGroup</span></a> *group</code></em>);
+<a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="returnvalue">WebKitSettings</span></a> *    <a class="link" href="WebKitWebViewGroup.html#webkit-web-view-group-get-settings" title="webkit_web_view_group_get_settings ()">webkit_web_view_group_get_settings</a>  (<em class="parameter"><code><a class="link" href="WebKitWebViewGroup.html" title="WebKitWebViewGroup"><span class="type">WebKitWebViewGroup</span></a> *group</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitWebViewGroup.html#webkit-web-view-group-set-settings" title="webkit_web_view_group_set_settings ()">webkit_web_view_group_set_settings</a>  (<em class="parameter"><code><a class="link" href="WebKitWebViewGroup.html" title="WebKitWebViewGroup"><span class="type">WebKitWebViewGroup</span></a> *group</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="type">WebKitSettings</span></a> *settings</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitWebViewGroup.html#webkit-web-view-group-add-user-style-sheet" title="webkit_web_view_group_add_user_style_sheet ()">webkit_web_view_group_add_user_style_sheet</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitWebViewGroup.html" title="WebKitWebViewGroup"><span class="type">WebKitWebViewGroup</span></a> *group</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *source</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *base_uri</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> * const *whitelist</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> * const *blacklist</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitWebViewGroup.html#WebKitInjectedContentFrames" title="enum WebKitInjectedContentFrames"><span class="type">WebKitInjectedContentFrames</span></a> injected_frames</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitWebViewGroup.html#webkit-web-view-group-remove-all-user-style-sheets" title="webkit_web_view_group_remove_all_user_style_sheets ()">webkit_web_view_group_remove_all_user_style_sheets</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitWebViewGroup.html" title="WebKitWebViewGroup"><span class="type">WebKitWebViewGroup</span></a> *group</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitWebViewGroup.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----WebKitWebViewGroup
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitWebViewGroup.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitWebViewGroup.html#WebKitWebViewGroup--settings" title='The "settings" property'>settings</a>"                 <a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="type">WebKitSettings</span></a>*       : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitWebViewGroup.description"></a><h2>Description</h2>
+<p>
+A WebKitWebViewGroup represents a group of <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>s that
+share things like settings. There's a default WebKitWebViewGroup where
+all <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>s of the same <a class="link" href="WebKitWebContext.html" title="WebKitWebContext"><span class="type">WebKitWebContext</span></a> are added by default.
+To create a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> in a different WebKitWebViewGroup you can use
+<a class="link" href="WebKitWebView.html#webkit-web-view-new-with-group" title="webkit_web_view_new_with_group ()"><code class="function">webkit_web_view_new_with_group()</code></a>.
+</p>
+<p>
+WebKitWebViewGroups are identified by a unique name given when the group is
+created with <a class="link" href="WebKitWebViewGroup.html#webkit-web-view-group-new" title="webkit_web_view_group_new ()"><code class="function">webkit_web_view_group_new()</code></a>.
+WebKitWebViewGroups have a <a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="type">WebKitSettings</span></a> to control the settings of all
+<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>s of the group. You can get the settings with
+<a class="link" href="WebKitWebViewGroup.html#webkit-web-view-group-get-settings" title="webkit_web_view_group_get_settings ()"><code class="function">webkit_web_view_group_get_settings()</code></a> to handle the settings, or you can set
+your own <a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="type">WebKitSettings</span></a> with <a class="link" href="WebKitWebViewGroup.html#webkit-web-view-group-set-settings" title="webkit_web_view_group_set_settings ()"><code class="function">webkit_web_view_group_set_settings()</code></a>. When
+the <a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="type">WebKitSettings</span></a> of a WebKitWebViewGroup changes, the signal notify::settings
+is emitted on the group.
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitWebViewGroup.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitWebViewGroup-struct"></a><h3>struct WebKitWebViewGroup</h3>
+<pre class="programlisting">struct WebKitWebViewGroup;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitInjectedContentFrames"></a><h3>enum WebKitInjectedContentFrames</h3>
+<pre class="programlisting">typedef enum {
+    WEBKIT_INJECTED_CONTENT_FRAMES_ALL,
+    WEBKIT_INJECTED_CONTENT_FRAMES_TOP_ONLY,
+} WebKitInjectedContentFrames;
+</pre>
+<p>
+Enum values used for determining into which frames content is injected.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><a name="WEBKIT-INJECTED-CONTENT-FRAMES-ALL:CAPS"></a><span class="term"><code class="literal">WEBKIT_INJECTED_CONTENT_FRAMES_ALL</code></span></p></td>
+<td>Content will be injected into all frames.
+</td>
+</tr>
+<tr>
+<td><p><a name="WEBKIT-INJECTED-CONTENT-FRAMES-TOP-ONLY:CAPS"></a><span class="term"><code class="literal">WEBKIT_INJECTED_CONTENT_FRAMES_TOP_ONLY</code></span></p></td>
+<td>Content will only be injected into the main frame.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-group-new"></a><h3>webkit_web_view_group_new ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitWebViewGroup.html" title="WebKitWebViewGroup"><span class="returnvalue">WebKitWebViewGroup</span></a> * webkit_web_view_group_new          (<em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);</pre>
+<p>
+Creates a new <a class="link" href="WebKitWebViewGroup.html" title="WebKitWebViewGroup"><span class="type">WebKitWebViewGroup</span></a> with the given <em class="parameter"><code>name</code></em>.
+If <em class="parameter"><code>name</code></em> is <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> a unique identifier name will be created
+automatically.
+The newly created <a class="link" href="WebKitWebViewGroup.html" title="WebKitWebViewGroup"><span class="type">WebKitWebViewGroup</span></a> doesn't contain any
+<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>, web views are added to the new group when created
+with <a class="link" href="WebKitWebView.html#webkit-web-view-new-with-group" title="webkit_web_view_new_with_group ()"><code class="function">webkit_web_view_new_with_group()</code></a> passing the group.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>name</code></em> :</span></p></td>
+<td>the name of the group. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a new <a class="link" href="WebKitWebViewGroup.html" title="WebKitWebViewGroup"><span class="type">WebKitWebViewGroup</span></a>. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-group-get-name"></a><h3>webkit_web_view_group_get_name ()</h3>
+<pre class="programlisting">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       webkit_web_view_group_get_name      (<em class="parameter"><code><a class="link" href="WebKitWebViewGroup.html" title="WebKitWebViewGroup"><span class="type">WebKitWebViewGroup</span></a> *group</code></em>);</pre>
+<p>
+Gets the name that uniquely identifies the <a class="link" href="WebKitWebViewGroup.html" title="WebKitWebViewGroup"><span class="type">WebKitWebViewGroup</span></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>group</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebViewGroup.html" title="WebKitWebViewGroup"><span class="type">WebKitWebViewGroup</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the name of <em class="parameter"><code>group</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-group-get-settings"></a><h3>webkit_web_view_group_get_settings ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="returnvalue">WebKitSettings</span></a> *    webkit_web_view_group_get_settings  (<em class="parameter"><code><a class="link" href="WebKitWebViewGroup.html" title="WebKitWebViewGroup"><span class="type">WebKitWebViewGroup</span></a> *group</code></em>);</pre>
+<p>
+Gets the <a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="type">WebKitSettings</span></a> of the <a class="link" href="WebKitWebViewGroup.html" title="WebKitWebViewGroup"><span class="type">WebKitWebViewGroup</span></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>group</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebViewGroup.html" title="WebKitWebViewGroup"><span class="type">WebKitWebViewGroup</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the settings of <em class="parameter"><code>group</code></em>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-group-set-settings"></a><h3>webkit_web_view_group_set_settings ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_web_view_group_set_settings  (<em class="parameter"><code><a class="link" href="WebKitWebViewGroup.html" title="WebKitWebViewGroup"><span class="type">WebKitWebViewGroup</span></a> *group</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="type">WebKitSettings</span></a> *settings</code></em>);</pre>
+<p>
+Sets a new <a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="type">WebKitSettings</span></a> for the <a class="link" href="WebKitWebViewGroup.html" title="WebKitWebViewGroup"><span class="type">WebKitWebViewGroup</span></a>. The settings will
+affect to all the <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>s of the group.
+<a class="link" href="WebKitWebViewGroup.html" title="WebKitWebViewGroup"><span class="type">WebKitWebViewGroup</span></a>s always have a <a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="type">WebKitSettings</span></a> so if you just want to
+modify a setting you can use <a class="link" href="WebKitWebViewGroup.html#webkit-web-view-group-get-settings" title="webkit_web_view_group_get_settings ()"><code class="function">webkit_web_view_group_get_settings()</code></a> and modify the
+returned <a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="type">WebKitSettings</span></a> instead.
+Setting the same <a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="type">WebKitSettings</span></a> multiple times doesn't have any effect.
+You can monitor the settings of a <a class="link" href="WebKitWebViewGroup.html" title="WebKitWebViewGroup"><span class="type">WebKitWebViewGroup</span></a> by connecting to the
+notify::settings signal of <em class="parameter"><code>group</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>group</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebViewGroup.html" title="WebKitWebViewGroup"><span class="type">WebKitWebViewGroup</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>settings</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="type">WebKitSettings</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-group-add-user-style-sheet"></a><h3>webkit_web_view_group_add_user_style_sheet ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_web_view_group_add_user_style_sheet
+                                                        (<em class="parameter"><code><a class="link" href="WebKitWebViewGroup.html" title="WebKitWebViewGroup"><span class="type">WebKitWebViewGroup</span></a> *group</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *source</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *base_uri</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> * const *whitelist</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> * const *blacklist</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitWebViewGroup.html#WebKitInjectedContentFrames" title="enum WebKitInjectedContentFrames"><span class="type">WebKitInjectedContentFrames</span></a> injected_frames</code></em>);</pre>
+<p>
+Inject an external style sheet into pages. It is possible to only apply the style sheet
+to some URIs by passing non-null values for <em class="parameter"><code>whitelist</code></em> or <em class="parameter"><code>blacklist</code></em>. Passing a <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
+whitelist implies that all URIs are on the whitelist. The style sheet is applied if a URI matches
+the whitelist and not the blacklist. URI patterns must be of the form [protocol]://[host]/[path]
+where the host and path components can contain the wildcard character ('*') to represent zero
+or more other characters.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>group</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebViewGroup.html" title="WebKitWebViewGroup"><span class="type">WebKitWebViewGroup</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>source</code></em> :</span></p></td>
+<td>the source of the style_sheet to inject</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>base_uri</code></em> :</span></p></td>
+<td>the base URI to use when processing the style_sheet contents or <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> for about:blank. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>whitelist</code></em> :</span></p></td>
+<td>a whitelist of URI patterns or <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>blacklist</code></em> :</span></p></td>
+<td>a blacklist of URI patterns or <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>injected_frames</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebViewGroup.html#WebKitInjectedContentFrames" title="enum WebKitInjectedContentFrames"><span class="type">WebKitInjectedContentFrames</span></a> describing to which frames the style_sheet should apply</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-group-remove-all-user-style-sheets"></a><h3>webkit_web_view_group_remove_all_user_style_sheets ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_web_view_group_remove_all_user_style_sheets
+                                                        (<em class="parameter"><code><a class="link" href="WebKitWebViewGroup.html" title="WebKitWebViewGroup"><span class="type">WebKitWebViewGroup</span></a> *group</code></em>);</pre>
+<p>
+Remove all style sheets previously injected into this <a class="link" href="WebKitWebViewGroup.html" title="WebKitWebViewGroup"><span class="type">WebKitWebViewGroup</span></a> 
+via <a class="link" href="WebKitWebViewGroup.html#webkit-web-view-group-add-user-style-sheet" title="webkit_web_view_group_add_user_style_sheet ()"><code class="function">webkit_web_view_group_add_user_style_sheet()</code></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>group</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebViewGroup.html" title="WebKitWebViewGroup"><span class="type">WebKitWebViewGroup</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitWebViewGroup.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitWebViewGroup--settings"></a><h3>The <code class="literal">"settings"</code> property</h3>
+<pre class="programlisting">  "settings"                 <a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="type">WebKitSettings</span></a>*       : Read / Write</pre>
+<p>
+The <a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="type">WebKitSettings</span></a> of the web view group.
+</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitWebViewGroup.see-also"></a><h2>See Also</h2>
+<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>, <a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="type">WebKitSettings</span></a>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18.1</div>
+</body>
+</html>
