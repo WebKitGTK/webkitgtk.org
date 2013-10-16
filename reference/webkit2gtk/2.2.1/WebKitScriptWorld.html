@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitScriptWorld</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKit2GTK+ Reference Manual">
+<link rel="up" href="ch02.html" title="Web Extensions">
+<link rel="prev" href="WebKitFrame.html" title="WebKitFrame">
+<link rel="next" href="index-all.html" title="Index">
+<meta name="generator" content="GTK-Doc V1.18.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="WebKitFrame.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch02.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">WebKit2GTK+ Reference Manual</th>
+<td><a accesskey="n" href="index-all.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#WebKitScriptWorld.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitScriptWorld.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitScriptWorld.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitScriptWorld.signals" class="shortcut">Signals</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="WebKitScriptWorld"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitScriptWorld.top_of_page"></a>WebKitScriptWorld</span></h2>
+<p>WebKitScriptWorld</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitScriptWorld.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="WebKitScriptWorld.html#WebKitScriptWorld-struct" title="struct WebKitScriptWorld">WebKitScriptWorld</a>;
+<a class="link" href="WebKitScriptWorld.html" title="WebKitScriptWorld"><span class="returnvalue">WebKitScriptWorld</span></a> * <a class="link" href="WebKitScriptWorld.html#webkit-script-world-get-default" title="webkit_script_world_get_default ()">webkit_script_world_get_default</a>     (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a class="link" href="WebKitScriptWorld.html" title="WebKitScriptWorld"><span class="returnvalue">WebKitScriptWorld</span></a> * <a class="link" href="WebKitScriptWorld.html#webkit-script-world-new" title="webkit_script_world_new ()">webkit_script_world_new</a>             (<em class="parameter"><code><span class="type">void</span></code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitScriptWorld.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----WebKitScriptWorld
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitScriptWorld.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitScriptWorld.html#WebKitScriptWorld-window-object-cleared" title='The "window-object-cleared" signal'>window-object-cleared</a>"                          : <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitScriptWorld.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitScriptWorld.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitScriptWorld-struct"></a><h3>struct WebKitScriptWorld</h3>
+<pre class="programlisting">struct WebKitScriptWorld;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-script-world-get-default"></a><h3>webkit_script_world_get_default ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitScriptWorld.html" title="WebKitScriptWorld"><span class="returnvalue">WebKitScriptWorld</span></a> * webkit_script_world_get_default     (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Get the default <a class="link" href="WebKitScriptWorld.html" title="WebKitScriptWorld"><span class="type">WebKitScriptWorld</span></a>. This is the normal script world
+where all scripts are executed by default.
+You can get the JavaScript execution context of a <a class="link" href="WebKitScriptWorld.html" title="WebKitScriptWorld"><span class="type">WebKitScriptWorld</span></a>
+for a given <a class="link" href="WebKitFrame.html" title="WebKitFrame"><span class="type">WebKitFrame</span></a> with <a class="link" href="WebKitFrame.html#webkit-frame-get-javascript-context-for-script-world" title="webkit_frame_get_javascript_context_for_script_world ()"><code class="function">webkit_frame_get_javascript_context_for_script_world()</code></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the default <a class="link" href="WebKitScriptWorld.html" title="WebKitScriptWorld"><span class="type">WebKitScriptWorld</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 2.2</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-script-world-new"></a><h3>webkit_script_world_new ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitScriptWorld.html" title="WebKitScriptWorld"><span class="returnvalue">WebKitScriptWorld</span></a> * webkit_script_world_new             (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Creates a new isolated <a class="link" href="WebKitScriptWorld.html" title="WebKitScriptWorld"><span class="type">WebKitScriptWorld</span></a>. Scripts executed in
+isolated worlds have access to the DOM but not to other variable
+or functions created by the page.
+You can get the JavaScript execution context of a <a class="link" href="WebKitScriptWorld.html" title="WebKitScriptWorld"><span class="type">WebKitScriptWorld</span></a>
+for a given <a class="link" href="WebKitFrame.html" title="WebKitFrame"><span class="type">WebKitFrame</span></a> with <a class="link" href="WebKitFrame.html#webkit-frame-get-javascript-context-for-script-world" title="webkit_frame_get_javascript_context_for_script_world ()"><code class="function">webkit_frame_get_javascript_context_for_script_world()</code></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a new isolated <a class="link" href="WebKitScriptWorld.html" title="WebKitScriptWorld"><span class="type">WebKitScriptWorld</span></a>. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
+</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 2.2</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitScriptWorld.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="WebKitScriptWorld-window-object-cleared"></a><h3>The <code class="literal">"window-object-cleared"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="WebKitScriptWorld.html" title="WebKitScriptWorld"><span class="type">WebKitScriptWorld</span></a> *world,
+                                                        <a class="link" href="WebKitWebPage.html" title="WebKitWebPage"><span class="type">WebKitWebPage</span></a>     *page,
+                                                        <a class="link" href="WebKitFrame.html" title="WebKitFrame"><span class="type">WebKitFrame</span></a>       *frame,
+                                                        <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>           user_data)      : <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a></pre>
+<p>
+Emitted when the JavaScript window object in a <a class="link" href="WebKitScriptWorld.html" title="WebKitScriptWorld"><span class="type">WebKitScriptWorld</span></a> has been
+cleared. This is the preferred place to set custom properties on the window
+object using the JavaScriptCore API. You can get the window object of <em class="parameter"><code>frame</code></em>
+from the JavaScript execution context of <em class="parameter"><code>world</code></em> that is returned by
+<a class="link" href="WebKitFrame.html#webkit-frame-get-javascript-context-for-script-world" title="webkit_frame_get_javascript_context_for_script_world ()"><code class="function">webkit_frame_get_javascript_context_for_script_world()</code></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>world</code></em> :</span></p></td>
+<td>the <a class="link" href="WebKitScriptWorld.html" title="WebKitScriptWorld"><span class="type">WebKitScriptWorld</span></a> on which the signal is emitted</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>page</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebPage.html" title="WebKitWebPage"><span class="type">WebKitWebPage</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>frame</code></em> :</span></p></td>
+<td>the <a class="link" href="WebKitFrame.html" title="WebKitFrame"><span class="type">WebKitFrame</span></a>  to which <em class="parameter"><code>world</code></em> belongs</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.2</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18.1</div>
+</body>
+</html>
