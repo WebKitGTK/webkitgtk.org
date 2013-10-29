@@ -112,7 +112,6 @@ if not hasattr(tarfile.TarFile, 'xvopen'):
 
 class WebKitTarball:
     REQUIREMENTS = [ ('gtk3', 'gtk+'),
-                     ('gail3', 'gail'),
                      ('glib', 'glib'),
                      ('libsoup', 'libsoup'),
                      ('cairo', 'cairo'),
