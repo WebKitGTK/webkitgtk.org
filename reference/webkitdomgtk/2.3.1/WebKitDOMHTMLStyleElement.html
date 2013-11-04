@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMHTMLStyleElement</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMHTMLSelectElement.html" title="WebKitDOMHTMLSelectElement">
+<link rel="next" href="WebKitDOMHTMLTableElement.html" title="WebKitDOMHTMLTableElement">
+<meta name="generator" content="GTK-Doc V1.18.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="WebKitDOMHTMLSelectElement.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">WebKitDOMGTK+ Reference Manual</th>
+<td><a accesskey="n" href="WebKitDOMHTMLTableElement.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#WebKitDOMHTMLStyleElement.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMHTMLStyleElement.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMHTMLStyleElement.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitDOMHTMLStyleElement.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#WebKitDOMHTMLStyleElement.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="WebKitDOMHTMLStyleElement"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMHTMLStyleElement.top_of_page"></a>WebKitDOMHTMLStyleElement</span></h2>
+<p>WebKitDOMHTMLStyleElement</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMHTMLStyleElement.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMHTMLStyleElement.html#WebKitDOMHTMLStyleElement-struct" title="WebKitDOMHTMLStyleElement">WebKitDOMHTMLStyleElement</a>;
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMHTMLStyleElement.html#webkit-dom-html-style-element-get-disabled" title="webkit_dom_html_style_element_get_disabled ()">webkit_dom_html_style_element_get_disabled</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLStyleElement.html" title="WebKitDOMHTMLStyleElement"><span class="type">WebKitDOMHTMLStyleElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLStyleElement.html#webkit-dom-html-style-element-set-disabled" title="webkit_dom_html_style_element_set_disabled ()">webkit_dom_html_style_element_set_disabled</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLStyleElement.html" title="WebKitDOMHTMLStyleElement"><span class="type">WebKitDOMHTMLStyleElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLStyleElement.html#webkit-dom-html-style-element-get-media" title="webkit_dom_html_style_element_get_media ()">webkit_dom_html_style_element_get_media</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLStyleElement.html" title="WebKitDOMHTMLStyleElement"><span class="type">WebKitDOMHTMLStyleElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLStyleElement.html#webkit-dom-html-style-element-set-media" title="webkit_dom_html_style_element_set_media ()">webkit_dom_html_style_element_set_media</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLStyleElement.html" title="WebKitDOMHTMLStyleElement"><span class="type">WebKitDOMHTMLStyleElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a class="link" href="WebKitDOMStyleSheet.html" title="WebKitDOMStyleSheet"><span class="returnvalue">WebKitDOMStyleSheet</span></a> * <a class="link" href="WebKitDOMHTMLStyleElement.html#webkit-dom-html-style-element-get-sheet" title="webkit_dom_html_style_element_get_sheet ()">webkit_dom_html_style_element_get_sheet</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLStyleElement.html" title="WebKitDOMHTMLStyleElement"><span class="type">WebKitDOMHTMLStyleElement</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLStyleElement.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----<a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode">WebKitDOMNode</a>
+               +----<a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement">WebKitDOMElement</a>
+                     +----<a class="link" href="WebKitDOMHTMLElement.html" title="WebKitDOMHTMLElement">WebKitDOMHTMLElement</a>
+                           +----WebKitDOMHTMLStyleElement
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLStyleElement.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+WebKitDOMHTMLStyleElement implements
+ <a class="link" href="WebKitDOMEventTarget.html" title="WebKitDOMEventTarget">WebKitDOMEventTarget</a>.</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLStyleElement.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitDOMHTMLStyleElement.html#WebKitDOMHTMLStyleElement--disabled" title='The "disabled" property'>disabled</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+  "<a class="link" href="WebKitDOMHTMLStyleElement.html#WebKitDOMHTMLStyleElement--media" title='The "media" property'>media</a>"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLStyleElement.html#WebKitDOMHTMLStyleElement--sheet" title='The "sheet" property'>sheet</a>"                    <a class="link" href="WebKitDOMStyleSheet.html" title="WebKitDOMStyleSheet"><span class="type">WebKitDOMStyleSheet</span></a>*  : Read
+  "<a class="link" href="WebKitDOMHTMLStyleElement.html#WebKitDOMHTMLStyleElement--type" title='The "type" property'>type</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLStyleElement.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLStyleElement.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMHTMLStyleElement-struct"></a><h3>WebKitDOMHTMLStyleElement</h3>
+<pre class="programlisting">typedef struct _WebKitDOMHTMLStyleElement WebKitDOMHTMLStyleElement;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-style-element-get-disabled"></a><h3>webkit_dom_html_style_element_get_disabled ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_html_style_element_get_disabled
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLStyleElement.html" title="WebKitDOMHTMLStyleElement"><span class="type">WebKitDOMHTMLStyleElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLStyleElement.html" title="WebKitDOMHTMLStyleElement"><span class="type">WebKitDOMHTMLStyleElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-style-element-set-disabled"></a><h3>webkit_dom_html_style_element_set_disabled ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_style_element_set_disabled
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLStyleElement.html" title="WebKitDOMHTMLStyleElement"><span class="type">WebKitDOMHTMLStyleElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLStyleElement.html" title="WebKitDOMHTMLStyleElement"><span class="type">WebKitDOMHTMLStyleElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-style-element-get-media"></a><h3>webkit_dom_html_style_element_get_media ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_style_element_get_media
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLStyleElement.html" title="WebKitDOMHTMLStyleElement"><span class="type">WebKitDOMHTMLStyleElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLStyleElement.html" title="WebKitDOMHTMLStyleElement"><span class="type">WebKitDOMHTMLStyleElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-style-element-set-media"></a><h3>webkit_dom_html_style_element_set_media ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_style_element_set_media
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLStyleElement.html" title="WebKitDOMHTMLStyleElement"><span class="type">WebKitDOMHTMLStyleElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLStyleElement.html" title="WebKitDOMHTMLStyleElement"><span class="type">WebKitDOMHTMLStyleElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-style-element-get-sheet"></a><h3>webkit_dom_html_style_element_get_sheet ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMStyleSheet.html" title="WebKitDOMStyleSheet"><span class="returnvalue">WebKitDOMStyleSheet</span></a> * webkit_dom_html_style_element_get_sheet
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLStyleElement.html" title="WebKitDOMHTMLStyleElement"><span class="type">WebKitDOMHTMLStyleElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLStyleElement.html" title="WebKitDOMHTMLStyleElement"><span class="type">WebKitDOMHTMLStyleElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLStyleElement.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMHTMLStyleElement--disabled"></a><h3>The <code class="literal">"disabled"</code> property</h3>
+<pre class="programlisting">  "disabled"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
+<p>read-only gboolean HTMLStyleElement:disabled.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLStyleElement--media"></a><h3>The <code class="literal">"media"</code> property</h3>
+<pre class="programlisting">  "media"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLStyleElement:media.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLStyleElement--sheet"></a><h3>The <code class="literal">"sheet"</code> property</h3>
+<pre class="programlisting">  "sheet"                    <a class="link" href="WebKitDOMStyleSheet.html" title="WebKitDOMStyleSheet"><span class="type">WebKitDOMStyleSheet</span></a>*  : Read</pre>
+<p>read-only WebKitDOMStyleSheet* HTMLStyleElement:sheet.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLStyleElement--type"></a><h3>The <code class="literal">"type"</code> property</h3>
+<pre class="programlisting">  "type"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLStyleElement:type.</p>
+<p>Default value: ""</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18.1</div>
+</body>
+</html>

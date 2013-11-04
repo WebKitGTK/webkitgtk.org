@@ -1,0 +1,779 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMNavigator</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMObject.html" title="WebKitDOMObject">
+<link rel="next" href="WebKitDOMScreen.html" title="WebKitDOMScreen">
+<meta name="generator" content="GTK-Doc V1.18.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="WebKitDOMObject.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">WebKitDOMGTK+ Reference Manual</th>
+<td><a accesskey="n" href="WebKitDOMScreen.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#WebKitDOMNavigator.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMNavigator.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMNavigator.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitDOMNavigator.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="WebKitDOMNavigator"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMNavigator.top_of_page"></a>WebKitDOMNavigator</span></h2>
+<p>WebKitDOMNavigator</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMNavigator.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMNavigator.html#WebKitDOMNavigator-struct" title="WebKitDOMNavigator">WebKitDOMNavigator</a>;
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMNavigator.html#webkit-dom-navigator-java-enabled" title="webkit_dom_navigator_java_enabled ()">webkit_dom_navigator_java_enabled</a>   (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMNavigator.html#webkit-dom-navigator-get-storage-updates" title="webkit_dom_navigator_get_storage_updates ()">webkit_dom_navigator_get_storage_updates</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMGamepadList.html" title="WebKitDOMGamepadList"><span class="returnvalue">WebKitDOMGamepadList</span></a> * <a class="link" href="WebKitDOMNavigator.html#webkit-dom-navigator-webkit-get-gamepads" title="webkit_dom_navigator_webkit_get_gamepads ()">webkit_dom_navigator_webkit_get_gamepads</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMNavigator.html#webkit-dom-navigator-register-protocol-handler" title="webkit_dom_navigator_register_protocol_handler ()">webkit_dom_navigator_register_protocol_handler</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *scheme</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *url</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *title</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMNavigator.html#webkit-dom-navigator-is-protocol-handler-registered" title="webkit_dom_navigator_is_protocol_handler_registered ()">webkit_dom_navigator_is_protocol_handler_registered</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *scheme</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *url</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMNavigator.html#webkit-dom-navigator-unregister-protocol-handler" title="webkit_dom_navigator_unregister_protocol_handler ()">webkit_dom_navigator_unregister_protocol_handler</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *scheme</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *url</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMNavigator.html#webkit-dom-navigator-get-app-code-name" title="webkit_dom_navigator_get_app_code_name ()">webkit_dom_navigator_get_app_code_name</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMNavigator.html#webkit-dom-navigator-get-app-name" title="webkit_dom_navigator_get_app_name ()">webkit_dom_navigator_get_app_name</a>   (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMNavigator.html#webkit-dom-navigator-get-app-version" title="webkit_dom_navigator_get_app_version ()">webkit_dom_navigator_get_app_version</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMNavigator.html#webkit-dom-navigator-get-language" title="webkit_dom_navigator_get_language ()">webkit_dom_navigator_get_language</a>   (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMNavigator.html#webkit-dom-navigator-get-user-agent" title="webkit_dom_navigator_get_user_agent ()">webkit_dom_navigator_get_user_agent</a> (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMNavigator.html#webkit-dom-navigator-get-platform" title="webkit_dom_navigator_get_platform ()">webkit_dom_navigator_get_platform</a>   (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMDOMPluginArray.html" title="WebKitDOMDOMPluginArray"><span class="returnvalue">WebKitDOMDOMPluginArray</span></a> * <a class="link" href="WebKitDOMNavigator.html#webkit-dom-navigator-get-plugins" title="webkit_dom_navigator_get_plugins ()">webkit_dom_navigator_get_plugins</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMDOMMimeTypeArray.html" title="WebKitDOMDOMMimeTypeArray"><span class="returnvalue">WebKitDOMDOMMimeTypeArray</span></a> * <a class="link" href="WebKitDOMNavigator.html#webkit-dom-navigator-get-mime-types" title="webkit_dom_navigator_get_mime_types ()">webkit_dom_navigator_get_mime_types</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMNavigator.html#webkit-dom-navigator-get-product" title="webkit_dom_navigator_get_product ()">webkit_dom_navigator_get_product</a>    (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMNavigator.html#webkit-dom-navigator-get-product-sub" title="webkit_dom_navigator_get_product_sub ()">webkit_dom_navigator_get_product_sub</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMNavigator.html#webkit-dom-navigator-get-vendor" title="webkit_dom_navigator_get_vendor ()">webkit_dom_navigator_get_vendor</a>     (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMNavigator.html#webkit-dom-navigator-get-vendor-sub" title="webkit_dom_navigator_get_vendor_sub ()">webkit_dom_navigator_get_vendor_sub</a> (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMNavigator.html#webkit-dom-navigator-get-cookie-enabled" title="webkit_dom_navigator_get_cookie_enabled ()">webkit_dom_navigator_get_cookie_enabled</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMNavigator.html#webkit-dom-navigator-get-on-line" title="webkit_dom_navigator_get_on_line ()">webkit_dom_navigator_get_on_line</a>    (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMBatteryManager.html" title="WebKitDOMBatteryManager"><span class="returnvalue">WebKitDOMBatteryManager</span></a> * <a class="link" href="WebKitDOMNavigator.html#webkit-dom-navigator-get-webkit-battery" title="webkit_dom_navigator_get_webkit_battery ()">webkit_dom_navigator_get_webkit_battery</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMGeolocation.html" title="WebKitDOMGeolocation"><span class="returnvalue">WebKitDOMGeolocation</span></a> * <a class="link" href="WebKitDOMNavigator.html#webkit-dom-navigator-get-geolocation" title="webkit_dom_navigator_get_geolocation ()">webkit_dom_navigator_get_geolocation</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMStorageQuota.html" title="WebKitDOMStorageQuota"><span class="returnvalue">WebKitDOMStorageQuota</span></a> * <a class="link" href="WebKitDOMNavigator.html#webkit-dom-navigator-get-webkit-temporary-storage" title="webkit_dom_navigator_get_webkit_temporary_storage ()">webkit_dom_navigator_get_webkit_temporary_storage</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMStorageQuota.html" title="WebKitDOMStorageQuota"><span class="returnvalue">WebKitDOMStorageQuota</span></a> * <a class="link" href="WebKitDOMNavigator.html#webkit-dom-navigator-get-webkit-persistent-storage" title="webkit_dom_navigator_get_webkit_persistent_storage ()">webkit_dom_navigator_get_webkit_persistent_storage</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMNavigator.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----WebKitDOMNavigator
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMNavigator.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitDOMNavigator.html#WebKitDOMNavigator--app-code-name" title='The "app-code-name" property'>app-code-name</a>"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMNavigator.html#WebKitDOMNavigator--app-name" title='The "app-name" property'>app-name</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMNavigator.html#WebKitDOMNavigator--app-version" title='The "app-version" property'>app-version</a>"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMNavigator.html#WebKitDOMNavigator--cookie-enabled" title='The "cookie-enabled" property'>cookie-enabled</a>"           <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
+  "<a class="link" href="WebKitDOMNavigator.html#WebKitDOMNavigator--geolocation" title='The "geolocation" property'>geolocation</a>"              <a class="link" href="WebKitDOMGeolocation.html" title="WebKitDOMGeolocation"><span class="type">WebKitDOMGeolocation</span></a>*  : Read
+  "<a class="link" href="WebKitDOMNavigator.html#WebKitDOMNavigator--language" title='The "language" property'>language</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMNavigator.html#WebKitDOMNavigator--mime-types" title='The "mime-types" property'>mime-types</a>"               <a class="link" href="WebKitDOMDOMMimeTypeArray.html" title="WebKitDOMDOMMimeTypeArray"><span class="type">WebKitDOMDOMMimeTypeArray</span></a>*  : Read
+  "<a class="link" href="WebKitDOMNavigator.html#WebKitDOMNavigator--on-line" title='The "on-line" property'>on-line</a>"                  <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
+  "<a class="link" href="WebKitDOMNavigator.html#WebKitDOMNavigator--platform" title='The "platform" property'>platform</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMNavigator.html#WebKitDOMNavigator--plugins" title='The "plugins" property'>plugins</a>"                  <a class="link" href="WebKitDOMDOMPluginArray.html" title="WebKitDOMDOMPluginArray"><span class="type">WebKitDOMDOMPluginArray</span></a>*  : Read
+  "<a class="link" href="WebKitDOMNavigator.html#WebKitDOMNavigator--product" title='The "product" property'>product</a>"                  <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMNavigator.html#WebKitDOMNavigator--product-sub" title='The "product-sub" property'>product-sub</a>"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMNavigator.html#WebKitDOMNavigator--user-agent" title='The "user-agent" property'>user-agent</a>"               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMNavigator.html#WebKitDOMNavigator--vendor" title='The "vendor" property'>vendor</a>"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMNavigator.html#WebKitDOMNavigator--vendor-sub" title='The "vendor-sub" property'>vendor-sub</a>"               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMNavigator.html#WebKitDOMNavigator--webkit-battery" title='The "webkit-battery" property'>webkit-battery</a>"           <a class="link" href="WebKitDOMBatteryManager.html" title="WebKitDOMBatteryManager"><span class="type">WebKitDOMBatteryManager</span></a>*  : Read
+  "<a class="link" href="WebKitDOMNavigator.html#WebKitDOMNavigator--webkit-persistent-storage" title='The "webkit-persistent-storage" property'>webkit-persistent-storage</a>" <a class="link" href="WebKitDOMStorageQuota.html" title="WebKitDOMStorageQuota"><span class="type">WebKitDOMStorageQuota</span></a>*  : Read
+  "<a class="link" href="WebKitDOMNavigator.html#WebKitDOMNavigator--webkit-temporary-storage" title='The "webkit-temporary-storage" property'>webkit-temporary-storage</a>" <a class="link" href="WebKitDOMStorageQuota.html" title="WebKitDOMStorageQuota"><span class="type">WebKitDOMStorageQuota</span></a>*  : Read
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMNavigator.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMNavigator.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMNavigator-struct"></a><h3>WebKitDOMNavigator</h3>
+<pre class="programlisting">typedef struct _WebKitDOMNavigator WebKitDOMNavigator;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-navigator-java-enabled"></a><h3>webkit_dom_navigator_java_enabled ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_navigator_java_enabled   (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-navigator-get-storage-updates"></a><h3>webkit_dom_navigator_get_storage_updates ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_navigator_get_storage_updates
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-navigator-webkit-get-gamepads"></a><h3>webkit_dom_navigator_webkit_get_gamepads ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMGamepadList.html" title="WebKitDOMGamepadList"><span class="returnvalue">WebKitDOMGamepadList</span></a> * webkit_dom_navigator_webkit_get_gamepads
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-navigator-register-protocol-handler"></a><h3>webkit_dom_navigator_register_protocol_handler ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_navigator_register_protocol_handler
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *scheme</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *url</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *title</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>scheme</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>url</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>title</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-navigator-is-protocol-handler-registered"></a><h3>webkit_dom_navigator_is_protocol_handler_registered ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_navigator_is_protocol_handler_registered
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *scheme</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *url</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>scheme</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>url</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-navigator-unregister-protocol-handler"></a><h3>webkit_dom_navigator_unregister_protocol_handler ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_navigator_unregister_protocol_handler
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *scheme</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *url</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>scheme</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>url</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-navigator-get-app-code-name"></a><h3>webkit_dom_navigator_get_app_code_name ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_navigator_get_app_code_name
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-navigator-get-app-name"></a><h3>webkit_dom_navigator_get_app_name ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_navigator_get_app_name   (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-navigator-get-app-version"></a><h3>webkit_dom_navigator_get_app_version ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_navigator_get_app_version
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-navigator-get-language"></a><h3>webkit_dom_navigator_get_language ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_navigator_get_language   (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-navigator-get-user-agent"></a><h3>webkit_dom_navigator_get_user_agent ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_navigator_get_user_agent (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-navigator-get-platform"></a><h3>webkit_dom_navigator_get_platform ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_navigator_get_platform   (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-navigator-get-plugins"></a><h3>webkit_dom_navigator_get_plugins ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMDOMPluginArray.html" title="WebKitDOMDOMPluginArray"><span class="returnvalue">WebKitDOMDOMPluginArray</span></a> * webkit_dom_navigator_get_plugins
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-navigator-get-mime-types"></a><h3>webkit_dom_navigator_get_mime_types ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMDOMMimeTypeArray.html" title="WebKitDOMDOMMimeTypeArray"><span class="returnvalue">WebKitDOMDOMMimeTypeArray</span></a> * webkit_dom_navigator_get_mime_types
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-navigator-get-product"></a><h3>webkit_dom_navigator_get_product ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_navigator_get_product    (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-navigator-get-product-sub"></a><h3>webkit_dom_navigator_get_product_sub ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_navigator_get_product_sub
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-navigator-get-vendor"></a><h3>webkit_dom_navigator_get_vendor ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_navigator_get_vendor     (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-navigator-get-vendor-sub"></a><h3>webkit_dom_navigator_get_vendor_sub ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_navigator_get_vendor_sub (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-navigator-get-cookie-enabled"></a><h3>webkit_dom_navigator_get_cookie_enabled ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_navigator_get_cookie_enabled
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-navigator-get-on-line"></a><h3>webkit_dom_navigator_get_on_line ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_navigator_get_on_line    (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-navigator-get-webkit-battery"></a><h3>webkit_dom_navigator_get_webkit_battery ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMBatteryManager.html" title="WebKitDOMBatteryManager"><span class="returnvalue">WebKitDOMBatteryManager</span></a> * webkit_dom_navigator_get_webkit_battery
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-navigator-get-geolocation"></a><h3>webkit_dom_navigator_get_geolocation ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMGeolocation.html" title="WebKitDOMGeolocation"><span class="returnvalue">WebKitDOMGeolocation</span></a> * webkit_dom_navigator_get_geolocation
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-navigator-get-webkit-temporary-storage"></a><h3>webkit_dom_navigator_get_webkit_temporary_storage ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMStorageQuota.html" title="WebKitDOMStorageQuota"><span class="returnvalue">WebKitDOMStorageQuota</span></a> * webkit_dom_navigator_get_webkit_temporary_storage
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-navigator-get-webkit-persistent-storage"></a><h3>webkit_dom_navigator_get_webkit_persistent_storage ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMStorageQuota.html" title="WebKitDOMStorageQuota"><span class="returnvalue">WebKitDOMStorageQuota</span></a> * webkit_dom_navigator_get_webkit_persistent_storage
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMNavigator.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMNavigator--app-code-name"></a><h3>The <code class="literal">"app-code-name"</code> property</h3>
+<pre class="programlisting">  "app-code-name"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* Navigator:app-code-name.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMNavigator--app-name"></a><h3>The <code class="literal">"app-name"</code> property</h3>
+<pre class="programlisting">  "app-name"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* Navigator:app-name.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMNavigator--app-version"></a><h3>The <code class="literal">"app-version"</code> property</h3>
+<pre class="programlisting">  "app-version"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* Navigator:app-version.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMNavigator--cookie-enabled"></a><h3>The <code class="literal">"cookie-enabled"</code> property</h3>
+<pre class="programlisting">  "cookie-enabled"           <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read</pre>
+<p>read-only gboolean Navigator:cookie-enabled.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMNavigator--geolocation"></a><h3>The <code class="literal">"geolocation"</code> property</h3>
+<pre class="programlisting">  "geolocation"              <a class="link" href="WebKitDOMGeolocation.html" title="WebKitDOMGeolocation"><span class="type">WebKitDOMGeolocation</span></a>*  : Read</pre>
+<p>read-only WebKitDOMGeolocation* Navigator:geolocation.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMNavigator--language"></a><h3>The <code class="literal">"language"</code> property</h3>
+<pre class="programlisting">  "language"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* Navigator:language.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMNavigator--mime-types"></a><h3>The <code class="literal">"mime-types"</code> property</h3>
+<pre class="programlisting">  "mime-types"               <a class="link" href="WebKitDOMDOMMimeTypeArray.html" title="WebKitDOMDOMMimeTypeArray"><span class="type">WebKitDOMDOMMimeTypeArray</span></a>*  : Read</pre>
+<p>read-only WebKitDOMDOMMimeTypeArray* Navigator:mime-types.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMNavigator--on-line"></a><h3>The <code class="literal">"on-line"</code> property</h3>
+<pre class="programlisting">  "on-line"                  <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read</pre>
+<p>read-only gboolean Navigator:on-line.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMNavigator--platform"></a><h3>The <code class="literal">"platform"</code> property</h3>
+<pre class="programlisting">  "platform"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* Navigator:platform.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMNavigator--plugins"></a><h3>The <code class="literal">"plugins"</code> property</h3>
+<pre class="programlisting">  "plugins"                  <a class="link" href="WebKitDOMDOMPluginArray.html" title="WebKitDOMDOMPluginArray"><span class="type">WebKitDOMDOMPluginArray</span></a>*  : Read</pre>
+<p>read-only WebKitDOMDOMPluginArray* Navigator:plugins.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMNavigator--product"></a><h3>The <code class="literal">"product"</code> property</h3>
+<pre class="programlisting">  "product"                  <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* Navigator:product.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMNavigator--product-sub"></a><h3>The <code class="literal">"product-sub"</code> property</h3>
+<pre class="programlisting">  "product-sub"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* Navigator:product-sub.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMNavigator--user-agent"></a><h3>The <code class="literal">"user-agent"</code> property</h3>
+<pre class="programlisting">  "user-agent"               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* Navigator:user-agent.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMNavigator--vendor"></a><h3>The <code class="literal">"vendor"</code> property</h3>
+<pre class="programlisting">  "vendor"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* Navigator:vendor.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMNavigator--vendor-sub"></a><h3>The <code class="literal">"vendor-sub"</code> property</h3>
+<pre class="programlisting">  "vendor-sub"               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* Navigator:vendor-sub.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMNavigator--webkit-battery"></a><h3>The <code class="literal">"webkit-battery"</code> property</h3>
+<pre class="programlisting">  "webkit-battery"           <a class="link" href="WebKitDOMBatteryManager.html" title="WebKitDOMBatteryManager"><span class="type">WebKitDOMBatteryManager</span></a>*  : Read</pre>
+<p>read-only WebKitDOMBatteryManager* Navigator:webkit-battery.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMNavigator--webkit-persistent-storage"></a><h3>The <code class="literal">"webkit-persistent-storage"</code> property</h3>
+<pre class="programlisting">  "webkit-persistent-storage" <a class="link" href="WebKitDOMStorageQuota.html" title="WebKitDOMStorageQuota"><span class="type">WebKitDOMStorageQuota</span></a>*  : Read</pre>
+<p>read-only WebKitDOMStorageQuota* Navigator:webkit-persistent-storage.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMNavigator--webkit-temporary-storage"></a><h3>The <code class="literal">"webkit-temporary-storage"</code> property</h3>
+<pre class="programlisting">  "webkit-temporary-storage" <a class="link" href="WebKitDOMStorageQuota.html" title="WebKitDOMStorageQuota"><span class="type">WebKitDOMStorageQuota</span></a>*  : Read</pre>
+<p>read-only WebKitDOMStorageQuota* Navigator:webkit-temporary-storage.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18.1</div>
+</body>
+</html>

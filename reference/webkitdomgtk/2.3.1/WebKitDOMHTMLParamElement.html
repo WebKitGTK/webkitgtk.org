@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMHTMLParamElement</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMHTMLParagraphElement.html" title="WebKitDOMHTMLParagraphElement">
+<link rel="next" href="WebKitDOMHTMLPreElement.html" title="WebKitDOMHTMLPreElement">
+<meta name="generator" content="GTK-Doc V1.18.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="WebKitDOMHTMLParagraphElement.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">WebKitDOMGTK+ Reference Manual</th>
+<td><a accesskey="n" href="WebKitDOMHTMLPreElement.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#WebKitDOMHTMLParamElement.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMHTMLParamElement.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMHTMLParamElement.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitDOMHTMLParamElement.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#WebKitDOMHTMLParamElement.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="WebKitDOMHTMLParamElement"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMHTMLParamElement.top_of_page"></a>WebKitDOMHTMLParamElement</span></h2>
+<p>WebKitDOMHTMLParamElement</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMHTMLParamElement.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMHTMLParamElement.html#WebKitDOMHTMLParamElement-struct" title="WebKitDOMHTMLParamElement">WebKitDOMHTMLParamElement</a>;
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLParamElement.html#webkit-dom-html-param-element-get-name" title="webkit_dom_html_param_element_get_name ()">webkit_dom_html_param_element_get_name</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLParamElement.html" title="WebKitDOMHTMLParamElement"><span class="type">WebKitDOMHTMLParamElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLParamElement.html#webkit-dom-html-param-element-set-name" title="webkit_dom_html_param_element_set_name ()">webkit_dom_html_param_element_set_name</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLParamElement.html" title="WebKitDOMHTMLParamElement"><span class="type">WebKitDOMHTMLParamElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLParamElement.html#webkit-dom-html-param-element-get-value" title="webkit_dom_html_param_element_get_value ()">webkit_dom_html_param_element_get_value</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLParamElement.html" title="WebKitDOMHTMLParamElement"><span class="type">WebKitDOMHTMLParamElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLParamElement.html#webkit-dom-html-param-element-set-value" title="webkit_dom_html_param_element_set_value ()">webkit_dom_html_param_element_set_value</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLParamElement.html" title="WebKitDOMHTMLParamElement"><span class="type">WebKitDOMHTMLParamElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLParamElement.html#webkit-dom-html-param-element-get-value-type" title="webkit_dom_html_param_element_get_value_type ()">webkit_dom_html_param_element_get_value_type</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLParamElement.html" title="WebKitDOMHTMLParamElement"><span class="type">WebKitDOMHTMLParamElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLParamElement.html#webkit-dom-html-param-element-set-value-type" title="webkit_dom_html_param_element_set_value_type ()">webkit_dom_html_param_element_set_value_type</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLParamElement.html" title="WebKitDOMHTMLParamElement"><span class="type">WebKitDOMHTMLParamElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLParamElement.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----<a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode">WebKitDOMNode</a>
+               +----<a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement">WebKitDOMElement</a>
+                     +----<a class="link" href="WebKitDOMHTMLElement.html" title="WebKitDOMHTMLElement">WebKitDOMHTMLElement</a>
+                           +----WebKitDOMHTMLParamElement
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLParamElement.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+WebKitDOMHTMLParamElement implements
+ <a class="link" href="WebKitDOMEventTarget.html" title="WebKitDOMEventTarget">WebKitDOMEventTarget</a>.</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLParamElement.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitDOMHTMLParamElement.html#WebKitDOMHTMLParamElement--name" title='The "name" property'>name</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLParamElement.html#WebKitDOMHTMLParamElement--type" title='The "type" property'>type</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLParamElement.html#WebKitDOMHTMLParamElement--value" title='The "value" property'>value</a>"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLParamElement.html#WebKitDOMHTMLParamElement--value-type" title='The "value-type" property'>value-type</a>"               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLParamElement.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLParamElement.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMHTMLParamElement-struct"></a><h3>WebKitDOMHTMLParamElement</h3>
+<pre class="programlisting">typedef struct _WebKitDOMHTMLParamElement WebKitDOMHTMLParamElement;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-param-element-get-name"></a><h3>webkit_dom_html_param_element_get_name ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_param_element_get_name
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLParamElement.html" title="WebKitDOMHTMLParamElement"><span class="type">WebKitDOMHTMLParamElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLParamElement.html" title="WebKitDOMHTMLParamElement"><span class="type">WebKitDOMHTMLParamElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-param-element-set-name"></a><h3>webkit_dom_html_param_element_set_name ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_param_element_set_name
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLParamElement.html" title="WebKitDOMHTMLParamElement"><span class="type">WebKitDOMHTMLParamElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLParamElement.html" title="WebKitDOMHTMLParamElement"><span class="type">WebKitDOMHTMLParamElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-param-element-get-value"></a><h3>webkit_dom_html_param_element_get_value ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_param_element_get_value
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLParamElement.html" title="WebKitDOMHTMLParamElement"><span class="type">WebKitDOMHTMLParamElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLParamElement.html" title="WebKitDOMHTMLParamElement"><span class="type">WebKitDOMHTMLParamElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-param-element-set-value"></a><h3>webkit_dom_html_param_element_set_value ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_param_element_set_value
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLParamElement.html" title="WebKitDOMHTMLParamElement"><span class="type">WebKitDOMHTMLParamElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLParamElement.html" title="WebKitDOMHTMLParamElement"><span class="type">WebKitDOMHTMLParamElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-param-element-get-value-type"></a><h3>webkit_dom_html_param_element_get_value_type ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_param_element_get_value_type
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLParamElement.html" title="WebKitDOMHTMLParamElement"><span class="type">WebKitDOMHTMLParamElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLParamElement.html" title="WebKitDOMHTMLParamElement"><span class="type">WebKitDOMHTMLParamElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-param-element-set-value-type"></a><h3>webkit_dom_html_param_element_set_value_type ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_param_element_set_value_type
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLParamElement.html" title="WebKitDOMHTMLParamElement"><span class="type">WebKitDOMHTMLParamElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLParamElement.html" title="WebKitDOMHTMLParamElement"><span class="type">WebKitDOMHTMLParamElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLParamElement.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMHTMLParamElement--name"></a><h3>The <code class="literal">"name"</code> property</h3>
+<pre class="programlisting">  "name"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLParamElement:name.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLParamElement--type"></a><h3>The <code class="literal">"type"</code> property</h3>
+<pre class="programlisting">  "type"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLParamElement:type.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLParamElement--value"></a><h3>The <code class="literal">"value"</code> property</h3>
+<pre class="programlisting">  "value"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLParamElement:value.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLParamElement--value-type"></a><h3>The <code class="literal">"value-type"</code> property</h3>
+<pre class="programlisting">  "value-type"               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLParamElement:value-type.</p>
+<p>Default value: ""</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18.1</div>
+</body>
+</html>

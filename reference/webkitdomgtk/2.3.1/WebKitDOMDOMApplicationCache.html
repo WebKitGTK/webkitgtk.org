@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMDOMApplicationCache</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState">
+<link rel="next" href="WebKitDOMBarProp.html" title="WebKitDOMBarProp">
+<meta name="generator" content="GTK-Doc V1.18.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="WebKitDOMValidityState.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">WebKitDOMGTK+ Reference Manual</th>
+<td><a accesskey="n" href="WebKitDOMBarProp.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#WebKitDOMDOMApplicationCache.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMDOMApplicationCache.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMDOMApplicationCache.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitDOMDOMApplicationCache.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#WebKitDOMDOMApplicationCache.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="WebKitDOMDOMApplicationCache"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMDOMApplicationCache.top_of_page"></a>WebKitDOMDOMApplicationCache</span></h2>
+<p>WebKitDOMDOMApplicationCache</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMDOMApplicationCache.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMDOMApplicationCache.html#WebKitDOMDOMApplicationCache-struct" title="WebKitDOMDOMApplicationCache">WebKitDOMDOMApplicationCache</a>;
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMApplicationCache.html#webkit-dom-dom-application-cache-update" title="webkit_dom_dom_application_cache_update ()">webkit_dom_dom_application_cache_update</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMApplicationCache.html" title="WebKitDOMDOMApplicationCache"><span class="type">WebKitDOMDOMApplicationCache</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMApplicationCache.html#webkit-dom-dom-application-cache-swap-cache" title="webkit_dom_dom_application_cache_swap_cache ()">webkit_dom_dom_application_cache_swap_cache</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMApplicationCache.html" title="WebKitDOMDOMApplicationCache"><span class="type">WebKitDOMDOMApplicationCache</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMApplicationCache.html#webkit-dom-dom-application-cache-abort" title="webkit_dom_dom_application_cache_abort ()">webkit_dom_dom_application_cache_abort</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMApplicationCache.html" title="WebKitDOMDOMApplicationCache"><span class="type">WebKitDOMDOMApplicationCache</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gushort"><span class="returnvalue">gushort</span></a>             <a class="link" href="WebKitDOMDOMApplicationCache.html#webkit-dom-dom-application-cache-get-status" title="webkit_dom_dom_application_cache_get_status ()">webkit_dom_dom_application_cache_get_status</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMApplicationCache.html" title="WebKitDOMDOMApplicationCache"><span class="type">WebKitDOMDOMApplicationCache</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMDOMApplicationCache.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----WebKitDOMDOMApplicationCache
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMDOMApplicationCache.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+WebKitDOMDOMApplicationCache implements
+ <a class="link" href="WebKitDOMEventTarget.html" title="WebKitDOMEventTarget">WebKitDOMEventTarget</a>.</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMDOMApplicationCache.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitDOMDOMApplicationCache.html#WebKitDOMDOMApplicationCache--status" title='The "status" property'>status</a>"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                 : Read
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMDOMApplicationCache.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMDOMApplicationCache.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMDOMApplicationCache-struct"></a><h3>WebKitDOMDOMApplicationCache</h3>
+<pre class="programlisting">typedef struct _WebKitDOMDOMApplicationCache WebKitDOMDOMApplicationCache;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-application-cache-update"></a><h3>webkit_dom_dom_application_cache_update ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_application_cache_update
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMApplicationCache.html" title="WebKitDOMDOMApplicationCache"><span class="type">WebKitDOMDOMApplicationCache</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMApplicationCache.html" title="WebKitDOMDOMApplicationCache"><span class="type">WebKitDOMDOMApplicationCache</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-application-cache-swap-cache"></a><h3>webkit_dom_dom_application_cache_swap_cache ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_application_cache_swap_cache
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMApplicationCache.html" title="WebKitDOMDOMApplicationCache"><span class="type">WebKitDOMDOMApplicationCache</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMApplicationCache.html" title="WebKitDOMDOMApplicationCache"><span class="type">WebKitDOMDOMApplicationCache</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-application-cache-abort"></a><h3>webkit_dom_dom_application_cache_abort ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_application_cache_abort
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMApplicationCache.html" title="WebKitDOMDOMApplicationCache"><span class="type">WebKitDOMDOMApplicationCache</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMApplicationCache.html" title="WebKitDOMDOMApplicationCache"><span class="type">WebKitDOMDOMApplicationCache</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-application-cache-get-status"></a><h3>webkit_dom_dom_application_cache_get_status ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gushort"><span class="returnvalue">gushort</span></a>             webkit_dom_dom_application_cache_get_status
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMApplicationCache.html" title="WebKitDOMDOMApplicationCache"><span class="type">WebKitDOMDOMApplicationCache</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMApplicationCache.html" title="WebKitDOMDOMApplicationCache"><span class="type">WebKitDOMDOMApplicationCache</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMDOMApplicationCache.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMDOMApplicationCache--status"></a><h3>The <code class="literal">"status"</code> property</h3>
+<pre class="programlisting">  "status"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                 : Read</pre>
+<p>read-only gushort DOMApplicationCache:status.</p>
+<p>Default value: 0</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18.1</div>
+</body>
+</html>

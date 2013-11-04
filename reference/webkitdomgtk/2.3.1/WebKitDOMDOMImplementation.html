@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMDOMImplementation</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMDocumentType.html" title="WebKitDOMDocumentType">
+<link rel="next" href="WebKitDOMDOMNamedFlowCollection.html" title="WebKitDOMDOMNamedFlowCollection">
+<meta name="generator" content="GTK-Doc V1.18.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="WebKitDOMDocumentType.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">WebKitDOMGTK+ Reference Manual</th>
+<td><a accesskey="n" href="WebKitDOMDOMNamedFlowCollection.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#WebKitDOMDOMImplementation.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMDOMImplementation.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMDOMImplementation.object-hierarchy" class="shortcut">Object Hierarchy</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="WebKitDOMDOMImplementation"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMDOMImplementation.top_of_page"></a>WebKitDOMDOMImplementation</span></h2>
+<p>WebKitDOMDOMImplementation</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMDOMImplementation.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMDOMImplementation.html#WebKitDOMDOMImplementation-struct" title="WebKitDOMDOMImplementation">WebKitDOMDOMImplementation</a>;
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMDOMImplementation.html#webkit-dom-dom-implementation-has-feature" title="webkit_dom_dom_implementation_has_feature ()">webkit_dom_dom_implementation_has_feature</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMImplementation.html" title="WebKitDOMDOMImplementation"><span class="type">WebKitDOMDOMImplementation</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *feature</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *version</code></em>);
+<a class="link" href="WebKitDOMDocumentType.html" title="WebKitDOMDocumentType"><span class="returnvalue">WebKitDOMDocumentType</span></a> * <a class="link" href="WebKitDOMDOMImplementation.html#webkit-dom-dom-implementation-create-document-type" title="webkit_dom_dom_implementation_create_document_type ()">webkit_dom_dom_implementation_create_document_type</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMImplementation.html" title="WebKitDOMDOMImplementation"><span class="type">WebKitDOMDOMImplementation</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *qualifiedName</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *publicId</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *systemId</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a class="link" href="WebKitDOMDocument.html" title="WebKitDOMDocument"><span class="returnvalue">WebKitDOMDocument</span></a> * <a class="link" href="WebKitDOMDOMImplementation.html#webkit-dom-dom-implementation-create-document" title="webkit_dom_dom_implementation_create_document ()">webkit_dom_dom_implementation_create_document</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMImplementation.html" title="WebKitDOMDOMImplementation"><span class="type">WebKitDOMDOMImplementation</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *namespaceURI</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *qualifiedName</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMDocumentType.html" title="WebKitDOMDocumentType"><span class="type">WebKitDOMDocumentType</span></a> *doctype</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a class="link" href="WebKitDOMCSSStyleSheet.html" title="WebKitDOMCSSStyleSheet"><span class="returnvalue">WebKitDOMCSSStyleSheet</span></a> * <a class="link" href="WebKitDOMDOMImplementation.html#webkit-dom-dom-implementation-create-css-style-sheet" title="webkit_dom_dom_implementation_create_css_style_sheet ()">webkit_dom_dom_implementation_create_css_style_sheet</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMImplementation.html" title="WebKitDOMDOMImplementation"><span class="type">WebKitDOMDOMImplementation</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *title</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *media</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="returnvalue">WebKitDOMHTMLDocument</span></a> * <a class="link" href="WebKitDOMDOMImplementation.html#webkit-dom-dom-implementation-create-html-document" title="webkit_dom_dom_implementation_create_html_document ()">webkit_dom_dom_implementation_create_html_document</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMImplementation.html" title="WebKitDOMDOMImplementation"><span class="type">WebKitDOMDOMImplementation</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *title</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMDOMImplementation.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----WebKitDOMDOMImplementation
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMDOMImplementation.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMDOMImplementation.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMDOMImplementation-struct"></a><h3>WebKitDOMDOMImplementation</h3>
+<pre class="programlisting">typedef struct _WebKitDOMDOMImplementation WebKitDOMDOMImplementation;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-implementation-has-feature"></a><h3>webkit_dom_dom_implementation_has_feature ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_dom_implementation_has_feature
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMImplementation.html" title="WebKitDOMDOMImplementation"><span class="type">WebKitDOMDOMImplementation</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *feature</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *version</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMImplementation.html" title="WebKitDOMDOMImplementation"><span class="type">WebKitDOMDOMImplementation</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>feature</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>version</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-implementation-create-document-type"></a><h3>webkit_dom_dom_implementation_create_document_type ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMDocumentType.html" title="WebKitDOMDocumentType"><span class="returnvalue">WebKitDOMDocumentType</span></a> * webkit_dom_dom_implementation_create_document_type
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMImplementation.html" title="WebKitDOMDOMImplementation"><span class="type">WebKitDOMDOMImplementation</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *qualifiedName</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *publicId</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *systemId</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMImplementation.html" title="WebKitDOMDOMImplementation"><span class="type">WebKitDOMDOMImplementation</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>qualifiedName</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>publicId</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>systemId</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-implementation-create-document"></a><h3>webkit_dom_dom_implementation_create_document ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMDocument.html" title="WebKitDOMDocument"><span class="returnvalue">WebKitDOMDocument</span></a> * webkit_dom_dom_implementation_create_document
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMImplementation.html" title="WebKitDOMDOMImplementation"><span class="type">WebKitDOMDOMImplementation</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *namespaceURI</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *qualifiedName</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMDocumentType.html" title="WebKitDOMDocumentType"><span class="type">WebKitDOMDocumentType</span></a> *doctype</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMImplementation.html" title="WebKitDOMDOMImplementation"><span class="type">WebKitDOMDOMImplementation</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>namespaceURI</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>qualifiedName</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>doctype</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDocumentType.html" title="WebKitDOMDocumentType"><span class="type">WebKitDOMDocumentType</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-implementation-create-css-style-sheet"></a><h3>webkit_dom_dom_implementation_create_css_style_sheet ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMCSSStyleSheet.html" title="WebKitDOMCSSStyleSheet"><span class="returnvalue">WebKitDOMCSSStyleSheet</span></a> * webkit_dom_dom_implementation_create_css_style_sheet
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMImplementation.html" title="WebKitDOMDOMImplementation"><span class="type">WebKitDOMDOMImplementation</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *title</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *media</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMImplementation.html" title="WebKitDOMDOMImplementation"><span class="type">WebKitDOMDOMImplementation</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>title</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>media</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-implementation-create-html-document"></a><h3>webkit_dom_dom_implementation_create_html_document ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="returnvalue">WebKitDOMHTMLDocument</span></a> * webkit_dom_dom_implementation_create_html_document
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMImplementation.html" title="WebKitDOMDOMImplementation"><span class="type">WebKitDOMDOMImplementation</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *title</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMImplementation.html" title="WebKitDOMDOMImplementation"><span class="type">WebKitDOMDOMImplementation</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>title</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18.1</div>
+</body>
+</html>

@@ -1,0 +1,1328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMHTMLTextAreaElement</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMHTMLTableCellElement.html" title="WebKitDOMHTMLTableCellElement">
+<link rel="next" href="WebKitDOMHTMLTitleElement.html" title="WebKitDOMHTMLTitleElement">
+<meta name="generator" content="GTK-Doc V1.18.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="WebKitDOMHTMLTableCellElement.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">WebKitDOMGTK+ Reference Manual</th>
+<td><a accesskey="n" href="WebKitDOMHTMLTitleElement.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#WebKitDOMHTMLTextAreaElement.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMHTMLTextAreaElement.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMHTMLTextAreaElement.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitDOMHTMLTextAreaElement.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#WebKitDOMHTMLTextAreaElement.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="WebKitDOMHTMLTextAreaElement"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMHTMLTextAreaElement.top_of_page"></a>WebKitDOMHTMLTextAreaElement</span></h2>
+<p>WebKitDOMHTMLTextAreaElement</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMHTMLTextAreaElement.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMHTMLTextAreaElement.html#WebKitDOMHTMLTextAreaElement-struct" title="WebKitDOMHTMLTextAreaElement">WebKitDOMHTMLTextAreaElement</a>;
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-check-validity" title="webkit_dom_html_text_area_element_check_validity ()">webkit_dom_html_text_area_element_check_validity</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-set-custom-validity" title="webkit_dom_html_text_area_element_set_custom_validity ()">webkit_dom_html_text_area_element_set_custom_validity</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-select" title="webkit_dom_html_text_area_element_select ()">webkit_dom_html_text_area_element_select</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-set-range-text" title="webkit_dom_html_text_area_element_set_range_text ()">webkit_dom_html_text_area_element_set_range_text</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *replacement</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> start</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> end</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *selectionMode</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-set-selection-range" title="webkit_dom_html_text_area_element_set_selection_range ()">webkit_dom_html_text_area_element_set_selection_range</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> start</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> end</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *direction</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-get-autofocus" title="webkit_dom_html_text_area_element_get_autofocus ()">webkit_dom_html_text_area_element_get_autofocus</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-set-autofocus" title="webkit_dom_html_text_area_element_set_autofocus ()">webkit_dom_html_text_area_element_set_autofocus</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-get-cols" title="webkit_dom_html_text_area_element_get_cols ()">webkit_dom_html_text_area_element_get_cols</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-set-cols" title="webkit_dom_html_text_area_element_set_cols ()">webkit_dom_html_text_area_element_set_cols</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-get-dir-name" title="webkit_dom_html_text_area_element_get_dir_name ()">webkit_dom_html_text_area_element_get_dir_name</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-set-dir-name" title="webkit_dom_html_text_area_element_set_dir_name ()">webkit_dom_html_text_area_element_set_dir_name</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-get-disabled" title="webkit_dom_html_text_area_element_get_disabled ()">webkit_dom_html_text_area_element_get_disabled</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-set-disabled" title="webkit_dom_html_text_area_element_set_disabled ()">webkit_dom_html_text_area_element_set_disabled</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);
+<a class="link" href="WebKitDOMHTMLFormElement.html" title="WebKitDOMHTMLFormElement"><span class="returnvalue">WebKitDOMHTMLFormElement</span></a> * <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-get-form" title="webkit_dom_html_text_area_element_get_form ()">webkit_dom_html_text_area_element_get_form</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-get-max-length" title="webkit_dom_html_text_area_element_get_max_length ()">webkit_dom_html_text_area_element_get_max_length</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-set-max-length" title="webkit_dom_html_text_area_element_set_max_length ()">webkit_dom_html_text_area_element_set_max_length</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> value</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-get-name" title="webkit_dom_html_text_area_element_get_name ()">webkit_dom_html_text_area_element_get_name</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-set-name" title="webkit_dom_html_text_area_element_set_name ()">webkit_dom_html_text_area_element_set_name</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-get-placeholder" title="webkit_dom_html_text_area_element_get_placeholder ()">webkit_dom_html_text_area_element_get_placeholder</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-set-placeholder" title="webkit_dom_html_text_area_element_set_placeholder ()">webkit_dom_html_text_area_element_set_placeholder</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-get-read-only" title="webkit_dom_html_text_area_element_get_read_only ()">webkit_dom_html_text_area_element_get_read_only</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-set-read-only" title="webkit_dom_html_text_area_element_set_read_only ()">webkit_dom_html_text_area_element_set_read_only</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-get-required" title="webkit_dom_html_text_area_element_get_required ()">webkit_dom_html_text_area_element_get_required</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-set-required" title="webkit_dom_html_text_area_element_set_required ()">webkit_dom_html_text_area_element_set_required</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-get-rows" title="webkit_dom_html_text_area_element_get_rows ()">webkit_dom_html_text_area_element_get_rows</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-set-rows" title="webkit_dom_html_text_area_element_set_rows ()">webkit_dom_html_text_area_element_set_rows</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-get-wrap" title="webkit_dom_html_text_area_element_get_wrap ()">webkit_dom_html_text_area_element_get_wrap</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-set-wrap" title="webkit_dom_html_text_area_element_set_wrap ()">webkit_dom_html_text_area_element_set_wrap</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-get-default-value" title="webkit_dom_html_text_area_element_get_default_value ()">webkit_dom_html_text_area_element_get_default_value</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-set-default-value" title="webkit_dom_html_text_area_element_set_default_value ()">webkit_dom_html_text_area_element_set_default_value</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-get-value" title="webkit_dom_html_text_area_element_get_value ()">webkit_dom_html_text_area_element_get_value</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-set-value" title="webkit_dom_html_text_area_element_set_value ()">webkit_dom_html_text_area_element_set_value</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-get-text-length" title="webkit_dom_html_text_area_element_get_text_length ()">webkit_dom_html_text_area_element_get_text_length</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-get-will-validate" title="webkit_dom_html_text_area_element_get_will_validate ()">webkit_dom_html_text_area_element_get_will_validate</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="returnvalue">WebKitDOMValidityState</span></a> * <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-get-validity" title="webkit_dom_html_text_area_element_get_validity ()">webkit_dom_html_text_area_element_get_validity</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-get-validation-message" title="webkit_dom_html_text_area_element_get_validation_message ()">webkit_dom_html_text_area_element_get_validation_message</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMNodeList.html" title="WebKitDOMNodeList"><span class="returnvalue">WebKitDOMNodeList</span></a> * <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-get-labels" title="webkit_dom_html_text_area_element_get_labels ()">webkit_dom_html_text_area_element_get_labels</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-get-selection-start" title="webkit_dom_html_text_area_element_get_selection_start ()">webkit_dom_html_text_area_element_get_selection_start</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-set-selection-start" title="webkit_dom_html_text_area_element_set_selection_start ()">webkit_dom_html_text_area_element_set_selection_start</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-get-selection-end" title="webkit_dom_html_text_area_element_get_selection_end ()">webkit_dom_html_text_area_element_get_selection_end</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-set-selection-end" title="webkit_dom_html_text_area_element_set_selection_end ()">webkit_dom_html_text_area_element_set_selection_end</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-get-selection-direction" title="webkit_dom_html_text_area_element_get_selection_direction ()">webkit_dom_html_text_area_element_get_selection_direction</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLTextAreaElement.html#webkit-dom-html-text-area-element-set-selection-direction" title="webkit_dom_html_text_area_element_set_selection_direction ()">webkit_dom_html_text_area_element_set_selection_direction</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLTextAreaElement.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----<a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode">WebKitDOMNode</a>
+               +----<a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement">WebKitDOMElement</a>
+                     +----<a class="link" href="WebKitDOMHTMLElement.html" title="WebKitDOMHTMLElement">WebKitDOMHTMLElement</a>
+                           +----WebKitDOMHTMLTextAreaElement
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLTextAreaElement.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+WebKitDOMHTMLTextAreaElement implements
+ <a class="link" href="WebKitDOMEventTarget.html" title="WebKitDOMEventTarget">WebKitDOMEventTarget</a>.</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLTextAreaElement.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitDOMHTMLTextAreaElement.html#WebKitDOMHTMLTextAreaElement--autofocus" title='The "autofocus" property'>autofocus</a>"                <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+  "<a class="link" href="WebKitDOMHTMLTextAreaElement.html#WebKitDOMHTMLTextAreaElement--cols" title='The "cols" property'>cols</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read / Write
+  "<a class="link" href="WebKitDOMHTMLTextAreaElement.html#WebKitDOMHTMLTextAreaElement--default-value" title='The "default-value" property'>default-value</a>"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLTextAreaElement.html#WebKitDOMHTMLTextAreaElement--dir-name" title='The "dir-name" property'>dir-name</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLTextAreaElement.html#WebKitDOMHTMLTextAreaElement--disabled" title='The "disabled" property'>disabled</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+  "<a class="link" href="WebKitDOMHTMLTextAreaElement.html#WebKitDOMHTMLTextAreaElement--form" title='The "form" property'>form</a>"                     <a class="link" href="WebKitDOMHTMLFormElement.html" title="WebKitDOMHTMLFormElement"><span class="type">WebKitDOMHTMLFormElement</span></a>*  : Read
+  "<a class="link" href="WebKitDOMHTMLTextAreaElement.html#WebKitDOMHTMLTextAreaElement--labels" title='The "labels" property'>labels</a>"                   <a class="link" href="WebKitDOMNodeList.html" title="WebKitDOMNodeList"><span class="type">WebKitDOMNodeList</span></a>*    : Read
+  "<a class="link" href="WebKitDOMHTMLTextAreaElement.html#WebKitDOMHTMLTextAreaElement--max-length" title='The "max-length" property'>max-length</a>"               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read / Write
+  "<a class="link" href="WebKitDOMHTMLTextAreaElement.html#WebKitDOMHTMLTextAreaElement--name" title='The "name" property'>name</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLTextAreaElement.html#WebKitDOMHTMLTextAreaElement--placeholder" title='The "placeholder" property'>placeholder</a>"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLTextAreaElement.html#WebKitDOMHTMLTextAreaElement--read-only" title='The "read-only" property'>read-only</a>"                <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+  "<a class="link" href="WebKitDOMHTMLTextAreaElement.html#WebKitDOMHTMLTextAreaElement--required" title='The "required" property'>required</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+  "<a class="link" href="WebKitDOMHTMLTextAreaElement.html#WebKitDOMHTMLTextAreaElement--rows" title='The "rows" property'>rows</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read / Write
+  "<a class="link" href="WebKitDOMHTMLTextAreaElement.html#WebKitDOMHTMLTextAreaElement--selection-direction" title='The "selection-direction" property'>selection-direction</a>"      <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLTextAreaElement.html#WebKitDOMHTMLTextAreaElement--selection-end" title='The "selection-end" property'>selection-end</a>"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read / Write
+  "<a class="link" href="WebKitDOMHTMLTextAreaElement.html#WebKitDOMHTMLTextAreaElement--selection-start" title='The "selection-start" property'>selection-start</a>"          <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read / Write
+  "<a class="link" href="WebKitDOMHTMLTextAreaElement.html#WebKitDOMHTMLTextAreaElement--text-length" title='The "text-length" property'>text-length</a>"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read
+  "<a class="link" href="WebKitDOMHTMLTextAreaElement.html#WebKitDOMHTMLTextAreaElement--type" title='The "type" property'>type</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMHTMLTextAreaElement.html#WebKitDOMHTMLTextAreaElement--validation-message" title='The "validation-message" property'>validation-message</a>"       <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMHTMLTextAreaElement.html#WebKitDOMHTMLTextAreaElement--validity" title='The "validity" property'>validity</a>"                 <a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a>*  : Read
+  "<a class="link" href="WebKitDOMHTMLTextAreaElement.html#WebKitDOMHTMLTextAreaElement--value" title='The "value" property'>value</a>"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLTextAreaElement.html#WebKitDOMHTMLTextAreaElement--will-validate" title='The "will-validate" property'>will-validate</a>"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
+  "<a class="link" href="WebKitDOMHTMLTextAreaElement.html#WebKitDOMHTMLTextAreaElement--wrap" title='The "wrap" property'>wrap</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLTextAreaElement.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLTextAreaElement.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMHTMLTextAreaElement-struct"></a><h3>WebKitDOMHTMLTextAreaElement</h3>
+<pre class="programlisting">typedef struct _WebKitDOMHTMLTextAreaElement WebKitDOMHTMLTextAreaElement;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-check-validity"></a><h3>webkit_dom_html_text_area_element_check_validity ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_html_text_area_element_check_validity
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-set-custom-validity"></a><h3>webkit_dom_html_text_area_element_set_custom_validity ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_text_area_element_set_custom_validity
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-select"></a><h3>webkit_dom_html_text_area_element_select ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_text_area_element_select
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-set-range-text"></a><h3>webkit_dom_html_text_area_element_set_range_text ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_text_area_element_set_range_text
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *replacement</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> start</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> end</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *selectionMode</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>replacement</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>start</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>end</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>selectionMode</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-set-selection-range"></a><h3>webkit_dom_html_text_area_element_set_selection_range ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_text_area_element_set_selection_range
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> start</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> end</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *direction</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>start</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>end</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>direction</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-get-autofocus"></a><h3>webkit_dom_html_text_area_element_get_autofocus ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_html_text_area_element_get_autofocus
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-set-autofocus"></a><h3>webkit_dom_html_text_area_element_set_autofocus ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_text_area_element_set_autofocus
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-get-cols"></a><h3>webkit_dom_html_text_area_element_get_cols ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_html_text_area_element_get_cols
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-set-cols"></a><h3>webkit_dom_html_text_area_element_set_cols ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_text_area_element_set_cols
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-get-dir-name"></a><h3>webkit_dom_html_text_area_element_get_dir_name ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_text_area_element_get_dir_name
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-set-dir-name"></a><h3>webkit_dom_html_text_area_element_set_dir_name ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_text_area_element_set_dir_name
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-get-disabled"></a><h3>webkit_dom_html_text_area_element_get_disabled ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_html_text_area_element_get_disabled
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-set-disabled"></a><h3>webkit_dom_html_text_area_element_set_disabled ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_text_area_element_set_disabled
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-get-form"></a><h3>webkit_dom_html_text_area_element_get_form ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMHTMLFormElement.html" title="WebKitDOMHTMLFormElement"><span class="returnvalue">WebKitDOMHTMLFormElement</span></a> * webkit_dom_html_text_area_element_get_form
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-get-max-length"></a><h3>webkit_dom_html_text_area_element_get_max_length ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_html_text_area_element_get_max_length
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-set-max-length"></a><h3>webkit_dom_html_text_area_element_set_max_length ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_text_area_element_set_max_length
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> value</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-get-name"></a><h3>webkit_dom_html_text_area_element_get_name ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_text_area_element_get_name
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-set-name"></a><h3>webkit_dom_html_text_area_element_set_name ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_text_area_element_set_name
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-get-placeholder"></a><h3>webkit_dom_html_text_area_element_get_placeholder ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_text_area_element_get_placeholder
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-set-placeholder"></a><h3>webkit_dom_html_text_area_element_set_placeholder ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_text_area_element_set_placeholder
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-get-read-only"></a><h3>webkit_dom_html_text_area_element_get_read_only ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_html_text_area_element_get_read_only
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-set-read-only"></a><h3>webkit_dom_html_text_area_element_set_read_only ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_text_area_element_set_read_only
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-get-required"></a><h3>webkit_dom_html_text_area_element_get_required ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_html_text_area_element_get_required
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-set-required"></a><h3>webkit_dom_html_text_area_element_set_required ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_text_area_element_set_required
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-get-rows"></a><h3>webkit_dom_html_text_area_element_get_rows ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_html_text_area_element_get_rows
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-set-rows"></a><h3>webkit_dom_html_text_area_element_set_rows ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_text_area_element_set_rows
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-get-wrap"></a><h3>webkit_dom_html_text_area_element_get_wrap ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_text_area_element_get_wrap
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-set-wrap"></a><h3>webkit_dom_html_text_area_element_set_wrap ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_text_area_element_set_wrap
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-get-default-value"></a><h3>webkit_dom_html_text_area_element_get_default_value ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_text_area_element_get_default_value
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-set-default-value"></a><h3>webkit_dom_html_text_area_element_set_default_value ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_text_area_element_set_default_value
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-get-value"></a><h3>webkit_dom_html_text_area_element_get_value ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_text_area_element_get_value
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-set-value"></a><h3>webkit_dom_html_text_area_element_set_value ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_text_area_element_set_value
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-get-text-length"></a><h3>webkit_dom_html_text_area_element_get_text_length ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              webkit_dom_html_text_area_element_get_text_length
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-get-will-validate"></a><h3>webkit_dom_html_text_area_element_get_will_validate ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_html_text_area_element_get_will_validate
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-get-validity"></a><h3>webkit_dom_html_text_area_element_get_validity ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="returnvalue">WebKitDOMValidityState</span></a> * webkit_dom_html_text_area_element_get_validity
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-get-validation-message"></a><h3>webkit_dom_html_text_area_element_get_validation_message ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_text_area_element_get_validation_message
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-get-labels"></a><h3>webkit_dom_html_text_area_element_get_labels ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMNodeList.html" title="WebKitDOMNodeList"><span class="returnvalue">WebKitDOMNodeList</span></a> * webkit_dom_html_text_area_element_get_labels
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-get-selection-start"></a><h3>webkit_dom_html_text_area_element_get_selection_start ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_html_text_area_element_get_selection_start
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-set-selection-start"></a><h3>webkit_dom_html_text_area_element_set_selection_start ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_text_area_element_set_selection_start
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-get-selection-end"></a><h3>webkit_dom_html_text_area_element_get_selection_end ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_html_text_area_element_get_selection_end
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-set-selection-end"></a><h3>webkit_dom_html_text_area_element_set_selection_end ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_text_area_element_set_selection_end
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-get-selection-direction"></a><h3>webkit_dom_html_text_area_element_get_selection_direction ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_text_area_element_get_selection_direction
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-text-area-element-set-selection-direction"></a><h3>webkit_dom_html_text_area_element_set_selection_direction ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_text_area_element_set_selection_direction
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement"><span class="type">WebKitDOMHTMLTextAreaElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLTextAreaElement.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMHTMLTextAreaElement--autofocus"></a><h3>The <code class="literal">"autofocus"</code> property</h3>
+<pre class="programlisting">  "autofocus"                <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
+<p>read-only gboolean HTMLTextAreaElement:autofocus.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLTextAreaElement--cols"></a><h3>The <code class="literal">"cols"</code> property</h3>
+<pre class="programlisting">  "cols"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read / Write</pre>
+<p>read-only glong HTMLTextAreaElement:cols.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLTextAreaElement--default-value"></a><h3>The <code class="literal">"default-value"</code> property</h3>
+<pre class="programlisting">  "default-value"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLTextAreaElement:default-value.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLTextAreaElement--dir-name"></a><h3>The <code class="literal">"dir-name"</code> property</h3>
+<pre class="programlisting">  "dir-name"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLTextAreaElement:dir-name.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLTextAreaElement--disabled"></a><h3>The <code class="literal">"disabled"</code> property</h3>
+<pre class="programlisting">  "disabled"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
+<p>read-only gboolean HTMLTextAreaElement:disabled.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLTextAreaElement--form"></a><h3>The <code class="literal">"form"</code> property</h3>
+<pre class="programlisting">  "form"                     <a class="link" href="WebKitDOMHTMLFormElement.html" title="WebKitDOMHTMLFormElement"><span class="type">WebKitDOMHTMLFormElement</span></a>*  : Read</pre>
+<p>read-only WebKitDOMHTMLFormElement* HTMLTextAreaElement:form.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLTextAreaElement--labels"></a><h3>The <code class="literal">"labels"</code> property</h3>
+<pre class="programlisting">  "labels"                   <a class="link" href="WebKitDOMNodeList.html" title="WebKitDOMNodeList"><span class="type">WebKitDOMNodeList</span></a>*    : Read</pre>
+<p>read-only WebKitDOMNodeList* HTMLTextAreaElement:labels.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLTextAreaElement--max-length"></a><h3>The <code class="literal">"max-length"</code> property</h3>
+<pre class="programlisting">  "max-length"               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read / Write</pre>
+<p>read-only glong HTMLTextAreaElement:max-length.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLTextAreaElement--name"></a><h3>The <code class="literal">"name"</code> property</h3>
+<pre class="programlisting">  "name"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLTextAreaElement:name.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLTextAreaElement--placeholder"></a><h3>The <code class="literal">"placeholder"</code> property</h3>
+<pre class="programlisting">  "placeholder"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLTextAreaElement:placeholder.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLTextAreaElement--read-only"></a><h3>The <code class="literal">"read-only"</code> property</h3>
+<pre class="programlisting">  "read-only"                <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
+<p>read-only gboolean HTMLTextAreaElement:read-only.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLTextAreaElement--required"></a><h3>The <code class="literal">"required"</code> property</h3>
+<pre class="programlisting">  "required"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
+<p>read-only gboolean HTMLTextAreaElement:required.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLTextAreaElement--rows"></a><h3>The <code class="literal">"rows"</code> property</h3>
+<pre class="programlisting">  "rows"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read / Write</pre>
+<p>read-only glong HTMLTextAreaElement:rows.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLTextAreaElement--selection-direction"></a><h3>The <code class="literal">"selection-direction"</code> property</h3>
+<pre class="programlisting">  "selection-direction"      <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLTextAreaElement:selection-direction.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLTextAreaElement--selection-end"></a><h3>The <code class="literal">"selection-end"</code> property</h3>
+<pre class="programlisting">  "selection-end"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read / Write</pre>
+<p>read-only glong HTMLTextAreaElement:selection-end.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLTextAreaElement--selection-start"></a><h3>The <code class="literal">"selection-start"</code> property</h3>
+<pre class="programlisting">  "selection-start"          <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read / Write</pre>
+<p>read-only glong HTMLTextAreaElement:selection-start.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLTextAreaElement--text-length"></a><h3>The <code class="literal">"text-length"</code> property</h3>
+<pre class="programlisting">  "text-length"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read</pre>
+<p>read-only gulong HTMLTextAreaElement:text-length.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLTextAreaElement--type"></a><h3>The <code class="literal">"type"</code> property</h3>
+<pre class="programlisting">  "type"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* HTMLTextAreaElement:type.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLTextAreaElement--validation-message"></a><h3>The <code class="literal">"validation-message"</code> property</h3>
+<pre class="programlisting">  "validation-message"       <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* HTMLTextAreaElement:validation-message.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLTextAreaElement--validity"></a><h3>The <code class="literal">"validity"</code> property</h3>
+<pre class="programlisting">  "validity"                 <a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a>*  : Read</pre>
+<p>read-only WebKitDOMValidityState* HTMLTextAreaElement:validity.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLTextAreaElement--value"></a><h3>The <code class="literal">"value"</code> property</h3>
+<pre class="programlisting">  "value"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLTextAreaElement:value.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLTextAreaElement--will-validate"></a><h3>The <code class="literal">"will-validate"</code> property</h3>
+<pre class="programlisting">  "will-validate"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read</pre>
+<p>read-only gboolean HTMLTextAreaElement:will-validate.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLTextAreaElement--wrap"></a><h3>The <code class="literal">"wrap"</code> property</h3>
+<pre class="programlisting">  "wrap"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLTextAreaElement:wrap.</p>
+<p>Default value: ""</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18.1</div>
+</body>
+</html>

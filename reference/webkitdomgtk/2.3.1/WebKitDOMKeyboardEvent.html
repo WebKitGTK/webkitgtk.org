@@ -1,0 +1,397 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMKeyboardEvent</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMEvent.html" title="WebKitDOMEvent">
+<link rel="next" href="WebKitDOMMessagePort.html" title="WebKitDOMMessagePort">
+<meta name="generator" content="GTK-Doc V1.18.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="WebKitDOMEvent.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">WebKitDOMGTK+ Reference Manual</th>
+<td><a accesskey="n" href="WebKitDOMMessagePort.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#WebKitDOMKeyboardEvent.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMKeyboardEvent.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMKeyboardEvent.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitDOMKeyboardEvent.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="WebKitDOMKeyboardEvent"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMKeyboardEvent.top_of_page"></a>WebKitDOMKeyboardEvent</span></h2>
+<p>WebKitDOMKeyboardEvent</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMKeyboardEvent.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMKeyboardEvent.html#WebKitDOMKeyboardEvent-struct" title="WebKitDOMKeyboardEvent">WebKitDOMKeyboardEvent</a>;
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMKeyboardEvent.html#webkit-dom-keyboard-event-get-modifier-state" title="webkit_dom_keyboard_event_get_modifier_state ()">webkit_dom_keyboard_event_get_modifier_state</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMKeyboardEvent.html" title="WebKitDOMKeyboardEvent"><span class="type">WebKitDOMKeyboardEvent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *keyIdentifierArg</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMKeyboardEvent.html#webkit-dom-keyboard-event-init-keyboard-event" title="webkit_dom_keyboard_event_init_keyboard_event ()">webkit_dom_keyboard_event_init_keyboard_event</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMKeyboardEvent.html" title="WebKitDOMKeyboardEvent"><span class="type">WebKitDOMKeyboardEvent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *type</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> canBubble</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> cancelable</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *view</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *keyIdentifier</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> location</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> ctrlKey</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> altKey</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> shiftKey</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> metaKey</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> altGraphKey</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMKeyboardEvent.html#webkit-dom-keyboard-event-get-key-identifier" title="webkit_dom_keyboard_event_get_key_identifier ()">webkit_dom_keyboard_event_get_key_identifier</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMKeyboardEvent.html" title="WebKitDOMKeyboardEvent"><span class="type">WebKitDOMKeyboardEvent</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              <a class="link" href="WebKitDOMKeyboardEvent.html#webkit-dom-keyboard-event-get-key-location" title="webkit_dom_keyboard_event_get_key_location ()">webkit_dom_keyboard_event_get_key_location</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMKeyboardEvent.html" title="WebKitDOMKeyboardEvent"><span class="type">WebKitDOMKeyboardEvent</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMKeyboardEvent.html#webkit-dom-keyboard-event-get-ctrl-key" title="webkit_dom_keyboard_event_get_ctrl_key ()">webkit_dom_keyboard_event_get_ctrl_key</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMKeyboardEvent.html" title="WebKitDOMKeyboardEvent"><span class="type">WebKitDOMKeyboardEvent</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMKeyboardEvent.html#webkit-dom-keyboard-event-get-shift-key" title="webkit_dom_keyboard_event_get_shift_key ()">webkit_dom_keyboard_event_get_shift_key</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMKeyboardEvent.html" title="WebKitDOMKeyboardEvent"><span class="type">WebKitDOMKeyboardEvent</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMKeyboardEvent.html#webkit-dom-keyboard-event-get-alt-key" title="webkit_dom_keyboard_event_get_alt_key ()">webkit_dom_keyboard_event_get_alt_key</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMKeyboardEvent.html" title="WebKitDOMKeyboardEvent"><span class="type">WebKitDOMKeyboardEvent</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMKeyboardEvent.html#webkit-dom-keyboard-event-get-meta-key" title="webkit_dom_keyboard_event_get_meta_key ()">webkit_dom_keyboard_event_get_meta_key</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMKeyboardEvent.html" title="WebKitDOMKeyboardEvent"><span class="type">WebKitDOMKeyboardEvent</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMKeyboardEvent.html#webkit-dom-keyboard-event-get-alt-graph-key" title="webkit_dom_keyboard_event_get_alt_graph_key ()">webkit_dom_keyboard_event_get_alt_graph_key</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMKeyboardEvent.html" title="WebKitDOMKeyboardEvent"><span class="type">WebKitDOMKeyboardEvent</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMKeyboardEvent.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----<a class="link" href="WebKitDOMEvent.html" title="WebKitDOMEvent">WebKitDOMEvent</a>
+               +----<a class="link" href="WebKitDOMUIEvent.html" title="WebKitDOMUIEvent">WebKitDOMUIEvent</a>
+                     +----WebKitDOMKeyboardEvent
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMKeyboardEvent.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitDOMKeyboardEvent.html#WebKitDOMKeyboardEvent--alt-graph-key" title='The "alt-graph-key" property'>alt-graph-key</a>"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
+  "<a class="link" href="WebKitDOMKeyboardEvent.html#WebKitDOMKeyboardEvent--alt-key" title='The "alt-key" property'>alt-key</a>"                  <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
+  "<a class="link" href="WebKitDOMKeyboardEvent.html#WebKitDOMKeyboardEvent--ctrl-key" title='The "ctrl-key" property'>ctrl-key</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
+  "<a class="link" href="WebKitDOMKeyboardEvent.html#WebKitDOMKeyboardEvent--key-identifier" title='The "key-identifier" property'>key-identifier</a>"           <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMKeyboardEvent.html#WebKitDOMKeyboardEvent--key-location" title='The "key-location" property'>key-location</a>"             <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read
+  "<a class="link" href="WebKitDOMKeyboardEvent.html#WebKitDOMKeyboardEvent--meta-key" title='The "meta-key" property'>meta-key</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
+  "<a class="link" href="WebKitDOMKeyboardEvent.html#WebKitDOMKeyboardEvent--shift-key" title='The "shift-key" property'>shift-key</a>"                <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMKeyboardEvent.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMKeyboardEvent.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMKeyboardEvent-struct"></a><h3>WebKitDOMKeyboardEvent</h3>
+<pre class="programlisting">typedef struct _WebKitDOMKeyboardEvent WebKitDOMKeyboardEvent;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-keyboard-event-get-modifier-state"></a><h3>webkit_dom_keyboard_event_get_modifier_state ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_keyboard_event_get_modifier_state
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMKeyboardEvent.html" title="WebKitDOMKeyboardEvent"><span class="type">WebKitDOMKeyboardEvent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *keyIdentifierArg</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMKeyboardEvent.html" title="WebKitDOMKeyboardEvent"><span class="type">WebKitDOMKeyboardEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>keyIdentifierArg</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-keyboard-event-init-keyboard-event"></a><h3>webkit_dom_keyboard_event_init_keyboard_event ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_keyboard_event_init_keyboard_event
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMKeyboardEvent.html" title="WebKitDOMKeyboardEvent"><span class="type">WebKitDOMKeyboardEvent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *type</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> canBubble</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> cancelable</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *view</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *keyIdentifier</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> location</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> ctrlKey</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> altKey</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> shiftKey</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> metaKey</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> altGraphKey</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMKeyboardEvent.html" title="WebKitDOMKeyboardEvent"><span class="type">WebKitDOMKeyboardEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>type</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>canBubble</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cancelable</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>view</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>keyIdentifier</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>location</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>ctrlKey</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>altKey</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>shiftKey</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>metaKey</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>altGraphKey</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-keyboard-event-get-key-identifier"></a><h3>webkit_dom_keyboard_event_get_key_identifier ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_keyboard_event_get_key_identifier
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMKeyboardEvent.html" title="WebKitDOMKeyboardEvent"><span class="type">WebKitDOMKeyboardEvent</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMKeyboardEvent.html" title="WebKitDOMKeyboardEvent"><span class="type">WebKitDOMKeyboardEvent</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-keyboard-event-get-key-location"></a><h3>webkit_dom_keyboard_event_get_key_location ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              webkit_dom_keyboard_event_get_key_location
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMKeyboardEvent.html" title="WebKitDOMKeyboardEvent"><span class="type">WebKitDOMKeyboardEvent</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMKeyboardEvent.html" title="WebKitDOMKeyboardEvent"><span class="type">WebKitDOMKeyboardEvent</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-keyboard-event-get-ctrl-key"></a><h3>webkit_dom_keyboard_event_get_ctrl_key ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_keyboard_event_get_ctrl_key
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMKeyboardEvent.html" title="WebKitDOMKeyboardEvent"><span class="type">WebKitDOMKeyboardEvent</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMKeyboardEvent.html" title="WebKitDOMKeyboardEvent"><span class="type">WebKitDOMKeyboardEvent</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-keyboard-event-get-shift-key"></a><h3>webkit_dom_keyboard_event_get_shift_key ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_keyboard_event_get_shift_key
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMKeyboardEvent.html" title="WebKitDOMKeyboardEvent"><span class="type">WebKitDOMKeyboardEvent</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMKeyboardEvent.html" title="WebKitDOMKeyboardEvent"><span class="type">WebKitDOMKeyboardEvent</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-keyboard-event-get-alt-key"></a><h3>webkit_dom_keyboard_event_get_alt_key ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_keyboard_event_get_alt_key
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMKeyboardEvent.html" title="WebKitDOMKeyboardEvent"><span class="type">WebKitDOMKeyboardEvent</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMKeyboardEvent.html" title="WebKitDOMKeyboardEvent"><span class="type">WebKitDOMKeyboardEvent</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-keyboard-event-get-meta-key"></a><h3>webkit_dom_keyboard_event_get_meta_key ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_keyboard_event_get_meta_key
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMKeyboardEvent.html" title="WebKitDOMKeyboardEvent"><span class="type">WebKitDOMKeyboardEvent</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMKeyboardEvent.html" title="WebKitDOMKeyboardEvent"><span class="type">WebKitDOMKeyboardEvent</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-keyboard-event-get-alt-graph-key"></a><h3>webkit_dom_keyboard_event_get_alt_graph_key ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_keyboard_event_get_alt_graph_key
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMKeyboardEvent.html" title="WebKitDOMKeyboardEvent"><span class="type">WebKitDOMKeyboardEvent</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMKeyboardEvent.html" title="WebKitDOMKeyboardEvent"><span class="type">WebKitDOMKeyboardEvent</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMKeyboardEvent.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMKeyboardEvent--alt-graph-key"></a><h3>The <code class="literal">"alt-graph-key"</code> property</h3>
+<pre class="programlisting">  "alt-graph-key"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read</pre>
+<p>read-only gboolean KeyboardEvent:alt-graph-key.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMKeyboardEvent--alt-key"></a><h3>The <code class="literal">"alt-key"</code> property</h3>
+<pre class="programlisting">  "alt-key"                  <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read</pre>
+<p>read-only gboolean KeyboardEvent:alt-key.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMKeyboardEvent--ctrl-key"></a><h3>The <code class="literal">"ctrl-key"</code> property</h3>
+<pre class="programlisting">  "ctrl-key"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read</pre>
+<p>read-only gboolean KeyboardEvent:ctrl-key.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMKeyboardEvent--key-identifier"></a><h3>The <code class="literal">"key-identifier"</code> property</h3>
+<pre class="programlisting">  "key-identifier"           <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* KeyboardEvent:key-identifier.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMKeyboardEvent--key-location"></a><h3>The <code class="literal">"key-location"</code> property</h3>
+<pre class="programlisting">  "key-location"             <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read</pre>
+<p>read-only gulong KeyboardEvent:key-location.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMKeyboardEvent--meta-key"></a><h3>The <code class="literal">"meta-key"</code> property</h3>
+<pre class="programlisting">  "meta-key"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read</pre>
+<p>read-only gboolean KeyboardEvent:meta-key.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMKeyboardEvent--shift-key"></a><h3>The <code class="literal">"shift-key"</code> property</h3>
+<pre class="programlisting">  "shift-key"                <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read</pre>
+<p>read-only gboolean KeyboardEvent:shift-key.</p>
+<p>Default value: FALSE</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18.1</div>
+</body>
+</html>

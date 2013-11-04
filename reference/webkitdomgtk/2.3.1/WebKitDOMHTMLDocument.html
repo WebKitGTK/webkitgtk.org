@@ -1,0 +1,770 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMHTMLDocument</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMHTMLDListElement.html" title="WebKitDOMHTMLDListElement">
+<link rel="next" href="WebKitDOMHTMLDetailsElement.html" title="WebKitDOMHTMLDetailsElement">
+<meta name="generator" content="GTK-Doc V1.18.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="WebKitDOMHTMLDListElement.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">WebKitDOMGTK+ Reference Manual</th>
+<td><a accesskey="n" href="WebKitDOMHTMLDetailsElement.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#WebKitDOMHTMLDocument.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMHTMLDocument.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMHTMLDocument.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitDOMHTMLDocument.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#WebKitDOMHTMLDocument.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="WebKitDOMHTMLDocument"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMHTMLDocument.top_of_page"></a>WebKitDOMHTMLDocument</span></h2>
+<p>WebKitDOMHTMLDocument</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMHTMLDocument.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMHTMLDocument.html#WebKitDOMHTMLDocument-struct" title="WebKitDOMHTMLDocument">WebKitDOMHTMLDocument</a>;
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLDocument.html#webkit-dom-html-document-close" title="webkit_dom_html_document_close ()">webkit_dom_html_document_close</a>      (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLDocument.html#webkit-dom-html-document-clear" title="webkit_dom_html_document_clear ()">webkit_dom_html_document_clear</a>      (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLDocument.html#webkit-dom-html-document-capture-events" title="webkit_dom_html_document_capture_events ()">webkit_dom_html_document_capture_events</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLDocument.html#webkit-dom-html-document-release-events" title="webkit_dom_html_document_release_events ()">webkit_dom_html_document_release_events</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMHTMLDocument.html#webkit-dom-html-document-has-focus" title="webkit_dom_html_document_has_focus ()">webkit_dom_html_document_has_focus</a>  (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMHTMLCollection.html" title="WebKitDOMHTMLCollection"><span class="returnvalue">WebKitDOMHTMLCollection</span></a> * <a class="link" href="WebKitDOMHTMLDocument.html#webkit-dom-html-document-get-embeds" title="webkit_dom_html_document_get_embeds ()">webkit_dom_html_document_get_embeds</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMHTMLCollection.html" title="WebKitDOMHTMLCollection"><span class="returnvalue">WebKitDOMHTMLCollection</span></a> * <a class="link" href="WebKitDOMHTMLDocument.html#webkit-dom-html-document-get-plugins" title="webkit_dom_html_document_get_plugins ()">webkit_dom_html_document_get_plugins</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMHTMLCollection.html" title="WebKitDOMHTMLCollection"><span class="returnvalue">WebKitDOMHTMLCollection</span></a> * <a class="link" href="WebKitDOMHTMLDocument.html#webkit-dom-html-document-get-scripts" title="webkit_dom_html_document_get_scripts ()">webkit_dom_html_document_get_scripts</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMHTMLDocument.html#webkit-dom-html-document-get-width" title="webkit_dom_html_document_get_width ()">webkit_dom_html_document_get_width</a>  (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMHTMLDocument.html#webkit-dom-html-document-get-height" title="webkit_dom_html_document_get_height ()">webkit_dom_html_document_get_height</a> (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLDocument.html#webkit-dom-html-document-get-dir" title="webkit_dom_html_document_get_dir ()">webkit_dom_html_document_get_dir</a>    (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLDocument.html#webkit-dom-html-document-set-dir" title="webkit_dom_html_document_set_dir ()">webkit_dom_html_document_set_dir</a>    (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLDocument.html#webkit-dom-html-document-get-design-mode" title="webkit_dom_html_document_get_design_mode ()">webkit_dom_html_document_get_design_mode</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLDocument.html#webkit-dom-html-document-set-design-mode" title="webkit_dom_html_document_set_design_mode ()">webkit_dom_html_document_set_design_mode</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLDocument.html#webkit-dom-html-document-get-compat-mode" title="webkit_dom_html_document_get_compat_mode ()">webkit_dom_html_document_get_compat_mode</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="returnvalue">WebKitDOMElement</span></a> *  <a class="link" href="WebKitDOMHTMLDocument.html#webkit-dom-html-document-get-active-element" title="webkit_dom_html_document_get_active_element ()">webkit_dom_html_document_get_active_element</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLDocument.html#webkit-dom-html-document-get-bg-color" title="webkit_dom_html_document_get_bg_color ()">webkit_dom_html_document_get_bg_color</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLDocument.html#webkit-dom-html-document-set-bg-color" title="webkit_dom_html_document_set_bg_color ()">webkit_dom_html_document_set_bg_color</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLDocument.html#webkit-dom-html-document-get-fg-color" title="webkit_dom_html_document_get_fg_color ()">webkit_dom_html_document_get_fg_color</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLDocument.html#webkit-dom-html-document-set-fg-color" title="webkit_dom_html_document_set_fg_color ()">webkit_dom_html_document_set_fg_color</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLDocument.html#webkit-dom-html-document-get-alink-color" title="webkit_dom_html_document_get_alink_color ()">webkit_dom_html_document_get_alink_color</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLDocument.html#webkit-dom-html-document-set-alink-color" title="webkit_dom_html_document_set_alink_color ()">webkit_dom_html_document_set_alink_color</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLDocument.html#webkit-dom-html-document-get-link-color" title="webkit_dom_html_document_get_link_color ()">webkit_dom_html_document_get_link_color</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLDocument.html#webkit-dom-html-document-set-link-color" title="webkit_dom_html_document_set_link_color ()">webkit_dom_html_document_set_link_color</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLDocument.html#webkit-dom-html-document-get-vlink-color" title="webkit_dom_html_document_get_vlink_color ()">webkit_dom_html_document_get_vlink_color</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLDocument.html#webkit-dom-html-document-set-vlink-color" title="webkit_dom_html_document_set_vlink_color ()">webkit_dom_html_document_set_vlink_color</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLDocument.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----<a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode">WebKitDOMNode</a>
+               +----<a class="link" href="WebKitDOMDocument.html" title="WebKitDOMDocument">WebKitDOMDocument</a>
+                     +----WebKitDOMHTMLDocument
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLDocument.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+WebKitDOMHTMLDocument implements
+ <a class="link" href="WebKitDOMEventTarget.html" title="WebKitDOMEventTarget">WebKitDOMEventTarget</a>.</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLDocument.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitDOMHTMLDocument.html#WebKitDOMHTMLDocument--active-element" title='The "active-element" property'>active-element</a>"           <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>*     : Read
+  "<a class="link" href="WebKitDOMHTMLDocument.html#WebKitDOMHTMLDocument--alink-color" title='The "alink-color" property'>alink-color</a>"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLDocument.html#WebKitDOMHTMLDocument--bg-color" title='The "bg-color" property'>bg-color</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLDocument.html#WebKitDOMHTMLDocument--compat-mode" title='The "compat-mode" property'>compat-mode</a>"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMHTMLDocument.html#WebKitDOMHTMLDocument--design-mode" title='The "design-mode" property'>design-mode</a>"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLDocument.html#WebKitDOMHTMLDocument--dir" title='The "dir" property'>dir</a>"                      <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLDocument.html#WebKitDOMHTMLDocument--embeds" title='The "embeds" property'>embeds</a>"                   <a class="link" href="WebKitDOMHTMLCollection.html" title="WebKitDOMHTMLCollection"><span class="type">WebKitDOMHTMLCollection</span></a>*  : Read
+  "<a class="link" href="WebKitDOMHTMLDocument.html#WebKitDOMHTMLDocument--fg-color" title='The "fg-color" property'>fg-color</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLDocument.html#WebKitDOMHTMLDocument--height" title='The "height" property'>height</a>"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+  "<a class="link" href="WebKitDOMHTMLDocument.html#WebKitDOMHTMLDocument--link-color" title='The "link-color" property'>link-color</a>"               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLDocument.html#WebKitDOMHTMLDocument--plugins" title='The "plugins" property'>plugins</a>"                  <a class="link" href="WebKitDOMHTMLCollection.html" title="WebKitDOMHTMLCollection"><span class="type">WebKitDOMHTMLCollection</span></a>*  : Read
+  "<a class="link" href="WebKitDOMHTMLDocument.html#WebKitDOMHTMLDocument--scripts" title='The "scripts" property'>scripts</a>"                  <a class="link" href="WebKitDOMHTMLCollection.html" title="WebKitDOMHTMLCollection"><span class="type">WebKitDOMHTMLCollection</span></a>*  : Read
+  "<a class="link" href="WebKitDOMHTMLDocument.html#WebKitDOMHTMLDocument--vlink-color" title='The "vlink-color" property'>vlink-color</a>"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLDocument.html#WebKitDOMHTMLDocument--width" title='The "width" property'>width</a>"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLDocument.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLDocument.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMHTMLDocument-struct"></a><h3>WebKitDOMHTMLDocument</h3>
+<pre class="programlisting">typedef struct _WebKitDOMHTMLDocument WebKitDOMHTMLDocument;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-document-close"></a><h3>webkit_dom_html_document_close ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_document_close      (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-document-clear"></a><h3>webkit_dom_html_document_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_document_clear      (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-document-capture-events"></a><h3>webkit_dom_html_document_capture_events ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_document_capture_events
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-document-release-events"></a><h3>webkit_dom_html_document_release_events ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_document_release_events
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-document-has-focus"></a><h3>webkit_dom_html_document_has_focus ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_html_document_has_focus  (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-document-get-embeds"></a><h3>webkit_dom_html_document_get_embeds ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMHTMLCollection.html" title="WebKitDOMHTMLCollection"><span class="returnvalue">WebKitDOMHTMLCollection</span></a> * webkit_dom_html_document_get_embeds
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-document-get-plugins"></a><h3>webkit_dom_html_document_get_plugins ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMHTMLCollection.html" title="WebKitDOMHTMLCollection"><span class="returnvalue">WebKitDOMHTMLCollection</span></a> * webkit_dom_html_document_get_plugins
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-document-get-scripts"></a><h3>webkit_dom_html_document_get_scripts ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMHTMLCollection.html" title="WebKitDOMHTMLCollection"><span class="returnvalue">WebKitDOMHTMLCollection</span></a> * webkit_dom_html_document_get_scripts
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-document-get-width"></a><h3>webkit_dom_html_document_get_width ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_html_document_get_width  (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-document-get-height"></a><h3>webkit_dom_html_document_get_height ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_html_document_get_height (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-document-get-dir"></a><h3>webkit_dom_html_document_get_dir ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_document_get_dir    (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-document-set-dir"></a><h3>webkit_dom_html_document_set_dir ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_document_set_dir    (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-document-get-design-mode"></a><h3>webkit_dom_html_document_get_design_mode ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_document_get_design_mode
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-document-set-design-mode"></a><h3>webkit_dom_html_document_set_design_mode ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_document_set_design_mode
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-document-get-compat-mode"></a><h3>webkit_dom_html_document_get_compat_mode ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_document_get_compat_mode
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-document-get-active-element"></a><h3>webkit_dom_html_document_get_active_element ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="returnvalue">WebKitDOMElement</span></a> *  webkit_dom_html_document_get_active_element
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-document-get-bg-color"></a><h3>webkit_dom_html_document_get_bg_color ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_document_get_bg_color
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-document-set-bg-color"></a><h3>webkit_dom_html_document_set_bg_color ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_document_set_bg_color
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-document-get-fg-color"></a><h3>webkit_dom_html_document_get_fg_color ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_document_get_fg_color
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-document-set-fg-color"></a><h3>webkit_dom_html_document_set_fg_color ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_document_set_fg_color
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-document-get-alink-color"></a><h3>webkit_dom_html_document_get_alink_color ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_document_get_alink_color
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-document-set-alink-color"></a><h3>webkit_dom_html_document_set_alink_color ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_document_set_alink_color
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-document-get-link-color"></a><h3>webkit_dom_html_document_get_link_color ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_document_get_link_color
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-document-set-link-color"></a><h3>webkit_dom_html_document_set_link_color ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_document_set_link_color
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-document-get-vlink-color"></a><h3>webkit_dom_html_document_get_vlink_color ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_document_get_vlink_color
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-document-set-vlink-color"></a><h3>webkit_dom_html_document_set_vlink_color ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_document_set_vlink_color
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument"><span class="type">WebKitDOMHTMLDocument</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLDocument.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMHTMLDocument--active-element"></a><h3>The <code class="literal">"active-element"</code> property</h3>
+<pre class="programlisting">  "active-element"           <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>*     : Read</pre>
+<p>read-only WebKitDOMElement* HTMLDocument:active-element.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLDocument--alink-color"></a><h3>The <code class="literal">"alink-color"</code> property</h3>
+<pre class="programlisting">  "alink-color"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLDocument:alink-color.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLDocument--bg-color"></a><h3>The <code class="literal">"bg-color"</code> property</h3>
+<pre class="programlisting">  "bg-color"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLDocument:bg-color.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLDocument--compat-mode"></a><h3>The <code class="literal">"compat-mode"</code> property</h3>
+<pre class="programlisting">  "compat-mode"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* HTMLDocument:compat-mode.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLDocument--design-mode"></a><h3>The <code class="literal">"design-mode"</code> property</h3>
+<pre class="programlisting">  "design-mode"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLDocument:design-mode.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLDocument--dir"></a><h3>The <code class="literal">"dir"</code> property</h3>
+<pre class="programlisting">  "dir"                      <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLDocument:dir.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLDocument--embeds"></a><h3>The <code class="literal">"embeds"</code> property</h3>
+<pre class="programlisting">  "embeds"                   <a class="link" href="WebKitDOMHTMLCollection.html" title="WebKitDOMHTMLCollection"><span class="type">WebKitDOMHTMLCollection</span></a>*  : Read</pre>
+<p>read-only WebKitDOMHTMLCollection* HTMLDocument:embeds.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLDocument--fg-color"></a><h3>The <code class="literal">"fg-color"</code> property</h3>
+<pre class="programlisting">  "fg-color"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLDocument:fg-color.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLDocument--height"></a><h3>The <code class="literal">"height"</code> property</h3>
+<pre class="programlisting">  "height"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong HTMLDocument:height.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLDocument--link-color"></a><h3>The <code class="literal">"link-color"</code> property</h3>
+<pre class="programlisting">  "link-color"               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLDocument:link-color.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLDocument--plugins"></a><h3>The <code class="literal">"plugins"</code> property</h3>
+<pre class="programlisting">  "plugins"                  <a class="link" href="WebKitDOMHTMLCollection.html" title="WebKitDOMHTMLCollection"><span class="type">WebKitDOMHTMLCollection</span></a>*  : Read</pre>
+<p>read-only WebKitDOMHTMLCollection* HTMLDocument:plugins.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLDocument--scripts"></a><h3>The <code class="literal">"scripts"</code> property</h3>
+<pre class="programlisting">  "scripts"                  <a class="link" href="WebKitDOMHTMLCollection.html" title="WebKitDOMHTMLCollection"><span class="type">WebKitDOMHTMLCollection</span></a>*  : Read</pre>
+<p>read-only WebKitDOMHTMLCollection* HTMLDocument:scripts.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLDocument--vlink-color"></a><h3>The <code class="literal">"vlink-color"</code> property</h3>
+<pre class="programlisting">  "vlink-color"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLDocument:vlink-color.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLDocument--width"></a><h3>The <code class="literal">"width"</code> property</h3>
+<pre class="programlisting">  "width"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong HTMLDocument:width.</p>
+<p>Default value: 0</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18.1</div>
+</body>
+</html>

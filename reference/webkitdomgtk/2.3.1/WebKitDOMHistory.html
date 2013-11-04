@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMHistory</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMEventTarget.html" title="WebKitDOMEventTarget">
+<link rel="next" href="WebKitDOMLocation.html" title="WebKitDOMLocation">
+<meta name="generator" content="GTK-Doc V1.18.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="WebKitDOMEventTarget.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">WebKitDOMGTK+ Reference Manual</th>
+<td><a accesskey="n" href="WebKitDOMLocation.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#WebKitDOMHistory.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMHistory.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMHistory.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitDOMHistory.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="WebKitDOMHistory"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMHistory.top_of_page"></a>WebKitDOMHistory</span></h2>
+<p>WebKitDOMHistory</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMHistory.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMHistory.html#WebKitDOMHistory-struct" title="WebKitDOMHistory">WebKitDOMHistory</a>;
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHistory.html#webkit-dom-history-back" title="webkit_dom_history_back ()">webkit_dom_history_back</a>             (<em class="parameter"><code><a class="link" href="WebKitDOMHistory.html" title="WebKitDOMHistory"><span class="type">WebKitDOMHistory</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHistory.html#webkit-dom-history-forward" title="webkit_dom_history_forward ()">webkit_dom_history_forward</a>          (<em class="parameter"><code><a class="link" href="WebKitDOMHistory.html" title="WebKitDOMHistory"><span class="type">WebKitDOMHistory</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHistory.html#webkit-dom-history-go" title="webkit_dom_history_go ()">webkit_dom_history_go</a>               (<em class="parameter"><code><a class="link" href="WebKitDOMHistory.html" title="WebKitDOMHistory"><span class="type">WebKitDOMHistory</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> distance</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              <a class="link" href="WebKitDOMHistory.html#webkit-dom-history-get-length" title="webkit_dom_history_get_length ()">webkit_dom_history_get_length</a>       (<em class="parameter"><code><a class="link" href="WebKitDOMHistory.html" title="WebKitDOMHistory"><span class="type">WebKitDOMHistory</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHistory.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----WebKitDOMHistory
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHistory.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitDOMHistory.html#WebKitDOMHistory--length" title='The "length" property'>length</a>"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHistory.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHistory.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMHistory-struct"></a><h3>WebKitDOMHistory</h3>
+<pre class="programlisting">typedef struct _WebKitDOMHistory WebKitDOMHistory;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-history-back"></a><h3>webkit_dom_history_back ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_history_back             (<em class="parameter"><code><a class="link" href="WebKitDOMHistory.html" title="WebKitDOMHistory"><span class="type">WebKitDOMHistory</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHistory.html" title="WebKitDOMHistory"><span class="type">WebKitDOMHistory</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-history-forward"></a><h3>webkit_dom_history_forward ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_history_forward          (<em class="parameter"><code><a class="link" href="WebKitDOMHistory.html" title="WebKitDOMHistory"><span class="type">WebKitDOMHistory</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHistory.html" title="WebKitDOMHistory"><span class="type">WebKitDOMHistory</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-history-go"></a><h3>webkit_dom_history_go ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_history_go               (<em class="parameter"><code><a class="link" href="WebKitDOMHistory.html" title="WebKitDOMHistory"><span class="type">WebKitDOMHistory</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> distance</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHistory.html" title="WebKitDOMHistory"><span class="type">WebKitDOMHistory</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>distance</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-history-get-length"></a><h3>webkit_dom_history_get_length ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              webkit_dom_history_get_length       (<em class="parameter"><code><a class="link" href="WebKitDOMHistory.html" title="WebKitDOMHistory"><span class="type">WebKitDOMHistory</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHistory.html" title="WebKitDOMHistory"><span class="type">WebKitDOMHistory</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHistory.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMHistory--length"></a><h3>The <code class="literal">"length"</code> property</h3>
+<pre class="programlisting">  "length"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read</pre>
+<p>read-only gulong History:length.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18.1</div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMMediaQueryList</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMMediaList.html" title="WebKitDOMMediaList">
+<link rel="next" href="WebKitDOMStyleMedia.html" title="WebKitDOMStyleMedia">
+<meta name="generator" content="GTK-Doc V1.18.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="WebKitDOMMediaList.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">WebKitDOMGTK+ Reference Manual</th>
+<td><a accesskey="n" href="WebKitDOMStyleMedia.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#WebKitDOMMediaQueryList.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMMediaQueryList.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMMediaQueryList.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitDOMMediaQueryList.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="WebKitDOMMediaQueryList"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMMediaQueryList.top_of_page"></a>WebKitDOMMediaQueryList</span></h2>
+<p>WebKitDOMMediaQueryList</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMMediaQueryList.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMMediaQueryList.html#WebKitDOMMediaQueryList-struct" title="WebKitDOMMediaQueryList">WebKitDOMMediaQueryList</a>;
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMMediaQueryList.html#webkit-dom-media-query-list-get-media" title="webkit_dom_media_query_list_get_media ()">webkit_dom_media_query_list_get_media</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMMediaQueryList.html" title="WebKitDOMMediaQueryList"><span class="type">WebKitDOMMediaQueryList</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMMediaQueryList.html#webkit-dom-media-query-list-get-matches" title="webkit_dom_media_query_list_get_matches ()">webkit_dom_media_query_list_get_matches</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMMediaQueryList.html" title="WebKitDOMMediaQueryList"><span class="type">WebKitDOMMediaQueryList</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMMediaQueryList.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----WebKitDOMMediaQueryList
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMMediaQueryList.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitDOMMediaQueryList.html#WebKitDOMMediaQueryList--matches" title='The "matches" property'>matches</a>"                  <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
+  "<a class="link" href="WebKitDOMMediaQueryList.html#WebKitDOMMediaQueryList--media" title='The "media" property'>media</a>"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMMediaQueryList.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMMediaQueryList.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMMediaQueryList-struct"></a><h3>WebKitDOMMediaQueryList</h3>
+<pre class="programlisting">typedef struct _WebKitDOMMediaQueryList WebKitDOMMediaQueryList;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-media-query-list-get-media"></a><h3>webkit_dom_media_query_list_get_media ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_media_query_list_get_media
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMMediaQueryList.html" title="WebKitDOMMediaQueryList"><span class="type">WebKitDOMMediaQueryList</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMMediaQueryList.html" title="WebKitDOMMediaQueryList"><span class="type">WebKitDOMMediaQueryList</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-media-query-list-get-matches"></a><h3>webkit_dom_media_query_list_get_matches ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_media_query_list_get_matches
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMMediaQueryList.html" title="WebKitDOMMediaQueryList"><span class="type">WebKitDOMMediaQueryList</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMMediaQueryList.html" title="WebKitDOMMediaQueryList"><span class="type">WebKitDOMMediaQueryList</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMMediaQueryList.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMMediaQueryList--matches"></a><h3>The <code class="literal">"matches"</code> property</h3>
+<pre class="programlisting">  "matches"                  <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read</pre>
+<p>read-only gboolean MediaQueryList:matches.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMMediaQueryList--media"></a><h3>The <code class="literal">"media"</code> property</h3>
+<pre class="programlisting">  "media"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* MediaQueryList:media.</p>
+<p>Default value: ""</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18.1</div>
+</body>
+</html>

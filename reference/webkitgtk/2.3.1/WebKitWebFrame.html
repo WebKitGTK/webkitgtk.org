@@ -48,7 +48,7 @@
 <a class="link" href="WebKitWebFrame.html" title="WebKitWebFrame"><span class="returnvalue">WebKitWebFrame</span></a> *    <a class="link" href="WebKitWebFrame.html#webkit-web-frame-find-frame" title="webkit_web_frame_find_frame ()">webkit_web_frame_find_frame</a>         (<em class="parameter"><code><a class="link" href="WebKitWebFrame.html" title="WebKitWebFrame"><span class="type">WebKitWebFrame</span></a> *frame</code></em>,
                                                          <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);
 <a class="link" href="WebKitWebDataSource.html" title="WebKitWebDataSource"><span class="returnvalue">WebKitWebDataSource</span></a> * <a class="link" href="WebKitWebFrame.html#webkit-web-frame-get-data-source" title="webkit_web_frame_get_data_source ()">webkit_web_frame_get_data_source</a>  (<em class="parameter"><code><a class="link" href="WebKitWebFrame.html" title="WebKitWebFrame"><span class="type">WebKitWebFrame</span></a> *frame</code></em>);
-<a href="http://developer.gnome.org/webkitdomgtk/stable/WebKitDOMDocument.html"><span class="returnvalue">WebKitDOMDocument</span></a> * <a class="link" href="WebKitWebFrame.html#webkit-web-frame-get-dom-document" title="webkit_web_frame_get_dom_document ()">webkit_web_frame_get_dom_document</a>   (<em class="parameter"><code><a class="link" href="WebKitWebFrame.html" title="WebKitWebFrame"><span class="type">WebKitWebFrame</span></a> *frame</code></em>);
+<a href="../../webkitdomgtk/2.3.1/WebKitDOMDocument.html"><span class="returnvalue">WebKitDOMDocument</span></a> * <a class="link" href="WebKitWebFrame.html#webkit-web-frame-get-dom-document" title="webkit_web_frame_get_dom_document ()">webkit_web_frame_get_dom_document</a>   (<em class="parameter"><code><a class="link" href="WebKitWebFrame.html" title="WebKitWebFrame"><span class="type">WebKitWebFrame</span></a> *frame</code></em>);
 <span class="returnvalue">JSGlobalContextRef</span>  <a class="link" href="WebKitWebFrame.html#webkit-web-frame-get-global-context" title="webkit_web_frame_get_global_context ()">webkit_web_frame_get_global_context</a> (<em class="parameter"><code><a class="link" href="WebKitWebFrame.html" title="WebKitWebFrame"><span class="type">WebKitWebFrame</span></a> *frame</code></em>);
 <a href="http://developer.gnome.org/gtk2/stable/gtk2-Standard-Enumerations.html#GtkPolicyType"><span class="returnvalue">GtkPolicyType</span></a>       <a class="link" href="WebKitWebFrame.html#webkit-web-frame-get-horizontal-scrollbar-policy" title="webkit_web_frame_get_horizontal_scrollbar_policy ()">webkit_web_frame_get_horizontal_scrollbar_policy</a>
                                                         (<em class="parameter"><code><a class="link" href="WebKitWebFrame.html" title="WebKitWebFrame"><span class="type">WebKitWebFrame</span></a> *frame</code></em>);
@@ -340,7 +340,7 @@ Returns the committed data source.
 <hr>
 <div class="refsect2">
 <a name="webkit-web-frame-get-dom-document"></a><h3>webkit_web_frame_get_dom_document ()</h3>
-<pre class="programlisting"><a href="http://developer.gnome.org/webkitdomgtk/stable/WebKitDOMDocument.html"><span class="returnvalue">WebKitDOMDocument</span></a> * webkit_web_frame_get_dom_document   (<em class="parameter"><code><a class="link" href="WebKitWebFrame.html" title="WebKitWebFrame"><span class="type">WebKitWebFrame</span></a> *frame</code></em>);</pre>
+<pre class="programlisting"><a href="../../webkitdomgtk/2.3.1/WebKitDOMDocument.html"><span class="returnvalue">WebKitDOMDocument</span></a> * webkit_web_frame_get_dom_document   (<em class="parameter"><code><a class="link" href="WebKitWebFrame.html" title="WebKitWebFrame"><span class="type">WebKitWebFrame</span></a> *frame</code></em>);</pre>
 <div class="variablelist"><table border="0" class="variablelist">
 <colgroup>
 <col align="left" valign="top">
@@ -354,7 +354,7 @@ Returns the committed data source.
 </tr>
 <tr>
 <td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>the <a href="http://developer.gnome.org/webkitdomgtk/stable/WebKitDOMDocument.html"><span class="type">WebKitDOMDocument</span></a> currently loaded
+<td>the <a href="../../webkitdomgtk/2.3.1/WebKitDOMDocument.html"><span class="type">WebKitDOMDocument</span></a> currently loaded
 in the <em class="parameter"><code>frame</code></em> or <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if no document is loaded. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
 </td>
 </tr>

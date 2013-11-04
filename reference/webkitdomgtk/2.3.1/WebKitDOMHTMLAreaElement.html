@@ -1,0 +1,666 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMHTMLAreaElement</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement">
+<link rel="next" href="WebKitDOMHTMLBaseElement.html" title="WebKitDOMHTMLBaseElement">
+<meta name="generator" content="GTK-Doc V1.18.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="WebKitDOMHTMLAppletElement.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">WebKitDOMGTK+ Reference Manual</th>
+<td><a accesskey="n" href="WebKitDOMHTMLBaseElement.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#WebKitDOMHTMLAreaElement.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMHTMLAreaElement.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMHTMLAreaElement.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitDOMHTMLAreaElement.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#WebKitDOMHTMLAreaElement.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="WebKitDOMHTMLAreaElement"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMHTMLAreaElement.top_of_page"></a>WebKitDOMHTMLAreaElement</span></h2>
+<p>WebKitDOMHTMLAreaElement</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMHTMLAreaElement.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMHTMLAreaElement.html#WebKitDOMHTMLAreaElement-struct" title="WebKitDOMHTMLAreaElement">WebKitDOMHTMLAreaElement</a>;
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAreaElement.html#webkit-dom-html-area-element-get-alt" title="webkit_dom_html_area_element_get_alt ()">webkit_dom_html_area_element_get_alt</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLAreaElement.html#webkit-dom-html-area-element-set-alt" title="webkit_dom_html_area_element_set_alt ()">webkit_dom_html_area_element_set_alt</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAreaElement.html#webkit-dom-html-area-element-get-coords" title="webkit_dom_html_area_element_get_coords ()">webkit_dom_html_area_element_get_coords</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLAreaElement.html#webkit-dom-html-area-element-set-coords" title="webkit_dom_html_area_element_set_coords ()">webkit_dom_html_area_element_set_coords</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAreaElement.html#webkit-dom-html-area-element-get-href" title="webkit_dom_html_area_element_get_href ()">webkit_dom_html_area_element_get_href</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLAreaElement.html#webkit-dom-html-area-element-set-href" title="webkit_dom_html_area_element_set_href ()">webkit_dom_html_area_element_set_href</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMHTMLAreaElement.html#webkit-dom-html-area-element-get-no-href" title="webkit_dom_html_area_element_get_no_href ()">webkit_dom_html_area_element_get_no_href</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLAreaElement.html#webkit-dom-html-area-element-set-no-href" title="webkit_dom_html_area_element_set_no_href ()">webkit_dom_html_area_element_set_no_href</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAreaElement.html#webkit-dom-html-area-element-get-ping" title="webkit_dom_html_area_element_get_ping ()">webkit_dom_html_area_element_get_ping</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLAreaElement.html#webkit-dom-html-area-element-set-ping" title="webkit_dom_html_area_element_set_ping ()">webkit_dom_html_area_element_set_ping</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAreaElement.html#webkit-dom-html-area-element-get-shape" title="webkit_dom_html_area_element_get_shape ()">webkit_dom_html_area_element_get_shape</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLAreaElement.html#webkit-dom-html-area-element-set-shape" title="webkit_dom_html_area_element_set_shape ()">webkit_dom_html_area_element_set_shape</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAreaElement.html#webkit-dom-html-area-element-get-target" title="webkit_dom_html_area_element_get_target ()">webkit_dom_html_area_element_get_target</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLAreaElement.html#webkit-dom-html-area-element-set-target" title="webkit_dom_html_area_element_set_target ()">webkit_dom_html_area_element_set_target</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAreaElement.html#webkit-dom-html-area-element-get-hash" title="webkit_dom_html_area_element_get_hash ()">webkit_dom_html_area_element_get_hash</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAreaElement.html#webkit-dom-html-area-element-get-host" title="webkit_dom_html_area_element_get_host ()">webkit_dom_html_area_element_get_host</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAreaElement.html#webkit-dom-html-area-element-get-hostname" title="webkit_dom_html_area_element_get_hostname ()">webkit_dom_html_area_element_get_hostname</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAreaElement.html#webkit-dom-html-area-element-get-pathname" title="webkit_dom_html_area_element_get_pathname ()">webkit_dom_html_area_element_get_pathname</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAreaElement.html#webkit-dom-html-area-element-get-port" title="webkit_dom_html_area_element_get_port ()">webkit_dom_html_area_element_get_port</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAreaElement.html#webkit-dom-html-area-element-get-protocol" title="webkit_dom_html_area_element_get_protocol ()">webkit_dom_html_area_element_get_protocol</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAreaElement.html#webkit-dom-html-area-element-get-search" title="webkit_dom_html_area_element_get_search ()">webkit_dom_html_area_element_get_search</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLAreaElement.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----<a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode">WebKitDOMNode</a>
+               +----<a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement">WebKitDOMElement</a>
+                     +----<a class="link" href="WebKitDOMHTMLElement.html" title="WebKitDOMHTMLElement">WebKitDOMHTMLElement</a>
+                           +----WebKitDOMHTMLAreaElement
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLAreaElement.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+WebKitDOMHTMLAreaElement implements
+ <a class="link" href="WebKitDOMEventTarget.html" title="WebKitDOMEventTarget">WebKitDOMEventTarget</a>.</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLAreaElement.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitDOMHTMLAreaElement.html#WebKitDOMHTMLAreaElement--alt" title='The "alt" property'>alt</a>"                      <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLAreaElement.html#WebKitDOMHTMLAreaElement--coords" title='The "coords" property'>coords</a>"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLAreaElement.html#WebKitDOMHTMLAreaElement--hash" title='The "hash" property'>hash</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMHTMLAreaElement.html#WebKitDOMHTMLAreaElement--host" title='The "host" property'>host</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMHTMLAreaElement.html#WebKitDOMHTMLAreaElement--hostname" title='The "hostname" property'>hostname</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMHTMLAreaElement.html#WebKitDOMHTMLAreaElement--href" title='The "href" property'>href</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLAreaElement.html#WebKitDOMHTMLAreaElement--no-href" title='The "no-href" property'>no-href</a>"                  <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+  "<a class="link" href="WebKitDOMHTMLAreaElement.html#WebKitDOMHTMLAreaElement--pathname" title='The "pathname" property'>pathname</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMHTMLAreaElement.html#WebKitDOMHTMLAreaElement--ping" title='The "ping" property'>ping</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLAreaElement.html#WebKitDOMHTMLAreaElement--port" title='The "port" property'>port</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMHTMLAreaElement.html#WebKitDOMHTMLAreaElement--protocol" title='The "protocol" property'>protocol</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMHTMLAreaElement.html#WebKitDOMHTMLAreaElement--search" title='The "search" property'>search</a>"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMHTMLAreaElement.html#WebKitDOMHTMLAreaElement--shape" title='The "shape" property'>shape</a>"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLAreaElement.html#WebKitDOMHTMLAreaElement--target" title='The "target" property'>target</a>"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLAreaElement.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLAreaElement.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAreaElement-struct"></a><h3>WebKitDOMHTMLAreaElement</h3>
+<pre class="programlisting">typedef struct _WebKitDOMHTMLAreaElement WebKitDOMHTMLAreaElement;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-area-element-get-alt"></a><h3>webkit_dom_html_area_element_get_alt ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_area_element_get_alt
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-area-element-set-alt"></a><h3>webkit_dom_html_area_element_set_alt ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_area_element_set_alt
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-area-element-get-coords"></a><h3>webkit_dom_html_area_element_get_coords ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_area_element_get_coords
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-area-element-set-coords"></a><h3>webkit_dom_html_area_element_set_coords ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_area_element_set_coords
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-area-element-get-href"></a><h3>webkit_dom_html_area_element_get_href ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_area_element_get_href
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-area-element-set-href"></a><h3>webkit_dom_html_area_element_set_href ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_area_element_set_href
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-area-element-get-no-href"></a><h3>webkit_dom_html_area_element_get_no_href ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_html_area_element_get_no_href
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-area-element-set-no-href"></a><h3>webkit_dom_html_area_element_set_no_href ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_area_element_set_no_href
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-area-element-get-ping"></a><h3>webkit_dom_html_area_element_get_ping ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_area_element_get_ping
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-area-element-set-ping"></a><h3>webkit_dom_html_area_element_set_ping ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_area_element_set_ping
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-area-element-get-shape"></a><h3>webkit_dom_html_area_element_get_shape ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_area_element_get_shape
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-area-element-set-shape"></a><h3>webkit_dom_html_area_element_set_shape ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_area_element_set_shape
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-area-element-get-target"></a><h3>webkit_dom_html_area_element_get_target ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_area_element_get_target
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-area-element-set-target"></a><h3>webkit_dom_html_area_element_set_target ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_area_element_set_target
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-area-element-get-hash"></a><h3>webkit_dom_html_area_element_get_hash ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_area_element_get_hash
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-area-element-get-host"></a><h3>webkit_dom_html_area_element_get_host ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_area_element_get_host
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-area-element-get-hostname"></a><h3>webkit_dom_html_area_element_get_hostname ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_area_element_get_hostname
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-area-element-get-pathname"></a><h3>webkit_dom_html_area_element_get_pathname ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_area_element_get_pathname
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-area-element-get-port"></a><h3>webkit_dom_html_area_element_get_port ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_area_element_get_port
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-area-element-get-protocol"></a><h3>webkit_dom_html_area_element_get_protocol ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_area_element_get_protocol
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-area-element-get-search"></a><h3>webkit_dom_html_area_element_get_search ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_area_element_get_search
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement"><span class="type">WebKitDOMHTMLAreaElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLAreaElement.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAreaElement--alt"></a><h3>The <code class="literal">"alt"</code> property</h3>
+<pre class="programlisting">  "alt"                      <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLAreaElement:alt.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAreaElement--coords"></a><h3>The <code class="literal">"coords"</code> property</h3>
+<pre class="programlisting">  "coords"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLAreaElement:coords.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAreaElement--hash"></a><h3>The <code class="literal">"hash"</code> property</h3>
+<pre class="programlisting">  "hash"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* HTMLAreaElement:hash.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAreaElement--host"></a><h3>The <code class="literal">"host"</code> property</h3>
+<pre class="programlisting">  "host"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* HTMLAreaElement:host.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAreaElement--hostname"></a><h3>The <code class="literal">"hostname"</code> property</h3>
+<pre class="programlisting">  "hostname"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* HTMLAreaElement:hostname.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAreaElement--href"></a><h3>The <code class="literal">"href"</code> property</h3>
+<pre class="programlisting">  "href"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLAreaElement:href.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAreaElement--no-href"></a><h3>The <code class="literal">"no-href"</code> property</h3>
+<pre class="programlisting">  "no-href"                  <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
+<p>read-only gboolean HTMLAreaElement:no-href.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAreaElement--pathname"></a><h3>The <code class="literal">"pathname"</code> property</h3>
+<pre class="programlisting">  "pathname"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* HTMLAreaElement:pathname.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAreaElement--ping"></a><h3>The <code class="literal">"ping"</code> property</h3>
+<pre class="programlisting">  "ping"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLAreaElement:ping.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAreaElement--port"></a><h3>The <code class="literal">"port"</code> property</h3>
+<pre class="programlisting">  "port"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* HTMLAreaElement:port.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAreaElement--protocol"></a><h3>The <code class="literal">"protocol"</code> property</h3>
+<pre class="programlisting">  "protocol"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* HTMLAreaElement:protocol.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAreaElement--search"></a><h3>The <code class="literal">"search"</code> property</h3>
+<pre class="programlisting">  "search"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* HTMLAreaElement:search.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAreaElement--shape"></a><h3>The <code class="literal">"shape"</code> property</h3>
+<pre class="programlisting">  "shape"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLAreaElement:shape.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAreaElement--target"></a><h3>The <code class="literal">"target"</code> property</h3>
+<pre class="programlisting">  "target"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLAreaElement:target.</p>
+<p>Default value: ""</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18.1</div>
+</body>
+</html>

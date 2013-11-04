@@ -1,0 +1,775 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMTextTrackCue</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMTextTrackList.html" title="WebKitDOMTextTrackList">
+<link rel="next" href="WebKitDOMTextTrackCueList.html" title="WebKitDOMTextTrackCueList">
+<meta name="generator" content="GTK-Doc V1.18.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="WebKitDOMTextTrackList.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">WebKitDOMGTK+ Reference Manual</th>
+<td><a accesskey="n" href="WebKitDOMTextTrackCueList.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#WebKitDOMTextTrackCue.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMTextTrackCue.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMTextTrackCue.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitDOMTextTrackCue.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#WebKitDOMTextTrackCue.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="WebKitDOMTextTrackCue"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMTextTrackCue.top_of_page"></a>WebKitDOMTextTrackCue</span></h2>
+<p>WebKitDOMTextTrackCue</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMTextTrackCue.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMTextTrackCue.html#WebKitDOMTextTrackCue-struct" title="WebKitDOMTextTrackCue">WebKitDOMTextTrackCue</a>;
+<a class="link" href="WebKitDOMDocumentFragment.html" title="WebKitDOMDocumentFragment"><span class="returnvalue">WebKitDOMDocumentFragment</span></a> * <a class="link" href="WebKitDOMTextTrackCue.html#webkit-dom-text-track-cue-get-cue-as-html" title="webkit_dom_text_track_cue_get_cue_as_html ()">webkit_dom_text_track_cue_get_cue_as_html</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMTextTrack.html" title="WebKitDOMTextTrack"><span class="returnvalue">WebKitDOMTextTrack</span></a> * <a class="link" href="WebKitDOMTextTrackCue.html#webkit-dom-text-track-cue-get-track" title="webkit_dom_text_track_cue_get_track ()">webkit_dom_text_track_cue_get_track</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMTextTrackCue.html#webkit-dom-text-track-cue-get-id" title="webkit_dom_text_track_cue_get_id ()">webkit_dom_text_track_cue_get_id</a>    (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMTextTrackCue.html#webkit-dom-text-track-cue-set-id" title="webkit_dom_text_track_cue_set_id ()">webkit_dom_text_track_cue_set_id</a>    (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             <a class="link" href="WebKitDOMTextTrackCue.html#webkit-dom-text-track-cue-get-start-time" title="webkit_dom_text_track_cue_get_start_time ()">webkit_dom_text_track_cue_get_start_time</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMTextTrackCue.html#webkit-dom-text-track-cue-set-start-time" title="webkit_dom_text_track_cue_set_start_time ()">webkit_dom_text_track_cue_set_start_time</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> value</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             <a class="link" href="WebKitDOMTextTrackCue.html#webkit-dom-text-track-cue-get-end-time" title="webkit_dom_text_track_cue_get_end_time ()">webkit_dom_text_track_cue_get_end_time</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMTextTrackCue.html#webkit-dom-text-track-cue-set-end-time" title="webkit_dom_text_track_cue_set_end_time ()">webkit_dom_text_track_cue_set_end_time</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> value</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMTextTrackCue.html#webkit-dom-text-track-cue-get-pause-on-exit" title="webkit_dom_text_track_cue_get_pause_on_exit ()">webkit_dom_text_track_cue_get_pause_on_exit</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMTextTrackCue.html#webkit-dom-text-track-cue-set-pause-on-exit" title="webkit_dom_text_track_cue_set_pause_on_exit ()">webkit_dom_text_track_cue_set_pause_on_exit</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMTextTrackCue.html#webkit-dom-text-track-cue-get-vertical" title="webkit_dom_text_track_cue_get_vertical ()">webkit_dom_text_track_cue_get_vertical</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMTextTrackCue.html#webkit-dom-text-track-cue-set-vertical" title="webkit_dom_text_track_cue_set_vertical ()">webkit_dom_text_track_cue_set_vertical</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMTextTrackCue.html#webkit-dom-text-track-cue-get-snap-to-lines" title="webkit_dom_text_track_cue_get_snap_to_lines ()">webkit_dom_text_track_cue_get_snap_to_lines</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMTextTrackCue.html#webkit-dom-text-track-cue-set-snap-to-lines" title="webkit_dom_text_track_cue_set_snap_to_lines ()">webkit_dom_text_track_cue_set_snap_to_lines</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMTextTrackCue.html#webkit-dom-text-track-cue-get-line" title="webkit_dom_text_track_cue_get_line ()">webkit_dom_text_track_cue_get_line</a>  (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMTextTrackCue.html#webkit-dom-text-track-cue-set-line" title="webkit_dom_text_track_cue_set_line ()">webkit_dom_text_track_cue_set_line</a>  (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> value</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMTextTrackCue.html#webkit-dom-text-track-cue-get-position" title="webkit_dom_text_track_cue_get_position ()">webkit_dom_text_track_cue_get_position</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMTextTrackCue.html#webkit-dom-text-track-cue-set-position" title="webkit_dom_text_track_cue_set_position ()">webkit_dom_text_track_cue_set_position</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> value</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMTextTrackCue.html#webkit-dom-text-track-cue-get-size" title="webkit_dom_text_track_cue_get_size ()">webkit_dom_text_track_cue_get_size</a>  (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMTextTrackCue.html#webkit-dom-text-track-cue-set-size" title="webkit_dom_text_track_cue_set_size ()">webkit_dom_text_track_cue_set_size</a>  (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> value</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMTextTrackCue.html#webkit-dom-text-track-cue-get-align" title="webkit_dom_text_track_cue_get_align ()">webkit_dom_text_track_cue_get_align</a> (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMTextTrackCue.html#webkit-dom-text-track-cue-set-align" title="webkit_dom_text_track_cue_set_align ()">webkit_dom_text_track_cue_set_align</a> (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMTextTrackCue.html#webkit-dom-text-track-cue-get-text" title="webkit_dom_text_track_cue_get_text ()">webkit_dom_text_track_cue_get_text</a>  (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMTextTrackCue.html#webkit-dom-text-track-cue-set-text" title="webkit_dom_text_track_cue_set_text ()">webkit_dom_text_track_cue_set_text</a>  (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMTextTrackCue.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----WebKitDOMTextTrackCue
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMTextTrackCue.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+WebKitDOMTextTrackCue implements
+ <a class="link" href="WebKitDOMEventTarget.html" title="WebKitDOMEventTarget">WebKitDOMEventTarget</a>.</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMTextTrackCue.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitDOMTextTrackCue.html#WebKitDOMTextTrackCue--align" title='The "align" property'>align</a>"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMTextTrackCue.html#WebKitDOMTextTrackCue--end-time" title='The "end-time" property'>end-time</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>               : Read / Write
+  "<a class="link" href="WebKitDOMTextTrackCue.html#WebKitDOMTextTrackCue--id" title='The "id" property'>id</a>"                       <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMTextTrackCue.html#WebKitDOMTextTrackCue--line" title='The "line" property'>line</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read / Write
+  "<a class="link" href="WebKitDOMTextTrackCue.html#WebKitDOMTextTrackCue--pause-on-exit" title='The "pause-on-exit" property'>pause-on-exit</a>"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+  "<a class="link" href="WebKitDOMTextTrackCue.html#WebKitDOMTextTrackCue--position" title='The "position" property'>position</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read / Write
+  "<a class="link" href="WebKitDOMTextTrackCue.html#WebKitDOMTextTrackCue--size" title='The "size" property'>size</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read / Write
+  "<a class="link" href="WebKitDOMTextTrackCue.html#WebKitDOMTextTrackCue--snap-to-lines" title='The "snap-to-lines" property'>snap-to-lines</a>"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+  "<a class="link" href="WebKitDOMTextTrackCue.html#WebKitDOMTextTrackCue--start-time" title='The "start-time" property'>start-time</a>"               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>               : Read / Write
+  "<a class="link" href="WebKitDOMTextTrackCue.html#WebKitDOMTextTrackCue--text" title='The "text" property'>text</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMTextTrackCue.html#WebKitDOMTextTrackCue--track" title='The "track" property'>track</a>"                    <a class="link" href="WebKitDOMTextTrack.html" title="WebKitDOMTextTrack"><span class="type">WebKitDOMTextTrack</span></a>*   : Read
+  "<a class="link" href="WebKitDOMTextTrackCue.html#WebKitDOMTextTrackCue--vertical" title='The "vertical" property'>vertical</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMTextTrackCue.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMTextTrackCue.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMTextTrackCue-struct"></a><h3>WebKitDOMTextTrackCue</h3>
+<pre class="programlisting">typedef struct _WebKitDOMTextTrackCue WebKitDOMTextTrackCue;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-text-track-cue-get-cue-as-html"></a><h3>webkit_dom_text_track_cue_get_cue_as_html ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMDocumentFragment.html" title="WebKitDOMDocumentFragment"><span class="returnvalue">WebKitDOMDocumentFragment</span></a> * webkit_dom_text_track_cue_get_cue_as_html
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-text-track-cue-get-track"></a><h3>webkit_dom_text_track_cue_get_track ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMTextTrack.html" title="WebKitDOMTextTrack"><span class="returnvalue">WebKitDOMTextTrack</span></a> * webkit_dom_text_track_cue_get_track
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-text-track-cue-get-id"></a><h3>webkit_dom_text_track_cue_get_id ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_text_track_cue_get_id    (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-text-track-cue-set-id"></a><h3>webkit_dom_text_track_cue_set_id ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_text_track_cue_set_id    (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-text-track-cue-get-start-time"></a><h3>webkit_dom_text_track_cue_get_start_time ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             webkit_dom_text_track_cue_get_start_time
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-text-track-cue-set-start-time"></a><h3>webkit_dom_text_track_cue_set_start_time ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_text_track_cue_set_start_time
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> value</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-text-track-cue-get-end-time"></a><h3>webkit_dom_text_track_cue_get_end_time ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             webkit_dom_text_track_cue_get_end_time
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-text-track-cue-set-end-time"></a><h3>webkit_dom_text_track_cue_set_end_time ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_text_track_cue_set_end_time
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> value</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-text-track-cue-get-pause-on-exit"></a><h3>webkit_dom_text_track_cue_get_pause_on_exit ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_text_track_cue_get_pause_on_exit
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-text-track-cue-set-pause-on-exit"></a><h3>webkit_dom_text_track_cue_set_pause_on_exit ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_text_track_cue_set_pause_on_exit
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-text-track-cue-get-vertical"></a><h3>webkit_dom_text_track_cue_get_vertical ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_text_track_cue_get_vertical
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-text-track-cue-set-vertical"></a><h3>webkit_dom_text_track_cue_set_vertical ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_text_track_cue_set_vertical
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-text-track-cue-get-snap-to-lines"></a><h3>webkit_dom_text_track_cue_get_snap_to_lines ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_text_track_cue_get_snap_to_lines
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-text-track-cue-set-snap-to-lines"></a><h3>webkit_dom_text_track_cue_set_snap_to_lines ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_text_track_cue_set_snap_to_lines
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-text-track-cue-get-line"></a><h3>webkit_dom_text_track_cue_get_line ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_text_track_cue_get_line  (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-text-track-cue-set-line"></a><h3>webkit_dom_text_track_cue_set_line ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_text_track_cue_set_line  (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> value</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-text-track-cue-get-position"></a><h3>webkit_dom_text_track_cue_get_position ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_text_track_cue_get_position
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-text-track-cue-set-position"></a><h3>webkit_dom_text_track_cue_set_position ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_text_track_cue_set_position
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> value</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-text-track-cue-get-size"></a><h3>webkit_dom_text_track_cue_get_size ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_text_track_cue_get_size  (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-text-track-cue-set-size"></a><h3>webkit_dom_text_track_cue_set_size ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_text_track_cue_set_size  (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> value</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-text-track-cue-get-align"></a><h3>webkit_dom_text_track_cue_get_align ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_text_track_cue_get_align (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-text-track-cue-set-align"></a><h3>webkit_dom_text_track_cue_set_align ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_text_track_cue_set_align (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-text-track-cue-get-text"></a><h3>webkit_dom_text_track_cue_get_text ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_text_track_cue_get_text  (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-text-track-cue-set-text"></a><h3>webkit_dom_text_track_cue_set_text ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_text_track_cue_set_text  (<em class="parameter"><code><a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue"><span class="type">WebKitDOMTextTrackCue</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMTextTrackCue.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMTextTrackCue--align"></a><h3>The <code class="literal">"align"</code> property</h3>
+<pre class="programlisting">  "align"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* TextTrackCue:align.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMTextTrackCue--end-time"></a><h3>The <code class="literal">"end-time"</code> property</h3>
+<pre class="programlisting">  "end-time"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>               : Read / Write</pre>
+<p>read-only gdouble TextTrackCue:end-time.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMTextTrackCue--id"></a><h3>The <code class="literal">"id"</code> property</h3>
+<pre class="programlisting">  "id"                       <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* TextTrackCue:id.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMTextTrackCue--line"></a><h3>The <code class="literal">"line"</code> property</h3>
+<pre class="programlisting">  "line"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read / Write</pre>
+<p>read-only glong TextTrackCue:line.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMTextTrackCue--pause-on-exit"></a><h3>The <code class="literal">"pause-on-exit"</code> property</h3>
+<pre class="programlisting">  "pause-on-exit"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
+<p>read-only gboolean TextTrackCue:pause-on-exit.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMTextTrackCue--position"></a><h3>The <code class="literal">"position"</code> property</h3>
+<pre class="programlisting">  "position"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read / Write</pre>
+<p>read-only glong TextTrackCue:position.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMTextTrackCue--size"></a><h3>The <code class="literal">"size"</code> property</h3>
+<pre class="programlisting">  "size"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read / Write</pre>
+<p>read-only glong TextTrackCue:size.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMTextTrackCue--snap-to-lines"></a><h3>The <code class="literal">"snap-to-lines"</code> property</h3>
+<pre class="programlisting">  "snap-to-lines"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
+<p>read-only gboolean TextTrackCue:snap-to-lines.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMTextTrackCue--start-time"></a><h3>The <code class="literal">"start-time"</code> property</h3>
+<pre class="programlisting">  "start-time"               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>               : Read / Write</pre>
+<p>read-only gdouble TextTrackCue:start-time.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMTextTrackCue--text"></a><h3>The <code class="literal">"text"</code> property</h3>
+<pre class="programlisting">  "text"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* TextTrackCue:text.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMTextTrackCue--track"></a><h3>The <code class="literal">"track"</code> property</h3>
+<pre class="programlisting">  "track"                    <a class="link" href="WebKitDOMTextTrack.html" title="WebKitDOMTextTrack"><span class="type">WebKitDOMTextTrack</span></a>*   : Read</pre>
+<p>read-only WebKitDOMTextTrack* TextTrackCue:track.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMTextTrackCue--vertical"></a><h3>The <code class="literal">"vertical"</code> property</h3>
+<pre class="programlisting">  "vertical"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* TextTrackCue:vertical.</p>
+<p>Default value: ""</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18.1</div>
+</body>
+</html>

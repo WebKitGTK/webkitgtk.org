@@ -1,0 +1,697 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMHTMLAppletElement</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement">
+<link rel="next" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement">
+<meta name="generator" content="GTK-Doc V1.18.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="WebKitDOMHTMLAnchorElement.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">WebKitDOMGTK+ Reference Manual</th>
+<td><a accesskey="n" href="WebKitDOMHTMLAreaElement.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#WebKitDOMHTMLAppletElement.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMHTMLAppletElement.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMHTMLAppletElement.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitDOMHTMLAppletElement.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#WebKitDOMHTMLAppletElement.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="WebKitDOMHTMLAppletElement"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMHTMLAppletElement.top_of_page"></a>WebKitDOMHTMLAppletElement</span></h2>
+<p>WebKitDOMHTMLAppletElement</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMHTMLAppletElement.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMHTMLAppletElement.html#WebKitDOMHTMLAppletElement-struct" title="WebKitDOMHTMLAppletElement">WebKitDOMHTMLAppletElement</a>;
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAppletElement.html#webkit-dom-html-applet-element-get-align" title="webkit_dom_html_applet_element_get_align ()">webkit_dom_html_applet_element_get_align</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLAppletElement.html#webkit-dom-html-applet-element-set-align" title="webkit_dom_html_applet_element_set_align ()">webkit_dom_html_applet_element_set_align</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAppletElement.html#webkit-dom-html-applet-element-get-alt" title="webkit_dom_html_applet_element_get_alt ()">webkit_dom_html_applet_element_get_alt</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLAppletElement.html#webkit-dom-html-applet-element-set-alt" title="webkit_dom_html_applet_element_set_alt ()">webkit_dom_html_applet_element_set_alt</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAppletElement.html#webkit-dom-html-applet-element-get-archive" title="webkit_dom_html_applet_element_get_archive ()">webkit_dom_html_applet_element_get_archive</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLAppletElement.html#webkit-dom-html-applet-element-set-archive" title="webkit_dom_html_applet_element_set_archive ()">webkit_dom_html_applet_element_set_archive</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAppletElement.html#webkit-dom-html-applet-element-get-code" title="webkit_dom_html_applet_element_get_code ()">webkit_dom_html_applet_element_get_code</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLAppletElement.html#webkit-dom-html-applet-element-set-code" title="webkit_dom_html_applet_element_set_code ()">webkit_dom_html_applet_element_set_code</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAppletElement.html#webkit-dom-html-applet-element-get-code-base" title="webkit_dom_html_applet_element_get_code_base ()">webkit_dom_html_applet_element_get_code_base</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLAppletElement.html#webkit-dom-html-applet-element-set-code-base" title="webkit_dom_html_applet_element_set_code_base ()">webkit_dom_html_applet_element_set_code_base</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAppletElement.html#webkit-dom-html-applet-element-get-height" title="webkit_dom_html_applet_element_get_height ()">webkit_dom_html_applet_element_get_height</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLAppletElement.html#webkit-dom-html-applet-element-set-height" title="webkit_dom_html_applet_element_set_height ()">webkit_dom_html_applet_element_set_height</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMHTMLAppletElement.html#webkit-dom-html-applet-element-get-hspace" title="webkit_dom_html_applet_element_get_hspace ()">webkit_dom_html_applet_element_get_hspace</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLAppletElement.html#webkit-dom-html-applet-element-set-hspace" title="webkit_dom_html_applet_element_set_hspace ()">webkit_dom_html_applet_element_set_hspace</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAppletElement.html#webkit-dom-html-applet-element-get-name" title="webkit_dom_html_applet_element_get_name ()">webkit_dom_html_applet_element_get_name</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLAppletElement.html#webkit-dom-html-applet-element-set-name" title="webkit_dom_html_applet_element_set_name ()">webkit_dom_html_applet_element_set_name</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAppletElement.html#webkit-dom-html-applet-element-get-object" title="webkit_dom_html_applet_element_get_object ()">webkit_dom_html_applet_element_get_object</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLAppletElement.html#webkit-dom-html-applet-element-set-object" title="webkit_dom_html_applet_element_set_object ()">webkit_dom_html_applet_element_set_object</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMHTMLAppletElement.html#webkit-dom-html-applet-element-get-vspace" title="webkit_dom_html_applet_element_get_vspace ()">webkit_dom_html_applet_element_get_vspace</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLAppletElement.html#webkit-dom-html-applet-element-set-vspace" title="webkit_dom_html_applet_element_set_vspace ()">webkit_dom_html_applet_element_set_vspace</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAppletElement.html#webkit-dom-html-applet-element-get-width" title="webkit_dom_html_applet_element_get_width ()">webkit_dom_html_applet_element_get_width</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLAppletElement.html#webkit-dom-html-applet-element-set-width" title="webkit_dom_html_applet_element_set_width ()">webkit_dom_html_applet_element_set_width</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLAppletElement.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----<a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode">WebKitDOMNode</a>
+               +----<a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement">WebKitDOMElement</a>
+                     +----<a class="link" href="WebKitDOMHTMLElement.html" title="WebKitDOMHTMLElement">WebKitDOMHTMLElement</a>
+                           +----WebKitDOMHTMLAppletElement
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLAppletElement.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+WebKitDOMHTMLAppletElement implements
+ <a class="link" href="WebKitDOMEventTarget.html" title="WebKitDOMEventTarget">WebKitDOMEventTarget</a>.</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLAppletElement.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitDOMHTMLAppletElement.html#WebKitDOMHTMLAppletElement--align" title='The "align" property'>align</a>"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLAppletElement.html#WebKitDOMHTMLAppletElement--alt" title='The "alt" property'>alt</a>"                      <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLAppletElement.html#WebKitDOMHTMLAppletElement--archive" title='The "archive" property'>archive</a>"                  <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLAppletElement.html#WebKitDOMHTMLAppletElement--code" title='The "code" property'>code</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLAppletElement.html#WebKitDOMHTMLAppletElement--code-base" title='The "code-base" property'>code-base</a>"                <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLAppletElement.html#WebKitDOMHTMLAppletElement--height" title='The "height" property'>height</a>"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLAppletElement.html#WebKitDOMHTMLAppletElement--hspace" title='The "hspace" property'>hspace</a>"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read / Write
+  "<a class="link" href="WebKitDOMHTMLAppletElement.html#WebKitDOMHTMLAppletElement--name" title='The "name" property'>name</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLAppletElement.html#WebKitDOMHTMLAppletElement--object" title='The "object" property'>object</a>"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLAppletElement.html#WebKitDOMHTMLAppletElement--vspace" title='The "vspace" property'>vspace</a>"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read / Write
+  "<a class="link" href="WebKitDOMHTMLAppletElement.html#WebKitDOMHTMLAppletElement--width" title='The "width" property'>width</a>"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLAppletElement.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLAppletElement.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAppletElement-struct"></a><h3>WebKitDOMHTMLAppletElement</h3>
+<pre class="programlisting">typedef struct _WebKitDOMHTMLAppletElement WebKitDOMHTMLAppletElement;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-applet-element-get-align"></a><h3>webkit_dom_html_applet_element_get_align ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_applet_element_get_align
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-applet-element-set-align"></a><h3>webkit_dom_html_applet_element_set_align ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_applet_element_set_align
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-applet-element-get-alt"></a><h3>webkit_dom_html_applet_element_get_alt ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_applet_element_get_alt
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-applet-element-set-alt"></a><h3>webkit_dom_html_applet_element_set_alt ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_applet_element_set_alt
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-applet-element-get-archive"></a><h3>webkit_dom_html_applet_element_get_archive ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_applet_element_get_archive
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-applet-element-set-archive"></a><h3>webkit_dom_html_applet_element_set_archive ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_applet_element_set_archive
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-applet-element-get-code"></a><h3>webkit_dom_html_applet_element_get_code ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_applet_element_get_code
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-applet-element-set-code"></a><h3>webkit_dom_html_applet_element_set_code ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_applet_element_set_code
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-applet-element-get-code-base"></a><h3>webkit_dom_html_applet_element_get_code_base ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_applet_element_get_code_base
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-applet-element-set-code-base"></a><h3>webkit_dom_html_applet_element_set_code_base ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_applet_element_set_code_base
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-applet-element-get-height"></a><h3>webkit_dom_html_applet_element_get_height ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_applet_element_get_height
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-applet-element-set-height"></a><h3>webkit_dom_html_applet_element_set_height ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_applet_element_set_height
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-applet-element-get-hspace"></a><h3>webkit_dom_html_applet_element_get_hspace ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_html_applet_element_get_hspace
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-applet-element-set-hspace"></a><h3>webkit_dom_html_applet_element_set_hspace ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_applet_element_set_hspace
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-applet-element-get-name"></a><h3>webkit_dom_html_applet_element_get_name ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_applet_element_get_name
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-applet-element-set-name"></a><h3>webkit_dom_html_applet_element_set_name ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_applet_element_set_name
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-applet-element-get-object"></a><h3>webkit_dom_html_applet_element_get_object ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_applet_element_get_object
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-applet-element-set-object"></a><h3>webkit_dom_html_applet_element_set_object ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_applet_element_set_object
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-applet-element-get-vspace"></a><h3>webkit_dom_html_applet_element_get_vspace ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_html_applet_element_get_vspace
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-applet-element-set-vspace"></a><h3>webkit_dom_html_applet_element_set_vspace ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_applet_element_set_vspace
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-applet-element-get-width"></a><h3>webkit_dom_html_applet_element_get_width ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_applet_element_get_width
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-applet-element-set-width"></a><h3>webkit_dom_html_applet_element_set_width ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_applet_element_set_width
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement"><span class="type">WebKitDOMHTMLAppletElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLAppletElement.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAppletElement--align"></a><h3>The <code class="literal">"align"</code> property</h3>
+<pre class="programlisting">  "align"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLAppletElement:align.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAppletElement--alt"></a><h3>The <code class="literal">"alt"</code> property</h3>
+<pre class="programlisting">  "alt"                      <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLAppletElement:alt.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAppletElement--archive"></a><h3>The <code class="literal">"archive"</code> property</h3>
+<pre class="programlisting">  "archive"                  <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLAppletElement:archive.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAppletElement--code"></a><h3>The <code class="literal">"code"</code> property</h3>
+<pre class="programlisting">  "code"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLAppletElement:code.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAppletElement--code-base"></a><h3>The <code class="literal">"code-base"</code> property</h3>
+<pre class="programlisting">  "code-base"                <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLAppletElement:code-base.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAppletElement--height"></a><h3>The <code class="literal">"height"</code> property</h3>
+<pre class="programlisting">  "height"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLAppletElement:height.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAppletElement--hspace"></a><h3>The <code class="literal">"hspace"</code> property</h3>
+<pre class="programlisting">  "hspace"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read / Write</pre>
+<p>read-only glong HTMLAppletElement:hspace.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAppletElement--name"></a><h3>The <code class="literal">"name"</code> property</h3>
+<pre class="programlisting">  "name"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLAppletElement:name.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAppletElement--object"></a><h3>The <code class="literal">"object"</code> property</h3>
+<pre class="programlisting">  "object"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLAppletElement:object.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAppletElement--vspace"></a><h3>The <code class="literal">"vspace"</code> property</h3>
+<pre class="programlisting">  "vspace"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read / Write</pre>
+<p>read-only glong HTMLAppletElement:vspace.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAppletElement--width"></a><h3>The <code class="literal">"width"</code> property</h3>
+<pre class="programlisting">  "width"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLAppletElement:width.</p>
+<p>Default value: ""</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18.1</div>
+</body>
+</html>

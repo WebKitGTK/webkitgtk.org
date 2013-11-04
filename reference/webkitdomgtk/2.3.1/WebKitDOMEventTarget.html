@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMEventTarget</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection">
+<link rel="next" href="WebKitDOMHistory.html" title="WebKitDOMHistory">
+<meta name="generator" content="GTK-Doc V1.18.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="WebKitDOMDOMSelection.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">WebKitDOMGTK+ Reference Manual</th>
+<td><a accesskey="n" href="WebKitDOMHistory.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#WebKitDOMEventTarget.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMEventTarget.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMEventTarget.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitDOMEventTarget.prerequisites" class="shortcut">Prerequisites</a>
+                   | 
+                  <a href="#WebKitDOMEventTarget.implementations" class="shortcut">Known Implementations</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="WebKitDOMEventTarget"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMEventTarget.top_of_page"></a>WebKitDOMEventTarget</span></h2>
+<p>WebKitDOMEventTarget</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMEventTarget.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMEventTarget.html#WebKitDOMEventTarget-struct" title="WebKitDOMEventTarget">WebKitDOMEventTarget</a>;
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMEventTarget.html#webkit-dom-event-target-dispatch-event" title="webkit_dom_event_target_dispatch_event ()">webkit_dom_event_target_dispatch_event</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMEventTarget.html" title="WebKitDOMEventTarget"><span class="type">WebKitDOMEventTarget</span></a> *target</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMEvent.html" title="WebKitDOMEvent"><span class="type">WebKitDOMEvent</span></a> *event</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMEventTarget.html#webkit-dom-event-target-add-event-listener" title="webkit_dom_event_target_add_event_listener ()">webkit_dom_event_target_add_event_listener</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMEventTarget.html" title="WebKitDOMEventTarget"><span class="type">WebKitDOMEventTarget</span></a> *target</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *event_name</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/gobject/stable/gobject-Closures.html#GCallback"><span class="type">GCallback</span></a> handler</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> use_capture</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMEventTarget.html#webkit-dom-event-target-remove-event-listener" title="webkit_dom_event_target_remove_event_listener ()">webkit_dom_event_target_remove_event_listener</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMEventTarget.html" title="WebKitDOMEventTarget"><span class="type">WebKitDOMEventTarget</span></a> *target</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *event_name</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/gobject/stable/gobject-Closures.html#GCallback"><span class="type">GCallback</span></a> handler</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> use_capture</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMEventTarget.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GInterface
+   +----WebKitDOMEventTarget
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMEventTarget.prerequisites"></a><h2>Prerequisites</h2>
+<p>
+WebKitDOMEventTarget requires
+ <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>.</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMEventTarget.implementations"></a><h2>Known Implementations</h2>
+<p>
+WebKitDOMEventTarget is implemented by
+ <a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr">WebKitDOMAttr</a>,  <a class="link" href="WebKitDOMAudioTrackList.html" title="WebKitDOMAudioTrackList">WebKitDOMAudioTrackList</a>,  <a class="link" href="WebKitDOMBatteryManager.html" title="WebKitDOMBatteryManager">WebKitDOMBatteryManager</a>,  <a class="link" href="WebKitDOMCDATASection.html" title="WebKitDOMCDATASection">WebKitDOMCDATASection</a>,  <a class="link" href="WebKitDOMCharacterData.html" title="WebKitDOMCharacterData">WebKitDOMCharacterData</a>,  <a class="link" href="WebKitDOMComment.html" title="WebKitDOMComment">WebKitDOMComment</a>,  <a class="link" href="WebKitDOMDOMApplicationCache.html" title="WebKitDOMDOMApplicationCache">WebKitDOMDOMApplicationCache</a>,  <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow">WebKitDOMDOMWindow</a>,  <a class="link" href="WebKitDOMDocument.html" title="WebKitDOMDocument">WebKitDOMDocument</a>,  <a class="link" href="WebKitDOMDocumentFragment.html" title="WebKitDOMDocumentFragment">WebKitDOMDocumentFragment</a>,  <a class="link" href="WebKitDOMDocumentType.html" title="WebKitDOMDocumentType">WebKitDOMDocumentType</a>,  <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement">WebKitDOMElement</a>,  <a class="link" href="WebKitDOMEntityReference.html" title="WebKitDOMEntityReference">WebKitDOMEntityReference</a>,  <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement">WebKitDOMHTMLAnchorElement</a>,  <a class="link" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement">WebKitDOMHTMLAppletElement</a>,  <a class="link" href="WebKitDOMHTMLAreaElement.html" title="WebKitDOMHTMLAreaElement">WebKitDOMHTMLAreaElement</a>,  <a class="link" href="WebKitDOMHTMLAudioElement.html" title="WebKitDOMHTMLAudioElement">WebKitDOMHTMLAudioElement</a>,  <a class="link" href="WebKitDOMHTMLBRElement.html" title="WebKitDOMHTMLBRElement">WebKitDOMHTMLBRElement</a>,  <a class="link" href="WebKitDOMHTMLBaseElement.html" title="WebKitDOMHTMLBaseElement">WebKitDOMHTMLBaseElement</a>,  <a class="link" href="WebKitDOMHTMLBaseFontElement.html" title="WebKitDOMHTMLBaseFontElement">WebKitDOMHTMLBaseFontElement</a>,  <a class="link" href="WebKitDOMHTMLBodyElement.html" title="WebKitDOMHTMLBodyElement">WebKitDOMHTMLBodyElement</a>,  <a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement">WebKitDOMHTMLButtonElement</a>,  <a class="link" href="WebKitDOMHTMLCanvasElement.html" title="WebKitDOMHTMLCanvasElement">WebKitDOMHTMLCanvasElement</a>,  <a class="link" href="WebKitDOMHTMLDListElement.html" title="WebKitDOMHTMLDListElement">WebKitDOMHTMLDListElement</a>,  <a class="link" href="WebKitDOMHTMLDetailsElement.html" title="WebKitDOMHTMLDetailsElement">WebKitDOMHTMLDetailsElement</a>,  <a class="link" href="WebKitDOMHTMLDirectoryElement.html" title="WebKitDOMHTMLDirectoryElement">WebKitDOMHTMLDirectoryElement</a>,  <a class="link" href="WebKitDOMHTMLDivElement.html" title="WebKitDOMHTMLDivElement">WebKitDOMHTMLDivElement</a>,  <a class="link" href="WebKitDOMHTMLDocument.html" title="WebKitDOMHTMLDocument">WebKitDOMHTMLDocument</a>,  <a class="link" href="WebKitDOMHTMLElement.html" title="WebKitDOMHTMLElement">WebKitDOMHTMLElement</a>,  <a class="link" href="WebKitDOMHTMLEmbedElement.html" title="WebKitDOMHTMLEmbedElement">WebKitDOMHTMLEmbedElement</a>,  <a class="link" href="WebKitDOMHTMLFieldSetElement.html" title="WebKitDOMHTMLFieldSetElement">WebKitDOMHTMLFieldSetElement</a>,  <a class="link" href="WebKitDOMHTMLFontElement.html" title="WebKitDOMHTMLFontElement">WebKitDOMHTMLFontElement</a>,  <a class="link" href="WebKitDOMHTMLFormElement.html" title="WebKitDOMHTMLFormElement">WebKitDOMHTMLFormElement</a>,  <a class="link" href="WebKitDOMHTMLFrameElement.html" title="WebKitDOMHTMLFrameElement">WebKitDOMHTMLFrameElement</a>,  <a class="link" href="WebKitDOMHTMLFrameSetElement.html" title="WebKitDOMHTMLFrameSetElement">WebKitDOMHTMLFrameSetElement</a>,  <a class="link" href="WebKitDOMHTMLHRElement.html" title="WebKitDOMHTMLHRElement">WebKitDOMHTMLHRElement</a>,  <a class="link" href="WebKitDOMHTMLHeadElement.html" title="WebKitDOMHTMLHeadElement">WebKitDOMHTMLHeadElement</a>,  <a class="link" href="WebKitDOMHTMLHeadingElement.html" title="WebKitDOMHTMLHeadingElement">WebKitDOMHTMLHeadingElement</a>,  <a class="link" href="WebKitDOMHTMLHtmlElement.html" title="WebKitDOMHTMLHtmlElement">WebKitDOMHTMLHtmlElement</a>,  <a class="link" href="WebKitDOMHTMLIFrameElement.html" title="WebKitDOMHTMLIFrameElement">WebKitDOMHTMLIFrameElement</a>,  <a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement">WebKitDOMHTMLImageElement</a>,  <a class="link" href="WebKitDOMHTMLInputElement.html" title="WebKitDOMHTMLInputElement">WebKitDOMHTMLInputElement</a>,  <a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement">WebKitDOMHTMLKeygenElement</a>,  <a class="link" href="WebKitDOMHTMLLIElement.html" title="WebKitDOMHTMLLIElement">WebKitDOMHTMLLIElement</a>,  <a class="link" href="WebKitDOMHTMLLabelElement.html" title="WebKitDOMHTMLLabelElement">WebKitDOMHTMLLabelElement</a>,  <a class="link" href="WebKitDOMHTMLLegendElement.html" title="WebKitDOMHTMLLegendElement">WebKitDOMHTMLLegendElement</a>,  <a class="link" href="WebKitDOMHTMLLinkElement.html" title="WebKitDOMHTMLLinkElement">WebKitDOMHTMLLinkElement</a>,  <a class="link" href="WebKitDOMHTMLMapElement.html" title="WebKitDOMHTMLMapElement">WebKitDOMHTMLMapElement</a>,  <a class="link" href="WebKitDOMHTMLMarqueeElement.html" title="WebKitDOMHTMLMarqueeElement">WebKitDOMHTMLMarqueeElement</a>,  <a class="link" href="WebKitDOMHTMLMediaElement.html" title="WebKitDOMHTMLMediaElement">WebKitDOMHTMLMediaElement</a>,  <a class="link" href="WebKitDOMHTMLMenuElement.html" title="WebKitDOMHTMLMenuElement">WebKitDOMHTMLMenuElement</a>,  <a class="link" href="WebKitDOMHTMLMetaElement.html" title="WebKitDOMHTMLMetaElement">WebKitDOMHTMLMetaElement</a>,  <a class="link" href="WebKitDOMHTMLModElement.html" title="WebKitDOMHTMLModElement">WebKitDOMHTMLModElement</a>,  <a class="link" href="WebKitDOMHTMLOListElement.html" title="WebKitDOMHTMLOListElement">WebKitDOMHTMLOListElement</a>,  <a class="link" href="WebKitDOMHTMLObjectElement.html" title="WebKitDOMHTMLObjectElement">WebKitDOMHTMLObjectElement</a>,  <a class="link" href="WebKitDOMHTMLOptGroupElement.html" title="WebKitDOMHTMLOptGroupElement">WebKitDOMHTMLOptGroupElement</a>,  <a class="link" href="WebKitDOMHTMLOptionElement.html" title="WebKitDOMHTMLOptionElement">WebKitDOMHTMLOptionElement</a>,  <a class="link" href="WebKitDOMHTMLParagraphElement.html" title="WebKitDOMHTMLParagraphElement">WebKitDOMHTMLParagraphElement</a>,  <a class="link" href="WebKitDOMHTMLParamElement.html" title="WebKitDOMHTMLParamElement">WebKitDOMHTMLParamElement</a>,  <a class="link" href="WebKitDOMHTMLPreElement.html" title="WebKitDOMHTMLPreElement">WebKitDOMHTMLPreElement</a>,  <a class="link" href="WebKitDOMHTMLQuoteElement.html" title="WebKitDOMHTMLQuoteElement">WebKitDOMHTMLQuoteElement</a>,  <a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement">WebKitDOMHTMLScriptElement</a>,  <a class="link" href="WebKitDOMHTMLSelectElement.html" title="WebKitDOMHTMLSelectElement">WebKitDOMHTMLSelectElement</a>,  <a class="link" href="WebKitDOMHTMLStyleElement.html" title="WebKitDOMHTMLStyleElement">WebKitDOMHTMLStyleElement</a>,  <a class="link" href="WebKitDOMHTMLTableCaptionElement.html" title="WebKitDOMHTMLTableCaptionElement">WebKitDOMHTMLTableCaptionElement</a>,  <a class="link" href="WebKitDOMHTMLTableCellElement.html" title="WebKitDOMHTMLTableCellElement">WebKitDOMHTMLTableCellElement</a>,  <a class="link" href="WebKitDOMHTMLTableColElement.html" title="WebKitDOMHTMLTableColElement">WebKitDOMHTMLTableColElement</a>,  <a class="link" href="WebKitDOMHTMLTableElement.html" title="WebKitDOMHTMLTableElement">WebKitDOMHTMLTableElement</a>,  <a class="link" href="WebKitDOMHTMLTableRowElement.html" title="WebKitDOMHTMLTableRowElement">WebKitDOMHTMLTableRowElement</a>,  <a class="link" href="WebKitDOMHTMLTableSectionElement.html" title="WebKitDOMHTMLTableSectionElement">WebKitDOMHTMLTableSectionElement</a>,  <a class="link" href="WebKitDOMHTMLTextAreaElement.html" title="WebKitDOMHTMLTextAreaElement">WebKitDOMHTMLTextAreaElement</a>,  <a class="link" href="WebKitDOMHTMLTitleElement.html" title="WebKitDOMHTMLTitleElement">WebKitDOMHTMLTitleElement</a>,  <a class="link" href="WebKitDOMHTMLUListElement.html" title="WebKitDOMHTMLUListElement">WebKitDOMHTMLUListElement</a>,  <a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement">WebKitDOMHTMLVideoElement</a>,  <a class="link" href="WebKitDOMMessagePort.html" title="WebKitDOMMessagePort">WebKitDOMMessagePort</a>,  <a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode">WebKitDOMNode</a>,  <a class="link" href="WebKitDOMPerformance.html" title="WebKitDOMPerformance">WebKitDOMPerformance</a>,  <a class="link" href="WebKitDOMProcessingInstruction.html" title="WebKitDOMProcessingInstruction">WebKitDOMProcessingInstruction</a>,  <a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot">WebKitDOMShadowRoot</a>,  <a class="link" href="WebKitDOMText.html" title="WebKitDOMText">WebKitDOMText</a>,  <a class="link" href="WebKitDOMTextTrack.html" title="WebKitDOMTextTrack">WebKitDOMTextTrack</a>,  <a class="link" href="WebKitDOMTextTrackCue.html" title="WebKitDOMTextTrackCue">WebKitDOMTextTrackCue</a>,  <a class="link" href="WebKitDOMTextTrackList.html" title="WebKitDOMTextTrackList">WebKitDOMTextTrackList</a>,  <a class="link" href="WebKitDOMVideoTrackList.html" title="WebKitDOMVideoTrackList">WebKitDOMVideoTrackList</a> and  <a class="link" href="WebKitDOMWebKitNamedFlow.html" title="WebKitDOMWebKitNamedFlow">WebKitDOMWebKitNamedFlow</a>.</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMEventTarget.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMEventTarget.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMEventTarget-struct"></a><h3>WebKitDOMEventTarget</h3>
+<pre class="programlisting">typedef struct _WebKitDOMEventTarget WebKitDOMEventTarget;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-event-target-dispatch-event"></a><h3>webkit_dom_event_target_dispatch_event ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_event_target_dispatch_event
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMEventTarget.html" title="WebKitDOMEventTarget"><span class="type">WebKitDOMEventTarget</span></a> *target</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMEvent.html" title="WebKitDOMEvent"><span class="type">WebKitDOMEvent</span></a> *event</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>target</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMEventTarget.html" title="WebKitDOMEventTarget"><span class="type">WebKitDOMEventTarget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>event</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMEvent.html" title="WebKitDOMEvent"><span class="type">WebKitDOMEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>return location for an error or <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-event-target-add-event-listener"></a><h3>webkit_dom_event_target_add_event_listener ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_event_target_add_event_listener
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMEventTarget.html" title="WebKitDOMEventTarget"><span class="type">WebKitDOMEventTarget</span></a> *target</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *event_name</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/gobject/stable/gobject-Closures.html#GCallback"><span class="type">GCallback</span></a> handler</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> use_capture</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>target</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMEventTarget.html" title="WebKitDOMEventTarget"><span class="type">WebKitDOMEventTarget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>event_name</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>handler</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/gobject/stable/gobject-Closures.html#GCallback"><span class="type">GCallback</span></a>. <span class="annotation">[<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>use_capture</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-event-target-remove-event-listener"></a><h3>webkit_dom_event_target_remove_event_listener ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_event_target_remove_event_listener
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMEventTarget.html" title="WebKitDOMEventTarget"><span class="type">WebKitDOMEventTarget</span></a> *target</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *event_name</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/gobject/stable/gobject-Closures.html#GCallback"><span class="type">GCallback</span></a> handler</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> use_capture</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>target</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMEventTarget.html" title="WebKitDOMEventTarget"><span class="type">WebKitDOMEventTarget</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>event_name</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>handler</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/gobject/stable/gobject-Closures.html#GCallback"><span class="type">GCallback</span></a>. <span class="annotation">[<acronym title="The callback is valid only during the call to the method."><span class="acronym">scope call</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>use_capture</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18.1</div>
+</body>
+</html>

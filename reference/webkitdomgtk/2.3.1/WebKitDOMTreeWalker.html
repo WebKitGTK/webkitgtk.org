@@ -1,0 +1,428 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMTreeWalker</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMText.html" title="WebKitDOMText">
+<link rel="next" href="WebKitDOMUIEvent.html" title="WebKitDOMUIEvent">
+<meta name="generator" content="GTK-Doc V1.18.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="WebKitDOMText.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">WebKitDOMGTK+ Reference Manual</th>
+<td><a accesskey="n" href="WebKitDOMUIEvent.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#WebKitDOMTreeWalker.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMTreeWalker.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMTreeWalker.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitDOMTreeWalker.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="WebKitDOMTreeWalker"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMTreeWalker.top_of_page"></a>WebKitDOMTreeWalker</span></h2>
+<p>WebKitDOMTreeWalker</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMTreeWalker.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMTreeWalker.html#WebKitDOMTreeWalker-struct" title="WebKitDOMTreeWalker">WebKitDOMTreeWalker</a>;
+<a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="returnvalue">WebKitDOMNode</span></a> *     <a class="link" href="WebKitDOMTreeWalker.html#webkit-dom-tree-walker-parent-node" title="webkit_dom_tree_walker_parent_node ()">webkit_dom_tree_walker_parent_node</a>  (<em class="parameter"><code><a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="returnvalue">WebKitDOMNode</span></a> *     <a class="link" href="WebKitDOMTreeWalker.html#webkit-dom-tree-walker-first-child" title="webkit_dom_tree_walker_first_child ()">webkit_dom_tree_walker_first_child</a>  (<em class="parameter"><code><a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="returnvalue">WebKitDOMNode</span></a> *     <a class="link" href="WebKitDOMTreeWalker.html#webkit-dom-tree-walker-last-child" title="webkit_dom_tree_walker_last_child ()">webkit_dom_tree_walker_last_child</a>   (<em class="parameter"><code><a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="returnvalue">WebKitDOMNode</span></a> *     <a class="link" href="WebKitDOMTreeWalker.html#webkit-dom-tree-walker-previous-sibling" title="webkit_dom_tree_walker_previous_sibling ()">webkit_dom_tree_walker_previous_sibling</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="returnvalue">WebKitDOMNode</span></a> *     <a class="link" href="WebKitDOMTreeWalker.html#webkit-dom-tree-walker-next-sibling" title="webkit_dom_tree_walker_next_sibling ()">webkit_dom_tree_walker_next_sibling</a> (<em class="parameter"><code><a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="returnvalue">WebKitDOMNode</span></a> *     <a class="link" href="WebKitDOMTreeWalker.html#webkit-dom-tree-walker-previous-node" title="webkit_dom_tree_walker_previous_node ()">webkit_dom_tree_walker_previous_node</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="returnvalue">WebKitDOMNode</span></a> *     <a class="link" href="WebKitDOMTreeWalker.html#webkit-dom-tree-walker-next-node" title="webkit_dom_tree_walker_next_node ()">webkit_dom_tree_walker_next_node</a>    (<em class="parameter"><code><a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="returnvalue">WebKitDOMNode</span></a> *     <a class="link" href="WebKitDOMTreeWalker.html#webkit-dom-tree-walker-get-root" title="webkit_dom_tree_walker_get_root ()">webkit_dom_tree_walker_get_root</a>     (<em class="parameter"><code><a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              <a class="link" href="WebKitDOMTreeWalker.html#webkit-dom-tree-walker-get-what-to-show" title="webkit_dom_tree_walker_get_what_to_show ()">webkit_dom_tree_walker_get_what_to_show</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMNodeFilter.html" title="WebKitDOMNodeFilter"><span class="returnvalue">WebKitDOMNodeFilter</span></a> * <a class="link" href="WebKitDOMTreeWalker.html#webkit-dom-tree-walker-get-filter" title="webkit_dom_tree_walker_get_filter ()">webkit_dom_tree_walker_get_filter</a> (<em class="parameter"><code><a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMTreeWalker.html#webkit-dom-tree-walker-get-expand-entity-references" title="webkit_dom_tree_walker_get_expand_entity_references ()">webkit_dom_tree_walker_get_expand_entity_references</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="returnvalue">WebKitDOMNode</span></a> *     <a class="link" href="WebKitDOMTreeWalker.html#webkit-dom-tree-walker-get-current-node" title="webkit_dom_tree_walker_get_current_node ()">webkit_dom_tree_walker_get_current_node</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMTreeWalker.html#webkit-dom-tree-walker-set-current-node" title="webkit_dom_tree_walker_set_current_node ()">webkit_dom_tree_walker_set_current_node</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a> *value</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMTreeWalker.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----WebKitDOMTreeWalker
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMTreeWalker.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitDOMTreeWalker.html#WebKitDOMTreeWalker--expand-entity-references" title='The "expand-entity-references" property'>expand-entity-references</a>" <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
+  "<a class="link" href="WebKitDOMTreeWalker.html#WebKitDOMTreeWalker--filter" title='The "filter" property'>filter</a>"                   <a class="link" href="WebKitDOMNodeFilter.html" title="WebKitDOMNodeFilter"><span class="type">WebKitDOMNodeFilter</span></a>*  : Read
+  "<a class="link" href="WebKitDOMTreeWalker.html#WebKitDOMTreeWalker--root" title='The "root" property'>root</a>"                     <a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a>*        : Read
+  "<a class="link" href="WebKitDOMTreeWalker.html#WebKitDOMTreeWalker--what-to-show" title='The "what-to-show" property'>what-to-show</a>"             <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMTreeWalker.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMTreeWalker.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMTreeWalker-struct"></a><h3>WebKitDOMTreeWalker</h3>
+<pre class="programlisting">typedef struct _WebKitDOMTreeWalker WebKitDOMTreeWalker;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-tree-walker-parent-node"></a><h3>webkit_dom_tree_walker_parent_node ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="returnvalue">WebKitDOMNode</span></a> *     webkit_dom_tree_walker_parent_node  (<em class="parameter"><code><a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-tree-walker-first-child"></a><h3>webkit_dom_tree_walker_first_child ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="returnvalue">WebKitDOMNode</span></a> *     webkit_dom_tree_walker_first_child  (<em class="parameter"><code><a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-tree-walker-last-child"></a><h3>webkit_dom_tree_walker_last_child ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="returnvalue">WebKitDOMNode</span></a> *     webkit_dom_tree_walker_last_child   (<em class="parameter"><code><a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-tree-walker-previous-sibling"></a><h3>webkit_dom_tree_walker_previous_sibling ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="returnvalue">WebKitDOMNode</span></a> *     webkit_dom_tree_walker_previous_sibling
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-tree-walker-next-sibling"></a><h3>webkit_dom_tree_walker_next_sibling ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="returnvalue">WebKitDOMNode</span></a> *     webkit_dom_tree_walker_next_sibling (<em class="parameter"><code><a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-tree-walker-previous-node"></a><h3>webkit_dom_tree_walker_previous_node ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="returnvalue">WebKitDOMNode</span></a> *     webkit_dom_tree_walker_previous_node
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-tree-walker-next-node"></a><h3>webkit_dom_tree_walker_next_node ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="returnvalue">WebKitDOMNode</span></a> *     webkit_dom_tree_walker_next_node    (<em class="parameter"><code><a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-tree-walker-get-root"></a><h3>webkit_dom_tree_walker_get_root ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="returnvalue">WebKitDOMNode</span></a> *     webkit_dom_tree_walker_get_root     (<em class="parameter"><code><a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-tree-walker-get-what-to-show"></a><h3>webkit_dom_tree_walker_get_what_to_show ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              webkit_dom_tree_walker_get_what_to_show
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-tree-walker-get-filter"></a><h3>webkit_dom_tree_walker_get_filter ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMNodeFilter.html" title="WebKitDOMNodeFilter"><span class="returnvalue">WebKitDOMNodeFilter</span></a> * webkit_dom_tree_walker_get_filter (<em class="parameter"><code><a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-tree-walker-get-expand-entity-references"></a><h3>webkit_dom_tree_walker_get_expand_entity_references ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_tree_walker_get_expand_entity_references
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-tree-walker-get-current-node"></a><h3>webkit_dom_tree_walker_get_current_node ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="returnvalue">WebKitDOMNode</span></a> *     webkit_dom_tree_walker_get_current_node
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-tree-walker-set-current-node"></a><h3>webkit_dom_tree_walker_set_current_node ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_tree_walker_set_current_node
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a> *value</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTreeWalker.html" title="WebKitDOMTreeWalker"><span class="type">WebKitDOMTreeWalker</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMTreeWalker.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMTreeWalker--expand-entity-references"></a><h3>The <code class="literal">"expand-entity-references"</code> property</h3>
+<pre class="programlisting">  "expand-entity-references" <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read</pre>
+<p>read-only gboolean TreeWalker:expand-entity-references.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMTreeWalker--filter"></a><h3>The <code class="literal">"filter"</code> property</h3>
+<pre class="programlisting">  "filter"                   <a class="link" href="WebKitDOMNodeFilter.html" title="WebKitDOMNodeFilter"><span class="type">WebKitDOMNodeFilter</span></a>*  : Read</pre>
+<p>read-only WebKitDOMNodeFilter* TreeWalker:filter.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMTreeWalker--root"></a><h3>The <code class="literal">"root"</code> property</h3>
+<pre class="programlisting">  "root"                     <a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a>*        : Read</pre>
+<p>read-only WebKitDOMNode* TreeWalker:root.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMTreeWalker--what-to-show"></a><h3>The <code class="literal">"what-to-show"</code> property</h3>
+<pre class="programlisting">  "what-to-show"             <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read</pre>
+<p>read-only gulong TreeWalker:what-to-show.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18.1</div>
+</body>
+</html>

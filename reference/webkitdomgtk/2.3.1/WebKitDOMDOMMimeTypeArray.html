@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMDOMMimeTypeArray</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMDOMMimeType.html" title="WebKitDOMDOMMimeType">
+<link rel="next" href="WebKitDOMDOMPlugin.html" title="WebKitDOMDOMPlugin">
+<meta name="generator" content="GTK-Doc V1.18.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="WebKitDOMDOMMimeType.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">WebKitDOMGTK+ Reference Manual</th>
+<td><a accesskey="n" href="WebKitDOMDOMPlugin.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#WebKitDOMDOMMimeTypeArray.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMDOMMimeTypeArray.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMDOMMimeTypeArray.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitDOMDOMMimeTypeArray.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="WebKitDOMDOMMimeTypeArray"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMDOMMimeTypeArray.top_of_page"></a>WebKitDOMDOMMimeTypeArray</span></h2>
+<p>WebKitDOMDOMMimeTypeArray</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMDOMMimeTypeArray.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMDOMMimeTypeArray.html#WebKitDOMDOMMimeTypeArray-struct" title="WebKitDOMDOMMimeTypeArray">WebKitDOMDOMMimeTypeArray</a>;
+<a class="link" href="WebKitDOMDOMMimeType.html" title="WebKitDOMDOMMimeType"><span class="returnvalue">WebKitDOMDOMMimeType</span></a> * <a class="link" href="WebKitDOMDOMMimeTypeArray.html#webkit-dom-dom-mime-type-array-item" title="webkit_dom_dom_mime_type_array_item ()">webkit_dom_dom_mime_type_array_item</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMMimeTypeArray.html" title="WebKitDOMDOMMimeTypeArray"><span class="type">WebKitDOMDOMMimeTypeArray</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> index</code></em>);
+<a class="link" href="WebKitDOMDOMMimeType.html" title="WebKitDOMDOMMimeType"><span class="returnvalue">WebKitDOMDOMMimeType</span></a> * <a class="link" href="WebKitDOMDOMMimeTypeArray.html#webkit-dom-dom-mime-type-array-named-item" title="webkit_dom_dom_mime_type_array_named_item ()">webkit_dom_dom_mime_type_array_named_item</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMMimeTypeArray.html" title="WebKitDOMDOMMimeTypeArray"><span class="type">WebKitDOMDOMMimeTypeArray</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              <a class="link" href="WebKitDOMDOMMimeTypeArray.html#webkit-dom-dom-mime-type-array-get-length" title="webkit_dom_dom_mime_type_array_get_length ()">webkit_dom_dom_mime_type_array_get_length</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMMimeTypeArray.html" title="WebKitDOMDOMMimeTypeArray"><span class="type">WebKitDOMDOMMimeTypeArray</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMDOMMimeTypeArray.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----WebKitDOMDOMMimeTypeArray
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMDOMMimeTypeArray.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitDOMDOMMimeTypeArray.html#WebKitDOMDOMMimeTypeArray--length" title='The "length" property'>length</a>"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMDOMMimeTypeArray.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMDOMMimeTypeArray.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMDOMMimeTypeArray-struct"></a><h3>WebKitDOMDOMMimeTypeArray</h3>
+<pre class="programlisting">typedef struct _WebKitDOMDOMMimeTypeArray WebKitDOMDOMMimeTypeArray;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-mime-type-array-item"></a><h3>webkit_dom_dom_mime_type_array_item ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMDOMMimeType.html" title="WebKitDOMDOMMimeType"><span class="returnvalue">WebKitDOMDOMMimeType</span></a> * webkit_dom_dom_mime_type_array_item
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMMimeTypeArray.html" title="WebKitDOMDOMMimeTypeArray"><span class="type">WebKitDOMDOMMimeTypeArray</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> index</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMMimeTypeArray.html" title="WebKitDOMDOMMimeTypeArray"><span class="type">WebKitDOMDOMMimeTypeArray</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>index</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-mime-type-array-named-item"></a><h3>webkit_dom_dom_mime_type_array_named_item ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMDOMMimeType.html" title="WebKitDOMDOMMimeType"><span class="returnvalue">WebKitDOMDOMMimeType</span></a> * webkit_dom_dom_mime_type_array_named_item
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMMimeTypeArray.html" title="WebKitDOMDOMMimeTypeArray"><span class="type">WebKitDOMDOMMimeTypeArray</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMMimeTypeArray.html" title="WebKitDOMDOMMimeTypeArray"><span class="type">WebKitDOMDOMMimeTypeArray</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>name</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-mime-type-array-get-length"></a><h3>webkit_dom_dom_mime_type_array_get_length ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              webkit_dom_dom_mime_type_array_get_length
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMMimeTypeArray.html" title="WebKitDOMDOMMimeTypeArray"><span class="type">WebKitDOMDOMMimeTypeArray</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMMimeTypeArray.html" title="WebKitDOMDOMMimeTypeArray"><span class="type">WebKitDOMDOMMimeTypeArray</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMDOMMimeTypeArray.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMDOMMimeTypeArray--length"></a><h3>The <code class="literal">"length"</code> property</h3>
+<pre class="programlisting">  "length"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read</pre>
+<p>read-only gulong DOMMimeTypeArray:length.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18.1</div>
+</body>
+</html>
