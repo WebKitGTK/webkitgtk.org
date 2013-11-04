@@ -308,6 +308,7 @@ class WebKitRelease:
 
     WK1_PKG_NAME = "webkitgtk"
     WK2_PKG_NAME = "webkit2gtk"
+    WKDOM_PKG_NAME = "webkitdomgtk"
     RELEASE_BASE_URL = "http://webkitgtk.org/releases/"
     ONLINE_DOCS_BASE_URL = "http://developer.gnome.org"
 
@@ -494,9 +495,15 @@ are far too many to list!
             except KeyError:
                 module = match.group(1)
 
-            sub = '%s -> %s/%s/stable/' % (match.group(1), WebKitRelease.ONLINE_DOCS_BASE_URL, module)
+            if module == WebKitRelease.WKDOM_PKG_NAME:
+                sub = '%s -> ../../%s/%s/' % (match.group(1), module, os.path.basename(docdir))
+            else:
+                sub = '%s -> %s/%s/stable/' % (match.group(1), WebKitRelease.ONLINE_DOCS_BASE_URL, module)
             subs.setdefault(sub, 0)
             subs[sub] += 1
+
+            if module == WebKitRelease.WKDOM_PKG_NAME:
+                return '<a href="../../%s/%s/%s' % (module, os.path.basename(docdir), match.group(2))
 
             return '<a href="%s/%s/stable/%s' % (WebKitRelease.ONLINE_DOCS_BASE_URL, module, match.group(2))
 
@@ -533,7 +540,7 @@ are far too many to list!
 
     def install_docs(self, docs_dir):
         version = self._tarball.get_version_str()
-        for wk_pkg in [self.WK1_PKG_NAME, self.WK2_PKG_NAME]:
+        for wk_pkg in [self.WKDOM_PKG_NAME, self.WK1_PKG_NAME, self.WK2_PKG_NAME]:
             docdir = os.path.join(docs_dir, wk_pkg, version)
             try:
                 os.makedirs(docdir)
