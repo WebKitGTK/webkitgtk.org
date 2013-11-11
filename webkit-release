@@ -538,9 +538,19 @@ are far too many to list!
             tar.addfile(member, open(file_path))
         tar.close()
 
+    def _get_doc_pkg_names(self):
+        pkg_names = [self.WK1_PKG_NAME, self.WK2_PKG_NAME]
+
+        major, minor, micro, patch = self._tarball.get_version()
+        # DOM Bindings API docs were introduced in 2.3.
+        if major > 2 or (major == 2 and minor >= 3):
+            pkg_names.insert(0, self.WKDOM_PKG_NAME)
+
+        return pkg_names
+
     def install_docs(self, docs_dir):
         version = self._tarball.get_version_str()
-        for wk_pkg in [self.WKDOM_PKG_NAME, self.WK1_PKG_NAME, self.WK2_PKG_NAME]:
+        for wk_pkg in self._get_doc_pkg_names():
             docdir = os.path.join(docs_dir, wk_pkg, version)
             try:
                 os.makedirs(docdir)
