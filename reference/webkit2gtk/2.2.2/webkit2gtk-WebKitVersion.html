@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKit2GTK+ Reference Manual: WebKitVersion</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKit2GTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitURISchemeRequest.html" title="WebKitURISchemeRequest">
+<link rel="next" href="WebKitContextMenu.html" title="WebKitContextMenu">
+<meta name="generator" content="GTK-Doc V1.19.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<td width="100%" align="left">
+<a href="#" class="shortcut">Top</a>
+                   | 
+                  <a href="#webkit2gtk-WebKitVersion.description" class="shortcut">Description</a>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="WebKitURISchemeRequest.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="WebKitContextMenu.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="webkit2gtk-WebKitVersion"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="webkit2gtk-WebKitVersion.top_of_page"></a>WebKitVersion</span></h2>
+<p>WebKitVersion — Provides the WebKit version</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="webkit2gtk-WebKitVersion.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               <a class="link" href="webkit2gtk-WebKitVersion.html#webkit-get-major-version" title="webkit_get_major_version ()">webkit_get_major_version</a>            (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               <a class="link" href="webkit2gtk-WebKitVersion.html#webkit-get-minor-version" title="webkit_get_minor_version ()">webkit_get_minor_version</a>            (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               <a class="link" href="webkit2gtk-WebKitVersion.html#webkit-get-micro-version" title="webkit_get_micro_version ()">webkit_get_micro_version</a>            (<em class="parameter"><code><span class="type">void</span></code></em>);
+
+#define             <a class="link" href="webkit2gtk-WebKitVersion.html#WEBKIT-MAJOR-VERSION:CAPS" title="WEBKIT_MAJOR_VERSION">WEBKIT_MAJOR_VERSION</a>
+#define             <a class="link" href="webkit2gtk-WebKitVersion.html#WEBKIT-MINOR-VERSION:CAPS" title="WEBKIT_MINOR_VERSION">WEBKIT_MINOR_VERSION</a>
+#define             <a class="link" href="webkit2gtk-WebKitVersion.html#WEBKIT-MICRO-VERSION:CAPS" title="WEBKIT_MICRO_VERSION">WEBKIT_MICRO_VERSION</a>
+#define             <a class="link" href="webkit2gtk-WebKitVersion.html#WEBKIT-CHECK-VERSION:CAPS" title="WEBKIT_CHECK_VERSION()">WEBKIT_CHECK_VERSION</a>                (major,
+                                                         minor,
+                                                         micro)
+</pre>
+</div>
+<div class="refsect1">
+<a name="webkit2gtk-WebKitVersion.description"></a><h2>Description</h2>
+<p>
+Provides convenience functions returning WebKit's major, minor and
+micro versions of the WebKit library your code is running
+against. This is not necessarily the same as the
+<a class="link" href="webkit2gtk-WebKitVersion.html#WEBKIT-MAJOR-VERSION:CAPS" title="WEBKIT_MAJOR_VERSION"><span class="type">WEBKIT_MAJOR_VERSION</span></a>, <a class="link" href="webkit2gtk-WebKitVersion.html#WEBKIT-MINOR-VERSION:CAPS" title="WEBKIT_MINOR_VERSION"><span class="type">WEBKIT_MINOR_VERSION</span></a> or
+<a class="link" href="webkit2gtk-WebKitVersion.html#WEBKIT-MICRO-VERSION:CAPS" title="WEBKIT_MICRO_VERSION"><span class="type">WEBKIT_MICRO_VERSION</span></a>, which represent the version of the WebKit
+headers included when compiling the code.
+</p>
+</div>
+<div class="refsect1">
+<a name="webkit2gtk-WebKitVersion.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="webkit-get-major-version"></a><h3>webkit_get_major_version ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               webkit_get_major_version            (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Returns the major version number of the WebKit library.
+(e.g. in WebKit version 1.8.3 this is 1.)
+</p>
+<p>
+This function is in the library, so it represents the WebKit library
+your code is running against. Contrast with the <a class="link" href="webkit2gtk-WebKitVersion.html#WEBKIT-MAJOR-VERSION:CAPS" title="WEBKIT_MAJOR_VERSION"><span class="type">WEBKIT_MAJOR_VERSION</span></a>
+macro, which represents the major version of the WebKit headers you
+have included when compiling your code.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the major version number of the WebKit library</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-get-minor-version"></a><h3>webkit_get_minor_version ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               webkit_get_minor_version            (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Returns the minor version number of the WebKit library.
+(e.g. in WebKit version 1.8.3 this is 8.)
+</p>
+<p>
+This function is in the library, so it represents the WebKit library
+your code is running against. Contrast with the <a class="link" href="webkit2gtk-WebKitVersion.html#WEBKIT-MINOR-VERSION:CAPS" title="WEBKIT_MINOR_VERSION"><span class="type">WEBKIT_MINOR_VERSION</span></a>
+macro, which represents the minor version of the WebKit headers you
+have included when compiling your code.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the minor version number of the WebKit library</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-get-micro-version"></a><h3>webkit_get_micro_version ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               webkit_get_micro_version            (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Returns the micro version number of the WebKit library.
+(e.g. in WebKit version 1.8.3 this is 3.)
+</p>
+<p>
+This function is in the library, so it represents the WebKit library
+your code is running against. Contrast with the <a class="link" href="webkit2gtk-WebKitVersion.html#WEBKIT-MICRO-VERSION:CAPS" title="WEBKIT_MICRO_VERSION"><span class="type">WEBKIT_MICRO_VERSION</span></a>
+macro, which represents the micro version of the WebKit headers you
+have included when compiling your code.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the micro version number of the WebKit library</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WEBKIT-MAJOR-VERSION:CAPS"></a><h3>WEBKIT_MAJOR_VERSION</h3>
+<pre class="programlisting">#define WEBKIT_MAJOR_VERSION (2)
+</pre>
+<p>
+Like <a class="link" href="webkit2gtk-WebKitVersion.html#webkit-get-major-version" title="webkit_get_major_version ()"><code class="function">webkit_get_major_version()</code></a>, but from the headers used at
+application compile time, rather than from the library linked
+against at application run time.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WEBKIT-MINOR-VERSION:CAPS"></a><h3>WEBKIT_MINOR_VERSION</h3>
+<pre class="programlisting">#define WEBKIT_MINOR_VERSION (2)
+</pre>
+<p>
+Like <a class="link" href="webkit2gtk-WebKitVersion.html#webkit-get-minor-version" title="webkit_get_minor_version ()"><code class="function">webkit_get_minor_version()</code></a>, but from the headers used at
+application compile time, rather than from the library linked
+against at application run time.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WEBKIT-MICRO-VERSION:CAPS"></a><h3>WEBKIT_MICRO_VERSION</h3>
+<pre class="programlisting">#define WEBKIT_MICRO_VERSION (2)
+</pre>
+<p>
+Like <a class="link" href="webkit2gtk-WebKitVersion.html#webkit-get-micro-version" title="webkit_get_micro_version ()"><code class="function">webkit_get_micro_version()</code></a>, but from the headers used at
+application compile time, rather than from the library linked
+against at application run time.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WEBKIT-CHECK-VERSION:CAPS"></a><h3>WEBKIT_CHECK_VERSION()</h3>
+<pre class="programlisting">#define             WEBKIT_CHECK_VERSION(major, minor, micro)</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>major</code></em> :</span></p></td>
+<td>major version (e.g. 1 for version 1.2.5)</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>minor</code></em> :</span></p></td>
+<td>minor version (e.g. 2 for version 1.2.5)</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>micro</code></em> :</span></p></td>
+<td>micro version (e.g. 5 for version 1.2.5)</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the version of the WebKit header files
+is the same as or newer than the passed-in version.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19.1</div>
+</body>
+</html>
