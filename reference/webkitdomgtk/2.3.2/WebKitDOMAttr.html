@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMGTK+ Reference Manual: WebKitDOMAttr</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMStyleSheetList.html" title="WebKitDOMStyleSheetList">
+<link rel="next" href="WebKitDOMCDATASection.html" title="WebKitDOMCDATASection">
+<meta name="generator" content="GTK-Doc V1.19.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<td width="100%" align="left">
+<a href="#" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMAttr.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMAttr.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitDOMAttr.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#WebKitDOMAttr.properties" class="shortcut">Properties</a>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="WebKitDOMStyleSheetList.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="WebKitDOMCDATASection.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="WebKitDOMAttr"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMAttr.top_of_page"></a>WebKitDOMAttr</span></h2>
+<p>WebKitDOMAttr</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMAttr.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMAttr.html#WebKitDOMAttr-struct" title="WebKitDOMAttr">WebKitDOMAttr</a>;
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMAttr.html#webkit-dom-attr-get-name" title="webkit_dom_attr_get_name ()">webkit_dom_attr_get_name</a>            (<em class="parameter"><code><a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="type">WebKitDOMAttr</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMAttr.html#webkit-dom-attr-get-specified" title="webkit_dom_attr_get_specified ()">webkit_dom_attr_get_specified</a>       (<em class="parameter"><code><a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="type">WebKitDOMAttr</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMAttr.html#webkit-dom-attr-get-value" title="webkit_dom_attr_get_value ()">webkit_dom_attr_get_value</a>           (<em class="parameter"><code><a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="type">WebKitDOMAttr</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMAttr.html#webkit-dom-attr-set-value" title="webkit_dom_attr_set_value ()">webkit_dom_attr_set_value</a>           (<em class="parameter"><code><a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="type">WebKitDOMAttr</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="returnvalue">WebKitDOMElement</span></a> *  <a class="link" href="WebKitDOMAttr.html#webkit-dom-attr-get-owner-element" title="webkit_dom_attr_get_owner_element ()">webkit_dom_attr_get_owner_element</a>   (<em class="parameter"><code><a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="type">WebKitDOMAttr</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMAttr.html#webkit-dom-attr-get-is-id" title="webkit_dom_attr_get_is_id ()">webkit_dom_attr_get_is_id</a>           (<em class="parameter"><code><a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="type">WebKitDOMAttr</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMAttr.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----<a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode">WebKitDOMNode</a>
+               +----WebKitDOMAttr
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMAttr.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+WebKitDOMAttr implements
+ <a class="link" href="WebKitDOMEventTarget.html" title="WebKitDOMEventTarget">WebKitDOMEventTarget</a>.</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMAttr.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitDOMAttr.html#WebKitDOMAttr--is-id" title='The "is-id" property'>is-id</a>"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
+  "<a class="link" href="WebKitDOMAttr.html#WebKitDOMAttr--name" title='The "name" property'>name</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMAttr.html#WebKitDOMAttr--owner-element" title='The "owner-element" property'>owner-element</a>"            <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>*     : Read
+  "<a class="link" href="WebKitDOMAttr.html#WebKitDOMAttr--specified" title='The "specified" property'>specified</a>"                <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
+  "<a class="link" href="WebKitDOMAttr.html#WebKitDOMAttr--value" title='The "value" property'>value</a>"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMAttr.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMAttr.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMAttr-struct"></a><h3>WebKitDOMAttr</h3>
+<pre class="programlisting">typedef struct _WebKitDOMAttr WebKitDOMAttr;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-attr-get-name"></a><h3>webkit_dom_attr_get_name ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_attr_get_name            (<em class="parameter"><code><a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="type">WebKitDOMAttr</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="type">WebKitDOMAttr</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-attr-get-specified"></a><h3>webkit_dom_attr_get_specified ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_attr_get_specified       (<em class="parameter"><code><a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="type">WebKitDOMAttr</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="type">WebKitDOMAttr</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-attr-get-value"></a><h3>webkit_dom_attr_get_value ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_attr_get_value           (<em class="parameter"><code><a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="type">WebKitDOMAttr</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="type">WebKitDOMAttr</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-attr-set-value"></a><h3>webkit_dom_attr_set_value ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_attr_set_value           (<em class="parameter"><code><a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="type">WebKitDOMAttr</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="type">WebKitDOMAttr</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-attr-get-owner-element"></a><h3>webkit_dom_attr_get_owner_element ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="returnvalue">WebKitDOMElement</span></a> *  webkit_dom_attr_get_owner_element   (<em class="parameter"><code><a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="type">WebKitDOMAttr</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="type">WebKitDOMAttr</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-attr-get-is-id"></a><h3>webkit_dom_attr_get_is_id ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_attr_get_is_id           (<em class="parameter"><code><a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="type">WebKitDOMAttr</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="type">WebKitDOMAttr</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMAttr.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMAttr--is-id"></a><h3>The <code class="literal">"is-id"</code> property</h3>
+<pre class="programlisting">  "is-id"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read</pre>
+<p>read-only gboolean Attr:is-id.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMAttr--name"></a><h3>The <code class="literal">"name"</code> property</h3>
+<pre class="programlisting">  "name"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* Attr:name.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMAttr--owner-element"></a><h3>The <code class="literal">"owner-element"</code> property</h3>
+<pre class="programlisting">  "owner-element"            <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>*     : Read</pre>
+<p>read-only WebKitDOMElement* Attr:owner-element.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMAttr--specified"></a><h3>The <code class="literal">"specified"</code> property</h3>
+<pre class="programlisting">  "specified"                <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read</pre>
+<p>read-only gboolean Attr:specified.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMAttr--value"></a><h3>The <code class="literal">"value"</code> property</h3>
+<pre class="programlisting">  "value"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* Attr:value.</p>
+<p>Default value: ""</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19.1</div>
+</body>
+</html>

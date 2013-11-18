@@ -1,0 +1,2593 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMGTK+ Reference Manual: WebKitDOMDOMWindow</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMDOMWindowCSS.html" title="WebKitDOMDOMWindowCSS">
+<link rel="next" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection">
+<meta name="generator" content="GTK-Doc V1.19.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<td width="100%" align="left">
+<a href="#" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMDOMWindow.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMDOMWindow.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitDOMDOMWindow.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#WebKitDOMDOMWindow.properties" class="shortcut">Properties</a>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="WebKitDOMDOMWindowCSS.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="WebKitDOMDOMSelection.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="WebKitDOMDOMWindow"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMDOMWindow.top_of_page"></a>WebKitDOMDOMWindow</span></h2>
+<p>WebKitDOMDOMWindow</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMDOMWindow.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow-struct" title="WebKitDOMDOMWindow">WebKitDOMDOMWindow</a>;
+<a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="returnvalue">WebKitDOMDOMSelection</span></a> * <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-selection" title="webkit_dom_dom_window_get_selection ()">webkit_dom_dom_window_get_selection</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-focus" title="webkit_dom_dom_window_focus ()">webkit_dom_dom_window_focus</a>         (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-blur" title="webkit_dom_dom_window_blur ()">webkit_dom_dom_window_blur</a>          (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-close" title="webkit_dom_dom_window_close ()">webkit_dom_dom_window_close</a>         (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-print" title="webkit_dom_dom_window_print ()">webkit_dom_dom_window_print</a>         (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-stop" title="webkit_dom_dom_window_stop ()">webkit_dom_dom_window_stop</a>          (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-alert" title="webkit_dom_dom_window_alert ()">webkit_dom_dom_window_alert</a>         (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *message</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-confirm" title="webkit_dom_dom_window_confirm ()">webkit_dom_dom_window_confirm</a>       (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *message</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-prompt" title="webkit_dom_dom_window_prompt ()">webkit_dom_dom_window_prompt</a>        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *message</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *defaultValue</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-find" title="webkit_dom_dom_window_find ()">webkit_dom_dom_window_find</a>          (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *string</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> caseSensitive</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> backwards</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> wrap</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> wholeWord</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> searchInFrames</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> showDialog</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-scroll-by" title="webkit_dom_dom_window_scroll_by ()">webkit_dom_dom_window_scroll_by</a>     (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> x</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> y</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-scroll-to" title="webkit_dom_dom_window_scroll_to ()">webkit_dom_dom_window_scroll_to</a>     (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> x</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> y</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-scroll" title="webkit_dom_dom_window_scroll ()">webkit_dom_dom_window_scroll</a>        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> x</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> y</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-move-by" title="webkit_dom_dom_window_move_by ()">webkit_dom_dom_window_move_by</a>       (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> x</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> y</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-move-to" title="webkit_dom_dom_window_move_to ()">webkit_dom_dom_window_move_to</a>       (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> x</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> y</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-resize-by" title="webkit_dom_dom_window_resize_by ()">webkit_dom_dom_window_resize_by</a>     (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> x</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> y</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-resize-to" title="webkit_dom_dom_window_resize_to ()">webkit_dom_dom_window_resize_to</a>     (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> width</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> height</code></em>);
+<a class="link" href="WebKitDOMMediaQueryList.html" title="WebKitDOMMediaQueryList"><span class="returnvalue">WebKitDOMMediaQueryList</span></a> * <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-match-media" title="webkit_dom_dom_window_match_media ()">webkit_dom_dom_window_match_media</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *query</code></em>);
+<a class="link" href="WebKitDOMCSSStyleDeclaration.html" title="WebKitDOMCSSStyleDeclaration"><span class="returnvalue">WebKitDOMCSSStyleDeclaration</span></a> * <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-computed-style" title="webkit_dom_dom_window_get_computed_style ()">webkit_dom_dom_window_get_computed_style</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *element</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *pseudoElement</code></em>);
+<a class="link" href="WebKitDOMWebKitPoint.html" title="WebKitDOMWebKitPoint"><span class="returnvalue">WebKitDOMWebKitPoint</span></a> * <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-webkit-convert-point-from-page-to-node" title="webkit_dom_dom_window_webkit_convert_point_from_page_to_node ()">webkit_dom_dom_window_webkit_convert_point_from_page_to_node</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a> *node</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMWebKitPoint.html" title="WebKitDOMWebKitPoint"><span class="type">WebKitDOMWebKitPoint</span></a> *p</code></em>);
+<a class="link" href="WebKitDOMWebKitPoint.html" title="WebKitDOMWebKitPoint"><span class="returnvalue">WebKitDOMWebKitPoint</span></a> * <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-webkit-convert-point-from-node-to-page" title="webkit_dom_dom_window_webkit_convert_point_from_node_to_page ()">webkit_dom_dom_window_webkit_convert_point_from_node_to_page</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a> *node</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMWebKitPoint.html" title="WebKitDOMWebKitPoint"><span class="type">WebKitDOMWebKitPoint</span></a> *p</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-cancel-animation-frame" title="webkit_dom_dom_window_cancel_animation_frame ()">webkit_dom_dom_window_cancel_animation_frame</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> id</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-webkit-cancel-animation-frame" title="webkit_dom_dom_window_webkit_cancel_animation_frame ()">webkit_dom_dom_window_webkit_cancel_animation_frame</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> id</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-webkit-cancel-request-animation-frame" title="webkit_dom_dom_window_webkit_cancel_request_animation_frame ()">webkit_dom_dom_window_webkit_cancel_request_animation_frame</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> id</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-dispatch-event" title="webkit_dom_dom_window_dispatch_event ()">webkit_dom_dom_window_dispatch_event</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMEvent.html" title="WebKitDOMEvent"><span class="type">WebKitDOMEvent</span></a> *evt</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-capture-events" title="webkit_dom_dom_window_capture_events ()">webkit_dom_dom_window_capture_events</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-release-events" title="webkit_dom_dom_window_release_events ()">webkit_dom_dom_window_release_events</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-atob" title="webkit_dom_dom_window_atob ()">webkit_dom_dom_window_atob</a>          (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *string</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-btoa" title="webkit_dom_dom_window_btoa ()">webkit_dom_dom_window_btoa</a>          (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *string</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-clear-timeout" title="webkit_dom_dom_window_clear_timeout ()">webkit_dom_dom_window_clear_timeout</a> (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> handle</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-clear-interval" title="webkit_dom_dom_window_clear_interval ()">webkit_dom_dom_window_clear_interval</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> handle</code></em>);
+<a class="link" href="WebKitDOMScreen.html" title="WebKitDOMScreen"><span class="returnvalue">WebKitDOMScreen</span></a> *   <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-screen" title="webkit_dom_dom_window_get_screen ()">webkit_dom_dom_window_get_screen</a>    (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMHistory.html" title="WebKitDOMHistory"><span class="returnvalue">WebKitDOMHistory</span></a> *  <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-history" title="webkit_dom_dom_window_get_history ()">webkit_dom_dom_window_get_history</a>   (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMBarProp.html" title="WebKitDOMBarProp"><span class="returnvalue">WebKitDOMBarProp</span></a> *  <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-locationbar" title="webkit_dom_dom_window_get_locationbar ()">webkit_dom_dom_window_get_locationbar</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMBarProp.html" title="WebKitDOMBarProp"><span class="returnvalue">WebKitDOMBarProp</span></a> *  <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-menubar" title="webkit_dom_dom_window_get_menubar ()">webkit_dom_dom_window_get_menubar</a>   (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMBarProp.html" title="WebKitDOMBarProp"><span class="returnvalue">WebKitDOMBarProp</span></a> *  <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-personalbar" title="webkit_dom_dom_window_get_personalbar ()">webkit_dom_dom_window_get_personalbar</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMBarProp.html" title="WebKitDOMBarProp"><span class="returnvalue">WebKitDOMBarProp</span></a> *  <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-scrollbars" title="webkit_dom_dom_window_get_scrollbars ()">webkit_dom_dom_window_get_scrollbars</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMBarProp.html" title="WebKitDOMBarProp"><span class="returnvalue">WebKitDOMBarProp</span></a> *  <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-statusbar" title="webkit_dom_dom_window_get_statusbar ()">webkit_dom_dom_window_get_statusbar</a> (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMBarProp.html" title="WebKitDOMBarProp"><span class="returnvalue">WebKitDOMBarProp</span></a> *  <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-toolbar" title="webkit_dom_dom_window_get_toolbar ()">webkit_dom_dom_window_get_toolbar</a>   (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="returnvalue">WebKitDOMNavigator</span></a> * <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-navigator" title="webkit_dom_dom_window_get_navigator ()">webkit_dom_dom_window_get_navigator</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="returnvalue">WebKitDOMNavigator</span></a> * <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-client-information" title="webkit_dom_dom_window_get_client_information ()">webkit_dom_dom_window_get_client_information</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="returnvalue">WebKitDOMElement</span></a> *  <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-frame-element" title="webkit_dom_dom_window_get_frame_element ()">webkit_dom_dom_window_get_frame_element</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-offscreen-buffering" title="webkit_dom_dom_window_get_offscreen_buffering ()">webkit_dom_dom_window_get_offscreen_buffering</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-outer-height" title="webkit_dom_dom_window_get_outer_height ()">webkit_dom_dom_window_get_outer_height</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-outer-width" title="webkit_dom_dom_window_get_outer_width ()">webkit_dom_dom_window_get_outer_width</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-inner-height" title="webkit_dom_dom_window_get_inner_height ()">webkit_dom_dom_window_get_inner_height</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-inner-width" title="webkit_dom_dom_window_get_inner_width ()">webkit_dom_dom_window_get_inner_width</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-screen-x" title="webkit_dom_dom_window_get_screen_x ()">webkit_dom_dom_window_get_screen_x</a>  (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-screen-y" title="webkit_dom_dom_window_get_screen_y ()">webkit_dom_dom_window_get_screen_y</a>  (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-screen-left" title="webkit_dom_dom_window_get_screen_left ()">webkit_dom_dom_window_get_screen_left</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-screen-top" title="webkit_dom_dom_window_get_screen_top ()">webkit_dom_dom_window_get_screen_top</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-scroll-x" title="webkit_dom_dom_window_get_scroll_x ()">webkit_dom_dom_window_get_scroll_x</a>  (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-scroll-y" title="webkit_dom_dom_window_get_scroll_y ()">webkit_dom_dom_window_get_scroll_y</a>  (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-page-x-offset" title="webkit_dom_dom_window_get_page_x_offset ()">webkit_dom_dom_window_get_page_x_offset</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-page-y-offset" title="webkit_dom_dom_window_get_page_y_offset ()">webkit_dom_dom_window_get_page_y_offset</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-closed" title="webkit_dom_dom_window_get_closed ()">webkit_dom_dom_window_get_closed</a>    (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-length" title="webkit_dom_dom_window_get_length ()">webkit_dom_dom_window_get_length</a>    (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-name" title="webkit_dom_dom_window_get_name ()">webkit_dom_dom_window_get_name</a>      (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-set-name" title="webkit_dom_dom_window_set_name ()">webkit_dom_dom_window_set_name</a>      (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-status" title="webkit_dom_dom_window_get_status ()">webkit_dom_dom_window_get_status</a>    (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-set-status" title="webkit_dom_dom_window_set_status ()">webkit_dom_dom_window_set_status</a>    (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-default-status" title="webkit_dom_dom_window_get_default_status ()">webkit_dom_dom_window_get_default_status</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-set-default-status" title="webkit_dom_dom_window_set_default_status ()">webkit_dom_dom_window_set_default_status</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="returnvalue">WebKitDOMDOMWindow</span></a> * <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-self" title="webkit_dom_dom_window_get_self ()">webkit_dom_dom_window_get_self</a>     (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="returnvalue">WebKitDOMDOMWindow</span></a> * <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-window" title="webkit_dom_dom_window_get_window ()">webkit_dom_dom_window_get_window</a>   (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="returnvalue">WebKitDOMDOMWindow</span></a> * <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-frames" title="webkit_dom_dom_window_get_frames ()">webkit_dom_dom_window_get_frames</a>   (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="returnvalue">WebKitDOMDOMWindow</span></a> * <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-opener" title="webkit_dom_dom_window_get_opener ()">webkit_dom_dom_window_get_opener</a>   (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="returnvalue">WebKitDOMDOMWindow</span></a> * <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-parent" title="webkit_dom_dom_window_get_parent ()">webkit_dom_dom_window_get_parent</a>   (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="returnvalue">WebKitDOMDOMWindow</span></a> * <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-top" title="webkit_dom_dom_window_get_top ()">webkit_dom_dom_window_get_top</a>      (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMDocument.html" title="WebKitDOMDocument"><span class="returnvalue">WebKitDOMDocument</span></a> * <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-document" title="webkit_dom_dom_window_get_document ()">webkit_dom_dom_window_get_document</a>  (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMStyleMedia.html" title="WebKitDOMStyleMedia"><span class="returnvalue">WebKitDOMStyleMedia</span></a> * <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-style-media" title="webkit_dom_dom_window_get_style_media ()">webkit_dom_dom_window_get_style_media</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-device-pixel-ratio" title="webkit_dom_dom_window_get_device_pixel_ratio ()">webkit_dom_dom_window_get_device_pixel_ratio</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMDOMApplicationCache.html" title="WebKitDOMDOMApplicationCache"><span class="returnvalue">WebKitDOMDOMApplicationCache</span></a> * <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-application-cache" title="webkit_dom_dom_window_get_application_cache ()">webkit_dom_dom_window_get_application_cache</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMStorage.html" title="WebKitDOMStorage"><span class="returnvalue">WebKitDOMStorage</span></a> *  <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-session-storage" title="webkit_dom_dom_window_get_session_storage ()">webkit_dom_dom_window_get_session_storage</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a class="link" href="WebKitDOMStorage.html" title="WebKitDOMStorage"><span class="returnvalue">WebKitDOMStorage</span></a> *  <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-local-storage" title="webkit_dom_dom_window_get_local_storage ()">webkit_dom_dom_window_get_local_storage</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a class="link" href="WebKitDOMConsole.html" title="WebKitDOMConsole"><span class="returnvalue">WebKitDOMConsole</span></a> *  <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-console" title="webkit_dom_dom_window_get_console ()">webkit_dom_dom_window_get_console</a>   (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMPerformance.html" title="WebKitDOMPerformance"><span class="returnvalue">WebKitDOMPerformance</span></a> * <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-performance" title="webkit_dom_dom_window_get_performance ()">webkit_dom_dom_window_get_performance</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMDOMWindowCSS.html" title="WebKitDOMDOMWindowCSS"><span class="returnvalue">WebKitDOMDOMWindowCSS</span></a> * <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-css" title="webkit_dom_dom_window_get_css ()">webkit_dom_dom_window_get_css</a>   (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMStorageInfo.html" title="WebKitDOMStorageInfo"><span class="returnvalue">WebKitDOMStorageInfo</span></a> * <a class="link" href="WebKitDOMDOMWindow.html#webkit-dom-dom-window-get-webkit-storage-info" title="webkit_dom_dom_window_get_webkit_storage_info ()">webkit_dom_dom_window_get_webkit_storage_info</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMDOMWindow.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----WebKitDOMDOMWindow
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMDOMWindow.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+WebKitDOMDOMWindow implements
+ <a class="link" href="WebKitDOMEventTarget.html" title="WebKitDOMEventTarget">WebKitDOMEventTarget</a>.</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMDOMWindow.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--application-cache" title='The "application-cache" property'>application-cache</a>"        <a class="link" href="WebKitDOMDOMApplicationCache.html" title="WebKitDOMDOMApplicationCache"><span class="type">WebKitDOMDOMApplicationCache</span></a>*  : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--client-information" title='The "client-information" property'>client-information</a>"       <a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a>*   : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--closed" title='The "closed" property'>closed</a>"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--console" title='The "console" property'>console</a>"                  <a class="link" href="WebKitDOMConsole.html" title="WebKitDOMConsole"><span class="type">WebKitDOMConsole</span></a>*     : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--css" title='The "css" property'>css</a>"                      <a class="link" href="WebKitDOMDOMWindowCSS.html" title="WebKitDOMDOMWindowCSS"><span class="type">WebKitDOMDOMWindowCSS</span></a>*  : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--default-status" title='The "default-status" property'>default-status</a>"           <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--device-pixel-ratio" title='The "device-pixel-ratio" property'>device-pixel-ratio</a>"       <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>               : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--document" title='The "document" property'>document</a>"                 <a class="link" href="WebKitDOMDocument.html" title="WebKitDOMDocument"><span class="type">WebKitDOMDocument</span></a>*    : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--frame-element" title='The "frame-element" property'>frame-element</a>"            <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>*     : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--frames" title='The "frames" property'>frames</a>"                   <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>*   : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--history" title='The "history" property'>history</a>"                  <a class="link" href="WebKitDOMHistory.html" title="WebKitDOMHistory"><span class="type">WebKitDOMHistory</span></a>*     : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--inner-height" title='The "inner-height" property'>inner-height</a>"             <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--inner-width" title='The "inner-width" property'>inner-width</a>"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--length" title='The "length" property'>length</a>"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--local-storage" title='The "local-storage" property'>local-storage</a>"            <a class="link" href="WebKitDOMStorage.html" title="WebKitDOMStorage"><span class="type">WebKitDOMStorage</span></a>*     : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--locationbar" title='The "locationbar" property'>locationbar</a>"              <a class="link" href="WebKitDOMBarProp.html" title="WebKitDOMBarProp"><span class="type">WebKitDOMBarProp</span></a>*     : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--menubar" title='The "menubar" property'>menubar</a>"                  <a class="link" href="WebKitDOMBarProp.html" title="WebKitDOMBarProp"><span class="type">WebKitDOMBarProp</span></a>*     : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--name" title='The "name" property'>name</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--navigator" title='The "navigator" property'>navigator</a>"                <a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a>*   : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--offscreen-buffering" title='The "offscreen-buffering" property'>offscreen-buffering</a>"      <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--opener" title='The "opener" property'>opener</a>"                   <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>*   : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--outer-height" title='The "outer-height" property'>outer-height</a>"             <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--outer-width" title='The "outer-width" property'>outer-width</a>"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--page-x-offset" title='The "page-x-offset" property'>page-x-offset</a>"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--page-y-offset" title='The "page-y-offset" property'>page-y-offset</a>"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--parent" title='The "parent" property'>parent</a>"                   <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>*   : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--performance" title='The "performance" property'>performance</a>"              <a class="link" href="WebKitDOMPerformance.html" title="WebKitDOMPerformance"><span class="type">WebKitDOMPerformance</span></a>*  : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--personalbar" title='The "personalbar" property'>personalbar</a>"              <a class="link" href="WebKitDOMBarProp.html" title="WebKitDOMBarProp"><span class="type">WebKitDOMBarProp</span></a>*     : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--screen" title='The "screen" property'>screen</a>"                   <a class="link" href="WebKitDOMScreen.html" title="WebKitDOMScreen"><span class="type">WebKitDOMScreen</span></a>*      : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--screen-left" title='The "screen-left" property'>screen-left</a>"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--screen-top" title='The "screen-top" property'>screen-top</a>"               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--screen-x" title='The "screen-x" property'>screen-x</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--screen-y" title='The "screen-y" property'>screen-y</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--scroll-x" title='The "scroll-x" property'>scroll-x</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--scroll-y" title='The "scroll-y" property'>scroll-y</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--scrollbars" title='The "scrollbars" property'>scrollbars</a>"               <a class="link" href="WebKitDOMBarProp.html" title="WebKitDOMBarProp"><span class="type">WebKitDOMBarProp</span></a>*     : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--self" title='The "self" property'>self</a>"                     <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>*   : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--session-storage" title='The "session-storage" property'>session-storage</a>"          <a class="link" href="WebKitDOMStorage.html" title="WebKitDOMStorage"><span class="type">WebKitDOMStorage</span></a>*     : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--status" title='The "status" property'>status</a>"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--statusbar" title='The "statusbar" property'>statusbar</a>"                <a class="link" href="WebKitDOMBarProp.html" title="WebKitDOMBarProp"><span class="type">WebKitDOMBarProp</span></a>*     : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--style-media" title='The "style-media" property'>style-media</a>"              <a class="link" href="WebKitDOMStyleMedia.html" title="WebKitDOMStyleMedia"><span class="type">WebKitDOMStyleMedia</span></a>*  : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--toolbar" title='The "toolbar" property'>toolbar</a>"                  <a class="link" href="WebKitDOMBarProp.html" title="WebKitDOMBarProp"><span class="type">WebKitDOMBarProp</span></a>*     : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--top" title='The "top" property'>top</a>"                      <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>*   : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--webkit-storage-info" title='The "webkit-storage-info" property'>webkit-storage-info</a>"      <a class="link" href="WebKitDOMStorageInfo.html" title="WebKitDOMStorageInfo"><span class="type">WebKitDOMStorageInfo</span></a>*  : Read
+  "<a class="link" href="WebKitDOMDOMWindow.html#WebKitDOMDOMWindow--window" title='The "window" property'>window</a>"                   <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>*   : Read
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMDOMWindow.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMDOMWindow.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow-struct"></a><h3>WebKitDOMDOMWindow</h3>
+<pre class="programlisting">typedef struct _WebKitDOMDOMWindow WebKitDOMDOMWindow;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-selection"></a><h3>webkit_dom_dom_window_get_selection ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="returnvalue">WebKitDOMDOMSelection</span></a> * webkit_dom_dom_window_get_selection
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-focus"></a><h3>webkit_dom_dom_window_focus ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_window_focus         (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-blur"></a><h3>webkit_dom_dom_window_blur ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_window_blur          (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-close"></a><h3>webkit_dom_dom_window_close ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_window_close         (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-print"></a><h3>webkit_dom_dom_window_print ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_window_print         (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-stop"></a><h3>webkit_dom_dom_window_stop ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_window_stop          (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-alert"></a><h3>webkit_dom_dom_window_alert ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_window_alert         (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *message</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>message</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-confirm"></a><h3>webkit_dom_dom_window_confirm ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_dom_window_confirm       (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *message</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>message</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-prompt"></a><h3>webkit_dom_dom_window_prompt ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_dom_window_prompt        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *message</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *defaultValue</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>message</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>defaultValue</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-find"></a><h3>webkit_dom_dom_window_find ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_dom_window_find          (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *string</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> caseSensitive</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> backwards</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> wrap</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> wholeWord</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> searchInFrames</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> showDialog</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>string</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>caseSensitive</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>backwards</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>wrap</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>wholeWord</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>searchInFrames</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>showDialog</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-scroll-by"></a><h3>webkit_dom_dom_window_scroll_by ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_window_scroll_by     (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> x</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> y</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-scroll-to"></a><h3>webkit_dom_dom_window_scroll_to ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_window_scroll_to     (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> x</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> y</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-scroll"></a><h3>webkit_dom_dom_window_scroll ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_window_scroll        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> x</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> y</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-move-by"></a><h3>webkit_dom_dom_window_move_by ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_window_move_by       (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> x</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> y</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-move-to"></a><h3>webkit_dom_dom_window_move_to ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_window_move_to       (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> x</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> y</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-resize-by"></a><h3>webkit_dom_dom_window_resize_by ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_window_resize_by     (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> x</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> y</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-resize-to"></a><h3>webkit_dom_dom_window_resize_to ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_window_resize_to     (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> width</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> height</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>width</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>height</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-match-media"></a><h3>webkit_dom_dom_window_match_media ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMMediaQueryList.html" title="WebKitDOMMediaQueryList"><span class="returnvalue">WebKitDOMMediaQueryList</span></a> * webkit_dom_dom_window_match_media
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *query</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>query</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMMediaQueryList.html" title="WebKitDOMMediaQueryList"><span class="type">WebKitDOMMediaQueryList</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-computed-style"></a><h3>webkit_dom_dom_window_get_computed_style ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMCSSStyleDeclaration.html" title="WebKitDOMCSSStyleDeclaration"><span class="returnvalue">WebKitDOMCSSStyleDeclaration</span></a> * webkit_dom_dom_window_get_computed_style
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *element</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *pseudoElement</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>element</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pseudoElement</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMCSSStyleDeclaration.html" title="WebKitDOMCSSStyleDeclaration"><span class="type">WebKitDOMCSSStyleDeclaration</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-webkit-convert-point-from-page-to-node"></a><h3>webkit_dom_dom_window_webkit_convert_point_from_page_to_node ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMWebKitPoint.html" title="WebKitDOMWebKitPoint"><span class="returnvalue">WebKitDOMWebKitPoint</span></a> * webkit_dom_dom_window_webkit_convert_point_from_page_to_node
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a> *node</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMWebKitPoint.html" title="WebKitDOMWebKitPoint"><span class="type">WebKitDOMWebKitPoint</span></a> *p</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>node</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>p</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMWebKitPoint.html" title="WebKitDOMWebKitPoint"><span class="type">WebKitDOMWebKitPoint</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMWebKitPoint.html" title="WebKitDOMWebKitPoint"><span class="type">WebKitDOMWebKitPoint</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-webkit-convert-point-from-node-to-page"></a><h3>webkit_dom_dom_window_webkit_convert_point_from_node_to_page ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMWebKitPoint.html" title="WebKitDOMWebKitPoint"><span class="returnvalue">WebKitDOMWebKitPoint</span></a> * webkit_dom_dom_window_webkit_convert_point_from_node_to_page
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a> *node</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMWebKitPoint.html" title="WebKitDOMWebKitPoint"><span class="type">WebKitDOMWebKitPoint</span></a> *p</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>node</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>p</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMWebKitPoint.html" title="WebKitDOMWebKitPoint"><span class="type">WebKitDOMWebKitPoint</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMWebKitPoint.html" title="WebKitDOMWebKitPoint"><span class="type">WebKitDOMWebKitPoint</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-cancel-animation-frame"></a><h3>webkit_dom_dom_window_cancel_animation_frame ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_window_cancel_animation_frame
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> id</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>id</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-webkit-cancel-animation-frame"></a><h3>webkit_dom_dom_window_webkit_cancel_animation_frame ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_window_webkit_cancel_animation_frame
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> id</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>id</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-webkit-cancel-request-animation-frame"></a><h3>webkit_dom_dom_window_webkit_cancel_request_animation_frame ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_window_webkit_cancel_request_animation_frame
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> id</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>id</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-dispatch-event"></a><h3>webkit_dom_dom_window_dispatch_event ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_dom_window_dispatch_event
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMEvent.html" title="WebKitDOMEvent"><span class="type">WebKitDOMEvent</span></a> *evt</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="warning">
+<h3 class="title">Warning</h3>
+<p><code class="literal">webkit_dom_dom_window_dispatch_event</code> has been deprecated since version 2.4 and should not be used in newly-written code. Use <a class="link" href="WebKitDOMEventTarget.html#webkit-dom-event-target-dispatch-event" title="webkit_dom_event_target_dispatch_event ()"><code class="function">webkit_dom_event_target_dispatch_event()</code></a> instead.</p>
+</div>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>evt</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMEvent.html" title="WebKitDOMEvent"><span class="type">WebKitDOMEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-capture-events"></a><h3>webkit_dom_dom_window_capture_events ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_window_capture_events
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-release-events"></a><h3>webkit_dom_dom_window_release_events ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_window_release_events
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-atob"></a><h3>webkit_dom_dom_window_atob ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_dom_window_atob          (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *string</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>string</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-btoa"></a><h3>webkit_dom_dom_window_btoa ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_dom_window_btoa          (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *string</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>string</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-clear-timeout"></a><h3>webkit_dom_dom_window_clear_timeout ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_window_clear_timeout (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> handle</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>handle</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-clear-interval"></a><h3>webkit_dom_dom_window_clear_interval ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_window_clear_interval
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> handle</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>handle</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-screen"></a><h3>webkit_dom_dom_window_get_screen ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMScreen.html" title="WebKitDOMScreen"><span class="returnvalue">WebKitDOMScreen</span></a> *   webkit_dom_dom_window_get_screen    (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMScreen.html" title="WebKitDOMScreen"><span class="type">WebKitDOMScreen</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-history"></a><h3>webkit_dom_dom_window_get_history ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMHistory.html" title="WebKitDOMHistory"><span class="returnvalue">WebKitDOMHistory</span></a> *  webkit_dom_dom_window_get_history   (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHistory.html" title="WebKitDOMHistory"><span class="type">WebKitDOMHistory</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-locationbar"></a><h3>webkit_dom_dom_window_get_locationbar ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMBarProp.html" title="WebKitDOMBarProp"><span class="returnvalue">WebKitDOMBarProp</span></a> *  webkit_dom_dom_window_get_locationbar
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMBarProp.html" title="WebKitDOMBarProp"><span class="type">WebKitDOMBarProp</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-menubar"></a><h3>webkit_dom_dom_window_get_menubar ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMBarProp.html" title="WebKitDOMBarProp"><span class="returnvalue">WebKitDOMBarProp</span></a> *  webkit_dom_dom_window_get_menubar   (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMBarProp.html" title="WebKitDOMBarProp"><span class="type">WebKitDOMBarProp</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-personalbar"></a><h3>webkit_dom_dom_window_get_personalbar ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMBarProp.html" title="WebKitDOMBarProp"><span class="returnvalue">WebKitDOMBarProp</span></a> *  webkit_dom_dom_window_get_personalbar
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMBarProp.html" title="WebKitDOMBarProp"><span class="type">WebKitDOMBarProp</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-scrollbars"></a><h3>webkit_dom_dom_window_get_scrollbars ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMBarProp.html" title="WebKitDOMBarProp"><span class="returnvalue">WebKitDOMBarProp</span></a> *  webkit_dom_dom_window_get_scrollbars
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMBarProp.html" title="WebKitDOMBarProp"><span class="type">WebKitDOMBarProp</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-statusbar"></a><h3>webkit_dom_dom_window_get_statusbar ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMBarProp.html" title="WebKitDOMBarProp"><span class="returnvalue">WebKitDOMBarProp</span></a> *  webkit_dom_dom_window_get_statusbar (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMBarProp.html" title="WebKitDOMBarProp"><span class="type">WebKitDOMBarProp</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-toolbar"></a><h3>webkit_dom_dom_window_get_toolbar ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMBarProp.html" title="WebKitDOMBarProp"><span class="returnvalue">WebKitDOMBarProp</span></a> *  webkit_dom_dom_window_get_toolbar   (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMBarProp.html" title="WebKitDOMBarProp"><span class="type">WebKitDOMBarProp</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-navigator"></a><h3>webkit_dom_dom_window_get_navigator ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="returnvalue">WebKitDOMNavigator</span></a> * webkit_dom_dom_window_get_navigator
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-client-information"></a><h3>webkit_dom_dom_window_get_client_information ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="returnvalue">WebKitDOMNavigator</span></a> * webkit_dom_dom_window_get_client_information
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-frame-element"></a><h3>webkit_dom_dom_window_get_frame_element ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="returnvalue">WebKitDOMElement</span></a> *  webkit_dom_dom_window_get_frame_element
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-offscreen-buffering"></a><h3>webkit_dom_dom_window_get_offscreen_buffering ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_dom_window_get_offscreen_buffering
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-outer-height"></a><h3>webkit_dom_dom_window_get_outer_height ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_dom_window_get_outer_height
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-outer-width"></a><h3>webkit_dom_dom_window_get_outer_width ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_dom_window_get_outer_width
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-inner-height"></a><h3>webkit_dom_dom_window_get_inner_height ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_dom_window_get_inner_height
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-inner-width"></a><h3>webkit_dom_dom_window_get_inner_width ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_dom_window_get_inner_width
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-screen-x"></a><h3>webkit_dom_dom_window_get_screen_x ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_dom_window_get_screen_x  (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-screen-y"></a><h3>webkit_dom_dom_window_get_screen_y ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_dom_window_get_screen_y  (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-screen-left"></a><h3>webkit_dom_dom_window_get_screen_left ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_dom_window_get_screen_left
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-screen-top"></a><h3>webkit_dom_dom_window_get_screen_top ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_dom_window_get_screen_top
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-scroll-x"></a><h3>webkit_dom_dom_window_get_scroll_x ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_dom_window_get_scroll_x  (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-scroll-y"></a><h3>webkit_dom_dom_window_get_scroll_y ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_dom_window_get_scroll_y  (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-page-x-offset"></a><h3>webkit_dom_dom_window_get_page_x_offset ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_dom_window_get_page_x_offset
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-page-y-offset"></a><h3>webkit_dom_dom_window_get_page_y_offset ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_dom_window_get_page_y_offset
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-closed"></a><h3>webkit_dom_dom_window_get_closed ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_dom_window_get_closed    (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-length"></a><h3>webkit_dom_dom_window_get_length ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              webkit_dom_dom_window_get_length    (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-name"></a><h3>webkit_dom_dom_window_get_name ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_dom_window_get_name      (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-set-name"></a><h3>webkit_dom_dom_window_set_name ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_window_set_name      (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-status"></a><h3>webkit_dom_dom_window_get_status ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_dom_window_get_status    (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-set-status"></a><h3>webkit_dom_dom_window_set_status ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_window_set_status    (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-default-status"></a><h3>webkit_dom_dom_window_get_default_status ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_dom_window_get_default_status
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-set-default-status"></a><h3>webkit_dom_dom_window_set_default_status ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_window_set_default_status
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-self"></a><h3>webkit_dom_dom_window_get_self ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="returnvalue">WebKitDOMDOMWindow</span></a> * webkit_dom_dom_window_get_self     (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-window"></a><h3>webkit_dom_dom_window_get_window ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="returnvalue">WebKitDOMDOMWindow</span></a> * webkit_dom_dom_window_get_window   (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-frames"></a><h3>webkit_dom_dom_window_get_frames ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="returnvalue">WebKitDOMDOMWindow</span></a> * webkit_dom_dom_window_get_frames   (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-opener"></a><h3>webkit_dom_dom_window_get_opener ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="returnvalue">WebKitDOMDOMWindow</span></a> * webkit_dom_dom_window_get_opener   (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-parent"></a><h3>webkit_dom_dom_window_get_parent ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="returnvalue">WebKitDOMDOMWindow</span></a> * webkit_dom_dom_window_get_parent   (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-top"></a><h3>webkit_dom_dom_window_get_top ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="returnvalue">WebKitDOMDOMWindow</span></a> * webkit_dom_dom_window_get_top      (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-document"></a><h3>webkit_dom_dom_window_get_document ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMDocument.html" title="WebKitDOMDocument"><span class="returnvalue">WebKitDOMDocument</span></a> * webkit_dom_dom_window_get_document  (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDocument.html" title="WebKitDOMDocument"><span class="type">WebKitDOMDocument</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-style-media"></a><h3>webkit_dom_dom_window_get_style_media ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMStyleMedia.html" title="WebKitDOMStyleMedia"><span class="returnvalue">WebKitDOMStyleMedia</span></a> * webkit_dom_dom_window_get_style_media
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMStyleMedia.html" title="WebKitDOMStyleMedia"><span class="type">WebKitDOMStyleMedia</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-device-pixel-ratio"></a><h3>webkit_dom_dom_window_get_device_pixel_ratio ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             webkit_dom_dom_window_get_device_pixel_ratio
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-application-cache"></a><h3>webkit_dom_dom_window_get_application_cache ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMDOMApplicationCache.html" title="WebKitDOMDOMApplicationCache"><span class="returnvalue">WebKitDOMDOMApplicationCache</span></a> * webkit_dom_dom_window_get_application_cache
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMApplicationCache.html" title="WebKitDOMDOMApplicationCache"><span class="type">WebKitDOMDOMApplicationCache</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-session-storage"></a><h3>webkit_dom_dom_window_get_session_storage ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMStorage.html" title="WebKitDOMStorage"><span class="returnvalue">WebKitDOMStorage</span></a> *  webkit_dom_dom_window_get_session_storage
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMStorage.html" title="WebKitDOMStorage"><span class="type">WebKitDOMStorage</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-local-storage"></a><h3>webkit_dom_dom_window_get_local_storage ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMStorage.html" title="WebKitDOMStorage"><span class="returnvalue">WebKitDOMStorage</span></a> *  webkit_dom_dom_window_get_local_storage
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMStorage.html" title="WebKitDOMStorage"><span class="type">WebKitDOMStorage</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-console"></a><h3>webkit_dom_dom_window_get_console ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMConsole.html" title="WebKitDOMConsole"><span class="returnvalue">WebKitDOMConsole</span></a> *  webkit_dom_dom_window_get_console   (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMConsole.html" title="WebKitDOMConsole"><span class="type">WebKitDOMConsole</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-performance"></a><h3>webkit_dom_dom_window_get_performance ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMPerformance.html" title="WebKitDOMPerformance"><span class="returnvalue">WebKitDOMPerformance</span></a> * webkit_dom_dom_window_get_performance
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMPerformance.html" title="WebKitDOMPerformance"><span class="type">WebKitDOMPerformance</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-css"></a><h3>webkit_dom_dom_window_get_css ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMDOMWindowCSS.html" title="WebKitDOMDOMWindowCSS"><span class="returnvalue">WebKitDOMDOMWindowCSS</span></a> * webkit_dom_dom_window_get_css   (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindowCSS.html" title="WebKitDOMDOMWindowCSS"><span class="type">WebKitDOMDOMWindowCSS</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-window-get-webkit-storage-info"></a><h3>webkit_dom_dom_window_get_webkit_storage_info ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMStorageInfo.html" title="WebKitDOMStorageInfo"><span class="returnvalue">WebKitDOMStorageInfo</span></a> * webkit_dom_dom_window_get_webkit_storage_info
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMStorageInfo.html" title="WebKitDOMStorageInfo"><span class="type">WebKitDOMStorageInfo</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMDOMWindow.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--application-cache"></a><h3>The <code class="literal">"application-cache"</code> property</h3>
+<pre class="programlisting">  "application-cache"        <a class="link" href="WebKitDOMDOMApplicationCache.html" title="WebKitDOMDOMApplicationCache"><span class="type">WebKitDOMDOMApplicationCache</span></a>*  : Read</pre>
+<p>read-only WebKitDOMDOMApplicationCache* DOMWindow:application-cache.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--client-information"></a><h3>The <code class="literal">"client-information"</code> property</h3>
+<pre class="programlisting">  "client-information"       <a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a>*   : Read</pre>
+<p>read-only WebKitDOMNavigator* DOMWindow:client-information.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--closed"></a><h3>The <code class="literal">"closed"</code> property</h3>
+<pre class="programlisting">  "closed"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read</pre>
+<p>read-only gboolean DOMWindow:closed.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--console"></a><h3>The <code class="literal">"console"</code> property</h3>
+<pre class="programlisting">  "console"                  <a class="link" href="WebKitDOMConsole.html" title="WebKitDOMConsole"><span class="type">WebKitDOMConsole</span></a>*     : Read</pre>
+<p>read-only WebKitDOMConsole* DOMWindow:console.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--css"></a><h3>The <code class="literal">"css"</code> property</h3>
+<pre class="programlisting">  "css"                      <a class="link" href="WebKitDOMDOMWindowCSS.html" title="WebKitDOMDOMWindowCSS"><span class="type">WebKitDOMDOMWindowCSS</span></a>*  : Read</pre>
+<p>read-only WebKitDOMDOMWindowCSS* DOMWindow:css.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--default-status"></a><h3>The <code class="literal">"default-status"</code> property</h3>
+<pre class="programlisting">  "default-status"           <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* DOMWindow:default-status.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--device-pixel-ratio"></a><h3>The <code class="literal">"device-pixel-ratio"</code> property</h3>
+<pre class="programlisting">  "device-pixel-ratio"       <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>               : Read</pre>
+<p>read-only gdouble DOMWindow:device-pixel-ratio.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--document"></a><h3>The <code class="literal">"document"</code> property</h3>
+<pre class="programlisting">  "document"                 <a class="link" href="WebKitDOMDocument.html" title="WebKitDOMDocument"><span class="type">WebKitDOMDocument</span></a>*    : Read</pre>
+<p>read-only WebKitDOMDocument* DOMWindow:document.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--frame-element"></a><h3>The <code class="literal">"frame-element"</code> property</h3>
+<pre class="programlisting">  "frame-element"            <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>*     : Read</pre>
+<p>read-only WebKitDOMElement* DOMWindow:frame-element.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--frames"></a><h3>The <code class="literal">"frames"</code> property</h3>
+<pre class="programlisting">  "frames"                   <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>*   : Read</pre>
+<p>read-only WebKitDOMDOMWindow* DOMWindow:frames.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--history"></a><h3>The <code class="literal">"history"</code> property</h3>
+<pre class="programlisting">  "history"                  <a class="link" href="WebKitDOMHistory.html" title="WebKitDOMHistory"><span class="type">WebKitDOMHistory</span></a>*     : Read</pre>
+<p>read-only WebKitDOMHistory* DOMWindow:history.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--inner-height"></a><h3>The <code class="literal">"inner-height"</code> property</h3>
+<pre class="programlisting">  "inner-height"             <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong DOMWindow:inner-height.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--inner-width"></a><h3>The <code class="literal">"inner-width"</code> property</h3>
+<pre class="programlisting">  "inner-width"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong DOMWindow:inner-width.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--length"></a><h3>The <code class="literal">"length"</code> property</h3>
+<pre class="programlisting">  "length"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read</pre>
+<p>read-only gulong DOMWindow:length.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--local-storage"></a><h3>The <code class="literal">"local-storage"</code> property</h3>
+<pre class="programlisting">  "local-storage"            <a class="link" href="WebKitDOMStorage.html" title="WebKitDOMStorage"><span class="type">WebKitDOMStorage</span></a>*     : Read</pre>
+<p>read-only WebKitDOMStorage* DOMWindow:local-storage.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--locationbar"></a><h3>The <code class="literal">"locationbar"</code> property</h3>
+<pre class="programlisting">  "locationbar"              <a class="link" href="WebKitDOMBarProp.html" title="WebKitDOMBarProp"><span class="type">WebKitDOMBarProp</span></a>*     : Read</pre>
+<p>read-only WebKitDOMBarProp* DOMWindow:locationbar.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--menubar"></a><h3>The <code class="literal">"menubar"</code> property</h3>
+<pre class="programlisting">  "menubar"                  <a class="link" href="WebKitDOMBarProp.html" title="WebKitDOMBarProp"><span class="type">WebKitDOMBarProp</span></a>*     : Read</pre>
+<p>read-only WebKitDOMBarProp* DOMWindow:menubar.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--name"></a><h3>The <code class="literal">"name"</code> property</h3>
+<pre class="programlisting">  "name"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* DOMWindow:name.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--navigator"></a><h3>The <code class="literal">"navigator"</code> property</h3>
+<pre class="programlisting">  "navigator"                <a class="link" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator"><span class="type">WebKitDOMNavigator</span></a>*   : Read</pre>
+<p>read-only WebKitDOMNavigator* DOMWindow:navigator.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--offscreen-buffering"></a><h3>The <code class="literal">"offscreen-buffering"</code> property</h3>
+<pre class="programlisting">  "offscreen-buffering"      <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read</pre>
+<p>read-only gboolean DOMWindow:offscreen-buffering.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--opener"></a><h3>The <code class="literal">"opener"</code> property</h3>
+<pre class="programlisting">  "opener"                   <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>*   : Read</pre>
+<p>read-only WebKitDOMDOMWindow* DOMWindow:opener.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--outer-height"></a><h3>The <code class="literal">"outer-height"</code> property</h3>
+<pre class="programlisting">  "outer-height"             <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong DOMWindow:outer-height.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--outer-width"></a><h3>The <code class="literal">"outer-width"</code> property</h3>
+<pre class="programlisting">  "outer-width"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong DOMWindow:outer-width.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--page-x-offset"></a><h3>The <code class="literal">"page-x-offset"</code> property</h3>
+<pre class="programlisting">  "page-x-offset"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong DOMWindow:page-x-offset.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--page-y-offset"></a><h3>The <code class="literal">"page-y-offset"</code> property</h3>
+<pre class="programlisting">  "page-y-offset"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong DOMWindow:page-y-offset.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--parent"></a><h3>The <code class="literal">"parent"</code> property</h3>
+<pre class="programlisting">  "parent"                   <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>*   : Read</pre>
+<p>read-only WebKitDOMDOMWindow* DOMWindow:parent.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--performance"></a><h3>The <code class="literal">"performance"</code> property</h3>
+<pre class="programlisting">  "performance"              <a class="link" href="WebKitDOMPerformance.html" title="WebKitDOMPerformance"><span class="type">WebKitDOMPerformance</span></a>*  : Read</pre>
+<p>read-only WebKitDOMPerformance* DOMWindow:performance.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--personalbar"></a><h3>The <code class="literal">"personalbar"</code> property</h3>
+<pre class="programlisting">  "personalbar"              <a class="link" href="WebKitDOMBarProp.html" title="WebKitDOMBarProp"><span class="type">WebKitDOMBarProp</span></a>*     : Read</pre>
+<p>read-only WebKitDOMBarProp* DOMWindow:personalbar.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--screen"></a><h3>The <code class="literal">"screen"</code> property</h3>
+<pre class="programlisting">  "screen"                   <a class="link" href="WebKitDOMScreen.html" title="WebKitDOMScreen"><span class="type">WebKitDOMScreen</span></a>*      : Read</pre>
+<p>read-only WebKitDOMScreen* DOMWindow:screen.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--screen-left"></a><h3>The <code class="literal">"screen-left"</code> property</h3>
+<pre class="programlisting">  "screen-left"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong DOMWindow:screen-left.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--screen-top"></a><h3>The <code class="literal">"screen-top"</code> property</h3>
+<pre class="programlisting">  "screen-top"               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong DOMWindow:screen-top.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--screen-x"></a><h3>The <code class="literal">"screen-x"</code> property</h3>
+<pre class="programlisting">  "screen-x"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong DOMWindow:screen-x.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--screen-y"></a><h3>The <code class="literal">"screen-y"</code> property</h3>
+<pre class="programlisting">  "screen-y"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong DOMWindow:screen-y.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--scroll-x"></a><h3>The <code class="literal">"scroll-x"</code> property</h3>
+<pre class="programlisting">  "scroll-x"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong DOMWindow:scroll-x.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--scroll-y"></a><h3>The <code class="literal">"scroll-y"</code> property</h3>
+<pre class="programlisting">  "scroll-y"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong DOMWindow:scroll-y.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--scrollbars"></a><h3>The <code class="literal">"scrollbars"</code> property</h3>
+<pre class="programlisting">  "scrollbars"               <a class="link" href="WebKitDOMBarProp.html" title="WebKitDOMBarProp"><span class="type">WebKitDOMBarProp</span></a>*     : Read</pre>
+<p>read-only WebKitDOMBarProp* DOMWindow:scrollbars.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--self"></a><h3>The <code class="literal">"self"</code> property</h3>
+<pre class="programlisting">  "self"                     <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>*   : Read</pre>
+<p>read-only WebKitDOMDOMWindow* DOMWindow:self.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--session-storage"></a><h3>The <code class="literal">"session-storage"</code> property</h3>
+<pre class="programlisting">  "session-storage"          <a class="link" href="WebKitDOMStorage.html" title="WebKitDOMStorage"><span class="type">WebKitDOMStorage</span></a>*     : Read</pre>
+<p>read-only WebKitDOMStorage* DOMWindow:session-storage.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--status"></a><h3>The <code class="literal">"status"</code> property</h3>
+<pre class="programlisting">  "status"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* DOMWindow:status.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--statusbar"></a><h3>The <code class="literal">"statusbar"</code> property</h3>
+<pre class="programlisting">  "statusbar"                <a class="link" href="WebKitDOMBarProp.html" title="WebKitDOMBarProp"><span class="type">WebKitDOMBarProp</span></a>*     : Read</pre>
+<p>read-only WebKitDOMBarProp* DOMWindow:statusbar.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--style-media"></a><h3>The <code class="literal">"style-media"</code> property</h3>
+<pre class="programlisting">  "style-media"              <a class="link" href="WebKitDOMStyleMedia.html" title="WebKitDOMStyleMedia"><span class="type">WebKitDOMStyleMedia</span></a>*  : Read</pre>
+<p>read-only WebKitDOMStyleMedia* DOMWindow:style-media.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--toolbar"></a><h3>The <code class="literal">"toolbar"</code> property</h3>
+<pre class="programlisting">  "toolbar"                  <a class="link" href="WebKitDOMBarProp.html" title="WebKitDOMBarProp"><span class="type">WebKitDOMBarProp</span></a>*     : Read</pre>
+<p>read-only WebKitDOMBarProp* DOMWindow:toolbar.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--top"></a><h3>The <code class="literal">"top"</code> property</h3>
+<pre class="programlisting">  "top"                      <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>*   : Read</pre>
+<p>read-only WebKitDOMDOMWindow* DOMWindow:top.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--webkit-storage-info"></a><h3>The <code class="literal">"webkit-storage-info"</code> property</h3>
+<pre class="programlisting">  "webkit-storage-info"      <a class="link" href="WebKitDOMStorageInfo.html" title="WebKitDOMStorageInfo"><span class="type">WebKitDOMStorageInfo</span></a>*  : Read</pre>
+<p>read-only WebKitDOMStorageInfo* DOMWindow:webkit-storage-info.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMWindow--window"></a><h3>The <code class="literal">"window"</code> property</h3>
+<pre class="programlisting">  "window"                   <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>*   : Read</pre>
+<p>read-only WebKitDOMDOMWindow* DOMWindow:window.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19.1</div>
+</body>
+</html>

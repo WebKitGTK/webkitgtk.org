@@ -1,0 +1,343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMGTK+ Reference Manual: WebKitDOMCSSStyleSheet</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMCSSStyleDeclaration.html" title="WebKitDOMCSSStyleDeclaration">
+<link rel="next" href="WebKitDOMCSSValue.html" title="WebKitDOMCSSValue">
+<meta name="generator" content="GTK-Doc V1.19.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<td width="100%" align="left">
+<a href="#" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMCSSStyleSheet.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMCSSStyleSheet.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitDOMCSSStyleSheet.properties" class="shortcut">Properties</a>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="WebKitDOMCSSStyleDeclaration.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="WebKitDOMCSSValue.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="WebKitDOMCSSStyleSheet"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMCSSStyleSheet.top_of_page"></a>WebKitDOMCSSStyleSheet</span></h2>
+<p>WebKitDOMCSSStyleSheet</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMCSSStyleSheet.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMCSSStyleSheet.html#WebKitDOMCSSStyleSheet-struct" title="WebKitDOMCSSStyleSheet">WebKitDOMCSSStyleSheet</a>;
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              <a class="link" href="WebKitDOMCSSStyleSheet.html#webkit-dom-css-style-sheet-insert-rule" title="webkit_dom_css_style_sheet_insert_rule ()">webkit_dom_css_style_sheet_insert_rule</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMCSSStyleSheet.html" title="WebKitDOMCSSStyleSheet"><span class="type">WebKitDOMCSSStyleSheet</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *rule</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> index</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMCSSStyleSheet.html#webkit-dom-css-style-sheet-delete-rule" title="webkit_dom_css_style_sheet_delete_rule ()">webkit_dom_css_style_sheet_delete_rule</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMCSSStyleSheet.html" title="WebKitDOMCSSStyleSheet"><span class="type">WebKitDOMCSSStyleSheet</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> index</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMCSSStyleSheet.html#webkit-dom-css-style-sheet-add-rule" title="webkit_dom_css_style_sheet_add_rule ()">webkit_dom_css_style_sheet_add_rule</a> (<em class="parameter"><code><a class="link" href="WebKitDOMCSSStyleSheet.html" title="WebKitDOMCSSStyleSheet"><span class="type">WebKitDOMCSSStyleSheet</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *selector</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *style</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> index</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMCSSStyleSheet.html#webkit-dom-css-style-sheet-remove-rule" title="webkit_dom_css_style_sheet_remove_rule ()">webkit_dom_css_style_sheet_remove_rule</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMCSSStyleSheet.html" title="WebKitDOMCSSStyleSheet"><span class="type">WebKitDOMCSSStyleSheet</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> index</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a class="link" href="WebKitDOMCSSRule.html" title="WebKitDOMCSSRule"><span class="returnvalue">WebKitDOMCSSRule</span></a> *  <a class="link" href="WebKitDOMCSSStyleSheet.html#webkit-dom-css-style-sheet-get-owner-rule" title="webkit_dom_css_style_sheet_get_owner_rule ()">webkit_dom_css_style_sheet_get_owner_rule</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMCSSStyleSheet.html" title="WebKitDOMCSSStyleSheet"><span class="type">WebKitDOMCSSStyleSheet</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMCSSRuleList.html" title="WebKitDOMCSSRuleList"><span class="returnvalue">WebKitDOMCSSRuleList</span></a> * <a class="link" href="WebKitDOMCSSStyleSheet.html#webkit-dom-css-style-sheet-get-css-rules" title="webkit_dom_css_style_sheet_get_css_rules ()">webkit_dom_css_style_sheet_get_css_rules</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMCSSStyleSheet.html" title="WebKitDOMCSSStyleSheet"><span class="type">WebKitDOMCSSStyleSheet</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMCSSRuleList.html" title="WebKitDOMCSSRuleList"><span class="returnvalue">WebKitDOMCSSRuleList</span></a> * <a class="link" href="WebKitDOMCSSStyleSheet.html#webkit-dom-css-style-sheet-get-rules" title="webkit_dom_css_style_sheet_get_rules ()">webkit_dom_css_style_sheet_get_rules</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMCSSStyleSheet.html" title="WebKitDOMCSSStyleSheet"><span class="type">WebKitDOMCSSStyleSheet</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMCSSStyleSheet.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----<a class="link" href="WebKitDOMStyleSheet.html" title="WebKitDOMStyleSheet">WebKitDOMStyleSheet</a>
+               +----WebKitDOMCSSStyleSheet
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMCSSStyleSheet.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitDOMCSSStyleSheet.html#WebKitDOMCSSStyleSheet--css-rules" title='The "css-rules" property'>css-rules</a>"                <a class="link" href="WebKitDOMCSSRuleList.html" title="WebKitDOMCSSRuleList"><span class="type">WebKitDOMCSSRuleList</span></a>*  : Read
+  "<a class="link" href="WebKitDOMCSSStyleSheet.html#WebKitDOMCSSStyleSheet--owner-rule" title='The "owner-rule" property'>owner-rule</a>"               <a class="link" href="WebKitDOMCSSRule.html" title="WebKitDOMCSSRule"><span class="type">WebKitDOMCSSRule</span></a>*     : Read
+  "<a class="link" href="WebKitDOMCSSStyleSheet.html#WebKitDOMCSSStyleSheet--rules" title='The "rules" property'>rules</a>"                    <a class="link" href="WebKitDOMCSSRuleList.html" title="WebKitDOMCSSRuleList"><span class="type">WebKitDOMCSSRuleList</span></a>*  : Read
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMCSSStyleSheet.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMCSSStyleSheet.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMCSSStyleSheet-struct"></a><h3>WebKitDOMCSSStyleSheet</h3>
+<pre class="programlisting">typedef struct _WebKitDOMCSSStyleSheet WebKitDOMCSSStyleSheet;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-css-style-sheet-insert-rule"></a><h3>webkit_dom_css_style_sheet_insert_rule ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              webkit_dom_css_style_sheet_insert_rule
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMCSSStyleSheet.html" title="WebKitDOMCSSStyleSheet"><span class="type">WebKitDOMCSSStyleSheet</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *rule</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> index</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMCSSStyleSheet.html" title="WebKitDOMCSSStyleSheet"><span class="type">WebKitDOMCSSStyleSheet</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>rule</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>index</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-css-style-sheet-delete-rule"></a><h3>webkit_dom_css_style_sheet_delete_rule ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_css_style_sheet_delete_rule
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMCSSStyleSheet.html" title="WebKitDOMCSSStyleSheet"><span class="type">WebKitDOMCSSStyleSheet</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> index</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMCSSStyleSheet.html" title="WebKitDOMCSSStyleSheet"><span class="type">WebKitDOMCSSStyleSheet</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>index</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-css-style-sheet-add-rule"></a><h3>webkit_dom_css_style_sheet_add_rule ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_css_style_sheet_add_rule (<em class="parameter"><code><a class="link" href="WebKitDOMCSSStyleSheet.html" title="WebKitDOMCSSStyleSheet"><span class="type">WebKitDOMCSSStyleSheet</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *selector</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *style</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> index</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMCSSStyleSheet.html" title="WebKitDOMCSSStyleSheet"><span class="type">WebKitDOMCSSStyleSheet</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>selector</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>style</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>index</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-css-style-sheet-remove-rule"></a><h3>webkit_dom_css_style_sheet_remove_rule ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_css_style_sheet_remove_rule
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMCSSStyleSheet.html" title="WebKitDOMCSSStyleSheet"><span class="type">WebKitDOMCSSStyleSheet</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> index</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMCSSStyleSheet.html" title="WebKitDOMCSSStyleSheet"><span class="type">WebKitDOMCSSStyleSheet</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>index</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-css-style-sheet-get-owner-rule"></a><h3>webkit_dom_css_style_sheet_get_owner_rule ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMCSSRule.html" title="WebKitDOMCSSRule"><span class="returnvalue">WebKitDOMCSSRule</span></a> *  webkit_dom_css_style_sheet_get_owner_rule
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMCSSStyleSheet.html" title="WebKitDOMCSSStyleSheet"><span class="type">WebKitDOMCSSStyleSheet</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMCSSStyleSheet.html" title="WebKitDOMCSSStyleSheet"><span class="type">WebKitDOMCSSStyleSheet</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMCSSRule.html" title="WebKitDOMCSSRule"><span class="type">WebKitDOMCSSRule</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-css-style-sheet-get-css-rules"></a><h3>webkit_dom_css_style_sheet_get_css_rules ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMCSSRuleList.html" title="WebKitDOMCSSRuleList"><span class="returnvalue">WebKitDOMCSSRuleList</span></a> * webkit_dom_css_style_sheet_get_css_rules
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMCSSStyleSheet.html" title="WebKitDOMCSSStyleSheet"><span class="type">WebKitDOMCSSStyleSheet</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMCSSStyleSheet.html" title="WebKitDOMCSSStyleSheet"><span class="type">WebKitDOMCSSStyleSheet</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMCSSRuleList.html" title="WebKitDOMCSSRuleList"><span class="type">WebKitDOMCSSRuleList</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-css-style-sheet-get-rules"></a><h3>webkit_dom_css_style_sheet_get_rules ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMCSSRuleList.html" title="WebKitDOMCSSRuleList"><span class="returnvalue">WebKitDOMCSSRuleList</span></a> * webkit_dom_css_style_sheet_get_rules
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMCSSStyleSheet.html" title="WebKitDOMCSSStyleSheet"><span class="type">WebKitDOMCSSStyleSheet</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMCSSStyleSheet.html" title="WebKitDOMCSSStyleSheet"><span class="type">WebKitDOMCSSStyleSheet</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMCSSRuleList.html" title="WebKitDOMCSSRuleList"><span class="type">WebKitDOMCSSRuleList</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMCSSStyleSheet.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMCSSStyleSheet--css-rules"></a><h3>The <code class="literal">"css-rules"</code> property</h3>
+<pre class="programlisting">  "css-rules"                <a class="link" href="WebKitDOMCSSRuleList.html" title="WebKitDOMCSSRuleList"><span class="type">WebKitDOMCSSRuleList</span></a>*  : Read</pre>
+<p>read-only WebKitDOMCSSRuleList* CSSStyleSheet:css-rules.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMCSSStyleSheet--owner-rule"></a><h3>The <code class="literal">"owner-rule"</code> property</h3>
+<pre class="programlisting">  "owner-rule"               <a class="link" href="WebKitDOMCSSRule.html" title="WebKitDOMCSSRule"><span class="type">WebKitDOMCSSRule</span></a>*     : Read</pre>
+<p>read-only WebKitDOMCSSRule* CSSStyleSheet:owner-rule.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMCSSStyleSheet--rules"></a><h3>The <code class="literal">"rules"</code> property</h3>
+<pre class="programlisting">  "rules"                    <a class="link" href="WebKitDOMCSSRuleList.html" title="WebKitDOMCSSRuleList"><span class="type">WebKitDOMCSSRuleList</span></a>*  : Read</pre>
+<p>read-only WebKitDOMCSSRuleList* CSSStyleSheet:rules.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19.1</div>
+</body>
+</html>

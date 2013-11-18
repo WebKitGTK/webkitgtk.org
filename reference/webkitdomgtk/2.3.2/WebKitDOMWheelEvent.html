@@ -1,0 +1,444 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMGTK+ Reference Manual: WebKitDOMWheelEvent</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMPerformanceTiming.html" title="WebKitDOMPerformanceTiming">
+<link rel="next" href="WebKitDOMAudioTrack.html" title="WebKitDOMAudioTrack">
+<meta name="generator" content="GTK-Doc V1.19.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<td width="100%" align="left">
+<a href="#" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMWheelEvent.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMWheelEvent.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitDOMWheelEvent.properties" class="shortcut">Properties</a>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="WebKitDOMPerformanceTiming.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="WebKitDOMAudioTrack.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="WebKitDOMWheelEvent"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMWheelEvent.top_of_page"></a>WebKitDOMWheelEvent</span></h2>
+<p>WebKitDOMWheelEvent</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMWheelEvent.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMWheelEvent.html#WebKitDOMWheelEvent-struct" title="WebKitDOMWheelEvent">WebKitDOMWheelEvent</a>;
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMWheelEvent.html#webkit-dom-wheel-event-init-wheel-event" title="webkit_dom_wheel_event_init_wheel_event ()">webkit_dom_wheel_event_init_wheel_event</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMWheelEvent.html" title="WebKitDOMWheelEvent"><span class="type">WebKitDOMWheelEvent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> wheelDeltaX</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> wheelDeltaY</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *view</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> screenX</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> screenY</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> clientX</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> clientY</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> ctrlKey</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> altKey</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> shiftKey</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> metaKey</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             <a class="link" href="WebKitDOMWheelEvent.html#webkit-dom-wheel-event-get-delta-x" title="webkit_dom_wheel_event_get_delta_x ()">webkit_dom_wheel_event_get_delta_x</a>  (<em class="parameter"><code><a class="link" href="WebKitDOMWheelEvent.html" title="WebKitDOMWheelEvent"><span class="type">WebKitDOMWheelEvent</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             <a class="link" href="WebKitDOMWheelEvent.html#webkit-dom-wheel-event-get-delta-y" title="webkit_dom_wheel_event_get_delta_y ()">webkit_dom_wheel_event_get_delta_y</a>  (<em class="parameter"><code><a class="link" href="WebKitDOMWheelEvent.html" title="WebKitDOMWheelEvent"><span class="type">WebKitDOMWheelEvent</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             <a class="link" href="WebKitDOMWheelEvent.html#webkit-dom-wheel-event-get-delta-z" title="webkit_dom_wheel_event_get_delta_z ()">webkit_dom_wheel_event_get_delta_z</a>  (<em class="parameter"><code><a class="link" href="WebKitDOMWheelEvent.html" title="WebKitDOMWheelEvent"><span class="type">WebKitDOMWheelEvent</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              <a class="link" href="WebKitDOMWheelEvent.html#webkit-dom-wheel-event-get-delta-mode" title="webkit_dom_wheel_event_get_delta_mode ()">webkit_dom_wheel_event_get_delta_mode</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMWheelEvent.html" title="WebKitDOMWheelEvent"><span class="type">WebKitDOMWheelEvent</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMWheelEvent.html#webkit-dom-wheel-event-get-wheel-delta-x" title="webkit_dom_wheel_event_get_wheel_delta_x ()">webkit_dom_wheel_event_get_wheel_delta_x</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMWheelEvent.html" title="WebKitDOMWheelEvent"><span class="type">WebKitDOMWheelEvent</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMWheelEvent.html#webkit-dom-wheel-event-get-wheel-delta-y" title="webkit_dom_wheel_event_get_wheel_delta_y ()">webkit_dom_wheel_event_get_wheel_delta_y</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMWheelEvent.html" title="WebKitDOMWheelEvent"><span class="type">WebKitDOMWheelEvent</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMWheelEvent.html#webkit-dom-wheel-event-get-wheel-delta" title="webkit_dom_wheel_event_get_wheel_delta ()">webkit_dom_wheel_event_get_wheel_delta</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMWheelEvent.html" title="WebKitDOMWheelEvent"><span class="type">WebKitDOMWheelEvent</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMWheelEvent.html#webkit-dom-wheel-event-get-webkit-direction-inverted-from-device" title="webkit_dom_wheel_event_get_webkit_direction_inverted_from_device ()">webkit_dom_wheel_event_get_webkit_direction_inverted_from_device</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMWheelEvent.html" title="WebKitDOMWheelEvent"><span class="type">WebKitDOMWheelEvent</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMWheelEvent.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----<a class="link" href="WebKitDOMEvent.html" title="WebKitDOMEvent">WebKitDOMEvent</a>
+               +----<a class="link" href="WebKitDOMUIEvent.html" title="WebKitDOMUIEvent">WebKitDOMUIEvent</a>
+                     +----<a class="link" href="WebKitDOMMouseEvent.html" title="WebKitDOMMouseEvent">WebKitDOMMouseEvent</a>
+                           +----WebKitDOMWheelEvent
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMWheelEvent.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitDOMWheelEvent.html#WebKitDOMWheelEvent--delta-mode" title='The "delta-mode" property'>delta-mode</a>"               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read
+  "<a class="link" href="WebKitDOMWheelEvent.html#WebKitDOMWheelEvent--delta-x" title='The "delta-x" property'>delta-x</a>"                  <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>               : Read
+  "<a class="link" href="WebKitDOMWheelEvent.html#WebKitDOMWheelEvent--delta-y" title='The "delta-y" property'>delta-y</a>"                  <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>               : Read
+  "<a class="link" href="WebKitDOMWheelEvent.html#WebKitDOMWheelEvent--delta-z" title='The "delta-z" property'>delta-z</a>"                  <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>               : Read
+  "<a class="link" href="WebKitDOMWheelEvent.html#WebKitDOMWheelEvent--webkit-direction-inverted-from-device" title='The "webkit-direction-inverted-from-device" property'>webkit-direction-inverted-from-device</a>" <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
+  "<a class="link" href="WebKitDOMWheelEvent.html#WebKitDOMWheelEvent--wheel-delta" title='The "wheel-delta" property'>wheel-delta</a>"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+  "<a class="link" href="WebKitDOMWheelEvent.html#WebKitDOMWheelEvent--wheel-delta-x" title='The "wheel-delta-x" property'>wheel-delta-x</a>"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+  "<a class="link" href="WebKitDOMWheelEvent.html#WebKitDOMWheelEvent--wheel-delta-y" title='The "wheel-delta-y" property'>wheel-delta-y</a>"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMWheelEvent.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMWheelEvent.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMWheelEvent-struct"></a><h3>WebKitDOMWheelEvent</h3>
+<pre class="programlisting">typedef struct _WebKitDOMWheelEvent WebKitDOMWheelEvent;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-wheel-event-init-wheel-event"></a><h3>webkit_dom_wheel_event_init_wheel_event ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_wheel_event_init_wheel_event
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMWheelEvent.html" title="WebKitDOMWheelEvent"><span class="type">WebKitDOMWheelEvent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> wheelDeltaX</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> wheelDeltaY</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a> *view</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> screenX</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> screenY</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> clientX</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> clientY</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> ctrlKey</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> altKey</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> shiftKey</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> metaKey</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMWheelEvent.html" title="WebKitDOMWheelEvent"><span class="type">WebKitDOMWheelEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>wheelDeltaX</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>wheelDeltaY</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>view</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow"><span class="type">WebKitDOMDOMWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>screenX</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>screenY</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>clientX</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>clientY</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>ctrlKey</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>altKey</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>shiftKey</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>metaKey</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-wheel-event-get-delta-x"></a><h3>webkit_dom_wheel_event_get_delta_x ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             webkit_dom_wheel_event_get_delta_x  (<em class="parameter"><code><a class="link" href="WebKitDOMWheelEvent.html" title="WebKitDOMWheelEvent"><span class="type">WebKitDOMWheelEvent</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMWheelEvent.html" title="WebKitDOMWheelEvent"><span class="type">WebKitDOMWheelEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-wheel-event-get-delta-y"></a><h3>webkit_dom_wheel_event_get_delta_y ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             webkit_dom_wheel_event_get_delta_y  (<em class="parameter"><code><a class="link" href="WebKitDOMWheelEvent.html" title="WebKitDOMWheelEvent"><span class="type">WebKitDOMWheelEvent</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMWheelEvent.html" title="WebKitDOMWheelEvent"><span class="type">WebKitDOMWheelEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-wheel-event-get-delta-z"></a><h3>webkit_dom_wheel_event_get_delta_z ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             webkit_dom_wheel_event_get_delta_z  (<em class="parameter"><code><a class="link" href="WebKitDOMWheelEvent.html" title="WebKitDOMWheelEvent"><span class="type">WebKitDOMWheelEvent</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMWheelEvent.html" title="WebKitDOMWheelEvent"><span class="type">WebKitDOMWheelEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-wheel-event-get-delta-mode"></a><h3>webkit_dom_wheel_event_get_delta_mode ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              webkit_dom_wheel_event_get_delta_mode
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMWheelEvent.html" title="WebKitDOMWheelEvent"><span class="type">WebKitDOMWheelEvent</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMWheelEvent.html" title="WebKitDOMWheelEvent"><span class="type">WebKitDOMWheelEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-wheel-event-get-wheel-delta-x"></a><h3>webkit_dom_wheel_event_get_wheel_delta_x ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_wheel_event_get_wheel_delta_x
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMWheelEvent.html" title="WebKitDOMWheelEvent"><span class="type">WebKitDOMWheelEvent</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMWheelEvent.html" title="WebKitDOMWheelEvent"><span class="type">WebKitDOMWheelEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-wheel-event-get-wheel-delta-y"></a><h3>webkit_dom_wheel_event_get_wheel_delta_y ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_wheel_event_get_wheel_delta_y
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMWheelEvent.html" title="WebKitDOMWheelEvent"><span class="type">WebKitDOMWheelEvent</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMWheelEvent.html" title="WebKitDOMWheelEvent"><span class="type">WebKitDOMWheelEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-wheel-event-get-wheel-delta"></a><h3>webkit_dom_wheel_event_get_wheel_delta ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_wheel_event_get_wheel_delta
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMWheelEvent.html" title="WebKitDOMWheelEvent"><span class="type">WebKitDOMWheelEvent</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMWheelEvent.html" title="WebKitDOMWheelEvent"><span class="type">WebKitDOMWheelEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-wheel-event-get-webkit-direction-inverted-from-device"></a><h3>webkit_dom_wheel_event_get_webkit_direction_inverted_from_device ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_wheel_event_get_webkit_direction_inverted_from_device
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMWheelEvent.html" title="WebKitDOMWheelEvent"><span class="type">WebKitDOMWheelEvent</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMWheelEvent.html" title="WebKitDOMWheelEvent"><span class="type">WebKitDOMWheelEvent</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMWheelEvent.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMWheelEvent--delta-mode"></a><h3>The <code class="literal">"delta-mode"</code> property</h3>
+<pre class="programlisting">  "delta-mode"               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read</pre>
+<p>read-only gulong WheelEvent:delta-mode.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMWheelEvent--delta-x"></a><h3>The <code class="literal">"delta-x"</code> property</h3>
+<pre class="programlisting">  "delta-x"                  <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>               : Read</pre>
+<p>read-only gdouble WheelEvent:delta-x.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMWheelEvent--delta-y"></a><h3>The <code class="literal">"delta-y"</code> property</h3>
+<pre class="programlisting">  "delta-y"                  <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>               : Read</pre>
+<p>read-only gdouble WheelEvent:delta-y.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMWheelEvent--delta-z"></a><h3>The <code class="literal">"delta-z"</code> property</h3>
+<pre class="programlisting">  "delta-z"                  <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>               : Read</pre>
+<p>read-only gdouble WheelEvent:delta-z.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMWheelEvent--webkit-direction-inverted-from-device"></a><h3>The <code class="literal">"webkit-direction-inverted-from-device"</code> property</h3>
+<pre class="programlisting">  "webkit-direction-inverted-from-device" <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read</pre>
+<p>read-only gboolean WheelEvent:webkit-direction-inverted-from-device.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMWheelEvent--wheel-delta"></a><h3>The <code class="literal">"wheel-delta"</code> property</h3>
+<pre class="programlisting">  "wheel-delta"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong WheelEvent:wheel-delta.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMWheelEvent--wheel-delta-x"></a><h3>The <code class="literal">"wheel-delta-x"</code> property</h3>
+<pre class="programlisting">  "wheel-delta-x"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong WheelEvent:wheel-delta-x.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMWheelEvent--wheel-delta-y"></a><h3>The <code class="literal">"wheel-delta-y"</code> property</h3>
+<pre class="programlisting">  "wheel-delta-y"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong WheelEvent:wheel-delta-y.</p>
+<p>Default value: 0</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19.1</div>
+</body>
+</html>

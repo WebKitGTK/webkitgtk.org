@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMGTK+ Reference Manual: WebKitDOMStyleSheet</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMStyleMedia.html" title="WebKitDOMStyleMedia">
+<link rel="next" href="WebKitDOMStyleSheetList.html" title="WebKitDOMStyleSheetList">
+<meta name="generator" content="GTK-Doc V1.19.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<td width="100%" align="left">
+<a href="#" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMStyleSheet.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMStyleSheet.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitDOMStyleSheet.properties" class="shortcut">Properties</a>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="WebKitDOMStyleMedia.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="WebKitDOMStyleSheetList.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="WebKitDOMStyleSheet"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMStyleSheet.top_of_page"></a>WebKitDOMStyleSheet</span></h2>
+<p>WebKitDOMStyleSheet</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMStyleSheet.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMStyleSheet.html#WebKitDOMStyleSheet-struct" title="WebKitDOMStyleSheet">WebKitDOMStyleSheet</a>;
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMStyleSheet.html#webkit-dom-style-sheet-get-disabled" title="webkit_dom_style_sheet_get_disabled ()">webkit_dom_style_sheet_get_disabled</a> (<em class="parameter"><code><a class="link" href="WebKitDOMStyleSheet.html" title="WebKitDOMStyleSheet"><span class="type">WebKitDOMStyleSheet</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMStyleSheet.html#webkit-dom-style-sheet-set-disabled" title="webkit_dom_style_sheet_set_disabled ()">webkit_dom_style_sheet_set_disabled</a> (<em class="parameter"><code><a class="link" href="WebKitDOMStyleSheet.html" title="WebKitDOMStyleSheet"><span class="type">WebKitDOMStyleSheet</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);
+<a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="returnvalue">WebKitDOMNode</span></a> *     <a class="link" href="WebKitDOMStyleSheet.html#webkit-dom-style-sheet-get-owner-node" title="webkit_dom_style_sheet_get_owner_node ()">webkit_dom_style_sheet_get_owner_node</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMStyleSheet.html" title="WebKitDOMStyleSheet"><span class="type">WebKitDOMStyleSheet</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMStyleSheet.html" title="WebKitDOMStyleSheet"><span class="returnvalue">WebKitDOMStyleSheet</span></a> * <a class="link" href="WebKitDOMStyleSheet.html#webkit-dom-style-sheet-get-parent-style-sheet" title="webkit_dom_style_sheet_get_parent_style_sheet ()">webkit_dom_style_sheet_get_parent_style_sheet</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMStyleSheet.html" title="WebKitDOMStyleSheet"><span class="type">WebKitDOMStyleSheet</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMStyleSheet.html#webkit-dom-style-sheet-get-href" title="webkit_dom_style_sheet_get_href ()">webkit_dom_style_sheet_get_href</a>     (<em class="parameter"><code><a class="link" href="WebKitDOMStyleSheet.html" title="WebKitDOMStyleSheet"><span class="type">WebKitDOMStyleSheet</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMStyleSheet.html#webkit-dom-style-sheet-get-title" title="webkit_dom_style_sheet_get_title ()">webkit_dom_style_sheet_get_title</a>    (<em class="parameter"><code><a class="link" href="WebKitDOMStyleSheet.html" title="WebKitDOMStyleSheet"><span class="type">WebKitDOMStyleSheet</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMMediaList.html" title="WebKitDOMMediaList"><span class="returnvalue">WebKitDOMMediaList</span></a> * <a class="link" href="WebKitDOMStyleSheet.html#webkit-dom-style-sheet-get-media" title="webkit_dom_style_sheet_get_media ()">webkit_dom_style_sheet_get_media</a>   (<em class="parameter"><code><a class="link" href="WebKitDOMStyleSheet.html" title="WebKitDOMStyleSheet"><span class="type">WebKitDOMStyleSheet</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMStyleSheet.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----WebKitDOMStyleSheet
+               +----<a class="link" href="WebKitDOMCSSStyleSheet.html" title="WebKitDOMCSSStyleSheet">WebKitDOMCSSStyleSheet</a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMStyleSheet.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitDOMStyleSheet.html#WebKitDOMStyleSheet--disabled" title='The "disabled" property'>disabled</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+  "<a class="link" href="WebKitDOMStyleSheet.html#WebKitDOMStyleSheet--href" title='The "href" property'>href</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMStyleSheet.html#WebKitDOMStyleSheet--media" title='The "media" property'>media</a>"                    <a class="link" href="WebKitDOMMediaList.html" title="WebKitDOMMediaList"><span class="type">WebKitDOMMediaList</span></a>*   : Read
+  "<a class="link" href="WebKitDOMStyleSheet.html#WebKitDOMStyleSheet--owner-node" title='The "owner-node" property'>owner-node</a>"               <a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a>*        : Read
+  "<a class="link" href="WebKitDOMStyleSheet.html#WebKitDOMStyleSheet--parent-style-sheet" title='The "parent-style-sheet" property'>parent-style-sheet</a>"       <a class="link" href="WebKitDOMStyleSheet.html" title="WebKitDOMStyleSheet"><span class="type">WebKitDOMStyleSheet</span></a>*  : Read
+  "<a class="link" href="WebKitDOMStyleSheet.html#WebKitDOMStyleSheet--title" title='The "title" property'>title</a>"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMStyleSheet.html#WebKitDOMStyleSheet--type" title='The "type" property'>type</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMStyleSheet.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMStyleSheet.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMStyleSheet-struct"></a><h3>WebKitDOMStyleSheet</h3>
+<pre class="programlisting">typedef struct _WebKitDOMStyleSheet WebKitDOMStyleSheet;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-style-sheet-get-disabled"></a><h3>webkit_dom_style_sheet_get_disabled ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_style_sheet_get_disabled (<em class="parameter"><code><a class="link" href="WebKitDOMStyleSheet.html" title="WebKitDOMStyleSheet"><span class="type">WebKitDOMStyleSheet</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMStyleSheet.html" title="WebKitDOMStyleSheet"><span class="type">WebKitDOMStyleSheet</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-style-sheet-set-disabled"></a><h3>webkit_dom_style_sheet_set_disabled ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_style_sheet_set_disabled (<em class="parameter"><code><a class="link" href="WebKitDOMStyleSheet.html" title="WebKitDOMStyleSheet"><span class="type">WebKitDOMStyleSheet</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMStyleSheet.html" title="WebKitDOMStyleSheet"><span class="type">WebKitDOMStyleSheet</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-style-sheet-get-owner-node"></a><h3>webkit_dom_style_sheet_get_owner_node ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="returnvalue">WebKitDOMNode</span></a> *     webkit_dom_style_sheet_get_owner_node
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMStyleSheet.html" title="WebKitDOMStyleSheet"><span class="type">WebKitDOMStyleSheet</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMStyleSheet.html" title="WebKitDOMStyleSheet"><span class="type">WebKitDOMStyleSheet</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-style-sheet-get-parent-style-sheet"></a><h3>webkit_dom_style_sheet_get_parent_style_sheet ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMStyleSheet.html" title="WebKitDOMStyleSheet"><span class="returnvalue">WebKitDOMStyleSheet</span></a> * webkit_dom_style_sheet_get_parent_style_sheet
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMStyleSheet.html" title="WebKitDOMStyleSheet"><span class="type">WebKitDOMStyleSheet</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMStyleSheet.html" title="WebKitDOMStyleSheet"><span class="type">WebKitDOMStyleSheet</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMStyleSheet.html" title="WebKitDOMStyleSheet"><span class="type">WebKitDOMStyleSheet</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-style-sheet-get-href"></a><h3>webkit_dom_style_sheet_get_href ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_style_sheet_get_href     (<em class="parameter"><code><a class="link" href="WebKitDOMStyleSheet.html" title="WebKitDOMStyleSheet"><span class="type">WebKitDOMStyleSheet</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMStyleSheet.html" title="WebKitDOMStyleSheet"><span class="type">WebKitDOMStyleSheet</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-style-sheet-get-title"></a><h3>webkit_dom_style_sheet_get_title ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_style_sheet_get_title    (<em class="parameter"><code><a class="link" href="WebKitDOMStyleSheet.html" title="WebKitDOMStyleSheet"><span class="type">WebKitDOMStyleSheet</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMStyleSheet.html" title="WebKitDOMStyleSheet"><span class="type">WebKitDOMStyleSheet</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-style-sheet-get-media"></a><h3>webkit_dom_style_sheet_get_media ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMMediaList.html" title="WebKitDOMMediaList"><span class="returnvalue">WebKitDOMMediaList</span></a> * webkit_dom_style_sheet_get_media   (<em class="parameter"><code><a class="link" href="WebKitDOMStyleSheet.html" title="WebKitDOMStyleSheet"><span class="type">WebKitDOMStyleSheet</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMStyleSheet.html" title="WebKitDOMStyleSheet"><span class="type">WebKitDOMStyleSheet</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMMediaList.html" title="WebKitDOMMediaList"><span class="type">WebKitDOMMediaList</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMStyleSheet.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMStyleSheet--disabled"></a><h3>The <code class="literal">"disabled"</code> property</h3>
+<pre class="programlisting">  "disabled"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
+<p>read-only gboolean StyleSheet:disabled.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMStyleSheet--href"></a><h3>The <code class="literal">"href"</code> property</h3>
+<pre class="programlisting">  "href"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* StyleSheet:href.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMStyleSheet--media"></a><h3>The <code class="literal">"media"</code> property</h3>
+<pre class="programlisting">  "media"                    <a class="link" href="WebKitDOMMediaList.html" title="WebKitDOMMediaList"><span class="type">WebKitDOMMediaList</span></a>*   : Read</pre>
+<p>read-only WebKitDOMMediaList* StyleSheet:media.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMStyleSheet--owner-node"></a><h3>The <code class="literal">"owner-node"</code> property</h3>
+<pre class="programlisting">  "owner-node"               <a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a>*        : Read</pre>
+<p>read-only WebKitDOMNode* StyleSheet:owner-node.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMStyleSheet--parent-style-sheet"></a><h3>The <code class="literal">"parent-style-sheet"</code> property</h3>
+<pre class="programlisting">  "parent-style-sheet"       <a class="link" href="WebKitDOMStyleSheet.html" title="WebKitDOMStyleSheet"><span class="type">WebKitDOMStyleSheet</span></a>*  : Read</pre>
+<p>read-only WebKitDOMStyleSheet* StyleSheet:parent-style-sheet.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMStyleSheet--title"></a><h3>The <code class="literal">"title"</code> property</h3>
+<pre class="programlisting">  "title"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* StyleSheet:title.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMStyleSheet--type"></a><h3>The <code class="literal">"type"</code> property</h3>
+<pre class="programlisting">  "type"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* StyleSheet:type.</p>
+<p>Default value: ""</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19.1</div>
+</body>
+</html>

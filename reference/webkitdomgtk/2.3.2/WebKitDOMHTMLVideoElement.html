@@ -1,0 +1,566 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMGTK+ Reference Manual: WebKitDOMHTMLVideoElement</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMHTMLAudioElement.html" title="WebKitDOMHTMLAudioElement">
+<link rel="next" href="WebKitDOMTextTrack.html" title="WebKitDOMTextTrack">
+<meta name="generator" content="GTK-Doc V1.19.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<td width="100%" align="left">
+<a href="#" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMHTMLVideoElement.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMHTMLVideoElement.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitDOMHTMLVideoElement.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#WebKitDOMHTMLVideoElement.properties" class="shortcut">Properties</a>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="WebKitDOMHTMLAudioElement.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="WebKitDOMTextTrack.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="WebKitDOMHTMLVideoElement"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMHTMLVideoElement.top_of_page"></a>WebKitDOMHTMLVideoElement</span></h2>
+<p>WebKitDOMHTMLVideoElement</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMHTMLVideoElement.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMHTMLVideoElement.html#WebKitDOMHTMLVideoElement-struct" title="WebKitDOMHTMLVideoElement">WebKitDOMHTMLVideoElement</a>;
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLVideoElement.html#webkit-dom-html-video-element-webkit-enter-fullscreen" title="webkit_dom_html_video_element_webkit_enter_fullscreen ()">webkit_dom_html_video_element_webkit_enter_fullscreen</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLVideoElement.html#webkit-dom-html-video-element-webkit-exit-fullscreen" title="webkit_dom_html_video_element_webkit_exit_fullscreen ()">webkit_dom_html_video_element_webkit_exit_fullscreen</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLVideoElement.html#webkit-dom-html-video-element-webkit-enter-full-screen" title="webkit_dom_html_video_element_webkit_enter_full_screen ()">webkit_dom_html_video_element_webkit_enter_full_screen</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLVideoElement.html#webkit-dom-html-video-element-webkit-exit-full-screen" title="webkit_dom_html_video_element_webkit_exit_full_screen ()">webkit_dom_html_video_element_webkit_exit_full_screen</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              <a class="link" href="WebKitDOMHTMLVideoElement.html#webkit-dom-html-video-element-get-width" title="webkit_dom_html_video_element_get_width ()">webkit_dom_html_video_element_get_width</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLVideoElement.html#webkit-dom-html-video-element-set-width" title="webkit_dom_html_video_element_set_width ()">webkit_dom_html_video_element_set_width</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              <a class="link" href="WebKitDOMHTMLVideoElement.html#webkit-dom-html-video-element-get-height" title="webkit_dom_html_video_element_get_height ()">webkit_dom_html_video_element_get_height</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLVideoElement.html#webkit-dom-html-video-element-set-height" title="webkit_dom_html_video_element_set_height ()">webkit_dom_html_video_element_set_height</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              <a class="link" href="WebKitDOMHTMLVideoElement.html#webkit-dom-html-video-element-get-video-width" title="webkit_dom_html_video_element_get_video_width ()">webkit_dom_html_video_element_get_video_width</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              <a class="link" href="WebKitDOMHTMLVideoElement.html#webkit-dom-html-video-element-get-video-height" title="webkit_dom_html_video_element_get_video_height ()">webkit_dom_html_video_element_get_video_height</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLVideoElement.html#webkit-dom-html-video-element-get-poster" title="webkit_dom_html_video_element_get_poster ()">webkit_dom_html_video_element_get_poster</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLVideoElement.html#webkit-dom-html-video-element-set-poster" title="webkit_dom_html_video_element_set_poster ()">webkit_dom_html_video_element_set_poster</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMHTMLVideoElement.html#webkit-dom-html-video-element-get-webkit-supports-fullscreen" title="webkit_dom_html_video_element_get_webkit_supports_fullscreen ()">webkit_dom_html_video_element_get_webkit_supports_fullscreen</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMHTMLVideoElement.html#webkit-dom-html-video-element-get-webkit-displaying-fullscreen" title="webkit_dom_html_video_element_get_webkit_displaying_fullscreen ()">webkit_dom_html_video_element_get_webkit_displaying_fullscreen</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              <a class="link" href="WebKitDOMHTMLVideoElement.html#webkit-dom-html-video-element-get-webkit-decoded-frame-count" title="webkit_dom_html_video_element_get_webkit_decoded_frame_count ()">webkit_dom_html_video_element_get_webkit_decoded_frame_count</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              <a class="link" href="WebKitDOMHTMLVideoElement.html#webkit-dom-html-video-element-get-webkit-dropped-frame-count" title="webkit_dom_html_video_element_get_webkit_dropped_frame_count ()">webkit_dom_html_video_element_get_webkit_dropped_frame_count</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLVideoElement.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----<a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode">WebKitDOMNode</a>
+               +----<a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement">WebKitDOMElement</a>
+                     +----<a class="link" href="WebKitDOMHTMLElement.html" title="WebKitDOMHTMLElement">WebKitDOMHTMLElement</a>
+                           +----<a class="link" href="WebKitDOMHTMLMediaElement.html" title="WebKitDOMHTMLMediaElement">WebKitDOMHTMLMediaElement</a>
+                                 +----WebKitDOMHTMLVideoElement
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLVideoElement.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+WebKitDOMHTMLVideoElement implements
+ <a class="link" href="WebKitDOMEventTarget.html" title="WebKitDOMEventTarget">WebKitDOMEventTarget</a>.</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLVideoElement.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitDOMHTMLVideoElement.html#WebKitDOMHTMLVideoElement--height" title='The "height" property'>height</a>"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLVideoElement.html#WebKitDOMHTMLVideoElement--poster" title='The "poster" property'>poster</a>"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLVideoElement.html#WebKitDOMHTMLVideoElement--video-height" title='The "video-height" property'>video-height</a>"             <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read
+  "<a class="link" href="WebKitDOMHTMLVideoElement.html#WebKitDOMHTMLVideoElement--video-width" title='The "video-width" property'>video-width</a>"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read
+  "<a class="link" href="WebKitDOMHTMLVideoElement.html#WebKitDOMHTMLVideoElement--webkit-decoded-frame-count" title='The "webkit-decoded-frame-count" property'>webkit-decoded-frame-count</a>" <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read
+  "<a class="link" href="WebKitDOMHTMLVideoElement.html#WebKitDOMHTMLVideoElement--webkit-displaying-fullscreen" title='The "webkit-displaying-fullscreen" property'>webkit-displaying-fullscreen</a>" <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
+  "<a class="link" href="WebKitDOMHTMLVideoElement.html#WebKitDOMHTMLVideoElement--webkit-dropped-frame-count" title='The "webkit-dropped-frame-count" property'>webkit-dropped-frame-count</a>" <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read
+  "<a class="link" href="WebKitDOMHTMLVideoElement.html#WebKitDOMHTMLVideoElement--webkit-supports-fullscreen" title='The "webkit-supports-fullscreen" property'>webkit-supports-fullscreen</a>" <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
+  "<a class="link" href="WebKitDOMHTMLVideoElement.html#WebKitDOMHTMLVideoElement--width" title='The "width" property'>width</a>"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLVideoElement.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLVideoElement.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMHTMLVideoElement-struct"></a><h3>WebKitDOMHTMLVideoElement</h3>
+<pre class="programlisting">typedef struct _WebKitDOMHTMLVideoElement WebKitDOMHTMLVideoElement;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-video-element-webkit-enter-fullscreen"></a><h3>webkit_dom_html_video_element_webkit_enter_fullscreen ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_video_element_webkit_enter_fullscreen
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-video-element-webkit-exit-fullscreen"></a><h3>webkit_dom_html_video_element_webkit_exit_fullscreen ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_video_element_webkit_exit_fullscreen
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-video-element-webkit-enter-full-screen"></a><h3>webkit_dom_html_video_element_webkit_enter_full_screen ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_video_element_webkit_enter_full_screen
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-video-element-webkit-exit-full-screen"></a><h3>webkit_dom_html_video_element_webkit_exit_full_screen ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_video_element_webkit_exit_full_screen
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-video-element-get-width"></a><h3>webkit_dom_html_video_element_get_width ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              webkit_dom_html_video_element_get_width
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-video-element-set-width"></a><h3>webkit_dom_html_video_element_set_width ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_video_element_set_width
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-video-element-get-height"></a><h3>webkit_dom_html_video_element_get_height ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              webkit_dom_html_video_element_get_height
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-video-element-set-height"></a><h3>webkit_dom_html_video_element_set_height ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_video_element_set_height
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-video-element-get-video-width"></a><h3>webkit_dom_html_video_element_get_video_width ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              webkit_dom_html_video_element_get_video_width
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-video-element-get-video-height"></a><h3>webkit_dom_html_video_element_get_video_height ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              webkit_dom_html_video_element_get_video_height
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-video-element-get-poster"></a><h3>webkit_dom_html_video_element_get_poster ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_video_element_get_poster
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-video-element-set-poster"></a><h3>webkit_dom_html_video_element_set_poster ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_video_element_set_poster
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-video-element-get-webkit-supports-fullscreen"></a><h3>webkit_dom_html_video_element_get_webkit_supports_fullscreen ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_html_video_element_get_webkit_supports_fullscreen
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-video-element-get-webkit-displaying-fullscreen"></a><h3>webkit_dom_html_video_element_get_webkit_displaying_fullscreen ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_html_video_element_get_webkit_displaying_fullscreen
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-video-element-get-webkit-decoded-frame-count"></a><h3>webkit_dom_html_video_element_get_webkit_decoded_frame_count ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              webkit_dom_html_video_element_get_webkit_decoded_frame_count
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-video-element-get-webkit-dropped-frame-count"></a><h3>webkit_dom_html_video_element_get_webkit_dropped_frame_count ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              webkit_dom_html_video_element_get_webkit_dropped_frame_count
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLVideoElement.html" title="WebKitDOMHTMLVideoElement"><span class="type">WebKitDOMHTMLVideoElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLVideoElement.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMHTMLVideoElement--height"></a><h3>The <code class="literal">"height"</code> property</h3>
+<pre class="programlisting">  "height"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read / Write</pre>
+<p>read-only gulong HTMLVideoElement:height.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLVideoElement--poster"></a><h3>The <code class="literal">"poster"</code> property</h3>
+<pre class="programlisting">  "poster"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLVideoElement:poster.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLVideoElement--video-height"></a><h3>The <code class="literal">"video-height"</code> property</h3>
+<pre class="programlisting">  "video-height"             <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read</pre>
+<p>read-only gulong HTMLVideoElement:video-height.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLVideoElement--video-width"></a><h3>The <code class="literal">"video-width"</code> property</h3>
+<pre class="programlisting">  "video-width"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read</pre>
+<p>read-only gulong HTMLVideoElement:video-width.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLVideoElement--webkit-decoded-frame-count"></a><h3>The <code class="literal">"webkit-decoded-frame-count"</code> property</h3>
+<pre class="programlisting">  "webkit-decoded-frame-count" <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read</pre>
+<p>read-only gulong HTMLVideoElement:webkit-decoded-frame-count.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLVideoElement--webkit-displaying-fullscreen"></a><h3>The <code class="literal">"webkit-displaying-fullscreen"</code> property</h3>
+<pre class="programlisting">  "webkit-displaying-fullscreen" <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read</pre>
+<p>read-only gboolean HTMLVideoElement:webkit-displaying-fullscreen.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLVideoElement--webkit-dropped-frame-count"></a><h3>The <code class="literal">"webkit-dropped-frame-count"</code> property</h3>
+<pre class="programlisting">  "webkit-dropped-frame-count" <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read</pre>
+<p>read-only gulong HTMLVideoElement:webkit-dropped-frame-count.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLVideoElement--webkit-supports-fullscreen"></a><h3>The <code class="literal">"webkit-supports-fullscreen"</code> property</h3>
+<pre class="programlisting">  "webkit-supports-fullscreen" <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read</pre>
+<p>read-only gboolean HTMLVideoElement:webkit-supports-fullscreen.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLVideoElement--width"></a><h3>The <code class="literal">"width"</code> property</h3>
+<pre class="programlisting">  "width"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read / Write</pre>
+<p>read-only gulong HTMLVideoElement:width.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19.1</div>
+</body>
+</html>
