@@ -653,19 +653,16 @@ are far too many to list!
     def _add_new_docs(self, website_dir):
         is_stable = self._tarball.is_stable()
         version = self._tarball.get_version_str()
-        wk1_docs_dir = os.path.join(website_dir, "reference", self.WK1_PKG_NAME)
-        wk2_docs_dir = os.path.join(website_dir, "reference", self.WK2_PKG_NAME)
+        doc_dirs = [os.path.join(website_dir, "reference", pkg) for pkg in self._get_doc_pkg_names()]
 
-        doc_files = []
         if is_stable:
-            doc_files.extend([os.path.join(wk1_docs_dir, "stable"), os.path.join(wk2_docs_dir, "stable")])
+            symlink_name = "stable"
         else:
-            doc_files.extend([os.path.join(wk1_docs_dir, "unstable"), os.path.join(wk2_docs_dir, "unstable")])
+            symlink_name = "unstable"
 
-        doc_files.extend([os.path.join(wk1_docs_dir, self.WK1_PKG_NAME + "-html-" + version + ".tar.gz"),
-                          os.path.join(wk2_docs_dir, self.WK2_PKG_NAME + "-html-" + version + ".tar.gz")])
-
-        doc_files.extend([os.path.join(wk1_docs_dir, version), os.path.join(wk2_docs_dir, version)])
+        doc_files = [os.path.join(doc_dir, symlink_name) for doc_dir in doc_dirs]
+        doc_files.extend([os.path.join(doc_dir, os.path.basename(doc_dir) + "-html-" + version + ".tar.gz") for doc_dir in doc_dirs])
+        doc_files.extend([os.path.join(doc_dir, version) for doc_dir in doc_dirs])
 
         subprocess.call(['git', 'add'] + doc_files)
 
