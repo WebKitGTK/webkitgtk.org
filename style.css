@@ -314,3 +314,7 @@ h3 {
 h2 a {
     text-decoration: none;
 }
+
+.news img {
+    max-width: 670px;
+}
