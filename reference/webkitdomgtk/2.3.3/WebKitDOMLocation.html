@@ -1,0 +1,399 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMGTK+ Reference Manual: WebKitDOMLocation</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMHistory.html" title="WebKitDOMHistory">
+<link rel="next" href="WebKitDOMObject.html" title="WebKitDOMObject">
+<meta name="generator" content="GTK-Doc V1.19.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<td width="100%" align="left">
+<a href="#" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMLocation.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMLocation.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitDOMLocation.properties" class="shortcut">Properties</a>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="WebKitDOMHistory.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="WebKitDOMObject.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="WebKitDOMLocation"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMLocation.top_of_page"></a>WebKitDOMLocation</span></h2>
+<p>WebKitDOMLocation</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMLocation.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMLocation.html#WebKitDOMLocation-struct" title="WebKitDOMLocation">WebKitDOMLocation</a>;
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMLocation.html#webkit-dom-location-get-href" title="webkit_dom_location_get_href ()">webkit_dom_location_get_href</a>        (<em class="parameter"><code><a class="link" href="WebKitDOMLocation.html" title="WebKitDOMLocation"><span class="type">WebKitDOMLocation</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMLocation.html#webkit-dom-location-get-protocol" title="webkit_dom_location_get_protocol ()">webkit_dom_location_get_protocol</a>    (<em class="parameter"><code><a class="link" href="WebKitDOMLocation.html" title="WebKitDOMLocation"><span class="type">WebKitDOMLocation</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMLocation.html#webkit-dom-location-get-host" title="webkit_dom_location_get_host ()">webkit_dom_location_get_host</a>        (<em class="parameter"><code><a class="link" href="WebKitDOMLocation.html" title="WebKitDOMLocation"><span class="type">WebKitDOMLocation</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMLocation.html#webkit-dom-location-get-hostname" title="webkit_dom_location_get_hostname ()">webkit_dom_location_get_hostname</a>    (<em class="parameter"><code><a class="link" href="WebKitDOMLocation.html" title="WebKitDOMLocation"><span class="type">WebKitDOMLocation</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMLocation.html#webkit-dom-location-get-port" title="webkit_dom_location_get_port ()">webkit_dom_location_get_port</a>        (<em class="parameter"><code><a class="link" href="WebKitDOMLocation.html" title="WebKitDOMLocation"><span class="type">WebKitDOMLocation</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMLocation.html#webkit-dom-location-get-pathname" title="webkit_dom_location_get_pathname ()">webkit_dom_location_get_pathname</a>    (<em class="parameter"><code><a class="link" href="WebKitDOMLocation.html" title="WebKitDOMLocation"><span class="type">WebKitDOMLocation</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMLocation.html#webkit-dom-location-get-search" title="webkit_dom_location_get_search ()">webkit_dom_location_get_search</a>      (<em class="parameter"><code><a class="link" href="WebKitDOMLocation.html" title="WebKitDOMLocation"><span class="type">WebKitDOMLocation</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMLocation.html#webkit-dom-location-get-hash" title="webkit_dom_location_get_hash ()">webkit_dom_location_get_hash</a>        (<em class="parameter"><code><a class="link" href="WebKitDOMLocation.html" title="WebKitDOMLocation"><span class="type">WebKitDOMLocation</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMLocation.html#webkit-dom-location-get-origin" title="webkit_dom_location_get_origin ()">webkit_dom_location_get_origin</a>      (<em class="parameter"><code><a class="link" href="WebKitDOMLocation.html" title="WebKitDOMLocation"><span class="type">WebKitDOMLocation</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMDOMStringList.html" title="WebKitDOMDOMStringList"><span class="returnvalue">WebKitDOMDOMStringList</span></a> * <a class="link" href="WebKitDOMLocation.html#webkit-dom-location-get-ancestor-origins" title="webkit_dom_location_get_ancestor_origins ()">webkit_dom_location_get_ancestor_origins</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMLocation.html" title="WebKitDOMLocation"><span class="type">WebKitDOMLocation</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMLocation.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----WebKitDOMLocation
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMLocation.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitDOMLocation.html#WebKitDOMLocation--ancestor-origins" title='The "ancestor-origins" property'>ancestor-origins</a>"         <a class="link" href="WebKitDOMDOMStringList.html" title="WebKitDOMDOMStringList"><span class="type">WebKitDOMDOMStringList</span></a>*  : Read
+  "<a class="link" href="WebKitDOMLocation.html#WebKitDOMLocation--hash" title='The "hash" property'>hash</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMLocation.html#WebKitDOMLocation--host" title='The "host" property'>host</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMLocation.html#WebKitDOMLocation--hostname" title='The "hostname" property'>hostname</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMLocation.html#WebKitDOMLocation--href" title='The "href" property'>href</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMLocation.html#WebKitDOMLocation--origin" title='The "origin" property'>origin</a>"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMLocation.html#WebKitDOMLocation--pathname" title='The "pathname" property'>pathname</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMLocation.html#WebKitDOMLocation--port" title='The "port" property'>port</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMLocation.html#WebKitDOMLocation--protocol" title='The "protocol" property'>protocol</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMLocation.html#WebKitDOMLocation--search" title='The "search" property'>search</a>"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMLocation.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMLocation.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMLocation-struct"></a><h3>WebKitDOMLocation</h3>
+<pre class="programlisting">typedef struct _WebKitDOMLocation WebKitDOMLocation;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-location-get-href"></a><h3>webkit_dom_location_get_href ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_location_get_href        (<em class="parameter"><code><a class="link" href="WebKitDOMLocation.html" title="WebKitDOMLocation"><span class="type">WebKitDOMLocation</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMLocation.html" title="WebKitDOMLocation"><span class="type">WebKitDOMLocation</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-location-get-protocol"></a><h3>webkit_dom_location_get_protocol ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_location_get_protocol    (<em class="parameter"><code><a class="link" href="WebKitDOMLocation.html" title="WebKitDOMLocation"><span class="type">WebKitDOMLocation</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMLocation.html" title="WebKitDOMLocation"><span class="type">WebKitDOMLocation</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-location-get-host"></a><h3>webkit_dom_location_get_host ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_location_get_host        (<em class="parameter"><code><a class="link" href="WebKitDOMLocation.html" title="WebKitDOMLocation"><span class="type">WebKitDOMLocation</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMLocation.html" title="WebKitDOMLocation"><span class="type">WebKitDOMLocation</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-location-get-hostname"></a><h3>webkit_dom_location_get_hostname ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_location_get_hostname    (<em class="parameter"><code><a class="link" href="WebKitDOMLocation.html" title="WebKitDOMLocation"><span class="type">WebKitDOMLocation</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMLocation.html" title="WebKitDOMLocation"><span class="type">WebKitDOMLocation</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-location-get-port"></a><h3>webkit_dom_location_get_port ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_location_get_port        (<em class="parameter"><code><a class="link" href="WebKitDOMLocation.html" title="WebKitDOMLocation"><span class="type">WebKitDOMLocation</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMLocation.html" title="WebKitDOMLocation"><span class="type">WebKitDOMLocation</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-location-get-pathname"></a><h3>webkit_dom_location_get_pathname ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_location_get_pathname    (<em class="parameter"><code><a class="link" href="WebKitDOMLocation.html" title="WebKitDOMLocation"><span class="type">WebKitDOMLocation</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMLocation.html" title="WebKitDOMLocation"><span class="type">WebKitDOMLocation</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-location-get-search"></a><h3>webkit_dom_location_get_search ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_location_get_search      (<em class="parameter"><code><a class="link" href="WebKitDOMLocation.html" title="WebKitDOMLocation"><span class="type">WebKitDOMLocation</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMLocation.html" title="WebKitDOMLocation"><span class="type">WebKitDOMLocation</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-location-get-hash"></a><h3>webkit_dom_location_get_hash ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_location_get_hash        (<em class="parameter"><code><a class="link" href="WebKitDOMLocation.html" title="WebKitDOMLocation"><span class="type">WebKitDOMLocation</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMLocation.html" title="WebKitDOMLocation"><span class="type">WebKitDOMLocation</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-location-get-origin"></a><h3>webkit_dom_location_get_origin ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_location_get_origin      (<em class="parameter"><code><a class="link" href="WebKitDOMLocation.html" title="WebKitDOMLocation"><span class="type">WebKitDOMLocation</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMLocation.html" title="WebKitDOMLocation"><span class="type">WebKitDOMLocation</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-location-get-ancestor-origins"></a><h3>webkit_dom_location_get_ancestor_origins ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMDOMStringList.html" title="WebKitDOMDOMStringList"><span class="returnvalue">WebKitDOMDOMStringList</span></a> * webkit_dom_location_get_ancestor_origins
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMLocation.html" title="WebKitDOMLocation"><span class="type">WebKitDOMLocation</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMLocation.html" title="WebKitDOMLocation"><span class="type">WebKitDOMLocation</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMStringList.html" title="WebKitDOMDOMStringList"><span class="type">WebKitDOMDOMStringList</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMLocation.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMLocation--ancestor-origins"></a><h3>The <code class="literal">"ancestor-origins"</code> property</h3>
+<pre class="programlisting">  "ancestor-origins"         <a class="link" href="WebKitDOMDOMStringList.html" title="WebKitDOMDOMStringList"><span class="type">WebKitDOMDOMStringList</span></a>*  : Read</pre>
+<p>read-only WebKitDOMDOMStringList* Location:ancestor-origins.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMLocation--hash"></a><h3>The <code class="literal">"hash"</code> property</h3>
+<pre class="programlisting">  "hash"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* Location:hash.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMLocation--host"></a><h3>The <code class="literal">"host"</code> property</h3>
+<pre class="programlisting">  "host"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* Location:host.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMLocation--hostname"></a><h3>The <code class="literal">"hostname"</code> property</h3>
+<pre class="programlisting">  "hostname"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* Location:hostname.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMLocation--href"></a><h3>The <code class="literal">"href"</code> property</h3>
+<pre class="programlisting">  "href"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* Location:href.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMLocation--origin"></a><h3>The <code class="literal">"origin"</code> property</h3>
+<pre class="programlisting">  "origin"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* Location:origin.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMLocation--pathname"></a><h3>The <code class="literal">"pathname"</code> property</h3>
+<pre class="programlisting">  "pathname"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* Location:pathname.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMLocation--port"></a><h3>The <code class="literal">"port"</code> property</h3>
+<pre class="programlisting">  "port"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* Location:port.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMLocation--protocol"></a><h3>The <code class="literal">"protocol"</code> property</h3>
+<pre class="programlisting">  "protocol"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* Location:protocol.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMLocation--search"></a><h3>The <code class="literal">"search"</code> property</h3>
+<pre class="programlisting">  "search"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* Location:search.</p>
+<p>Default value: ""</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19.1</div>
+</body>
+</html>

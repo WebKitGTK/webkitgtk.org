@@ -1,0 +1,1281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMGTK+ Reference Manual: WebKitDOMHTMLAnchorElement</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMGeolocation.html" title="WebKitDOMGeolocation">
+<link rel="next" href="WebKitDOMHTMLAppletElement.html" title="WebKitDOMHTMLAppletElement">
+<meta name="generator" content="GTK-Doc V1.19.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<td width="100%" align="left">
+<a href="#" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMHTMLAnchorElement.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMHTMLAnchorElement.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitDOMHTMLAnchorElement.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#WebKitDOMHTMLAnchorElement.properties" class="shortcut">Properties</a>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="WebKitDOMGeolocation.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="WebKitDOMHTMLAppletElement.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="WebKitDOMHTMLAnchorElement"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMHTMLAnchorElement.top_of_page"></a>WebKitDOMHTMLAnchorElement</span></h2>
+<p>WebKitDOMHTMLAnchorElement</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMHTMLAnchorElement.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMHTMLAnchorElement.html#WebKitDOMHTMLAnchorElement-struct" title="WebKitDOMHTMLAnchorElement">WebKitDOMHTMLAnchorElement</a>;
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-get-charset" title="webkit_dom_html_anchor_element_get_charset ()">webkit_dom_html_anchor_element_get_charset</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-set-charset" title="webkit_dom_html_anchor_element_set_charset ()">webkit_dom_html_anchor_element_set_charset</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-get-coords" title="webkit_dom_html_anchor_element_get_coords ()">webkit_dom_html_anchor_element_get_coords</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-set-coords" title="webkit_dom_html_anchor_element_set_coords ()">webkit_dom_html_anchor_element_set_coords</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-get-download" title="webkit_dom_html_anchor_element_get_download ()">webkit_dom_html_anchor_element_get_download</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-set-download" title="webkit_dom_html_anchor_element_set_download ()">webkit_dom_html_anchor_element_set_download</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-get-href" title="webkit_dom_html_anchor_element_get_href ()">webkit_dom_html_anchor_element_get_href</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-set-href" title="webkit_dom_html_anchor_element_set_href ()">webkit_dom_html_anchor_element_set_href</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-get-hreflang" title="webkit_dom_html_anchor_element_get_hreflang ()">webkit_dom_html_anchor_element_get_hreflang</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-set-hreflang" title="webkit_dom_html_anchor_element_set_hreflang ()">webkit_dom_html_anchor_element_set_hreflang</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-get-name" title="webkit_dom_html_anchor_element_get_name ()">webkit_dom_html_anchor_element_get_name</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-set-name" title="webkit_dom_html_anchor_element_set_name ()">webkit_dom_html_anchor_element_set_name</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-get-ping" title="webkit_dom_html_anchor_element_get_ping ()">webkit_dom_html_anchor_element_get_ping</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-set-ping" title="webkit_dom_html_anchor_element_set_ping ()">webkit_dom_html_anchor_element_set_ping</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-get-rel" title="webkit_dom_html_anchor_element_get_rel ()">webkit_dom_html_anchor_element_get_rel</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-set-rel" title="webkit_dom_html_anchor_element_set_rel ()">webkit_dom_html_anchor_element_set_rel</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-get-rev" title="webkit_dom_html_anchor_element_get_rev ()">webkit_dom_html_anchor_element_get_rev</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-set-rev" title="webkit_dom_html_anchor_element_set_rev ()">webkit_dom_html_anchor_element_set_rev</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-get-shape" title="webkit_dom_html_anchor_element_get_shape ()">webkit_dom_html_anchor_element_get_shape</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-set-shape" title="webkit_dom_html_anchor_element_set_shape ()">webkit_dom_html_anchor_element_set_shape</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-get-target" title="webkit_dom_html_anchor_element_get_target ()">webkit_dom_html_anchor_element_get_target</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-set-target" title="webkit_dom_html_anchor_element_set_target ()">webkit_dom_html_anchor_element_set_target</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-get-hash" title="webkit_dom_html_anchor_element_get_hash ()">webkit_dom_html_anchor_element_get_hash</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-set-hash" title="webkit_dom_html_anchor_element_set_hash ()">webkit_dom_html_anchor_element_set_hash</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-get-host" title="webkit_dom_html_anchor_element_get_host ()">webkit_dom_html_anchor_element_get_host</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-set-host" title="webkit_dom_html_anchor_element_set_host ()">webkit_dom_html_anchor_element_set_host</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-get-hostname" title="webkit_dom_html_anchor_element_get_hostname ()">webkit_dom_html_anchor_element_get_hostname</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-set-hostname" title="webkit_dom_html_anchor_element_set_hostname ()">webkit_dom_html_anchor_element_set_hostname</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-get-pathname" title="webkit_dom_html_anchor_element_get_pathname ()">webkit_dom_html_anchor_element_get_pathname</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-set-pathname" title="webkit_dom_html_anchor_element_set_pathname ()">webkit_dom_html_anchor_element_set_pathname</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-get-port" title="webkit_dom_html_anchor_element_get_port ()">webkit_dom_html_anchor_element_get_port</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-set-port" title="webkit_dom_html_anchor_element_set_port ()">webkit_dom_html_anchor_element_set_port</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-get-protocol" title="webkit_dom_html_anchor_element_get_protocol ()">webkit_dom_html_anchor_element_get_protocol</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-set-protocol" title="webkit_dom_html_anchor_element_set_protocol ()">webkit_dom_html_anchor_element_set_protocol</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-get-search" title="webkit_dom_html_anchor_element_get_search ()">webkit_dom_html_anchor_element_get_search</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-set-search" title="webkit_dom_html_anchor_element_set_search ()">webkit_dom_html_anchor_element_set_search</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-get-origin" title="webkit_dom_html_anchor_element_get_origin ()">webkit_dom_html_anchor_element_get_origin</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLAnchorElement.html#webkit-dom-html-anchor-element-get-text" title="webkit_dom_html_anchor_element_get_text ()">webkit_dom_html_anchor_element_get_text</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLAnchorElement.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----<a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode">WebKitDOMNode</a>
+               +----<a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement">WebKitDOMElement</a>
+                     +----<a class="link" href="WebKitDOMHTMLElement.html" title="WebKitDOMHTMLElement">WebKitDOMHTMLElement</a>
+                           +----WebKitDOMHTMLAnchorElement
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLAnchorElement.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+WebKitDOMHTMLAnchorElement implements
+ <a class="link" href="WebKitDOMEventTarget.html" title="WebKitDOMEventTarget">WebKitDOMEventTarget</a>.</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLAnchorElement.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitDOMHTMLAnchorElement.html#WebKitDOMHTMLAnchorElement--charset" title='The "charset" property'>charset</a>"                  <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLAnchorElement.html#WebKitDOMHTMLAnchorElement--coords" title='The "coords" property'>coords</a>"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLAnchorElement.html#WebKitDOMHTMLAnchorElement--download" title='The "download" property'>download</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLAnchorElement.html#WebKitDOMHTMLAnchorElement--hash" title='The "hash" property'>hash</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLAnchorElement.html#WebKitDOMHTMLAnchorElement--host" title='The "host" property'>host</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLAnchorElement.html#WebKitDOMHTMLAnchorElement--hostname" title='The "hostname" property'>hostname</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLAnchorElement.html#WebKitDOMHTMLAnchorElement--href" title='The "href" property'>href</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLAnchorElement.html#WebKitDOMHTMLAnchorElement--hreflang" title='The "hreflang" property'>hreflang</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLAnchorElement.html#WebKitDOMHTMLAnchorElement--name" title='The "name" property'>name</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLAnchorElement.html#WebKitDOMHTMLAnchorElement--origin" title='The "origin" property'>origin</a>"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMHTMLAnchorElement.html#WebKitDOMHTMLAnchorElement--pathname" title='The "pathname" property'>pathname</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLAnchorElement.html#WebKitDOMHTMLAnchorElement--ping" title='The "ping" property'>ping</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLAnchorElement.html#WebKitDOMHTMLAnchorElement--port" title='The "port" property'>port</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLAnchorElement.html#WebKitDOMHTMLAnchorElement--protocol" title='The "protocol" property'>protocol</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLAnchorElement.html#WebKitDOMHTMLAnchorElement--rel" title='The "rel" property'>rel</a>"                      <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLAnchorElement.html#WebKitDOMHTMLAnchorElement--rev" title='The "rev" property'>rev</a>"                      <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLAnchorElement.html#WebKitDOMHTMLAnchorElement--search" title='The "search" property'>search</a>"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLAnchorElement.html#WebKitDOMHTMLAnchorElement--shape" title='The "shape" property'>shape</a>"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLAnchorElement.html#WebKitDOMHTMLAnchorElement--target" title='The "target" property'>target</a>"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLAnchorElement.html#WebKitDOMHTMLAnchorElement--text" title='The "text" property'>text</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMHTMLAnchorElement.html#WebKitDOMHTMLAnchorElement--type" title='The "type" property'>type</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLAnchorElement.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLAnchorElement.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAnchorElement-struct"></a><h3>WebKitDOMHTMLAnchorElement</h3>
+<pre class="programlisting">typedef struct _WebKitDOMHTMLAnchorElement WebKitDOMHTMLAnchorElement;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-get-charset"></a><h3>webkit_dom_html_anchor_element_get_charset ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_anchor_element_get_charset
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-set-charset"></a><h3>webkit_dom_html_anchor_element_set_charset ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_anchor_element_set_charset
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-get-coords"></a><h3>webkit_dom_html_anchor_element_get_coords ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_anchor_element_get_coords
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-set-coords"></a><h3>webkit_dom_html_anchor_element_set_coords ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_anchor_element_set_coords
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-get-download"></a><h3>webkit_dom_html_anchor_element_get_download ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_anchor_element_get_download
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-set-download"></a><h3>webkit_dom_html_anchor_element_set_download ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_anchor_element_set_download
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-get-href"></a><h3>webkit_dom_html_anchor_element_get_href ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_anchor_element_get_href
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-set-href"></a><h3>webkit_dom_html_anchor_element_set_href ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_anchor_element_set_href
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-get-hreflang"></a><h3>webkit_dom_html_anchor_element_get_hreflang ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_anchor_element_get_hreflang
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-set-hreflang"></a><h3>webkit_dom_html_anchor_element_set_hreflang ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_anchor_element_set_hreflang
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-get-name"></a><h3>webkit_dom_html_anchor_element_get_name ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_anchor_element_get_name
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-set-name"></a><h3>webkit_dom_html_anchor_element_set_name ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_anchor_element_set_name
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-get-ping"></a><h3>webkit_dom_html_anchor_element_get_ping ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_anchor_element_get_ping
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-set-ping"></a><h3>webkit_dom_html_anchor_element_set_ping ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_anchor_element_set_ping
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-get-rel"></a><h3>webkit_dom_html_anchor_element_get_rel ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_anchor_element_get_rel
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-set-rel"></a><h3>webkit_dom_html_anchor_element_set_rel ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_anchor_element_set_rel
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-get-rev"></a><h3>webkit_dom_html_anchor_element_get_rev ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_anchor_element_get_rev
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-set-rev"></a><h3>webkit_dom_html_anchor_element_set_rev ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_anchor_element_set_rev
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-get-shape"></a><h3>webkit_dom_html_anchor_element_get_shape ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_anchor_element_get_shape
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-set-shape"></a><h3>webkit_dom_html_anchor_element_set_shape ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_anchor_element_set_shape
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-get-target"></a><h3>webkit_dom_html_anchor_element_get_target ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_anchor_element_get_target
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-set-target"></a><h3>webkit_dom_html_anchor_element_set_target ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_anchor_element_set_target
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-get-hash"></a><h3>webkit_dom_html_anchor_element_get_hash ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_anchor_element_get_hash
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-set-hash"></a><h3>webkit_dom_html_anchor_element_set_hash ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_anchor_element_set_hash
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-get-host"></a><h3>webkit_dom_html_anchor_element_get_host ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_anchor_element_get_host
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-set-host"></a><h3>webkit_dom_html_anchor_element_set_host ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_anchor_element_set_host
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-get-hostname"></a><h3>webkit_dom_html_anchor_element_get_hostname ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_anchor_element_get_hostname
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-set-hostname"></a><h3>webkit_dom_html_anchor_element_set_hostname ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_anchor_element_set_hostname
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-get-pathname"></a><h3>webkit_dom_html_anchor_element_get_pathname ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_anchor_element_get_pathname
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-set-pathname"></a><h3>webkit_dom_html_anchor_element_set_pathname ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_anchor_element_set_pathname
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-get-port"></a><h3>webkit_dom_html_anchor_element_get_port ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_anchor_element_get_port
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-set-port"></a><h3>webkit_dom_html_anchor_element_set_port ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_anchor_element_set_port
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-get-protocol"></a><h3>webkit_dom_html_anchor_element_get_protocol ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_anchor_element_get_protocol
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-set-protocol"></a><h3>webkit_dom_html_anchor_element_set_protocol ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_anchor_element_set_protocol
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-get-search"></a><h3>webkit_dom_html_anchor_element_get_search ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_anchor_element_get_search
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-set-search"></a><h3>webkit_dom_html_anchor_element_set_search ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_anchor_element_set_search
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-get-origin"></a><h3>webkit_dom_html_anchor_element_get_origin ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_anchor_element_get_origin
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-anchor-element-get-text"></a><h3>webkit_dom_html_anchor_element_get_text ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_anchor_element_get_text
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLAnchorElement.html" title="WebKitDOMHTMLAnchorElement"><span class="type">WebKitDOMHTMLAnchorElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLAnchorElement.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAnchorElement--charset"></a><h3>The <code class="literal">"charset"</code> property</h3>
+<pre class="programlisting">  "charset"                  <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLAnchorElement:charset.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAnchorElement--coords"></a><h3>The <code class="literal">"coords"</code> property</h3>
+<pre class="programlisting">  "coords"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLAnchorElement:coords.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAnchorElement--download"></a><h3>The <code class="literal">"download"</code> property</h3>
+<pre class="programlisting">  "download"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLAnchorElement:download.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAnchorElement--hash"></a><h3>The <code class="literal">"hash"</code> property</h3>
+<pre class="programlisting">  "hash"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLAnchorElement:hash.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAnchorElement--host"></a><h3>The <code class="literal">"host"</code> property</h3>
+<pre class="programlisting">  "host"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLAnchorElement:host.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAnchorElement--hostname"></a><h3>The <code class="literal">"hostname"</code> property</h3>
+<pre class="programlisting">  "hostname"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLAnchorElement:hostname.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAnchorElement--href"></a><h3>The <code class="literal">"href"</code> property</h3>
+<pre class="programlisting">  "href"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLAnchorElement:href.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAnchorElement--hreflang"></a><h3>The <code class="literal">"hreflang"</code> property</h3>
+<pre class="programlisting">  "hreflang"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLAnchorElement:hreflang.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAnchorElement--name"></a><h3>The <code class="literal">"name"</code> property</h3>
+<pre class="programlisting">  "name"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLAnchorElement:name.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAnchorElement--origin"></a><h3>The <code class="literal">"origin"</code> property</h3>
+<pre class="programlisting">  "origin"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* HTMLAnchorElement:origin.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAnchorElement--pathname"></a><h3>The <code class="literal">"pathname"</code> property</h3>
+<pre class="programlisting">  "pathname"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLAnchorElement:pathname.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAnchorElement--ping"></a><h3>The <code class="literal">"ping"</code> property</h3>
+<pre class="programlisting">  "ping"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLAnchorElement:ping.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAnchorElement--port"></a><h3>The <code class="literal">"port"</code> property</h3>
+<pre class="programlisting">  "port"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLAnchorElement:port.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAnchorElement--protocol"></a><h3>The <code class="literal">"protocol"</code> property</h3>
+<pre class="programlisting">  "protocol"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLAnchorElement:protocol.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAnchorElement--rel"></a><h3>The <code class="literal">"rel"</code> property</h3>
+<pre class="programlisting">  "rel"                      <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLAnchorElement:rel.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAnchorElement--rev"></a><h3>The <code class="literal">"rev"</code> property</h3>
+<pre class="programlisting">  "rev"                      <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLAnchorElement:rev.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAnchorElement--search"></a><h3>The <code class="literal">"search"</code> property</h3>
+<pre class="programlisting">  "search"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLAnchorElement:search.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAnchorElement--shape"></a><h3>The <code class="literal">"shape"</code> property</h3>
+<pre class="programlisting">  "shape"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLAnchorElement:shape.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAnchorElement--target"></a><h3>The <code class="literal">"target"</code> property</h3>
+<pre class="programlisting">  "target"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLAnchorElement:target.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAnchorElement--text"></a><h3>The <code class="literal">"text"</code> property</h3>
+<pre class="programlisting">  "text"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* HTMLAnchorElement:text.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLAnchorElement--type"></a><h3>The <code class="literal">"type"</code> property</h3>
+<pre class="programlisting">  "type"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLAnchorElement:type.</p>
+<p>Default value: ""</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19.1</div>
+</body>
+</html>

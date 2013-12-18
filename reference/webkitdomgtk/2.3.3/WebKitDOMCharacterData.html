@@ -1,0 +1,422 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMGTK+ Reference Manual: WebKitDOMCharacterData</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMCDATASection.html" title="WebKitDOMCDATASection">
+<link rel="next" href="WebKitDOMComment.html" title="WebKitDOMComment">
+<meta name="generator" content="GTK-Doc V1.19.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<td width="100%" align="left">
+<a href="#" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMCharacterData.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMCharacterData.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitDOMCharacterData.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#WebKitDOMCharacterData.properties" class="shortcut">Properties</a>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="WebKitDOMCDATASection.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="WebKitDOMComment.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="WebKitDOMCharacterData"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMCharacterData.top_of_page"></a>WebKitDOMCharacterData</span></h2>
+<p>WebKitDOMCharacterData</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMCharacterData.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMCharacterData.html#WebKitDOMCharacterData-struct" title="WebKitDOMCharacterData">WebKitDOMCharacterData</a>;
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMCharacterData.html#webkit-dom-character-data-substring-data" title="webkit_dom_character_data_substring_data ()">webkit_dom_character_data_substring_data</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMCharacterData.html" title="WebKitDOMCharacterData"><span class="type">WebKitDOMCharacterData</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> offset</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> length</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMCharacterData.html#webkit-dom-character-data-append-data" title="webkit_dom_character_data_append_data ()">webkit_dom_character_data_append_data</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMCharacterData.html" title="WebKitDOMCharacterData"><span class="type">WebKitDOMCharacterData</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *data</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMCharacterData.html#webkit-dom-character-data-insert-data" title="webkit_dom_character_data_insert_data ()">webkit_dom_character_data_insert_data</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMCharacterData.html" title="WebKitDOMCharacterData"><span class="type">WebKitDOMCharacterData</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> offset</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *data</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMCharacterData.html#webkit-dom-character-data-delete-data" title="webkit_dom_character_data_delete_data ()">webkit_dom_character_data_delete_data</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMCharacterData.html" title="WebKitDOMCharacterData"><span class="type">WebKitDOMCharacterData</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> offset</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> length</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMCharacterData.html#webkit-dom-character-data-replace-data" title="webkit_dom_character_data_replace_data ()">webkit_dom_character_data_replace_data</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMCharacterData.html" title="WebKitDOMCharacterData"><span class="type">WebKitDOMCharacterData</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> offset</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> length</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *data</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMCharacterData.html#webkit-dom-character-data-remove" title="webkit_dom_character_data_remove ()">webkit_dom_character_data_remove</a>    (<em class="parameter"><code><a class="link" href="WebKitDOMCharacterData.html" title="WebKitDOMCharacterData"><span class="type">WebKitDOMCharacterData</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMCharacterData.html#webkit-dom-character-data-get-data" title="webkit_dom_character_data_get_data ()">webkit_dom_character_data_get_data</a>  (<em class="parameter"><code><a class="link" href="WebKitDOMCharacterData.html" title="WebKitDOMCharacterData"><span class="type">WebKitDOMCharacterData</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMCharacterData.html#webkit-dom-character-data-set-data" title="webkit_dom_character_data_set_data ()">webkit_dom_character_data_set_data</a>  (<em class="parameter"><code><a class="link" href="WebKitDOMCharacterData.html" title="WebKitDOMCharacterData"><span class="type">WebKitDOMCharacterData</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              <a class="link" href="WebKitDOMCharacterData.html#webkit-dom-character-data-get-length" title="webkit_dom_character_data_get_length ()">webkit_dom_character_data_get_length</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMCharacterData.html" title="WebKitDOMCharacterData"><span class="type">WebKitDOMCharacterData</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMCharacterData.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----<a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode">WebKitDOMNode</a>
+               +----WebKitDOMCharacterData
+                     +----<a class="link" href="WebKitDOMText.html" title="WebKitDOMText">WebKitDOMText</a>
+                     +----<a class="link" href="WebKitDOMComment.html" title="WebKitDOMComment">WebKitDOMComment</a>
+                     +----<a class="link" href="WebKitDOMProcessingInstruction.html" title="WebKitDOMProcessingInstruction">WebKitDOMProcessingInstruction</a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMCharacterData.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+WebKitDOMCharacterData implements
+ <a class="link" href="WebKitDOMEventTarget.html" title="WebKitDOMEventTarget">WebKitDOMEventTarget</a>.</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMCharacterData.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitDOMCharacterData.html#WebKitDOMCharacterData--data" title='The "data" property'>data</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMCharacterData.html#WebKitDOMCharacterData--length" title='The "length" property'>length</a>"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMCharacterData.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMCharacterData.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMCharacterData-struct"></a><h3>WebKitDOMCharacterData</h3>
+<pre class="programlisting">typedef struct _WebKitDOMCharacterData WebKitDOMCharacterData;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-character-data-substring-data"></a><h3>webkit_dom_character_data_substring_data ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_character_data_substring_data
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMCharacterData.html" title="WebKitDOMCharacterData"><span class="type">WebKitDOMCharacterData</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> offset</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> length</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMCharacterData.html" title="WebKitDOMCharacterData"><span class="type">WebKitDOMCharacterData</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>offset</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>length</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-character-data-append-data"></a><h3>webkit_dom_character_data_append_data ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_character_data_append_data
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMCharacterData.html" title="WebKitDOMCharacterData"><span class="type">WebKitDOMCharacterData</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *data</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMCharacterData.html" title="WebKitDOMCharacterData"><span class="type">WebKitDOMCharacterData</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-character-data-insert-data"></a><h3>webkit_dom_character_data_insert_data ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_character_data_insert_data
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMCharacterData.html" title="WebKitDOMCharacterData"><span class="type">WebKitDOMCharacterData</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> offset</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *data</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMCharacterData.html" title="WebKitDOMCharacterData"><span class="type">WebKitDOMCharacterData</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>offset</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-character-data-delete-data"></a><h3>webkit_dom_character_data_delete_data ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_character_data_delete_data
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMCharacterData.html" title="WebKitDOMCharacterData"><span class="type">WebKitDOMCharacterData</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> offset</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> length</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMCharacterData.html" title="WebKitDOMCharacterData"><span class="type">WebKitDOMCharacterData</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>offset</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>length</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-character-data-replace-data"></a><h3>webkit_dom_character_data_replace_data ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_character_data_replace_data
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMCharacterData.html" title="WebKitDOMCharacterData"><span class="type">WebKitDOMCharacterData</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> offset</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> length</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *data</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMCharacterData.html" title="WebKitDOMCharacterData"><span class="type">WebKitDOMCharacterData</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>offset</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>length</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-character-data-remove"></a><h3>webkit_dom_character_data_remove ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_character_data_remove    (<em class="parameter"><code><a class="link" href="WebKitDOMCharacterData.html" title="WebKitDOMCharacterData"><span class="type">WebKitDOMCharacterData</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMCharacterData.html" title="WebKitDOMCharacterData"><span class="type">WebKitDOMCharacterData</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-character-data-get-data"></a><h3>webkit_dom_character_data_get_data ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_character_data_get_data  (<em class="parameter"><code><a class="link" href="WebKitDOMCharacterData.html" title="WebKitDOMCharacterData"><span class="type">WebKitDOMCharacterData</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMCharacterData.html" title="WebKitDOMCharacterData"><span class="type">WebKitDOMCharacterData</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-character-data-set-data"></a><h3>webkit_dom_character_data_set_data ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_character_data_set_data  (<em class="parameter"><code><a class="link" href="WebKitDOMCharacterData.html" title="WebKitDOMCharacterData"><span class="type">WebKitDOMCharacterData</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMCharacterData.html" title="WebKitDOMCharacterData"><span class="type">WebKitDOMCharacterData</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-character-data-get-length"></a><h3>webkit_dom_character_data_get_length ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              webkit_dom_character_data_get_length
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMCharacterData.html" title="WebKitDOMCharacterData"><span class="type">WebKitDOMCharacterData</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMCharacterData.html" title="WebKitDOMCharacterData"><span class="type">WebKitDOMCharacterData</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMCharacterData.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMCharacterData--data"></a><h3>The <code class="literal">"data"</code> property</h3>
+<pre class="programlisting">  "data"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* CharacterData:data.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMCharacterData--length"></a><h3>The <code class="literal">"length"</code> property</h3>
+<pre class="programlisting">  "length"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read</pre>
+<p>read-only gulong CharacterData:length.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19.1</div>
+</body>
+</html>

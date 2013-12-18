@@ -1,0 +1,1185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMGTK+ Reference Manual: WebKitDOMHTMLImageElement</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMHTMLIFrameElement.html" title="WebKitDOMHTMLIFrameElement">
+<link rel="next" href="WebKitDOMHTMLInputElement.html" title="WebKitDOMHTMLInputElement">
+<meta name="generator" content="GTK-Doc V1.19.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<td width="100%" align="left">
+<a href="#" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMHTMLImageElement.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMHTMLImageElement.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitDOMHTMLImageElement.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#WebKitDOMHTMLImageElement.properties" class="shortcut">Properties</a>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="WebKitDOMHTMLIFrameElement.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="WebKitDOMHTMLInputElement.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="WebKitDOMHTMLImageElement"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMHTMLImageElement.top_of_page"></a>WebKitDOMHTMLImageElement</span></h2>
+<p>WebKitDOMHTMLImageElement</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMHTMLImageElement.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMHTMLImageElement.html#WebKitDOMHTMLImageElement-struct" title="WebKitDOMHTMLImageElement">WebKitDOMHTMLImageElement</a>;
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLImageElement.html#webkit-dom-html-image-element-get-name" title="webkit_dom_html_image_element_get_name ()">webkit_dom_html_image_element_get_name</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLImageElement.html#webkit-dom-html-image-element-set-name" title="webkit_dom_html_image_element_set_name ()">webkit_dom_html_image_element_set_name</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLImageElement.html#webkit-dom-html-image-element-get-align" title="webkit_dom_html_image_element_get_align ()">webkit_dom_html_image_element_get_align</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLImageElement.html#webkit-dom-html-image-element-set-align" title="webkit_dom_html_image_element_set_align ()">webkit_dom_html_image_element_set_align</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLImageElement.html#webkit-dom-html-image-element-get-alt" title="webkit_dom_html_image_element_get_alt ()">webkit_dom_html_image_element_get_alt</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLImageElement.html#webkit-dom-html-image-element-set-alt" title="webkit_dom_html_image_element_set_alt ()">webkit_dom_html_image_element_set_alt</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLImageElement.html#webkit-dom-html-image-element-get-border" title="webkit_dom_html_image_element_get_border ()">webkit_dom_html_image_element_get_border</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLImageElement.html#webkit-dom-html-image-element-set-border" title="webkit_dom_html_image_element_set_border ()">webkit_dom_html_image_element_set_border</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLImageElement.html#webkit-dom-html-image-element-get-cross-origin" title="webkit_dom_html_image_element_get_cross_origin ()">webkit_dom_html_image_element_get_cross_origin</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLImageElement.html#webkit-dom-html-image-element-set-cross-origin" title="webkit_dom_html_image_element_set_cross_origin ()">webkit_dom_html_image_element_set_cross_origin</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMHTMLImageElement.html#webkit-dom-html-image-element-get-height" title="webkit_dom_html_image_element_get_height ()">webkit_dom_html_image_element_get_height</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLImageElement.html#webkit-dom-html-image-element-set-height" title="webkit_dom_html_image_element_set_height ()">webkit_dom_html_image_element_set_height</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMHTMLImageElement.html#webkit-dom-html-image-element-get-hspace" title="webkit_dom_html_image_element_get_hspace ()">webkit_dom_html_image_element_get_hspace</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLImageElement.html#webkit-dom-html-image-element-set-hspace" title="webkit_dom_html_image_element_set_hspace ()">webkit_dom_html_image_element_set_hspace</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMHTMLImageElement.html#webkit-dom-html-image-element-get-is-map" title="webkit_dom_html_image_element_get_is_map ()">webkit_dom_html_image_element_get_is_map</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLImageElement.html#webkit-dom-html-image-element-set-is-map" title="webkit_dom_html_image_element_set_is_map ()">webkit_dom_html_image_element_set_is_map</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLImageElement.html#webkit-dom-html-image-element-get-long-desc" title="webkit_dom_html_image_element_get_long_desc ()">webkit_dom_html_image_element_get_long_desc</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLImageElement.html#webkit-dom-html-image-element-set-long-desc" title="webkit_dom_html_image_element_set_long_desc ()">webkit_dom_html_image_element_set_long_desc</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLImageElement.html#webkit-dom-html-image-element-get-src" title="webkit_dom_html_image_element_get_src ()">webkit_dom_html_image_element_get_src</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLImageElement.html#webkit-dom-html-image-element-set-src" title="webkit_dom_html_image_element_set_src ()">webkit_dom_html_image_element_set_src</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLImageElement.html#webkit-dom-html-image-element-get-srcset" title="webkit_dom_html_image_element_get_srcset ()">webkit_dom_html_image_element_get_srcset</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLImageElement.html#webkit-dom-html-image-element-set-srcset" title="webkit_dom_html_image_element_set_srcset ()">webkit_dom_html_image_element_set_srcset</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLImageElement.html#webkit-dom-html-image-element-get-use-map" title="webkit_dom_html_image_element_get_use_map ()">webkit_dom_html_image_element_get_use_map</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLImageElement.html#webkit-dom-html-image-element-set-use-map" title="webkit_dom_html_image_element_set_use_map ()">webkit_dom_html_image_element_set_use_map</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMHTMLImageElement.html#webkit-dom-html-image-element-get-vspace" title="webkit_dom_html_image_element_get_vspace ()">webkit_dom_html_image_element_get_vspace</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLImageElement.html#webkit-dom-html-image-element-set-vspace" title="webkit_dom_html_image_element_set_vspace ()">webkit_dom_html_image_element_set_vspace</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMHTMLImageElement.html#webkit-dom-html-image-element-get-width" title="webkit_dom_html_image_element_get_width ()">webkit_dom_html_image_element_get_width</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLImageElement.html#webkit-dom-html-image-element-set-width" title="webkit_dom_html_image_element_set_width ()">webkit_dom_html_image_element_set_width</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMHTMLImageElement.html#webkit-dom-html-image-element-get-complete" title="webkit_dom_html_image_element_get_complete ()">webkit_dom_html_image_element_get_complete</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLImageElement.html#webkit-dom-html-image-element-get-lowsrc" title="webkit_dom_html_image_element_get_lowsrc ()">webkit_dom_html_image_element_get_lowsrc</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLImageElement.html#webkit-dom-html-image-element-set-lowsrc" title="webkit_dom_html_image_element_set_lowsrc ()">webkit_dom_html_image_element_set_lowsrc</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMHTMLImageElement.html#webkit-dom-html-image-element-get-natural-height" title="webkit_dom_html_image_element_get_natural_height ()">webkit_dom_html_image_element_get_natural_height</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMHTMLImageElement.html#webkit-dom-html-image-element-get-natural-width" title="webkit_dom_html_image_element_get_natural_width ()">webkit_dom_html_image_element_get_natural_width</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMHTMLImageElement.html#webkit-dom-html-image-element-get-x" title="webkit_dom_html_image_element_get_x ()">webkit_dom_html_image_element_get_x</a> (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMHTMLImageElement.html#webkit-dom-html-image-element-get-y" title="webkit_dom_html_image_element_get_y ()">webkit_dom_html_image_element_get_y</a> (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLImageElement.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----<a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode">WebKitDOMNode</a>
+               +----<a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement">WebKitDOMElement</a>
+                     +----<a class="link" href="WebKitDOMHTMLElement.html" title="WebKitDOMHTMLElement">WebKitDOMHTMLElement</a>
+                           +----WebKitDOMHTMLImageElement
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLImageElement.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+WebKitDOMHTMLImageElement implements
+ <a class="link" href="WebKitDOMEventTarget.html" title="WebKitDOMEventTarget">WebKitDOMEventTarget</a>.</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLImageElement.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitDOMHTMLImageElement.html#WebKitDOMHTMLImageElement--align" title='The "align" property'>align</a>"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLImageElement.html#WebKitDOMHTMLImageElement--alt" title='The "alt" property'>alt</a>"                      <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLImageElement.html#WebKitDOMHTMLImageElement--border" title='The "border" property'>border</a>"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLImageElement.html#WebKitDOMHTMLImageElement--complete" title='The "complete" property'>complete</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
+  "<a class="link" href="WebKitDOMHTMLImageElement.html#WebKitDOMHTMLImageElement--cross-origin" title='The "cross-origin" property'>cross-origin</a>"             <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLImageElement.html#WebKitDOMHTMLImageElement--height" title='The "height" property'>height</a>"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read / Write
+  "<a class="link" href="WebKitDOMHTMLImageElement.html#WebKitDOMHTMLImageElement--hspace" title='The "hspace" property'>hspace</a>"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read / Write
+  "<a class="link" href="WebKitDOMHTMLImageElement.html#WebKitDOMHTMLImageElement--is-map" title='The "is-map" property'>is-map</a>"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+  "<a class="link" href="WebKitDOMHTMLImageElement.html#WebKitDOMHTMLImageElement--long-desc" title='The "long-desc" property'>long-desc</a>"                <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLImageElement.html#WebKitDOMHTMLImageElement--lowsrc" title='The "lowsrc" property'>lowsrc</a>"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLImageElement.html#WebKitDOMHTMLImageElement--name" title='The "name" property'>name</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLImageElement.html#WebKitDOMHTMLImageElement--natural-height" title='The "natural-height" property'>natural-height</a>"           <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+  "<a class="link" href="WebKitDOMHTMLImageElement.html#WebKitDOMHTMLImageElement--natural-width" title='The "natural-width" property'>natural-width</a>"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+  "<a class="link" href="WebKitDOMHTMLImageElement.html#WebKitDOMHTMLImageElement--src" title='The "src" property'>src</a>"                      <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLImageElement.html#WebKitDOMHTMLImageElement--srcset" title='The "srcset" property'>srcset</a>"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLImageElement.html#WebKitDOMHTMLImageElement--use-map" title='The "use-map" property'>use-map</a>"                  <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLImageElement.html#WebKitDOMHTMLImageElement--vspace" title='The "vspace" property'>vspace</a>"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read / Write
+  "<a class="link" href="WebKitDOMHTMLImageElement.html#WebKitDOMHTMLImageElement--width" title='The "width" property'>width</a>"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read / Write
+  "<a class="link" href="WebKitDOMHTMLImageElement.html#WebKitDOMHTMLImageElement--x" title='The "x" property'>x</a>"                        <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+  "<a class="link" href="WebKitDOMHTMLImageElement.html#WebKitDOMHTMLImageElement--y" title='The "y" property'>y</a>"                        <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLImageElement.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLImageElement.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMHTMLImageElement-struct"></a><h3>WebKitDOMHTMLImageElement</h3>
+<pre class="programlisting">typedef struct _WebKitDOMHTMLImageElement WebKitDOMHTMLImageElement;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-image-element-get-name"></a><h3>webkit_dom_html_image_element_get_name ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_image_element_get_name
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-image-element-set-name"></a><h3>webkit_dom_html_image_element_set_name ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_image_element_set_name
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-image-element-get-align"></a><h3>webkit_dom_html_image_element_get_align ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_image_element_get_align
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-image-element-set-align"></a><h3>webkit_dom_html_image_element_set_align ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_image_element_set_align
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-image-element-get-alt"></a><h3>webkit_dom_html_image_element_get_alt ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_image_element_get_alt
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-image-element-set-alt"></a><h3>webkit_dom_html_image_element_set_alt ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_image_element_set_alt
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-image-element-get-border"></a><h3>webkit_dom_html_image_element_get_border ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_image_element_get_border
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-image-element-set-border"></a><h3>webkit_dom_html_image_element_set_border ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_image_element_set_border
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-image-element-get-cross-origin"></a><h3>webkit_dom_html_image_element_get_cross_origin ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_image_element_get_cross_origin
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-image-element-set-cross-origin"></a><h3>webkit_dom_html_image_element_set_cross_origin ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_image_element_set_cross_origin
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-image-element-get-height"></a><h3>webkit_dom_html_image_element_get_height ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_html_image_element_get_height
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-image-element-set-height"></a><h3>webkit_dom_html_image_element_set_height ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_image_element_set_height
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-image-element-get-hspace"></a><h3>webkit_dom_html_image_element_get_hspace ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_html_image_element_get_hspace
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-image-element-set-hspace"></a><h3>webkit_dom_html_image_element_set_hspace ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_image_element_set_hspace
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-image-element-get-is-map"></a><h3>webkit_dom_html_image_element_get_is_map ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_html_image_element_get_is_map
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-image-element-set-is-map"></a><h3>webkit_dom_html_image_element_set_is_map ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_image_element_set_is_map
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-image-element-get-long-desc"></a><h3>webkit_dom_html_image_element_get_long_desc ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_image_element_get_long_desc
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-image-element-set-long-desc"></a><h3>webkit_dom_html_image_element_set_long_desc ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_image_element_set_long_desc
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-image-element-get-src"></a><h3>webkit_dom_html_image_element_get_src ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_image_element_get_src
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-image-element-set-src"></a><h3>webkit_dom_html_image_element_set_src ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_image_element_set_src
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-image-element-get-srcset"></a><h3>webkit_dom_html_image_element_get_srcset ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_image_element_get_srcset
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-image-element-set-srcset"></a><h3>webkit_dom_html_image_element_set_srcset ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_image_element_set_srcset
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-image-element-get-use-map"></a><h3>webkit_dom_html_image_element_get_use_map ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_image_element_get_use_map
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-image-element-set-use-map"></a><h3>webkit_dom_html_image_element_set_use_map ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_image_element_set_use_map
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-image-element-get-vspace"></a><h3>webkit_dom_html_image_element_get_vspace ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_html_image_element_get_vspace
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-image-element-set-vspace"></a><h3>webkit_dom_html_image_element_set_vspace ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_image_element_set_vspace
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-image-element-get-width"></a><h3>webkit_dom_html_image_element_get_width ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_html_image_element_get_width
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-image-element-set-width"></a><h3>webkit_dom_html_image_element_set_width ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_image_element_set_width
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-image-element-get-complete"></a><h3>webkit_dom_html_image_element_get_complete ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_html_image_element_get_complete
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-image-element-get-lowsrc"></a><h3>webkit_dom_html_image_element_get_lowsrc ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_image_element_get_lowsrc
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-image-element-set-lowsrc"></a><h3>webkit_dom_html_image_element_set_lowsrc ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_image_element_set_lowsrc
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-image-element-get-natural-height"></a><h3>webkit_dom_html_image_element_get_natural_height ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_html_image_element_get_natural_height
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-image-element-get-natural-width"></a><h3>webkit_dom_html_image_element_get_natural_width ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_html_image_element_get_natural_width
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-image-element-get-x"></a><h3>webkit_dom_html_image_element_get_x ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_html_image_element_get_x (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-image-element-get-y"></a><h3>webkit_dom_html_image_element_get_y ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_html_image_element_get_y (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLImageElement.html" title="WebKitDOMHTMLImageElement"><span class="type">WebKitDOMHTMLImageElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLImageElement.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMHTMLImageElement--align"></a><h3>The <code class="literal">"align"</code> property</h3>
+<pre class="programlisting">  "align"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLImageElement:align.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLImageElement--alt"></a><h3>The <code class="literal">"alt"</code> property</h3>
+<pre class="programlisting">  "alt"                      <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLImageElement:alt.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLImageElement--border"></a><h3>The <code class="literal">"border"</code> property</h3>
+<pre class="programlisting">  "border"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLImageElement:border.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLImageElement--complete"></a><h3>The <code class="literal">"complete"</code> property</h3>
+<pre class="programlisting">  "complete"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read</pre>
+<p>read-only gboolean HTMLImageElement:complete.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLImageElement--cross-origin"></a><h3>The <code class="literal">"cross-origin"</code> property</h3>
+<pre class="programlisting">  "cross-origin"             <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLImageElement:cross-origin.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLImageElement--height"></a><h3>The <code class="literal">"height"</code> property</h3>
+<pre class="programlisting">  "height"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read / Write</pre>
+<p>read-only glong HTMLImageElement:height.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLImageElement--hspace"></a><h3>The <code class="literal">"hspace"</code> property</h3>
+<pre class="programlisting">  "hspace"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read / Write</pre>
+<p>read-only glong HTMLImageElement:hspace.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLImageElement--is-map"></a><h3>The <code class="literal">"is-map"</code> property</h3>
+<pre class="programlisting">  "is-map"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
+<p>read-only gboolean HTMLImageElement:is-map.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLImageElement--long-desc"></a><h3>The <code class="literal">"long-desc"</code> property</h3>
+<pre class="programlisting">  "long-desc"                <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLImageElement:long-desc.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLImageElement--lowsrc"></a><h3>The <code class="literal">"lowsrc"</code> property</h3>
+<pre class="programlisting">  "lowsrc"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLImageElement:lowsrc.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLImageElement--name"></a><h3>The <code class="literal">"name"</code> property</h3>
+<pre class="programlisting">  "name"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLImageElement:name.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLImageElement--natural-height"></a><h3>The <code class="literal">"natural-height"</code> property</h3>
+<pre class="programlisting">  "natural-height"           <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong HTMLImageElement:natural-height.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLImageElement--natural-width"></a><h3>The <code class="literal">"natural-width"</code> property</h3>
+<pre class="programlisting">  "natural-width"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong HTMLImageElement:natural-width.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLImageElement--src"></a><h3>The <code class="literal">"src"</code> property</h3>
+<pre class="programlisting">  "src"                      <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLImageElement:src.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLImageElement--srcset"></a><h3>The <code class="literal">"srcset"</code> property</h3>
+<pre class="programlisting">  "srcset"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLImageElement:srcset.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLImageElement--use-map"></a><h3>The <code class="literal">"use-map"</code> property</h3>
+<pre class="programlisting">  "use-map"                  <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLImageElement:use-map.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLImageElement--vspace"></a><h3>The <code class="literal">"vspace"</code> property</h3>
+<pre class="programlisting">  "vspace"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read / Write</pre>
+<p>read-only glong HTMLImageElement:vspace.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLImageElement--width"></a><h3>The <code class="literal">"width"</code> property</h3>
+<pre class="programlisting">  "width"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read / Write</pre>
+<p>read-only glong HTMLImageElement:width.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLImageElement--x"></a><h3>The <code class="literal">"x"</code> property</h3>
+<pre class="programlisting">  "x"                        <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong HTMLImageElement:x.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLImageElement--y"></a><h3>The <code class="literal">"y"</code> property</h3>
+<pre class="programlisting">  "y"                        <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong HTMLImageElement:y.</p>
+<p>Default value: 0</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19.1</div>
+</body>
+</html>

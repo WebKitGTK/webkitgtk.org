@@ -1,0 +1,884 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMGTK+ Reference Manual: WebKitDOMDOMSelection</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMDOMWindow.html" title="WebKitDOMDOMWindow">
+<link rel="next" href="WebKitDOMEventTarget.html" title="WebKitDOMEventTarget">
+<meta name="generator" content="GTK-Doc V1.19.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<td width="100%" align="left">
+<a href="#" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMDOMSelection.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMDOMSelection.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitDOMDOMSelection.properties" class="shortcut">Properties</a>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="WebKitDOMDOMWindow.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="WebKitDOMEventTarget.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="WebKitDOMDOMSelection"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMDOMSelection.top_of_page"></a>WebKitDOMDOMSelection</span></h2>
+<p>WebKitDOMDOMSelection</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMDOMSelection.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMDOMSelection.html#WebKitDOMDOMSelection-struct" title="WebKitDOMDOMSelection">WebKitDOMDOMSelection</a>;
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMSelection.html#webkit-dom-dom-selection-collapse" title="webkit_dom_dom_selection_collapse ()">webkit_dom_dom_selection_collapse</a>   (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a> *node</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> index</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMSelection.html#webkit-dom-dom-selection-collapse-to-end" title="webkit_dom_dom_selection_collapse_to_end ()">webkit_dom_dom_selection_collapse_to_end</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMSelection.html#webkit-dom-dom-selection-collapse-to-start" title="webkit_dom_dom_selection_collapse_to_start ()">webkit_dom_dom_selection_collapse_to_start</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMSelection.html#webkit-dom-dom-selection-delete-from-document" title="webkit_dom_dom_selection_delete_from_document ()">webkit_dom_dom_selection_delete_from_document</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMDOMSelection.html#webkit-dom-dom-selection-contains-node" title="webkit_dom_dom_selection_contains_node ()">webkit_dom_dom_selection_contains_node</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a> *node</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> allowPartial</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMSelection.html#webkit-dom-dom-selection-select-all-children" title="webkit_dom_dom_selection_select_all_children ()">webkit_dom_dom_selection_select_all_children</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a> *node</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMSelection.html#webkit-dom-dom-selection-extend" title="webkit_dom_dom_selection_extend ()">webkit_dom_dom_selection_extend</a>     (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a> *node</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> offset</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a class="link" href="WebKitDOMRange.html" title="WebKitDOMRange"><span class="returnvalue">WebKitDOMRange</span></a> *    <a class="link" href="WebKitDOMDOMSelection.html#webkit-dom-dom-selection-get-range-at" title="webkit_dom_dom_selection_get_range_at ()">webkit_dom_dom_selection_get_range_at</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> index</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMSelection.html#webkit-dom-dom-selection-remove-all-ranges" title="webkit_dom_dom_selection_remove_all_ranges ()">webkit_dom_dom_selection_remove_all_ranges</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMSelection.html#webkit-dom-dom-selection-add-range" title="webkit_dom_dom_selection_add_range ()">webkit_dom_dom_selection_add_range</a>  (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMRange.html" title="WebKitDOMRange"><span class="type">WebKitDOMRange</span></a> *range</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMSelection.html#webkit-dom-dom-selection-modify" title="webkit_dom_dom_selection_modify ()">webkit_dom_dom_selection_modify</a>     (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *alter</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *direction</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *granularity</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMSelection.html#webkit-dom-dom-selection-set-base-and-extent" title="webkit_dom_dom_selection_set_base_and_extent ()">webkit_dom_dom_selection_set_base_and_extent</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a> *baseNode</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> baseOffset</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a> *extentNode</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> extentOffset</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMSelection.html#webkit-dom-dom-selection-set-position" title="webkit_dom_dom_selection_set_position ()">webkit_dom_dom_selection_set_position</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a> *node</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> offset</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMDOMSelection.html#webkit-dom-dom-selection-empty" title="webkit_dom_dom_selection_empty ()">webkit_dom_dom_selection_empty</a>      (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="returnvalue">WebKitDOMNode</span></a> *     <a class="link" href="WebKitDOMDOMSelection.html#webkit-dom-dom-selection-get-anchor-node" title="webkit_dom_dom_selection_get_anchor_node ()">webkit_dom_dom_selection_get_anchor_node</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMDOMSelection.html#webkit-dom-dom-selection-get-anchor-offset" title="webkit_dom_dom_selection_get_anchor_offset ()">webkit_dom_dom_selection_get_anchor_offset</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="returnvalue">WebKitDOMNode</span></a> *     <a class="link" href="WebKitDOMDOMSelection.html#webkit-dom-dom-selection-get-focus-node" title="webkit_dom_dom_selection_get_focus_node ()">webkit_dom_dom_selection_get_focus_node</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMDOMSelection.html#webkit-dom-dom-selection-get-focus-offset" title="webkit_dom_dom_selection_get_focus_offset ()">webkit_dom_dom_selection_get_focus_offset</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMDOMSelection.html#webkit-dom-dom-selection-get-is-collapsed" title="webkit_dom_dom_selection_get_is_collapsed ()">webkit_dom_dom_selection_get_is_collapsed</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMDOMSelection.html#webkit-dom-dom-selection-get-range-count" title="webkit_dom_dom_selection_get_range_count ()">webkit_dom_dom_selection_get_range_count</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="returnvalue">WebKitDOMNode</span></a> *     <a class="link" href="WebKitDOMDOMSelection.html#webkit-dom-dom-selection-get-base-node" title="webkit_dom_dom_selection_get_base_node ()">webkit_dom_dom_selection_get_base_node</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMDOMSelection.html#webkit-dom-dom-selection-get-base-offset" title="webkit_dom_dom_selection_get_base_offset ()">webkit_dom_dom_selection_get_base_offset</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="returnvalue">WebKitDOMNode</span></a> *     <a class="link" href="WebKitDOMDOMSelection.html#webkit-dom-dom-selection-get-extent-node" title="webkit_dom_dom_selection_get_extent_node ()">webkit_dom_dom_selection_get_extent_node</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMDOMSelection.html#webkit-dom-dom-selection-get-extent-offset" title="webkit_dom_dom_selection_get_extent_offset ()">webkit_dom_dom_selection_get_extent_offset</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMDOMSelection.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----WebKitDOMDOMSelection
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMDOMSelection.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitDOMDOMSelection.html#WebKitDOMDOMSelection--anchor-node" title='The "anchor-node" property'>anchor-node</a>"              <a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a>*        : Read
+  "<a class="link" href="WebKitDOMDOMSelection.html#WebKitDOMDOMSelection--anchor-offset" title='The "anchor-offset" property'>anchor-offset</a>"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+  "<a class="link" href="WebKitDOMDOMSelection.html#WebKitDOMDOMSelection--base-node" title='The "base-node" property'>base-node</a>"                <a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a>*        : Read
+  "<a class="link" href="WebKitDOMDOMSelection.html#WebKitDOMDOMSelection--base-offset" title='The "base-offset" property'>base-offset</a>"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+  "<a class="link" href="WebKitDOMDOMSelection.html#WebKitDOMDOMSelection--extent-node" title='The "extent-node" property'>extent-node</a>"              <a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a>*        : Read
+  "<a class="link" href="WebKitDOMDOMSelection.html#WebKitDOMDOMSelection--extent-offset" title='The "extent-offset" property'>extent-offset</a>"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+  "<a class="link" href="WebKitDOMDOMSelection.html#WebKitDOMDOMSelection--focus-node" title='The "focus-node" property'>focus-node</a>"               <a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a>*        : Read
+  "<a class="link" href="WebKitDOMDOMSelection.html#WebKitDOMDOMSelection--focus-offset" title='The "focus-offset" property'>focus-offset</a>"             <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+  "<a class="link" href="WebKitDOMDOMSelection.html#WebKitDOMDOMSelection--is-collapsed" title='The "is-collapsed" property'>is-collapsed</a>"             <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
+  "<a class="link" href="WebKitDOMDOMSelection.html#WebKitDOMDOMSelection--range-count" title='The "range-count" property'>range-count</a>"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+  "<a class="link" href="WebKitDOMDOMSelection.html#WebKitDOMDOMSelection--type" title='The "type" property'>type</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMDOMSelection.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMDOMSelection.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMDOMSelection-struct"></a><h3>WebKitDOMDOMSelection</h3>
+<pre class="programlisting">typedef struct _WebKitDOMDOMSelection WebKitDOMDOMSelection;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-selection-collapse"></a><h3>webkit_dom_dom_selection_collapse ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_selection_collapse   (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a> *node</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> index</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>node</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>index</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-selection-collapse-to-end"></a><h3>webkit_dom_dom_selection_collapse_to_end ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_selection_collapse_to_end
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-selection-collapse-to-start"></a><h3>webkit_dom_dom_selection_collapse_to_start ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_selection_collapse_to_start
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-selection-delete-from-document"></a><h3>webkit_dom_dom_selection_delete_from_document ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_selection_delete_from_document
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-selection-contains-node"></a><h3>webkit_dom_dom_selection_contains_node ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_dom_selection_contains_node
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a> *node</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> allowPartial</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>node</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>allowPartial</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-selection-select-all-children"></a><h3>webkit_dom_dom_selection_select_all_children ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_selection_select_all_children
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a> *node</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>node</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-selection-extend"></a><h3>webkit_dom_dom_selection_extend ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_selection_extend     (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a> *node</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> offset</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>node</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>offset</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-selection-get-range-at"></a><h3>webkit_dom_dom_selection_get_range_at ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMRange.html" title="WebKitDOMRange"><span class="returnvalue">WebKitDOMRange</span></a> *    webkit_dom_dom_selection_get_range_at
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> index</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>index</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMRange.html" title="WebKitDOMRange"><span class="type">WebKitDOMRange</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-selection-remove-all-ranges"></a><h3>webkit_dom_dom_selection_remove_all_ranges ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_selection_remove_all_ranges
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-selection-add-range"></a><h3>webkit_dom_dom_selection_add_range ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_selection_add_range  (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMRange.html" title="WebKitDOMRange"><span class="type">WebKitDOMRange</span></a> *range</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>range</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMRange.html" title="WebKitDOMRange"><span class="type">WebKitDOMRange</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-selection-modify"></a><h3>webkit_dom_dom_selection_modify ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_selection_modify     (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *alter</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *direction</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *granularity</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>alter</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>direction</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>granularity</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-selection-set-base-and-extent"></a><h3>webkit_dom_dom_selection_set_base_and_extent ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_selection_set_base_and_extent
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a> *baseNode</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> baseOffset</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a> *extentNode</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> extentOffset</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>baseNode</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>baseOffset</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>extentNode</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>extentOffset</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-selection-set-position"></a><h3>webkit_dom_dom_selection_set_position ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_selection_set_position
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a> *node</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> offset</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>node</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>offset</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-selection-empty"></a><h3>webkit_dom_dom_selection_empty ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_dom_selection_empty      (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-selection-get-anchor-node"></a><h3>webkit_dom_dom_selection_get_anchor_node ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="returnvalue">WebKitDOMNode</span></a> *     webkit_dom_dom_selection_get_anchor_node
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-selection-get-anchor-offset"></a><h3>webkit_dom_dom_selection_get_anchor_offset ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_dom_selection_get_anchor_offset
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-selection-get-focus-node"></a><h3>webkit_dom_dom_selection_get_focus_node ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="returnvalue">WebKitDOMNode</span></a> *     webkit_dom_dom_selection_get_focus_node
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-selection-get-focus-offset"></a><h3>webkit_dom_dom_selection_get_focus_offset ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_dom_selection_get_focus_offset
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-selection-get-is-collapsed"></a><h3>webkit_dom_dom_selection_get_is_collapsed ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_dom_selection_get_is_collapsed
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-selection-get-range-count"></a><h3>webkit_dom_dom_selection_get_range_count ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_dom_selection_get_range_count
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-selection-get-base-node"></a><h3>webkit_dom_dom_selection_get_base_node ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="returnvalue">WebKitDOMNode</span></a> *     webkit_dom_dom_selection_get_base_node
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-selection-get-base-offset"></a><h3>webkit_dom_dom_selection_get_base_offset ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_dom_selection_get_base_offset
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-selection-get-extent-node"></a><h3>webkit_dom_dom_selection_get_extent_node ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="returnvalue">WebKitDOMNode</span></a> *     webkit_dom_dom_selection_get_extent_node
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-selection-get-extent-offset"></a><h3>webkit_dom_dom_selection_get_extent_offset ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_dom_selection_get_extent_offset
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMDOMSelection.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMDOMSelection--anchor-node"></a><h3>The <code class="literal">"anchor-node"</code> property</h3>
+<pre class="programlisting">  "anchor-node"              <a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a>*        : Read</pre>
+<p>read-only WebKitDOMNode* DOMSelection:anchor-node.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMSelection--anchor-offset"></a><h3>The <code class="literal">"anchor-offset"</code> property</h3>
+<pre class="programlisting">  "anchor-offset"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong DOMSelection:anchor-offset.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMSelection--base-node"></a><h3>The <code class="literal">"base-node"</code> property</h3>
+<pre class="programlisting">  "base-node"                <a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a>*        : Read</pre>
+<p>read-only WebKitDOMNode* DOMSelection:base-node.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMSelection--base-offset"></a><h3>The <code class="literal">"base-offset"</code> property</h3>
+<pre class="programlisting">  "base-offset"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong DOMSelection:base-offset.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMSelection--extent-node"></a><h3>The <code class="literal">"extent-node"</code> property</h3>
+<pre class="programlisting">  "extent-node"              <a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a>*        : Read</pre>
+<p>read-only WebKitDOMNode* DOMSelection:extent-node.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMSelection--extent-offset"></a><h3>The <code class="literal">"extent-offset"</code> property</h3>
+<pre class="programlisting">  "extent-offset"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong DOMSelection:extent-offset.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMSelection--focus-node"></a><h3>The <code class="literal">"focus-node"</code> property</h3>
+<pre class="programlisting">  "focus-node"               <a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a>*        : Read</pre>
+<p>read-only WebKitDOMNode* DOMSelection:focus-node.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMSelection--focus-offset"></a><h3>The <code class="literal">"focus-offset"</code> property</h3>
+<pre class="programlisting">  "focus-offset"             <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong DOMSelection:focus-offset.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMSelection--is-collapsed"></a><h3>The <code class="literal">"is-collapsed"</code> property</h3>
+<pre class="programlisting">  "is-collapsed"             <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read</pre>
+<p>read-only gboolean DOMSelection:is-collapsed.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMSelection--range-count"></a><h3>The <code class="literal">"range-count"</code> property</h3>
+<pre class="programlisting">  "range-count"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong DOMSelection:range-count.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMSelection--type"></a><h3>The <code class="literal">"type"</code> property</h3>
+<pre class="programlisting">  "type"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* DOMSelection:type.</p>
+<p>Default value: ""</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19.1</div>
+</body>
+</html>

@@ -1,0 +1,655 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMGTK+ Reference Manual: WebKitDOMHTMLScriptElement</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMHTMLQuoteElement.html" title="WebKitDOMHTMLQuoteElement">
+<link rel="next" href="WebKitDOMHTMLSelectElement.html" title="WebKitDOMHTMLSelectElement">
+<meta name="generator" content="GTK-Doc V1.19.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<td width="100%" align="left">
+<a href="#" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMHTMLScriptElement.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMHTMLScriptElement.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitDOMHTMLScriptElement.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#WebKitDOMHTMLScriptElement.properties" class="shortcut">Properties</a>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="WebKitDOMHTMLQuoteElement.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="WebKitDOMHTMLSelectElement.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="WebKitDOMHTMLScriptElement"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMHTMLScriptElement.top_of_page"></a>WebKitDOMHTMLScriptElement</span></h2>
+<p>WebKitDOMHTMLScriptElement</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMHTMLScriptElement.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMHTMLScriptElement.html#WebKitDOMHTMLScriptElement-struct" title="WebKitDOMHTMLScriptElement">WebKitDOMHTMLScriptElement</a>;
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLScriptElement.html#webkit-dom-html-script-element-get-text" title="webkit_dom_html_script_element_get_text ()">webkit_dom_html_script_element_get_text</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLScriptElement.html#webkit-dom-html-script-element-set-text" title="webkit_dom_html_script_element_set_text ()">webkit_dom_html_script_element_set_text</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLScriptElement.html#webkit-dom-html-script-element-get-html-for" title="webkit_dom_html_script_element_get_html_for ()">webkit_dom_html_script_element_get_html_for</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLScriptElement.html#webkit-dom-html-script-element-set-html-for" title="webkit_dom_html_script_element_set_html_for ()">webkit_dom_html_script_element_set_html_for</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLScriptElement.html#webkit-dom-html-script-element-get-event" title="webkit_dom_html_script_element_get_event ()">webkit_dom_html_script_element_get_event</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLScriptElement.html#webkit-dom-html-script-element-set-event" title="webkit_dom_html_script_element_set_event ()">webkit_dom_html_script_element_set_event</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLScriptElement.html#webkit-dom-html-script-element-get-charset" title="webkit_dom_html_script_element_get_charset ()">webkit_dom_html_script_element_get_charset</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLScriptElement.html#webkit-dom-html-script-element-set-charset" title="webkit_dom_html_script_element_set_charset ()">webkit_dom_html_script_element_set_charset</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMHTMLScriptElement.html#webkit-dom-html-script-element-get-async" title="webkit_dom_html_script_element_get_async ()">webkit_dom_html_script_element_get_async</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLScriptElement.html#webkit-dom-html-script-element-set-async" title="webkit_dom_html_script_element_set_async ()">webkit_dom_html_script_element_set_async</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMHTMLScriptElement.html#webkit-dom-html-script-element-get-defer" title="webkit_dom_html_script_element_get_defer ()">webkit_dom_html_script_element_get_defer</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLScriptElement.html#webkit-dom-html-script-element-set-defer" title="webkit_dom_html_script_element_set_defer ()">webkit_dom_html_script_element_set_defer</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLScriptElement.html#webkit-dom-html-script-element-get-src" title="webkit_dom_html_script_element_get_src ()">webkit_dom_html_script_element_get_src</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLScriptElement.html#webkit-dom-html-script-element-set-src" title="webkit_dom_html_script_element_set_src ()">webkit_dom_html_script_element_set_src</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLScriptElement.html#webkit-dom-html-script-element-get-cross-origin" title="webkit_dom_html_script_element_get_cross_origin ()">webkit_dom_html_script_element_get_cross_origin</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLScriptElement.html#webkit-dom-html-script-element-set-cross-origin" title="webkit_dom_html_script_element_set_cross_origin ()">webkit_dom_html_script_element_set_cross_origin</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLScriptElement.html#webkit-dom-html-script-element-get-nonce" title="webkit_dom_html_script_element_get_nonce ()">webkit_dom_html_script_element_get_nonce</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLScriptElement.html#webkit-dom-html-script-element-set-nonce" title="webkit_dom_html_script_element_set_nonce ()">webkit_dom_html_script_element_set_nonce</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLScriptElement.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----<a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode">WebKitDOMNode</a>
+               +----<a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement">WebKitDOMElement</a>
+                     +----<a class="link" href="WebKitDOMHTMLElement.html" title="WebKitDOMHTMLElement">WebKitDOMHTMLElement</a>
+                           +----WebKitDOMHTMLScriptElement
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLScriptElement.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+WebKitDOMHTMLScriptElement implements
+ <a class="link" href="WebKitDOMEventTarget.html" title="WebKitDOMEventTarget">WebKitDOMEventTarget</a>.</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLScriptElement.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitDOMHTMLScriptElement.html#WebKitDOMHTMLScriptElement--async" title='The "async" property'>async</a>"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+  "<a class="link" href="WebKitDOMHTMLScriptElement.html#WebKitDOMHTMLScriptElement--charset" title='The "charset" property'>charset</a>"                  <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLScriptElement.html#WebKitDOMHTMLScriptElement--cross-origin" title='The "cross-origin" property'>cross-origin</a>"             <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLScriptElement.html#WebKitDOMHTMLScriptElement--defer" title='The "defer" property'>defer</a>"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+  "<a class="link" href="WebKitDOMHTMLScriptElement.html#WebKitDOMHTMLScriptElement--event" title='The "event" property'>event</a>"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLScriptElement.html#WebKitDOMHTMLScriptElement--html-for" title='The "html-for" property'>html-for</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLScriptElement.html#WebKitDOMHTMLScriptElement--nonce" title='The "nonce" property'>nonce</a>"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLScriptElement.html#WebKitDOMHTMLScriptElement--src" title='The "src" property'>src</a>"                      <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLScriptElement.html#WebKitDOMHTMLScriptElement--text" title='The "text" property'>text</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLScriptElement.html#WebKitDOMHTMLScriptElement--type" title='The "type" property'>type</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLScriptElement.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLScriptElement.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMHTMLScriptElement-struct"></a><h3>WebKitDOMHTMLScriptElement</h3>
+<pre class="programlisting">typedef struct _WebKitDOMHTMLScriptElement WebKitDOMHTMLScriptElement;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-script-element-get-text"></a><h3>webkit_dom_html_script_element_get_text ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_script_element_get_text
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-script-element-set-text"></a><h3>webkit_dom_html_script_element_set_text ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_script_element_set_text
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-script-element-get-html-for"></a><h3>webkit_dom_html_script_element_get_html_for ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_script_element_get_html_for
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-script-element-set-html-for"></a><h3>webkit_dom_html_script_element_set_html_for ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_script_element_set_html_for
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-script-element-get-event"></a><h3>webkit_dom_html_script_element_get_event ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_script_element_get_event
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-script-element-set-event"></a><h3>webkit_dom_html_script_element_set_event ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_script_element_set_event
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-script-element-get-charset"></a><h3>webkit_dom_html_script_element_get_charset ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_script_element_get_charset
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-script-element-set-charset"></a><h3>webkit_dom_html_script_element_set_charset ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_script_element_set_charset
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-script-element-get-async"></a><h3>webkit_dom_html_script_element_get_async ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_html_script_element_get_async
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-script-element-set-async"></a><h3>webkit_dom_html_script_element_set_async ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_script_element_set_async
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-script-element-get-defer"></a><h3>webkit_dom_html_script_element_get_defer ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_html_script_element_get_defer
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-script-element-set-defer"></a><h3>webkit_dom_html_script_element_set_defer ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_script_element_set_defer
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-script-element-get-src"></a><h3>webkit_dom_html_script_element_get_src ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_script_element_get_src
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-script-element-set-src"></a><h3>webkit_dom_html_script_element_set_src ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_script_element_set_src
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-script-element-get-cross-origin"></a><h3>webkit_dom_html_script_element_get_cross_origin ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_script_element_get_cross_origin
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-script-element-set-cross-origin"></a><h3>webkit_dom_html_script_element_set_cross_origin ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_script_element_set_cross_origin
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-script-element-get-nonce"></a><h3>webkit_dom_html_script_element_get_nonce ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_script_element_get_nonce
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-script-element-set-nonce"></a><h3>webkit_dom_html_script_element_set_nonce ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_script_element_set_nonce
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLScriptElement.html" title="WebKitDOMHTMLScriptElement"><span class="type">WebKitDOMHTMLScriptElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLScriptElement.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMHTMLScriptElement--async"></a><h3>The <code class="literal">"async"</code> property</h3>
+<pre class="programlisting">  "async"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
+<p>read-only gboolean HTMLScriptElement:async.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLScriptElement--charset"></a><h3>The <code class="literal">"charset"</code> property</h3>
+<pre class="programlisting">  "charset"                  <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLScriptElement:charset.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLScriptElement--cross-origin"></a><h3>The <code class="literal">"cross-origin"</code> property</h3>
+<pre class="programlisting">  "cross-origin"             <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLScriptElement:cross-origin.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLScriptElement--defer"></a><h3>The <code class="literal">"defer"</code> property</h3>
+<pre class="programlisting">  "defer"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
+<p>read-only gboolean HTMLScriptElement:defer.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLScriptElement--event"></a><h3>The <code class="literal">"event"</code> property</h3>
+<pre class="programlisting">  "event"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLScriptElement:event.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLScriptElement--html-for"></a><h3>The <code class="literal">"html-for"</code> property</h3>
+<pre class="programlisting">  "html-for"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLScriptElement:html-for.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLScriptElement--nonce"></a><h3>The <code class="literal">"nonce"</code> property</h3>
+<pre class="programlisting">  "nonce"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLScriptElement:nonce.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLScriptElement--src"></a><h3>The <code class="literal">"src"</code> property</h3>
+<pre class="programlisting">  "src"                      <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLScriptElement:src.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLScriptElement--text"></a><h3>The <code class="literal">"text"</code> property</h3>
+<pre class="programlisting">  "text"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLScriptElement:text.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLScriptElement--type"></a><h3>The <code class="literal">"type"</code> property</h3>
+<pre class="programlisting">  "type"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLScriptElement:type.</p>
+<p>Default value: ""</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19.1</div>
+</body>
+</html>

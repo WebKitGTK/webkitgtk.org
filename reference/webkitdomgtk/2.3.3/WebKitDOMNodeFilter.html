@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMGTK+ Reference Manual: WebKitDOMNodeFilter</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMNode.html" title="WebKitDOMNode">
+<link rel="next" href="WebKitDOMNodeIterator.html" title="WebKitDOMNodeIterator">
+<meta name="generator" content="GTK-Doc V1.19.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<td width="100%" align="left">
+<a href="#" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMNodeFilter.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMNodeFilter.object-hierarchy" class="shortcut">Object Hierarchy</a>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="WebKitDOMNode.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="WebKitDOMNodeIterator.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="WebKitDOMNodeFilter"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMNodeFilter.top_of_page"></a>WebKitDOMNodeFilter</span></h2>
+<p>WebKitDOMNodeFilter</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMNodeFilter.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMNodeFilter.html#WebKitDOMNodeFilter-struct" title="WebKitDOMNodeFilter">WebKitDOMNodeFilter</a>;
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gshort"><span class="returnvalue">gshort</span></a>              <a class="link" href="WebKitDOMNodeFilter.html#webkit-dom-node-filter-accept-node" title="webkit_dom_node_filter_accept_node ()">webkit_dom_node_filter_accept_node</a>  (<em class="parameter"><code><a class="link" href="WebKitDOMNodeFilter.html" title="WebKitDOMNodeFilter"><span class="type">WebKitDOMNodeFilter</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a> *n</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMNodeFilter.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----WebKitDOMNodeFilter
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMNodeFilter.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMNodeFilter.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMNodeFilter-struct"></a><h3>WebKitDOMNodeFilter</h3>
+<pre class="programlisting">typedef struct _WebKitDOMNodeFilter WebKitDOMNodeFilter;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-node-filter-accept-node"></a><h3>webkit_dom_node_filter_accept_node ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gshort"><span class="returnvalue">gshort</span></a>              webkit_dom_node_filter_accept_node  (<em class="parameter"><code><a class="link" href="WebKitDOMNodeFilter.html" title="WebKitDOMNodeFilter"><span class="type">WebKitDOMNodeFilter</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a> *n</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNodeFilter.html" title="WebKitDOMNodeFilter"><span class="type">WebKitDOMNodeFilter</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>n</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gshort"><span class="type">gshort</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19.1</div>
+</body>
+</html>

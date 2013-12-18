@@ -1,0 +1,518 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMGTK+ Reference Manual: WebKitDOMShadowRoot</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMScreen.html" title="WebKitDOMScreen">
+<link rel="next" href="WebKitDOMWebKitPoint.html" title="WebKitDOMWebKitPoint">
+<meta name="generator" content="GTK-Doc V1.19.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<td width="100%" align="left">
+<a href="#" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMShadowRoot.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMShadowRoot.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitDOMShadowRoot.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#WebKitDOMShadowRoot.properties" class="shortcut">Properties</a>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="WebKitDOMScreen.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="WebKitDOMWebKitPoint.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="WebKitDOMShadowRoot"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMShadowRoot.top_of_page"></a>WebKitDOMShadowRoot</span></h2>
+<p>WebKitDOMShadowRoot</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMShadowRoot.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMShadowRoot.html#WebKitDOMShadowRoot-struct" title="WebKitDOMShadowRoot">WebKitDOMShadowRoot</a>;
+<a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="returnvalue">WebKitDOMDOMSelection</span></a> * <a class="link" href="WebKitDOMShadowRoot.html#webkit-dom-shadow-root-get-selection" title="webkit_dom_shadow_root_get_selection ()">webkit_dom_shadow_root_get_selection</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="returnvalue">WebKitDOMElement</span></a> *  <a class="link" href="WebKitDOMShadowRoot.html#webkit-dom-shadow-root-get-element-by-id" title="webkit_dom_shadow_root_get_element_by_id ()">webkit_dom_shadow_root_get_element_by_id</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *elementId</code></em>);
+<a class="link" href="WebKitDOMNodeList.html" title="WebKitDOMNodeList"><span class="returnvalue">WebKitDOMNodeList</span></a> * <a class="link" href="WebKitDOMShadowRoot.html#webkit-dom-shadow-root-get-elements-by-class-name" title="webkit_dom_shadow_root_get_elements_by_class_name ()">webkit_dom_shadow_root_get_elements_by_class_name</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *className</code></em>);
+<a class="link" href="WebKitDOMNodeList.html" title="WebKitDOMNodeList"><span class="returnvalue">WebKitDOMNodeList</span></a> * <a class="link" href="WebKitDOMShadowRoot.html#webkit-dom-shadow-root-get-elements-by-tag-name" title="webkit_dom_shadow_root_get_elements_by_tag_name ()">webkit_dom_shadow_root_get_elements_by_tag_name</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *tagName</code></em>);
+<a class="link" href="WebKitDOMNodeList.html" title="WebKitDOMNodeList"><span class="returnvalue">WebKitDOMNodeList</span></a> * <a class="link" href="WebKitDOMShadowRoot.html#webkit-dom-shadow-root-get-elements-by-tag-name-ns" title="webkit_dom_shadow_root_get_elements_by_tag_name_ns ()">webkit_dom_shadow_root_get_elements_by_tag_name_ns</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *namespaceURI</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *localName</code></em>);
+<a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="returnvalue">WebKitDOMElement</span></a> *  <a class="link" href="WebKitDOMShadowRoot.html#webkit-dom-shadow-root-element-from-point" title="webkit_dom_shadow_root_element_from_point ()">webkit_dom_shadow_root_element_from_point</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> x</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> y</code></em>);
+<a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="returnvalue">WebKitDOMElement</span></a> *  <a class="link" href="WebKitDOMShadowRoot.html#webkit-dom-shadow-root-get-active-element" title="webkit_dom_shadow_root_get_active_element ()">webkit_dom_shadow_root_get_active_element</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMShadowRoot.html#webkit-dom-shadow-root-get-apply-author-styles" title="webkit_dom_shadow_root_get_apply_author_styles ()">webkit_dom_shadow_root_get_apply_author_styles</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMShadowRoot.html#webkit-dom-shadow-root-set-apply-author-styles" title="webkit_dom_shadow_root_set_apply_author_styles ()">webkit_dom_shadow_root_set_apply_author_styles</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMShadowRoot.html#webkit-dom-shadow-root-get-reset-style-inheritance" title="webkit_dom_shadow_root_get_reset_style_inheritance ()">webkit_dom_shadow_root_get_reset_style_inheritance</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMShadowRoot.html#webkit-dom-shadow-root-set-reset-style-inheritance" title="webkit_dom_shadow_root_set_reset_style_inheritance ()">webkit_dom_shadow_root_set_reset_style_inheritance</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMShadowRoot.html#webkit-dom-shadow-root-get-inner-html" title="webkit_dom_shadow_root_get_inner_html ()">webkit_dom_shadow_root_get_inner_html</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMShadowRoot.html#webkit-dom-shadow-root-set-inner-html" title="webkit_dom_shadow_root_set_inner_html ()">webkit_dom_shadow_root_set_inner_html</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMShadowRoot.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----<a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode">WebKitDOMNode</a>
+               +----<a class="link" href="WebKitDOMDocumentFragment.html" title="WebKitDOMDocumentFragment">WebKitDOMDocumentFragment</a>
+                     +----WebKitDOMShadowRoot
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMShadowRoot.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+WebKitDOMShadowRoot implements
+ <a class="link" href="WebKitDOMEventTarget.html" title="WebKitDOMEventTarget">WebKitDOMEventTarget</a>.</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMShadowRoot.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitDOMShadowRoot.html#WebKitDOMShadowRoot--active-element" title='The "active-element" property'>active-element</a>"           <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>*     : Read
+  "<a class="link" href="WebKitDOMShadowRoot.html#WebKitDOMShadowRoot--apply-author-styles" title='The "apply-author-styles" property'>apply-author-styles</a>"      <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+  "<a class="link" href="WebKitDOMShadowRoot.html#WebKitDOMShadowRoot--inner-html" title='The "inner-html" property'>inner-html</a>"               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMShadowRoot.html#WebKitDOMShadowRoot--reset-style-inheritance" title='The "reset-style-inheritance" property'>reset-style-inheritance</a>"  <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMShadowRoot.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMShadowRoot.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMShadowRoot-struct"></a><h3>WebKitDOMShadowRoot</h3>
+<pre class="programlisting">typedef struct _WebKitDOMShadowRoot WebKitDOMShadowRoot;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-shadow-root-get-selection"></a><h3>webkit_dom_shadow_root_get_selection ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="returnvalue">WebKitDOMDOMSelection</span></a> * webkit_dom_shadow_root_get_selection
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMSelection.html" title="WebKitDOMDOMSelection"><span class="type">WebKitDOMDOMSelection</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-shadow-root-get-element-by-id"></a><h3>webkit_dom_shadow_root_get_element_by_id ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="returnvalue">WebKitDOMElement</span></a> *  webkit_dom_shadow_root_get_element_by_id
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *elementId</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>elementId</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-shadow-root-get-elements-by-class-name"></a><h3>webkit_dom_shadow_root_get_elements_by_class_name ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMNodeList.html" title="WebKitDOMNodeList"><span class="returnvalue">WebKitDOMNodeList</span></a> * webkit_dom_shadow_root_get_elements_by_class_name
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *className</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>className</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNodeList.html" title="WebKitDOMNodeList"><span class="type">WebKitDOMNodeList</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-shadow-root-get-elements-by-tag-name"></a><h3>webkit_dom_shadow_root_get_elements_by_tag_name ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMNodeList.html" title="WebKitDOMNodeList"><span class="returnvalue">WebKitDOMNodeList</span></a> * webkit_dom_shadow_root_get_elements_by_tag_name
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *tagName</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>tagName</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNodeList.html" title="WebKitDOMNodeList"><span class="type">WebKitDOMNodeList</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-shadow-root-get-elements-by-tag-name-ns"></a><h3>webkit_dom_shadow_root_get_elements_by_tag_name_ns ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMNodeList.html" title="WebKitDOMNodeList"><span class="returnvalue">WebKitDOMNodeList</span></a> * webkit_dom_shadow_root_get_elements_by_tag_name_ns
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *namespaceURI</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *localName</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>namespaceURI</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>localName</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNodeList.html" title="WebKitDOMNodeList"><span class="type">WebKitDOMNodeList</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-shadow-root-element-from-point"></a><h3>webkit_dom_shadow_root_element_from_point ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="returnvalue">WebKitDOMElement</span></a> *  webkit_dom_shadow_root_element_from_point
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> x</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> y</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>x</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>y</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-shadow-root-get-active-element"></a><h3>webkit_dom_shadow_root_get_active_element ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="returnvalue">WebKitDOMElement</span></a> *  webkit_dom_shadow_root_get_active_element
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-shadow-root-get-apply-author-styles"></a><h3>webkit_dom_shadow_root_get_apply_author_styles ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_shadow_root_get_apply_author_styles
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-shadow-root-set-apply-author-styles"></a><h3>webkit_dom_shadow_root_set_apply_author_styles ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_shadow_root_set_apply_author_styles
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-shadow-root-get-reset-style-inheritance"></a><h3>webkit_dom_shadow_root_get_reset_style_inheritance ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_shadow_root_get_reset_style_inheritance
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-shadow-root-set-reset-style-inheritance"></a><h3>webkit_dom_shadow_root_set_reset_style_inheritance ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_shadow_root_set_reset_style_inheritance
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-shadow-root-get-inner-html"></a><h3>webkit_dom_shadow_root_get_inner_html ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_shadow_root_get_inner_html
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-shadow-root-set-inner-html"></a><h3>webkit_dom_shadow_root_set_inner_html ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_shadow_root_set_inner_html
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot"><span class="type">WebKitDOMShadowRoot</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMShadowRoot.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMShadowRoot--active-element"></a><h3>The <code class="literal">"active-element"</code> property</h3>
+<pre class="programlisting">  "active-element"           <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>*     : Read</pre>
+<p>read-only WebKitDOMElement* ShadowRoot:active-element.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMShadowRoot--apply-author-styles"></a><h3>The <code class="literal">"apply-author-styles"</code> property</h3>
+<pre class="programlisting">  "apply-author-styles"      <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
+<p>read-only gboolean ShadowRoot:apply-author-styles.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMShadowRoot--inner-html"></a><h3>The <code class="literal">"inner-html"</code> property</h3>
+<pre class="programlisting">  "inner-html"               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* ShadowRoot:inner-html.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMShadowRoot--reset-style-inheritance"></a><h3>The <code class="literal">"reset-style-inheritance"</code> property</h3>
+<pre class="programlisting">  "reset-style-inheritance"  <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
+<p>read-only gboolean ShadowRoot:reset-style-inheritance.</p>
+<p>Default value: FALSE</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19.1</div>
+</body>
+</html>

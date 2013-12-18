@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMGTK+ Reference Manual: WebKitDOMHTMLMetaElement</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMHTMLMenuElement.html" title="WebKitDOMHTMLMenuElement">
+<link rel="next" href="WebKitDOMHTMLModElement.html" title="WebKitDOMHTMLModElement">
+<meta name="generator" content="GTK-Doc V1.19.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<td width="100%" align="left">
+<a href="#" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMHTMLMetaElement.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMHTMLMetaElement.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitDOMHTMLMetaElement.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#WebKitDOMHTMLMetaElement.properties" class="shortcut">Properties</a>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="WebKitDOMHTMLMenuElement.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="WebKitDOMHTMLModElement.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="WebKitDOMHTMLMetaElement"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMHTMLMetaElement.top_of_page"></a>WebKitDOMHTMLMetaElement</span></h2>
+<p>WebKitDOMHTMLMetaElement</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMHTMLMetaElement.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMHTMLMetaElement.html#WebKitDOMHTMLMetaElement-struct" title="WebKitDOMHTMLMetaElement">WebKitDOMHTMLMetaElement</a>;
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLMetaElement.html#webkit-dom-html-meta-element-get-content" title="webkit_dom_html_meta_element_get_content ()">webkit_dom_html_meta_element_get_content</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLMetaElement.html" title="WebKitDOMHTMLMetaElement"><span class="type">WebKitDOMHTMLMetaElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLMetaElement.html#webkit-dom-html-meta-element-set-content" title="webkit_dom_html_meta_element_set_content ()">webkit_dom_html_meta_element_set_content</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLMetaElement.html" title="WebKitDOMHTMLMetaElement"><span class="type">WebKitDOMHTMLMetaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLMetaElement.html#webkit-dom-html-meta-element-get-http-equiv" title="webkit_dom_html_meta_element_get_http_equiv ()">webkit_dom_html_meta_element_get_http_equiv</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLMetaElement.html" title="WebKitDOMHTMLMetaElement"><span class="type">WebKitDOMHTMLMetaElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLMetaElement.html#webkit-dom-html-meta-element-set-http-equiv" title="webkit_dom_html_meta_element_set_http_equiv ()">webkit_dom_html_meta_element_set_http_equiv</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLMetaElement.html" title="WebKitDOMHTMLMetaElement"><span class="type">WebKitDOMHTMLMetaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLMetaElement.html#webkit-dom-html-meta-element-get-name" title="webkit_dom_html_meta_element_get_name ()">webkit_dom_html_meta_element_get_name</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLMetaElement.html" title="WebKitDOMHTMLMetaElement"><span class="type">WebKitDOMHTMLMetaElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLMetaElement.html#webkit-dom-html-meta-element-set-name" title="webkit_dom_html_meta_element_set_name ()">webkit_dom_html_meta_element_set_name</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLMetaElement.html" title="WebKitDOMHTMLMetaElement"><span class="type">WebKitDOMHTMLMetaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLMetaElement.html#webkit-dom-html-meta-element-get-scheme" title="webkit_dom_html_meta_element_get_scheme ()">webkit_dom_html_meta_element_get_scheme</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLMetaElement.html" title="WebKitDOMHTMLMetaElement"><span class="type">WebKitDOMHTMLMetaElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLMetaElement.html#webkit-dom-html-meta-element-set-scheme" title="webkit_dom_html_meta_element_set_scheme ()">webkit_dom_html_meta_element_set_scheme</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLMetaElement.html" title="WebKitDOMHTMLMetaElement"><span class="type">WebKitDOMHTMLMetaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLMetaElement.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----<a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode">WebKitDOMNode</a>
+               +----<a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement">WebKitDOMElement</a>
+                     +----<a class="link" href="WebKitDOMHTMLElement.html" title="WebKitDOMHTMLElement">WebKitDOMHTMLElement</a>
+                           +----WebKitDOMHTMLMetaElement
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLMetaElement.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+WebKitDOMHTMLMetaElement implements
+ <a class="link" href="WebKitDOMEventTarget.html" title="WebKitDOMEventTarget">WebKitDOMEventTarget</a>.</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLMetaElement.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitDOMHTMLMetaElement.html#WebKitDOMHTMLMetaElement--content" title='The "content" property'>content</a>"                  <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLMetaElement.html#WebKitDOMHTMLMetaElement--http-equiv" title='The "http-equiv" property'>http-equiv</a>"               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLMetaElement.html#WebKitDOMHTMLMetaElement--name" title='The "name" property'>name</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLMetaElement.html#WebKitDOMHTMLMetaElement--scheme" title='The "scheme" property'>scheme</a>"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLMetaElement.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLMetaElement.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMHTMLMetaElement-struct"></a><h3>WebKitDOMHTMLMetaElement</h3>
+<pre class="programlisting">typedef struct _WebKitDOMHTMLMetaElement WebKitDOMHTMLMetaElement;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-meta-element-get-content"></a><h3>webkit_dom_html_meta_element_get_content ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_meta_element_get_content
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLMetaElement.html" title="WebKitDOMHTMLMetaElement"><span class="type">WebKitDOMHTMLMetaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLMetaElement.html" title="WebKitDOMHTMLMetaElement"><span class="type">WebKitDOMHTMLMetaElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-meta-element-set-content"></a><h3>webkit_dom_html_meta_element_set_content ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_meta_element_set_content
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLMetaElement.html" title="WebKitDOMHTMLMetaElement"><span class="type">WebKitDOMHTMLMetaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLMetaElement.html" title="WebKitDOMHTMLMetaElement"><span class="type">WebKitDOMHTMLMetaElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-meta-element-get-http-equiv"></a><h3>webkit_dom_html_meta_element_get_http_equiv ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_meta_element_get_http_equiv
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLMetaElement.html" title="WebKitDOMHTMLMetaElement"><span class="type">WebKitDOMHTMLMetaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLMetaElement.html" title="WebKitDOMHTMLMetaElement"><span class="type">WebKitDOMHTMLMetaElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-meta-element-set-http-equiv"></a><h3>webkit_dom_html_meta_element_set_http_equiv ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_meta_element_set_http_equiv
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLMetaElement.html" title="WebKitDOMHTMLMetaElement"><span class="type">WebKitDOMHTMLMetaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLMetaElement.html" title="WebKitDOMHTMLMetaElement"><span class="type">WebKitDOMHTMLMetaElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-meta-element-get-name"></a><h3>webkit_dom_html_meta_element_get_name ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_meta_element_get_name
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLMetaElement.html" title="WebKitDOMHTMLMetaElement"><span class="type">WebKitDOMHTMLMetaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLMetaElement.html" title="WebKitDOMHTMLMetaElement"><span class="type">WebKitDOMHTMLMetaElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-meta-element-set-name"></a><h3>webkit_dom_html_meta_element_set_name ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_meta_element_set_name
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLMetaElement.html" title="WebKitDOMHTMLMetaElement"><span class="type">WebKitDOMHTMLMetaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLMetaElement.html" title="WebKitDOMHTMLMetaElement"><span class="type">WebKitDOMHTMLMetaElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-meta-element-get-scheme"></a><h3>webkit_dom_html_meta_element_get_scheme ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_meta_element_get_scheme
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLMetaElement.html" title="WebKitDOMHTMLMetaElement"><span class="type">WebKitDOMHTMLMetaElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLMetaElement.html" title="WebKitDOMHTMLMetaElement"><span class="type">WebKitDOMHTMLMetaElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-meta-element-set-scheme"></a><h3>webkit_dom_html_meta_element_set_scheme ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_meta_element_set_scheme
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLMetaElement.html" title="WebKitDOMHTMLMetaElement"><span class="type">WebKitDOMHTMLMetaElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLMetaElement.html" title="WebKitDOMHTMLMetaElement"><span class="type">WebKitDOMHTMLMetaElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLMetaElement.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMHTMLMetaElement--content"></a><h3>The <code class="literal">"content"</code> property</h3>
+<pre class="programlisting">  "content"                  <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLMetaElement:content.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLMetaElement--http-equiv"></a><h3>The <code class="literal">"http-equiv"</code> property</h3>
+<pre class="programlisting">  "http-equiv"               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLMetaElement:http-equiv.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLMetaElement--name"></a><h3>The <code class="literal">"name"</code> property</h3>
+<pre class="programlisting">  "name"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLMetaElement:name.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLMetaElement--scheme"></a><h3>The <code class="literal">"scheme"</code> property</h3>
+<pre class="programlisting">  "scheme"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLMetaElement:scheme.</p>
+<p>Default value: ""</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19.1</div>
+</body>
+</html>

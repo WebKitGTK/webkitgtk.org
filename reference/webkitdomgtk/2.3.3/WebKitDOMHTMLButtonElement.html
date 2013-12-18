@@ -1,0 +1,876 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMGTK+ Reference Manual: WebKitDOMHTMLButtonElement</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMHTMLBRElement.html" title="WebKitDOMHTMLBRElement">
+<link rel="next" href="WebKitDOMHTMLCanvasElement.html" title="WebKitDOMHTMLCanvasElement">
+<meta name="generator" content="GTK-Doc V1.19.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<td width="100%" align="left">
+<a href="#" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMHTMLButtonElement.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMHTMLButtonElement.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitDOMHTMLButtonElement.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#WebKitDOMHTMLButtonElement.properties" class="shortcut">Properties</a>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="WebKitDOMHTMLBRElement.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="WebKitDOMHTMLCanvasElement.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="WebKitDOMHTMLButtonElement"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMHTMLButtonElement.top_of_page"></a>WebKitDOMHTMLButtonElement</span></h2>
+<p>WebKitDOMHTMLButtonElement</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMHTMLButtonElement.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMHTMLButtonElement.html#WebKitDOMHTMLButtonElement-struct" title="WebKitDOMHTMLButtonElement">WebKitDOMHTMLButtonElement</a>;
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMHTMLButtonElement.html#webkit-dom-html-button-element-check-validity" title="webkit_dom_html_button_element_check_validity ()">webkit_dom_html_button_element_check_validity</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLButtonElement.html#webkit-dom-html-button-element-set-custom-validity" title="webkit_dom_html_button_element_set_custom_validity ()">webkit_dom_html_button_element_set_custom_validity</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *error</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMHTMLButtonElement.html#webkit-dom-html-button-element-get-autofocus" title="webkit_dom_html_button_element_get_autofocus ()">webkit_dom_html_button_element_get_autofocus</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLButtonElement.html#webkit-dom-html-button-element-set-autofocus" title="webkit_dom_html_button_element_set_autofocus ()">webkit_dom_html_button_element_set_autofocus</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMHTMLButtonElement.html#webkit-dom-html-button-element-get-disabled" title="webkit_dom_html_button_element_get_disabled ()">webkit_dom_html_button_element_get_disabled</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLButtonElement.html#webkit-dom-html-button-element-set-disabled" title="webkit_dom_html_button_element_set_disabled ()">webkit_dom_html_button_element_set_disabled</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);
+<a class="link" href="WebKitDOMHTMLFormElement.html" title="WebKitDOMHTMLFormElement"><span class="returnvalue">WebKitDOMHTMLFormElement</span></a> * <a class="link" href="WebKitDOMHTMLButtonElement.html#webkit-dom-html-button-element-get-form" title="webkit_dom_html_button_element_get_form ()">webkit_dom_html_button_element_get_form</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLButtonElement.html#webkit-dom-html-button-element-get-form-action" title="webkit_dom_html_button_element_get_form_action ()">webkit_dom_html_button_element_get_form_action</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLButtonElement.html#webkit-dom-html-button-element-set-form-action" title="webkit_dom_html_button_element_set_form_action ()">webkit_dom_html_button_element_set_form_action</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLButtonElement.html#webkit-dom-html-button-element-get-form-enctype" title="webkit_dom_html_button_element_get_form_enctype ()">webkit_dom_html_button_element_get_form_enctype</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLButtonElement.html#webkit-dom-html-button-element-set-form-enctype" title="webkit_dom_html_button_element_set_form_enctype ()">webkit_dom_html_button_element_set_form_enctype</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLButtonElement.html#webkit-dom-html-button-element-get-form-method" title="webkit_dom_html_button_element_get_form_method ()">webkit_dom_html_button_element_get_form_method</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLButtonElement.html#webkit-dom-html-button-element-set-form-method" title="webkit_dom_html_button_element_set_form_method ()">webkit_dom_html_button_element_set_form_method</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMHTMLButtonElement.html#webkit-dom-html-button-element-get-form-no-validate" title="webkit_dom_html_button_element_get_form_no_validate ()">webkit_dom_html_button_element_get_form_no_validate</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLButtonElement.html#webkit-dom-html-button-element-set-form-no-validate" title="webkit_dom_html_button_element_set_form_no_validate ()">webkit_dom_html_button_element_set_form_no_validate</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLButtonElement.html#webkit-dom-html-button-element-get-form-target" title="webkit_dom_html_button_element_get_form_target ()">webkit_dom_html_button_element_get_form_target</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLButtonElement.html#webkit-dom-html-button-element-set-form-target" title="webkit_dom_html_button_element_set_form_target ()">webkit_dom_html_button_element_set_form_target</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLButtonElement.html#webkit-dom-html-button-element-get-name" title="webkit_dom_html_button_element_get_name ()">webkit_dom_html_button_element_get_name</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLButtonElement.html#webkit-dom-html-button-element-set-name" title="webkit_dom_html_button_element_set_name ()">webkit_dom_html_button_element_set_name</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLButtonElement.html#webkit-dom-html-button-element-get-value" title="webkit_dom_html_button_element_get_value ()">webkit_dom_html_button_element_get_value</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLButtonElement.html#webkit-dom-html-button-element-set-value" title="webkit_dom_html_button_element_set_value ()">webkit_dom_html_button_element_set_value</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMHTMLButtonElement.html#webkit-dom-html-button-element-get-will-validate" title="webkit_dom_html_button_element_get_will_validate ()">webkit_dom_html_button_element_get_will_validate</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="returnvalue">WebKitDOMValidityState</span></a> * <a class="link" href="WebKitDOMHTMLButtonElement.html#webkit-dom-html-button-element-get-validity" title="webkit_dom_html_button_element_get_validity ()">webkit_dom_html_button_element_get_validity</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLButtonElement.html#webkit-dom-html-button-element-get-validation-message" title="webkit_dom_html_button_element_get_validation_message ()">webkit_dom_html_button_element_get_validation_message</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMNodeList.html" title="WebKitDOMNodeList"><span class="returnvalue">WebKitDOMNodeList</span></a> * <a class="link" href="WebKitDOMHTMLButtonElement.html#webkit-dom-html-button-element-get-labels" title="webkit_dom_html_button_element_get_labels ()">webkit_dom_html_button_element_get_labels</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLButtonElement.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----<a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode">WebKitDOMNode</a>
+               +----<a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement">WebKitDOMElement</a>
+                     +----<a class="link" href="WebKitDOMHTMLElement.html" title="WebKitDOMHTMLElement">WebKitDOMHTMLElement</a>
+                           +----WebKitDOMHTMLButtonElement
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLButtonElement.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+WebKitDOMHTMLButtonElement implements
+ <a class="link" href="WebKitDOMEventTarget.html" title="WebKitDOMEventTarget">WebKitDOMEventTarget</a>.</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLButtonElement.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitDOMHTMLButtonElement.html#WebKitDOMHTMLButtonElement--autofocus" title='The "autofocus" property'>autofocus</a>"                <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+  "<a class="link" href="WebKitDOMHTMLButtonElement.html#WebKitDOMHTMLButtonElement--disabled" title='The "disabled" property'>disabled</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+  "<a class="link" href="WebKitDOMHTMLButtonElement.html#WebKitDOMHTMLButtonElement--form" title='The "form" property'>form</a>"                     <a class="link" href="WebKitDOMHTMLFormElement.html" title="WebKitDOMHTMLFormElement"><span class="type">WebKitDOMHTMLFormElement</span></a>*  : Read
+  "<a class="link" href="WebKitDOMHTMLButtonElement.html#WebKitDOMHTMLButtonElement--form-action" title='The "form-action" property'>form-action</a>"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLButtonElement.html#WebKitDOMHTMLButtonElement--form-enctype" title='The "form-enctype" property'>form-enctype</a>"             <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLButtonElement.html#WebKitDOMHTMLButtonElement--form-method" title='The "form-method" property'>form-method</a>"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLButtonElement.html#WebKitDOMHTMLButtonElement--form-no-validate" title='The "form-no-validate" property'>form-no-validate</a>"         <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+  "<a class="link" href="WebKitDOMHTMLButtonElement.html#WebKitDOMHTMLButtonElement--form-target" title='The "form-target" property'>form-target</a>"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLButtonElement.html#WebKitDOMHTMLButtonElement--labels" title='The "labels" property'>labels</a>"                   <a class="link" href="WebKitDOMNodeList.html" title="WebKitDOMNodeList"><span class="type">WebKitDOMNodeList</span></a>*    : Read
+  "<a class="link" href="WebKitDOMHTMLButtonElement.html#WebKitDOMHTMLButtonElement--name" title='The "name" property'>name</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLButtonElement.html#WebKitDOMHTMLButtonElement--type" title='The "type" property'>type</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLButtonElement.html#WebKitDOMHTMLButtonElement--validation-message" title='The "validation-message" property'>validation-message</a>"       <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMHTMLButtonElement.html#WebKitDOMHTMLButtonElement--validity" title='The "validity" property'>validity</a>"                 <a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a>*  : Read
+  "<a class="link" href="WebKitDOMHTMLButtonElement.html#WebKitDOMHTMLButtonElement--value" title='The "value" property'>value</a>"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLButtonElement.html#WebKitDOMHTMLButtonElement--will-validate" title='The "will-validate" property'>will-validate</a>"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLButtonElement.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLButtonElement.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMHTMLButtonElement-struct"></a><h3>WebKitDOMHTMLButtonElement</h3>
+<pre class="programlisting">typedef struct _WebKitDOMHTMLButtonElement WebKitDOMHTMLButtonElement;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-button-element-check-validity"></a><h3>webkit_dom_html_button_element_check_validity ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_html_button_element_check_validity
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-button-element-set-custom-validity"></a><h3>webkit_dom_html_button_element_set_custom_validity ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_button_element_set_custom_validity
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-button-element-get-autofocus"></a><h3>webkit_dom_html_button_element_get_autofocus ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_html_button_element_get_autofocus
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-button-element-set-autofocus"></a><h3>webkit_dom_html_button_element_set_autofocus ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_button_element_set_autofocus
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-button-element-get-disabled"></a><h3>webkit_dom_html_button_element_get_disabled ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_html_button_element_get_disabled
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-button-element-set-disabled"></a><h3>webkit_dom_html_button_element_set_disabled ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_button_element_set_disabled
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-button-element-get-form"></a><h3>webkit_dom_html_button_element_get_form ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMHTMLFormElement.html" title="WebKitDOMHTMLFormElement"><span class="returnvalue">WebKitDOMHTMLFormElement</span></a> * webkit_dom_html_button_element_get_form
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLFormElement.html" title="WebKitDOMHTMLFormElement"><span class="type">WebKitDOMHTMLFormElement</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-button-element-get-form-action"></a><h3>webkit_dom_html_button_element_get_form_action ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_button_element_get_form_action
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-button-element-set-form-action"></a><h3>webkit_dom_html_button_element_set_form_action ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_button_element_set_form_action
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-button-element-get-form-enctype"></a><h3>webkit_dom_html_button_element_get_form_enctype ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_button_element_get_form_enctype
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-button-element-set-form-enctype"></a><h3>webkit_dom_html_button_element_set_form_enctype ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_button_element_set_form_enctype
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-button-element-get-form-method"></a><h3>webkit_dom_html_button_element_get_form_method ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_button_element_get_form_method
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-button-element-set-form-method"></a><h3>webkit_dom_html_button_element_set_form_method ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_button_element_set_form_method
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-button-element-get-form-no-validate"></a><h3>webkit_dom_html_button_element_get_form_no_validate ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_html_button_element_get_form_no_validate
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-button-element-set-form-no-validate"></a><h3>webkit_dom_html_button_element_set_form_no_validate ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_button_element_set_form_no_validate
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-button-element-get-form-target"></a><h3>webkit_dom_html_button_element_get_form_target ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_button_element_get_form_target
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-button-element-set-form-target"></a><h3>webkit_dom_html_button_element_set_form_target ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_button_element_set_form_target
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-button-element-get-name"></a><h3>webkit_dom_html_button_element_get_name ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_button_element_get_name
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-button-element-set-name"></a><h3>webkit_dom_html_button_element_set_name ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_button_element_set_name
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-button-element-get-value"></a><h3>webkit_dom_html_button_element_get_value ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_button_element_get_value
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-button-element-set-value"></a><h3>webkit_dom_html_button_element_set_value ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_button_element_set_value
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-button-element-get-will-validate"></a><h3>webkit_dom_html_button_element_get_will_validate ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_html_button_element_get_will_validate
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-button-element-get-validity"></a><h3>webkit_dom_html_button_element_get_validity ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="returnvalue">WebKitDOMValidityState</span></a> * webkit_dom_html_button_element_get_validity
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-button-element-get-validation-message"></a><h3>webkit_dom_html_button_element_get_validation_message ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_button_element_get_validation_message
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-button-element-get-labels"></a><h3>webkit_dom_html_button_element_get_labels ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMNodeList.html" title="WebKitDOMNodeList"><span class="returnvalue">WebKitDOMNodeList</span></a> * webkit_dom_html_button_element_get_labels
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLButtonElement.html" title="WebKitDOMHTMLButtonElement"><span class="type">WebKitDOMHTMLButtonElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNodeList.html" title="WebKitDOMNodeList"><span class="type">WebKitDOMNodeList</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLButtonElement.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMHTMLButtonElement--autofocus"></a><h3>The <code class="literal">"autofocus"</code> property</h3>
+<pre class="programlisting">  "autofocus"                <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
+<p>read-only gboolean HTMLButtonElement:autofocus.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLButtonElement--disabled"></a><h3>The <code class="literal">"disabled"</code> property</h3>
+<pre class="programlisting">  "disabled"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
+<p>read-only gboolean HTMLButtonElement:disabled.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLButtonElement--form"></a><h3>The <code class="literal">"form"</code> property</h3>
+<pre class="programlisting">  "form"                     <a class="link" href="WebKitDOMHTMLFormElement.html" title="WebKitDOMHTMLFormElement"><span class="type">WebKitDOMHTMLFormElement</span></a>*  : Read</pre>
+<p>read-only WebKitDOMHTMLFormElement* HTMLButtonElement:form.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLButtonElement--form-action"></a><h3>The <code class="literal">"form-action"</code> property</h3>
+<pre class="programlisting">  "form-action"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLButtonElement:form-action.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLButtonElement--form-enctype"></a><h3>The <code class="literal">"form-enctype"</code> property</h3>
+<pre class="programlisting">  "form-enctype"             <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLButtonElement:form-enctype.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLButtonElement--form-method"></a><h3>The <code class="literal">"form-method"</code> property</h3>
+<pre class="programlisting">  "form-method"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLButtonElement:form-method.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLButtonElement--form-no-validate"></a><h3>The <code class="literal">"form-no-validate"</code> property</h3>
+<pre class="programlisting">  "form-no-validate"         <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
+<p>read-only gboolean HTMLButtonElement:form-no-validate.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLButtonElement--form-target"></a><h3>The <code class="literal">"form-target"</code> property</h3>
+<pre class="programlisting">  "form-target"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLButtonElement:form-target.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLButtonElement--labels"></a><h3>The <code class="literal">"labels"</code> property</h3>
+<pre class="programlisting">  "labels"                   <a class="link" href="WebKitDOMNodeList.html" title="WebKitDOMNodeList"><span class="type">WebKitDOMNodeList</span></a>*    : Read</pre>
+<p>read-only WebKitDOMNodeList* HTMLButtonElement:labels.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLButtonElement--name"></a><h3>The <code class="literal">"name"</code> property</h3>
+<pre class="programlisting">  "name"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLButtonElement:name.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLButtonElement--type"></a><h3>The <code class="literal">"type"</code> property</h3>
+<pre class="programlisting">  "type"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLButtonElement:type.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLButtonElement--validation-message"></a><h3>The <code class="literal">"validation-message"</code> property</h3>
+<pre class="programlisting">  "validation-message"       <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* HTMLButtonElement:validation-message.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLButtonElement--validity"></a><h3>The <code class="literal">"validity"</code> property</h3>
+<pre class="programlisting">  "validity"                 <a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a>*  : Read</pre>
+<p>read-only WebKitDOMValidityState* HTMLButtonElement:validity.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLButtonElement--value"></a><h3>The <code class="literal">"value"</code> property</h3>
+<pre class="programlisting">  "value"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLButtonElement:value.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLButtonElement--will-validate"></a><h3>The <code class="literal">"will-validate"</code> property</h3>
+<pre class="programlisting">  "will-validate"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read</pre>
+<p>read-only gboolean HTMLButtonElement:will-validate.</p>
+<p>Default value: FALSE</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19.1</div>
+</body>
+</html>
