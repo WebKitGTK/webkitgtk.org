@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMGTK+ Reference Manual: WebKitDOMXPathExpression</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMStorageQuota.html" title="WebKitDOMStorageQuota">
+<link rel="next" href="WebKitDOMXPathNSResolver.html" title="WebKitDOMXPathNSResolver">
+<meta name="generator" content="GTK-Doc V1.19.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<td width="100%" align="left">
+<a href="#" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMXPathExpression.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMXPathExpression.object-hierarchy" class="shortcut">Object Hierarchy</a>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="WebKitDOMStorageQuota.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="WebKitDOMXPathNSResolver.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="WebKitDOMXPathExpression"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMXPathExpression.top_of_page"></a>WebKitDOMXPathExpression</span></h2>
+<p>WebKitDOMXPathExpression</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMXPathExpression.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMXPathExpression.html#WebKitDOMXPathExpression-struct" title="WebKitDOMXPathExpression">WebKitDOMXPathExpression</a>;
+<a class="link" href="WebKitDOMXPathResult.html" title="WebKitDOMXPathResult"><span class="returnvalue">WebKitDOMXPathResult</span></a> * <a class="link" href="WebKitDOMXPathExpression.html#webkit-dom-xpath-expression-evaluate" title="webkit_dom_xpath_expression_evaluate ()">webkit_dom_xpath_expression_evaluate</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMXPathExpression.html" title="WebKitDOMXPathExpression"><span class="type">WebKitDOMXPathExpression</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a> *contextNode</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gushort"><span class="type">gushort</span></a> type</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMXPathResult.html" title="WebKitDOMXPathResult"><span class="type">WebKitDOMXPathResult</span></a> *inResult</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMXPathExpression.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----WebKitDOMXPathExpression
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMXPathExpression.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMXPathExpression.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMXPathExpression-struct"></a><h3>WebKitDOMXPathExpression</h3>
+<pre class="programlisting">typedef struct _WebKitDOMXPathExpression WebKitDOMXPathExpression;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-xpath-expression-evaluate"></a><h3>webkit_dom_xpath_expression_evaluate ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMXPathResult.html" title="WebKitDOMXPathResult"><span class="returnvalue">WebKitDOMXPathResult</span></a> * webkit_dom_xpath_expression_evaluate
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMXPathExpression.html" title="WebKitDOMXPathExpression"><span class="type">WebKitDOMXPathExpression</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a> *contextNode</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gushort"><span class="type">gushort</span></a> type</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMXPathResult.html" title="WebKitDOMXPathResult"><span class="type">WebKitDOMXPathResult</span></a> *inResult</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMXPathExpression.html" title="WebKitDOMXPathExpression"><span class="type">WebKitDOMXPathExpression</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>contextNode</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode"><span class="type">WebKitDOMNode</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>type</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gushort"><span class="type">gushort</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>inResult</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMXPathResult.html" title="WebKitDOMXPathResult"><span class="type">WebKitDOMXPathResult</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMXPathResult.html" title="WebKitDOMXPathResult"><span class="type">WebKitDOMXPathResult</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19.1</div>
+</body>
+</html>

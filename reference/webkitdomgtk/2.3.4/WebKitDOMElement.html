@@ -1,0 +1,1989 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMGTK+ Reference Manual: WebKitDOMElement</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMDOMTokenList.html" title="WebKitDOMDOMTokenList">
+<link rel="next" href="WebKitDOMEntityReference.html" title="WebKitDOMEntityReference">
+<meta name="generator" content="GTK-Doc V1.19.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<td width="100%" align="left">
+<a href="#" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMElement.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMElement.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitDOMElement.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#WebKitDOMElement.properties" class="shortcut">Properties</a>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="WebKitDOMDOMTokenList.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="WebKitDOMEntityReference.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="WebKitDOMElement"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMElement.top_of_page"></a>WebKitDOMElement</span></h2>
+<p>WebKitDOMElement</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMElement.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMElement.html#WebKitDOMElement-struct" title="WebKitDOMElement">WebKitDOMElement</a>;
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMElement.html#webkit-dom-element-get-attribute" title="webkit_dom_element_get_attribute ()">webkit_dom_element_get_attribute</a>    (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMElement.html#webkit-dom-element-set-attribute" title="webkit_dom_element_set_attribute ()">webkit_dom_element_set_attribute</a>    (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMElement.html#webkit-dom-element-remove-attribute" title="webkit_dom_element_remove_attribute ()">webkit_dom_element_remove_attribute</a> (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);
+<a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="returnvalue">WebKitDOMAttr</span></a> *     <a class="link" href="WebKitDOMElement.html#webkit-dom-element-get-attribute-node" title="webkit_dom_element_get_attribute_node ()">webkit_dom_element_get_attribute_node</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);
+<a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="returnvalue">WebKitDOMAttr</span></a> *     <a class="link" href="WebKitDOMElement.html#webkit-dom-element-set-attribute-node" title="webkit_dom_element_set_attribute_node ()">webkit_dom_element_set_attribute_node</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="type">WebKitDOMAttr</span></a> *newAttr</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="returnvalue">WebKitDOMAttr</span></a> *     <a class="link" href="WebKitDOMElement.html#webkit-dom-element-remove-attribute-node" title="webkit_dom_element_remove_attribute_node ()">webkit_dom_element_remove_attribute_node</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="type">WebKitDOMAttr</span></a> *oldAttr</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a class="link" href="WebKitDOMNodeList.html" title="WebKitDOMNodeList"><span class="returnvalue">WebKitDOMNodeList</span></a> * <a class="link" href="WebKitDOMElement.html#webkit-dom-element-get-elements-by-tag-name" title="webkit_dom_element_get_elements_by_tag_name ()">webkit_dom_element_get_elements_by_tag_name</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMElement.html#webkit-dom-element-has-attributes" title="webkit_dom_element_has_attributes ()">webkit_dom_element_has_attributes</a>   (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMElement.html#webkit-dom-element-get-attribute-ns" title="webkit_dom_element_get_attribute_ns ()">webkit_dom_element_get_attribute_ns</a> (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *namespaceURI</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *localName</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMElement.html#webkit-dom-element-set-attribute-ns" title="webkit_dom_element_set_attribute_ns ()">webkit_dom_element_set_attribute_ns</a> (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *namespaceURI</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *qualifiedName</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMElement.html#webkit-dom-element-remove-attribute-ns" title="webkit_dom_element_remove_attribute_ns ()">webkit_dom_element_remove_attribute_ns</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *namespaceURI</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *localName</code></em>);
+<a class="link" href="WebKitDOMNodeList.html" title="WebKitDOMNodeList"><span class="returnvalue">WebKitDOMNodeList</span></a> * <a class="link" href="WebKitDOMElement.html#webkit-dom-element-get-elements-by-tag-name-ns" title="webkit_dom_element_get_elements_by_tag_name_ns ()">webkit_dom_element_get_elements_by_tag_name_ns</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *namespaceURI</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *localName</code></em>);
+<a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="returnvalue">WebKitDOMAttr</span></a> *     <a class="link" href="WebKitDOMElement.html#webkit-dom-element-get-attribute-node-ns" title="webkit_dom_element_get_attribute_node_ns ()">webkit_dom_element_get_attribute_node_ns</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *namespaceURI</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *localName</code></em>);
+<a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="returnvalue">WebKitDOMAttr</span></a> *     <a class="link" href="WebKitDOMElement.html#webkit-dom-element-set-attribute-node-ns" title="webkit_dom_element_set_attribute_node_ns ()">webkit_dom_element_set_attribute_node_ns</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="type">WebKitDOMAttr</span></a> *newAttr</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMElement.html#webkit-dom-element-has-attribute" title="webkit_dom_element_has_attribute ()">webkit_dom_element_has_attribute</a>    (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMElement.html#webkit-dom-element-has-attribute-ns" title="webkit_dom_element_has_attribute_ns ()">webkit_dom_element_has_attribute_ns</a> (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *namespaceURI</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *localName</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMElement.html#webkit-dom-element-focus" title="webkit_dom_element_focus ()">webkit_dom_element_focus</a>            (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMElement.html#webkit-dom-element-blur" title="webkit_dom_element_blur ()">webkit_dom_element_blur</a>             (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMElement.html#webkit-dom-element-scroll-into-view" title="webkit_dom_element_scroll_into_view ()">webkit_dom_element_scroll_into_view</a> (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> alignWithTop</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMElement.html#webkit-dom-element-scroll-into-view-if-needed" title="webkit_dom_element_scroll_into_view_if_needed ()">webkit_dom_element_scroll_into_view_if_needed</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> centerIfNeeded</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMElement.html#webkit-dom-element-scroll-by-lines" title="webkit_dom_element_scroll_by_lines ()">webkit_dom_element_scroll_by_lines</a>  (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> lines</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMElement.html#webkit-dom-element-scroll-by-pages" title="webkit_dom_element_scroll_by_pages ()">webkit_dom_element_scroll_by_pages</a>  (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> pages</code></em>);
+<a class="link" href="WebKitDOMNodeList.html" title="WebKitDOMNodeList"><span class="returnvalue">WebKitDOMNodeList</span></a> * <a class="link" href="WebKitDOMElement.html#webkit-dom-element-get-elements-by-class-name" title="webkit_dom_element_get_elements_by_class_name ()">webkit_dom_element_get_elements_by_class_name</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);
+<a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="returnvalue">WebKitDOMElement</span></a> *  <a class="link" href="WebKitDOMElement.html#webkit-dom-element-query-selector" title="webkit_dom_element_query_selector ()">webkit_dom_element_query_selector</a>   (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *selectors</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a class="link" href="WebKitDOMNodeList.html" title="WebKitDOMNodeList"><span class="returnvalue">WebKitDOMNodeList</span></a> * <a class="link" href="WebKitDOMElement.html#webkit-dom-element-query-selector-all" title="webkit_dom_element_query_selector_all ()">webkit_dom_element_query_selector_all</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *selectors</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMElement.html#webkit-dom-element-webkit-matches-selector" title="webkit_dom_element_webkit_matches_selector ()">webkit_dom_element_webkit_matches_selector</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *selectors</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMElement.html#webkit-dom-element-webkit-request-full-screen" title="webkit_dom_element_webkit_request_full_screen ()">webkit_dom_element_webkit_request_full_screen</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gushort"><span class="type">gushort</span></a> flags</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMElement.html#webkit-dom-element-webkit-request-fullscreen" title="webkit_dom_element_webkit_request_fullscreen ()">webkit_dom_element_webkit_request_fullscreen</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMElement.html#webkit-dom-element-webkit-request-pointer-lock" title="webkit_dom_element_webkit_request_pointer_lock ()">webkit_dom_element_webkit_request_pointer_lock</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMElement.html#webkit-dom-element-remove" title="webkit_dom_element_remove ()">webkit_dom_element_remove</a>           (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMElement.html#webkit-dom-element-get-tag-name" title="webkit_dom_element_get_tag_name ()">webkit_dom_element_get_tag_name</a>     (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMNamedNodeMap.html" title="WebKitDOMNamedNodeMap"><span class="returnvalue">WebKitDOMNamedNodeMap</span></a> * <a class="link" href="WebKitDOMElement.html#webkit-dom-element-get-attributes" title="webkit_dom_element_get_attributes ()">webkit_dom_element_get_attributes</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMCSSStyleDeclaration.html" title="WebKitDOMCSSStyleDeclaration"><span class="returnvalue">WebKitDOMCSSStyleDeclaration</span></a> * <a class="link" href="WebKitDOMElement.html#webkit-dom-element-get-style" title="webkit_dom_element_get_style ()">webkit_dom_element_get_style</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMElement.html#webkit-dom-element-get-id" title="webkit_dom_element_get_id ()">webkit_dom_element_get_id</a>           (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMElement.html#webkit-dom-element-set-id" title="webkit_dom_element_set_id ()">webkit_dom_element_set_id</a>           (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMElement.html#webkit-dom-element-get-offset-left" title="webkit_dom_element_get_offset_left ()">webkit_dom_element_get_offset_left</a>  (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMElement.html#webkit-dom-element-get-offset-top" title="webkit_dom_element_get_offset_top ()">webkit_dom_element_get_offset_top</a>   (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMElement.html#webkit-dom-element-get-offset-width" title="webkit_dom_element_get_offset_width ()">webkit_dom_element_get_offset_width</a> (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMElement.html#webkit-dom-element-get-offset-height" title="webkit_dom_element_get_offset_height ()">webkit_dom_element_get_offset_height</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="returnvalue">WebKitDOMElement</span></a> *  <a class="link" href="WebKitDOMElement.html#webkit-dom-element-get-offset-parent" title="webkit_dom_element_get_offset_parent ()">webkit_dom_element_get_offset_parent</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMElement.html#webkit-dom-element-get-client-left" title="webkit_dom_element_get_client_left ()">webkit_dom_element_get_client_left</a>  (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMElement.html#webkit-dom-element-get-client-top" title="webkit_dom_element_get_client_top ()">webkit_dom_element_get_client_top</a>   (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMElement.html#webkit-dom-element-get-client-width" title="webkit_dom_element_get_client_width ()">webkit_dom_element_get_client_width</a> (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMElement.html#webkit-dom-element-get-client-height" title="webkit_dom_element_get_client_height ()">webkit_dom_element_get_client_height</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMElement.html#webkit-dom-element-get-scroll-left" title="webkit_dom_element_get_scroll_left ()">webkit_dom_element_get_scroll_left</a>  (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMElement.html#webkit-dom-element-set-scroll-left" title="webkit_dom_element_set_scroll_left ()">webkit_dom_element_set_scroll_left</a>  (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMElement.html#webkit-dom-element-get-scroll-top" title="webkit_dom_element_get_scroll_top ()">webkit_dom_element_get_scroll_top</a>   (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMElement.html#webkit-dom-element-set-scroll-top" title="webkit_dom_element_set_scroll_top ()">webkit_dom_element_set_scroll_top</a>   (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMElement.html#webkit-dom-element-get-scroll-width" title="webkit_dom_element_get_scroll_width ()">webkit_dom_element_get_scroll_width</a> (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMElement.html#webkit-dom-element-get-scroll-height" title="webkit_dom_element_get_scroll_height ()">webkit_dom_element_get_scroll_height</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMElement.html#webkit-dom-element-get-class-name" title="webkit_dom_element_get_class_name ()">webkit_dom_element_get_class_name</a>   (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMElement.html#webkit-dom-element-set-class-name" title="webkit_dom_element_set_class_name ()">webkit_dom_element_set_class_name</a>   (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a class="link" href="WebKitDOMDOMTokenList.html" title="WebKitDOMDOMTokenList"><span class="returnvalue">WebKitDOMDOMTokenList</span></a> * <a class="link" href="WebKitDOMElement.html#webkit-dom-element-get-class-list" title="webkit_dom_element_get_class_list ()">webkit_dom_element_get_class_list</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="returnvalue">WebKitDOMElement</span></a> *  <a class="link" href="WebKitDOMElement.html#webkit-dom-element-get-first-element-child" title="webkit_dom_element_get_first_element_child ()">webkit_dom_element_get_first_element_child</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="returnvalue">WebKitDOMElement</span></a> *  <a class="link" href="WebKitDOMElement.html#webkit-dom-element-get-last-element-child" title="webkit_dom_element_get_last_element_child ()">webkit_dom_element_get_last_element_child</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="returnvalue">WebKitDOMElement</span></a> *  <a class="link" href="WebKitDOMElement.html#webkit-dom-element-get-previous-element-sibling" title="webkit_dom_element_get_previous_element_sibling ()">webkit_dom_element_get_previous_element_sibling</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="returnvalue">WebKitDOMElement</span></a> *  <a class="link" href="WebKitDOMElement.html#webkit-dom-element-get-next-element-sibling" title="webkit_dom_element_get_next_element_sibling ()">webkit_dom_element_get_next_element_sibling</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              <a class="link" href="WebKitDOMElement.html#webkit-dom-element-get-child-element-count" title="webkit_dom_element_get_child_element_count ()">webkit_dom_element_get_child_element_count</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMElement.html#webkit-dom-element-get-webkit-region-overset" title="webkit_dom_element_get_webkit_region_overset ()">webkit_dom_element_get_webkit_region_overset</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMElement.html#webkit-dom-element-get-webkit-region-overflow" title="webkit_dom_element_get_webkit_region_overflow ()">webkit_dom_element_get_webkit_region_overflow</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *element</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMElement.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----<a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode">WebKitDOMNode</a>
+               +----WebKitDOMElement
+                     +----<a class="link" href="WebKitDOMHTMLElement.html" title="WebKitDOMHTMLElement">WebKitDOMHTMLElement</a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMElement.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+WebKitDOMElement implements
+ <a class="link" href="WebKitDOMEventTarget.html" title="WebKitDOMEventTarget">WebKitDOMEventTarget</a>.</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMElement.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitDOMElement.html#WebKitDOMElement--attributes" title='The "attributes" property'>attributes</a>"               <a class="link" href="WebKitDOMNamedNodeMap.html" title="WebKitDOMNamedNodeMap"><span class="type">WebKitDOMNamedNodeMap</span></a>*  : Read
+  "<a class="link" href="WebKitDOMElement.html#WebKitDOMElement--child-element-count" title='The "child-element-count" property'>child-element-count</a>"      <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read
+  "<a class="link" href="WebKitDOMElement.html#WebKitDOMElement--class-list" title='The "class-list" property'>class-list</a>"               <a class="link" href="WebKitDOMDOMTokenList.html" title="WebKitDOMDOMTokenList"><span class="type">WebKitDOMDOMTokenList</span></a>*  : Read
+  "<a class="link" href="WebKitDOMElement.html#WebKitDOMElement--class-name" title='The "class-name" property'>class-name</a>"               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMElement.html#WebKitDOMElement--client-height" title='The "client-height" property'>client-height</a>"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+  "<a class="link" href="WebKitDOMElement.html#WebKitDOMElement--client-left" title='The "client-left" property'>client-left</a>"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+  "<a class="link" href="WebKitDOMElement.html#WebKitDOMElement--client-top" title='The "client-top" property'>client-top</a>"               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+  "<a class="link" href="WebKitDOMElement.html#WebKitDOMElement--client-width" title='The "client-width" property'>client-width</a>"             <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+  "<a class="link" href="WebKitDOMElement.html#WebKitDOMElement--first-element-child" title='The "first-element-child" property'>first-element-child</a>"      <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>*     : Read
+  "<a class="link" href="WebKitDOMElement.html#WebKitDOMElement--id" title='The "id" property'>id</a>"                       <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMElement.html#WebKitDOMElement--last-element-child" title='The "last-element-child" property'>last-element-child</a>"       <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>*     : Read
+  "<a class="link" href="WebKitDOMElement.html#WebKitDOMElement--next-element-sibling" title='The "next-element-sibling" property'>next-element-sibling</a>"     <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>*     : Read
+  "<a class="link" href="WebKitDOMElement.html#WebKitDOMElement--offset-height" title='The "offset-height" property'>offset-height</a>"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+  "<a class="link" href="WebKitDOMElement.html#WebKitDOMElement--offset-left" title='The "offset-left" property'>offset-left</a>"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+  "<a class="link" href="WebKitDOMElement.html#WebKitDOMElement--offset-parent" title='The "offset-parent" property'>offset-parent</a>"            <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>*     : Read
+  "<a class="link" href="WebKitDOMElement.html#WebKitDOMElement--offset-top" title='The "offset-top" property'>offset-top</a>"               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+  "<a class="link" href="WebKitDOMElement.html#WebKitDOMElement--offset-width" title='The "offset-width" property'>offset-width</a>"             <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+  "<a class="link" href="WebKitDOMElement.html#WebKitDOMElement--previous-element-sibling" title='The "previous-element-sibling" property'>previous-element-sibling</a>" <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>*     : Read
+  "<a class="link" href="WebKitDOMElement.html#WebKitDOMElement--scroll-height" title='The "scroll-height" property'>scroll-height</a>"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+  "<a class="link" href="WebKitDOMElement.html#WebKitDOMElement--scroll-left" title='The "scroll-left" property'>scroll-left</a>"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read / Write
+  "<a class="link" href="WebKitDOMElement.html#WebKitDOMElement--scroll-top" title='The "scroll-top" property'>scroll-top</a>"               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read / Write
+  "<a class="link" href="WebKitDOMElement.html#WebKitDOMElement--scroll-width" title='The "scroll-width" property'>scroll-width</a>"             <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+  "<a class="link" href="WebKitDOMElement.html#WebKitDOMElement--style" title='The "style" property'>style</a>"                    <a class="link" href="WebKitDOMCSSStyleDeclaration.html" title="WebKitDOMCSSStyleDeclaration"><span class="type">WebKitDOMCSSStyleDeclaration</span></a>*  : Read
+  "<a class="link" href="WebKitDOMElement.html#WebKitDOMElement--tag-name" title='The "tag-name" property'>tag-name</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMElement.html#WebKitDOMElement--webkit-region-overset" title='The "webkit-region-overset" property'>webkit-region-overset</a>"    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMElement.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMElement.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMElement-struct"></a><h3>WebKitDOMElement</h3>
+<pre class="programlisting">typedef struct _WebKitDOMElement WebKitDOMElement;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-get-attribute"></a><h3>webkit_dom_element_get_attribute ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_element_get_attribute    (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>name</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-set-attribute"></a><h3>webkit_dom_element_set_attribute ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_element_set_attribute    (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>name</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-remove-attribute"></a><h3>webkit_dom_element_remove_attribute ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_element_remove_attribute (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>name</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-get-attribute-node"></a><h3>webkit_dom_element_get_attribute_node ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="returnvalue">WebKitDOMAttr</span></a> *     webkit_dom_element_get_attribute_node
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>name</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="type">WebKitDOMAttr</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-set-attribute-node"></a><h3>webkit_dom_element_set_attribute_node ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="returnvalue">WebKitDOMAttr</span></a> *     webkit_dom_element_set_attribute_node
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="type">WebKitDOMAttr</span></a> *newAttr</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>newAttr</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="type">WebKitDOMAttr</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="type">WebKitDOMAttr</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-remove-attribute-node"></a><h3>webkit_dom_element_remove_attribute_node ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="returnvalue">WebKitDOMAttr</span></a> *     webkit_dom_element_remove_attribute_node
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="type">WebKitDOMAttr</span></a> *oldAttr</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>oldAttr</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="type">WebKitDOMAttr</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="type">WebKitDOMAttr</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-get-elements-by-tag-name"></a><h3>webkit_dom_element_get_elements_by_tag_name ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMNodeList.html" title="WebKitDOMNodeList"><span class="returnvalue">WebKitDOMNodeList</span></a> * webkit_dom_element_get_elements_by_tag_name
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>name</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNodeList.html" title="WebKitDOMNodeList"><span class="type">WebKitDOMNodeList</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-has-attributes"></a><h3>webkit_dom_element_has_attributes ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_element_has_attributes   (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-get-attribute-ns"></a><h3>webkit_dom_element_get_attribute_ns ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_element_get_attribute_ns (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *namespaceURI</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *localName</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>namespaceURI</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>localName</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-set-attribute-ns"></a><h3>webkit_dom_element_set_attribute_ns ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_element_set_attribute_ns (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *namespaceURI</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *qualifiedName</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>namespaceURI</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>qualifiedName</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-remove-attribute-ns"></a><h3>webkit_dom_element_remove_attribute_ns ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_element_remove_attribute_ns
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *namespaceURI</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *localName</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>namespaceURI</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>localName</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-get-elements-by-tag-name-ns"></a><h3>webkit_dom_element_get_elements_by_tag_name_ns ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMNodeList.html" title="WebKitDOMNodeList"><span class="returnvalue">WebKitDOMNodeList</span></a> * webkit_dom_element_get_elements_by_tag_name_ns
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *namespaceURI</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *localName</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>namespaceURI</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>localName</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNodeList.html" title="WebKitDOMNodeList"><span class="type">WebKitDOMNodeList</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-get-attribute-node-ns"></a><h3>webkit_dom_element_get_attribute_node_ns ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="returnvalue">WebKitDOMAttr</span></a> *     webkit_dom_element_get_attribute_node_ns
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *namespaceURI</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *localName</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>namespaceURI</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>localName</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="type">WebKitDOMAttr</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-set-attribute-node-ns"></a><h3>webkit_dom_element_set_attribute_node_ns ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="returnvalue">WebKitDOMAttr</span></a> *     webkit_dom_element_set_attribute_node_ns
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="type">WebKitDOMAttr</span></a> *newAttr</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>newAttr</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="type">WebKitDOMAttr</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMAttr.html" title="WebKitDOMAttr"><span class="type">WebKitDOMAttr</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-has-attribute"></a><h3>webkit_dom_element_has_attribute ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_element_has_attribute    (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>name</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-has-attribute-ns"></a><h3>webkit_dom_element_has_attribute_ns ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_element_has_attribute_ns (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *namespaceURI</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *localName</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>namespaceURI</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>localName</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-focus"></a><h3>webkit_dom_element_focus ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_element_focus            (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-blur"></a><h3>webkit_dom_element_blur ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_element_blur             (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-scroll-into-view"></a><h3>webkit_dom_element_scroll_into_view ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_element_scroll_into_view (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> alignWithTop</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>alignWithTop</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-scroll-into-view-if-needed"></a><h3>webkit_dom_element_scroll_into_view_if_needed ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_element_scroll_into_view_if_needed
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> centerIfNeeded</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>centerIfNeeded</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-scroll-by-lines"></a><h3>webkit_dom_element_scroll_by_lines ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_element_scroll_by_lines  (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> lines</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>lines</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-scroll-by-pages"></a><h3>webkit_dom_element_scroll_by_pages ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_element_scroll_by_pages  (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> pages</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>pages</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-get-elements-by-class-name"></a><h3>webkit_dom_element_get_elements_by_class_name ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMNodeList.html" title="WebKitDOMNodeList"><span class="returnvalue">WebKitDOMNodeList</span></a> * webkit_dom_element_get_elements_by_class_name
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>name</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNodeList.html" title="WebKitDOMNodeList"><span class="type">WebKitDOMNodeList</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-query-selector"></a><h3>webkit_dom_element_query_selector ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="returnvalue">WebKitDOMElement</span></a> *  webkit_dom_element_query_selector   (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *selectors</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>selectors</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-query-selector-all"></a><h3>webkit_dom_element_query_selector_all ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMNodeList.html" title="WebKitDOMNodeList"><span class="returnvalue">WebKitDOMNodeList</span></a> * webkit_dom_element_query_selector_all
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *selectors</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>selectors</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNodeList.html" title="WebKitDOMNodeList"><span class="type">WebKitDOMNodeList</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-webkit-matches-selector"></a><h3>webkit_dom_element_webkit_matches_selector ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_element_webkit_matches_selector
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *selectors</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>selectors</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-webkit-request-full-screen"></a><h3>webkit_dom_element_webkit_request_full_screen ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_element_webkit_request_full_screen
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gushort"><span class="type">gushort</span></a> flags</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>flags</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gushort"><span class="type">gushort</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-webkit-request-fullscreen"></a><h3>webkit_dom_element_webkit_request_fullscreen ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_element_webkit_request_fullscreen
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-webkit-request-pointer-lock"></a><h3>webkit_dom_element_webkit_request_pointer_lock ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_element_webkit_request_pointer_lock
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-remove"></a><h3>webkit_dom_element_remove ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_element_remove           (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-get-tag-name"></a><h3>webkit_dom_element_get_tag_name ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_element_get_tag_name     (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-get-attributes"></a><h3>webkit_dom_element_get_attributes ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMNamedNodeMap.html" title="WebKitDOMNamedNodeMap"><span class="returnvalue">WebKitDOMNamedNodeMap</span></a> * webkit_dom_element_get_attributes
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNamedNodeMap.html" title="WebKitDOMNamedNodeMap"><span class="type">WebKitDOMNamedNodeMap</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-get-style"></a><h3>webkit_dom_element_get_style ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMCSSStyleDeclaration.html" title="WebKitDOMCSSStyleDeclaration"><span class="returnvalue">WebKitDOMCSSStyleDeclaration</span></a> * webkit_dom_element_get_style
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMCSSStyleDeclaration.html" title="WebKitDOMCSSStyleDeclaration"><span class="type">WebKitDOMCSSStyleDeclaration</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-get-id"></a><h3>webkit_dom_element_get_id ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_element_get_id           (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-set-id"></a><h3>webkit_dom_element_set_id ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_element_set_id           (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-get-offset-left"></a><h3>webkit_dom_element_get_offset_left ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_element_get_offset_left  (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-get-offset-top"></a><h3>webkit_dom_element_get_offset_top ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_element_get_offset_top   (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-get-offset-width"></a><h3>webkit_dom_element_get_offset_width ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_element_get_offset_width (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-get-offset-height"></a><h3>webkit_dom_element_get_offset_height ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_element_get_offset_height
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-get-offset-parent"></a><h3>webkit_dom_element_get_offset_parent ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="returnvalue">WebKitDOMElement</span></a> *  webkit_dom_element_get_offset_parent
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-get-client-left"></a><h3>webkit_dom_element_get_client_left ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_element_get_client_left  (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-get-client-top"></a><h3>webkit_dom_element_get_client_top ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_element_get_client_top   (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-get-client-width"></a><h3>webkit_dom_element_get_client_width ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_element_get_client_width (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-get-client-height"></a><h3>webkit_dom_element_get_client_height ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_element_get_client_height
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-get-scroll-left"></a><h3>webkit_dom_element_get_scroll_left ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_element_get_scroll_left  (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-set-scroll-left"></a><h3>webkit_dom_element_set_scroll_left ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_element_set_scroll_left  (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-get-scroll-top"></a><h3>webkit_dom_element_get_scroll_top ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_element_get_scroll_top   (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-set-scroll-top"></a><h3>webkit_dom_element_set_scroll_top ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_element_set_scroll_top   (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a> value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-get-scroll-width"></a><h3>webkit_dom_element_get_scroll_width ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_element_get_scroll_width (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-get-scroll-height"></a><h3>webkit_dom_element_get_scroll_height ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_element_get_scroll_height
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-get-class-name"></a><h3>webkit_dom_element_get_class_name ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_element_get_class_name   (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-set-class-name"></a><h3>webkit_dom_element_set_class_name ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_element_set_class_name   (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-get-class-list"></a><h3>webkit_dom_element_get_class_list ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMDOMTokenList.html" title="WebKitDOMDOMTokenList"><span class="returnvalue">WebKitDOMDOMTokenList</span></a> * webkit_dom_element_get_class_list
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMTokenList.html" title="WebKitDOMDOMTokenList"><span class="type">WebKitDOMDOMTokenList</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-get-first-element-child"></a><h3>webkit_dom_element_get_first_element_child ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="returnvalue">WebKitDOMElement</span></a> *  webkit_dom_element_get_first_element_child
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-get-last-element-child"></a><h3>webkit_dom_element_get_last_element_child ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="returnvalue">WebKitDOMElement</span></a> *  webkit_dom_element_get_last_element_child
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-get-previous-element-sibling"></a><h3>webkit_dom_element_get_previous_element_sibling ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="returnvalue">WebKitDOMElement</span></a> *  webkit_dom_element_get_previous_element_sibling
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-get-next-element-sibling"></a><h3>webkit_dom_element_get_next_element_sibling ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="returnvalue">WebKitDOMElement</span></a> *  webkit_dom_element_get_next_element_sibling
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-get-child-element-count"></a><h3>webkit_dom_element_get_child_element_count ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              webkit_dom_element_get_child_element_count
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-get-webkit-region-overset"></a><h3>webkit_dom_element_get_webkit_region_overset ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_element_get_webkit_region_overset
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-element-get-webkit-region-overflow"></a><h3>webkit_dom_element_get_webkit_region_overflow ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_element_get_webkit_region_overflow
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a> *element</code></em>);</pre>
+<div class="warning">
+<h3 class="title">Warning</h3>
+<p><code class="literal">webkit_dom_element_get_webkit_region_overflow</code> has been deprecated since version 1.10 and should not be used in newly-written code. Use <a class="link" href="WebKitDOMElement.html#webkit-dom-element-get-webkit-region-overset" title="webkit_dom_element_get_webkit_region_overset ()"><code class="function">webkit_dom_element_get_webkit_region_overset()</code></a> instead.</p>
+</div>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>element</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMElement.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMElement--attributes"></a><h3>The <code class="literal">"attributes"</code> property</h3>
+<pre class="programlisting">  "attributes"               <a class="link" href="WebKitDOMNamedNodeMap.html" title="WebKitDOMNamedNodeMap"><span class="type">WebKitDOMNamedNodeMap</span></a>*  : Read</pre>
+<p>read-only WebKitDOMNamedNodeMap* Element:attributes.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMElement--child-element-count"></a><h3>The <code class="literal">"child-element-count"</code> property</h3>
+<pre class="programlisting">  "child-element-count"      <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read</pre>
+<p>read-only gulong Element:child-element-count.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMElement--class-list"></a><h3>The <code class="literal">"class-list"</code> property</h3>
+<pre class="programlisting">  "class-list"               <a class="link" href="WebKitDOMDOMTokenList.html" title="WebKitDOMDOMTokenList"><span class="type">WebKitDOMDOMTokenList</span></a>*  : Read</pre>
+<p>read-only WebKitDOMDOMTokenList* Element:class-list.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMElement--class-name"></a><h3>The <code class="literal">"class-name"</code> property</h3>
+<pre class="programlisting">  "class-name"               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* Element:class-name.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMElement--client-height"></a><h3>The <code class="literal">"client-height"</code> property</h3>
+<pre class="programlisting">  "client-height"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong Element:client-height.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMElement--client-left"></a><h3>The <code class="literal">"client-left"</code> property</h3>
+<pre class="programlisting">  "client-left"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong Element:client-left.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMElement--client-top"></a><h3>The <code class="literal">"client-top"</code> property</h3>
+<pre class="programlisting">  "client-top"               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong Element:client-top.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMElement--client-width"></a><h3>The <code class="literal">"client-width"</code> property</h3>
+<pre class="programlisting">  "client-width"             <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong Element:client-width.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMElement--first-element-child"></a><h3>The <code class="literal">"first-element-child"</code> property</h3>
+<pre class="programlisting">  "first-element-child"      <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>*     : Read</pre>
+<p>read-only WebKitDOMElement* Element:first-element-child.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMElement--id"></a><h3>The <code class="literal">"id"</code> property</h3>
+<pre class="programlisting">  "id"                       <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* Element:id.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMElement--last-element-child"></a><h3>The <code class="literal">"last-element-child"</code> property</h3>
+<pre class="programlisting">  "last-element-child"       <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>*     : Read</pre>
+<p>read-only WebKitDOMElement* Element:last-element-child.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMElement--next-element-sibling"></a><h3>The <code class="literal">"next-element-sibling"</code> property</h3>
+<pre class="programlisting">  "next-element-sibling"     <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>*     : Read</pre>
+<p>read-only WebKitDOMElement* Element:next-element-sibling.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMElement--offset-height"></a><h3>The <code class="literal">"offset-height"</code> property</h3>
+<pre class="programlisting">  "offset-height"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong Element:offset-height.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMElement--offset-left"></a><h3>The <code class="literal">"offset-left"</code> property</h3>
+<pre class="programlisting">  "offset-left"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong Element:offset-left.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMElement--offset-parent"></a><h3>The <code class="literal">"offset-parent"</code> property</h3>
+<pre class="programlisting">  "offset-parent"            <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>*     : Read</pre>
+<p>read-only WebKitDOMElement* Element:offset-parent.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMElement--offset-top"></a><h3>The <code class="literal">"offset-top"</code> property</h3>
+<pre class="programlisting">  "offset-top"               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong Element:offset-top.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMElement--offset-width"></a><h3>The <code class="literal">"offset-width"</code> property</h3>
+<pre class="programlisting">  "offset-width"             <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong Element:offset-width.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMElement--previous-element-sibling"></a><h3>The <code class="literal">"previous-element-sibling"</code> property</h3>
+<pre class="programlisting">  "previous-element-sibling" <a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement"><span class="type">WebKitDOMElement</span></a>*     : Read</pre>
+<p>read-only WebKitDOMElement* Element:previous-element-sibling.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMElement--scroll-height"></a><h3>The <code class="literal">"scroll-height"</code> property</h3>
+<pre class="programlisting">  "scroll-height"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong Element:scroll-height.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMElement--scroll-left"></a><h3>The <code class="literal">"scroll-left"</code> property</h3>
+<pre class="programlisting">  "scroll-left"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read / Write</pre>
+<p>read-only glong Element:scroll-left.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMElement--scroll-top"></a><h3>The <code class="literal">"scroll-top"</code> property</h3>
+<pre class="programlisting">  "scroll-top"               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read / Write</pre>
+<p>read-only glong Element:scroll-top.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMElement--scroll-width"></a><h3>The <code class="literal">"scroll-width"</code> property</h3>
+<pre class="programlisting">  "scroll-width"             <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong Element:scroll-width.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMElement--style"></a><h3>The <code class="literal">"style"</code> property</h3>
+<pre class="programlisting">  "style"                    <a class="link" href="WebKitDOMCSSStyleDeclaration.html" title="WebKitDOMCSSStyleDeclaration"><span class="type">WebKitDOMCSSStyleDeclaration</span></a>*  : Read</pre>
+<p>read-only WebKitDOMCSSStyleDeclaration* Element:style.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMElement--tag-name"></a><h3>The <code class="literal">"tag-name"</code> property</h3>
+<pre class="programlisting">  "tag-name"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* Element:tag-name.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMElement--webkit-region-overset"></a><h3>The <code class="literal">"webkit-region-overset"</code> property</h3>
+<pre class="programlisting">  "webkit-region-overset"    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* Element:webkit-region-overset.</p>
+<p>Default value: ""</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19.1</div>
+</body>
+</html>

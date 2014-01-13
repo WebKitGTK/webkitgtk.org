@@ -1,0 +1,328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMGTK+ Reference Manual: WebKitDOMScreen</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMNavigator.html" title="WebKitDOMNavigator">
+<link rel="next" href="WebKitDOMShadowRoot.html" title="WebKitDOMShadowRoot">
+<meta name="generator" content="GTK-Doc V1.19.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<td width="100%" align="left">
+<a href="#" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMScreen.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMScreen.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitDOMScreen.properties" class="shortcut">Properties</a>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="WebKitDOMNavigator.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="WebKitDOMShadowRoot.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="WebKitDOMScreen"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMScreen.top_of_page"></a>WebKitDOMScreen</span></h2>
+<p>WebKitDOMScreen</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMScreen.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMScreen.html#WebKitDOMScreen-struct" title="WebKitDOMScreen">WebKitDOMScreen</a>;
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              <a class="link" href="WebKitDOMScreen.html#webkit-dom-screen-get-height" title="webkit_dom_screen_get_height ()">webkit_dom_screen_get_height</a>        (<em class="parameter"><code><a class="link" href="WebKitDOMScreen.html" title="WebKitDOMScreen"><span class="type">WebKitDOMScreen</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              <a class="link" href="WebKitDOMScreen.html#webkit-dom-screen-get-width" title="webkit_dom_screen_get_width ()">webkit_dom_screen_get_width</a>         (<em class="parameter"><code><a class="link" href="WebKitDOMScreen.html" title="WebKitDOMScreen"><span class="type">WebKitDOMScreen</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              <a class="link" href="WebKitDOMScreen.html#webkit-dom-screen-get-color-depth" title="webkit_dom_screen_get_color_depth ()">webkit_dom_screen_get_color_depth</a>   (<em class="parameter"><code><a class="link" href="WebKitDOMScreen.html" title="WebKitDOMScreen"><span class="type">WebKitDOMScreen</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              <a class="link" href="WebKitDOMScreen.html#webkit-dom-screen-get-pixel-depth" title="webkit_dom_screen_get_pixel_depth ()">webkit_dom_screen_get_pixel_depth</a>   (<em class="parameter"><code><a class="link" href="WebKitDOMScreen.html" title="WebKitDOMScreen"><span class="type">WebKitDOMScreen</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMScreen.html#webkit-dom-screen-get-avail-left" title="webkit_dom_screen_get_avail_left ()">webkit_dom_screen_get_avail_left</a>    (<em class="parameter"><code><a class="link" href="WebKitDOMScreen.html" title="WebKitDOMScreen"><span class="type">WebKitDOMScreen</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               <a class="link" href="WebKitDOMScreen.html#webkit-dom-screen-get-avail-top" title="webkit_dom_screen_get_avail_top ()">webkit_dom_screen_get_avail_top</a>     (<em class="parameter"><code><a class="link" href="WebKitDOMScreen.html" title="WebKitDOMScreen"><span class="type">WebKitDOMScreen</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              <a class="link" href="WebKitDOMScreen.html#webkit-dom-screen-get-avail-height" title="webkit_dom_screen_get_avail_height ()">webkit_dom_screen_get_avail_height</a>  (<em class="parameter"><code><a class="link" href="WebKitDOMScreen.html" title="WebKitDOMScreen"><span class="type">WebKitDOMScreen</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              <a class="link" href="WebKitDOMScreen.html#webkit-dom-screen-get-avail-width" title="webkit_dom_screen_get_avail_width ()">webkit_dom_screen_get_avail_width</a>   (<em class="parameter"><code><a class="link" href="WebKitDOMScreen.html" title="WebKitDOMScreen"><span class="type">WebKitDOMScreen</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMScreen.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----WebKitDOMScreen
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMScreen.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitDOMScreen.html#WebKitDOMScreen--avail-height" title='The "avail-height" property'>avail-height</a>"             <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read
+  "<a class="link" href="WebKitDOMScreen.html#WebKitDOMScreen--avail-left" title='The "avail-left" property'>avail-left</a>"               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+  "<a class="link" href="WebKitDOMScreen.html#WebKitDOMScreen--avail-top" title='The "avail-top" property'>avail-top</a>"                <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read
+  "<a class="link" href="WebKitDOMScreen.html#WebKitDOMScreen--avail-width" title='The "avail-width" property'>avail-width</a>"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read
+  "<a class="link" href="WebKitDOMScreen.html#WebKitDOMScreen--color-depth" title='The "color-depth" property'>color-depth</a>"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read
+  "<a class="link" href="WebKitDOMScreen.html#WebKitDOMScreen--height" title='The "height" property'>height</a>"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read
+  "<a class="link" href="WebKitDOMScreen.html#WebKitDOMScreen--pixel-depth" title='The "pixel-depth" property'>pixel-depth</a>"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read
+  "<a class="link" href="WebKitDOMScreen.html#WebKitDOMScreen--width" title='The "width" property'>width</a>"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMScreen.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMScreen.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMScreen-struct"></a><h3>WebKitDOMScreen</h3>
+<pre class="programlisting">typedef struct _WebKitDOMScreen WebKitDOMScreen;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-screen-get-height"></a><h3>webkit_dom_screen_get_height ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              webkit_dom_screen_get_height        (<em class="parameter"><code><a class="link" href="WebKitDOMScreen.html" title="WebKitDOMScreen"><span class="type">WebKitDOMScreen</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMScreen.html" title="WebKitDOMScreen"><span class="type">WebKitDOMScreen</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-screen-get-width"></a><h3>webkit_dom_screen_get_width ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              webkit_dom_screen_get_width         (<em class="parameter"><code><a class="link" href="WebKitDOMScreen.html" title="WebKitDOMScreen"><span class="type">WebKitDOMScreen</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMScreen.html" title="WebKitDOMScreen"><span class="type">WebKitDOMScreen</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-screen-get-color-depth"></a><h3>webkit_dom_screen_get_color_depth ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              webkit_dom_screen_get_color_depth   (<em class="parameter"><code><a class="link" href="WebKitDOMScreen.html" title="WebKitDOMScreen"><span class="type">WebKitDOMScreen</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMScreen.html" title="WebKitDOMScreen"><span class="type">WebKitDOMScreen</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-screen-get-pixel-depth"></a><h3>webkit_dom_screen_get_pixel_depth ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              webkit_dom_screen_get_pixel_depth   (<em class="parameter"><code><a class="link" href="WebKitDOMScreen.html" title="WebKitDOMScreen"><span class="type">WebKitDOMScreen</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMScreen.html" title="WebKitDOMScreen"><span class="type">WebKitDOMScreen</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-screen-get-avail-left"></a><h3>webkit_dom_screen_get_avail_left ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_screen_get_avail_left    (<em class="parameter"><code><a class="link" href="WebKitDOMScreen.html" title="WebKitDOMScreen"><span class="type">WebKitDOMScreen</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMScreen.html" title="WebKitDOMScreen"><span class="type">WebKitDOMScreen</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-screen-get-avail-top"></a><h3>webkit_dom_screen_get_avail_top ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="returnvalue">glong</span></a>               webkit_dom_screen_get_avail_top     (<em class="parameter"><code><a class="link" href="WebKitDOMScreen.html" title="WebKitDOMScreen"><span class="type">WebKitDOMScreen</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMScreen.html" title="WebKitDOMScreen"><span class="type">WebKitDOMScreen</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-screen-get-avail-height"></a><h3>webkit_dom_screen_get_avail_height ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              webkit_dom_screen_get_avail_height  (<em class="parameter"><code><a class="link" href="WebKitDOMScreen.html" title="WebKitDOMScreen"><span class="type">WebKitDOMScreen</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMScreen.html" title="WebKitDOMScreen"><span class="type">WebKitDOMScreen</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-screen-get-avail-width"></a><h3>webkit_dom_screen_get_avail_width ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              webkit_dom_screen_get_avail_width   (<em class="parameter"><code><a class="link" href="WebKitDOMScreen.html" title="WebKitDOMScreen"><span class="type">WebKitDOMScreen</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMScreen.html" title="WebKitDOMScreen"><span class="type">WebKitDOMScreen</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMScreen.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMScreen--avail-height"></a><h3>The <code class="literal">"avail-height"</code> property</h3>
+<pre class="programlisting">  "avail-height"             <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read</pre>
+<p>read-only gulong Screen:avail-height.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMScreen--avail-left"></a><h3>The <code class="literal">"avail-left"</code> property</h3>
+<pre class="programlisting">  "avail-left"               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong Screen:avail-left.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMScreen--avail-top"></a><h3>The <code class="literal">"avail-top"</code> property</h3>
+<pre class="programlisting">  "avail-top"                <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#glong"><span class="type">glong</span></a>                 : Read</pre>
+<p>read-only glong Screen:avail-top.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMScreen--avail-width"></a><h3>The <code class="literal">"avail-width"</code> property</h3>
+<pre class="programlisting">  "avail-width"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read</pre>
+<p>read-only gulong Screen:avail-width.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMScreen--color-depth"></a><h3>The <code class="literal">"color-depth"</code> property</h3>
+<pre class="programlisting">  "color-depth"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read</pre>
+<p>read-only gulong Screen:color-depth.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMScreen--height"></a><h3>The <code class="literal">"height"</code> property</h3>
+<pre class="programlisting">  "height"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read</pre>
+<p>read-only gulong Screen:height.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMScreen--pixel-depth"></a><h3>The <code class="literal">"pixel-depth"</code> property</h3>
+<pre class="programlisting">  "pixel-depth"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read</pre>
+<p>read-only gulong Screen:pixel-depth.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMScreen--width"></a><h3>The <code class="literal">"width"</code> property</h3>
+<pre class="programlisting">  "width"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read</pre>
+<p>read-only gulong Screen:width.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19.1</div>
+</body>
+</html>

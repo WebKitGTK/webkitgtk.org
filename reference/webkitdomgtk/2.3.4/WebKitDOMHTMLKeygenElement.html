@@ -1,0 +1,628 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMGTK+ Reference Manual: WebKitDOMHTMLKeygenElement</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMHTMLInputElement.html" title="WebKitDOMHTMLInputElement">
+<link rel="next" href="WebKitDOMHTMLLabelElement.html" title="WebKitDOMHTMLLabelElement">
+<meta name="generator" content="GTK-Doc V1.19.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<td width="100%" align="left">
+<a href="#" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMHTMLKeygenElement.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMHTMLKeygenElement.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitDOMHTMLKeygenElement.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#WebKitDOMHTMLKeygenElement.properties" class="shortcut">Properties</a>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="WebKitDOMHTMLInputElement.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="WebKitDOMHTMLLabelElement.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="WebKitDOMHTMLKeygenElement"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMHTMLKeygenElement.top_of_page"></a>WebKitDOMHTMLKeygenElement</span></h2>
+<p>WebKitDOMHTMLKeygenElement</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMHTMLKeygenElement.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMHTMLKeygenElement.html#WebKitDOMHTMLKeygenElement-struct" title="WebKitDOMHTMLKeygenElement">WebKitDOMHTMLKeygenElement</a>;
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMHTMLKeygenElement.html#webkit-dom-html-keygen-element-check-validity" title="webkit_dom_html_keygen_element_check_validity ()">webkit_dom_html_keygen_element_check_validity</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLKeygenElement.html#webkit-dom-html-keygen-element-set-custom-validity" title="webkit_dom_html_keygen_element_set_custom_validity ()">webkit_dom_html_keygen_element_set_custom_validity</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *error</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMHTMLKeygenElement.html#webkit-dom-html-keygen-element-get-autofocus" title="webkit_dom_html_keygen_element_get_autofocus ()">webkit_dom_html_keygen_element_get_autofocus</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLKeygenElement.html#webkit-dom-html-keygen-element-set-autofocus" title="webkit_dom_html_keygen_element_set_autofocus ()">webkit_dom_html_keygen_element_set_autofocus</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLKeygenElement.html#webkit-dom-html-keygen-element-get-challenge" title="webkit_dom_html_keygen_element_get_challenge ()">webkit_dom_html_keygen_element_get_challenge</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLKeygenElement.html#webkit-dom-html-keygen-element-set-challenge" title="webkit_dom_html_keygen_element_set_challenge ()">webkit_dom_html_keygen_element_set_challenge</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMHTMLKeygenElement.html#webkit-dom-html-keygen-element-get-disabled" title="webkit_dom_html_keygen_element_get_disabled ()">webkit_dom_html_keygen_element_get_disabled</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLKeygenElement.html#webkit-dom-html-keygen-element-set-disabled" title="webkit_dom_html_keygen_element_set_disabled ()">webkit_dom_html_keygen_element_set_disabled</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);
+<a class="link" href="WebKitDOMHTMLFormElement.html" title="WebKitDOMHTMLFormElement"><span class="returnvalue">WebKitDOMHTMLFormElement</span></a> * <a class="link" href="WebKitDOMHTMLKeygenElement.html#webkit-dom-html-keygen-element-get-form" title="webkit_dom_html_keygen_element_get_form ()">webkit_dom_html_keygen_element_get_form</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLKeygenElement.html#webkit-dom-html-keygen-element-get-keytype" title="webkit_dom_html_keygen_element_get_keytype ()">webkit_dom_html_keygen_element_get_keytype</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLKeygenElement.html#webkit-dom-html-keygen-element-set-keytype" title="webkit_dom_html_keygen_element_set_keytype ()">webkit_dom_html_keygen_element_set_keytype</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLKeygenElement.html#webkit-dom-html-keygen-element-get-name" title="webkit_dom_html_keygen_element_get_name ()">webkit_dom_html_keygen_element_get_name</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMHTMLKeygenElement.html#webkit-dom-html-keygen-element-set-name" title="webkit_dom_html_keygen_element_set_name ()">webkit_dom_html_keygen_element_set_name</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMHTMLKeygenElement.html#webkit-dom-html-keygen-element-get-will-validate" title="webkit_dom_html_keygen_element_get_will_validate ()">webkit_dom_html_keygen_element_get_will_validate</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="returnvalue">WebKitDOMValidityState</span></a> * <a class="link" href="WebKitDOMHTMLKeygenElement.html#webkit-dom-html-keygen-element-get-validity" title="webkit_dom_html_keygen_element_get_validity ()">webkit_dom_html_keygen_element_get_validity</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMHTMLKeygenElement.html#webkit-dom-html-keygen-element-get-validation-message" title="webkit_dom_html_keygen_element_get_validation_message ()">webkit_dom_html_keygen_element_get_validation_message</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMNodeList.html" title="WebKitDOMNodeList"><span class="returnvalue">WebKitDOMNodeList</span></a> * <a class="link" href="WebKitDOMHTMLKeygenElement.html#webkit-dom-html-keygen-element-get-labels" title="webkit_dom_html_keygen_element_get_labels ()">webkit_dom_html_keygen_element_get_labels</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLKeygenElement.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----<a class="link" href="WebKitDOMNode.html" title="WebKitDOMNode">WebKitDOMNode</a>
+               +----<a class="link" href="WebKitDOMElement.html" title="WebKitDOMElement">WebKitDOMElement</a>
+                     +----<a class="link" href="WebKitDOMHTMLElement.html" title="WebKitDOMHTMLElement">WebKitDOMHTMLElement</a>
+                           +----WebKitDOMHTMLKeygenElement
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLKeygenElement.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+WebKitDOMHTMLKeygenElement implements
+ <a class="link" href="WebKitDOMEventTarget.html" title="WebKitDOMEventTarget">WebKitDOMEventTarget</a>.</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLKeygenElement.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitDOMHTMLKeygenElement.html#WebKitDOMHTMLKeygenElement--autofocus" title='The "autofocus" property'>autofocus</a>"                <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+  "<a class="link" href="WebKitDOMHTMLKeygenElement.html#WebKitDOMHTMLKeygenElement--challenge" title='The "challenge" property'>challenge</a>"                <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLKeygenElement.html#WebKitDOMHTMLKeygenElement--disabled" title='The "disabled" property'>disabled</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+  "<a class="link" href="WebKitDOMHTMLKeygenElement.html#WebKitDOMHTMLKeygenElement--form" title='The "form" property'>form</a>"                     <a class="link" href="WebKitDOMHTMLFormElement.html" title="WebKitDOMHTMLFormElement"><span class="type">WebKitDOMHTMLFormElement</span></a>*  : Read
+  "<a class="link" href="WebKitDOMHTMLKeygenElement.html#WebKitDOMHTMLKeygenElement--keytype" title='The "keytype" property'>keytype</a>"                  <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLKeygenElement.html#WebKitDOMHTMLKeygenElement--labels" title='The "labels" property'>labels</a>"                   <a class="link" href="WebKitDOMNodeList.html" title="WebKitDOMNodeList"><span class="type">WebKitDOMNodeList</span></a>*    : Read
+  "<a class="link" href="WebKitDOMHTMLKeygenElement.html#WebKitDOMHTMLKeygenElement--name" title='The "name" property'>name</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="WebKitDOMHTMLKeygenElement.html#WebKitDOMHTMLKeygenElement--type" title='The "type" property'>type</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMHTMLKeygenElement.html#WebKitDOMHTMLKeygenElement--validation-message" title='The "validation-message" property'>validation-message</a>"       <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMHTMLKeygenElement.html#WebKitDOMHTMLKeygenElement--validity" title='The "validity" property'>validity</a>"                 <a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a>*  : Read
+  "<a class="link" href="WebKitDOMHTMLKeygenElement.html#WebKitDOMHTMLKeygenElement--will-validate" title='The "will-validate" property'>will-validate</a>"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLKeygenElement.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLKeygenElement.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMHTMLKeygenElement-struct"></a><h3>WebKitDOMHTMLKeygenElement</h3>
+<pre class="programlisting">typedef struct _WebKitDOMHTMLKeygenElement WebKitDOMHTMLKeygenElement;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-keygen-element-check-validity"></a><h3>webkit_dom_html_keygen_element_check_validity ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_html_keygen_element_check_validity
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-keygen-element-set-custom-validity"></a><h3>webkit_dom_html_keygen_element_set_custom_validity ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_keygen_element_set_custom_validity
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-keygen-element-get-autofocus"></a><h3>webkit_dom_html_keygen_element_get_autofocus ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_html_keygen_element_get_autofocus
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-keygen-element-set-autofocus"></a><h3>webkit_dom_html_keygen_element_set_autofocus ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_keygen_element_set_autofocus
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-keygen-element-get-challenge"></a><h3>webkit_dom_html_keygen_element_get_challenge ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_keygen_element_get_challenge
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-keygen-element-set-challenge"></a><h3>webkit_dom_html_keygen_element_set_challenge ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_keygen_element_set_challenge
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-keygen-element-get-disabled"></a><h3>webkit_dom_html_keygen_element_get_disabled ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_html_keygen_element_get_disabled
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-keygen-element-set-disabled"></a><h3>webkit_dom_html_keygen_element_set_disabled ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_keygen_element_set_disabled
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-keygen-element-get-form"></a><h3>webkit_dom_html_keygen_element_get_form ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMHTMLFormElement.html" title="WebKitDOMHTMLFormElement"><span class="returnvalue">WebKitDOMHTMLFormElement</span></a> * webkit_dom_html_keygen_element_get_form
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLFormElement.html" title="WebKitDOMHTMLFormElement"><span class="type">WebKitDOMHTMLFormElement</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-keygen-element-get-keytype"></a><h3>webkit_dom_html_keygen_element_get_keytype ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_keygen_element_get_keytype
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-keygen-element-set-keytype"></a><h3>webkit_dom_html_keygen_element_set_keytype ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_keygen_element_set_keytype
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-keygen-element-get-name"></a><h3>webkit_dom_html_keygen_element_get_name ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_keygen_element_get_name
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-keygen-element-set-name"></a><h3>webkit_dom_html_keygen_element_set_name ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_html_keygen_element_set_name
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-keygen-element-get-will-validate"></a><h3>webkit_dom_html_keygen_element_get_will_validate ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_html_keygen_element_get_will_validate
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-keygen-element-get-validity"></a><h3>webkit_dom_html_keygen_element_get_validity ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="returnvalue">WebKitDOMValidityState</span></a> * webkit_dom_html_keygen_element_get_validity
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-keygen-element-get-validation-message"></a><h3>webkit_dom_html_keygen_element_get_validation_message ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_html_keygen_element_get_validation_message
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-html-keygen-element-get-labels"></a><h3>webkit_dom_html_keygen_element_get_labels ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMNodeList.html" title="WebKitDOMNodeList"><span class="returnvalue">WebKitDOMNodeList</span></a> * webkit_dom_html_keygen_element_get_labels
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMHTMLKeygenElement.html" title="WebKitDOMHTMLKeygenElement"><span class="type">WebKitDOMHTMLKeygenElement</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMNodeList.html" title="WebKitDOMNodeList"><span class="type">WebKitDOMNodeList</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMHTMLKeygenElement.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMHTMLKeygenElement--autofocus"></a><h3>The <code class="literal">"autofocus"</code> property</h3>
+<pre class="programlisting">  "autofocus"                <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
+<p>read-only gboolean HTMLKeygenElement:autofocus.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLKeygenElement--challenge"></a><h3>The <code class="literal">"challenge"</code> property</h3>
+<pre class="programlisting">  "challenge"                <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLKeygenElement:challenge.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLKeygenElement--disabled"></a><h3>The <code class="literal">"disabled"</code> property</h3>
+<pre class="programlisting">  "disabled"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
+<p>read-only gboolean HTMLKeygenElement:disabled.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLKeygenElement--form"></a><h3>The <code class="literal">"form"</code> property</h3>
+<pre class="programlisting">  "form"                     <a class="link" href="WebKitDOMHTMLFormElement.html" title="WebKitDOMHTMLFormElement"><span class="type">WebKitDOMHTMLFormElement</span></a>*  : Read</pre>
+<p>read-only WebKitDOMHTMLFormElement* HTMLKeygenElement:form.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLKeygenElement--keytype"></a><h3>The <code class="literal">"keytype"</code> property</h3>
+<pre class="programlisting">  "keytype"                  <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLKeygenElement:keytype.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLKeygenElement--labels"></a><h3>The <code class="literal">"labels"</code> property</h3>
+<pre class="programlisting">  "labels"                   <a class="link" href="WebKitDOMNodeList.html" title="WebKitDOMNodeList"><span class="type">WebKitDOMNodeList</span></a>*    : Read</pre>
+<p>read-only WebKitDOMNodeList* HTMLKeygenElement:labels.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLKeygenElement--name"></a><h3>The <code class="literal">"name"</code> property</h3>
+<pre class="programlisting">  "name"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>read-only gchar* HTMLKeygenElement:name.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLKeygenElement--type"></a><h3>The <code class="literal">"type"</code> property</h3>
+<pre class="programlisting">  "type"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* HTMLKeygenElement:type.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLKeygenElement--validation-message"></a><h3>The <code class="literal">"validation-message"</code> property</h3>
+<pre class="programlisting">  "validation-message"       <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* HTMLKeygenElement:validation-message.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLKeygenElement--validity"></a><h3>The <code class="literal">"validity"</code> property</h3>
+<pre class="programlisting">  "validity"                 <a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a>*  : Read</pre>
+<p>read-only WebKitDOMValidityState* HTMLKeygenElement:validity.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMHTMLKeygenElement--will-validate"></a><h3>The <code class="literal">"will-validate"</code> property</h3>
+<pre class="programlisting">  "will-validate"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read</pre>
+<p>read-only gboolean HTMLKeygenElement:will-validate.</p>
+<p>Default value: FALSE</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19.1</div>
+</body>
+</html>

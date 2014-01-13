@@ -1,0 +1,416 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMGTK+ Reference Manual: WebKitDOMValidityState</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMTimeRanges.html" title="WebKitDOMTimeRanges">
+<link rel="next" href="WebKitDOMDOMApplicationCache.html" title="WebKitDOMDOMApplicationCache">
+<meta name="generator" content="GTK-Doc V1.19.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<td width="100%" align="left">
+<a href="#" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMValidityState.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMValidityState.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitDOMValidityState.properties" class="shortcut">Properties</a>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="WebKitDOMTimeRanges.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="WebKitDOMDOMApplicationCache.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="WebKitDOMValidityState"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMValidityState.top_of_page"></a>WebKitDOMValidityState</span></h2>
+<p>WebKitDOMValidityState</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMValidityState.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMValidityState.html#WebKitDOMValidityState-struct" title="WebKitDOMValidityState">WebKitDOMValidityState</a>;
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMValidityState.html#webkit-dom-validity-state-get-value-missing" title="webkit_dom_validity_state_get_value_missing ()">webkit_dom_validity_state_get_value_missing</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMValidityState.html#webkit-dom-validity-state-get-type-mismatch" title="webkit_dom_validity_state_get_type_mismatch ()">webkit_dom_validity_state_get_type_mismatch</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMValidityState.html#webkit-dom-validity-state-get-pattern-mismatch" title="webkit_dom_validity_state_get_pattern_mismatch ()">webkit_dom_validity_state_get_pattern_mismatch</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMValidityState.html#webkit-dom-validity-state-get-too-long" title="webkit_dom_validity_state_get_too_long ()">webkit_dom_validity_state_get_too_long</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMValidityState.html#webkit-dom-validity-state-get-range-underflow" title="webkit_dom_validity_state_get_range_underflow ()">webkit_dom_validity_state_get_range_underflow</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMValidityState.html#webkit-dom-validity-state-get-range-overflow" title="webkit_dom_validity_state_get_range_overflow ()">webkit_dom_validity_state_get_range_overflow</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMValidityState.html#webkit-dom-validity-state-get-step-mismatch" title="webkit_dom_validity_state_get_step_mismatch ()">webkit_dom_validity_state_get_step_mismatch</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMValidityState.html#webkit-dom-validity-state-get-bad-input" title="webkit_dom_validity_state_get_bad_input ()">webkit_dom_validity_state_get_bad_input</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMValidityState.html#webkit-dom-validity-state-get-custom-error" title="webkit_dom_validity_state_get_custom_error ()">webkit_dom_validity_state_get_custom_error</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMValidityState.html#webkit-dom-validity-state-get-valid" title="webkit_dom_validity_state_get_valid ()">webkit_dom_validity_state_get_valid</a> (<em class="parameter"><code><a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMValidityState.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----WebKitDOMValidityState
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMValidityState.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitDOMValidityState.html#WebKitDOMValidityState--bad-input" title='The "bad-input" property'>bad-input</a>"                <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
+  "<a class="link" href="WebKitDOMValidityState.html#WebKitDOMValidityState--custom-error" title='The "custom-error" property'>custom-error</a>"             <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
+  "<a class="link" href="WebKitDOMValidityState.html#WebKitDOMValidityState--pattern-mismatch" title='The "pattern-mismatch" property'>pattern-mismatch</a>"         <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
+  "<a class="link" href="WebKitDOMValidityState.html#WebKitDOMValidityState--range-overflow" title='The "range-overflow" property'>range-overflow</a>"           <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
+  "<a class="link" href="WebKitDOMValidityState.html#WebKitDOMValidityState--range-underflow" title='The "range-underflow" property'>range-underflow</a>"          <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
+  "<a class="link" href="WebKitDOMValidityState.html#WebKitDOMValidityState--step-mismatch" title='The "step-mismatch" property'>step-mismatch</a>"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
+  "<a class="link" href="WebKitDOMValidityState.html#WebKitDOMValidityState--too-long" title='The "too-long" property'>too-long</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
+  "<a class="link" href="WebKitDOMValidityState.html#WebKitDOMValidityState--type-mismatch" title='The "type-mismatch" property'>type-mismatch</a>"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
+  "<a class="link" href="WebKitDOMValidityState.html#WebKitDOMValidityState--valid" title='The "valid" property'>valid</a>"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
+  "<a class="link" href="WebKitDOMValidityState.html#WebKitDOMValidityState--value-missing" title='The "value-missing" property'>value-missing</a>"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMValidityState.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMValidityState.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMValidityState-struct"></a><h3>WebKitDOMValidityState</h3>
+<pre class="programlisting">typedef struct _WebKitDOMValidityState WebKitDOMValidityState;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-validity-state-get-value-missing"></a><h3>webkit_dom_validity_state_get_value_missing ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_validity_state_get_value_missing
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-validity-state-get-type-mismatch"></a><h3>webkit_dom_validity_state_get_type_mismatch ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_validity_state_get_type_mismatch
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-validity-state-get-pattern-mismatch"></a><h3>webkit_dom_validity_state_get_pattern_mismatch ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_validity_state_get_pattern_mismatch
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-validity-state-get-too-long"></a><h3>webkit_dom_validity_state_get_too_long ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_validity_state_get_too_long
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-validity-state-get-range-underflow"></a><h3>webkit_dom_validity_state_get_range_underflow ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_validity_state_get_range_underflow
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-validity-state-get-range-overflow"></a><h3>webkit_dom_validity_state_get_range_overflow ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_validity_state_get_range_overflow
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-validity-state-get-step-mismatch"></a><h3>webkit_dom_validity_state_get_step_mismatch ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_validity_state_get_step_mismatch
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-validity-state-get-bad-input"></a><h3>webkit_dom_validity_state_get_bad_input ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_validity_state_get_bad_input
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-validity-state-get-custom-error"></a><h3>webkit_dom_validity_state_get_custom_error ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_validity_state_get_custom_error
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-validity-state-get-valid"></a><h3>webkit_dom_validity_state_get_valid ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_validity_state_get_valid (<em class="parameter"><code><a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMValidityState.html" title="WebKitDOMValidityState"><span class="type">WebKitDOMValidityState</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMValidityState.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMValidityState--bad-input"></a><h3>The <code class="literal">"bad-input"</code> property</h3>
+<pre class="programlisting">  "bad-input"                <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read</pre>
+<p>read-only gboolean ValidityState:bad-input.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMValidityState--custom-error"></a><h3>The <code class="literal">"custom-error"</code> property</h3>
+<pre class="programlisting">  "custom-error"             <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read</pre>
+<p>read-only gboolean ValidityState:custom-error.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMValidityState--pattern-mismatch"></a><h3>The <code class="literal">"pattern-mismatch"</code> property</h3>
+<pre class="programlisting">  "pattern-mismatch"         <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read</pre>
+<p>read-only gboolean ValidityState:pattern-mismatch.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMValidityState--range-overflow"></a><h3>The <code class="literal">"range-overflow"</code> property</h3>
+<pre class="programlisting">  "range-overflow"           <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read</pre>
+<p>read-only gboolean ValidityState:range-overflow.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMValidityState--range-underflow"></a><h3>The <code class="literal">"range-underflow"</code> property</h3>
+<pre class="programlisting">  "range-underflow"          <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read</pre>
+<p>read-only gboolean ValidityState:range-underflow.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMValidityState--step-mismatch"></a><h3>The <code class="literal">"step-mismatch"</code> property</h3>
+<pre class="programlisting">  "step-mismatch"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read</pre>
+<p>read-only gboolean ValidityState:step-mismatch.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMValidityState--too-long"></a><h3>The <code class="literal">"too-long"</code> property</h3>
+<pre class="programlisting">  "too-long"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read</pre>
+<p>read-only gboolean ValidityState:too-long.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMValidityState--type-mismatch"></a><h3>The <code class="literal">"type-mismatch"</code> property</h3>
+<pre class="programlisting">  "type-mismatch"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read</pre>
+<p>read-only gboolean ValidityState:type-mismatch.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMValidityState--valid"></a><h3>The <code class="literal">"valid"</code> property</h3>
+<pre class="programlisting">  "valid"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read</pre>
+<p>read-only gboolean ValidityState:valid.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMValidityState--value-missing"></a><h3>The <code class="literal">"value-missing"</code> property</h3>
+<pre class="programlisting">  "value-missing"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read</pre>
+<p>read-only gboolean ValidityState:value-missing.</p>
+<p>Default value: FALSE</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19.1</div>
+</body>
+</html>

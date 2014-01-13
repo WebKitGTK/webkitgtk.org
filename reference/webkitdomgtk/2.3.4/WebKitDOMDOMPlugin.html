@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMGTK+ Reference Manual: WebKitDOMDOMPlugin</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMDOMMimeTypeArray.html" title="WebKitDOMDOMMimeTypeArray">
+<link rel="next" href="WebKitDOMDOMPluginArray.html" title="WebKitDOMDOMPluginArray">
+<meta name="generator" content="GTK-Doc V1.19.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<td width="100%" align="left">
+<a href="#" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMDOMPlugin.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMDOMPlugin.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitDOMDOMPlugin.properties" class="shortcut">Properties</a>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="WebKitDOMDOMMimeTypeArray.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="WebKitDOMDOMPluginArray.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="WebKitDOMDOMPlugin"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMDOMPlugin.top_of_page"></a>WebKitDOMDOMPlugin</span></h2>
+<p>WebKitDOMDOMPlugin</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMDOMPlugin.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMDOMPlugin.html#WebKitDOMDOMPlugin-struct" title="WebKitDOMDOMPlugin">WebKitDOMDOMPlugin</a>;
+<a class="link" href="WebKitDOMDOMMimeType.html" title="WebKitDOMDOMMimeType"><span class="returnvalue">WebKitDOMDOMMimeType</span></a> * <a class="link" href="WebKitDOMDOMPlugin.html#webkit-dom-dom-plugin-item" title="webkit_dom_dom_plugin_item ()">webkit_dom_dom_plugin_item</a>       (<em class="parameter"><code><a class="link" href="WebKitDOMDOMPlugin.html" title="WebKitDOMDOMPlugin"><span class="type">WebKitDOMDOMPlugin</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> index</code></em>);
+<a class="link" href="WebKitDOMDOMMimeType.html" title="WebKitDOMDOMMimeType"><span class="returnvalue">WebKitDOMDOMMimeType</span></a> * <a class="link" href="WebKitDOMDOMPlugin.html#webkit-dom-dom-plugin-named-item" title="webkit_dom_dom_plugin_named_item ()">webkit_dom_dom_plugin_named_item</a> (<em class="parameter"><code><a class="link" href="WebKitDOMDOMPlugin.html" title="WebKitDOMDOMPlugin"><span class="type">WebKitDOMDOMPlugin</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMDOMPlugin.html#webkit-dom-dom-plugin-get-name" title="webkit_dom_dom_plugin_get_name ()">webkit_dom_dom_plugin_get_name</a>      (<em class="parameter"><code><a class="link" href="WebKitDOMDOMPlugin.html" title="WebKitDOMDOMPlugin"><span class="type">WebKitDOMDOMPlugin</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMDOMPlugin.html#webkit-dom-dom-plugin-get-filename" title="webkit_dom_dom_plugin_get_filename ()">webkit_dom_dom_plugin_get_filename</a>  (<em class="parameter"><code><a class="link" href="WebKitDOMDOMPlugin.html" title="WebKitDOMDOMPlugin"><span class="type">WebKitDOMDOMPlugin</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMDOMPlugin.html#webkit-dom-dom-plugin-get-description" title="webkit_dom_dom_plugin_get_description ()">webkit_dom_dom_plugin_get_description</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMPlugin.html" title="WebKitDOMDOMPlugin"><span class="type">WebKitDOMDOMPlugin</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              <a class="link" href="WebKitDOMDOMPlugin.html#webkit-dom-dom-plugin-get-length" title="webkit_dom_dom_plugin_get_length ()">webkit_dom_dom_plugin_get_length</a>    (<em class="parameter"><code><a class="link" href="WebKitDOMDOMPlugin.html" title="WebKitDOMDOMPlugin"><span class="type">WebKitDOMDOMPlugin</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMDOMPlugin.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----WebKitDOMDOMPlugin
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMDOMPlugin.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitDOMDOMPlugin.html#WebKitDOMDOMPlugin--description" title='The "description" property'>description</a>"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMDOMPlugin.html#WebKitDOMDOMPlugin--filename" title='The "filename" property'>filename</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMDOMPlugin.html#WebKitDOMDOMPlugin--length" title='The "length" property'>length</a>"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read
+  "<a class="link" href="WebKitDOMDOMPlugin.html#WebKitDOMDOMPlugin--name" title='The "name" property'>name</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMDOMPlugin.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMDOMPlugin.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMDOMPlugin-struct"></a><h3>WebKitDOMDOMPlugin</h3>
+<pre class="programlisting">typedef struct _WebKitDOMDOMPlugin WebKitDOMDOMPlugin;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-plugin-item"></a><h3>webkit_dom_dom_plugin_item ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMDOMMimeType.html" title="WebKitDOMDOMMimeType"><span class="returnvalue">WebKitDOMDOMMimeType</span></a> * webkit_dom_dom_plugin_item       (<em class="parameter"><code><a class="link" href="WebKitDOMDOMPlugin.html" title="WebKitDOMDOMPlugin"><span class="type">WebKitDOMDOMPlugin</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a> index</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMPlugin.html" title="WebKitDOMDOMPlugin"><span class="type">WebKitDOMDOMPlugin</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>index</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMMimeType.html" title="WebKitDOMDOMMimeType"><span class="type">WebKitDOMDOMMimeType</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-plugin-named-item"></a><h3>webkit_dom_dom_plugin_named_item ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMDOMMimeType.html" title="WebKitDOMDOMMimeType"><span class="returnvalue">WebKitDOMDOMMimeType</span></a> * webkit_dom_dom_plugin_named_item (<em class="parameter"><code><a class="link" href="WebKitDOMDOMPlugin.html" title="WebKitDOMDOMPlugin"><span class="type">WebKitDOMDOMPlugin</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMPlugin.html" title="WebKitDOMDOMPlugin"><span class="type">WebKitDOMDOMPlugin</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>name</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMMimeType.html" title="WebKitDOMDOMMimeType"><span class="type">WebKitDOMDOMMimeType</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-plugin-get-name"></a><h3>webkit_dom_dom_plugin_get_name ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_dom_plugin_get_name      (<em class="parameter"><code><a class="link" href="WebKitDOMDOMPlugin.html" title="WebKitDOMDOMPlugin"><span class="type">WebKitDOMDOMPlugin</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMPlugin.html" title="WebKitDOMDOMPlugin"><span class="type">WebKitDOMDOMPlugin</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-plugin-get-filename"></a><h3>webkit_dom_dom_plugin_get_filename ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_dom_plugin_get_filename  (<em class="parameter"><code><a class="link" href="WebKitDOMDOMPlugin.html" title="WebKitDOMDOMPlugin"><span class="type">WebKitDOMDOMPlugin</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMPlugin.html" title="WebKitDOMDOMPlugin"><span class="type">WebKitDOMDOMPlugin</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-plugin-get-description"></a><h3>webkit_dom_dom_plugin_get_description ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_dom_plugin_get_description
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMDOMPlugin.html" title="WebKitDOMDOMPlugin"><span class="type">WebKitDOMDOMPlugin</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMPlugin.html" title="WebKitDOMDOMPlugin"><span class="type">WebKitDOMDOMPlugin</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-dom-plugin-get-length"></a><h3>webkit_dom_dom_plugin_get_length ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="returnvalue">gulong</span></a>              webkit_dom_dom_plugin_get_length    (<em class="parameter"><code><a class="link" href="WebKitDOMDOMPlugin.html" title="WebKitDOMDOMPlugin"><span class="type">WebKitDOMDOMPlugin</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMDOMPlugin.html" title="WebKitDOMDOMPlugin"><span class="type">WebKitDOMDOMPlugin</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMDOMPlugin.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMDOMPlugin--description"></a><h3>The <code class="literal">"description"</code> property</h3>
+<pre class="programlisting">  "description"              <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* DOMPlugin:description.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMPlugin--filename"></a><h3>The <code class="literal">"filename"</code> property</h3>
+<pre class="programlisting">  "filename"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* DOMPlugin:filename.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMPlugin--length"></a><h3>The <code class="literal">"length"</code> property</h3>
+<pre class="programlisting">  "length"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>                : Read</pre>
+<p>read-only gulong DOMPlugin:length.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMDOMPlugin--name"></a><h3>The <code class="literal">"name"</code> property</h3>
+<pre class="programlisting">  "name"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* DOMPlugin:name.</p>
+<p>Default value: ""</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19.1</div>
+</body>
+</html>
