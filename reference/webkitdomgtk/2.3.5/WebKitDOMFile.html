@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMGTK+ Reference Manual: WebKitDOMFile</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMBlob.html" title="WebKitDOMBlob">
+<link rel="next" href="WebKitDOMFileList.html" title="WebKitDOMFileList">
+<meta name="generator" content="GTK-Doc V1.19.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<td width="100%" align="left">
+<a href="#" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMFile.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMFile.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitDOMFile.properties" class="shortcut">Properties</a>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="WebKitDOMBlob.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="WebKitDOMFileList.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="WebKitDOMFile"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMFile.top_of_page"></a>WebKitDOMFile</span></h2>
+<p>WebKitDOMFile</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMFile.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMFile.html#WebKitDOMFile-struct" title="WebKitDOMFile">WebKitDOMFile</a>;
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMFile.html#webkit-dom-file-get-name" title="webkit_dom_file_get_name ()">webkit_dom_file_get_name</a>            (<em class="parameter"><code><a class="link" href="WebKitDOMFile.html" title="WebKitDOMFile"><span class="type">WebKitDOMFile</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMFile.html#webkit-dom-file-get-webkit-relative-path" title="webkit_dom_file_get_webkit_relative_path ()">webkit_dom_file_get_webkit_relative_path</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMFile.html" title="WebKitDOMFile"><span class="type">WebKitDOMFile</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMFile.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----<a class="link" href="WebKitDOMBlob.html" title="WebKitDOMBlob">WebKitDOMBlob</a>
+               +----WebKitDOMFile
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMFile.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitDOMFile.html#WebKitDOMFile--name" title='The "name" property'>name</a>"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMFile.html#WebKitDOMFile--webkit-relative-path" title='The "webkit-relative-path" property'>webkit-relative-path</a>"     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMFile.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMFile.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMFile-struct"></a><h3>WebKitDOMFile</h3>
+<pre class="programlisting">typedef struct _WebKitDOMFile WebKitDOMFile;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-file-get-name"></a><h3>webkit_dom_file_get_name ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_file_get_name            (<em class="parameter"><code><a class="link" href="WebKitDOMFile.html" title="WebKitDOMFile"><span class="type">WebKitDOMFile</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMFile.html" title="WebKitDOMFile"><span class="type">WebKitDOMFile</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-file-get-webkit-relative-path"></a><h3>webkit_dom_file_get_webkit_relative_path ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_file_get_webkit_relative_path
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMFile.html" title="WebKitDOMFile"><span class="type">WebKitDOMFile</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMFile.html" title="WebKitDOMFile"><span class="type">WebKitDOMFile</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMFile.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMFile--name"></a><h3>The <code class="literal">"name"</code> property</h3>
+<pre class="programlisting">  "name"                     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* File:name.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMFile--webkit-relative-path"></a><h3>The <code class="literal">"webkit-relative-path"</code> property</h3>
+<pre class="programlisting">  "webkit-relative-path"     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* File:webkit-relative-path.</p>
+<p>Default value: ""</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19.1</div>
+</body>
+</html>

@@ -1,0 +1,654 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitDOMGTK+ Reference Manual: WebKitDOMMediaController</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitDOMGTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitDOMCSSValue.html" title="WebKitDOMCSSValue">
+<link rel="next" href="WebKitDOMMediaList.html" title="WebKitDOMMediaList">
+<meta name="generator" content="GTK-Doc V1.19.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<td width="100%" align="left">
+<a href="#" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitDOMMediaController.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitDOMMediaController.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitDOMMediaController.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#WebKitDOMMediaController.properties" class="shortcut">Properties</a>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="WebKitDOMCSSValue.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="WebKitDOMMediaList.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="WebKitDOMMediaController"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitDOMMediaController.top_of_page"></a>WebKitDOMMediaController</span></h2>
+<p>WebKitDOMMediaController</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitDOMMediaController.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="WebKitDOMMediaController.html#WebKitDOMMediaController-struct" title="WebKitDOMMediaController">WebKitDOMMediaController</a>;
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMMediaController.html#webkit-dom-media-controller-play" title="webkit_dom_media_controller_play ()">webkit_dom_media_controller_play</a>    (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMMediaController.html#webkit-dom-media-controller-pause" title="webkit_dom_media_controller_pause ()">webkit_dom_media_controller_pause</a>   (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMMediaController.html#webkit-dom-media-controller-unpause" title="webkit_dom_media_controller_unpause ()">webkit_dom_media_controller_unpause</a> (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMTimeRanges.html" title="WebKitDOMTimeRanges"><span class="returnvalue">WebKitDOMTimeRanges</span></a> * <a class="link" href="WebKitDOMMediaController.html#webkit-dom-media-controller-get-buffered" title="webkit_dom_media_controller_get_buffered ()">webkit_dom_media_controller_get_buffered</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMTimeRanges.html" title="WebKitDOMTimeRanges"><span class="returnvalue">WebKitDOMTimeRanges</span></a> * <a class="link" href="WebKitDOMMediaController.html#webkit-dom-media-controller-get-seekable" title="webkit_dom_media_controller_get_seekable ()">webkit_dom_media_controller_get_seekable</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             <a class="link" href="WebKitDOMMediaController.html#webkit-dom-media-controller-get-duration" title="webkit_dom_media_controller_get_duration ()">webkit_dom_media_controller_get_duration</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             <a class="link" href="WebKitDOMMediaController.html#webkit-dom-media-controller-get-current-time" title="webkit_dom_media_controller_get_current_time ()">webkit_dom_media_controller_get_current_time</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMMediaController.html#webkit-dom-media-controller-set-current-time" title="webkit_dom_media_controller_set_current_time ()">webkit_dom_media_controller_set_current_time</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMMediaController.html#webkit-dom-media-controller-get-paused" title="webkit_dom_media_controller_get_paused ()">webkit_dom_media_controller_get_paused</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>);
+<a class="link" href="WebKitDOMTimeRanges.html" title="WebKitDOMTimeRanges"><span class="returnvalue">WebKitDOMTimeRanges</span></a> * <a class="link" href="WebKitDOMMediaController.html#webkit-dom-media-controller-get-played" title="webkit_dom_media_controller_get_played ()">webkit_dom_media_controller_get_played</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="WebKitDOMMediaController.html#webkit-dom-media-controller-get-playback-state" title="webkit_dom_media_controller_get_playback_state ()">webkit_dom_media_controller_get_playback_state</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             <a class="link" href="WebKitDOMMediaController.html#webkit-dom-media-controller-get-default-playback-rate" title="webkit_dom_media_controller_get_default_playback_rate ()">webkit_dom_media_controller_get_default_playback_rate</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMMediaController.html#webkit-dom-media-controller-set-default-playback-rate" title="webkit_dom_media_controller_set_default_playback_rate ()">webkit_dom_media_controller_set_default_playback_rate</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             <a class="link" href="WebKitDOMMediaController.html#webkit-dom-media-controller-get-playback-rate" title="webkit_dom_media_controller_get_playback_rate ()">webkit_dom_media_controller_get_playback_rate</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMMediaController.html#webkit-dom-media-controller-set-playback-rate" title="webkit_dom_media_controller_set_playback_rate ()">webkit_dom_media_controller_set_playback_rate</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> value</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             <a class="link" href="WebKitDOMMediaController.html#webkit-dom-media-controller-get-volume" title="webkit_dom_media_controller_get_volume ()">webkit_dom_media_controller_get_volume</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMMediaController.html#webkit-dom-media-controller-set-volume" title="webkit_dom_media_controller_set_volume ()">webkit_dom_media_controller_set_volume</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> value</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="WebKitDOMMediaController.html#webkit-dom-media-controller-get-muted" title="webkit_dom_media_controller_get_muted ()">webkit_dom_media_controller_get_muted</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="WebKitDOMMediaController.html#webkit-dom-media-controller-set-muted" title="webkit_dom_media_controller_set_muted ()">webkit_dom_media_controller_set_muted</a>
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMMediaController.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="WebKitDOMObject.html" title="WebKitDOMObject">WebKitDOMObject</a>
+         +----WebKitDOMMediaController
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMMediaController.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+WebKitDOMMediaController implements
+ <a class="link" href="WebKitDOMEventTarget.html" title="WebKitDOMEventTarget">WebKitDOMEventTarget</a>.</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMMediaController.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitDOMMediaController.html#WebKitDOMMediaController--buffered" title='The "buffered" property'>buffered</a>"                 <a class="link" href="WebKitDOMTimeRanges.html" title="WebKitDOMTimeRanges"><span class="type">WebKitDOMTimeRanges</span></a>*  : Read
+  "<a class="link" href="WebKitDOMMediaController.html#WebKitDOMMediaController--current-time" title='The "current-time" property'>current-time</a>"             <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>               : Read / Write
+  "<a class="link" href="WebKitDOMMediaController.html#WebKitDOMMediaController--default-playback-rate" title='The "default-playback-rate" property'>default-playback-rate</a>"    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>               : Read / Write
+  "<a class="link" href="WebKitDOMMediaController.html#WebKitDOMMediaController--duration" title='The "duration" property'>duration</a>"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>               : Read
+  "<a class="link" href="WebKitDOMMediaController.html#WebKitDOMMediaController--muted" title='The "muted" property'>muted</a>"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+  "<a class="link" href="WebKitDOMMediaController.html#WebKitDOMMediaController--paused" title='The "paused" property'>paused</a>"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
+  "<a class="link" href="WebKitDOMMediaController.html#WebKitDOMMediaController--playback-rate" title='The "playback-rate" property'>playback-rate</a>"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>               : Read / Write
+  "<a class="link" href="WebKitDOMMediaController.html#WebKitDOMMediaController--playback-state" title='The "playback-state" property'>playback-state</a>"           <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="WebKitDOMMediaController.html#WebKitDOMMediaController--played" title='The "played" property'>played</a>"                   <a class="link" href="WebKitDOMTimeRanges.html" title="WebKitDOMTimeRanges"><span class="type">WebKitDOMTimeRanges</span></a>*  : Read
+  "<a class="link" href="WebKitDOMMediaController.html#WebKitDOMMediaController--seekable" title='The "seekable" property'>seekable</a>"                 <a class="link" href="WebKitDOMTimeRanges.html" title="WebKitDOMTimeRanges"><span class="type">WebKitDOMTimeRanges</span></a>*  : Read
+  "<a class="link" href="WebKitDOMMediaController.html#WebKitDOMMediaController--volume" title='The "volume" property'>volume</a>"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>               : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMMediaController.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMMediaController.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMMediaController-struct"></a><h3>WebKitDOMMediaController</h3>
+<pre class="programlisting">typedef struct _WebKitDOMMediaController WebKitDOMMediaController;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-media-controller-play"></a><h3>webkit_dom_media_controller_play ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_media_controller_play    (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-media-controller-pause"></a><h3>webkit_dom_media_controller_pause ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_media_controller_pause   (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-media-controller-unpause"></a><h3>webkit_dom_media_controller_unpause ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_media_controller_unpause (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-media-controller-get-buffered"></a><h3>webkit_dom_media_controller_get_buffered ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMTimeRanges.html" title="WebKitDOMTimeRanges"><span class="returnvalue">WebKitDOMTimeRanges</span></a> * webkit_dom_media_controller_get_buffered
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTimeRanges.html" title="WebKitDOMTimeRanges"><span class="type">WebKitDOMTimeRanges</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-media-controller-get-seekable"></a><h3>webkit_dom_media_controller_get_seekable ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMTimeRanges.html" title="WebKitDOMTimeRanges"><span class="returnvalue">WebKitDOMTimeRanges</span></a> * webkit_dom_media_controller_get_seekable
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTimeRanges.html" title="WebKitDOMTimeRanges"><span class="type">WebKitDOMTimeRanges</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-media-controller-get-duration"></a><h3>webkit_dom_media_controller_get_duration ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             webkit_dom_media_controller_get_duration
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-media-controller-get-current-time"></a><h3>webkit_dom_media_controller_get_current_time ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             webkit_dom_media_controller_get_current_time
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-media-controller-set-current-time"></a><h3>webkit_dom_media_controller_set_current_time ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_media_controller_set_current_time
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-media-controller-get-paused"></a><h3>webkit_dom_media_controller_get_paused ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_media_controller_get_paused
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-media-controller-get-played"></a><h3>webkit_dom_media_controller_get_played ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDOMTimeRanges.html" title="WebKitDOMTimeRanges"><span class="returnvalue">WebKitDOMTimeRanges</span></a> * webkit_dom_media_controller_get_played
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMTimeRanges.html" title="WebKitDOMTimeRanges"><span class="type">WebKitDOMTimeRanges</span></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-media-controller-get-playback-state"></a><h3>webkit_dom_media_controller_get_playback_state ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             webkit_dom_media_controller_get_playback_state
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-media-controller-get-default-playback-rate"></a><h3>webkit_dom_media_controller_get_default_playback_rate ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             webkit_dom_media_controller_get_default_playback_rate
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-media-controller-set-default-playback-rate"></a><h3>webkit_dom_media_controller_set_default_playback_rate ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_media_controller_set_default_playback_rate
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-media-controller-get-playback-rate"></a><h3>webkit_dom_media_controller_get_playback_rate ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             webkit_dom_media_controller_get_playback_rate
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-media-controller-set-playback-rate"></a><h3>webkit_dom_media_controller_set_playback_rate ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_media_controller_set_playback_rate
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-media-controller-get-volume"></a><h3>webkit_dom_media_controller_get_volume ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             webkit_dom_media_controller_get_volume
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-media-controller-set-volume"></a><h3>webkit_dom_media_controller_set_volume ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_media_controller_set_volume
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> value</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-media-controller-get-muted"></a><h3>webkit_dom_media_controller_get_muted ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            webkit_dom_media_controller_get_muted
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-dom-media-controller-set-muted"></a><h3>webkit_dom_media_controller_set_muted ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                webkit_dom_media_controller_set_muted
+                                                        (<em class="parameter"><code><a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> value</code></em>);</pre>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="WebKitDOMMediaController.html" title="WebKitDOMMediaController"><span class="type">WebKitDOMMediaController</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>A <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitDOMMediaController.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitDOMMediaController--buffered"></a><h3>The <code class="literal">"buffered"</code> property</h3>
+<pre class="programlisting">  "buffered"                 <a class="link" href="WebKitDOMTimeRanges.html" title="WebKitDOMTimeRanges"><span class="type">WebKitDOMTimeRanges</span></a>*  : Read</pre>
+<p>read-only WebKitDOMTimeRanges* MediaController:buffered.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMMediaController--current-time"></a><h3>The <code class="literal">"current-time"</code> property</h3>
+<pre class="programlisting">  "current-time"             <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>               : Read / Write</pre>
+<p>read-only gdouble MediaController:current-time.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMMediaController--default-playback-rate"></a><h3>The <code class="literal">"default-playback-rate"</code> property</h3>
+<pre class="programlisting">  "default-playback-rate"    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>               : Read / Write</pre>
+<p>read-only gdouble MediaController:default-playback-rate.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMMediaController--duration"></a><h3>The <code class="literal">"duration"</code> property</h3>
+<pre class="programlisting">  "duration"                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>               : Read</pre>
+<p>read-only gdouble MediaController:duration.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMMediaController--muted"></a><h3>The <code class="literal">"muted"</code> property</h3>
+<pre class="programlisting">  "muted"                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
+<p>read-only gboolean MediaController:muted.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMMediaController--paused"></a><h3>The <code class="literal">"paused"</code> property</h3>
+<pre class="programlisting">  "paused"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read</pre>
+<p>read-only gboolean MediaController:paused.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMMediaController--playback-rate"></a><h3>The <code class="literal">"playback-rate"</code> property</h3>
+<pre class="programlisting">  "playback-rate"            <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>               : Read / Write</pre>
+<p>read-only gdouble MediaController:playback-rate.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMMediaController--playback-state"></a><h3>The <code class="literal">"playback-state"</code> property</h3>
+<pre class="programlisting">  "playback-state"           <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>read-only gchar* MediaController:playback-state.</p>
+<p>Default value: ""</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMMediaController--played"></a><h3>The <code class="literal">"played"</code> property</h3>
+<pre class="programlisting">  "played"                   <a class="link" href="WebKitDOMTimeRanges.html" title="WebKitDOMTimeRanges"><span class="type">WebKitDOMTimeRanges</span></a>*  : Read</pre>
+<p>read-only WebKitDOMTimeRanges* MediaController:played.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMMediaController--seekable"></a><h3>The <code class="literal">"seekable"</code> property</h3>
+<pre class="programlisting">  "seekable"                 <a class="link" href="WebKitDOMTimeRanges.html" title="WebKitDOMTimeRanges"><span class="type">WebKitDOMTimeRanges</span></a>*  : Read</pre>
+<p>read-only WebKitDOMTimeRanges* MediaController:seekable.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitDOMMediaController--volume"></a><h3>The <code class="literal">"volume"</code> property</h3>
+<pre class="programlisting">  "volume"                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>               : Read / Write</pre>
+<p>read-only gdouble MediaController:volume.</p>
+<p>Default value: 0</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19.1</div>
+</body>
+</html>

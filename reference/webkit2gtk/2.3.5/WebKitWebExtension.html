@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKit2GTK+ Reference Manual: WebKitWebExtension</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKit2GTK+ Reference Manual">
+<link rel="up" href="ch02.html" title="Web Extensions">
+<link rel="prev" href="ch02.html" title="Web Extensions">
+<link rel="next" href="WebKitWebPage.html" title="WebKitWebPage">
+<meta name="generator" content="GTK-Doc V1.19.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<td width="100%" align="left">
+<a href="#" class="shortcut">Top</a>
+                   | 
+                  <a href="#WebKitWebExtension.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#WebKitWebExtension.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#WebKitWebExtension.signals" class="shortcut">Signals</a>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch02.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="ch02.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="WebKitWebPage.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="WebKitWebExtension"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitWebExtension.top_of_page"></a>WebKitWebExtension</span></h2>
+<p>WebKitWebExtension</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="WebKitWebExtension.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="WebKitWebExtension.html#WebKitWebExtension-struct" title="struct WebKitWebExtension">WebKitWebExtension</a>;
+<span class="returnvalue">void</span>                (<a class="link" href="WebKitWebExtension.html#WebKitWebExtensionInitializeFunction" title="WebKitWebExtensionInitializeFunction ()">*WebKitWebExtensionInitializeFunction</a>)
+                                                        (<em class="parameter"><code><a class="link" href="WebKitWebExtension.html" title="WebKitWebExtension"><span class="type">WebKitWebExtension</span></a> *extension</code></em>);
+<span class="returnvalue">void</span>                (<a class="link" href="WebKitWebExtension.html#WebKitWebExtensionInitializeWithUserDataFunction" title="WebKitWebExtensionInitializeWithUserDataFunction ()">*WebKitWebExtensionInitializeWithUserDataFunction</a>)
+                                                        (<em class="parameter"><code><a class="link" href="WebKitWebExtension.html" title="WebKitWebExtension"><span class="type">WebKitWebExtension</span></a> *extension</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> *user_data</code></em>);
+<a class="link" href="WebKitWebPage.html" title="WebKitWebPage"><span class="returnvalue">WebKitWebPage</span></a> *     <a class="link" href="WebKitWebExtension.html#webkit-web-extension-get-page" title="webkit_web_extension_get_page ()">webkit_web_extension_get_page</a>       (<em class="parameter"><code><a class="link" href="WebKitWebExtension.html" title="WebKitWebExtension"><span class="type">WebKitWebExtension</span></a> *extension</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a> page_id</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitWebExtension.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----WebKitWebExtension
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitWebExtension.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="WebKitWebExtension.html#WebKitWebExtension-page-created" title='The "page-created" signal'>page-created</a>"                                   : <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitWebExtension.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="WebKitWebExtension.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="WebKitWebExtension-struct"></a><h3>struct WebKitWebExtension</h3>
+<pre class="programlisting">struct WebKitWebExtension;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebExtensionInitializeFunction"></a><h3>WebKitWebExtensionInitializeFunction ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                (*WebKitWebExtensionInitializeFunction)
+                                                        (<em class="parameter"><code><a class="link" href="WebKitWebExtension.html" title="WebKitWebExtension"><span class="type">WebKitWebExtension</span></a> *extension</code></em>);</pre>
+<p>
+Type definition for a function that will be called to initialize
+the web extension when the web process starts.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>extension</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebExtension.html" title="WebKitWebExtension"><span class="type">WebKitWebExtension</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebExtensionInitializeWithUserDataFunction"></a><h3>WebKitWebExtensionInitializeWithUserDataFunction ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                (*WebKitWebExtensionInitializeWithUserDataFunction)
+                                                        (<em class="parameter"><code><a class="link" href="WebKitWebExtension.html" title="WebKitWebExtension"><span class="type">WebKitWebExtension</span></a> *extension</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> *user_data</code></em>);</pre>
+<p>
+Type definition for a function that will be called to initialize
+the web extensions when the web process starts, and which receives
+as additional argument the user data set with
+<a class="link" href="WebKitWebContext.html#webkit-web-context-set-web-extensions-initialization-user-data" title="webkit_web_context_set_web_extensions_initialization_user_data ()"><code class="function">webkit_web_context_set_web_extensions_initialization_user_data()</code></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>extension</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebExtension.html" title="WebKitWebExtension"><span class="type">WebKitWebExtension</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>a <a href="http://developer.gnome.org/glib/stable/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.4</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-extension-get-page"></a><h3>webkit_web_extension_get_page ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitWebPage.html" title="WebKitWebPage"><span class="returnvalue">WebKitWebPage</span></a> *     webkit_web_extension_get_page       (<em class="parameter"><code><a class="link" href="WebKitWebExtension.html" title="WebKitWebExtension"><span class="type">WebKitWebExtension</span></a> *extension</code></em>,
+                                                         <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a> page_id</code></em>);</pre>
+<p>
+Get the web page of the given <em class="parameter"><code>page_id</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>extension</code></em> :</span></p></td>
+<td>a <a class="link" href="WebKitWebExtension.html" title="WebKitWebExtension"><span class="type">WebKitWebExtension</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>page_id</code></em> :</span></p></td>
+<td>the identifier of the <a class="link" href="WebKitWebPage.html" title="WebKitWebPage"><span class="type">WebKitWebPage</span></a> to get</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the <a class="link" href="WebKitWebPage.html" title="WebKitWebPage"><span class="type">WebKitWebPage</span></a> for the given <em class="parameter"><code>page_id</code></em>, or <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the
+identifier doesn't correspond to an exsiting web page. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitWebExtension.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="WebKitWebExtension-page-created"></a><h3>The <code class="literal">"page-created"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="WebKitWebExtension.html" title="WebKitWebExtension"><span class="type">WebKitWebExtension</span></a> *extension,
+                                                        <a class="link" href="WebKitWebPage.html" title="WebKitWebPage"><span class="type">WebKitWebPage</span></a>      *web_page,
+                                                        <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>            user_data)      : <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a></pre>
+<p>
+This signal is emitted when a new <a class="link" href="WebKitWebPage.html" title="WebKitWebPage"><span class="type">WebKitWebPage</span></a> is created in
+the Web Process.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>extension</code></em> :</span></p></td>
+<td>the <a class="link" href="WebKitWebExtension.html" title="WebKitWebExtension"><span class="type">WebKitWebExtension</span></a> on which the signal is emitted</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>web_page</code></em> :</span></p></td>
+<td>the <a class="link" href="WebKitWebPage.html" title="WebKitWebPage"><span class="type">WebKitWebPage</span></a> created</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.19.1</div>
+</body>
+</html>
