@@ -1,0 +1,511 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitGTK+ Reference Manual: WebKitWebNavigationAction</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="WebKitGTK+ Reference Manual">
+<link rel="up" href="ch02.html" title="Class Overview">
+<link rel="prev" href="WebKitWebHistoryItem.html" title="WebKitWebHistoryItem">
+<link rel="next" href="WebKitWebPolicyDecision.html" title="WebKitWebPolicyDecision">
+<meta name="generator" content="GTK-Doc V1.20.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="10"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description"> <span class="dim">|</span> 
+                  <a href="#WebKitWebNavigationAction.description" class="shortcut">Description</a></span><span id="nav_hierarchy"> <span class="dim">|</span> 
+                  <a href="#WebKitWebNavigationAction.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties"> <span class="dim">|</span> 
+                  <a href="#WebKitWebNavigationAction.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch02.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="WebKitWebHistoryItem.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="WebKitWebPolicyDecision.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="WebKitWebNavigationAction"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitWebNavigationAction.top_of_page"></a>WebKitWebNavigationAction</span></h2>
+<p>WebKitWebNavigationAction — Object used to report details of navigation actions</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="WebKitWebNavigationAction.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebNavigationAction.html#webkit-web-navigation-action-get-button" title="webkit_web_navigation_action_get_button ()">webkit_web_navigation_action_get_button</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebNavigationAction.html#webkit-web-navigation-action-get-modifier-state" title="webkit_web_navigation_action_get_modifier_state ()">webkit_web_navigation_action_get_modifier_state</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebNavigationAction.html#webkit-web-navigation-action-get-original-uri" title="webkit_web_navigation_action_get_original_uri ()">webkit_web_navigation_action_get_original_uri</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="WebKitWebNavigationAction.html#WebKitWebNavigationReason" title="enum WebKitWebNavigationReason"><span class="returnvalue">WebKitWebNavigationReason</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebNavigationAction.html#webkit-web-navigation-action-get-reason" title="webkit_web_navigation_action_get_reason ()">webkit_web_navigation_action_get_reason</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebNavigationAction.html#webkit-web-navigation-action-get-target-frame" title="webkit_web_navigation_action_get_target_frame ()">webkit_web_navigation_action_get_target_frame</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebNavigationAction.html#webkit-web-navigation-action-set-original-uri" title="webkit_web_navigation_action_set_original_uri ()">webkit_web_navigation_action_set_original_uri</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebNavigationAction.html#webkit-web-navigation-action-set-reason" title="webkit_web_navigation_action_set_reason ()">webkit_web_navigation_action_set_reason</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="WebKitWebNavigationAction.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table border="0">
+<colgroup>
+<col width="150px" class="properties_type">
+<col width="300px" class="properties_name">
+<col width="200px" class="properties_flags">
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></td>
+<td class="property_name"><a class="link" href="WebKitWebNavigationAction.html#WebKitWebNavigationAction--button" title="The “button” property">button</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></td>
+<td class="property_name"><a class="link" href="WebKitWebNavigationAction.html#WebKitWebNavigationAction--modifier-state" title="The “modifier-state” property">modifier-state</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type">
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<td class="property_name"><a class="link" href="WebKitWebNavigationAction.html#WebKitWebNavigationAction--original-uri" title="The “original-uri” property">original-uri</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><a class="link" href="WebKitWebNavigationAction.html#WebKitWebNavigationReason" title="enum WebKitWebNavigationReason"><span class="type">WebKitWebNavigationReason</span></a></td>
+<td class="property_name"><a class="link" href="WebKitWebNavigationAction.html#WebKitWebNavigationAction--reason" title="The “reason” property">reason</a></td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type">
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<td class="property_name"><a class="link" href="WebKitWebNavigationAction.html#WebKitWebNavigationAction--target-frame" title="The “target-frame” property">target-frame</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="WebKitWebNavigationAction.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="WebKitWebNavigationAction.html#WebKitWebNavigationAction-struct" title="struct WebKitWebNavigationAction">WebKitWebNavigationAction</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="WebKitWebNavigationAction.html#WebKitWebNavigationReason" title="enum WebKitWebNavigationReason">WebKitWebNavigationReason</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="WebKitWebNavigationAction.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+    <span class="lineart">╰──</span> WebKitWebNavigationAction
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitWebNavigationAction.description"></a><h2>Description</h2>
+<p><a class="link" href="WebKitWebNavigationAction.html" title="WebKitWebNavigationAction"><span class="type">WebKitWebNavigationAction</span></a> is used in signals to provide details about
+what led the navigation to happen. This includes, for instance, if the user
+clicked a link to start that navigation, and what mouse button was used.</p>
+</div>
+<div class="refsect1">
+<a name="WebKitWebNavigationAction.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="webkit-web-navigation-action-get-button"></a><h3>webkit_web_navigation_action_get_button ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+webkit_web_navigation_action_get_button
+                               (<em class="parameter"><code><a class="link" href="WebKitWebNavigationAction.html" title="WebKitWebNavigationAction"><span class="type">WebKitWebNavigationAction</span></a> *navigationAction</code></em>);</pre>
+<p>The GTK+ identifier for the mouse button used to click. Notice that GTK+ button values
+are 1, 2 and 3 for left, middle and right buttons, so they are DOM button values +1. If the action was not
+initiated by a mouse click the value will be -1.</p>
+<div class="refsect3">
+<a name="id-1.3.7.8.2.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>navigationAction</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitWebNavigationAction.html" title="WebKitWebNavigationAction"><span class="type">WebKitWebNavigationAction</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.7.8.2.6"></a><h4>Returns</h4>
+<p> the mouse button used to click</p>
+<p></p>
+</div>
+<p class="since">Since 1.0.3</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-navigation-action-get-modifier-state"></a><h3>webkit_web_navigation_action_get_modifier_state ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>
+webkit_web_navigation_action_get_modifier_state
+                               (<em class="parameter"><code><a class="link" href="WebKitWebNavigationAction.html" title="WebKitWebNavigationAction"><span class="type">WebKitWebNavigationAction</span></a> *navigationAction</code></em>);</pre>
+<p>Returns a bitmask with the the state of the modifier keys.</p>
+<div class="refsect3">
+<a name="id-1.3.7.8.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>navigationAction</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitWebNavigationAction.html" title="WebKitWebNavigationAction"><span class="type">WebKitWebNavigationAction</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.7.8.3.6"></a><h4>Returns</h4>
+<p> a bitmask with the state of the modifier keys</p>
+<p></p>
+</div>
+<p class="since">Since 1.0.3</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-navigation-action-get-original-uri"></a><h3>webkit_web_navigation_action_get_original_uri ()</h3>
+<pre class="programlisting">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+webkit_web_navigation_action_get_original_uri
+                               (<em class="parameter"><code><a class="link" href="WebKitWebNavigationAction.html" title="WebKitWebNavigationAction"><span class="type">WebKitWebNavigationAction</span></a> *navigationAction</code></em>);</pre>
+<p>Returns the URI that was originally requested. This may differ from the
+navigation target, for instance because of a redirect.</p>
+<div class="refsect3">
+<a name="id-1.3.7.8.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>navigationAction</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitWebNavigationAction.html" title="WebKitWebNavigationAction"><span class="type">WebKitWebNavigationAction</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.7.8.4.6"></a><h4>Returns</h4>
+<p> the originally requested URI</p>
+<p></p>
+</div>
+<p class="since">Since 1.0.3</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-navigation-action-get-reason"></a><h3>webkit_web_navigation_action_get_reason ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitWebNavigationAction.html#WebKitWebNavigationReason" title="enum WebKitWebNavigationReason"><span class="returnvalue">WebKitWebNavigationReason</span></a>
+webkit_web_navigation_action_get_reason
+                               (<em class="parameter"><code><a class="link" href="WebKitWebNavigationAction.html" title="WebKitWebNavigationAction"><span class="type">WebKitWebNavigationAction</span></a> *navigationAction</code></em>);</pre>
+<p>Returns the reason why WebKit is requesting a navigation.</p>
+<div class="refsect3">
+<a name="id-1.3.7.8.5.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>navigationAction</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitWebNavigationAction.html" title="WebKitWebNavigationAction"><span class="type">WebKitWebNavigationAction</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.7.8.5.6"></a><h4>Returns</h4>
+<p> a <a class="link" href="WebKitWebNavigationAction.html#WebKitWebNavigationReason" title="enum WebKitWebNavigationReason"><span class="type">WebKitWebNavigationReason</span></a></p>
+<p></p>
+</div>
+<p class="since">Since 1.0.3</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-navigation-action-get-target-frame"></a><h3>webkit_web_navigation_action_get_target_frame ()</h3>
+<pre class="programlisting">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+webkit_web_navigation_action_get_target_frame
+                               (<em class="parameter"><code><a class="link" href="WebKitWebNavigationAction.html" title="WebKitWebNavigationAction"><span class="type">WebKitWebNavigationAction</span></a> *navigationAction</code></em>);</pre>
+<p>Returns the target frame of the action.</p>
+<div class="refsect3">
+<a name="id-1.3.7.8.6.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>navigationAction</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitWebNavigationAction.html" title="WebKitWebNavigationAction"><span class="type">WebKitWebNavigationAction</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.3.7.8.6.6"></a><h4>Returns</h4>
+<p> the target frame of the action or NULL
+if there is no target.</p>
+<p></p>
+</div>
+<p class="since">Since 1.1.13</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-navigation-action-set-original-uri"></a><h3>webkit_web_navigation_action_set_original_uri ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+webkit_web_navigation_action_set_original_uri
+                               (<em class="parameter"><code><a class="link" href="WebKitWebNavigationAction.html" title="WebKitWebNavigationAction"><span class="type">WebKitWebNavigationAction</span></a> *navigationAction</code></em>,
+                                <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *originalUri</code></em>);</pre>
+<p>Sets the URI that was originally requested. This may differ from the
+navigation target, for instance because of a redirect.</p>
+<div class="refsect3">
+<a name="id-1.3.7.8.7.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>navigationAction</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitWebNavigationAction.html" title="WebKitWebNavigationAction"><span class="type">WebKitWebNavigationAction</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>originalUri</p></td>
+<td class="parameter_description"><p>a URI</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 1.0.3</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-navigation-action-set-reason"></a><h3>webkit_web_navigation_action_set_reason ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+webkit_web_navigation_action_set_reason
+                               (<em class="parameter"><code><a class="link" href="WebKitWebNavigationAction.html" title="WebKitWebNavigationAction"><span class="type">WebKitWebNavigationAction</span></a> *navigationAction</code></em>,
+                                <em class="parameter"><code><a class="link" href="WebKitWebNavigationAction.html#WebKitWebNavigationReason" title="enum WebKitWebNavigationReason"><span class="type">WebKitWebNavigationReason</span></a> reason</code></em>);</pre>
+<p>Sets the reason why WebKit is requesting a navigation.</p>
+<div class="refsect3">
+<a name="id-1.3.7.8.8.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>navigationAction</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitWebNavigationAction.html" title="WebKitWebNavigationAction"><span class="type">WebKitWebNavigationAction</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>reason</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitWebNavigationAction.html#WebKitWebNavigationReason" title="enum WebKitWebNavigationReason"><span class="type">WebKitWebNavigationReason</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since 1.0.3</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitWebNavigationAction.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="WebKitWebNavigationAction-struct"></a><h3>struct WebKitWebNavigationAction</h3>
+<pre class="programlisting">struct WebKitWebNavigationAction;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebNavigationReason"></a><h3>enum WebKitWebNavigationReason</h3>
+<p>Enum values used to denote the various navigation reasons.</p>
+<div class="refsect3">
+<a name="id-1.3.7.9.3.4"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="WEBKIT-WEB-NAVIGATION-REASON-LINK-CLICKED:CAPS"></a>WEBKIT_WEB_NAVIGATION_REASON_LINK_CLICKED</p></td>
+<td class="enum_member_description">
+<p>The navigation was triggered by clicking a link.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="WEBKIT-WEB-NAVIGATION-REASON-FORM-SUBMITTED:CAPS"></a>WEBKIT_WEB_NAVIGATION_REASON_FORM_SUBMITTED</p></td>
+<td class="enum_member_description">
+<p>The navigation was triggered by submitting a form.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="WEBKIT-WEB-NAVIGATION-REASON-BACK-FORWARD:CAPS"></a>WEBKIT_WEB_NAVIGATION_REASON_BACK_FORWARD</p></td>
+<td class="enum_member_description">
+<p>The navigation was triggered by navigating forward or backward.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="WEBKIT-WEB-NAVIGATION-REASON-RELOAD:CAPS"></a>WEBKIT_WEB_NAVIGATION_REASON_RELOAD</p></td>
+<td class="enum_member_description">
+<p>The navigation was triggered by reloading.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="WEBKIT-WEB-NAVIGATION-REASON-FORM-RESUBMITTED:CAPS"></a>WEBKIT_WEB_NAVIGATION_REASON_FORM_RESUBMITTED</p></td>
+<td class="enum_member_description">
+<p>The navigation was triggered by resubmitting a form.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="WEBKIT-WEB-NAVIGATION-REASON-OTHER:CAPS"></a>WEBKIT_WEB_NAVIGATION_REASON_OTHER</p></td>
+<td class="enum_member_description">
+<p>The navigation was triggered by some other action.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitWebNavigationAction.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitWebNavigationAction--button"></a><h3>The <code class="literal">“button”</code> property</h3>
+<pre class="programlisting">  “button”                   <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></pre>
+<p>The GTK+ identifier for the mouse button used to click. Notice that GTK+ button values
+are 1, 2 and 3 for left, middle and right buttons, so they are DOM button values +1. If the action was not
+initiated by a mouse click the value will be -1.</p>
+<p>Flags: Read / Write / Construct Only</p>
+<p>Allowed values: &gt;= -1</p>
+<p>Default value: -1</p>
+<p class="since">Since 1.0.3</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebNavigationAction--modifier-state"></a><h3>The <code class="literal">“modifier-state”</code> property</h3>
+<pre class="programlisting">  “modifier-state”           <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gint"><span class="type">gint</span></a></pre>
+<p>The state of the modifier keys when the action was requested.</p>
+<p>Flags: Read / Write / Construct Only</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+<p class="since">Since 1.0.3</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebNavigationAction--original-uri"></a><h3>The <code class="literal">“original-uri”</code> property</h3>
+<pre class="programlisting">  “original-uri”             <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<p>The URI that was requested as the target for the navigation.</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: ""</p>
+<p class="since">Since 1.0.3</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebNavigationAction--reason"></a><h3>The <code class="literal">“reason”</code> property</h3>
+<pre class="programlisting">  “reason”                   <a class="link" href="WebKitWebNavigationAction.html#WebKitWebNavigationReason" title="enum WebKitWebNavigationReason"><span class="type">WebKitWebNavigationReason</span></a></pre>
+<p>The reason why this navigation is occuring.</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: WEBKIT_WEB_NAVIGATION_REASON_OTHER</p>
+<p class="since">Since 1.0.3</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebNavigationAction--target-frame"></a><h3>The <code class="literal">“target-frame”</code> property</h3>
+<pre class="programlisting">  “target-frame”             <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<p>The target frame for the navigation.</p>
+<p>Flags: Read / Write / Construct Only</p>
+<p>Default value: NULL</p>
+<p class="since">Since 1.1.13</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.20.1</div>
+</body>
+</html>
