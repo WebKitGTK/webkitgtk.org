@@ -13,7 +13,7 @@ integration, from hybrid HTML/CSS applications to full-fledged web
 browsers, like [Epiphany](http://projects.gnome.org/epiphany/) and
 [Midori](http://twotoasts.de/index.php/midori/). It's useful in a wide
 range of systems from desktop computers to embedded systems like phones,
-tablets, and televisions. WebKitGTk+ is made by a lively community of
+tablets, and televisions. WebKitGTK+ is made by a lively community of
 developers and designers, who hope to bring the web platform to everyone.
 
 ## Web process separation ##
