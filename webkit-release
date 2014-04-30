@@ -587,7 +587,7 @@ are far too many to list!
                 if e.errno != errno.EEXIST:
                     raise
 
-    def install_tarball(self, host, releases_dir):
+    def install_tarball(self, host, releases_dir, update_symlinks):
         tarball_name = self._tarball.get_name()
         command = ['ssh', host, 'test ! -e %s/%s' % (releases_dir, tarball_name)]
         if subprocess.call(command) != 0:
@@ -619,14 +619,15 @@ are far too many to list!
         os.unlink(sha1_file)
         os.unlink(gpg_file)
 
-        # Create the LATEST symlink.
-        if self._tarball.is_stable():
-            symlink_prefix = "LATEST-STABLE-"
-        else:
-            symlink_prefix = "LATEST-UNSTABLE-"
-        latest = symlink_prefix + self._tarball.get_version_str()
-        command = ['ssh', host, 'rm -f %s/%s[0-9]* && ln -s %s %s/%s' % (releases_dir, symlink_prefix, tarball_name, releases_dir, latest)]
-        subprocess.call(command)
+        if update_symlinks:
+            # Create the LATEST symlink.
+            if self._tarball.is_stable():
+                symlink_prefix = "LATEST-STABLE-"
+            else:
+                symlink_prefix = "LATEST-UNSTABLE-"
+            latest = symlink_prefix + self._tarball.get_version_str()
+            command = ['ssh', host, 'rm -f %s/%s[0-9]* && ln -s %s %s/%s' % (releases_dir, symlink_prefix, tarball_name, releases_dir, latest)]
+            subprocess.call(command)
 
     def _update_config_file(self, website_dir):
         config_file = os.path.join(website_dir, "_config.yml")
@@ -703,11 +704,11 @@ are far too many to list!
         if p.wait() == 0:
             sys.stdout.write("Website changes committed, run git push to update the website\n")
 
-    def release(self, delete, host, releases_dir, docs_dir, website_dir, send_email, email_from = None):
+    def release(self, delete, host, releases_dir, update_symlinks, docs_dir, website_dir, send_email, email_from = None):
         sys.stdout.write("Releasing WebKitGTK+ %s\n" % self._tarball.get_version_str())
 
         sys.stdout.write("Installing tarball %s to %s:%s\n" % (self._tarball.get_name(), host, releases_dir))
-        self.install_tarball(host, releases_dir)
+        self.install_tarball(host, releases_dir, update_symlinks)
         sys.stdout.write("\n")
 
         sys.stdout.write("Intalling API documentation\n")
@@ -742,6 +743,8 @@ if __name__ == '__main__':
                            help = 'Host to upload the tarball')
     subparser.add_argument('--releases-dir', dest = 'releases-dir', default = '/var/www/webkitgtkdotorg/releases',
                            help = 'Directory to upload the tarball')
+    subparser.add_argument('--no-symlinks', action = 'store_true', dest = 'no-update-symlinks', default = False,
+                           help = 'Do not update the LATEST symlinks')
     subparser.add_argument('tarball')
 
     subparser = subparsers.add_parser('install-docs', help = 'Install API documentation')
@@ -770,6 +773,8 @@ if __name__ == '__main__':
                            help = 'Host to upload the tarball')
     subparser.add_argument('--releases-dir', dest = 'releases-dir', default = '/var/www/webkitgtkdotorg/releases',
                            help = 'Directory to upload the tarball')
+    subparser.add_argument('--no-symlinks', action = 'store_true', dest = 'no-update-symlinks', default = False,
+                           help = 'Do not update the LATEST symlinks')
     subparser.add_argument('--docs-dir', dest = 'docs-dir', default = 'reference',
                            help = 'Directory to install the docs')
     subparser.add_argument('--website-dir', dest = 'website-dir', default = '.',
@@ -796,9 +801,9 @@ if __name__ == '__main__':
     elif command == 'install-docs':
         wk.install_docs(options['docs-dir'])
     elif command == 'install-tarball':
-        wk.install_tarball(options['host'], options['releases-dir'])
+        wk.install_tarball(options['host'], options['releases-dir'], not options['no-update-symlinks'])
     elif command == 'update-website':
         wk.update_website(options['website-dir'])
     elif command == 'release':
-        wk.release(not options['no-delete'], options['host'], options['releases-dir'], options['docs-dir'], options['website-dir'], not options['no-send'], options['from'])
+        wk.release(not options['no-delete'], options['host'], options['releases-dir'], not options['no-update-symlinks'], options['docs-dir'], options['website-dir'], not options['no-send'], options['from'])
 
