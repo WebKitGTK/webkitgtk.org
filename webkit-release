@@ -111,26 +111,6 @@ if not hasattr(tarfile.TarFile, 'xvopen'):
 
 
 class WebKitTarball:
-    REQUIREMENTS = [ ('gtk3', 'gtk+'),
-                     ('glib', 'glib'),
-                     ('libsoup', 'libsoup'),
-                     ('cairo', 'cairo'),
-                     ('pango', 'pango'),
-                     ('libxml', 'libxml'),
-                     ('fontconfig', 'fontconfig'),
-                     ('freetype2', 'FreeType2'),
-                     ('libsecret', 'libsecret') ]
-    OPTIONAL_REQUIREMENTS = [ ('gtk2', 'gtk+'),
-                              ('gail2', 'gail'),
-                              ('gobject_introspection', 'GObject introspection'),
-                              ('libxslt', 'libxslt'),
-                              ('sqlite', 'SQLite'),
-                              ('gstreamer', 'gstreamer'),
-                              ('gstreamer_plugins_base', 'gstreamer-plugins-base'),
-                              ('enchant', 'enchant'),
-                              ('clutter', 'Clutter'),
-                              ('clutter_gtk', 'Clutter GTK+') ]
-
     def __init__(self, tarball):
         self._tarball = tarball
         self._size = None
@@ -139,13 +119,32 @@ class WebKitTarball:
         self._sha1sum = None
 
         self._tar = tarfile.open(tarball)
-        self._basedir = self._tar.getmembers()[0].name
+        self._basedir = self._tar.getmembers()[0].name.split(os.path.sep)[0]
 
         self._parse_versions()
 
-    def _parse_versions(self):
-        versions = self._tar.getmember(os.path.join(self._basedir, 'Source', 'autotools', 'Versions.m4'))
+    def _parse_versions_autotools(self, versions):
         versions_file = self._tar.extractfile(versions)
+
+        self._requirements = [ ('gtk3', 'gtk+'),
+                               ('glib', 'glib'),
+                               ('libsoup', 'libsoup'),
+                               ('cairo', 'cairo'),
+                               ('pango', 'pango'),
+                               ('libxml', 'libxml'),
+                               ('fontconfig', 'fontconfig'),
+                               ('freetype2', 'FreeType2'),
+                               ('libsecret', 'libsecret') ]
+        self._optional_requirements = [ ('gtk2', 'gtk+'),
+                                        ('gail2', 'gail'),
+                                        ('gobject_introspection', 'GObject introspection'),
+                                        ('libxslt', 'libxslt'),
+                                        ('sqlite', 'SQLite'),
+                                        ('gstreamer', 'gstreamer'),
+                                        ('gstreamer_plugins_base', 'gstreamer-plugins-base'),
+                                        ('enchant', 'enchant'),
+                                        ('clutter', 'Clutter'),
+                                        ('clutter_gtk', 'Clutter GTK+') ]
 
         major_version_pattern = re.compile('^m4_define\(\[webkit_major_version\], \[(.+)\]\)$')
         minor_version_pattern = re.compile('^m4_define\(\[webkit_minor_version\], \[(.+)\]\)$')
@@ -153,9 +152,6 @@ class WebKitTarball:
         patch_version_pattern = re.compile('^m4_define\(\[webkit_patch_version\], \[(.+)\]\)$')
         required_version_pattern = re.compile('^m4_define\(\[(.+)_required_version\], \[(.+)\]\)$')
 
-        self._minimum_versions = {}
-        self._major = self._minor = self._micro = None
-        self._patch = None
         for line in versions_file.readlines():
             line = line.strip(' \t\n')
             if not line:
@@ -193,6 +189,92 @@ class WebKitTarball:
             self._minimum_versions[name.strip()] = version.strip()
 
         versions_file.close()
+
+    def _parse_versions_cmake(self, versions):
+        versions_file = self._tar.extractfile(versions)
+
+        self._requirements = [ ('GTK3', 'gtk+'),
+                               ('GLIB', 'glib'),
+                               ('LibSoup', 'libsoup'),
+                               ('Cairo', 'cairo'),
+                               ('LibXml2', 'libxml'),
+                               ('LibXslt', 'libxslt'),
+                               ('HarfBuzz', 'HarfBuzz'),
+                               ('ICU', 'icu'),
+                               ('Fontconfig', 'fontconfig'),
+                               ('Freetype2', 'FreeType2'),
+                               ('Libsecret', 'libsecret'),
+                               ('Sqlite', 'SQLite'),
+                               ('Enchant', 'enchant'),
+                               ('GTK2', 'gtk+') ]
+        self._optional_requirements = [ ('GObjectIntrospection', 'GObject introspection'),
+                                        ('GStreamer', 'gstreamer'),
+                                        ('GeoClue2', 'GeoClue'),
+                                        ('GUdev', 'gudev'),
+                                        ('CairoGL', 'cairo-gl') ]
+
+        major_version_pattern = re.compile('^set\(PROJECT_VERSION_MAJOR ([0-9]+)\)$')
+        minor_version_pattern = re.compile('^set\(PROJECT_VERSION_MINOR ([0-9]+)\)$')
+        micro_version_pattern = re.compile('^set\(PROJECT_VERSION_MICRO ([0-9]+)\)$')
+        patch_version_pattern = re.compile('^set\(PROJECT_VERSION_PATCH ([0-9]+)\)$')
+        dependency_pattern = re.compile('^find_package\(([a-zA-Z0-9]+) ?([0-9\.]+)?.*\)$')
+
+        self._required_deps = []
+        for line in versions_file.readlines():
+            line = line.strip(' \t\n')
+            if not line:
+                continue
+
+            if self._major is None:
+                match = major_version_pattern.match(line)
+                if match:
+                    self._major = int(match.group(1))
+                    continue
+
+            if self._minor is None:
+                match = minor_version_pattern.match(line)
+                if match:
+                    self._minor = int(match.group(1))
+                    continue
+
+            if self._micro is None:
+                # FIXME: in CMake the MICRO version is called PATCH!
+                match = patch_version_pattern.match(line)
+                if match:
+                    self._micro = int(match.group(1))
+                    continue
+
+            if self._patch is None and not self._minimum_versions:
+                match = patch_version_pattern.match(line)
+                if match:
+                    self._patch = int(match.group(1))
+                    continue
+
+            match = dependency_pattern.match(line)
+            if not match:
+                continue
+
+            name, version = match.groups()
+            # We need a special case for GTK3, because the required version depends on
+            # whether wayland support is enabled or not.
+            if name == 'GTK3':
+                self._minimum_versions[name] = '3.6.0'
+                continue
+            if version is not None:
+                self._minimum_versions[name] = version
+
+        versions_file.close()
+
+    def _parse_versions(self):
+        self._minimum_versions = {}
+        self._major = self._minor = self._micro = self._patch = None
+
+        try:
+            versions = self._tar.getmember(os.path.join(self._basedir, 'Source', 'autotools', 'Versions.m4'))
+            self._parse_versions_autotools(versions)
+        except KeyError:
+            versions = self._tar.getmember(os.path.join(self._basedir, 'Source', 'cmake', 'OptionsGTK.cmake'))
+            self._parse_versions_cmake(versions)
 
     def delete(self):
         os.unlink(self._tarball)
@@ -291,6 +373,12 @@ class WebKitTarball:
     def get_required_version(self, dependency):
         return self._minimum_versions[dependency]
 
+    def get_required_dependencies(self):
+        return self._requirements
+
+    def get_optional_dependencies(self):
+        return self._optional_requirements
+
     def extract_docs(self, path, wk_pkg):
         docdir = os.path.join(self._basedir, 'Documentation', wk_pkg, "html")
         for member in self._tar.getmembers():
@@ -379,7 +467,7 @@ browsers.
         body += reqs
         body += "=" * (len(reqs) - 1)
         body += "\n\n"
-        for key, name in WebKitTarball.REQUIREMENTS:
+        for key, name in self._tarball.get_required_dependencies():
             body += name
             try:
                 body += " >= %s\n" % self._tarball.get_required_version(key)
@@ -390,7 +478,7 @@ browsers.
         body += "Depending on your configuration options WebKitGTK+ may also depend on:\n"
         body += "\n"
 
-        for key, name in WebKitTarball.OPTIONAL_REQUIREMENTS:
+        for key, name in self._tarball.get_optional_dependencies():
             body += name
             try:
                 body += " >= %s\n" % self._tarball.get_required_version(key)
@@ -539,12 +627,18 @@ are far too many to list!
         tar.close()
 
     def _get_doc_pkg_names(self):
-        pkg_names = [self.WK1_PKG_NAME, self.WK2_PKG_NAME]
+        pkg_names = []
 
         major, minor, micro, patch = self._tarball.get_version()
         # DOM Bindings API docs were introduced in 2.3.
         if major > 2 or (major == 2 and minor >= 3):
-            pkg_names.insert(0, self.WKDOM_PKG_NAME)
+            pkg_names.append(self.WKDOM_PKG_NAME)
+
+        # WebKit1 was removed in 2.5
+        if major <= 2 and minor < 5:
+            pkg_names.append(self.WK1_PKG_NAME)
+
+        pkg_names.append(self.WK2_PKG_NAME)
 
         return pkg_names
 
