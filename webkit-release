@@ -205,9 +205,9 @@ class WebKitTarball:
                                ('Freetype2', 'FreeType2'),
                                ('Libsecret', 'libsecret'),
                                ('Sqlite', 'SQLite'),
-                               ('Enchant', 'enchant'),
-                               ('GTK2', 'gtk+') ]
-        self._optional_requirements = [ ('GObjectIntrospection', 'GObject introspection'),
+                               ('Enchant', 'enchant') ]
+        self._optional_requirements = [('GTK2', 'gtk+'),
+                                       ('GObjectIntrospection', 'GObject introspection'),
                                         ('GStreamer', 'gstreamer'),
                                         ('GeoClue2', 'GeoClue'),
                                         ('GUdev', 'gudev'),
