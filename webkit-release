@@ -238,8 +238,7 @@ class WebKitTarball:
                     continue
 
             if self._micro is None:
-                # FIXME: in CMake the MICRO version is called PATCH!
-                match = patch_version_pattern.match(line)
+                match = micro_version_pattern.match(line)
                 if match:
                     self._micro = int(match.group(1))
                     continue
