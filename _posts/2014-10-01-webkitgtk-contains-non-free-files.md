@@ -7,7 +7,7 @@ We have noticed that some releases of WebKitGTK+ contain files that are
 covered by a license that does not allow redistribution.
 
 We have replaced those images with free equivalents, and have released
-WebKitGTK+ 2.2.8, 2.4.6, 2.5.90 and 2.6.0. These releases only contain
+WebKitGTK+ 2.2.8, 2.4.6, 2.5.90 and 2.6.0. These releases contain only
 free images.
 
 ### What files are affected?
