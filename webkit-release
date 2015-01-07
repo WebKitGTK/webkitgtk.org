@@ -761,6 +761,14 @@ are far too many to list!
         subprocess.call(['git', 'add'] + doc_files)
 
     def _write_post(self, website_dir):
+        def get_news():
+            news = ""
+            CVE_PATTERN = "(CVE-[0-9][0-9][0-9][0-9]-[0-9]+)"
+            CVE_BASE_URL = "https://cve.mitre.org/cgi-bin/cvename.cgi?name="
+            for line in self._tarball.get_news():
+                news += re.sub(CVE_PATTERN, lambda m: "[%s](%s%s)" % (m.group(1), CVE_BASE_URL, m.group(1)), line[1:])
+            return news
+
         version = self._tarball.get_version_str()
         post_name = date.strftime(date.today(), "%Y-%m-%d") + "-webkitgtk%s-released.md" % version
         post_file = os.path.join(website_dir, "_posts", post_name)
@@ -775,7 +783,7 @@ are far too many to list!
 
         post += "### What's new in the WebKitGTK+ %s release?\n" % version
         post += "\n"
-        post += "".join([l[1:] for l in self._tarball.get_news()])
+        post += get_news()
         post += "\n"
 
         post += "Thanks to all the contributors who made possible this release."
