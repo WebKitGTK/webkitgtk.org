@@ -1,0 +1,9 @@
+---
+layout: post
+title: WebKitGTK+ Security Advisories
+---
+
+{% for post in site.tags.WSA %}
+    <h3 class="news_title" style="margin-top: 2ex;"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+    <p class="news_entry">{{ post.date | date_to_long_string | upcase }}</p>
+{% endfor %}
