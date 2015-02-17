@@ -217,6 +217,7 @@ class WebKitTarball:
         minor_version_pattern = re.compile('^set\(PROJECT_VERSION_MINOR ([0-9]+)\)$')
         micro_version_pattern = re.compile('^set\(PROJECT_VERSION_MICRO ([0-9]+)\)$')
         patch_version_pattern = re.compile('^set\(PROJECT_VERSION_PATCH ([0-9]+)\)$')
+        api_version_pattern = re.compile('^set\(WEBKITGTK_API_VERSION ([0-9]+\.[0-9]+)\)$')
         dependency_pattern = re.compile('^find_package\(([a-zA-Z0-9]+) ?([0-9\.]+)?.*\)$')
 
         self._required_deps = []
@@ -249,6 +250,11 @@ class WebKitTarball:
                     self._patch = int(match.group(1))
                     continue
 
+            if self._api is None:
+                match = api_version_pattern.match(line)
+                if match:
+                    self._api = match.group(1)
+
             match = dependency_pattern.match(line)
             if not match:
                 continue
@@ -266,7 +272,7 @@ class WebKitTarball:
 
     def _parse_versions(self):
         self._minimum_versions = {}
-        self._major = self._minor = self._micro = self._patch = None
+        self._major = self._minor = self._micro = self._patch = self._api = None
 
         try:
             versions = self._tar.getmember(os.path.join(self._basedir, 'Source', 'autotools', 'Versions.m4'))
@@ -286,6 +292,9 @@ class WebKitTarball:
         if self.is_patched():
             return self._major, self._minor, self._micro, self._patch
         return self._major, self._minor, self._micro, 0
+
+    def get_api_version(self):
+        return self._api
 
     def get_version_str(self):
         version_str = "%d.%d.%d" % (self._major, self._minor, self._micro)
@@ -641,6 +650,18 @@ are far too many to list!
 
         return pkg_names
 
+    def _get_versioned_pkg_name(self, pkg_name):
+        api_version = self._tarball.get_api_version()
+        if api_version is None:
+            return pkg_name
+
+        major, minor, micro, patch = self._tarball.get_version()
+        # Version > 2.7.90 include api version.
+        if major > 2 or (major == 2 and minor >= 7):
+            return pkg_name + '-' + api_version
+
+        return pkg_name
+
     def install_docs(self, docs_dir):
         version = self._tarball.get_version_str()
         for wk_pkg in self._get_doc_pkg_names():
@@ -651,7 +672,7 @@ are far too many to list!
                 if e.errno != errno.EEXIST:
                     raise
 
-            self._tarball.extract_docs(docdir, wk_pkg)
+            self._tarball.extract_docs(docdir, self._get_versioned_pkg_name(wk_pkg))
 
             self._rebase_docs(docdir, wk_pkg)
 
