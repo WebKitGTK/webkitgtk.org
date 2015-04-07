@@ -656,8 +656,8 @@ are far too many to list!
             return pkg_name
 
         major, minor, micro, patch = self._tarball.get_version()
-        # Version > 2.7.90 include api version.
-        if major > 2 or (major == 2 and minor >= 7):
+        # Version > 2.7.90 or 2.6.6 include api version.
+        if major > 2 or (major == 2 and minor >= 6):
             return pkg_name + '-' + api_version
 
         return pkg_name
