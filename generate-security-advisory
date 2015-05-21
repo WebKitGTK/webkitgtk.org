@@ -1,0 +1,366 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+#
+#  Copyright 2015 Igalia S.L.
+#   -- Author: clopez@igalia.com
+#
+#  This program is free software; you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation; either version 2 of the License, or
+#  (at your option) any later version.
+#
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with this program; if not, write to the Free Software
+#  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+#  MA 02110-1301, USA.
+#
+
+# This is the data structure used for storing the CVE info:
+# {'CVE-2014-1341': {'Author': 'Author name',
+#  'Description': 'CVE Description',
+#  'Versions': ['2.4.3', '2.6.4']}}
+
+# Python3 required!
+
+import gzip
+import csv
+import textwrap
+import sys, os, re
+import time
+from urllib.request import urlretrieve
+from collections import OrderedDict
+
+known_branches = [ '2.4', '2.6', '2.8' ]
+postsdir = "_posts"
+
+headertemplate_mail = """\
+------------------------------------------------------------------------
+%(title)s%(titlespaces)s%(WSA)s
+------------------------------------------------------------------------
+
+Date reported      : %(reportdate)s
+Advisory ID        : %(WSA)s
+Advisory URL       : http://webkitgtk.org/security/%(WSA)s.html
+Affected versions  : %(affectedversions)s
+CVE identifiers    : %(cvelist)s
+
+%(affectedtext)s
+
+"""
+
+headertemplate_md = """\
+---
+layout: post
+title: %(title)s%(titlespaces)s%(WSA)s
+permalink: /security/%(WSA)s.html
+tags: WSA
+---
+
+* Date Reported: **%(reportdate)s**\n
+* Advisory ID: **%(WSA)s**\n
+* Affected versions:
+%(affectedversions)s
+* CVE identifiers: %(cvelist)s\n
+
+%(affectedtext)s
+
+"""
+
+cvetemplate_mail  = """\
+%(CVE)s
+    %(affected)s
+    %(credits)s
+    %(description)s
+
+"""
+
+cvetemplate_md  = """\
+* %(CVE)s
+  * %(affected)s
+  * %(credits)s
+  * %(description)s
+
+"""
+
+
+footertemplate_mail = """\
+
+%(fixedvers)s
+
+%(moreinfo)s
+
+%(signature)s
+"""
+
+footertemplate_md = """\
+
+%(fixedvers)s
+
+%(moreinfo)s
+"""
+
+def _fill_cve_descriptions(cvedb, cveinfo):
+    cvefile = gzip.open(cvedb,'rt',errors='replace')
+    cvecsv = csv.reader(cvefile)
+    for entry in cvecsv:
+        if entry[0] in cveinfo:
+            cveinfo[entry[0]]['Description'] =  entry[2]
+    return cveinfo
+
+def _parse_cve_report(textfile):
+    cve_report = open(textfile, 'r')
+    cve_info = OrderedDict()
+    for line in cve_report:
+        try:
+            cvenumber,cvedata = line.split(':',1)
+            # FIXME: Add some check that is a valid CVE
+            cvenumber = cvenumber.strip()
+            cveauthor,cveversions = cvedata.rsplit('(',1)
+            cveauthor = cveauthor.strip()
+            # Remove characters ')' 'and' and ','
+            # Double spacing is taking care after on the .split() call
+            cveversions = cveversions.replace(')',' ').replace('and',' ').replace(',', ' ')
+            if cvenumber in cve_info:
+                raise ValueError("Duplicated CVE!")
+            cve_info[cvenumber] = {}
+            cve_info[cvenumber]['Author'] = cveauthor
+            cve_info[cvenumber]['Versions'] =  cveversions.split()
+        except:
+            raise ValueError("Error parsing line %s" %line)
+            raise
+    return cve_info
+
+def _beautify_line_for_print(line,ident, width=72, dot=True):
+        if dot and not line.endswith('.'):
+            line += '.'
+        line = textwrap.wrap(line,width=(width-len(ident)))
+        line = "\n".join(line)
+        line = textwrap.indent(line,ident)
+        return line
+
+def _get_list_cves(cve_info):
+    cves = []
+    for cvenumber in cve_info:
+        cves.append(cvenumber)
+    return cves
+
+def _get_affected_branch_releases(cve_info):
+    affected = {}
+    for cvenumber in cve_info:
+        for affected_version in cve_info[cvenumber]['Versions']:
+            for branch in known_branches:
+                if affected_version.startswith(branch):
+                    if branch not in affected:
+                        affected[branch] = set()
+                    affected[branch].add(affected_version)
+    return affected
+
+def _and_comma_join(listojoin):
+    strtext=""
+    if len(listojoin) > 1:
+        strtext+=", ".join(listojoin[:-1])
+        strtext+=" and " + listojoin[-1]
+    else:
+        strtext+=", ".join(listojoin)
+    strtext.strip()
+    return strtext
+
+def _format_affected_versions(affected):
+    # branch 2.4 before 2.4.1, 2.4.2 and 2.4.8'
+    textvers=[]
+    for branch in sorted(affected):
+        strtext=""
+        strtext+=("%s series before " %branch)
+        affectedver = sorted(affected[branch])
+        strtext +=_and_comma_join(affectedver)
+        strtext+="."
+        textvers.append(strtext)
+    return textvers
+
+def _get_branch_for_cve(cve_info,cve):
+    versions = cve_info[cve]['Versions']
+    found_branches=set()
+    for version in versions:
+        for branch in known_branches:
+            if version.startswith(branch):
+                found_branches.add(branch+".X")
+    return _and_comma_join(sorted(found_branches))
+
+def _cve_mitre_links(cvetext, anchor=False):
+    CVE_PATTERN = "(CVE-[0-9][0-9][0-9][0-9]-[0-9]+)"
+    if anchor:
+        return re.sub(CVE_PATTERN,"[\\1](#\\1)",cvetext)
+    else:
+        return re.sub(CVE_PATTERN,"https://cve.mitre.org/cgi-bin/cvename.cgi?name=\\1",cvetext)
+
+
+def _getnext_WSA_number(postsdir):
+    posts = os.listdir(postsdir)
+    advisories = [ 0 ]
+    year = "%s" % time.strftime("%Y")
+    pattern = "%s-[0-9]{2}-[0-9]{2}-security-advisory-%s-" %(year,year)
+    for post in posts:
+        match = re.match(pattern,post)
+        if match:
+            number = int(post[len(match.group()):len(post)-3])
+            advisories.append(number)
+
+    nextadvisory = sorted(advisories)[-1] + 1
+    return nextadvisory
+
+def _getWSAid(postsdir):
+    year = "%s" % time.strftime("%Y")
+    return "WSA-%s-%04d" %(year,_getnext_WSA_number(postsdir))
+
+def _generate_name_security_post(postsdir):
+    year = "%s" % time.strftime("%Y")
+    day = "%s" % time.strftime("%d")
+    month = "%s" % time.strftime("%m")
+    mdname = "%s-%s-%s-security-advisory-%s-%04d.md" %(year,month,day,year,_getnext_WSA_number(postsdir))
+    return mdname
+
+def generate_advisory(cve_info,mail=True):
+
+    advisorytext = ""
+    WSA=_getWSAid(postsdir)
+    reportdate=time.strftime("%B %d, %Y")
+    title = "WebKitGTK+ Security Advisory"
+    titlespaces=" "*(72-len(title)-len(WSA) if mail else 1)
+    ident=" "*4
+
+    headertemplate = headertemplate_mail if mail else headertemplate_md
+    cvetemplate = cvetemplate_mail if mail else cvetemplate_md
+    footertemplate = footertemplate_mail if mail else footertemplate_md
+
+    # Generate text for Header
+    affectedarray =_get_affected_branch_releases(cve_info)
+    affectedvers = _format_affected_versions(affectedarray)
+    affectedver = ""
+    for affectedline in affectedvers:
+        if mail:
+            affectedver += _beautify_line_for_print(affectedline, " "*21)
+        else:
+            affectedver += "  * **" + affectedline + "**"
+        affectedver += "\n"
+    if mail:
+        affectedver = affectedver.strip()
+    cves = _get_list_cves(cve_info)
+    cves = ", ".join(cves)
+    if mail:
+        cves = _beautify_line_for_print(cves, " "*21)
+    else:
+        cves = _cve_mitre_links(cves,anchor=True)
+        cves = _beautify_line_for_print(cves, " "*2, width=90)
+
+    affectedtext = ("Several vulnerabilities were discovered on the %s stable series of WebKitGTK+."%_and_comma_join(sorted(affectedarray)))
+    affectedtext = _beautify_line_for_print(affectedtext, "")
+
+    advisorytext += (headertemplate %{ 'reportdate':reportdate,
+                             'WSA':WSA,
+                             'affectedversions':affectedver,
+                             'cvelist':cves.strip(),
+                             'title':title,
+                             'titlespaces':titlespaces,
+                             'affectedtext':affectedtext
+                            })
+    # Generate text for CVEs
+    for cve in cve_info:
+        cvetext=cve
+        affected = "Versions affected: WebKitGTK+ " + _get_branch_for_cve(cve_info,cve) + " before " + _and_comma_join(cve_info[cve]['Versions'])
+        affected = _beautify_line_for_print(affected, ident)
+        credits = "Credit to " + cve_info[cve]['Author']
+        credits = _beautify_line_for_print(credits, ident)
+        description = cve_info[cve]['Description']
+        description = _beautify_line_for_print(description, ident)
+        if not mail:
+            cvetext= '<a name="' + cve + '" href="' + _cve_mitre_links(cve) + '">' + cve +'</a>'
+        advisorytext += (cvetemplate %{ 'CVE':cvetext.strip(),
+                              'affected':affected.strip(),
+                              'credits':credits.strip(),
+                              'description':description.strip()
+                              })
+    # Generate text for Footer
+    for branch in sorted(affectedarray):
+        lastver=sorted(affectedarray[branch],reverse=True)[0]
+        fixedvers=("For the %s series, these problems have been fixed in release %s" %(branch,lastver))
+        fixedvers = _beautify_line_for_print(fixedvers, "")
+
+    moreinfo="Further information about WebKitGTK+ Security Advisories can be found at: "
+    if mail:
+        moreinfo = _beautify_line_for_print(moreinfo + "http://webkitgtk.org/security.html", "", dot=False)
+        signature = "The WebKitGTK+ team," + "\n" + reportdate
+    else:
+        moreinfo = moreinfo + "\n" + "[http://webkitgtk.org/security.html](http://webkitgtk.org/security.html)"
+        signature = ""
+
+    advisorytext += ( footertemplate %{ 'fixedvers':fixedvers,
+                             'moreinfo':moreinfo,
+                             'signature':signature
+                              })
+    return advisorytext
+
+def main():
+
+    import argparse
+    cvedatadir = "cvedata"
+    parser = argparse.ArgumentParser(
+        prog = 'generate-security-advisory',
+        usage = '%(prog)s [options ...] path-to-cves-report-file\n\n' +
+        '\tExample: %(prog)s '+ '%s\n\n.' %(os.path.join(cvedatadir,"report-something.txt")))
+
+    parser.add_argument('--update', action='store_true', dest='update', default=False,
+                        help='Force an update of the CVE database from mitre.')
+
+    parser.add_argument('cvereportfile', type=str, help='Path to the cve-report text file.')
+    args = parser.parse_args()
+
+    if not os.path.isfile(args.cvereportfile):
+        raise ValueError("Can't find file %s" %args.cvereportfile)
+
+    cvedb = os.path.join (cvedatadir, "allitems.csv.gz" )
+    if not os.path.isdir (cvedatadir):
+        os.mkdir(cvedatadir)
+
+    if not os.path.isfile(cvedb):
+        args.update = True
+
+    if args.update:
+        cvedburl = "https://cve.mitre.org/data/downloads/allitems.csv.gz"
+        print ("Downloading %s ..." %cvedburl)
+        urlretrieve(cvedburl, cvedb)
+    else:
+        print ("Using already downloaded CVE DB file %s. Run me with --update to get a fresh copy" %cvedb)
+
+    cveinfo = _parse_cve_report(args.cvereportfile)
+    cveinfo = _fill_cve_descriptions(cvedb, cveinfo)
+
+    # First generate mail, otherwise we would increment WSAID twice.
+    mailadvisory = generate_advisory(cveinfo)
+
+    mailfilename = os.path.join(cvedatadir, "mail.txt")
+    mdadvisoryfile = open(mailfilename, "w")
+    mdadvisoryfile.write(mailadvisory)
+    mdadvisoryfile.close()
+
+    print ("Mail to be sent wrote at %s" %mailfilename )
+
+    # Generate markdown for the web.
+    mdadvisory = generate_advisory(cveinfo, mail=False)
+
+    mdadvisoryfilename = os.path.join(postsdir, _generate_name_security_post(postsdir))
+    mdadvisoryfile = open(mdadvisoryfilename, "w")
+    mdadvisoryfile.write(mdadvisory)
+    mdadvisoryfile.close()
+
+    print ("Post for the website wrote at %s" %mdadvisoryfilename)
+
+    return 0
+
+if __name__ == '__main__':
+    main()
+

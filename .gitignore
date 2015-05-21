@@ -5,3 +5,7 @@ _site/
 _cache/
 _planet/
 *.tmplc
+
+# Security advisories temp files
+cvedata/mail.txt
+cvedata/allitems.csv.gz
