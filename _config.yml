@@ -3,4 +3,4 @@ url: http://webkitgtk.org
 exclude: ['README.md', 'generate-site', 'releases', 'webkit-release', 'planet', 'generate-planet']
 
 stable-release-version: 2.8.4
-unstable-release-version: 2.9.4
+unstable-release-version: 2.9.5
