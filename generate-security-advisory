@@ -35,7 +35,7 @@ import time
 from urllib.request import urlretrieve
 from collections import OrderedDict
 
-known_branches = [ '2.4', '2.6', '2.8' ]
+known_branches = [ '2.4', '2.6', '2.8', '2.10' ]
 postsdir = "_posts"
 
 headertemplate_mail = """\
@@ -46,7 +46,6 @@ headertemplate_mail = """\
 Date reported      : %(reportdate)s
 Advisory ID        : %(WSA)s
 Advisory URL       : http://webkitgtk.org/security/%(WSA)s.html
-Affected versions  : %(affectedversions)s
 CVE identifiers    : %(cvelist)s
 
 %(affectedtext)s
@@ -63,8 +62,6 @@ tags: WSA
 
 * Date Reported: **%(reportdate)s**\n
 * Advisory ID: **%(WSA)s**\n
-* Affected versions:
-%(affectedversions)s
 * CVE identifiers: %(cvelist)s\n
 
 %(affectedtext)s
@@ -170,18 +167,6 @@ def _and_comma_join(listojoin):
     strtext.strip()
     return strtext
 
-def _format_affected_versions(affected):
-    # branch 2.4 before 2.4.1, 2.4.2 and 2.4.8'
-    textvers=[]
-    for branch in sorted(affected):
-        strtext=""
-        strtext+=("%s series before " %branch)
-        affectedver = sorted(affected[branch])
-        strtext +=_and_comma_join(affectedver)
-        strtext+="."
-        textvers.append(strtext)
-    return textvers
-
 def _get_branch_for_cve(cve_info,cve):
     versions = cve_info[cve]['Versions']
     found_branches=set()
@@ -237,18 +222,6 @@ def generate_advisory(cve_info,mail=True):
     cvetemplate = cvetemplate_mail if mail else cvetemplate_md
     footertemplate = footertemplate_mail if mail else footertemplate_md
 
-    # Generate text for Header
-    affectedarray =_get_affected_branch_releases(cve_info)
-    affectedvers = _format_affected_versions(affectedarray)
-    affectedver = ""
-    for affectedline in affectedvers:
-        if mail:
-            affectedver += _beautify_line_for_print(affectedline, " "*21)
-        else:
-            affectedver += "  * **" + affectedline + "**"
-        affectedver += "\n"
-    if mail:
-        affectedver = affectedver.strip()
     cves = _get_list_cves(cve_info)
     cves = ", ".join(cves)
     if mail:
@@ -257,12 +230,11 @@ def generate_advisory(cve_info,mail=True):
         cves = _cve_mitre_links(cves,anchor=True)
         cves = _beautify_line_for_print(cves, " "*2, width=90)
 
-    affectedtext = ("Several vulnerabilities were discovered on the %s stable series of WebKitGTK+."%_and_comma_join(sorted(affectedarray)))
+    affectedtext = ("Several vulnerabilities were discovered on WebKitGTK+.")
     affectedtext = _beautify_line_for_print(affectedtext, "")
 
     advisorytext += (headertemplate %{ 'reportdate':reportdate,
                              'WSA':WSA,
-                             'affectedversions':affectedver,
                              'cvelist':cves.strip(),
                              'title':title,
                              'titlespaces':titlespaces,
@@ -271,7 +243,7 @@ def generate_advisory(cve_info,mail=True):
     # Generate text for CVEs
     for cve in cve_info:
         cvetext=cve
-        affected = "Versions affected: WebKitGTK+ " + _get_branch_for_cve(cve_info,cve) + " before " + _and_comma_join(cve_info[cve]['Versions'])
+        affected = "Versions affected: WebKitGTK+ before " + _and_comma_join(cve_info[cve]['Versions'])
         affected = _beautify_line_for_print(affected, ident)
         credits = "Credit to " + cve_info[cve]['Author']
         credits = _beautify_line_for_print(credits, ident)
@@ -285,11 +257,10 @@ def generate_advisory(cve_info,mail=True):
                               'description':description.strip()
                               })
     # Generate text for Footer
-    for branch in sorted(affectedarray):
-        lastver=sorted(affectedarray[branch],reverse=True)[0]
-        fixedvers=("For the %s series, these problems have been fixed in release %s" %(branch,lastver))
-        fixedvers = _beautify_line_for_print(fixedvers, "")
-
+    fixedvers =  "We recommend updating to the last stable version of WebKitGTK+. "
+    fixedvers += "It is the best way of ensuring that you are running a safe version of WebKitGTK+. "
+    fixedvers += "Please check our website for information about the last stable releases."
+    fixedvers = _beautify_line_for_print(fixedvers,"", dot=False)
     moreinfo="Further information about WebKitGTK+ Security Advisories can be found at: "
     if mail:
         moreinfo = _beautify_line_for_print(moreinfo + "http://webkitgtk.org/security.html", "", dot=False)
