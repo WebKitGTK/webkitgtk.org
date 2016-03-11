@@ -230,7 +230,7 @@ def generate_advisory(cve_info,mail=True):
         cves = _cve_mitre_links(cves,anchor=True)
         cves = _beautify_line_for_print(cves, " "*2, width=90)
 
-    affectedtext = ("Several vulnerabilities were discovered on WebKitGTK+.")
+    affectedtext = ("Several vulnerabilities were discovered in WebKitGTK+.")
     affectedtext = _beautify_line_for_print(affectedtext, "")
 
     advisorytext += (headertemplate %{ 'reportdate':reportdate,
