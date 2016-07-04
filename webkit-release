@@ -405,7 +405,7 @@ class WebKitRelease:
     WK1_PKG_NAME = "webkitgtk"
     WK2_PKG_NAME = "webkit2gtk"
     WKDOM_PKG_NAME = "webkitdomgtk"
-    RELEASE_BASE_URL = "http://webkitgtk.org/releases/"
+    RELEASE_BASE_URL = "https://webkitgtk.org/releases/"
     ONLINE_DOCS_BASE_URL = "http://developer.gnome.org"
 
     def __init__(self, tarball):
@@ -503,7 +503,7 @@ browsers.
 If you want to know more about the project or get in touch with us
 you may:
 
-- Visit our website at http://www.webkitgtk.org, or the upstream
+- Visit our website at https://www.webkitgtk.org, or the upstream
   site at http://www.webkit.org. People interested in contributing
   should read: http://www.webkit.org/coding/contributing.html.
 

@@ -49,7 +49,7 @@ Cc: security@webkit.org, distributor-list@gnome.org, oss-security@lists.openwall
 
 Date reported      : %(reportdate)s
 Advisory ID        : %(WSA)s
-Advisory URL       : http://webkitgtk.org/security/%(WSA)s.html
+Advisory URL       : https://webkitgtk.org/security/%(WSA)s.html
 CVE identifiers    : %(cvelist)s
 
 %(affectedtext)s
@@ -267,10 +267,10 @@ def generate_advisory(cve_info,mail=True):
     fixedvers = _beautify_line_for_print(fixedvers,"", dot=False)
     moreinfo="Further information about WebKitGTK+ Security Advisories can be found at: "
     if mail:
-        moreinfo = _beautify_line_for_print(moreinfo + "http://webkitgtk.org/security.html", "", dot=False)
+        moreinfo = _beautify_line_for_print(moreinfo + "https://webkitgtk.org/security.html", "", dot=False)
         signature = "The WebKitGTK+ team," + "\n" + reportdate
     else:
-        moreinfo = moreinfo + "\n" + "[http://webkitgtk.org/security.html](http://webkitgtk.org/security.html)"
+        moreinfo = moreinfo + "\n" + "[https://webkitgtk.org/security.html](https://webkitgtk.org/security.html)"
         signature = ""
 
     advisorytext += ( footertemplate %{ 'fixedvers':fixedvers,
