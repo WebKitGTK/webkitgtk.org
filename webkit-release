@@ -504,10 +504,10 @@ If you want to know more about the project or get in touch with us
 you may:
 
 - Visit our website at https://www.webkitgtk.org, or the upstream
-  site at http://www.webkit.org. People interested in contributing
-  should read: http://www.webkit.org/coding/contributing.html.
+  site at https://www.webkit.org. People interested in contributing
+  should read: https://www.webkit.org/coding/contributing.html.
 
-- Browse the bug list at http://bugs.webkit.org, WebKitGTK+ bugs are
+- Browse the bug list at https://bugs.webkit.org, WebKitGTK+ bugs are
   typically prefixed by "[GTK]." A bug report with a minimal,
   reproducible test case is often just as valuable as a patch.
 
