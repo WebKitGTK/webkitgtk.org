@@ -514,9 +514,9 @@ you may:
 - Join the #webkit and #webkitgtk+ IRC channels at irc.freenode.net.
 
 - Subscribe to the WebKitGTK+ mailing list,
-  http://lists.webkit.org/mailman/listinfo.cgi/webkit-gtk, or the
+  https://lists.webkit.org/mailman/listinfo/webkit-gtk, or the
   WebKit development mailing list,
-  http://lists.webkit.org/mailman/listinfo.cgi/webkit-dev
+  https://lists.webkit.org/mailman/listinfo/webkit-dev
 '''
         body += "\n"
 
