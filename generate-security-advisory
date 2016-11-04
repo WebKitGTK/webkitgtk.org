@@ -110,6 +110,12 @@ def _fill_cve_descriptions(cvedb, cveinfo):
     cvecsv = csv.reader(cvefile)
     for entry in cvecsv:
         if entry[0] in cveinfo:
+            if 'Description' in cveinfo[entry[0]]:
+                print ("\n%s %s MANUALDESCRIPTION notification %s" %("-"*17,entry[0],"-"*17))
+                print ("Ignoring MITRE description: %s" %entry[2])
+                print ("Using MANUALDESCRIPTION: %s" %cveinfo[entry[0]]['Description'])
+                print ("%s\n" %("-"*80))
+                continue
             cveinfo[entry[0]]['Description'] =  entry[2]
     return cveinfo
 
@@ -118,6 +124,15 @@ def _parse_cve_report(textfile):
     cve_info = OrderedDict()
     for line in cve_report:
         try:
+            if ":" not in line:
+                continue
+            if line.startswith("MANUALDESCRIPTION"):
+                _, cvenumber, cvedescription = line.split(':',2)
+                cvenumber = cvenumber.strip()
+                if cvenumber not in cve_info:
+                    raise ValueError("MANUALDESCRIPTION entry for CVE %s don't has a matching entry above\n", cvenumber)
+                cve_info[cvenumber]['Description'] =  cvedescription.strip()
+                continue
             cvenumber,cvedata = line.split(':',1)
             # FIXME: Add some check that is a valid CVE
             cvenumber = cvenumber.strip()
