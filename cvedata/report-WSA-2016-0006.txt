@@ -1,0 +1,30 @@
+CVE-2016-4611 : Apple (2.12.0)
+CVE-2016-4613 : Chris Palmer (2.14.0)
+CVE-2016-4657 : Citizen Lab and Lookout (2.14.0)
+CVE-2016-4666 : Apple (2.14.0)
+CVE-2016-4707 : Anonymous Researcher (2.14.0)
+CVE-2016-4728 : Daniel Divricean (2.14.0)
+CVE-2016-4729 : Apple (2.12.0)
+CVE-2016-4730 : Apple (2.12.0)
+CVE-2016-4731 : Apple (2.12.0)
+CVE-2016-4733 : Natalie Silvanovich of Google Project Zero (2.14.0)
+CVE-2016-4734 : Natalie Silvanovich of Google Project Zero (2.14.0)
+CVE-2016-4735 : André Bargull (2.14.0)
+CVE-2016-4758 : Masato Kinugawa of Cure53 (2.12.1)
+CVE-2016-4759 : Tongbo Luo of Palo Alto Networks (2.14.0)
+CVE-2016-4760 : Jordan Milne (2.14.0)
+CVE-2016-4761 : Apple (2.14.0)
+CVE-2016-4762 : Zheng Huang of Baidu Security Lab (2.14.0)
+CVE-2016-4764 : Apple (2.14.0)
+CVE-2016-4765 : Apple (2.14.0)
+CVE-2016-4766 : Apple (2.12.4)
+CVE-2016-4767 : Apple (2.14.0)
+CVE-2016-4768 : Anonymous working with Trend Micro's Zero Day Initiative (2.14.0)
+CVE-2016-4769 : Tongbo Luo of Palo Alto Networks (2.14.0)
+CVE-2016-7578 : Apple (2.14.0)
+
+MANUALDESCRIPTION : CVE-2016-4613 : Impact: Processing maliciously crafted web content may result in the disclosure of user information. Description: An input validation issue was addressed through improved state management.
+MANUALDESCRIPTION : CVE-2016-4666 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed through improved memory handling.
+MANUALDESCRIPTION : CVE-2016-4761 : An use-after-free vulnerability allows remote attackers to cause a denial of service or possibly have unspecified other impact via unknown vectors.
+MANUALDESCRIPTION : CVE-2016-4764 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed through improved state management.
+MANUALDESCRIPTION : CVE-2016-7578 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed through improved memory handling.
