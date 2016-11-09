@@ -443,6 +443,7 @@ class WebKitRelease:
         body += "\n"
         body += "%s%s (%s)\n" % (self.RELEASE_BASE_URL, self._tarball.get_name(), human_size(self._tarball.get_size()))
         body += "   md5sum: %s\n" % (self._tarball.get_md5sum())
+        body += "   sha1sum: %s\n" % (self._tarball.get_sha1sum())
         body += "   sha256sum: %s\n" % (self._tarball.get_sha256sum())
         body += "\n"
 
@@ -710,27 +711,45 @@ are far too many to list!
 
         tarball_file = self._tarball.get_tarball()
 
-        # Create sha1 file.
-        sha1_file = tarball_file + ".sha1"
+        # Create the news file.
+        news_file = tarball_file + ".news"
         tmp = tempfile.NamedTemporaryFile(delete=False)
-        tmp.write("%s  %s\n" % (self._tarball.get_sha1sum(), tarball_name))
+        whatsnew = "What's new in the WebKitGTK+ %s release?\n" % self._tarball.get_version_str()
+        tmp.write(whatsnew)
+        tmp.write("%s\n" % ("=" * (len(whatsnew) - 1)))
+        tmp.write("%s\n" % ("".join(self._tarball.get_news())))
         tmp.close()
-        mode = os.stat(tarball_file).st_mode
-        shutil.move(tmp.name, sha1_file)
-        os.chmod(sha1_file, mode)
+        shutil.move(tmp.name, news_file)
+
+        # Create the sums file.
+        sums_file = tarball_file + ".sums"
+        tmp = tempfile.NamedTemporaryFile(delete=False)
+        tmp.write("%s (%s)\n" % (self._tarball.get_name(), human_size(self._tarball.get_size())))
+        tmp.write("   md5sum: %s\n" % (self._tarball.get_md5sum()))
+        tmp.write("   sha1sum: %s\n" % (self._tarball.get_sha1sum()))
+        tmp.write("   sha256sum: %s\n" % (self._tarball.get_sha256sum()))
+        tmp.close()
+        shutil.move(tmp.name, sums_file)
 
         # Sign the tarball file.
         gpg_file = tarball_file + ".asc"
         subprocess.call(['gpg', '--armor', '--detach-sign', tarball_file])
 
-        # Upload tarball, sha1 and gpg files.
-        command = ['scp', tarball_file, sha1_file, gpg_file, '%s:%s' % (host, releases_dir)]
+        # Set same file perms as tarball to generated files.
+        mode = os.stat(tarball_file).st_mode
+        os.chmod(news_file, mode)
+        os.chmod(sums_file, mode)
+        os.chmod(gpg_file, mode)
+
+        # Upload the files.
+        command = ['scp', tarball_file, news_file, sums_file, gpg_file, '%s:%s' % (host, releases_dir)]
         if subprocess.call(command) != 0:
             sys.stderr.write("Error uploading %s to %s:%s\n" % (tarball_file, host, releases_dir))
             sys.exit(1)
 
         # Remove generated files.
-        os.unlink(sha1_file)
+        os.unlink(news_file)
+        os.unlink(sums_file)
         os.unlink(gpg_file)
 
         if update_symlinks:
