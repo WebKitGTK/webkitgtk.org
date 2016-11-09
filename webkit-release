@@ -719,9 +719,9 @@ are far too many to list!
         shutil.move(tmp.name, sha1_file)
         os.chmod(sha1_file, mode)
 
-        # Sign the sha1 file.
-        gpg_file = sha1_file + ".asc"
-        subprocess.call(['gpg', '--armor', '--sign', sha1_file])
+        # Sign the tarball file.
+        gpg_file = tarball_file + ".asc"
+        subprocess.call(['gpg', '--armor', '--detach-sign', tarball_file])
 
         # Upload tarball, sha1 and gpg files.
         command = ['scp', tarball_file, sha1_file, gpg_file, '%s:%s' % (host, releases_dir)]
