@@ -1,0 +1,25 @@
+CVE-2017-2350: Gareth Heyes of Portswigger Web Security (2.14.4)
+CVE-2017-2354: Neymar of Tencent's Xuanwu Lab (tencent.com) working with Trend Micro's Zero Day Initiative (2.14.4)
+CVE-2017-2355: Team Pangu and lokihardt at PwnFest 2016 (2.14.4)
+CVE-2017-2356: Team Pangu and lokihardt at PwnFest 2016 (2.14.4)
+CVE-2017-2362: Ivan Fratric of Google Project Zero (2.14.4)
+CVE-2017-2363: lokihardt of Google Project Zero (2.14.4)
+CVE-2017-2364: lokihardt of Google Project Zero (2.14.4)
+CVE-2017-2365: lokihardt of Google Project Zero (2.14.4)
+CVE-2017-2366: Kai Kang of Tencent's Xuanwu Lab (tencent.com) (2.14.4)
+CVE-2017-2369: Ivan Fratric of Google Project Zero (2.14.4)
+CVE-2017-2371: lokihardt of Google Project Zero (2.14.4)
+CVE-2017-2373: Ivan Fratric of Google Project Zero (2.14.4)
+
+MANUALDESCRIPTION : CVE-2017-2350 : Impact: Processing maliciously crafted web content may exfiltrate data cross-origin. Description: A prototype access issue was addressed through improved exception handling.
+MANUALDESCRIPTION : CVE-2017-2354 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed through improved memory handling.
+MANUALDESCRIPTION : CVE-2017-2355 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: A memory initialization issue was addressed through improved memory handling.
+MANUALDESCRIPTION : CVE-2017-2356 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed through improved input validation.
+MANUALDESCRIPTION : CVE-2017-2362 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed through improved memory handling.
+MANUALDESCRIPTION : CVE-2017-2363 : Impact: Processing maliciously crafted web content may exfiltrate data cross-origin. Description: Multiple validation issues existed in the handling of page loading. This issue was addressed through improved logic.
+MANUALDESCRIPTION : CVE-2017-2364 : Impact: Processing maliciously crafted web content may exfiltrate data cross-origin. Description: Multiple validation issues existed in the handling of page loading. This issue was addressed through improved logic.
+MANUALDESCRIPTION : CVE-2017-2365 : Impact: Processing maliciously crafted web content may exfiltrate data cross-origin. Description: A validation issue existed in variable handling. This issue was addressed through improved validation.
+MANUALDESCRIPTION : CVE-2017-2366 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed through improved input validation.
+MANUALDESCRIPTION : CVE-2017-2369 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed through improved input validation.
+MANUALDESCRIPTION : CVE-2017-2371 : Impact: A malicious website can open popups. Description: An issue existed in the handling of blocking popups. This was addressed through improved input validation.
+MANUALDESCRIPTION : CVE-2017-2373 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed through improved memory handling.
