@@ -1,0 +1,19 @@
+/home/cgarcia/src/git/gnome/WebKit-2.16/WebKitBuild/Release/Documentation/webkit2gtk-4.0/xml/WebKitWebView.xml:3294: parser error : Opening and ending tag mismatch: para line 3283 and itemizedlist
+</itemizedlist>
+               ^
+/home/cgarcia/src/git/gnome/WebKit-2.16/WebKitBuild/Release/Documentation/webkit2gtk-4.0/xml/WebKitWebView.xml:3330: parser error : Opening and ending tag mismatch: listitem line 3283 and refsect2
+</refsect2><refsect2 id="WebKitWebView-context-menu-dismissed" role="signal"><ti
+           ^
+/home/cgarcia/src/git/gnome/WebKit-2.16/WebKitBuild/Release/Documentation/webkit2gtk-4.0/xml/WebKitWebView.xml:4200: parser error : Opening and ending tag mismatch: itemizedlist line 3282 and refsect1
+</refsect1>
+           ^
+/home/cgarcia/src/git/gnome/WebKit-2.16/WebKitBuild/Release/Documentation/webkit2gtk-4.0/xml/WebKitWebView.xml:4202: parser error : Opening and ending tag mismatch: refsect2 line 3245 and refentry
+</refentry>
+           ^
+/home/cgarcia/src/git/gnome/WebKit-2.16/WebKitBuild/Release/Documentation/webkit2gtk-4.0/xml/WebKitWebView.xml:4203: parser error : Premature end of data in tag refsect1 line 3175
+
+^
+/home/cgarcia/src/git/gnome/WebKit-2.16/WebKitBuild/Release/Documentation/webkit2gtk-4.0/xml/WebKitWebView.xml:4203: parser error : Premature end of data in tag refentry line 6
+
+^
+/home/cgarcia/src/git/gnome/WebKit-2.16/WebKitBuild/Release/Documentation/webkit2gtk-4.0/webkit2gtk-docs.sgml:15: element include: XInclude error : could not load /home/cgarcia/src/git/gnome/WebKit-2.16/WebKitBuild/Release/Documentation/webkit2gtk-4.0/xml/WebKitWebView.xml, and no fallback was found
