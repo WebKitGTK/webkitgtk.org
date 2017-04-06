@@ -1,0 +1,70 @@
+CVE-2016-9642: Gustavo Grieco (2.16.0)
+CVE-2016-9643: Gustavo Grieco (2.14.6)
+CVE-2017-2364: lokihardt of Google Project Zero (2.14.6)
+CVE-2017-2367: lokihardt of Google Project Zero (2.14.6)
+CVE-2017-2376: an anonymous researcher, Chris Hlady of Google Inc, Yuyang Zhou of Tencent Security Platform Department (security.tencent.com), Muneaki Nishimura (nishimunea) of Recruit Technologies Co., Ltd., Michal Zalewski of Google Inc, an anonymous researcher (2.16.0)
+CVE-2017-2377: Vicki Pfau (2.14.6)
+CVE-2017-2386: André Bargull (2.16.0)
+CVE-2017-2392: Max Bazaliy of Lookout (2.14.6)
+CVE-2017-2394: Apple (2.14.6)
+CVE-2017-2395: Apple (2.16.0)
+CVE-2017-2396: Apple (2.16.0)
+CVE-2017-2405: Apple (2.16.0)
+CVE-2017-2415: Kai Kang of Tencent's Xuanwu Lab (tentcent.com) (2.14.6)
+CVE-2017-2419: Nicolai Grødum of Cisco Systems (2.14.6)
+CVE-2017-2433: Apple (2.16.0)
+CVE-2017-2442: lokihardt of Google Project Zero (2.14.6)
+CVE-2017-2445: lokihardt of Google Project Zero (2.16.0)
+CVE-2017-2446: Natalie Silvanovich of Google Project Zero (2.14.6)
+CVE-2017-2447: Natalie Silvanovich of Google Project Zero (2.16.0)
+CVE-2017-2454: Ivan Fratric of Google Project Zero (2.14.6)
+CVE-2017-2455: Ivan Fratric of Google Project Zero (2.16.0)
+CVE-2017-2457: lokihardt of Google Project Zero (2.16.0)
+CVE-2017-2459: Ivan Fratric of Google Project Zero (2.14.6)
+CVE-2017-2460: Ivan Fratric of Google Project Zero (2.14.6)
+CVE-2017-2464: Jeonghoon Shin, Natalie Silvanovich of Google Project Zero (2.16.0)
+CVE-2017-2465: Zheng Huang and Wei Yuan of Baidu Security Lab (2.14.6)
+CVE-2017-2466: Ivan Fratric of Google Project Zero (2.14.6)
+CVE-2017-2468: lokihardt of Google Project Zero (2.14.6)
+CVE-2017-2469: lokihardt of Google Project Zero (2.16.0)
+CVE-2017-2470: lokihardt of Google Project Zero (2.14.6)
+CVE-2017-2471: Ivan Fratric of Google Project Zero (2.14.6)
+CVE-2017-2475: lokihardt of Google Project Zero (2.14.6)
+CVE-2017-2476: Ivan Fratric of Google Project Zero (2.14.6)
+CVE-2017-2481: 0011 working with Trend Micro's Zero Day Initiative (2.14.6)
+
+
+
+MANUALDESCRIPTION : CVE-2016-9643 : The regex code in WebKit allows remote attackers to cause a denial of service (memory consumption) as demonstrated in a large number of ($ (open parenthesis and dollar) followed by {-2,16} and a large number of +) (plus close parenthesis).
+MANUALDESCRIPTION : CVE-2017-2364 : This issue allows remote attackers to bypass the Same Origin Policy and obtain sensitive information via a crafted web site.
+MANUALDESCRIPTION : CVE-2017-2367 : This issue allows remote attackers to bypass the Same Origin Policy and obtain sensitive information via a crafted web site.
+MANUALDESCRIPTION : CVE-2017-2376 : This issue allows remote attackers to spoof the address bar by leveraging text input during the loading of a page.
+MANUALDESCRIPTION : CVE-2017-2377 : This issue involves the "WebKit Web Inspector" component. It allows attackers to cause a denial of service (memory corruption and application crash) by leveraging a window-close action during a debugger-pause state.
+MANUALDESCRIPTION : CVE-2017-2386 : This issue allows remote attackers to bypass the Same Origin Policy and obtain sensitive information via a crafted web site.
+MANUALDESCRIPTION : CVE-2017-2392 : This issue allows attackers to execute arbitrary code or cause a denial of service (memory corruption) via a crafted app.
+MANUALDESCRIPTION : CVE-2017-2394 : This issue allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption and application crash) via a crafted web site.
+MANUALDESCRIPTION : CVE-2017-2395 : This issue allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption and application crash) via a crafted web site.
+MANUALDESCRIPTION : CVE-2017-2396 : This issue allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption and application crash) via a crafted web site.
+MANUALDESCRIPTION : CVE-2017-2405 : This issue involves the "WebKit Web Inspector" component. It allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption and application crash) via a crafted web site.
+MANUALDESCRIPTION : CVE-2017-2415 : This issue allows remote attackers to execute arbitrary code by leveraging an unspecified "type confusion.".
+MANUALDESCRIPTION : CVE-2017-2419 : This issue allows remote attackers to bypass a Content Security Policy protection mechanism via unspecified vectors.
+MANUALDESCRIPTION : CVE-2017-2433 : This issue allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption and application crash) via a crafted web site.
+MANUALDESCRIPTION : CVE-2017-2442 : This issue involves the "WebKit JavaScript Bindings" component. It allows remote attackers to bypass the Same Origin Policy and obtain sensitive information via a crafted web site.
+MANUALDESCRIPTION : CVE-2017-2445 : This issue allows remote attackers to conduct Universal XSS (UXSS) attacks via crafted frame objects.
+MANUALDESCRIPTION : CVE-2017-2446 : This issue allows remote attackers to execute arbitrary code via a crafted web site that leverages the mishandling of strict mode functions.
+MANUALDESCRIPTION : CVE-2017-2447 : This issue allows remote attackers to obtain sensitive information or cause a denial of service (memory corruption) via a crafted web site.
+MANUALDESCRIPTION : CVE-2017-2454 : This issue allows allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption and application crash) via a crafted web site.
+MANUALDESCRIPTION : CVE-2017-2455 : This issue allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption and application crash) via a crafted web site.
+MANUALDESCRIPTION : CVE-2017-2457 : This issue allows allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption and application crash) via a crafted web site.
+MANUALDESCRIPTION : CVE-2017-2459 : This issue allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption and application crash) via a crafted web site.
+MANUALDESCRIPTION : CVE-2017-2460 : This issue allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption and application crash) via a crafted web site.
+MANUALDESCRIPTION : CVE-2017-2464 : This issue allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption and application crash) via a crafted web site.
+MANUALDESCRIPTION : CVE-2017-2465 : This issue allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption and application crash) via a crafted web site.
+MANUALDESCRIPTION : CVE-2017-2466 : This issue allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption and application crash) via a crafted web site.
+MANUALDESCRIPTION : CVE-2017-2468 : This issue allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption and application crash) via a crafted web site.
+MANUALDESCRIPTION : CVE-2017-2469 : This issue allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption and application crash) via a crafted web site.
+MANUALDESCRIPTION : CVE-2017-2470 : This issue allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption and application crash) via a crafted web site.
+MANUALDESCRIPTION : CVE-2017-2471 : A use-after-free vulnerability allows remote attackers to execute arbitrary code via a crafted web site.
+MANUALDESCRIPTION : CVE-2017-2475 : This issue allows remote attackers to conduct Universal XSS (UXSS) attacks via crafted use of frames on a web site.
+MANUALDESCRIPTION : CVE-2017-2476 : This issue allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption and application crash) via a crafted web site.
+MANUALDESCRIPTION : CVE-2017-2481 : This issue allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption and application crash) via a crafted web site.
