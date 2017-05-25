@@ -1,0 +1,45 @@
+CVE-2017-2496: Apple (2.16.3)
+CVE-2017-2504: lokihardt of Google Project Zero (2.16.1)
+CVE-2017-2505: lokihardt of Google Project Zero (2.16.0)
+CVE-2017-2506: Zheng Huang of the Baidu Security Lab working with Trend Micro’s Zero Day Initiative (2.16.1)
+CVE-2017-2508: lokihardt of Google Project Zero (2.16.0)
+CVE-2017-2510: lokihardt of Google Project Zero (2.16.3)
+CVE-2017-2514: lokihardt of Google Project Zero (2.16.0)
+CVE-2017-2515: lokihardt of Google Project Zero (2.16.1)
+CVE-2017-2521: lokihardt of Google Project Zero (2.16.0)
+CVE-2017-2525: Kai Kang (4B5F5F4B) of Tencent’s Xuanwu Lab (tencent.com) working with Trend Micro’s Zero Day Initiative (2.16.1)
+CVE-2017-2526: Kai Kang (4B5F5F4B) of Tencent’s Xuanwu Lab (tencent.com) working with Trend Micro’s Zero Day Initiative (2.16.1)
+CVE-2017-2528: lokihardt of Google Project Zero (2.16.1)
+CVE-2017-2530: Wei Yuan of Baidu Security Lab (2.16.1)
+CVE-2017-2531: lokihardt of Google Project Zero (2.16.1)
+CVE-2017-2536: Samuel Groß and Niklas Baumstark working with Trend Micro's Zero Day Initiative (2.16.1)
+CVE-2017-2539: Richard Zhu (fluorescence) working with Trend Micro's Zero Day Initiative (2.16.3)
+CVE-2017-2544: 360 Security (@mj0011sec) working with Trend Micro's Zero Day Initiative (2.16.1)
+CVE-2017-2547: lokihardt of Google Project Zero, Team Sniper (Keen Lab and PC Mgr) working with Trend Micro's Zero Day Initiative (2.16.1)
+CVE-2017-2549: lokihardt of Google Project Zero (2.16.1)
+CVE-2017-6980: lokihardt of Google Project Zero (2.16.1)
+CVE-2017-6984: lokihardt of Google Project Zero (2.16.1)
+
+
+MANUALDESCRIPTION: CVE-2017-2496: Impact: Processing maliciously crafted web content may lead to arbitrary code execution or cause a denial of service (memory corruption and application crash). Description: Multiple memory corruption issues were addressed with improved memory handling.
+allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption and application crash) via a crafted web site.
+MANUALDESCRIPTION: CVE-2017-2504: Impact: Processing maliciously crafted web content may lead to universal cross site scripting (UXSS). Description: A logic issue existed in the handling of WebKit Editor commands. This issue was addressed with improved state management.
+MANUALDESCRIPTION: CVE-2017-2505: Impact: Processing maliciously crafted web content may lead to arbitrary code execution or cause a denial of service (memory corruption and application crash). Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-2506: Impact: Processing maliciously crafted web content may lead to arbitrary code execution or cause a denial of service (memory corruption and application crash). Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-2508: Impact: Processing maliciously crafted web content may lead to universal cross site scripting (UXSS). Description: A logic issue existed in the handling of WebKit container nodes. This issue was addressed with improved state management.
+MANUALDESCRIPTION: CVE-2017-2510: Impact: Processing maliciously crafted web content may lead to universal cross site scripting (UXSS). Description: A logic issue existed in the handling of pageshow events. This issue was addressed with improved state management.
+MANUALDESCRIPTION: CVE-2017-2514: Impact: Processing maliciously crafted web content may lead to arbitrary code execution or cause a denial of service (memory corruption and application crash). Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-2515: Impact: Processing maliciously crafted web content may lead to arbitrary code execution or cause a denial of service (memory corruption and application crash). Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-2521: Impact: Processing maliciously crafted web content may lead to arbitrary code execution or cause a denial of service (memory corruption and application crash). Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-2525: Impact: Processing maliciously crafted web content may lead to arbitrary code execution or cause a denial of service (memory corruption and application crash). Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-2526: Impact: Processing maliciously crafted web content may lead to arbitrary code execution or cause a denial of service (memory corruption and application crash). Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-2528: Impact: Processing maliciously crafted web content may lead to universal cross site scripting (UXSS). Description: A logic issue existed in the handling of WebKit cached frames. This issue was addressed with improved state management.
+MANUALDESCRIPTION: CVE-2017-2530: Impact: Processing maliciously crafted web content may lead to arbitrary code execution or cause a denial of service (memory corruption and application crash). Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-2531: Impact: Processing maliciously crafted web content may lead to arbitrary code execution or cause a denial of service (memory corruption and application crash). Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-2536: Impact: Processing maliciously crafted web content may lead to arbitrary code execution or cause a denial of service (memory corruption and application crash). Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-2539: Impact: Processing maliciously crafted web content may lead to arbitrary code execution or cause a denial of service (memory corruption and application crash). Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-2544: Impact: Processing maliciously crafted web content may lead to arbitrary code execution or cause a denial of service (memory corruption and application crash). Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-2547: Impact: Processing maliciously crafted web content may lead to arbitrary code execution or cause a denial of service (memory corruption and application crash). Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-2549: Impact: Processing maliciously crafted web content may lead to universal cross site scripting (UXSS). Description: A logic issue existed in frame loading. This issue was addressed with improved state management.
+MANUALDESCRIPTION: CVE-2017-6980: Impact: Processing maliciously crafted web content may lead to arbitrary code execution or cause a denial of service (memory corruption and application crash). Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-6984: Impact: Processing maliciously crafted web content may lead to arbitrary code execution or cause a denial of service (memory corruption and application crash). Description: Multiple memory corruption issues were addressed with improved memory handling.
