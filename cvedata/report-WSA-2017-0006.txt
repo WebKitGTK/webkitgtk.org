@@ -1,0 +1,49 @@
+CVE-2017-7006: David Kohlbrenner of UC San Diego, an anonymous researcher (2.16.2)
+CVE-2017-7011: xisigr of Tencent's Xuanwu Lab (tencent.com) (2.16.3)
+CVE-2017-7012: Apple (2.16.2)
+CVE-2017-7018: lokihardt of Google Project Zero (2.16.6)
+CVE-2017-7019: Zhiyang Zeng of Tencent Security Platform Department (2.16.2)
+CVE-2017-7020: likemeng of Baidu Security Lab (2.16.1)
+CVE-2017-7030: chenqin of Ant-financial Light-Year Security Lab (蚂蚁金服巴斯光年安全实验室) (2.16.6)
+CVE-2017-7034: chenqin of Ant-financial Light-Year Security Lab (蚂蚁金服巴斯光年安全实验室) (2.16.6)
+CVE-2017-7037: lokihardt of Google Project Zero (2.16.6)
+CVE-2017-7038: Neil Jenkins of FastMail Pty Ltd, Egor Karbutov (@ShikariSenpai) of Digital Security and Egor Saltykov (@ansjdnakjdnajkd) of Digital Security (2.16.2)
+CVE-2017-7039: Ivan Fratric of Google Project Zero (2.16.6)
+CVE-2017-7040: Ivan Fratric of Google Project Zero (2.16.3)
+CVE-2017-7041: Ivan Fratric of Google Project Zero (2.16.2)
+CVE-2017-7042: Ivan Fratric of Google Project Zero (2.16.2)
+CVE-2017-7043: Ivan Fratric of Google Project Zero (2.16.2)
+CVE-2017-7046: Ivan Fratric of Google Project Zero (2.16.6)
+CVE-2017-7048: Ivan Fratric of Google Project Zero (2.16.6)
+CVE-2017-7049: Ivan Fratric of Google Project Zero (2.16.2)
+CVE-2017-7052: cc working with Trend Micro's Zero Day Initiative (2.16.4)
+CVE-2017-7055: The UK's National Cyber Security Centre (NCSC) (2.16.6)
+CVE-2017-7056: lokihardt of Google Project Zero (2.16.6)
+CVE-2017-7059: an anonymous researcher (2.16.3)
+CVE-2017-7061: lokihardt of Google Project Zero (2.16.6)
+CVE-2017-7064: lokihardt of Google Project Zero (2.16.6)
+
+MANUALDESCRIPTION: CVE-2017-7006: Impact: A malicious website may exfiltrate data cross-origin. Description: Processing maliciously crafted web content may allow cross-origin data to be exfiltrated by using SVG filters to conduct a timing side-channel attack. This issue was addressed by not painting the cross-origin buffer into the frame that gets filtered.
+MANUALDESCRIPTION: CVE-2017-7011: Impact: Visiting a malicious website may lead to address bar spoofing. Description: A state management issue was addressed with improved frame handling.
+MANUALDESCRIPTION: CVE-2017-7018: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-7020: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-7030: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-7034: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-7037: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-7039: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-7040: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-7041: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-7042: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-7043: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-7046: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-7048: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-7052: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-7055: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-7056: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-7061: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-7038: Impact: Processing maliciously crafted web content with DOMParser may lead to cross site scripting. Description: A logic issue existed in the handling of DOMParser. This issue was addressed with improved state management.
+MANUALDESCRIPTION: CVE-2017-7059: Impact: Processing maliciously crafted web content with DOMParser may lead to cross site scripting. Description: A logic issue existed in the handling of DOMParser. This issue was addressed with improved state management.
+MANUALDESCRIPTION: CVE-2017-7049: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed through improved memory handling.
+MANUALDESCRIPTION: CVE-2017-7064: Impact: An application may be able to read restricted memory. Description: A memory initialization issue was addressed through improved memory handling.
+MANUALDESCRIPTION: CVE-2017-7019: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-7012: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
