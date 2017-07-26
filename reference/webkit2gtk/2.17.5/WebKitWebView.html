@@ -1,0 +1,2353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitWebView: WebKit2GTK+ Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="index.html" title="WebKit2GTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitWebContext.html" title="WebKitWebContext">
+<link rel="next" href="WebKitAuthenticationRequest.html" title="WebKitAuthenticationRequest">
+<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#WebKitWebView.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#WebKitWebView.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_interfaces">  <span class="dim">|</span> 
+                  <a href="#WebKitWebView.implemented-interfaces" class="shortcut">Implemented Interfaces</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#WebKitWebView.properties" class="shortcut">Properties</a></span><span id="nav_signals">  <span class="dim">|</span> 
+                  <a href="#WebKitWebView.signals" class="shortcut">Signals</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="WebKitWebContext.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="WebKitAuthenticationRequest.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="WebKitWebView"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitWebView.top_of_page"></a>WebKitWebView</span></h2>
+<p>WebKitWebView</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="WebKitWebView.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a href="http://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkWidget-struct"><span class="returnvalue">GtkWidget</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-new" title="webkit_web_view_new ()">webkit_web_view_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkWidget-struct"><span class="returnvalue">GtkWidget</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-new-with-context" title="webkit_web_view_new_with_context ()">webkit_web_view_new_with_context</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkWidget-struct"><span class="returnvalue">GtkWidget</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-new-with-related-view" title="webkit_web_view_new_with_related_view ()">webkit_web_view_new_with_related_view</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkWidget-struct"><span class="returnvalue">GtkWidget</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-new-with-settings" title="webkit_web_view_new_with_settings ()">webkit_web_view_new_with_settings</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkWidget-struct"><span class="returnvalue">GtkWidget</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-new-with-user-content-manager" title="webkit_web_view_new_with_user_content_manager ()">webkit_web_view_new_with_user_content_manager</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-is-ephemeral" title="webkit_web_view_is_ephemeral ()">webkit_web_view_is_ephemeral</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-is-controlled-by-automation" title="webkit_web_view_is_controlled_by_automation ()">webkit_web_view_is_controlled_by_automation</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="WebKitWebContext.html" title="WebKitWebContext"><span class="returnvalue">WebKitWebContext</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-get-context" title="webkit_web_view_get_context ()">webkit_web_view_get_context</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="WebKitUserContentManager.html" title="WebKitUserContentManager"><span class="returnvalue">WebKitUserContentManager</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-get-user-content-manager" title="webkit_web_view_get_user_content_manager ()">webkit_web_view_get_user_content_manager</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="WebKitWebsiteDataManager.html" title="WebKitWebsiteDataManager"><span class="returnvalue">WebKitWebsiteDataManager</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-get-website-data-manager" title="webkit_web_view_get_website_data_manager ()">webkit_web_view_get_website_data_manager</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-try-close" title="webkit_web_view_try_close ()">webkit_web_view_try_close</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-load-uri" title="webkit_web_view_load_uri ()">webkit_web_view_load_uri</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-load-html" title="webkit_web_view_load_html ()">webkit_web_view_load_html</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-load-alternate-html" title="webkit_web_view_load_alternate_html ()">webkit_web_view_load_alternate_html</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-load-plain-text" title="webkit_web_view_load_plain_text ()">webkit_web_view_load_plain_text</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-load-bytes" title="webkit_web_view_load_bytes ()">webkit_web_view_load_bytes</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-load-request" title="webkit_web_view_load_request ()">webkit_web_view_load_request</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-can-go-back" title="webkit_web_view_can_go_back ()">webkit_web_view_can_go_back</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-go-back" title="webkit_web_view_go_back ()">webkit_web_view_go_back</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-can-go-forward" title="webkit_web_view_can_go_forward ()">webkit_web_view_can_go_forward</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-go-forward" title="webkit_web_view_go_forward ()">webkit_web_view_go_forward</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-get-title" title="webkit_web_view_get_title ()">webkit_web_view_get_title</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#guint64"><span class="returnvalue">guint64</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-get-page-id" title="webkit_web_view_get_page_id ()">webkit_web_view_get_page_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-reload" title="webkit_web_view_reload ()">webkit_web_view_reload</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-reload-bypass-cache" title="webkit_web_view_reload_bypass_cache ()">webkit_web_view_reload_bypass_cache</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-stop-loading" title="webkit_web_view_stop_loading ()">webkit_web_view_stop_loading</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-is-loading" title="webkit_web_view_is_loading ()">webkit_web_view_is_loading</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-is-playing-audio" title="webkit_web_view_is_playing_audio ()">webkit_web_view_is_playing_audio</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-get-estimated-load-progress" title="webkit_web_view_get_estimated_load_progress ()">webkit_web_view_get_estimated_load_progress</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-get-custom-charset" title="webkit_web_view_get_custom_charset ()">webkit_web_view_get_custom_charset</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-set-custom-charset" title="webkit_web_view_set_custom_charset ()">webkit_web_view_set_custom_charset</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="WebKitBackForwardList.html" title="WebKitBackForwardList"><span class="returnvalue">WebKitBackForwardList</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-get-back-forward-list" title="webkit_web_view_get_back_forward_list ()">webkit_web_view_get_back_forward_list</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-go-to-back-forward-list-item" title="webkit_web_view_go_to_back_forward_list_item ()">webkit_web_view_go_to_back_forward_list_item</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-get-uri" title="webkit_web_view_get_uri ()">webkit_web_view_get_uri</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">cairo_surface_t</span> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-get-favicon" title="webkit_web_view_get_favicon ()">webkit_web_view_get_favicon</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-set-settings" title="webkit_web_view_set_settings ()">webkit_web_view_set_settings</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="returnvalue">WebKitSettings</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-get-settings" title="webkit_web_view_get_settings ()">webkit_web_view_get_settings</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="WebKitWindowProperties.html" title="WebKitWindowProperties"><span class="returnvalue">WebKitWindowProperties</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-get-window-properties" title="webkit_web_view_get_window_properties ()">webkit_web_view_get_window_properties</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-set-zoom-level" title="webkit_web_view_set_zoom_level ()">webkit_web_view_set_zoom_level</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-get-zoom-level" title="webkit_web_view_get_zoom_level ()">webkit_web_view_get_zoom_level</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-can-execute-editing-command" title="webkit_web_view_can_execute_editing_command ()">webkit_web_view_can_execute_editing_command</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-can-execute-editing-command-finish" title="webkit_web_view_can_execute_editing_command_finish ()">webkit_web_view_can_execute_editing_command_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-execute-editing-command" title="webkit_web_view_execute_editing_command ()">webkit_web_view_execute_editing_command</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-execute-editing-command-with-argument" title="webkit_web_view_execute_editing_command_with_argument ()">webkit_web_view_execute_editing_command_with_argument</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="WebKitFindController.html" title="WebKitFindController"><span class="returnvalue">WebKitFindController</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-get-find-controller" title="webkit_web_view_get_find_controller ()">webkit_web_view_get_find_controller</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="WebKitWebInspector.html" title="WebKitWebInspector"><span class="returnvalue">WebKitWebInspector</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-get-inspector" title="webkit_web_view_get_inspector ()">webkit_web_view_get_inspector</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">JSGlobalContextRef</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-get-javascript-global-context" title="webkit_web_view_get_javascript_global_context ()">webkit_web_view_get_javascript_global_context</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-run-javascript" title="webkit_web_view_run_javascript ()">webkit_web_view_run_javascript</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="WebKitWebView.html#WebKitJavascriptResult"><span class="returnvalue">WebKitJavascriptResult</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-run-javascript-finish" title="webkit_web_view_run_javascript_finish ()">webkit_web_view_run_javascript_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-run-javascript-from-gresource" title="webkit_web_view_run_javascript_from_gresource ()">webkit_web_view_run_javascript_from_gresource</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="WebKitWebView.html#WebKitJavascriptResult"><span class="returnvalue">WebKitJavascriptResult</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-run-javascript-from-gresource-finish" title="webkit_web_view_run_javascript_from_gresource_finish ()">webkit_web_view_run_javascript_from_gresource_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-can-show-mime-type" title="webkit_web_view_can_show_mime_type ()">webkit_web_view_can_show_mime_type</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-save" title="webkit_web_view_save ()">webkit_web_view_save</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://developer.gnome.org/gio/stable/GInputStream.html#GInputStream-struct"><span class="returnvalue">GInputStream</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-save-finish" title="webkit_web_view_save_finish ()">webkit_web_view_save_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-save-to-file" title="webkit_web_view_save_to_file ()">webkit_web_view_save_to_file</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-save-to-file-finish" title="webkit_web_view_save_to_file_finish ()">webkit_web_view_save_to_file_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="WebKitDownload.html" title="WebKitDownload"><span class="returnvalue">WebKitDownload</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-download-uri" title="webkit_web_view_download_uri ()">webkit_web_view_download_uri</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-get-tls-info" title="webkit_web_view_get_tls_info ()">webkit_web_view_get_tls_info</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-get-snapshot" title="webkit_web_view_get_snapshot ()">webkit_web_view_get_snapshot</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">cairo_surface_t</span> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-get-snapshot-finish" title="webkit_web_view_get_snapshot_finish ()">webkit_web_view_get_snapshot_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-set-background-color" title="webkit_web_view_set_background_color ()">webkit_web_view_set_background_color</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-get-background-color" title="webkit_web_view_get_background_color ()">webkit_web_view_get_background_color</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-set-editable" title="webkit_web_view_set_editable ()">webkit_web_view_set_editable</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-is-editable" title="webkit_web_view_is_editable ()">webkit_web_view_is_editable</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="WebKitEditorState.html" title="WebKitEditorState"><span class="returnvalue">WebKitEditorState</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-get-editor-state" title="webkit_web_view_get_editor_state ()">webkit_web_view_get_editor_state</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="WebKitWebView.html#WebKitWebViewSessionState"><span class="returnvalue">WebKitWebViewSessionState</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-get-session-state" title="webkit_web_view_get_session_state ()">webkit_web_view_get_session_state</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-restore-session-state" title="webkit_web_view_restore_session_state ()">webkit_web_view_restore_session_state</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="WebKitWebView.html#WebKitJavascriptResult"><span class="returnvalue">WebKitJavascriptResult</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-javascript-result-ref" title="webkit_javascript_result_ref ()">webkit_javascript_result_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-javascript-result-unref" title="webkit_javascript_result_unref ()">webkit_javascript_result_unref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">JSGlobalContextRef</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-javascript-result-get-global-context" title="webkit_javascript_result_get_global_context ()">webkit_javascript_result_get_global_context</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">JSValueRef</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-javascript-result-get-value" title="webkit_javascript_result_get_value ()">webkit_javascript_result_get_value</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="WebKitWebView.html#WebKitScriptDialogType" title="enum WebKitScriptDialogType"><span class="returnvalue">WebKitScriptDialogType</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-script-dialog-get-dialog-type" title="webkit_script_dialog_get_dialog_type ()">webkit_script_dialog_get_dialog_type</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-script-dialog-get-message" title="webkit_script_dialog_get_message ()">webkit_script_dialog_get_message</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-script-dialog-confirm-set-confirmed" title="webkit_script_dialog_confirm_set_confirmed ()">webkit_script_dialog_confirm_set_confirmed</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-script-dialog-prompt-get-default-text" title="webkit_script_dialog_prompt_get_default_text ()">webkit_script_dialog_prompt_get_default_text</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-script-dialog-prompt-set-text" title="webkit_script_dialog_prompt_set_text ()">webkit_script_dialog_prompt_set_text</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="WebKitWebResource.html" title="WebKitWebResource"><span class="returnvalue">WebKitWebResource</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-get-main-resource" title="webkit_web_view_get_main_resource ()">webkit_web_view_get_main_resource</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="WebKitWebView.html#WebKitWebViewSessionState"><span class="returnvalue">WebKitWebViewSessionState</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-session-state-new" title="webkit_web_view_session_state_new ()">webkit_web_view_session_state_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="WebKitWebView.html#WebKitWebViewSessionState"><span class="returnvalue">WebKitWebViewSessionState</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-session-state-ref" title="webkit_web_view_session_state_ref ()">webkit_web_view_session_state_ref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-session-state-unref" title="webkit_web_view_session_state_unref ()">webkit_web_view_session_state_unref</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://developer.gnome.org/glib/stable/glib-Byte-Arrays.html#GBytes"><span class="returnvalue">GBytes</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebView.html#webkit-web-view-session-state-serialize" title="webkit_web_view_session_state_serialize ()">webkit_web_view_session_state_serialize</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="WebKitWebView.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type">
+<col width="300px" class="properties_name">
+<col width="200px" class="properties_flags">
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="WebKitWebView.html#WebKitWebView--editable" title="The “editable” property">editable</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+<tr>
+<td class="property_type"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_name"><a class="link" href="WebKitWebView.html#WebKitWebView--estimated-load-progress" title="The “estimated-load-progress” property">estimated-load-progress</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a></td>
+<td class="property_name"><a class="link" href="WebKitWebView.html#WebKitWebView--favicon" title="The “favicon” property">favicon</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="WebKitWebView.html#WebKitWebView--is-controlled-by-automation" title="The “is-controlled-by-automation” property">is-controlled-by-automation</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="WebKitWebView.html#WebKitWebView--is-ephemeral" title="The “is-ephemeral” property">is-ephemeral</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="WebKitWebView.html#WebKitWebView--is-loading" title="The “is-loading” property">is-loading</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="WebKitWebView.html#WebKitWebView--is-playing-audio" title="The “is-playing-audio” property">is-playing-audio</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *</td>
+<td class="property_name"><a class="link" href="WebKitWebView.html#WebKitWebView--related-view" title="The “related-view” property">related-view</a></td>
+<td class="property_flags">Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="type">WebKitSettings</span></a> *</td>
+<td class="property_name"><a class="link" href="WebKitWebView.html#WebKitWebView--settings" title="The “settings” property">settings</a></td>
+<td class="property_flags">Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type">
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<td class="property_name"><a class="link" href="WebKitWebView.html#WebKitWebView--title" title="The “title” property">title</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type">
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<td class="property_name"><a class="link" href="WebKitWebView.html#WebKitWebView--uri" title="The “uri” property">uri</a></td>
+<td class="property_flags">Read</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="WebKitUserContentManager.html" title="WebKitUserContentManager"><span class="type">WebKitUserContentManager</span></a> *</td>
+<td class="property_name"><a class="link" href="WebKitWebView.html#WebKitWebView--user-content-manager" title="The “user-content-manager” property">user-content-manager</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="WebKitWebContext.html" title="WebKitWebContext"><span class="type">WebKitWebContext</span></a> *</td>
+<td class="property_name"><a class="link" href="WebKitWebView.html#WebKitWebView--web-context" title="The “web-context” property">web-context</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></td>
+<td class="property_name"><a class="link" href="WebKitWebView.html#WebKitWebView--zoom-level" title="The “zoom-level” property">zoom-level</a></td>
+<td class="property_flags">Read / Write</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="WebKitWebView.signals"></a><h2>Signals</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="signals_return">
+<col width="300px" class="signals_name">
+<col width="200px" class="signals_flags">
+</colgroup>
+<tbody>
+<tr>
+<td class="signal_type"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a></td>
+<td class="signal_name"><a class="link" href="WebKitWebView.html#WebKitWebView-authenticate" title="The “authenticate” signal">authenticate</a></td>
+<td class="signal_flags"><a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="WebKitWebView.html#WebKitWebView-close" title="The “close” signal">close</a></td>
+<td class="signal_flags"><a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a></td>
+<td class="signal_name"><a class="link" href="WebKitWebView.html#WebKitWebView-context-menu" title="The “context-menu” signal">context-menu</a></td>
+<td class="signal_flags"><a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="WebKitWebView.html#WebKitWebView-context-menu-dismissed" title="The “context-menu-dismissed” signal">context-menu-dismissed</a></td>
+<td class="signal_flags"><a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type">
+<a href="http://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkWidget-struct"><span class="returnvalue">GtkWidget</span></a>*</td>
+<td class="signal_name"><a class="link" href="WebKitWebView.html#WebKitWebView-create" title="The “create” signal">create</a></td>
+<td class="signal_flags"><a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a></td>
+<td class="signal_name"><a class="link" href="WebKitWebView.html#WebKitWebView-decide-policy" title="The “decide-policy” signal">decide-policy</a></td>
+<td class="signal_flags"><a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a></td>
+<td class="signal_name"><a class="link" href="WebKitWebView.html#WebKitWebView-enter-fullscreen" title="The “enter-fullscreen” signal">enter-fullscreen</a></td>
+<td class="signal_flags"><a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="WebKitWebView.html#WebKitWebView-insecure-content-detected" title="The “insecure-content-detected” signal">insecure-content-detected</a></td>
+<td class="signal_flags"><a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a></td>
+<td class="signal_name"><a class="link" href="WebKitWebView.html#WebKitWebView-leave-fullscreen" title="The “leave-fullscreen” signal">leave-fullscreen</a></td>
+<td class="signal_flags"><a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="WebKitWebView.html#WebKitWebView-load-changed" title="The “load-changed” signal">load-changed</a></td>
+<td class="signal_flags"><a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a></td>
+<td class="signal_name"><a class="link" href="WebKitWebView.html#WebKitWebView-load-failed" title="The “load-failed” signal">load-failed</a></td>
+<td class="signal_flags"><a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a></td>
+<td class="signal_name"><a class="link" href="WebKitWebView.html#WebKitWebView-load-failed-with-tls-errors" title="The “load-failed-with-tls-errors” signal">load-failed-with-tls-errors</a></td>
+<td class="signal_flags"><a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="WebKitWebView.html#WebKitWebView-mouse-target-changed" title="The “mouse-target-changed” signal">mouse-target-changed</a></td>
+<td class="signal_flags"><a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a></td>
+<td class="signal_name"><a class="link" href="WebKitWebView.html#WebKitWebView-permission-request" title="The “permission-request” signal">permission-request</a></td>
+<td class="signal_flags"><a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a></td>
+<td class="signal_name"><a class="link" href="WebKitWebView.html#WebKitWebView-print" title="The “print” signal">print</a></td>
+<td class="signal_flags"><a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="WebKitWebView.html#WebKitWebView-ready-to-show" title="The “ready-to-show” signal">ready-to-show</a></td>
+<td class="signal_flags"><a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="WebKitWebView.html#WebKitWebView-resource-load-started" title="The “resource-load-started” signal">resource-load-started</a></td>
+<td class="signal_flags"><a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="WebKitWebView.html#WebKitWebView-run-as-modal" title="The “run-as-modal” signal">run-as-modal</a></td>
+<td class="signal_flags"><a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a></td>
+<td class="signal_name"><a class="link" href="WebKitWebView.html#WebKitWebView-run-color-chooser" title="The “run-color-chooser” signal">run-color-chooser</a></td>
+<td class="signal_flags"><a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a></td>
+<td class="signal_name"><a class="link" href="WebKitWebView.html#WebKitWebView-run-file-chooser" title="The “run-file-chooser” signal">run-file-chooser</a></td>
+<td class="signal_flags"><a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a></td>
+<td class="signal_name"><a class="link" href="WebKitWebView.html#WebKitWebView-script-dialog" title="The “script-dialog” signal">script-dialog</a></td>
+<td class="signal_flags"><a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a></td>
+<td class="signal_name"><a class="link" href="WebKitWebView.html#WebKitWebView-show-notification" title="The “show-notification” signal">show-notification</a></td>
+<td class="signal_flags"><a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a></td>
+<td class="signal_name"><a class="link" href="WebKitWebView.html#WebKitWebView-show-option-menu" title="The “show-option-menu” signal">show-option-menu</a></td>
+<td class="signal_flags"><a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="WebKitWebView.html#WebKitWebView-submit-form" title="The “submit-form” signal">submit-form</a></td>
+<td class="signal_flags"><a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a></td>
+<td class="signal_name"><a class="link" href="WebKitWebView.html#WebKitWebView-web-process-crashed" title="The “web-process-crashed” signal">web-process-crashed</a></td>
+<td class="signal_flags"><a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<a name="WebKitJavascriptResult"></a><a name="WebKitScriptDialog"></a><a name="WebKitWebViewSessionState"></a><div class="refsect1">
+<a name="WebKitWebView.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="WebKitWebView.html#WebKitWebView-struct" title="WebKitWebView">WebKitWebView</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="WebKitWebView.html#WebKitLoadEvent" title="enum WebKitLoadEvent">WebKitLoadEvent</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="WebKitWebView.html#WebKitPolicyDecisionType" title="enum WebKitPolicyDecisionType">WebKitPolicyDecisionType</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="WebKitWebView.html#WebKitSaveMode" title="enum WebKitSaveMode">WebKitSaveMode</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="WebKitWebView.html#WebKitInsecureContentEvent" title="enum WebKitInsecureContentEvent">WebKitInsecureContentEvent</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="WebKitWebView.html#WebKitSnapshotOptions" title="enum WebKitSnapshotOptions">WebKitSnapshotOptions</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="WebKitWebView.html#WebKitSnapshotRegion" title="enum WebKitSnapshotRegion">WebKitSnapshotRegion</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="WebKitWebView.html#WEBKIT-EDITING-COMMAND-CUT:CAPS" title="WEBKIT_EDITING_COMMAND_CUT">WEBKIT_EDITING_COMMAND_CUT</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="WebKitWebView.html#WEBKIT-EDITING-COMMAND-COPY:CAPS" title="WEBKIT_EDITING_COMMAND_COPY">WEBKIT_EDITING_COMMAND_COPY</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="WebKitWebView.html#WEBKIT-EDITING-COMMAND-PASTE:CAPS" title="WEBKIT_EDITING_COMMAND_PASTE">WEBKIT_EDITING_COMMAND_PASTE</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="WebKitWebView.html#WEBKIT-EDITING-COMMAND-SELECT-ALL:CAPS" title="WEBKIT_EDITING_COMMAND_SELECT_ALL">WEBKIT_EDITING_COMMAND_SELECT_ALL</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="WebKitWebView.html#WEBKIT-EDITING-COMMAND-UNDO:CAPS" title="WEBKIT_EDITING_COMMAND_UNDO">WEBKIT_EDITING_COMMAND_UNDO</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="WebKitWebView.html#WEBKIT-EDITING-COMMAND-REDO:CAPS" title="WEBKIT_EDITING_COMMAND_REDO">WEBKIT_EDITING_COMMAND_REDO</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="WebKitWebView.html#WEBKIT-EDITING-COMMAND-INSERT-IMAGE:CAPS" title="WEBKIT_EDITING_COMMAND_INSERT_IMAGE">WEBKIT_EDITING_COMMAND_INSERT_IMAGE</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="WebKitWebView.html#WEBKIT-EDITING-COMMAND-CREATE-LINK:CAPS" title="WEBKIT_EDITING_COMMAND_CREATE_LINK">WEBKIT_EDITING_COMMAND_CREATE_LINK</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="WebKitWebView.html#WebKitJavascriptResult-struct" title="WebKitJavascriptResult">WebKitJavascriptResult</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="WebKitWebView.html#WebKitScriptDialog-struct" title="WebKitScriptDialog">WebKitScriptDialog</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="WebKitWebView.html#WebKitScriptDialogType" title="enum WebKitScriptDialogType">WebKitScriptDialogType</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="WebKitWebView.html#WebKitWebViewSessionState-struct" title="WebKitWebViewSessionState">WebKitWebViewSessionState</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="WebKitWebView.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/home/cgarcia/gnome/share/gtk-doc/html/gobject/gobject-Boxed-Types.html">GBoxed</a>
+    <span class="lineart">├──</span> WebKitJavascriptResult
+    <span class="lineart">├──</span> WebKitScriptDialog
+    <span class="lineart">╰──</span> WebKitWebViewSessionState
+    <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span> <a href="http://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkWidget-struct">GtkWidget</a>
+            <span class="lineart">╰──</span> <a href="http://developer.gnome.org/gtk3/stable/GtkContainer.html#GtkContainer-struct">GtkContainer</a>
+                <span class="lineart">╰──</span> WebKitWebViewBase
+                    <span class="lineart">╰──</span> WebKitWebView
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitWebView.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+WebKitWebView implements
+ AtkImplementorIface and  <a href="http://developer.gnome.org/gtk3/stable/GtkBuildable.html#GtkBuildable-struct">GtkBuildable</a>.</p>
+</div>
+<div class="refsect1">
+<a name="WebKitWebView.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="WebKitWebView.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="webkit-web-view-new"></a><h3>webkit_web_view_new ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkWidget-struct"><span class="returnvalue">GtkWidget</span></a> *
+webkit_web_view_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-new-with-context"></a><h3>webkit_web_view_new_with_context ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkWidget-struct"><span class="returnvalue">GtkWidget</span></a> *
+webkit_web_view_new_with_context (<em class="parameter"><code><a class="link" href="WebKitWebContext.html" title="WebKitWebContext"><span class="type">WebKitWebContext</span></a> *context</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-new-with-related-view"></a><h3>webkit_web_view_new_with_related_view ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkWidget-struct"><span class="returnvalue">GtkWidget</span></a> *
+webkit_web_view_new_with_related_view (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-new-with-settings"></a><h3>webkit_web_view_new_with_settings ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkWidget-struct"><span class="returnvalue">GtkWidget</span></a> *
+webkit_web_view_new_with_settings (<em class="parameter"><code><a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="type">WebKitSettings</span></a> *settings</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-new-with-user-content-manager"></a><h3>webkit_web_view_new_with_user_content_manager ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkWidget-struct"><span class="returnvalue">GtkWidget</span></a> *
+webkit_web_view_new_with_user_content_manager
+                               (<em class="parameter"><code><a class="link" href="WebKitUserContentManager.html" title="WebKitUserContentManager"><span class="type">WebKitUserContentManager</span></a> *user_content_manager</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-is-ephemeral"></a><h3>webkit_web_view_is_ephemeral ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+webkit_web_view_is_ephemeral (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-is-controlled-by-automation"></a><h3>webkit_web_view_is_controlled_by_automation ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+webkit_web_view_is_controlled_by_automation
+                               (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-get-context"></a><h3>webkit_web_view_get_context ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitWebContext.html" title="WebKitWebContext"><span class="returnvalue">WebKitWebContext</span></a> *
+webkit_web_view_get_context (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-get-user-content-manager"></a><h3>webkit_web_view_get_user_content_manager ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitUserContentManager.html" title="WebKitUserContentManager"><span class="returnvalue">WebKitUserContentManager</span></a> *
+webkit_web_view_get_user_content_manager
+                               (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-get-website-data-manager"></a><h3>webkit_web_view_get_website_data_manager ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitWebsiteDataManager.html" title="WebKitWebsiteDataManager"><span class="returnvalue">WebKitWebsiteDataManager</span></a> *
+webkit_web_view_get_website_data_manager
+                               (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-try-close"></a><h3>webkit_web_view_try_close ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+webkit_web_view_try_close (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-load-uri"></a><h3>webkit_web_view_load_uri ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+webkit_web_view_load_uri (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                          <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *uri</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-load-html"></a><h3>webkit_web_view_load_html ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+webkit_web_view_load_html (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                           <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *content</code></em>,
+                           <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *base_uri</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-load-alternate-html"></a><h3>webkit_web_view_load_alternate_html ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+webkit_web_view_load_alternate_html (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                                     <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *content</code></em>,
+                                     <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *content_uri</code></em>,
+                                     <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *base_uri</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-load-plain-text"></a><h3>webkit_web_view_load_plain_text ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+webkit_web_view_load_plain_text (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                                 <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *plain_text</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-load-bytes"></a><h3>webkit_web_view_load_bytes ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+webkit_web_view_load_bytes (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                            <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Byte-Arrays.html#GBytes"><span class="type">GBytes</span></a> *bytes</code></em>,
+                            <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *mime_type</code></em>,
+                            <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *encoding</code></em>,
+                            <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *base_uri</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-load-request"></a><h3>webkit_web_view_load_request ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+webkit_web_view_load_request (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                              <em class="parameter"><code><a class="link" href="WebKitURIRequest.html" title="WebKitURIRequest"><span class="type">WebKitURIRequest</span></a> *request</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-can-go-back"></a><h3>webkit_web_view_can_go_back ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+webkit_web_view_can_go_back (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-go-back"></a><h3>webkit_web_view_go_back ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+webkit_web_view_go_back (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-can-go-forward"></a><h3>webkit_web_view_can_go_forward ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+webkit_web_view_can_go_forward (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-go-forward"></a><h3>webkit_web_view_go_forward ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+webkit_web_view_go_forward (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-get-title"></a><h3>webkit_web_view_get_title ()</h3>
+<pre class="programlisting">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+webkit_web_view_get_title (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-get-page-id"></a><h3>webkit_web_view_get_page_id ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#guint64"><span class="returnvalue">guint64</span></a>
+webkit_web_view_get_page_id (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-reload"></a><h3>webkit_web_view_reload ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+webkit_web_view_reload (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-reload-bypass-cache"></a><h3>webkit_web_view_reload_bypass_cache ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+webkit_web_view_reload_bypass_cache (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-stop-loading"></a><h3>webkit_web_view_stop_loading ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+webkit_web_view_stop_loading (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-is-loading"></a><h3>webkit_web_view_is_loading ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+webkit_web_view_is_loading (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-is-playing-audio"></a><h3>webkit_web_view_is_playing_audio ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+webkit_web_view_is_playing_audio (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-get-estimated-load-progress"></a><h3>webkit_web_view_get_estimated_load_progress ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+webkit_web_view_get_estimated_load_progress
+                               (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-get-custom-charset"></a><h3>webkit_web_view_get_custom_charset ()</h3>
+<pre class="programlisting">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+webkit_web_view_get_custom_charset (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-set-custom-charset"></a><h3>webkit_web_view_set_custom_charset ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+webkit_web_view_set_custom_charset (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                                    <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *charset</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-get-back-forward-list"></a><h3>webkit_web_view_get_back_forward_list ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitBackForwardList.html" title="WebKitBackForwardList"><span class="returnvalue">WebKitBackForwardList</span></a> *
+webkit_web_view_get_back_forward_list (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-go-to-back-forward-list-item"></a><h3>webkit_web_view_go_to_back_forward_list_item ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+webkit_web_view_go_to_back_forward_list_item
+                               (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                                <em class="parameter"><code><a class="link" href="WebKitBackForwardListItem.html" title="WebKitBackForwardListItem"><span class="type">WebKitBackForwardListItem</span></a> *list_item</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-get-uri"></a><h3>webkit_web_view_get_uri ()</h3>
+<pre class="programlisting">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+webkit_web_view_get_uri (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-get-favicon"></a><h3>webkit_web_view_get_favicon ()</h3>
+<pre class="programlisting"><span class="returnvalue">cairo_surface_t</span> *
+webkit_web_view_get_favicon (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-set-settings"></a><h3>webkit_web_view_set_settings ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+webkit_web_view_set_settings (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                              <em class="parameter"><code><a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="type">WebKitSettings</span></a> *settings</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-get-settings"></a><h3>webkit_web_view_get_settings ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="returnvalue">WebKitSettings</span></a> *
+webkit_web_view_get_settings (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-get-window-properties"></a><h3>webkit_web_view_get_window_properties ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitWindowProperties.html" title="WebKitWindowProperties"><span class="returnvalue">WebKitWindowProperties</span></a> *
+webkit_web_view_get_window_properties (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-set-zoom-level"></a><h3>webkit_web_view_set_zoom_level ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+webkit_web_view_set_zoom_level (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                                <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> zoom_level</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-get-zoom-level"></a><h3>webkit_web_view_get_zoom_level ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>
+webkit_web_view_get_zoom_level (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-can-execute-editing-command"></a><h3>webkit_web_view_can_execute_editing_command ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+webkit_web_view_can_execute_editing_command
+                               (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                                <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *command</code></em>,
+                                <em class="parameter"><code><a href="http://developer.gnome.org/gio/stable/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                <em class="parameter"><code><a href="http://developer.gnome.org/gio/stable/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                                <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-can-execute-editing-command-finish"></a><h3>webkit_web_view_can_execute_editing_command_finish ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+webkit_web_view_can_execute_editing_command_finish
+                               (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                                <em class="parameter"><code><a href="http://developer.gnome.org/gio/stable/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *result</code></em>,
+                                <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-execute-editing-command"></a><h3>webkit_web_view_execute_editing_command ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+webkit_web_view_execute_editing_command
+                               (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                                <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *command</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-execute-editing-command-with-argument"></a><h3>webkit_web_view_execute_editing_command_with_argument ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+webkit_web_view_execute_editing_command_with_argument
+                               (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                                <em class="parameter"><code>const <span class="type">char</span> *command</code></em>,
+                                <em class="parameter"><code>const <span class="type">char</span> *argument</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-get-find-controller"></a><h3>webkit_web_view_get_find_controller ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitFindController.html" title="WebKitFindController"><span class="returnvalue">WebKitFindController</span></a> *
+webkit_web_view_get_find_controller (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-get-inspector"></a><h3>webkit_web_view_get_inspector ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitWebInspector.html" title="WebKitWebInspector"><span class="returnvalue">WebKitWebInspector</span></a> *
+webkit_web_view_get_inspector (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-get-javascript-global-context"></a><h3>webkit_web_view_get_javascript_global_context ()</h3>
+<pre class="programlisting"><span class="returnvalue">JSGlobalContextRef</span>
+webkit_web_view_get_javascript_global_context
+                               (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-run-javascript"></a><h3>webkit_web_view_run_javascript ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+webkit_web_view_run_javascript (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                                <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *script</code></em>,
+                                <em class="parameter"><code><a href="http://developer.gnome.org/gio/stable/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                <em class="parameter"><code><a href="http://developer.gnome.org/gio/stable/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                                <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-run-javascript-finish"></a><h3>webkit_web_view_run_javascript_finish ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitWebView.html#WebKitJavascriptResult"><span class="returnvalue">WebKitJavascriptResult</span></a> *
+webkit_web_view_run_javascript_finish (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                                       <em class="parameter"><code><a href="http://developer.gnome.org/gio/stable/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *result</code></em>,
+                                       <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-run-javascript-from-gresource"></a><h3>webkit_web_view_run_javascript_from_gresource ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+webkit_web_view_run_javascript_from_gresource
+                               (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                                <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *resource</code></em>,
+                                <em class="parameter"><code><a href="http://developer.gnome.org/gio/stable/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                <em class="parameter"><code><a href="http://developer.gnome.org/gio/stable/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                                <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-run-javascript-from-gresource-finish"></a><h3>webkit_web_view_run_javascript_from_gresource_finish ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitWebView.html#WebKitJavascriptResult"><span class="returnvalue">WebKitJavascriptResult</span></a> *
+webkit_web_view_run_javascript_from_gresource_finish
+                               (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                                <em class="parameter"><code><a href="http://developer.gnome.org/gio/stable/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *result</code></em>,
+                                <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-can-show-mime-type"></a><h3>webkit_web_view_can_show_mime_type ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+webkit_web_view_can_show_mime_type (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                                    <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *mime_type</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-save"></a><h3>webkit_web_view_save ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+webkit_web_view_save (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                      <em class="parameter"><code><a class="link" href="WebKitWebView.html#WebKitSaveMode" title="enum WebKitSaveMode"><span class="type">WebKitSaveMode</span></a> save_mode</code></em>,
+                      <em class="parameter"><code><a href="http://developer.gnome.org/gio/stable/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                      <em class="parameter"><code><a href="http://developer.gnome.org/gio/stable/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                      <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-save-finish"></a><h3>webkit_web_view_save_finish ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/gio/stable/GInputStream.html#GInputStream-struct"><span class="returnvalue">GInputStream</span></a> *
+webkit_web_view_save_finish (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                             <em class="parameter"><code><a href="http://developer.gnome.org/gio/stable/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *result</code></em>,
+                             <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-save-to-file"></a><h3>webkit_web_view_save_to_file ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+webkit_web_view_save_to_file (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                              <em class="parameter"><code><a href="http://developer.gnome.org/gio/stable/GFile.html#GFile-struct"><span class="type">GFile</span></a> *file</code></em>,
+                              <em class="parameter"><code><a class="link" href="WebKitWebView.html#WebKitSaveMode" title="enum WebKitSaveMode"><span class="type">WebKitSaveMode</span></a> save_mode</code></em>,
+                              <em class="parameter"><code><a href="http://developer.gnome.org/gio/stable/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                              <em class="parameter"><code><a href="http://developer.gnome.org/gio/stable/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                              <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-save-to-file-finish"></a><h3>webkit_web_view_save_to_file_finish ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+webkit_web_view_save_to_file_finish (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                                     <em class="parameter"><code><a href="http://developer.gnome.org/gio/stable/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *result</code></em>,
+                                     <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-download-uri"></a><h3>webkit_web_view_download_uri ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitDownload.html" title="WebKitDownload"><span class="returnvalue">WebKitDownload</span></a> *
+webkit_web_view_download_uri (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                              <em class="parameter"><code>const <span class="type">char</span> *uri</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-get-tls-info"></a><h3>webkit_web_view_get_tls_info ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+webkit_web_view_get_tls_info (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                              <em class="parameter"><code><a href="http://developer.gnome.org/gio/stable/GTlsCertificate.html#GTlsCertificate-struct"><span class="type">GTlsCertificate</span></a> **certificate</code></em>,
+                              <em class="parameter"><code><a href="http://developer.gnome.org/gio/stable/gio-TLS-Overview.html#GTlsCertificateFlags"><span class="type">GTlsCertificateFlags</span></a> *errors</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-get-snapshot"></a><h3>webkit_web_view_get_snapshot ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+webkit_web_view_get_snapshot (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                              <em class="parameter"><code><a class="link" href="WebKitWebView.html#WebKitSnapshotRegion" title="enum WebKitSnapshotRegion"><span class="type">WebKitSnapshotRegion</span></a> region</code></em>,
+                              <em class="parameter"><code><a class="link" href="WebKitWebView.html#WebKitSnapshotOptions" title="enum WebKitSnapshotOptions"><span class="type">WebKitSnapshotOptions</span></a> options</code></em>,
+                              <em class="parameter"><code><a href="http://developer.gnome.org/gio/stable/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                              <em class="parameter"><code><a href="http://developer.gnome.org/gio/stable/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                              <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-get-snapshot-finish"></a><h3>webkit_web_view_get_snapshot_finish ()</h3>
+<pre class="programlisting"><span class="returnvalue">cairo_surface_t</span> *
+webkit_web_view_get_snapshot_finish (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                                     <em class="parameter"><code><a href="http://developer.gnome.org/gio/stable/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *result</code></em>,
+                                     <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-set-background-color"></a><h3>webkit_web_view_set_background_color ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+webkit_web_view_set_background_color (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                                      <em class="parameter"><code>const <a href="http://developer.gnome.org/gdk3/stable/gdk3-RGBA-Colors.html#GdkRGBA"><span class="type">GdkRGBA</span></a> *rgba</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-get-background-color"></a><h3>webkit_web_view_get_background_color ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+webkit_web_view_get_background_color (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                                      <em class="parameter"><code><a href="http://developer.gnome.org/gdk3/stable/gdk3-RGBA-Colors.html#GdkRGBA"><span class="type">GdkRGBA</span></a> *rgba</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-set-editable"></a><h3>webkit_web_view_set_editable ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+webkit_web_view_set_editable (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                              <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> editable</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-is-editable"></a><h3>webkit_web_view_is_editable ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+webkit_web_view_is_editable (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-get-editor-state"></a><h3>webkit_web_view_get_editor_state ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitEditorState.html" title="WebKitEditorState"><span class="returnvalue">WebKitEditorState</span></a> *
+webkit_web_view_get_editor_state (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-get-session-state"></a><h3>webkit_web_view_get_session_state ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitWebView.html#WebKitWebViewSessionState"><span class="returnvalue">WebKitWebViewSessionState</span></a> *
+webkit_web_view_get_session_state (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-restore-session-state"></a><h3>webkit_web_view_restore_session_state ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+webkit_web_view_restore_session_state (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>,
+                                       <em class="parameter"><code><a class="link" href="WebKitWebView.html#WebKitWebViewSessionState"><span class="type">WebKitWebViewSessionState</span></a> *state</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-javascript-result-ref"></a><h3>webkit_javascript_result_ref ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitWebView.html#WebKitJavascriptResult"><span class="returnvalue">WebKitJavascriptResult</span></a> *
+webkit_javascript_result_ref (<em class="parameter"><code><a class="link" href="WebKitWebView.html#WebKitJavascriptResult"><span class="type">WebKitJavascriptResult</span></a> *js_result</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-javascript-result-unref"></a><h3>webkit_javascript_result_unref ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+webkit_javascript_result_unref (<em class="parameter"><code><a class="link" href="WebKitWebView.html#WebKitJavascriptResult"><span class="type">WebKitJavascriptResult</span></a> *js_result</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-javascript-result-get-global-context"></a><h3>webkit_javascript_result_get_global_context ()</h3>
+<pre class="programlisting"><span class="returnvalue">JSGlobalContextRef</span>
+webkit_javascript_result_get_global_context
+                               (<em class="parameter"><code><a class="link" href="WebKitWebView.html#WebKitJavascriptResult"><span class="type">WebKitJavascriptResult</span></a> *js_result</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-javascript-result-get-value"></a><h3>webkit_javascript_result_get_value ()</h3>
+<pre class="programlisting"><span class="returnvalue">JSValueRef</span>
+webkit_javascript_result_get_value (<em class="parameter"><code><a class="link" href="WebKitWebView.html#WebKitJavascriptResult"><span class="type">WebKitJavascriptResult</span></a> *js_result</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-script-dialog-get-dialog-type"></a><h3>webkit_script_dialog_get_dialog_type ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitWebView.html#WebKitScriptDialogType" title="enum WebKitScriptDialogType"><span class="returnvalue">WebKitScriptDialogType</span></a>
+webkit_script_dialog_get_dialog_type (<em class="parameter"><code><a class="link" href="WebKitWebView.html#WebKitScriptDialog"><span class="type">WebKitScriptDialog</span></a> *dialog</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-script-dialog-get-message"></a><h3>webkit_script_dialog_get_message ()</h3>
+<pre class="programlisting">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+webkit_script_dialog_get_message (<em class="parameter"><code><a class="link" href="WebKitWebView.html#WebKitScriptDialog"><span class="type">WebKitScriptDialog</span></a> *dialog</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-script-dialog-confirm-set-confirmed"></a><h3>webkit_script_dialog_confirm_set_confirmed ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+webkit_script_dialog_confirm_set_confirmed
+                               (<em class="parameter"><code><a class="link" href="WebKitWebView.html#WebKitScriptDialog"><span class="type">WebKitScriptDialog</span></a> *dialog</code></em>,
+                                <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> confirmed</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-script-dialog-prompt-get-default-text"></a><h3>webkit_script_dialog_prompt_get_default_text ()</h3>
+<pre class="programlisting">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+webkit_script_dialog_prompt_get_default_text
+                               (<em class="parameter"><code><a class="link" href="WebKitWebView.html#WebKitScriptDialog"><span class="type">WebKitScriptDialog</span></a> *dialog</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-script-dialog-prompt-set-text"></a><h3>webkit_script_dialog_prompt_set_text ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+webkit_script_dialog_prompt_set_text (<em class="parameter"><code><a class="link" href="WebKitWebView.html#WebKitScriptDialog"><span class="type">WebKitScriptDialog</span></a> *dialog</code></em>,
+                                      <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *text</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-get-main-resource"></a><h3>webkit_web_view_get_main_resource ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitWebResource.html" title="WebKitWebResource"><span class="returnvalue">WebKitWebResource</span></a> *
+webkit_web_view_get_main_resource (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-session-state-new"></a><h3>webkit_web_view_session_state_new ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitWebView.html#WebKitWebViewSessionState"><span class="returnvalue">WebKitWebViewSessionState</span></a> *
+webkit_web_view_session_state_new (<em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Byte-Arrays.html#GBytes"><span class="type">GBytes</span></a> *data</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-session-state-ref"></a><h3>webkit_web_view_session_state_ref ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitWebView.html#WebKitWebViewSessionState"><span class="returnvalue">WebKitWebViewSessionState</span></a> *
+webkit_web_view_session_state_ref (<em class="parameter"><code><a class="link" href="WebKitWebView.html#WebKitWebViewSessionState"><span class="type">WebKitWebViewSessionState</span></a> *state</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-session-state-unref"></a><h3>webkit_web_view_session_state_unref ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+webkit_web_view_session_state_unref (<em class="parameter"><code><a class="link" href="WebKitWebView.html#WebKitWebViewSessionState"><span class="type">WebKitWebViewSessionState</span></a> *state</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-web-view-session-state-serialize"></a><h3>webkit_web_view_session_state_serialize ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Byte-Arrays.html#GBytes"><span class="returnvalue">GBytes</span></a> *
+webkit_web_view_session_state_serialize
+                               (<em class="parameter"><code><a class="link" href="WebKitWebView.html#WebKitWebViewSessionState"><span class="type">WebKitWebViewSessionState</span></a> *state</code></em>);</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitWebView.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="WebKitWebView-struct"></a><h3>WebKitWebView</h3>
+<pre class="programlisting">typedef struct _WebKitWebView WebKitWebView;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitLoadEvent"></a><h3>enum WebKitLoadEvent</h3>
+<p>Enum values used to denote the different events that happen during a
+<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> load operation.</p>
+<div class="refsect3">
+<a name="WebKitLoadEvent.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="WEBKIT-LOAD-STARTED:CAPS"></a>WEBKIT_LOAD_STARTED</p></td>
+<td class="enum_member_description">
+<p>A new load request has been made.
+No data has been received yet, empty structures have
+been allocated to perform the load; the load may still
+fail due to transport issues such as not being able to
+resolve a name, or connect to a port.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="WEBKIT-LOAD-REDIRECTED:CAPS"></a>WEBKIT_LOAD_REDIRECTED</p></td>
+<td class="enum_member_description">
+<p>A provisional data source received
+a server redirect.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="WEBKIT-LOAD-COMMITTED:CAPS"></a>WEBKIT_LOAD_COMMITTED</p></td>
+<td class="enum_member_description">
+<p>The content started arriving for a page load.
+The necessary transport requirements are established, and the
+load is being performed.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="WEBKIT-LOAD-FINISHED:CAPS"></a>WEBKIT_LOAD_FINISHED</p></td>
+<td class="enum_member_description">
+<p>Load completed. All resources are done loading
+or there was an error during the load operation.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitPolicyDecisionType"></a><h3>enum WebKitPolicyDecisionType</h3>
+<p>Enum values used for determining the type of a policy decision during
+<a class="link" href="WebKitWebView.html#WebKitWebView-decide-policy" title="The “decide-policy” signal"><span class="type">“decide-policy”</span></a>.</p>
+<div class="refsect3">
+<a name="WebKitPolicyDecisionType.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="WEBKIT-POLICY-DECISION-TYPE-NAVIGATION-ACTION:CAPS"></a>WEBKIT_POLICY_DECISION_TYPE_NAVIGATION_ACTION</p></td>
+<td class="enum_member_description">
+<p>This type of policy decision
+  is requested when WebKit is about to navigate to a new page in either the
+  main frame or a subframe. Acceptable policy decisions are either
+  <a class="link" href="WebKitPolicyDecision.html#webkit-policy-decision-use" title="webkit_policy_decision_use ()"><code class="function">webkit_policy_decision_use()</code></a> or <a class="link" href="WebKitPolicyDecision.html#webkit-policy-decision-ignore" title="webkit_policy_decision_ignore ()"><code class="function">webkit_policy_decision_ignore()</code></a>. This
+  type of policy decision is always a <a class="link" href="WebKitNavigationPolicyDecision.html" title="WebKitNavigationPolicyDecision"><span class="type">WebKitNavigationPolicyDecision</span></a>.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="WEBKIT-POLICY-DECISION-TYPE-NEW-WINDOW-ACTION:CAPS"></a>WEBKIT_POLICY_DECISION_TYPE_NEW_WINDOW_ACTION</p></td>
+<td class="enum_member_description">
+<p>This type of policy decision
+  is requested when WebKit is about to create a new window. Acceptable policy
+  decisions are either <a class="link" href="WebKitPolicyDecision.html#webkit-policy-decision-use" title="webkit_policy_decision_use ()"><code class="function">webkit_policy_decision_use()</code></a> or
+  <a class="link" href="WebKitPolicyDecision.html#webkit-policy-decision-ignore" title="webkit_policy_decision_ignore ()"><code class="function">webkit_policy_decision_ignore()</code></a>. This type of policy decision is always
+  a <a class="link" href="WebKitNavigationPolicyDecision.html" title="WebKitNavigationPolicyDecision"><span class="type">WebKitNavigationPolicyDecision</span></a>. These decisions are useful for implementing
+  special actions for new windows, such as forcing the new window to open
+  in a tab when a keyboard modifier is active or handling a special
+  target attribute on &lt;a&gt; elements.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="WEBKIT-POLICY-DECISION-TYPE-RESPONSE:CAPS"></a>WEBKIT_POLICY_DECISION_TYPE_RESPONSE</p></td>
+<td class="enum_member_description">
+<p>This type of decision is used when WebKit has
+  received a response for a network resource and is about to start the load.
+  Note that these resources include all subresources of a page such as images
+  and stylesheets as well as main documents. Appropriate policy responses to
+  this decision are <a class="link" href="WebKitPolicyDecision.html#webkit-policy-decision-use" title="webkit_policy_decision_use ()"><code class="function">webkit_policy_decision_use()</code></a>, <a class="link" href="WebKitPolicyDecision.html#webkit-policy-decision-ignore" title="webkit_policy_decision_ignore ()"><code class="function">webkit_policy_decision_ignore()</code></a>,
+  or <a class="link" href="WebKitPolicyDecision.html#webkit-policy-decision-download" title="webkit_policy_decision_download ()"><code class="function">webkit_policy_decision_download()</code></a>. This type of policy decision is always
+  a <a class="link" href="WebKitResponsePolicyDecision.html" title="WebKitResponsePolicyDecision"><span class="type">WebKitResponsePolicyDecision</span></a>. This decision is useful for forcing
+  some types of resources to be downloaded rather than rendered in the WebView
+  or to block the transfer of resources entirely.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitSaveMode"></a><h3>enum WebKitSaveMode</h3>
+<p>Enum values to specify the different ways in which a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+can save its current web page into a self-contained file.</p>
+<div class="refsect3">
+<a name="WebKitSaveMode.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody><tr>
+<td class="enum_member_name"><p><a name="WEBKIT-SAVE-MODE-MHTML:CAPS"></a>WEBKIT_SAVE_MODE_MHTML</p></td>
+<td class="enum_member_description">
+<p>Save the current page using the MHTML format.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitInsecureContentEvent"></a><h3>enum WebKitInsecureContentEvent</h3>
+<p>Enum values used to denote the different events which can trigger
+the detection of insecure content.</p>
+<div class="refsect3">
+<a name="WebKitInsecureContentEvent.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="WEBKIT-INSECURE-CONTENT-RUN:CAPS"></a>WEBKIT_INSECURE_CONTENT_RUN</p></td>
+<td class="enum_member_description">
+<p>Insecure content has been detected by
+trying to execute any kind of logic (e.g. a script) from an
+untrusted source.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="WEBKIT-INSECURE-CONTENT-DISPLAYED:CAPS"></a>WEBKIT_INSECURE_CONTENT_DISPLAYED</p></td>
+<td class="enum_member_description">
+<p>Insecure content has been
+detected by trying to display any kind of resource (e.g. an image)
+from an untrusted source.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitSnapshotOptions"></a><h3>enum WebKitSnapshotOptions</h3>
+<p>Enum values used to specify options when taking a snapshot
+from a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>.</p>
+<div class="refsect3">
+<a name="WebKitSnapshotOptions.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="WEBKIT-SNAPSHOT-OPTIONS-NONE:CAPS"></a>WEBKIT_SNAPSHOT_OPTIONS_NONE</p></td>
+<td class="enum_member_description">
+<p>Do not include any special options.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="WEBKIT-SNAPSHOT-OPTIONS-INCLUDE-SELECTION-HIGHLIGHTING:CAPS"></a>WEBKIT_SNAPSHOT_OPTIONS_INCLUDE_SELECTION_HIGHLIGHTING</p></td>
+<td class="enum_member_description">
+<p>Whether to include in the
+snapshot the highlight of the selected content.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="WEBKIT-SNAPSHOT-OPTIONS-TRANSPARENT-BACKGROUND:CAPS"></a>WEBKIT_SNAPSHOT_OPTIONS_TRANSPARENT_BACKGROUND</p></td>
+<td class="enum_member_description">
+<p>Do not fill the background with white before
+rendering the snapshot. Since 2.8</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitSnapshotRegion"></a><h3>enum WebKitSnapshotRegion</h3>
+<p>Enum values used to specify the region from which to get a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+snapshot</p>
+<div class="refsect3">
+<a name="WebKitSnapshotRegion.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="WEBKIT-SNAPSHOT-REGION-VISIBLE:CAPS"></a>WEBKIT_SNAPSHOT_REGION_VISIBLE</p></td>
+<td class="enum_member_description">
+<p>Specifies a snapshot only for the area that is
+visible in the webview</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="WEBKIT-SNAPSHOT-REGION-FULL-DOCUMENT:CAPS"></a>WEBKIT_SNAPSHOT_REGION_FULL_DOCUMENT</p></td>
+<td class="enum_member_description">
+<p>A snapshot of the entire document.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WEBKIT-EDITING-COMMAND-CUT:CAPS"></a><h3>WEBKIT_EDITING_COMMAND_CUT</h3>
+<pre class="programlisting">#define WEBKIT_EDITING_COMMAND_CUT "Cut"
+</pre>
+<p>The cut clipboard command. Copies the current selection inside
+a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> to the clipboard and deletes the selected content.
+You can check whether it's possible to execute the command with
+<a class="link" href="WebKitWebView.html#webkit-web-view-can-execute-editing-command" title="webkit_web_view_can_execute_editing_command ()"><code class="function">webkit_web_view_can_execute_editing_command()</code></a>. In general it's
+possible to cut to the clipboard when the <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> content is
+editable and there is an active selection.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WEBKIT-EDITING-COMMAND-COPY:CAPS"></a><h3>WEBKIT_EDITING_COMMAND_COPY</h3>
+<pre class="programlisting">#define WEBKIT_EDITING_COMMAND_COPY "Copy"
+</pre>
+<p>The copy clipboard command. Copies the current selection inside
+a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> to the clipboard.
+You can check whether it's possible to execute the command with
+<a class="link" href="WebKitWebView.html#webkit-web-view-can-execute-editing-command" title="webkit_web_view_can_execute_editing_command ()"><code class="function">webkit_web_view_can_execute_editing_command()</code></a>. In general it's
+possible to copy to the clipboard when there is an active selection
+inside the <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WEBKIT-EDITING-COMMAND-PASTE:CAPS"></a><h3>WEBKIT_EDITING_COMMAND_PASTE</h3>
+<pre class="programlisting">#define WEBKIT_EDITING_COMMAND_PASTE "Paste"
+</pre>
+<p>The paste clipboard command. Pastes the contents of the clipboard to
+a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>.
+You can check whether it's possible to execute the command with
+<a class="link" href="WebKitWebView.html#webkit-web-view-can-execute-editing-command" title="webkit_web_view_can_execute_editing_command ()"><code class="function">webkit_web_view_can_execute_editing_command()</code></a>. In general it's possible
+to paste from the clipboard when the <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> content is editable
+and clipboard is not empty.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WEBKIT-EDITING-COMMAND-SELECT-ALL:CAPS"></a><h3>WEBKIT_EDITING_COMMAND_SELECT_ALL</h3>
+<pre class="programlisting">#define WEBKIT_EDITING_COMMAND_SELECT_ALL "SelectAll"
+</pre>
+<p>The select all command. Selects all the content of the current text field in
+a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>.
+It is always possible to select all text, no matter whether the
+<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> content is editable or not. You can still check it
+with <a class="link" href="WebKitWebView.html#webkit-web-view-can-execute-editing-command" title="webkit_web_view_can_execute_editing_command ()"><code class="function">webkit_web_view_can_execute_editing_command()</code></a>.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WEBKIT-EDITING-COMMAND-UNDO:CAPS"></a><h3>WEBKIT_EDITING_COMMAND_UNDO</h3>
+<pre class="programlisting">#define WEBKIT_EDITING_COMMAND_UNDO "Undo"
+</pre>
+<p>The undo command. Undoes the last editing command in a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>.
+You can check whether it's possible to execute the command with
+<a class="link" href="WebKitWebView.html#webkit-web-view-can-execute-editing-command" title="webkit_web_view_can_execute_editing_command ()"><code class="function">webkit_web_view_can_execute_editing_command()</code></a>. It's only possible
+to undo a command after a previously executed editing operation.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WEBKIT-EDITING-COMMAND-REDO:CAPS"></a><h3>WEBKIT_EDITING_COMMAND_REDO</h3>
+<pre class="programlisting">#define WEBKIT_EDITING_COMMAND_REDO "Redo"
+</pre>
+<p>The redo command. Redoes a previously undone editing command in
+a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>.
+You can check whether it's possible to execute the command with
+<a class="link" href="WebKitWebView.html#webkit-web-view-can-execute-editing-command" title="webkit_web_view_can_execute_editing_command ()"><code class="function">webkit_web_view_can_execute_editing_command()</code></a>. It's only possible
+to redo a command when it has been previously undone.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WEBKIT-EDITING-COMMAND-INSERT-IMAGE:CAPS"></a><h3>WEBKIT_EDITING_COMMAND_INSERT_IMAGE</h3>
+<pre class="programlisting">#define WEBKIT_EDITING_COMMAND_INSERT_IMAGE "InsertImage"
+</pre>
+<p>The insert image command. Creates an image element that is inserted at
+the current cursor position. It receives an URI as argument,
+that is used as the image source. This command should be executed with
+<a class="link" href="WebKitWebView.html#webkit-web-view-execute-editing-command-with-argument" title="webkit_web_view_execute_editing_command_with_argument ()"><code class="function">webkit_web_view_execute_editing_command_with_argument()</code></a>.</p>
+<p class="since">Since: <a class="link" href="api-index-2-10.html#api-index-2.10">2.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WEBKIT-EDITING-COMMAND-CREATE-LINK:CAPS"></a><h3>WEBKIT_EDITING_COMMAND_CREATE_LINK</h3>
+<pre class="programlisting">#define WEBKIT_EDITING_COMMAND_CREATE_LINK "CreateLink"
+</pre>
+<p>The create link command. Creates a link element that is inserted at
+the current cursor position. If there's a selection, the selected text
+will be used as the link text, otherwise the URL itself will be used.
+It receives the link URL as argument. This command should be executed
+with <a class="link" href="WebKitWebView.html#webkit-web-view-execute-editing-command-with-argument" title="webkit_web_view_execute_editing_command_with_argument ()"><code class="function">webkit_web_view_execute_editing_command_with_argument()</code></a></p>
+<p class="since">Since: <a class="link" href="api-index-2-10.html#api-index-2.10">2.10</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitJavascriptResult-struct"></a><h3>WebKitJavascriptResult</h3>
+<pre class="programlisting">typedef struct _WebKitJavascriptResult WebKitJavascriptResult;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitScriptDialog-struct"></a><h3>WebKitScriptDialog</h3>
+<pre class="programlisting">typedef struct _WebKitScriptDialog WebKitScriptDialog;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitScriptDialogType"></a><h3>enum WebKitScriptDialogType</h3>
+<p>Enum values used for determining the type of <a class="link" href="WebKitWebView.html#WebKitScriptDialog"><span class="type">WebKitScriptDialog</span></a></p>
+<div class="refsect3">
+<a name="WebKitScriptDialogType.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="WEBKIT-SCRIPT-DIALOG-ALERT:CAPS"></a>WEBKIT_SCRIPT_DIALOG_ALERT</p></td>
+<td class="enum_member_description">
+<p>Alert script dialog, used to show a
+message to the user.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="WEBKIT-SCRIPT-DIALOG-CONFIRM:CAPS"></a>WEBKIT_SCRIPT_DIALOG_CONFIRM</p></td>
+<td class="enum_member_description">
+<p>Confirm script dialog, used to ask
+confirmation to the user.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="WEBKIT-SCRIPT-DIALOG-PROMPT:CAPS"></a>WEBKIT_SCRIPT_DIALOG_PROMPT</p></td>
+<td class="enum_member_description">
+<p>Prompt script dialog, used to ask
+information to the user.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="WEBKIT-SCRIPT-DIALOG-BEFORE-UNLOAD-CONFIRM:CAPS"></a>WEBKIT_SCRIPT_DIALOG_BEFORE_UNLOAD_CONFIRM</p></td>
+<td class="enum_member_description">
+<p>Before unload confirm dialog,
+used to ask confirmation to leave the current page to the user. Since 2.12</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebViewSessionState-struct"></a><h3>WebKitWebViewSessionState</h3>
+<pre class="programlisting">typedef struct _WebKitWebViewSessionState WebKitWebViewSessionState;</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitWebView.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitWebView--editable"></a><h3>The <code class="literal">“editable”</code> property</h3>
+<pre class="programlisting">  “editable”                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Whether the content can be modified by the user.</p>
+<p>Flags: Read / Write</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView--estimated-load-progress"></a><h3>The <code class="literal">“estimated-load-progress”</code> property</h3>
+<pre class="programlisting">  “estimated-load-progress”  <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
+<p>An estimate of the percent completion for a document load.</p>
+<p>Flags: Read</p>
+<p>Allowed values: [0,1]</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView--favicon"></a><h3>The <code class="literal">“favicon”</code> property</h3>
+<pre class="programlisting">  “favicon”                  <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a></pre>
+<p>The favicon associated to the view, if any.</p>
+<p>Flags: Read</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView--is-controlled-by-automation"></a><h3>The <code class="literal">“is-controlled-by-automation”</code> property</h3>
+<pre class="programlisting">  “is-controlled-by-automation” <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Whether the web view is controlled by automation.</p>
+<p>Flags: Read / Write / Construct Only</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView--is-ephemeral"></a><h3>The <code class="literal">“is-ephemeral”</code> property</h3>
+<pre class="programlisting">  “is-ephemeral”             <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Whether the web view is ephemeral.</p>
+<p>Flags: Read / Write / Construct Only</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView--is-loading"></a><h3>The <code class="literal">“is-loading”</code> property</h3>
+<pre class="programlisting">  “is-loading”               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Whether the view is loading a page.</p>
+<p>Flags: Read</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView--is-playing-audio"></a><h3>The <code class="literal">“is-playing-audio”</code> property</h3>
+<pre class="programlisting">  “is-playing-audio”         <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Whether the view is playing audio.</p>
+<p>Flags: Read</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView--related-view"></a><h3>The <code class="literal">“related-view”</code> property</h3>
+<pre class="programlisting">  “related-view”             <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *</pre>
+<p>The related WebKitWebView used when creating the view to share the same web process.</p>
+<p>Flags: Write / Construct Only</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView--settings"></a><h3>The <code class="literal">“settings”</code> property</h3>
+<pre class="programlisting">  “settings”                 <a class="link" href="WebKitSettings.html" title="WebKitSettings"><span class="type">WebKitSettings</span></a> *</pre>
+<p>The WebKitSettings of the view.</p>
+<p>Flags: Write / Construct</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView--title"></a><h3>The <code class="literal">“title”</code> property</h3>
+<pre class="programlisting">  “title”                    <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<p>Main frame document title.</p>
+<p>Flags: Read</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView--uri"></a><h3>The <code class="literal">“uri”</code> property</h3>
+<pre class="programlisting">  “uri”                      <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<p>The current active URI of the view.</p>
+<p>Flags: Read</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView--user-content-manager"></a><h3>The <code class="literal">“user-content-manager”</code> property</h3>
+<pre class="programlisting">  “user-content-manager”     <a class="link" href="WebKitUserContentManager.html" title="WebKitUserContentManager"><span class="type">WebKitUserContentManager</span></a> *</pre>
+<p>The WebKitUserContentManager of the view.</p>
+<p>Flags: Read / Write / Construct Only</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView--web-context"></a><h3>The <code class="literal">“web-context”</code> property</h3>
+<pre class="programlisting">  “web-context”              <a class="link" href="WebKitWebContext.html" title="WebKitWebContext"><span class="type">WebKitWebContext</span></a> *</pre>
+<p>The web context for the view.</p>
+<p>Flags: Read / Write / Construct Only</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView--zoom-level"></a><h3>The <code class="literal">“zoom-level”</code> property</h3>
+<pre class="programlisting">  “zoom-level”               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
+<p>The zoom level of the view content.</p>
+<p>Flags: Read / Write</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 1</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitWebView.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="WebKitWebView-authenticate"></a><h3>The <code class="literal">“authenticate”</code> signal</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+user_function (<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>               *webkitwebview,
+               <a class="link" href="WebKitAuthenticationRequest.html" title="WebKitAuthenticationRequest"><span class="type">WebKitAuthenticationRequest</span></a> *arg1,
+               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>                     user_data)</pre>
+<p>Flags: <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView-close"></a><h3>The <code class="literal">“close”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *webkitwebview,
+               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>       user_data)</pre>
+<p>Flags: <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView-context-menu"></a><h3>The <code class="literal">“context-menu”</code> signal</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+user_function (<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>       *webkitwebview,
+               <a class="link" href="WebKitContextMenu.html" title="WebKitContextMenu"><span class="type">WebKitContextMenu</span></a>   *arg1,
+               <a href="http://developer.gnome.org/gdk3/stable/gdk3-Event-Structures.html#GdkEvent"><span class="type">GdkEvent</span></a>            *arg2,
+               <a class="link" href="WebKitHitTestResult.html" title="WebKitHitTestResult"><span class="type">WebKitHitTestResult</span></a> *arg3,
+               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>             user_data)</pre>
+<p>Flags: <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView-context-menu-dismissed"></a><h3>The <code class="literal">“context-menu-dismissed”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *webkitwebview,
+               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>       user_data)</pre>
+<p>Flags: <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView-create"></a><h3>The <code class="literal">“create”</code> signal</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkWidget-struct"><span class="returnvalue">GtkWidget</span></a>*
+user_function (<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>          *webkitwebview,
+               <a class="link" href="WebKitNavigationAction.html" title="WebKitNavigationAction"><span class="type">WebKitNavigationAction</span></a> *arg1,
+               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>                user_data)</pre>
+<p>Flags: <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView-decide-policy"></a><h3>The <code class="literal">“decide-policy”</code> signal</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+user_function (<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>           *webkitwebview,
+               <a class="link" href="WebKitPolicyDecision.html" title="WebKitPolicyDecision"><span class="type">WebKitPolicyDecision</span></a>    *arg1,
+               <a class="link" href="WebKitWebView.html#WebKitPolicyDecisionType" title="enum WebKitPolicyDecisionType"><span class="type">WebKitPolicyDecisionType</span></a> arg2,
+               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>                 user_data)</pre>
+<p>Flags: <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView-enter-fullscreen"></a><h3>The <code class="literal">“enter-fullscreen”</code> signal</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+user_function (<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *webkitwebview,
+               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>       user_data)</pre>
+<p>Flags: <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView-insecure-content-detected"></a><h3>The <code class="literal">“insecure-content-detected”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>             *webkitwebview,
+               <a class="link" href="WebKitWebView.html#WebKitInsecureContentEvent" title="enum WebKitInsecureContentEvent"><span class="type">WebKitInsecureContentEvent</span></a> arg1,
+               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>                   user_data)</pre>
+<p>Flags: <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView-leave-fullscreen"></a><h3>The <code class="literal">“leave-fullscreen”</code> signal</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+user_function (<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *webkitwebview,
+               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>       user_data)</pre>
+<p>Flags: <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView-load-changed"></a><h3>The <code class="literal">“load-changed”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>  *webkitwebview,
+               <a class="link" href="WebKitWebView.html#WebKitLoadEvent" title="enum WebKitLoadEvent"><span class="type">WebKitLoadEvent</span></a> arg1,
+               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>        user_data)</pre>
+<p>Flags: <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView-load-failed"></a><h3>The <code class="literal">“load-failed”</code> signal</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+user_function (<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>  *webkitwebview,
+               <a class="link" href="WebKitWebView.html#WebKitLoadEvent" title="enum WebKitLoadEvent"><span class="type">WebKitLoadEvent</span></a> arg1,
+               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>          *arg2,
+               <a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>         *arg3,
+               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>        user_data)</pre>
+<p>Flags: <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView-load-failed-with-tls-errors"></a><h3>The <code class="literal">“load-failed-with-tls-errors”</code> signal</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+user_function (<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>       *webkitwebview,
+               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>               *arg1,
+               <a href="http://developer.gnome.org/gio/stable/GTlsCertificate.html#GTlsCertificate-struct"><span class="type">GTlsCertificate</span></a>     *arg2,
+               <a href="http://developer.gnome.org/gio/stable/gio-TLS-Overview.html#GTlsCertificateFlags"><span class="type">GTlsCertificateFlags</span></a> arg3,
+               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>             user_data)</pre>
+<p>Flags: <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView-mouse-target-changed"></a><h3>The <code class="literal">“mouse-target-changed”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>       *webkitwebview,
+               <a class="link" href="WebKitHitTestResult.html" title="WebKitHitTestResult"><span class="type">WebKitHitTestResult</span></a> *arg1,
+               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                arg2,
+               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>             user_data)</pre>
+<p>Flags: <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView-permission-request"></a><h3>The <code class="literal">“permission-request”</code> signal</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+user_function (<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>           *webkitwebview,
+               <a class="link" href="WebKitPermissionRequest.html" title="WebKitPermissionRequest"><span class="type">WebKitPermissionRequest</span></a> *arg1,
+               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>                 user_data)</pre>
+<p>Flags: <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView-print"></a><h3>The <code class="literal">“print”</code> signal</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+user_function (<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>        *webkitwebview,
+               <a class="link" href="WebKitPrintOperation.html" title="WebKitPrintOperation"><span class="type">WebKitPrintOperation</span></a> *arg1,
+               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>              user_data)</pre>
+<p>Flags: <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView-ready-to-show"></a><h3>The <code class="literal">“ready-to-show”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *webkitwebview,
+               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>       user_data)</pre>
+<p>Flags: <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView-resource-load-started"></a><h3>The <code class="literal">“resource-load-started”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>     *webkitwebview,
+               <a class="link" href="WebKitWebResource.html" title="WebKitWebResource"><span class="type">WebKitWebResource</span></a> *arg1,
+               <a class="link" href="WebKitURIRequest.html" title="WebKitURIRequest"><span class="type">WebKitURIRequest</span></a>  *arg2,
+               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>           user_data)</pre>
+<p>Flags: <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView-run-as-modal"></a><h3>The <code class="literal">“run-as-modal”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *webkitwebview,
+               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>       user_data)</pre>
+<p>Flags: <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView-run-color-chooser"></a><h3>The <code class="literal">“run-color-chooser”</code> signal</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+user_function (<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>             *webkitwebview,
+               <a class="link" href="WebKitColorChooserRequest.html" title="WebKitColorChooserRequest"><span class="type">WebKitColorChooserRequest</span></a> *arg1,
+               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>                   user_data)</pre>
+<p>Flags: <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView-run-file-chooser"></a><h3>The <code class="literal">“run-file-chooser”</code> signal</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+user_function (<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>            *webkitwebview,
+               <a class="link" href="WebKitFileChooserRequest.html" title="WebKitFileChooserRequest"><span class="type">WebKitFileChooserRequest</span></a> *arg1,
+               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>                  user_data)</pre>
+<p>Flags: <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView-script-dialog"></a><h3>The <code class="literal">“script-dialog”</code> signal</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+user_function (<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>      *webkitwebview,
+               <a class="link" href="WebKitWebView.html#WebKitScriptDialog"><span class="type">WebKitScriptDialog</span></a> *arg1,
+               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>            user_data)</pre>
+<p>Flags: <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView-show-notification"></a><h3>The <code class="literal">“show-notification”</code> signal</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+user_function (<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>      *webkitwebview,
+               <a class="link" href="WebKitNotification.html" title="WebKitNotification"><span class="type">WebKitNotification</span></a> *arg1,
+               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>            user_data)</pre>
+<p>Flags: <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView-show-option-menu"></a><h3>The <code class="literal">“show-option-menu”</code> signal</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+user_function (<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>    *webkitwebview,
+               <a class="link" href="WebKitOptionMenu.html" title="WebKitOptionMenu"><span class="type">WebKitOptionMenu</span></a> *arg1,
+               <a href="http://developer.gnome.org/gdk3/stable/gdk3-Event-Structures.html#GdkEvent"><span class="type">GdkEvent</span></a>         *arg2,
+               <a href="http://developer.gnome.org/gdk3/stable/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle"><span class="type">GdkRectangle</span></a>     *arg3,
+               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>          user_data)</pre>
+<p>Flags: <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView-submit-form"></a><h3>The <code class="literal">“submit-form”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>               *webkitwebview,
+               <a class="link" href="WebKitFormSubmissionRequest.html" title="WebKitFormSubmissionRequest"><span class="type">WebKitFormSubmissionRequest</span></a> *arg1,
+               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>                     user_data)</pre>
+<p>Flags: <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebView-web-process-crashed"></a><h3>The <code class="literal">“web-process-crashed”</code> signal</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+user_function (<a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *webkitwebview,
+               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>       user_data)</pre>
+<p>Flags: <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.25.1</div>
+</body>
+</html>
