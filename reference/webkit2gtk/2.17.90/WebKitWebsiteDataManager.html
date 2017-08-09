@@ -1,0 +1,472 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebKitWebsiteDataManager: WebKit2GTK+ Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="index.html" title="WebKit2GTK+ Reference Manual">
+<link rel="up" href="ch01.html" title="Class Overview">
+<link rel="prev" href="WebKitSecurityOrigin.html" title="WebKitSecurityOrigin">
+<link rel="next" href="WebKitWebsiteData.html" title="WebKitWebsiteData">
+<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#WebKitWebsiteDataManager.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#WebKitWebsiteDataManager.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#WebKitWebsiteDataManager.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="WebKitSecurityOrigin.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="WebKitWebsiteData.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="WebKitWebsiteDataManager"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="WebKitWebsiteDataManager.top_of_page"></a>WebKitWebsiteDataManager</span></h2>
+<p>WebKitWebsiteDataManager</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="WebKitWebsiteDataManager.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="WebKitWebsiteDataManager.html" title="WebKitWebsiteDataManager"><span class="returnvalue">WebKitWebsiteDataManager</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebsiteDataManager.html#webkit-website-data-manager-new" title="webkit_website_data_manager_new ()">webkit_website_data_manager_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="WebKitWebsiteDataManager.html" title="WebKitWebsiteDataManager"><span class="returnvalue">WebKitWebsiteDataManager</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebsiteDataManager.html#webkit-website-data-manager-new-ephemeral" title="webkit_website_data_manager_new_ephemeral ()">webkit_website_data_manager_new_ephemeral</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebsiteDataManager.html#webkit-website-data-manager-is-ephemeral" title="webkit_website_data_manager_is_ephemeral ()">webkit_website_data_manager_is_ephemeral</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebsiteDataManager.html#webkit-website-data-manager-get-base-data-directory" title="webkit_website_data_manager_get_base_data_directory ()">webkit_website_data_manager_get_base_data_directory</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebsiteDataManager.html#webkit-website-data-manager-get-base-cache-directory" title="webkit_website_data_manager_get_base_cache_directory ()">webkit_website_data_manager_get_base_cache_directory</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebsiteDataManager.html#webkit-website-data-manager-get-local-storage-directory" title="webkit_website_data_manager_get_local_storage_directory ()">webkit_website_data_manager_get_local_storage_directory</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebsiteDataManager.html#webkit-website-data-manager-get-disk-cache-directory" title="webkit_website_data_manager_get_disk_cache_directory ()">webkit_website_data_manager_get_disk_cache_directory</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebsiteDataManager.html#webkit-website-data-manager-get-offline-application-cache-directory" title="webkit_website_data_manager_get_offline_application_cache_directory ()">webkit_website_data_manager_get_offline_application_cache_directory</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebsiteDataManager.html#webkit-website-data-manager-get-indexeddb-directory" title="webkit_website_data_manager_get_indexeddb_directory ()">webkit_website_data_manager_get_indexeddb_directory</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebsiteDataManager.html#webkit-website-data-manager-get-websql-directory" title="webkit_website_data_manager_get_websql_directory ()">webkit_website_data_manager_get_websql_directory</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="WebKitCookieManager.html" title="WebKitCookieManager"><span class="returnvalue">WebKitCookieManager</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebsiteDataManager.html#webkit-website-data-manager-get-cookie-manager" title="webkit_website_data_manager_get_cookie_manager ()">webkit_website_data_manager_get_cookie_manager</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebsiteDataManager.html#webkit-website-data-manager-fetch" title="webkit_website_data_manager_fetch ()">webkit_website_data_manager_fetch</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://developer.gnome.org/glib/stable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebsiteDataManager.html#webkit-website-data-manager-fetch-finish" title="webkit_website_data_manager_fetch_finish ()">webkit_website_data_manager_fetch_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebsiteDataManager.html#webkit-website-data-manager-remove" title="webkit_website_data_manager_remove ()">webkit_website_data_manager_remove</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebsiteDataManager.html#webkit-website-data-manager-remove-finish" title="webkit_website_data_manager_remove_finish ()">webkit_website_data_manager_remove_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebsiteDataManager.html#webkit-website-data-manager-clear" title="webkit_website_data_manager_clear ()">webkit_website_data_manager_clear</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="WebKitWebsiteDataManager.html#webkit-website-data-manager-clear-finish" title="webkit_website_data_manager_clear_finish ()">webkit_website_data_manager_clear_finish</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="WebKitWebsiteDataManager.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type">
+<col width="300px" class="properties_name">
+<col width="200px" class="properties_flags">
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type">
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<td class="property_name"><a class="link" href="WebKitWebsiteDataManager.html#WebKitWebsiteDataManager--base-cache-directory" title="The “base-cache-directory” property">base-cache-directory</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type">
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<td class="property_name"><a class="link" href="WebKitWebsiteDataManager.html#WebKitWebsiteDataManager--base-data-directory" title="The “base-data-directory” property">base-data-directory</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type">
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<td class="property_name"><a class="link" href="WebKitWebsiteDataManager.html#WebKitWebsiteDataManager--disk-cache-directory" title="The “disk-cache-directory” property">disk-cache-directory</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type">
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<td class="property_name"><a class="link" href="WebKitWebsiteDataManager.html#WebKitWebsiteDataManager--indexeddb-directory" title="The “indexeddb-directory” property">indexeddb-directory</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
+<td class="property_name"><a class="link" href="WebKitWebsiteDataManager.html#WebKitWebsiteDataManager--is-ephemeral" title="The “is-ephemeral” property">is-ephemeral</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type">
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<td class="property_name"><a class="link" href="WebKitWebsiteDataManager.html#WebKitWebsiteDataManager--local-storage-directory" title="The “local-storage-directory” property">local-storage-directory</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type">
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<td class="property_name"><a class="link" href="WebKitWebsiteDataManager.html#WebKitWebsiteDataManager--offline-application-cache-directory" title="The “offline-application-cache-directory” property">offline-application-cache-directory</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type">
+<a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<td class="property_name"><a class="link" href="WebKitWebsiteDataManager.html#WebKitWebsiteDataManager--websql-directory" title="The “websql-directory” property">websql-directory</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="WebKitWebsiteDataManager.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="WebKitWebsiteDataManager.html#WebKitWebsiteDataManager-struct" title="struct WebKitWebsiteDataManager">WebKitWebsiteDataManager</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="WebKitWebsiteDataManager.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="http://developer.gnome.org/gobject/stable/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span> WebKitWebsiteDataManager
+</pre>
+</div>
+<div class="refsect1">
+<a name="WebKitWebsiteDataManager.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="WebKitWebsiteDataManager.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="webkit-website-data-manager-new"></a><h3>webkit_website_data_manager_new ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitWebsiteDataManager.html" title="WebKitWebsiteDataManager"><span class="returnvalue">WebKitWebsiteDataManager</span></a> *
+webkit_website_data_manager_new (<em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *first_option_name</code></em>,
+                                 <em class="parameter"><code>...</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-website-data-manager-new-ephemeral"></a><h3>webkit_website_data_manager_new_ephemeral ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitWebsiteDataManager.html" title="WebKitWebsiteDataManager"><span class="returnvalue">WebKitWebsiteDataManager</span></a> *
+webkit_website_data_manager_new_ephemeral
+                               (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-website-data-manager-is-ephemeral"></a><h3>webkit_website_data_manager_is_ephemeral ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+webkit_website_data_manager_is_ephemeral
+                               (<em class="parameter"><code><a class="link" href="WebKitWebsiteDataManager.html" title="WebKitWebsiteDataManager"><span class="type">WebKitWebsiteDataManager</span></a> *manager</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-website-data-manager-get-base-data-directory"></a><h3>webkit_website_data_manager_get_base_data_directory ()</h3>
+<pre class="programlisting">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+webkit_website_data_manager_get_base_data_directory
+                               (<em class="parameter"><code><a class="link" href="WebKitWebsiteDataManager.html" title="WebKitWebsiteDataManager"><span class="type">WebKitWebsiteDataManager</span></a> *manager</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-website-data-manager-get-base-cache-directory"></a><h3>webkit_website_data_manager_get_base_cache_directory ()</h3>
+<pre class="programlisting">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+webkit_website_data_manager_get_base_cache_directory
+                               (<em class="parameter"><code><a class="link" href="WebKitWebsiteDataManager.html" title="WebKitWebsiteDataManager"><span class="type">WebKitWebsiteDataManager</span></a> *manager</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-website-data-manager-get-local-storage-directory"></a><h3>webkit_website_data_manager_get_local_storage_directory ()</h3>
+<pre class="programlisting">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+webkit_website_data_manager_get_local_storage_directory
+                               (<em class="parameter"><code><a class="link" href="WebKitWebsiteDataManager.html" title="WebKitWebsiteDataManager"><span class="type">WebKitWebsiteDataManager</span></a> *manager</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-website-data-manager-get-disk-cache-directory"></a><h3>webkit_website_data_manager_get_disk_cache_directory ()</h3>
+<pre class="programlisting">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+webkit_website_data_manager_get_disk_cache_directory
+                               (<em class="parameter"><code><a class="link" href="WebKitWebsiteDataManager.html" title="WebKitWebsiteDataManager"><span class="type">WebKitWebsiteDataManager</span></a> *manager</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-website-data-manager-get-offline-application-cache-directory"></a><h3>webkit_website_data_manager_get_offline_application_cache_directory ()</h3>
+<pre class="programlisting">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+webkit_website_data_manager_get_offline_application_cache_directory
+                               (<em class="parameter"><code><a class="link" href="WebKitWebsiteDataManager.html" title="WebKitWebsiteDataManager"><span class="type">WebKitWebsiteDataManager</span></a> *manager</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-website-data-manager-get-indexeddb-directory"></a><h3>webkit_website_data_manager_get_indexeddb_directory ()</h3>
+<pre class="programlisting">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+webkit_website_data_manager_get_indexeddb_directory
+                               (<em class="parameter"><code><a class="link" href="WebKitWebsiteDataManager.html" title="WebKitWebsiteDataManager"><span class="type">WebKitWebsiteDataManager</span></a> *manager</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-website-data-manager-get-websql-directory"></a><h3>webkit_website_data_manager_get_websql_directory ()</h3>
+<pre class="programlisting">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
+webkit_website_data_manager_get_websql_directory
+                               (<em class="parameter"><code><a class="link" href="WebKitWebsiteDataManager.html" title="WebKitWebsiteDataManager"><span class="type">WebKitWebsiteDataManager</span></a> *manager</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-website-data-manager-get-cookie-manager"></a><h3>webkit_website_data_manager_get_cookie_manager ()</h3>
+<pre class="programlisting"><a class="link" href="WebKitCookieManager.html" title="WebKitCookieManager"><span class="returnvalue">WebKitCookieManager</span></a> *
+webkit_website_data_manager_get_cookie_manager
+                               (<em class="parameter"><code><a class="link" href="WebKitWebsiteDataManager.html" title="WebKitWebsiteDataManager"><span class="type">WebKitWebsiteDataManager</span></a> *manager</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-website-data-manager-fetch"></a><h3>webkit_website_data_manager_fetch ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+webkit_website_data_manager_fetch (<em class="parameter"><code><a class="link" href="WebKitWebsiteDataManager.html" title="WebKitWebsiteDataManager"><span class="type">WebKitWebsiteDataManager</span></a> *manager</code></em>,
+                                   <em class="parameter"><code><a class="link" href="WebKitWebsiteData.html#WebKitWebsiteDataTypes" title="enum WebKitWebsiteDataTypes"><span class="type">WebKitWebsiteDataTypes</span></a> types</code></em>,
+                                   <em class="parameter"><code><a href="http://developer.gnome.org/gio/stable/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                   <em class="parameter"><code><a href="http://developer.gnome.org/gio/stable/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                                   <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-website-data-manager-fetch-finish"></a><h3>webkit_website_data_manager_fetch_finish ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+webkit_website_data_manager_fetch_finish
+                               (<em class="parameter"><code><a class="link" href="WebKitWebsiteDataManager.html" title="WebKitWebsiteDataManager"><span class="type">WebKitWebsiteDataManager</span></a> *manager</code></em>,
+                                <em class="parameter"><code><a href="http://developer.gnome.org/gio/stable/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *result</code></em>,
+                                <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-website-data-manager-remove"></a><h3>webkit_website_data_manager_remove ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+webkit_website_data_manager_remove (<em class="parameter"><code><a class="link" href="WebKitWebsiteDataManager.html" title="WebKitWebsiteDataManager"><span class="type">WebKitWebsiteDataManager</span></a> *manager</code></em>,
+                                    <em class="parameter"><code><a class="link" href="WebKitWebsiteData.html#WebKitWebsiteDataTypes" title="enum WebKitWebsiteDataTypes"><span class="type">WebKitWebsiteDataTypes</span></a> types</code></em>,
+                                    <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> *website_data</code></em>,
+                                    <em class="parameter"><code><a href="http://developer.gnome.org/gio/stable/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                    <em class="parameter"><code><a href="http://developer.gnome.org/gio/stable/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                                    <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-website-data-manager-remove-finish"></a><h3>webkit_website_data_manager_remove_finish ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+webkit_website_data_manager_remove_finish
+                               (<em class="parameter"><code><a class="link" href="WebKitWebsiteDataManager.html" title="WebKitWebsiteDataManager"><span class="type">WebKitWebsiteDataManager</span></a> *manager</code></em>,
+                                <em class="parameter"><code><a href="http://developer.gnome.org/gio/stable/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *result</code></em>,
+                                <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-website-data-manager-clear"></a><h3>webkit_website_data_manager_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+webkit_website_data_manager_clear (<em class="parameter"><code><a class="link" href="WebKitWebsiteDataManager.html" title="WebKitWebsiteDataManager"><span class="type">WebKitWebsiteDataManager</span></a> *manager</code></em>,
+                                   <em class="parameter"><code><a class="link" href="WebKitWebsiteData.html#WebKitWebsiteDataTypes" title="enum WebKitWebsiteDataTypes"><span class="type">WebKitWebsiteDataTypes</span></a> types</code></em>,
+                                   <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-GDateTime.html#GTimeSpan"><span class="type">GTimeSpan</span></a> timespan</code></em>,
+                                   <em class="parameter"><code><a href="http://developer.gnome.org/gio/stable/GCancellable.html#GCancellable-struct"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                   <em class="parameter"><code><a href="http://developer.gnome.org/gio/stable/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                                   <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="webkit-website-data-manager-clear-finish"></a><h3>webkit_website_data_manager_clear_finish ()</h3>
+<pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+webkit_website_data_manager_clear_finish
+                               (<em class="parameter"><code><a class="link" href="WebKitWebsiteDataManager.html" title="WebKitWebsiteDataManager"><span class="type">WebKitWebsiteDataManager</span></a> *manager</code></em>,
+                                <em class="parameter"><code><a href="http://developer.gnome.org/gio/stable/GAsyncResult.html#GAsyncResult-struct"><span class="type">GAsyncResult</span></a> *result</code></em>,
+                                <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitWebsiteDataManager.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="WebKitWebsiteDataManager-struct"></a><h3>struct WebKitWebsiteDataManager</h3>
+<pre class="programlisting">struct WebKitWebsiteDataManager;</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitWebsiteDataManager.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="WebKitWebsiteDataManager--base-cache-directory"></a><h3>The <code class="literal">“base-cache-directory”</code> property</h3>
+<pre class="programlisting">  “base-cache-directory”     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<p>The base directory for Website cache.</p>
+<p>Flags: Read / Write / Construct Only</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebsiteDataManager--base-data-directory"></a><h3>The <code class="literal">“base-data-directory”</code> property</h3>
+<pre class="programlisting">  “base-data-directory”      <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<p>The base directory for Website data.</p>
+<p>Flags: Read / Write / Construct Only</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebsiteDataManager--disk-cache-directory"></a><h3>The <code class="literal">“disk-cache-directory”</code> property</h3>
+<pre class="programlisting">  “disk-cache-directory”     <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<p>The directory where HTTP disk cache will be stored.</p>
+<p>Flags: Read / Write / Construct Only</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebsiteDataManager--indexeddb-directory"></a><h3>The <code class="literal">“indexeddb-directory”</code> property</h3>
+<pre class="programlisting">  “indexeddb-directory”      <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<p>The directory where IndexedDB databases will be stored.</p>
+<p>Flags: Read / Write / Construct Only</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebsiteDataManager--is-ephemeral"></a><h3>The <code class="literal">“is-ephemeral”</code> property</h3>
+<pre class="programlisting">  “is-ephemeral”             <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
+<p>Whether the WebKitWebsiteDataManager is ephemeral.</p>
+<p>Flags: Read / Write / Construct Only</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebsiteDataManager--local-storage-directory"></a><h3>The <code class="literal">“local-storage-directory”</code> property</h3>
+<pre class="programlisting">  “local-storage-directory”  <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<p>The directory where local storage data will be stored.</p>
+<p>Flags: Read / Write / Construct Only</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebsiteDataManager--offline-application-cache-directory"></a><h3>The <code class="literal">“offline-application-cache-directory”</code> property</h3>
+<pre class="programlisting">  “offline-application-cache-directory” <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<p>The directory where offline web application cache will be stored.</p>
+<p>Flags: Read / Write / Construct Only</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="WebKitWebsiteDataManager--websql-directory"></a><h3>The <code class="literal">“websql-directory”</code> property</h3>
+<pre class="programlisting">  “websql-directory”         <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<p>The directory where WebSQL databases will be stored.</p>
+<p>Flags: Read / Write / Construct Only</p>
+<p>Default value: NULL</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.25.1</div>
+</body>
+</html>
