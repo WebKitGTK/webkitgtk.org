@@ -8,7 +8,7 @@
 <link rel="up" href="ch02.html" title="Web Extensions">
 <link rel="prev" href="WebKitWebHitTestResult.html" title="WebKitWebHitTestResult">
 <link rel="next" href="WebKitConsoleMessage.html" title="WebKitConsoleMessage">
-<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.26.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -29,7 +29,7 @@
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
 <h2><span class="refentrytitle"><a name="WebKitWebEditor.top_of_page"></a>WebKitWebEditor</span></h2>
-<p>WebKitWebEditor</p>
+<p>WebKitWebEditor — Access to editing capabilities of a <a class="link" href="WebKitWebPage.html" title="WebKitWebPage"><span class="type">WebKitWebPage</span></a></p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
@@ -86,6 +86,9 @@
 </div>
 <div class="refsect1">
 <a name="WebKitWebEditor.description"></a><h2>Description</h2>
+<p>The WebKitWebEditor provides access to various editing capabilities of
+a <a class="link" href="WebKitWebPage.html" title="WebKitWebPage"><span class="type">WebKitWebPage</span></a> such as a possibility to react to the current selection in
+<a class="link" href="WebKitWebPage.html" title="WebKitWebPage"><span class="type">WebKitWebPage</span></a>.</p>
 </div>
 <div class="refsect1">
 <a name="WebKitWebEditor.functions_details"></a><h2>Functions</h2>
@@ -93,6 +96,29 @@
 <a name="webkit-web-editor-get-page"></a><h3>webkit_web_editor_get_page ()</h3>
 <pre class="programlisting"><a class="link" href="WebKitWebPage.html" title="WebKitWebPage"><span class="returnvalue">WebKitWebPage</span></a> *
 webkit_web_editor_get_page (<em class="parameter"><code><a class="link" href="WebKitWebEditor.html" title="WebKitWebEditor"><span class="type">WebKitWebEditor</span></a> *editor</code></em>);</pre>
+<p>Gets the <a class="link" href="WebKitWebPage.html" title="WebKitWebPage"><span class="type">WebKitWebPage</span></a> that is associated with the <a class="link" href="WebKitWebEditor.html" title="WebKitWebEditor"><span class="type">WebKitWebEditor</span></a> that can
+be used to access the <a href="http://developer.gnome.org/html/stable/WebKitDOMDocument.html#WebKitDOMDocument-struct"><span class="type">WebKitDOMDocument</span></a> currently loaded into it.</p>
+<div class="refsect3">
+<a name="webkit-web-editor-get-page.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>editor</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitWebEditor.html" title="WebKitWebEditor"><span class="type">WebKitWebEditor</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-web-editor-get-page.returns"></a><h4>Returns</h4>
+<p>the associated <a class="link" href="WebKitWebPage.html" title="WebKitWebPage"><span class="type">WebKitWebPage</span></a>. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-10.html#api-index-2.10">2.10</a></p>
 </div>
 </div>
 <div class="refsect1">
@@ -107,13 +133,43 @@ webkit_web_editor_get_page (<em class="parameter"><code><a class="link" href="We
 <div class="refsect2">
 <a name="WebKitWebEditor-selection-changed"></a><h3>The <code class="literal">“selection-changed”</code> signal</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
-user_function (<a class="link" href="WebKitWebEditor.html" title="WebKitWebEditor"><span class="type">WebKitWebEditor</span></a> *webkitwebeditor,
+user_function (<a class="link" href="WebKitWebEditor.html" title="WebKitWebEditor"><span class="type">WebKitWebEditor</span></a> *editor,
                <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>         user_data)</pre>
-<p>Flags: <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+<p>This signal is emitted for every selection change inside a <a class="link" href="WebKitWebPage.html" title="WebKitWebPage"><span class="type">WebKitWebPage</span></a>
+as well as for every caret position change as the caret is a collapsed
+selection.</p>
+<div class="refsect3">
+<a name="WebKitWebEditor-selection-changed.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>editor</p></td>
+<td class="parameter_description"><p>the <a class="link" href="WebKitWebEditor.html" title="WebKitWebEditor"><span class="type">WebKitWebEditor</span></a> on which the signal is emitted</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
 </div>
+<p>Flags: <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+<p class="since">Since: <a class="link" href="api-index-2-10.html#api-index-2.10">2.10</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="WebKitWebEditor.see-also"></a><h2>See Also</h2>
+<p><a class="link" href="WebKitWebPage.html" title="WebKitWebPage"><span class="type">WebKitWebPage</span></a></p>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.25.1</div>
+<hr>Generated by GTK-Doc V1.26.1</div>
 </body>
 </html>

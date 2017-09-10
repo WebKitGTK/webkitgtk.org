@@ -2,13 +2,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>WebKitUserContent: WebKit2GTK+ Reference Manual</title>
+<title>User content: WebKit2GTK+ Reference Manual</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
 <link rel="home" href="index.html" title="WebKit2GTK+ Reference Manual">
 <link rel="up" href="ch01.html" title="Class Overview">
 <link rel="prev" href="WebKitUserContentManager.html" title="WebKitUserContentManager">
 <link rel="next" href="WebKitNotification.html" title="WebKitNotification">
-<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.26.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -27,8 +27,8 @@
 <a name="webkit2gtk-4.0-WebKitUserContent"></a><div class="titlepage"></div>
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
-<h2><span class="refentrytitle"><a name="webkit2gtk-4.0-WebKitUserContent.top_of_page"></a>WebKitUserContent</span></h2>
-<p>WebKitUserContent</p>
+<h2><span class="refentrytitle"><a name="webkit2gtk-4.0-WebKitUserContent.top_of_page"></a>User content</span></h2>
+<p>User content — Defines user content types which affect web pages.</p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
@@ -131,6 +131,7 @@
 </div>
 <div class="refsect1">
 <a name="webkit2gtk-4.0-WebKitUserContent.description"></a><h2>Description</h2>
+<p>See also: <a class="link" href="WebKitUserContentManager.html" title="WebKitUserContentManager"><span class="type">WebKitUserContentManager</span></a></p>
 </div>
 <div class="refsect1">
 <a name="webkit2gtk-4.0-WebKitUserContent.functions_details"></a><h2>Functions</h2>
@@ -138,12 +139,56 @@
 <a name="webkit-user-style-sheet-ref"></a><h3>webkit_user_style_sheet_ref ()</h3>
 <pre class="programlisting"><a class="link" href="webkit2gtk-4.0-WebKitUserContent.html#WebKitUserStyleSheet"><span class="returnvalue">WebKitUserStyleSheet</span></a> *
 webkit_user_style_sheet_ref (<em class="parameter"><code><a class="link" href="webkit2gtk-4.0-WebKitUserContent.html#WebKitUserStyleSheet"><span class="type">WebKitUserStyleSheet</span></a> *user_style_sheet</code></em>);</pre>
+<p>Atomically increments the reference count of <em class="parameter"><code>user_style_sheet</code></em>
+ by one.
+This function is MT-safe and may be called from any thread.</p>
+<div class="refsect3">
+<a name="webkit-user-style-sheet-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>user_style_sheet</p></td>
+<td class="parameter_description"><p>a <a class="link" href="webkit2gtk-4.0-WebKitUserContent.html#WebKitUserStyleSheet"><span class="type">WebKitUserStyleSheet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-user-style-sheet-ref.returns"></a><h4>Returns</h4>
+<p> The passed <a class="link" href="webkit2gtk-4.0-WebKitUserContent.html#WebKitUserStyleSheet"><span class="type">WebKitUserStyleSheet</span></a></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-6.html#api-index-2.6">2.6</a></p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="webkit-user-style-sheet-unref"></a><h3>webkit_user_style_sheet_unref ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 webkit_user_style_sheet_unref (<em class="parameter"><code><a class="link" href="webkit2gtk-4.0-WebKitUserContent.html#WebKitUserStyleSheet"><span class="type">WebKitUserStyleSheet</span></a> *user_style_sheet</code></em>);</pre>
+<p>Atomically decrements the reference count of <em class="parameter"><code>user_style_sheet</code></em>
+ by one.
+If the reference count drops to 0, all memory allocated by
+<a class="link" href="webkit2gtk-4.0-WebKitUserContent.html#WebKitUserStyleSheet"><span class="type">WebKitUserStyleSheet</span></a> is released. This function is MT-safe and may be
+called from any thread.</p>
+<div class="refsect3">
+<a name="webkit-user-style-sheet-unref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>user_style_sheet</p></td>
+<td class="parameter_description"><p>a <a class="link" href="webkit2gtk-4.0-WebKitUserContent.html#WebKitUserStyleSheet"><span class="type">WebKitUserStyleSheet</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-6.html#api-index-2.6">2.6</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -154,18 +199,113 @@ webkit_user_style_sheet_new (<em class="parameter"><code>const <a href="http://d
                              <em class="parameter"><code><a class="link" href="webkit2gtk-4.0-WebKitUserContent.html#WebKitUserStyleLevel" title="enum WebKitUserStyleLevel"><span class="type">WebKitUserStyleLevel</span></a> level</code></em>,
                              <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> * const *whitelist</code></em>,
                              <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> * const *blacklist</code></em>);</pre>
+<p>Creates a new user style sheet. Style sheets can be applied to some URIs
+only by passing non-null values for <em class="parameter"><code>whitelist</code></em>
+ or <em class="parameter"><code>blacklist</code></em>
+. Passing a
+<a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> whitelist implies that all URIs are on the whitelist. The style
+sheet is applied if an URI matches the whitelist and not the blacklist.
+URI patterns must be of the form <code class="literal">[protocol]://[host]/[path]</code>, where the
+*host* and *path* components can contain the wildcard character (<code class="literal">*</code>) to
+represent zero or more other characters.</p>
+<div class="refsect3">
+<a name="webkit-user-style-sheet-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>Source code of the user style sheet.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>injected_frames</p></td>
+<td class="parameter_description"><p>A <a class="link" href="webkit2gtk-4.0-WebKitUserContent.html#WebKitUserContentInjectedFrames" title="enum WebKitUserContentInjectedFrames"><span class="type">WebKitUserContentInjectedFrames</span></a> value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>level</p></td>
+<td class="parameter_description"><p>A <a class="link" href="webkit2gtk-4.0-WebKitUserContent.html#WebKitUserStyleLevel" title="enum WebKitUserStyleLevel"><span class="type">WebKitUserStyleLevel</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>whitelist</p></td>
+<td class="parameter_description"><p>A whitelist of URI patterns or <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>blacklist</p></td>
+<td class="parameter_description"><p>A blacklist of URI patterns or <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-user-style-sheet-new.returns"></a><h4>Returns</h4>
+<p> A new <a class="link" href="webkit2gtk-4.0-WebKitUserContent.html#WebKitUserStyleSheet"><span class="type">WebKitUserStyleSheet</span></a></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-6.html#api-index-2.6">2.6</a></p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="webkit-user-script-ref"></a><h3>webkit_user_script_ref ()</h3>
 <pre class="programlisting"><a class="link" href="webkit2gtk-4.0-WebKitUserContent.html#WebKitUserScript"><span class="returnvalue">WebKitUserScript</span></a> *
 webkit_user_script_ref (<em class="parameter"><code><a class="link" href="webkit2gtk-4.0-WebKitUserContent.html#WebKitUserScript"><span class="type">WebKitUserScript</span></a> *user_script</code></em>);</pre>
+<p>Atomically increments the reference count of <em class="parameter"><code>user_script</code></em>
+ by one.
+This function is MT-safe and may be called from any thread.</p>
+<div class="refsect3">
+<a name="webkit-user-script-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>user_script</p></td>
+<td class="parameter_description"><p>a <a class="link" href="webkit2gtk-4.0-WebKitUserContent.html#WebKitUserScript"><span class="type">WebKitUserScript</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-user-script-ref.returns"></a><h4>Returns</h4>
+<p> The passed <a class="link" href="webkit2gtk-4.0-WebKitUserContent.html#WebKitUserScript"><span class="type">WebKitUserScript</span></a></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-6.html#api-index-2.6">2.6</a></p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="webkit-user-script-unref"></a><h3>webkit_user_script_unref ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 webkit_user_script_unref (<em class="parameter"><code><a class="link" href="webkit2gtk-4.0-WebKitUserContent.html#WebKitUserScript"><span class="type">WebKitUserScript</span></a> *user_script</code></em>);</pre>
+<p>Atomically decrements the reference count of <em class="parameter"><code>user_script</code></em>
+ by one.
+If the reference count drops to 0, all memory allocated by
+<a class="link" href="webkit2gtk-4.0-WebKitUserContent.html#WebKitUserScript"><span class="type">WebKitUserScript</span></a> is released. This function is MT-safe and may be called
+from any thread.</p>
+<div class="refsect3">
+<a name="webkit-user-script-unref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>user_script</p></td>
+<td class="parameter_description"><p>a <a class="link" href="webkit2gtk-4.0-WebKitUserContent.html#WebKitUserScript"><span class="type">WebKitUserScript</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-6.html#api-index-2.6">2.6</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -176,6 +316,57 @@ webkit_user_script_new (<em class="parameter"><code>const <a href="http://develo
                         <em class="parameter"><code><a class="link" href="webkit2gtk-4.0-WebKitUserContent.html#WebKitUserScriptInjectionTime" title="enum WebKitUserScriptInjectionTime"><span class="type">WebKitUserScriptInjectionTime</span></a> injection_time</code></em>,
                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> * const *whitelist</code></em>,
                         <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> * const *blacklist</code></em>);</pre>
+<p>Creates a new user script. Scripts can be applied to some URIs
+only by passing non-null values for <em class="parameter"><code>whitelist</code></em>
+ or <em class="parameter"><code>blacklist</code></em>
+. Passing a
+<a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> whitelist implies that all URIs are on the whitelist. The script
+is applied if an URI matches the whitelist and not the blacklist.
+URI patterns must be of the form <code class="literal">[protocol]://[host]/[path]</code>, where the
+*host* and *path* components can contain the wildcard character (<code class="literal">*</code>) to
+represent zero or more other characters.</p>
+<div class="refsect3">
+<a name="webkit-user-script-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>Source code of the user script.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>injected_frames</p></td>
+<td class="parameter_description"><p>A <a class="link" href="webkit2gtk-4.0-WebKitUserContent.html#WebKitUserContentInjectedFrames" title="enum WebKitUserContentInjectedFrames"><span class="type">WebKitUserContentInjectedFrames</span></a> value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>injection_time</p></td>
+<td class="parameter_description"><p>A <a class="link" href="webkit2gtk-4.0-WebKitUserContent.html#WebKitUserScriptInjectionTime" title="enum WebKitUserScriptInjectionTime"><span class="type">WebKitUserScriptInjectionTime</span></a> value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>whitelist</p></td>
+<td class="parameter_description"><p>A whitelist of URI patterns or <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>blacklist</p></td>
+<td class="parameter_description"><p>A blacklist of URI patterns or <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-user-script-new.returns"></a><h4>Returns</h4>
+<p> A new <a class="link" href="webkit2gtk-4.0-WebKitUserContent.html#WebKitUserScript"><span class="type">WebKitUserScript</span></a></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-6.html#api-index-2.6">2.6</a></p>
 </div>
 </div>
 <div class="refsect1">
@@ -297,6 +488,6 @@ webkit_user_script_new (<em class="parameter"><code>const <a href="http://develo
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.25.1</div>
+<hr>Generated by GTK-Doc V1.26.1</div>
 </body>
 </html>

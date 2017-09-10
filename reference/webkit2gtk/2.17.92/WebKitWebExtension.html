@@ -8,7 +8,7 @@
 <link rel="up" href="ch02.html" title="Web Extensions">
 <link rel="prev" href="ch02.html" title="Web Extensions">
 <link rel="next" href="WebKitWebPage.html" title="WebKitWebPage">
-<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.26.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -29,7 +29,7 @@
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
 <h2><span class="refentrytitle"><a name="WebKitWebExtension.top_of_page"></a>WebKitWebExtension</span></h2>
-<p>WebKitWebExtension</p>
+<p>WebKitWebExtension — Represents a WebExtension of the WebProcess</p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
@@ -104,6 +104,256 @@
 </div>
 <div class="refsect1">
 <a name="WebKitWebExtension.description"></a><h2>Description</h2>
+<p>WebKitWebExtension is a loadable module for the WebProcess. It allows you to execute code in the
+WebProcess and being able to use the DOM API, to change any request or to inject custom
+JavaScript code, for example.</p>
+<p>To create a WebKitWebExtension you should write a module with an initialization function that could
+be either <code class="function">webkit_web_extension_initialize()</code> with prototype <a class="link" href="WebKitWebExtension.html#WebKitWebExtensionInitializeFunction" title="WebKitWebExtensionInitializeFunction ()"><span class="type">WebKitWebExtensionInitializeFunction</span></a> or
+<code class="function">webkit_web_extension_initialize_with_user_data()</code> with prototype <a class="link" href="WebKitWebExtension.html#WebKitWebExtensionInitializeWithUserDataFunction" title="WebKitWebExtensionInitializeWithUserDataFunction ()"><span class="type">WebKitWebExtensionInitializeWithUserDataFunction</span></a>.
+This function has to be public and it has to use the <a href="http://developer.gnome.org/glib/stable/glib-Dynamic-Loading-of-Modules.html#G-MODULE-EXPORT:CAPS"><span class="type">G_MODULE_EXPORT</span></a> macro. It is called when the
+web process is initialized.</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49</pre></td>
+        <td class="listing_code"><pre class="programlisting"><?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>/tmp/tmpog3LlQ.h.xhtml</title>
+<meta name="Generator" content="Vim/8.0" />
+<meta name="plugin-version" content="vim7.4_v2" />
+<meta name="syntax" content="c" />
+<meta name="settings" content="use_xhtml,use_css,pre_wrap,no_foldcolumn,prevent_copy=" />
+<meta name="colorscheme" content="none" />
+<style type="text/css">
+
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Constant { color: #0000c0; text-decoration: underline; }
+.Type { color: #008000; text-decoration: underline; }
+.Special { color: #c000c0; font-weight: bold; }
+
+</style>
+
+<script type='text/javascript'>
+//<![CDATA[
+
+//]]>
+</script>
+</head>
+<body>
+<span class="type">static</span> <span class="type">void</span>
+web_page_created_callback (WebKitWebExtension *extension,
+                           WebKitWebPage      *web_page,
+                           gpointer            user_data)
+{
+    g_print (<span class="number">&quot;Page </span><span class="symbol">%d</span><span class="number"> created for </span><span class="symbol">%s</span><span class="symbol">\n</span><span class="number">&quot;</span>,
+             webkit_web_page_get_id (web_page),
+             webkit_web_page_get_uri (web_page));
+}
+
+G_MODULE_EXPORT <span class="type">void</span>
+webkit_web_extension_initialize (WebKitWebExtension *extension)
+{
+    g_signal_connect (extension, <span class="number">&quot;page-created&quot;</span>,
+                      G_CALLBACK (web_page_created_callback),
+                      <span class="number">NULL</span>);
+}
+
+</body>
+</html>
+<!-- vim: set foldmethod=manual : --></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>The previous piece of code shows a trivial example of an extension that notifies when
+a <a class="link" href="WebKitWebPage.html" title="WebKitWebPage"><span class="type">WebKitWebPage</span></a> is created.</p>
+<p>WebKit has to know where it can find the created WebKitWebExtension. To do so you
+should use the <a class="link" href="WebKitWebContext.html#webkit-web-context-set-web-extensions-directory" title="webkit_web_context_set_web_extensions_directory ()"><code class="function">webkit_web_context_set_web_extensions_directory()</code></a> function. The signal
+<a class="link" href="WebKitWebContext.html#WebKitWebContext-initialize-web-extensions" title="The “initialize-web-extensions” signal"><span class="type">“initialize-web-extensions”</span></a> is the recommended place to call it.</p>
+<p>To provide the initialization data used by the <code class="function">webkit_web_extension_initialize_with_user_data()</code>
+function, you have to call <a class="link" href="WebKitWebContext.html#webkit-web-context-set-web-extensions-initialization-user-data" title="webkit_web_context_set_web_extensions_initialization_user_data ()"><code class="function">webkit_web_context_set_web_extensions_initialization_user_data()</code></a> with
+the desired data as parameter. You can see an example of this in the following piece of code:</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59</pre></td>
+        <td class="listing_code"><pre class="programlisting"><?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>/tmp/tmpiCf3dD.h.xhtml</title>
+<meta name="Generator" content="Vim/8.0" />
+<meta name="plugin-version" content="vim7.4_v2" />
+<meta name="syntax" content="c" />
+<meta name="settings" content="use_xhtml,use_css,pre_wrap,no_foldcolumn,prevent_copy=" />
+<meta name="colorscheme" content="none" />
+<style type="text/css">
+
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Comment { color: #c00000; font-weight: bold; }
+.Constant { color: #0000c0; text-decoration: underline; }
+.PreProc { color: #c000c0; text-decoration: underline; }
+.Type { color: #008000; text-decoration: underline; }
+
+</style>
+
+<script type='text/javascript'>
+//<![CDATA[
+
+//]]>
+</script>
+</head>
+<body>
+<span class="preproc">#define WEB_EXTENSIONS_DIRECTORY </span><span class="comment">/*</span><span class="comment"> ... </span><span class="comment">*/</span>
+
+<span class="type">static</span> <span class="type">void</span>
+initialize_web_extensions (WebKitWebContext *context,
+                           gpointer          user_data)
+{
+  <span class="comment">/*</span><span class="comment"> Web Extensions get a different ID for each Web Process </span><span class="comment">*/</span>
+  <span class="type">static</span> guint32 unique_id = <span class="number">0</span>;
+
+  webkit_web_context_set_web_extensions_directory (
+     context, WEB_EXTENSIONS_DIRECTORY);
+  webkit_web_context_set_web_extensions_initialization_user_data (
+     context, g_variant_new_uint32 (unique_id++));
+}
+
+<span class="type">int</span> main (<span class="type">int</span> argc, <span class="type">char</span> **argv)
+{
+  g_signal_connect (webkit_web_context_get_default (),
+                   <span class="number">&quot;initialize-web-extensions&quot;</span>,
+                    G_CALLBACK (initialize_web_extensions),
+                    <span class="number">NULL</span>);
+
+  GtkWidget *view = webkit_web_view_new ();
+
+  <span class="comment">/*</span><span class="comment"> ... </span><span class="comment">*/</span>
+}
+
+</body>
+</html>
+<!-- vim: set foldmethod=manual : --></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 </div>
 <div class="refsect1">
 <a name="WebKitWebExtension.functions_details"></a><h2>Functions</h2>
@@ -171,6 +421,37 @@ as additional argument the user data set with
 <pre class="programlisting"><a class="link" href="WebKitWebPage.html" title="WebKitWebPage"><span class="returnvalue">WebKitWebPage</span></a> *
 webkit_web_extension_get_page (<em class="parameter"><code><a class="link" href="WebKitWebExtension.html" title="WebKitWebExtension"><span class="type">WebKitWebExtension</span></a> *extension</code></em>,
                                <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a> page_id</code></em>);</pre>
+<p>Get the web page of the given <em class="parameter"><code>page_id</code></em>
+.</p>
+<div class="refsect3">
+<a name="webkit-web-extension-get-page.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>extension</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitWebExtension.html" title="WebKitWebExtension"><span class="type">WebKitWebExtension</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>page_id</p></td>
+<td class="parameter_description"><p>the identifier of the <a class="link" href="WebKitWebPage.html" title="WebKitWebPage"><span class="type">WebKitWebPage</span></a> to get</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-web-extension-get-page.returns"></a><h4>Returns</h4>
+<p>the <a class="link" href="WebKitWebPage.html" title="WebKitWebPage"><span class="type">WebKitWebPage</span></a> for the given <em class="parameter"><code>page_id</code></em>
+, or <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the
+identifier doesn't correspond to an existing web page. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
 </div>
 </div>
 <div class="refsect1">
@@ -185,14 +466,43 @@ webkit_web_extension_get_page (<em class="parameter"><code><a class="link" href=
 <div class="refsect2">
 <a name="WebKitWebExtension-page-created"></a><h3>The <code class="literal">“page-created”</code> signal</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
-user_function (<a class="link" href="WebKitWebExtension.html" title="WebKitWebExtension"><span class="type">WebKitWebExtension</span></a> *webkitwebextension,
-               <a class="link" href="WebKitWebPage.html" title="WebKitWebPage"><span class="type">WebKitWebPage</span></a>      *arg1,
+user_function (<a class="link" href="WebKitWebExtension.html" title="WebKitWebExtension"><span class="type">WebKitWebExtension</span></a> *extension,
+               <a class="link" href="WebKitWebPage.html" title="WebKitWebPage"><span class="type">WebKitWebPage</span></a>      *web_page,
                <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>            user_data)</pre>
+<p>This signal is emitted when a new <a class="link" href="WebKitWebPage.html" title="WebKitWebPage"><span class="type">WebKitWebPage</span></a> is created in
+the Web Process.</p>
+<div class="refsect3">
+<a name="WebKitWebExtension-page-created.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>extension</p></td>
+<td class="parameter_description"><p>the <a class="link" href="WebKitWebExtension.html" title="WebKitWebExtension"><span class="type">WebKitWebExtension</span></a> on which the signal is emitted</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>web_page</p></td>
+<td class="parameter_description"><p>the <a class="link" href="WebKitWebPage.html" title="WebKitWebPage"><span class="type">WebKitWebPage</span></a> created</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
 <p>Flags: <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.25.1</div>
+<hr>Generated by GTK-Doc V1.26.1</div>
 </body>
 </html>

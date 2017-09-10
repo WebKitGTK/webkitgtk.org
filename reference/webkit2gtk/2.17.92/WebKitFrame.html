@@ -8,7 +8,7 @@
 <link rel="up" href="ch02.html" title="Web Extensions">
 <link rel="prev" href="WebKitWebPage.html" title="WebKitWebPage">
 <link rel="next" href="WebKitScriptWorld.html" title="WebKitScriptWorld">
-<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.26.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -102,12 +102,59 @@
 <a name="webkit-frame-is-main-frame"></a><h3>webkit_frame_is_main_frame ()</h3>
 <pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 webkit_frame_is_main_frame (<em class="parameter"><code><a class="link" href="WebKitFrame.html" title="WebKitFrame"><span class="type">WebKitFrame</span></a> *frame</code></em>);</pre>
+<p>Gets whether <em class="parameter"><code>frame</code></em>
+ is the main frame of a <a class="link" href="WebKitWebPage.html" title="WebKitWebPage"><span class="type">WebKitWebPage</span></a></p>
+<div class="refsect3">
+<a name="webkit-frame-is-main-frame.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>frame</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitFrame.html" title="WebKitFrame"><span class="type">WebKitFrame</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-frame-is-main-frame.returns"></a><h4>Returns</h4>
+<p> <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>frame</code></em>
+is a main frame or <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2.html#api-index-2.2">2.2</a></p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="webkit-frame-get-uri"></a><h3>webkit_frame_get_uri ()</h3>
 <pre class="programlisting">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
 webkit_frame_get_uri (<em class="parameter"><code><a class="link" href="WebKitFrame.html" title="WebKitFrame"><span class="type">WebKitFrame</span></a> *frame</code></em>);</pre>
+<p>Gets the current active URI of <em class="parameter"><code>frame</code></em>
+.</p>
+<div class="refsect3">
+<a name="webkit-frame-get-uri.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>frame</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitFrame.html" title="WebKitFrame"><span class="type">WebKitFrame</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-frame-get-uri.returns"></a><h4>Returns</h4>
+<p> the current active URI of <em class="parameter"><code>frame</code></em>
+or <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if nothing has been
+loaded yet.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2.html#api-index-2.2">2.2</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -115,6 +162,30 @@ webkit_frame_get_uri (<em class="parameter"><code><a class="link" href="WebKitFr
 <pre class="programlisting"><span class="returnvalue">JSGlobalContextRef</span>
 webkit_frame_get_javascript_global_context
                                (<em class="parameter"><code><a class="link" href="WebKitFrame.html" title="WebKitFrame"><span class="type">WebKitFrame</span></a> *frame</code></em>);</pre>
+<p>Gets the global JavaScript execution context. Use this function to bridge
+between the WebKit and JavaScriptCore APIs.</p>
+<div class="refsect3">
+<a name="webkit-frame-get-javascript-global-context.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>frame</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitFrame.html" title="WebKitFrame"><span class="type">WebKitFrame</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-frame-get-javascript-global-context.returns"></a><h4>Returns</h4>
+<p>the global JavaScript context of <em class="parameter"><code>frame</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2.html#api-index-2.2">2.2</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -123,6 +194,38 @@ webkit_frame_get_javascript_global_context
 webkit_frame_get_javascript_context_for_script_world
                                (<em class="parameter"><code><a class="link" href="WebKitFrame.html" title="WebKitFrame"><span class="type">WebKitFrame</span></a> *frame</code></em>,
                                 <em class="parameter"><code><a class="link" href="WebKitScriptWorld.html" title="WebKitScriptWorld"><span class="type">WebKitScriptWorld</span></a> *world</code></em>);</pre>
+<p>Gets the JavaScript execution context of <em class="parameter"><code>frame</code></em>
+ for the given <a class="link" href="WebKitScriptWorld.html" title="WebKitScriptWorld"><span class="type">WebKitScriptWorld</span></a>.</p>
+<div class="refsect3">
+<a name="webkit-frame-get-javascript-context-for-script-world.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>frame</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitFrame.html" title="WebKitFrame"><span class="type">WebKitFrame</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>world</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitScriptWorld.html" title="WebKitScriptWorld"><span class="type">WebKitScriptWorld</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-frame-get-javascript-context-for-script-world.returns"></a><h4>Returns</h4>
+<p>the JavaScript context of <em class="parameter"><code>frame</code></em>
+for <em class="parameter"><code>world</code></em>
+. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-2.html#api-index-2.2">2.2</a></p>
 </div>
 </div>
 <div class="refsect1">
@@ -134,6 +237,6 @@ webkit_frame_get_javascript_context_for_script_world
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.25.1</div>
+<hr>Generated by GTK-Doc V1.26.1</div>
 </body>
 </html>

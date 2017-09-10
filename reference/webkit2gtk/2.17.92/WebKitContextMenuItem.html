@@ -8,7 +8,7 @@
 <link rel="up" href="ch01.html" title="Class Overview">
 <link rel="prev" href="WebKitContextMenu.html" title="WebKitContextMenu">
 <link rel="next" href="WebKitOptionMenu.html" title="WebKitOptionMenu">
-<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.26.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -28,7 +28,7 @@
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
 <h2><span class="refentrytitle"><a name="WebKitContextMenuItem.top_of_page"></a>WebKitContextMenuItem</span></h2>
-<p>WebKitContextMenuItem</p>
+<p>WebKitContextMenuItem — One item of the <a class="link" href="WebKitContextMenu.html" title="WebKitContextMenu"><span class="type">WebKitContextMenu</span></a></p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
@@ -167,6 +167,10 @@
 </div>
 <div class="refsect1">
 <a name="WebKitContextMenuItem.description"></a><h2>Description</h2>
+<p>The <a class="link" href="WebKitContextMenu.html" title="WebKitContextMenu"><span class="type">WebKitContextMenu</span></a> is composed of <a class="link" href="WebKitContextMenuItem.html" title="WebKitContextMenuItem"><span class="type">WebKitContextMenuItem</span></a>s. These items can be created from a <a href="http://developer.gnome.org/gtk3/stable/GtkAction.html#GtkAction-struct"><span class="type">GtkAction</span></a>, from a
+<a class="link" href="WebKitContextMenuItem.html#WebKitContextMenuAction" title="enum WebKitContextMenuAction"><span class="type">WebKitContextMenuAction</span></a> or from a <a class="link" href="WebKitContextMenuItem.html#WebKitContextMenuAction" title="enum WebKitContextMenuAction"><span class="type">WebKitContextMenuAction</span></a> and a
+label. These <a class="link" href="WebKitContextMenuItem.html#WebKitContextMenuAction" title="enum WebKitContextMenuAction"><span class="type">WebKitContextMenuAction</span></a>s denote stock actions
+for the items. You can also create separators and submenus.</p>
 </div>
 <div class="refsect1">
 <a name="WebKitContextMenuItem.functions_details"></a><h2>Functions</h2>
@@ -174,7 +178,31 @@
 <a name="webkit-context-menu-item-new"></a><h3>webkit_context_menu_item_new ()</h3>
 <pre class="programlisting"><a class="link" href="WebKitContextMenuItem.html" title="WebKitContextMenuItem"><span class="returnvalue">WebKitContextMenuItem</span></a> *
 webkit_context_menu_item_new (<em class="parameter"><code><a href="http://developer.gnome.org/gtk3/stable/GtkAction.html#GtkAction-struct"><span class="type">GtkAction</span></a> *action</code></em>);</pre>
-<div class="warning"><p><code class="literal">webkit_context_menu_item_new</code> is deprecated and should not be used in newly-written code.</p></div>
+<div class="warning">
+<p><code class="literal">webkit_context_menu_item_new</code> has been deprecated since version 2.18 and should not be used in newly-written code.</p>
+<p>Use <a class="link" href="WebKitContextMenuItem.html#webkit-context-menu-item-new-from-gaction" title="webkit_context_menu_item_new_from_gaction ()"><code class="function">webkit_context_menu_item_new_from_gaction()</code></a> instead.</p>
+</div>
+<p>Creates a new <a class="link" href="WebKitContextMenuItem.html" title="WebKitContextMenuItem"><span class="type">WebKitContextMenuItem</span></a> for the given <em class="parameter"><code>action</code></em>
+.</p>
+<div class="refsect3">
+<a name="webkit-context-menu-item-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>action</p></td>
+<td class="parameter_description"><p>a <a href="http://developer.gnome.org/gtk3/stable/GtkAction.html#GtkAction-struct"><span class="type">GtkAction</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-context-menu-item-new.returns"></a><h4>Returns</h4>
+<p> the newly created <a class="link" href="WebKitContextMenuItem.html" title="WebKitContextMenuItem"><span class="type">WebKitContextMenuItem</span></a> object.</p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
@@ -184,6 +212,43 @@ webkit_context_menu_item_new_from_gaction
                                (<em class="parameter"><code><a href="http://developer.gnome.org/gio/stable/GAction.html#GAction-struct"><span class="type">GAction</span></a> *action</code></em>,
                                 <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *label</code></em>,
                                 <em class="parameter"><code><a href="http://developer.gnome.org/glib/stable/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> *target</code></em>);</pre>
+<p>Creates a new <a class="link" href="WebKitContextMenuItem.html" title="WebKitContextMenuItem"><span class="type">WebKitContextMenuItem</span></a> for the given <em class="parameter"><code>action</code></em>
+ and <em class="parameter"><code>label</code></em>
+. On activation
+<em class="parameter"><code>target</code></em>
+ will be passed as parameter to the callback.</p>
+<div class="refsect3">
+<a name="webkit-context-menu-item-new-from-gaction.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>action</p></td>
+<td class="parameter_description"><p>a <a href="http://developer.gnome.org/gio/stable/GAction.html#GAction-struct"><span class="type">GAction</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>label</p></td>
+<td class="parameter_description"><p>the menu item label text</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>target</p></td>
+<td class="parameter_description"><p>a <a href="http://developer.gnome.org/glib/stable/glib-GVariant.html#GVariant"><span class="type">GVariant</span></a> to use as the action target. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-context-menu-item-new-from-gaction.returns"></a><h4>Returns</h4>
+<p> the newly created <a class="link" href="WebKitContextMenuItem.html" title="WebKitContextMenuItem"><span class="type">WebKitContextMenuItem</span></a> object.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-18.html#api-index-2.18">2.18</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -191,6 +256,34 @@ webkit_context_menu_item_new_from_gaction
 <pre class="programlisting"><a class="link" href="WebKitContextMenuItem.html" title="WebKitContextMenuItem"><span class="returnvalue">WebKitContextMenuItem</span></a> *
 webkit_context_menu_item_new_from_stock_action
                                (<em class="parameter"><code><a class="link" href="WebKitContextMenuItem.html#WebKitContextMenuAction" title="enum WebKitContextMenuAction"><span class="type">WebKitContextMenuAction</span></a> action</code></em>);</pre>
+<p>Creates a new <a class="link" href="WebKitContextMenuItem.html" title="WebKitContextMenuItem"><span class="type">WebKitContextMenuItem</span></a> for the given stock action.
+Stock actions are handled automatically by WebKit so that, for example,
+when a menu item created with a <a class="link" href="WebKitContextMenuItem.html#WEBKIT-CONTEXT-MENU-ACTION-STOP:CAPS"><code class="literal">WEBKIT_CONTEXT_MENU_ACTION_STOP</code></a> is
+activated the action associated will be handled by WebKit and the current
+load operation will be stopped. You can get the <a href="http://developer.gnome.org/gtk3/stable/GtkAction.html#GtkAction-struct"><span class="type">GtkAction</span></a> of a
+<a class="link" href="WebKitContextMenuItem.html" title="WebKitContextMenuItem"><span class="type">WebKitContextMenuItem</span></a> created with a <a class="link" href="WebKitContextMenuItem.html#WebKitContextMenuAction" title="enum WebKitContextMenuAction"><span class="type">WebKitContextMenuAction</span></a> with
+<a class="link" href="WebKitContextMenuItem.html#webkit-context-menu-item-get-action" title="webkit_context_menu_item_get_action ()"><code class="function">webkit_context_menu_item_get_action()</code></a> and connect to <a href="http://developer.gnome.org/gtk3/stable/GtkAction.html#GtkAction-activate"><span class="type">“activate”</span></a> signal
+to be notified when the item is activated. But you can't prevent the associated
+action from being performed.</p>
+<div class="refsect3">
+<a name="webkit-context-menu-item-new-from-stock-action.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>action</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitContextMenuItem.html#WebKitContextMenuAction" title="enum WebKitContextMenuAction"><span class="type">WebKitContextMenuAction</span></a> stock action</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-context-menu-item-new-from-stock-action.returns"></a><h4>Returns</h4>
+<p> the newly created <a class="link" href="WebKitContextMenuItem.html" title="WebKitContextMenuItem"><span class="type">WebKitContextMenuItem</span></a> object.</p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
@@ -199,6 +292,36 @@ webkit_context_menu_item_new_from_stock_action
 webkit_context_menu_item_new_from_stock_action_with_label
                                (<em class="parameter"><code><a class="link" href="WebKitContextMenuItem.html#WebKitContextMenuAction" title="enum WebKitContextMenuAction"><span class="type">WebKitContextMenuAction</span></a> action</code></em>,
                                 <em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *label</code></em>);</pre>
+<p>Creates a new <a class="link" href="WebKitContextMenuItem.html" title="WebKitContextMenuItem"><span class="type">WebKitContextMenuItem</span></a> for the given stock action using the given <em class="parameter"><code>label</code></em>
+.
+Stock actions have a predefined label, this method can be used to create a
+<a class="link" href="WebKitContextMenuItem.html" title="WebKitContextMenuItem"><span class="type">WebKitContextMenuItem</span></a> for a <a class="link" href="WebKitContextMenuItem.html#WebKitContextMenuAction" title="enum WebKitContextMenuAction"><span class="type">WebKitContextMenuAction</span></a> but using a custom label.</p>
+<div class="refsect3">
+<a name="webkit-context-menu-item-new-from-stock-action-with-label.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>action</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitContextMenuItem.html#WebKitContextMenuAction" title="enum WebKitContextMenuAction"><span class="type">WebKitContextMenuAction</span></a> stock action</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>label</p></td>
+<td class="parameter_description"><p>a custom label text to use instead of the predefined one</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-context-menu-item-new-from-stock-action-with-label.returns"></a><h4>Returns</h4>
+<p> the newly created <a class="link" href="WebKitContextMenuItem.html" title="WebKitContextMenuItem"><span class="type">WebKitContextMenuItem</span></a> object.</p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
@@ -207,6 +330,34 @@ webkit_context_menu_item_new_from_stock_action_with_label
 webkit_context_menu_item_new_with_submenu
                                (<em class="parameter"><code>const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *label</code></em>,
                                 <em class="parameter"><code><a class="link" href="WebKitContextMenu.html" title="WebKitContextMenu"><span class="type">WebKitContextMenu</span></a> *submenu</code></em>);</pre>
+<p>Creates a new <a class="link" href="WebKitContextMenuItem.html" title="WebKitContextMenuItem"><span class="type">WebKitContextMenuItem</span></a> using the given <em class="parameter"><code>label</code></em>
+ with a submenu.</p>
+<div class="refsect3">
+<a name="webkit-context-menu-item-new-with-submenu.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>label</p></td>
+<td class="parameter_description"><p>the menu item label text</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>submenu</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitContextMenu.html" title="WebKitContextMenu"><span class="type">WebKitContextMenu</span></a> to set</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-context-menu-item-new-with-submenu.returns"></a><h4>Returns</h4>
+<p> the newly created <a class="link" href="WebKitContextMenuItem.html" title="WebKitContextMenuItem"><span class="type">WebKitContextMenuItem</span></a> object.</p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
@@ -214,19 +365,76 @@ webkit_context_menu_item_new_with_submenu
 <pre class="programlisting"><a class="link" href="WebKitContextMenuItem.html" title="WebKitContextMenuItem"><span class="returnvalue">WebKitContextMenuItem</span></a> *
 webkit_context_menu_item_new_separator
                                (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates a new <a class="link" href="WebKitContextMenuItem.html" title="WebKitContextMenuItem"><span class="type">WebKitContextMenuItem</span></a> representing a separator.</p>
+<div class="refsect3">
+<a name="webkit-context-menu-item-new-separator.returns"></a><h4>Returns</h4>
+<p> the newly created <a class="link" href="WebKitContextMenuItem.html" title="WebKitContextMenuItem"><span class="type">WebKitContextMenuItem</span></a> object.</p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="webkit-context-menu-item-get-action"></a><h3>webkit_context_menu_item_get_action ()</h3>
 <pre class="programlisting"><a href="http://developer.gnome.org/gtk3/stable/GtkAction.html#GtkAction-struct"><span class="returnvalue">GtkAction</span></a> *
 webkit_context_menu_item_get_action (<em class="parameter"><code><a class="link" href="WebKitContextMenuItem.html" title="WebKitContextMenuItem"><span class="type">WebKitContextMenuItem</span></a> *item</code></em>);</pre>
-<div class="warning"><p><code class="literal">webkit_context_menu_item_get_action</code> is deprecated and should not be used in newly-written code.</p></div>
+<div class="warning">
+<p><code class="literal">webkit_context_menu_item_get_action</code> has been deprecated since version 2.18 and should not be used in newly-written code.</p>
+<p>Use <a class="link" href="WebKitContextMenuItem.html#webkit-context-menu-item-get-gaction" title="webkit_context_menu_item_get_gaction ()"><code class="function">webkit_context_menu_item_get_gaction()</code></a> instead.</p>
+</div>
+<p>Gets the action associated to <em class="parameter"><code>item</code></em>
+ as a <a href="http://developer.gnome.org/gtk3/stable/GtkAction.html#GtkAction-struct"><span class="type">GtkAction</span></a>.</p>
+<div class="refsect3">
+<a name="webkit-context-menu-item-get-action.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>item</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitContextMenuItem.html" title="WebKitContextMenuItem"><span class="type">WebKitContextMenuItem</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-context-menu-item-get-action.returns"></a><h4>Returns</h4>
+<p>the <a href="http://developer.gnome.org/gtk3/stable/GtkAction.html#GtkAction-struct"><span class="type">GtkAction</span></a> associated to the <a class="link" href="WebKitContextMenuItem.html" title="WebKitContextMenuItem"><span class="type">WebKitContextMenuItem</span></a>,
+or <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>item</code></em>
+is a separator. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="webkit-context-menu-item-get-gaction"></a><h3>webkit_context_menu_item_get_gaction ()</h3>
 <pre class="programlisting"><a href="http://developer.gnome.org/gio/stable/GAction.html#GAction-struct"><span class="returnvalue">GAction</span></a> *
 webkit_context_menu_item_get_gaction (<em class="parameter"><code><a class="link" href="WebKitContextMenuItem.html" title="WebKitContextMenuItem"><span class="type">WebKitContextMenuItem</span></a> *item</code></em>);</pre>
+<p>Gets the action associated to <em class="parameter"><code>item</code></em>
+ as a <a href="http://developer.gnome.org/gio/stable/GAction.html#GAction-struct"><span class="type">GAction</span></a>.</p>
+<div class="refsect3">
+<a name="webkit-context-menu-item-get-gaction.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>item</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitContextMenuItem.html" title="WebKitContextMenuItem"><span class="type">WebKitContextMenuItem</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-context-menu-item-get-gaction.returns"></a><h4>Returns</h4>
+<p>the <a href="http://developer.gnome.org/gio/stable/GAction.html#GAction-struct"><span class="type">GAction</span></a> associated to the <a class="link" href="WebKitContextMenuItem.html" title="WebKitContextMenuItem"><span class="type">WebKitContextMenuItem</span></a>,
+or <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>item</code></em>
+is a separator. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-18.html#api-index-2.18">2.18</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -234,12 +442,59 @@ webkit_context_menu_item_get_gaction (<em class="parameter"><code><a class="link
 <pre class="programlisting"><a class="link" href="WebKitContextMenuItem.html#WebKitContextMenuAction" title="enum WebKitContextMenuAction"><span class="returnvalue">WebKitContextMenuAction</span></a>
 webkit_context_menu_item_get_stock_action
                                (<em class="parameter"><code><a class="link" href="WebKitContextMenuItem.html" title="WebKitContextMenuItem"><span class="type">WebKitContextMenuItem</span></a> *item</code></em>);</pre>
+<p>Gets the <a class="link" href="WebKitContextMenuItem.html#WebKitContextMenuAction" title="enum WebKitContextMenuAction"><span class="type">WebKitContextMenuAction</span></a> of <em class="parameter"><code>item</code></em>
+. If the <a class="link" href="WebKitContextMenuItem.html" title="WebKitContextMenuItem"><span class="type">WebKitContextMenuItem</span></a> was not
+created for a stock action <a class="link" href="WebKitContextMenuItem.html#WEBKIT-CONTEXT-MENU-ACTION-CUSTOM:CAPS"><code class="literal">WEBKIT_CONTEXT_MENU_ACTION_CUSTOM</code></a> will be
+returned. If the <a class="link" href="WebKitContextMenuItem.html" title="WebKitContextMenuItem"><span class="type">WebKitContextMenuItem</span></a> is a separator <a class="link" href="WebKitContextMenuItem.html#WEBKIT-CONTEXT-MENU-ACTION-NO-ACTION:CAPS"><code class="literal">WEBKIT_CONTEXT_MENU_ACTION_NO_ACTION</code></a>
+will be returned.</p>
+<div class="refsect3">
+<a name="webkit-context-menu-item-get-stock-action.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>item</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitContextMenuItem.html" title="WebKitContextMenuItem"><span class="type">WebKitContextMenuItem</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-context-menu-item-get-stock-action.returns"></a><h4>Returns</h4>
+<p> the <a class="link" href="WebKitContextMenuItem.html#WebKitContextMenuAction" title="enum WebKitContextMenuAction"><span class="type">WebKitContextMenuAction</span></a> of <em class="parameter"><code>item</code></em>
+</p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="webkit-context-menu-item-is-separator"></a><h3>webkit_context_menu_item_is_separator ()</h3>
 <pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 webkit_context_menu_item_is_separator (<em class="parameter"><code><a class="link" href="WebKitContextMenuItem.html" title="WebKitContextMenuItem"><span class="type">WebKitContextMenuItem</span></a> *item</code></em>);</pre>
+<p>Checks whether <em class="parameter"><code>item</code></em>
+ is a separator.</p>
+<div class="refsect3">
+<a name="webkit-context-menu-item-is-separator.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>item</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitContextMenuItem.html" title="WebKitContextMenuItem"><span class="type">WebKitContextMenuItem</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-context-menu-item-is-separator.returns"></a><h4>Returns</h4>
+<p> <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> is <em class="parameter"><code>item</code></em>
+is a separator or <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise</p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
@@ -247,12 +502,64 @@ webkit_context_menu_item_is_separator (<em class="parameter"><code><a class="lin
 <pre class="programlisting"><span class="returnvalue">void</span>
 webkit_context_menu_item_set_submenu (<em class="parameter"><code><a class="link" href="WebKitContextMenuItem.html" title="WebKitContextMenuItem"><span class="type">WebKitContextMenuItem</span></a> *item</code></em>,
                                       <em class="parameter"><code><a class="link" href="WebKitContextMenu.html" title="WebKitContextMenu"><span class="type">WebKitContextMenu</span></a> *submenu</code></em>);</pre>
+<p>Sets or replaces the <em class="parameter"><code>item</code></em>
+ submenu. If <em class="parameter"><code>submenu</code></em>
+ is <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> the current
+submenu of <em class="parameter"><code>item</code></em>
+ is removed.</p>
+<div class="refsect3">
+<a name="webkit-context-menu-item-set-submenu.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>item</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitContextMenuItem.html" title="WebKitContextMenuItem"><span class="type">WebKitContextMenuItem</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>submenu</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitContextMenu.html" title="WebKitContextMenu"><span class="type">WebKitContextMenu</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="webkit-context-menu-item-get-submenu"></a><h3>webkit_context_menu_item_get_submenu ()</h3>
 <pre class="programlisting"><a class="link" href="WebKitContextMenu.html" title="WebKitContextMenu"><span class="returnvalue">WebKitContextMenu</span></a> *
 webkit_context_menu_item_get_submenu (<em class="parameter"><code><a class="link" href="WebKitContextMenuItem.html" title="WebKitContextMenuItem"><span class="type">WebKitContextMenuItem</span></a> *item</code></em>);</pre>
+<p>Gets the submenu of <em class="parameter"><code>item</code></em>
+.</p>
+<div class="refsect3">
+<a name="webkit-context-menu-item-get-submenu.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>item</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitContextMenuItem.html" title="WebKitContextMenuItem"><span class="type">WebKitContextMenuItem</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-context-menu-item-get-submenu.returns"></a><h4>Returns</h4>
+<p>the <a class="link" href="WebKitContextMenu.html" title="WebKitContextMenu"><span class="type">WebKitContextMenu</span></a> representing the submenu of
+<em class="parameter"><code>item</code></em>
+or <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>item</code></em>
+doesn't have a submenu. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
 </div>
 </div>
 <div class="refsect1">
@@ -597,6 +904,6 @@ webkit_context_menu_item_get_submenu (<em class="parameter"><code><a class="link
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.25.1</div>
+<hr>Generated by GTK-Doc V1.26.1</div>
 </body>
 </html>

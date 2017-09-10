@@ -8,7 +8,7 @@
 <link rel="up" href="ch01.html" title="Class Overview">
 <link rel="prev" href="WebKitNavigationAction.html" title="WebKitNavigationAction">
 <link rel="next" href="WebKitPolicyDecision.html" title="WebKitPolicyDecision">
-<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.26.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -30,7 +30,7 @@
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
 <h2><span class="refentrytitle"><a name="WebKitUserMediaPermissionRequest.top_of_page"></a>WebKitUserMediaPermissionRequest</span></h2>
-<p>WebKitUserMediaPermissionRequest</p>
+<p>WebKitUserMediaPermissionRequest — A permission request for accessing user's audio/video devices.</p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
@@ -110,6 +110,11 @@ WebKitUserMediaPermissionRequest implements
 </div>
 <div class="refsect1">
 <a name="WebKitUserMediaPermissionRequest.description"></a><h2>Description</h2>
+<p>WebKitUserMediaPermissionRequest represents a request for
+permission to decide whether WebKit should be allowed to access the user's
+audio and video source devices when requested through the getUserMedia API.</p>
+<p>When a WebKitUserMediaPermissionRequest is not handled by the user,
+it is denied by default.</p>
 </div>
 <div class="refsect1">
 <a name="WebKitUserMediaPermissionRequest.functions_details"></a><h2>Functions</h2>
@@ -118,6 +123,26 @@ WebKitUserMediaPermissionRequest implements
 <pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 webkit_user_media_permission_is_for_audio_device
                                (<em class="parameter"><code><a class="link" href="WebKitUserMediaPermissionRequest.html" title="WebKitUserMediaPermissionRequest"><span class="type">WebKitUserMediaPermissionRequest</span></a> *request</code></em>);</pre>
+<div class="refsect3">
+<a name="webkit-user-media-permission-is-for-audio-device.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>request</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitUserMediaPermissionRequest.html" title="WebKitUserMediaPermissionRequest"><span class="type">WebKitUserMediaPermissionRequest</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-user-media-permission-is-for-audio-device.returns"></a><h4>Returns</h4>
+<p> <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if access to an audio device was requested.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-8.html#api-index-2.8">2.8</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -125,6 +150,26 @@ webkit_user_media_permission_is_for_audio_device
 <pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 webkit_user_media_permission_is_for_video_device
                                (<em class="parameter"><code><a class="link" href="WebKitUserMediaPermissionRequest.html" title="WebKitUserMediaPermissionRequest"><span class="type">WebKitUserMediaPermissionRequest</span></a> *request</code></em>);</pre>
+<div class="refsect3">
+<a name="webkit-user-media-permission-is-for-video-device.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>request</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitUserMediaPermissionRequest.html" title="WebKitUserMediaPermissionRequest"><span class="type">WebKitUserMediaPermissionRequest</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-user-media-permission-is-for-video-device.returns"></a><h4>Returns</h4>
+<p> <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if access to a video device was requested.</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-8.html#api-index-2.8">2.8</a></p>
 </div>
 </div>
 <div class="refsect1">
@@ -152,8 +197,12 @@ webkit_user_media_permission_is_for_video_device
 <p>Default value: FALSE</p>
 </div>
 </div>
+<div class="refsect1">
+<a name="WebKitUserMediaPermissionRequest.see-also"></a><h2>See Also</h2>
+<p><a class="link" href="WebKitPermissionRequest.html" title="WebKitPermissionRequest"><span class="type">WebKitPermissionRequest</span></a>, <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a></p>
+</div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.25.1</div>
+<hr>Generated by GTK-Doc V1.26.1</div>
 </body>
 </html>

@@ -8,7 +8,7 @@
 <link rel="up" href="ch01.html" title="Class Overview">
 <link rel="prev" href="WebKitNavigationPolicyDecision.html" title="WebKitNavigationPolicyDecision">
 <link rel="next" href="WebKitHitTestResult.html" title="WebKitHitTestResult">
-<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.26.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -29,7 +29,7 @@
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
 <h2><span class="refentrytitle"><a name="WebKitResponsePolicyDecision.top_of_page"></a>WebKitResponsePolicyDecision</span></h2>
-<p>WebKitResponsePolicyDecision</p>
+<p>WebKitResponsePolicyDecision — A policy decision for resource responses</p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
@@ -114,6 +114,11 @@
 </div>
 <div class="refsect1">
 <a name="WebKitResponsePolicyDecision.description"></a><h2>Description</h2>
+<p>WebKitResponsePolicyDecision represents a policy decision for a
+resource response, whether from the network or the local system.
+A very common use case for these types of decision is deciding
+whether or not to download a particular resource or to load it
+normally.</p>
 </div>
 <div class="refsect1">
 <a name="WebKitResponsePolicyDecision.functions_details"></a><h2>Functions</h2>
@@ -122,6 +127,27 @@
 <pre class="programlisting"><a class="link" href="WebKitURIRequest.html" title="WebKitURIRequest"><span class="returnvalue">WebKitURIRequest</span></a> *
 webkit_response_policy_decision_get_request
                                (<em class="parameter"><code><a class="link" href="WebKitResponsePolicyDecision.html" title="WebKitResponsePolicyDecision"><span class="type">WebKitResponsePolicyDecision</span></a> *decision</code></em>);</pre>
+<p>Gets the value of the <a class="link" href="WebKitResponsePolicyDecision.html#WebKitResponsePolicyDecision--request" title="The “request” property"><span class="type">“request”</span></a> property.</p>
+<div class="refsect3">
+<a name="webkit-response-policy-decision-get-request.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>decision</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitResponsePolicyDecision.html" title="WebKitResponsePolicyDecision"><span class="type">WebKitResponsePolicyDecision</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-response-policy-decision-get-request.returns"></a><h4>Returns</h4>
+<p>The URI request that is associated with this policy decision. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
@@ -129,6 +155,27 @@ webkit_response_policy_decision_get_request
 <pre class="programlisting"><a class="link" href="WebKitURIResponse.html" title="WebKitURIResponse"><span class="returnvalue">WebKitURIResponse</span></a> *
 webkit_response_policy_decision_get_response
                                (<em class="parameter"><code><a class="link" href="WebKitResponsePolicyDecision.html" title="WebKitResponsePolicyDecision"><span class="type">WebKitResponsePolicyDecision</span></a> *decision</code></em>);</pre>
+<p>Gets the value of the <a class="link" href="WebKitResponsePolicyDecision.html#WebKitResponsePolicyDecision--response" title="The “response” property"><span class="type">“response”</span></a> property.</p>
+<div class="refsect3">
+<a name="webkit-response-policy-decision-get-response.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>decision</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitResponsePolicyDecision.html" title="WebKitResponsePolicyDecision"><span class="type">WebKitResponsePolicyDecision</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-response-policy-decision-get-response.returns"></a><h4>Returns</h4>
+<p>The URI response that is associated with this policy decision. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
@@ -136,6 +183,28 @@ webkit_response_policy_decision_get_response
 <pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 webkit_response_policy_decision_is_mime_type_supported
                                (<em class="parameter"><code><a class="link" href="WebKitResponsePolicyDecision.html" title="WebKitResponsePolicyDecision"><span class="type">WebKitResponsePolicyDecision</span></a> *decision</code></em>);</pre>
+<p>Gets whether the MIME type of the response can be displayed in the <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>
+that triggered this policy decision request. See also <a class="link" href="WebKitWebView.html#webkit-web-view-can-show-mime-type" title="webkit_web_view_can_show_mime_type ()"><code class="function">webkit_web_view_can_show_mime_type()</code></a>.</p>
+<div class="refsect3">
+<a name="webkit-response-policy-decision-is-mime-type-supported.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>decision</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitResponsePolicyDecision.html" title="WebKitResponsePolicyDecision"><span class="type">WebKitResponsePolicyDecision</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-response-policy-decision-is-mime-type-supported.returns"></a><h4>Returns</h4>
+<p> <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the MIME type of the response is supported or <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-4.html#api-index-2.4">2.4</a></p>
 </div>
 </div>
 <div class="refsect1">
@@ -150,19 +219,25 @@ webkit_response_policy_decision_is_mime_type_supported
 <div class="refsect2">
 <a name="WebKitResponsePolicyDecision--request"></a><h3>The <code class="literal">“request”</code> property</h3>
 <pre class="programlisting">  “request”                  <a class="link" href="WebKitURIRequest.html" title="WebKitURIRequest"><span class="type">WebKitURIRequest</span></a> *</pre>
-<p>The URI request that is associated with this policy decision.</p>
+<p>This property contains the <a class="link" href="WebKitURIRequest.html" title="WebKitURIRequest"><span class="type">WebKitURIRequest</span></a> associated with this
+policy decision.</p>
 <p>Flags: Read</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="WebKitResponsePolicyDecision--response"></a><h3>The <code class="literal">“response”</code> property</h3>
 <pre class="programlisting">  “response”                 <a class="link" href="WebKitURIResponse.html" title="WebKitURIResponse"><span class="type">WebKitURIResponse</span></a> *</pre>
-<p>The URI response that is associated with this policy decision.</p>
+<p>This property contains the <a class="link" href="WebKitURIResponse.html" title="WebKitURIResponse"><span class="type">WebKitURIResponse</span></a> associated with this
+policy decision.</p>
 <p>Flags: Read</p>
 </div>
 </div>
+<div class="refsect1">
+<a name="WebKitResponsePolicyDecision.see-also"></a><h2>See Also</h2>
+<p><a class="link" href="WebKitPolicyDecision.html" title="WebKitPolicyDecision"><span class="type">WebKitPolicyDecision</span></a>, <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a></p>
+</div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.25.1</div>
+<hr>Generated by GTK-Doc V1.26.1</div>
 </body>
 </html>

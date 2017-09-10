@@ -8,7 +8,7 @@
 <link rel="up" href="ch02.html" title="Web Extensions">
 <link rel="prev" href="WebKitWebEditor.html" title="WebKitWebEditor">
 <link rel="next" href="index-all.html" title="Index">
-<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.26.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -135,42 +135,192 @@
 <a name="webkit-console-message-copy"></a><h3>webkit_console_message_copy ()</h3>
 <pre class="programlisting"><a class="link" href="WebKitConsoleMessage.html" title="WebKitConsoleMessage"><span class="returnvalue">WebKitConsoleMessage</span></a> *
 webkit_console_message_copy (<em class="parameter"><code><a class="link" href="WebKitConsoleMessage.html" title="WebKitConsoleMessage"><span class="type">WebKitConsoleMessage</span></a> *console_message</code></em>);</pre>
+<p>Make a copy of <em class="parameter"><code>console_message</code></em>
+.</p>
+<div class="refsect3">
+<a name="webkit-console-message-copy.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>console_message</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitConsoleMessage.html" title="WebKitConsoleMessage"><span class="type">WebKitConsoleMessage</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-console-message-copy.returns"></a><h4>Returns</h4>
+<p>A copy of passed in <a class="link" href="WebKitConsoleMessage.html" title="WebKitConsoleMessage"><span class="type">WebKitConsoleMessage</span></a>. </p>
+<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-12.html#api-index-2.12">2.12</a></p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="webkit-console-message-free"></a><h3>webkit_console_message_free ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 webkit_console_message_free (<em class="parameter"><code><a class="link" href="WebKitConsoleMessage.html" title="WebKitConsoleMessage"><span class="type">WebKitConsoleMessage</span></a> *console_message</code></em>);</pre>
+<p>Free the <a class="link" href="WebKitConsoleMessage.html" title="WebKitConsoleMessage"><span class="type">WebKitConsoleMessage</span></a></p>
+<div class="refsect3">
+<a name="webkit-console-message-free.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>console_message</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitConsoleMessage.html" title="WebKitConsoleMessage"><span class="type">WebKitConsoleMessage</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-12.html#api-index-2.12">2.12</a></p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="webkit-console-message-get-source"></a><h3>webkit_console_message_get_source ()</h3>
 <pre class="programlisting"><a class="link" href="WebKitConsoleMessage.html#WebKitConsoleMessageSource" title="enum WebKitConsoleMessageSource"><span class="returnvalue">WebKitConsoleMessageSource</span></a>
 webkit_console_message_get_source (<em class="parameter"><code><a class="link" href="WebKitConsoleMessage.html" title="WebKitConsoleMessage"><span class="type">WebKitConsoleMessage</span></a> *console_message</code></em>);</pre>
+<p>Gets the source of a <a class="link" href="WebKitConsoleMessage.html" title="WebKitConsoleMessage"><span class="type">WebKitConsoleMessage</span></a></p>
+<div class="refsect3">
+<a name="webkit-console-message-get-source.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>console_message</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitConsoleMessage.html" title="WebKitConsoleMessage"><span class="type">WebKitConsoleMessage</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-console-message-get-source.returns"></a><h4>Returns</h4>
+<p> a <a class="link" href="WebKitConsoleMessage.html#WebKitConsoleMessageSource" title="enum WebKitConsoleMessageSource"><span class="type">WebKitConsoleMessageSource</span></a> indicating the source of <em class="parameter"><code>console_message</code></em>
+</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-12.html#api-index-2.12">2.12</a></p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="webkit-console-message-get-level"></a><h3>webkit_console_message_get_level ()</h3>
 <pre class="programlisting"><a class="link" href="WebKitConsoleMessage.html#WebKitConsoleMessageLevel" title="enum WebKitConsoleMessageLevel"><span class="returnvalue">WebKitConsoleMessageLevel</span></a>
 webkit_console_message_get_level (<em class="parameter"><code><a class="link" href="WebKitConsoleMessage.html" title="WebKitConsoleMessage"><span class="type">WebKitConsoleMessage</span></a> *console_message</code></em>);</pre>
+<p>Gets the log level of a <a class="link" href="WebKitConsoleMessage.html" title="WebKitConsoleMessage"><span class="type">WebKitConsoleMessage</span></a></p>
+<div class="refsect3">
+<a name="webkit-console-message-get-level.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>console_message</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitConsoleMessage.html" title="WebKitConsoleMessage"><span class="type">WebKitConsoleMessage</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-console-message-get-level.returns"></a><h4>Returns</h4>
+<p> a <a class="link" href="WebKitConsoleMessage.html#WebKitConsoleMessageLevel" title="enum WebKitConsoleMessageLevel"><span class="type">WebKitConsoleMessageLevel</span></a> indicating the log level of <em class="parameter"><code>console_message</code></em>
+</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-12.html#api-index-2.12">2.12</a></p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="webkit-console-message-get-text"></a><h3>webkit_console_message_get_text ()</h3>
 <pre class="programlisting">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
 webkit_console_message_get_text (<em class="parameter"><code><a class="link" href="WebKitConsoleMessage.html" title="WebKitConsoleMessage"><span class="type">WebKitConsoleMessage</span></a> *console_message</code></em>);</pre>
+<p>Gets the text message of a <a class="link" href="WebKitConsoleMessage.html" title="WebKitConsoleMessage"><span class="type">WebKitConsoleMessage</span></a></p>
+<div class="refsect3">
+<a name="webkit-console-message-get-text.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>console_message</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitConsoleMessage.html" title="WebKitConsoleMessage"><span class="type">WebKitConsoleMessage</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-console-message-get-text.returns"></a><h4>Returns</h4>
+<p> the text message of <em class="parameter"><code>console_message</code></em>
+</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-12.html#api-index-2.12">2.12</a></p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="webkit-console-message-get-line"></a><h3>webkit_console_message_get_line ()</h3>
 <pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
 webkit_console_message_get_line (<em class="parameter"><code><a class="link" href="WebKitConsoleMessage.html" title="WebKitConsoleMessage"><span class="type">WebKitConsoleMessage</span></a> *console_message</code></em>);</pre>
+<p>Gets the line number of a <a class="link" href="WebKitConsoleMessage.html" title="WebKitConsoleMessage"><span class="type">WebKitConsoleMessage</span></a></p>
+<div class="refsect3">
+<a name="webkit-console-message-get-line.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>console_message</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitConsoleMessage.html" title="WebKitConsoleMessage"><span class="type">WebKitConsoleMessage</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-console-message-get-line.returns"></a><h4>Returns</h4>
+<p> the line number of <em class="parameter"><code>console_message</code></em>
+</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-12.html#api-index-2.12">2.12</a></p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="webkit-console-message-get-source-id"></a><h3>webkit_console_message_get_source_id ()</h3>
 <pre class="programlisting">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
 webkit_console_message_get_source_id (<em class="parameter"><code><a class="link" href="WebKitConsoleMessage.html" title="WebKitConsoleMessage"><span class="type">WebKitConsoleMessage</span></a> *console_message</code></em>);</pre>
+<p>Gets the source identifier of a <a class="link" href="WebKitConsoleMessage.html" title="WebKitConsoleMessage"><span class="type">WebKitConsoleMessage</span></a></p>
+<div class="refsect3">
+<a name="webkit-console-message-get-source-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>console_message</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitConsoleMessage.html" title="WebKitConsoleMessage"><span class="type">WebKitConsoleMessage</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-console-message-get-source-id.returns"></a><h4>Returns</h4>
+<p> the source identifier of <em class="parameter"><code>console_message</code></em>
+</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-12.html#api-index-2.12">2.12</a></p>
 </div>
 </div>
 <div class="refsect1">
@@ -288,6 +438,6 @@ webkit_console_message_get_source_id (<em class="parameter"><code><a class="link
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.25.1</div>
+<hr>Generated by GTK-Doc V1.26.1</div>
 </body>
 </html>

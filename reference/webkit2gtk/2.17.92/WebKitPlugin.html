@@ -8,7 +8,7 @@
 <link rel="up" href="ch01.html" title="Class Overview">
 <link rel="prev" href="WebKitCookieManager.html" title="WebKitCookieManager">
 <link rel="next" href="WebKitWebInspector.html" title="WebKitWebInspector">
-<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.26.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -28,7 +28,7 @@
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
 <h2><span class="refentrytitle"><a name="WebKitPlugin.top_of_page"></a>WebKitPlugin</span></h2>
-<p>WebKitPlugin</p>
+<p>WebKitPlugin — Represents a plugin, enabling fine-grained control</p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
@@ -138,6 +138,12 @@
 </div>
 <div class="refsect1">
 <a name="WebKitPlugin.description"></a><h2>Description</h2>
+<p>This object represents a single plugin, found while scanning the
+various platform plugin directories. This object can be used to get
+more information about a plugin, and enable/disable it, allowing
+fine-grained control of plugins. The list of available plugins can
+be obtained from the <a class="link" href="WebKitWebContext.html" title="WebKitWebContext"><span class="type">WebKitWebContext</span></a>, with
+<a class="link" href="WebKitWebContext.html#webkit-web-context-get-plugins" title="webkit_web_context_get_plugins ()"><code class="function">webkit_web_context_get_plugins()</code></a>.</p>
 </div>
 <div class="refsect1">
 <a name="WebKitPlugin.functions_details"></a><h2>Functions</h2>
@@ -145,54 +151,239 @@
 <a name="webkit-plugin-get-name"></a><h3>webkit_plugin_get_name ()</h3>
 <pre class="programlisting">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
 webkit_plugin_get_name (<em class="parameter"><code><a class="link" href="WebKitPlugin.html" title="WebKitPlugin"><span class="type">WebKitPlugin</span></a> *plugin</code></em>);</pre>
+<div class="refsect3">
+<a name="webkit-plugin-get-name.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>plugin</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitPlugin.html" title="WebKitPlugin"><span class="type">WebKitPlugin</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-plugin-get-name.returns"></a><h4>Returns</h4>
+<p> the name of the plugin.</p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="webkit-plugin-get-description"></a><h3>webkit_plugin_get_description ()</h3>
 <pre class="programlisting">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
 webkit_plugin_get_description (<em class="parameter"><code><a class="link" href="WebKitPlugin.html" title="WebKitPlugin"><span class="type">WebKitPlugin</span></a> *plugin</code></em>);</pre>
+<div class="refsect3">
+<a name="webkit-plugin-get-description.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>plugin</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitPlugin.html" title="WebKitPlugin"><span class="type">WebKitPlugin</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-plugin-get-description.returns"></a><h4>Returns</h4>
+<p> the description of the plugin.</p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="webkit-plugin-get-path"></a><h3>webkit_plugin_get_path ()</h3>
 <pre class="programlisting">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
 webkit_plugin_get_path (<em class="parameter"><code><a class="link" href="WebKitPlugin.html" title="WebKitPlugin"><span class="type">WebKitPlugin</span></a> *plugin</code></em>);</pre>
+<div class="refsect3">
+<a name="webkit-plugin-get-path.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>plugin</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitPlugin.html" title="WebKitPlugin"><span class="type">WebKitPlugin</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-plugin-get-path.returns"></a><h4>Returns</h4>
+<p> the absolute path where the plugin is installed.</p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="webkit-plugin-get-mime-info-list"></a><h3>webkit_plugin_get_mime_info_list ()</h3>
 <pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
 webkit_plugin_get_mime_info_list (<em class="parameter"><code><a class="link" href="WebKitPlugin.html" title="WebKitPlugin"><span class="type">WebKitPlugin</span></a> *plugin</code></em>);</pre>
+<p>Get information about MIME types handled by the plugin,
+as a list of <a class="link" href="WebKitPlugin.html#WebKitMimeInfo"><span class="type">WebKitMimeInfo</span></a>.</p>
+<div class="refsect3">
+<a name="webkit-plugin-get-mime-info-list.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>plugin</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitPlugin.html" title="WebKitPlugin"><span class="type">WebKitPlugin</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-plugin-get-mime-info-list.returns"></a><h4>Returns</h4>
+<p>a <a href="http://developer.gnome.org/glib/stable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> of <a class="link" href="WebKitPlugin.html#WebKitMimeInfo"><span class="type">WebKitMimeInfo</span></a>. </p>
+<p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> WebKitMimeInfo][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="webkit-mime-info-ref"></a><h3>webkit_mime_info_ref ()</h3>
 <pre class="programlisting"><a class="link" href="WebKitPlugin.html#WebKitMimeInfo"><span class="returnvalue">WebKitMimeInfo</span></a> *
 webkit_mime_info_ref (<em class="parameter"><code><a class="link" href="WebKitPlugin.html#WebKitMimeInfo"><span class="type">WebKitMimeInfo</span></a> *info</code></em>);</pre>
+<p>Atomically increments the reference count of <em class="parameter"><code>info</code></em>
+ by one. This
+function is MT-safe and may be called from any thread.</p>
+<div class="refsect3">
+<a name="webkit-mime-info-ref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitPlugin.html#WebKitMimeInfo"><span class="type">WebKitMimeInfo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-mime-info-ref.returns"></a><h4>Returns</h4>
+<p> The passed in <a class="link" href="WebKitPlugin.html#WebKitMimeInfo"><span class="type">WebKitMimeInfo</span></a></p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="webkit-mime-info-unref"></a><h3>webkit_mime_info_unref ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 webkit_mime_info_unref (<em class="parameter"><code><a class="link" href="WebKitPlugin.html#WebKitMimeInfo"><span class="type">WebKitMimeInfo</span></a> *info</code></em>);</pre>
+<p>Atomically decrements the reference count of <em class="parameter"><code>info</code></em>
+ by one. If the
+reference count drops to 0, all memory allocated by the <a class="link" href="WebKitPlugin.html#WebKitMimeInfo"><span class="type">WebKitMimeInfo</span></a> is
+released. This function is MT-safe and may be called from any
+thread.</p>
+<div class="refsect3">
+<a name="webkit-mime-info-unref.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitPlugin.html#WebKitMimeInfo"><span class="type">WebKitMimeInfo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="webkit-mime-info-get-mime-type"></a><h3>webkit_mime_info_get_mime_type ()</h3>
 <pre class="programlisting">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
 webkit_mime_info_get_mime_type (<em class="parameter"><code><a class="link" href="WebKitPlugin.html#WebKitMimeInfo"><span class="type">WebKitMimeInfo</span></a> *info</code></em>);</pre>
+<div class="refsect3">
+<a name="webkit-mime-info-get-mime-type.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitPlugin.html#WebKitMimeInfo"><span class="type">WebKitMimeInfo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-mime-info-get-mime-type.returns"></a><h4>Returns</h4>
+<p> the MIME type of <em class="parameter"><code>info</code></em>
+</p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="webkit-mime-info-get-description"></a><h3>webkit_mime_info_get_description ()</h3>
 <pre class="programlisting">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
 webkit_mime_info_get_description (<em class="parameter"><code><a class="link" href="WebKitPlugin.html#WebKitMimeInfo"><span class="type">WebKitMimeInfo</span></a> *info</code></em>);</pre>
+<div class="refsect3">
+<a name="webkit-mime-info-get-description.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitPlugin.html#WebKitMimeInfo"><span class="type">WebKitMimeInfo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-mime-info-get-description.returns"></a><h4>Returns</h4>
+<p> the description of the MIME type of <em class="parameter"><code>info</code></em>
+</p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="webkit-mime-info-get-extensions"></a><h3>webkit_mime_info_get_extensions ()</h3>
 <pre class="programlisting">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> * const *
 webkit_mime_info_get_extensions (<em class="parameter"><code><a class="link" href="WebKitPlugin.html#WebKitMimeInfo"><span class="type">WebKitMimeInfo</span></a> *info</code></em>);</pre>
+<p>Get the list of file extensions associated to the
+MIME type of <em class="parameter"><code>info</code></em>
+</p>
+<div class="refsect3">
+<a name="webkit-mime-info-get-extensions.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>info</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitPlugin.html#WebKitMimeInfo"><span class="type">WebKitMimeInfo</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-mime-info-get-extensions.returns"></a><h4>Returns</h4>
+<p>a
+<a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>-terminated array of strings. </p>
+<p><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> zero-terminated=1][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
 </div>
 </div>
 <div class="refsect1">
@@ -209,6 +400,6 @@ webkit_mime_info_get_extensions (<em class="parameter"><code><a class="link" hre
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.25.1</div>
+<hr>Generated by GTK-Doc V1.26.1</div>
 </body>
 </html>

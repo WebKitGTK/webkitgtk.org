@@ -8,7 +8,7 @@
 <link rel="up" href="ch01.html" title="Class Overview">
 <link rel="prev" href="WebKitBackForwardList.html" title="WebKitBackForwardList">
 <link rel="next" href="WebKitSettings.html" title="WebKitSettings">
-<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.26.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -28,7 +28,7 @@
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
 <h2><span class="refentrytitle"><a name="WebKitBackForwardListItem.top_of_page"></a>WebKitBackForwardListItem</span></h2>
-<p>WebKitBackForwardListItem</p>
+<p>WebKitBackForwardListItem — One item of the <a class="link" href="WebKitBackForwardList.html" title="WebKitBackForwardList"><span class="type">WebKitBackForwardList</span></a></p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
@@ -86,6 +86,8 @@
 </div>
 <div class="refsect1">
 <a name="WebKitBackForwardListItem.description"></a><h2>Description</h2>
+<p>A history item is part of the <a class="link" href="WebKitBackForwardList.html" title="WebKitBackForwardList"><span class="type">WebKitBackForwardList</span></a> and consists
+out of a title and a URI.</p>
 </div>
 <div class="refsect1">
 <a name="WebKitBackForwardListItem.functions_details"></a><h2>Functions</h2>
@@ -94,12 +96,57 @@
 <pre class="programlisting">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
 webkit_back_forward_list_item_get_title
                                (<em class="parameter"><code><a class="link" href="WebKitBackForwardListItem.html" title="WebKitBackForwardListItem"><span class="type">WebKitBackForwardListItem</span></a> *list_item</code></em>);</pre>
+<div class="refsect3">
+<a name="webkit-back-forward-list-item-get-title.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>list_item</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitBackForwardListItem.html" title="WebKitBackForwardListItem"><span class="type">WebKitBackForwardListItem</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-back-forward-list-item-get-title.returns"></a><h4>Returns</h4>
+<p> the page title of <em class="parameter"><code>list_item</code></em>
+or <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
+when the title is empty.</p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="webkit-back-forward-list-item-get-uri"></a><h3>webkit_back_forward_list_item_get_uri ()</h3>
 <pre class="programlisting">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
 webkit_back_forward_list_item_get_uri (<em class="parameter"><code><a class="link" href="WebKitBackForwardListItem.html" title="WebKitBackForwardListItem"><span class="type">WebKitBackForwardListItem</span></a> *list_item</code></em>);</pre>
+<p>This URI may differ from the original URI if the page was,
+for example, redirected to a new location.
+See also <a class="link" href="WebKitBackForwardListItem.html#webkit-back-forward-list-item-get-original-uri" title="webkit_back_forward_list_item_get_original_uri ()"><code class="function">webkit_back_forward_list_item_get_original_uri()</code></a>.</p>
+<div class="refsect3">
+<a name="webkit-back-forward-list-item-get-uri.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>list_item</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitBackForwardListItem.html" title="WebKitBackForwardListItem"><span class="type">WebKitBackForwardListItem</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-back-forward-list-item-get-uri.returns"></a><h4>Returns</h4>
+<p> the URI of <em class="parameter"><code>list_item</code></em>
+or <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
+when the URI is empty.</p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
@@ -107,6 +154,28 @@ webkit_back_forward_list_item_get_uri (<em class="parameter"><code><a class="lin
 <pre class="programlisting">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
 webkit_back_forward_list_item_get_original_uri
                                (<em class="parameter"><code><a class="link" href="WebKitBackForwardListItem.html" title="WebKitBackForwardListItem"><span class="type">WebKitBackForwardListItem</span></a> *list_item</code></em>);</pre>
+<p>See also <a class="link" href="WebKitBackForwardListItem.html#webkit-back-forward-list-item-get-uri" title="webkit_back_forward_list_item_get_uri ()"><code class="function">webkit_back_forward_list_item_get_uri()</code></a>.</p>
+<div class="refsect3">
+<a name="webkit-back-forward-list-item-get-original-uri.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>list_item</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitBackForwardListItem.html" title="WebKitBackForwardListItem"><span class="type">WebKitBackForwardListItem</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-back-forward-list-item-get-original-uri.returns"></a><h4>Returns</h4>
+<p> the original URI of <em class="parameter"><code>list_item</code></em>
+or <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
+when the original URI is empty.</p>
+</div>
 </div>
 </div>
 <div class="refsect1">
@@ -116,8 +185,12 @@ webkit_back_forward_list_item_get_original_uri
 <pre class="programlisting">struct WebKitBackForwardListItem;</pre>
 </div>
 </div>
+<div class="refsect1">
+<a name="WebKitBackForwardListItem.see-also"></a><h2>See Also</h2>
+<p><a class="link" href="WebKitBackForwardList.html" title="WebKitBackForwardList"><span class="type">WebKitBackForwardList</span></a></p>
+</div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.25.1</div>
+<hr>Generated by GTK-Doc V1.26.1</div>
 </body>
 </html>

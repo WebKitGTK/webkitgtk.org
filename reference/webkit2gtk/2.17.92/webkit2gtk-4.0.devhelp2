@@ -42,7 +42,7 @@
       <sub name="WebKitFormSubmissionRequest" link="WebKitFormSubmissionRequest.html"/>
       <sub name="WebKitSecurityManager" link="WebKitSecurityManager.html"/>
       <sub name="WebKitUserContentManager" link="WebKitUserContentManager.html"/>
-      <sub name="WebKitUserContent" link="webkit2gtk-4.0-WebKitUserContent.html"/>
+      <sub name="User content" link="webkit2gtk-4.0-WebKitUserContent.html"/>
       <sub name="WebKitNotification" link="WebKitNotification.html"/>
       <sub name="WebKitNotificationPermissionRequest" link="WebKitNotificationPermissionRequest.html"/>
       <sub name="WebKitSecurityOrigin" link="WebKitSecurityOrigin.html"/>
@@ -76,19 +76,19 @@
   </chapters>
   <functions>
     <keyword type="function" name="webkit_web_context_get_default ()" link="WebKitWebContext.html#webkit-web-context-get-default"/>
-    <keyword type="function" name="webkit_web_context_new ()" link="WebKitWebContext.html#webkit-web-context-new"/>
-    <keyword type="function" name="webkit_web_context_new_ephemeral ()" link="WebKitWebContext.html#webkit-web-context-new-ephemeral"/>
-    <keyword type="function" name="webkit_web_context_new_with_website_data_manager ()" link="WebKitWebContext.html#webkit-web-context-new-with-website-data-manager"/>
-    <keyword type="function" name="webkit_web_context_is_ephemeral ()" link="WebKitWebContext.html#webkit-web-context-is-ephemeral"/>
-    <keyword type="function" name="webkit_web_context_is_automation_allowed ()" link="WebKitWebContext.html#webkit-web-context-is-automation-allowed"/>
-    <keyword type="function" name="webkit_web_context_set_automation_allowed ()" link="WebKitWebContext.html#webkit-web-context-set-automation-allowed"/>
-    <keyword type="function" name="webkit_web_context_get_website_data_manager ()" link="WebKitWebContext.html#webkit-web-context-get-website-data-manager"/>
+    <keyword type="function" name="webkit_web_context_new ()" link="WebKitWebContext.html#webkit-web-context-new" since="2.8"/>
+    <keyword type="function" name="webkit_web_context_new_ephemeral ()" link="WebKitWebContext.html#webkit-web-context-new-ephemeral" since="2.16"/>
+    <keyword type="function" name="webkit_web_context_new_with_website_data_manager ()" link="WebKitWebContext.html#webkit-web-context-new-with-website-data-manager" since="2.10"/>
+    <keyword type="function" name="webkit_web_context_is_ephemeral ()" link="WebKitWebContext.html#webkit-web-context-is-ephemeral" since="2.16"/>
+    <keyword type="function" name="webkit_web_context_is_automation_allowed ()" link="WebKitWebContext.html#webkit-web-context-is-automation-allowed" since="2.18"/>
+    <keyword type="function" name="webkit_web_context_set_automation_allowed ()" link="WebKitWebContext.html#webkit-web-context-set-automation-allowed" since="2.18"/>
+    <keyword type="function" name="webkit_web_context_get_website_data_manager ()" link="WebKitWebContext.html#webkit-web-context-get-website-data-manager" since="2.10"/>
     <keyword type="function" name="webkit_web_context_get_cache_model ()" link="WebKitWebContext.html#webkit-web-context-get-cache-model"/>
     <keyword type="function" name="webkit_web_context_set_cache_model ()" link="WebKitWebContext.html#webkit-web-context-set-cache-model"/>
-    <keyword type="function" name="webkit_web_context_get_web_process_count_limit ()" link="WebKitWebContext.html#webkit-web-context-get-web-process-count-limit"/>
-    <keyword type="function" name="webkit_web_context_set_web_process_count_limit ()" link="WebKitWebContext.html#webkit-web-context-set-web-process-count-limit"/>
+    <keyword type="function" name="webkit_web_context_get_web_process_count_limit ()" link="WebKitWebContext.html#webkit-web-context-get-web-process-count-limit" since="2.10"/>
+    <keyword type="function" name="webkit_web_context_set_web_process_count_limit ()" link="WebKitWebContext.html#webkit-web-context-set-web-process-count-limit" since="2.10"/>
     <keyword type="function" name="webkit_web_context_clear_cache ()" link="WebKitWebContext.html#webkit-web-context-clear-cache"/>
-    <keyword type="function" name="webkit_web_context_set_network_proxy_settings ()" link="WebKitWebContext.html#webkit-web-context-set-network-proxy-settings"/>
+    <keyword type="function" name="webkit_web_context_set_network_proxy_settings ()" link="WebKitWebContext.html#webkit-web-context-set-network-proxy-settings" since="2.16"/>
     <keyword type="function" name="webkit_web_context_download_uri ()" link="WebKitWebContext.html#webkit-web-context-download-uri"/>
     <keyword type="function" name="webkit_web_context_get_cookie_manager ()" link="WebKitWebContext.html#webkit-web-context-get-cookie-manager"/>
     <keyword type="function" name="webkit_web_context_get_favicon_database ()" link="WebKitWebContext.html#webkit-web-context-get-favicon-database"/>
@@ -106,13 +106,13 @@
     <keyword type="function" name="webkit_web_context_set_tls_errors_policy ()" link="WebKitWebContext.html#webkit-web-context-set-tls-errors-policy"/>
     <keyword type="function" name="webkit_web_context_get_tls_errors_policy ()" link="WebKitWebContext.html#webkit-web-context-get-tls-errors-policy"/>
     <keyword type="function" name="webkit_web_context_set_web_extensions_directory ()" link="WebKitWebContext.html#webkit-web-context-set-web-extensions-directory"/>
-    <keyword type="function" name="webkit_web_context_set_web_extensions_initialization_user_data ()" link="WebKitWebContext.html#webkit-web-context-set-web-extensions-initialization-user-data"/>
+    <keyword type="function" name="webkit_web_context_set_web_extensions_initialization_user_data ()" link="WebKitWebContext.html#webkit-web-context-set-web-extensions-initialization-user-data" since="2.4"/>
     <keyword type="function" name="webkit_web_context_prefetch_dns ()" link="WebKitWebContext.html#webkit-web-context-prefetch-dns"/>
-    <keyword type="function" name="webkit_web_context_set_disk_cache_directory ()" link="WebKitWebContext.html#webkit-web-context-set-disk-cache-directory" deprecated=""/>
-    <keyword type="function" name="webkit_web_context_allow_tls_certificate_for_host ()" link="WebKitWebContext.html#webkit-web-context-allow-tls-certificate-for-host"/>
-    <keyword type="function" name="webkit_web_context_get_process_model ()" link="WebKitWebContext.html#webkit-web-context-get-process-model"/>
-    <keyword type="function" name="webkit_web_context_set_process_model ()" link="WebKitWebContext.html#webkit-web-context-set-process-model"/>
-    <keyword type="function" name="webkit_web_context_initialize_notification_permissions ()" link="WebKitWebContext.html#webkit-web-context-initialize-notification-permissions"/>
+    <keyword type="function" name="webkit_web_context_set_disk_cache_directory ()" link="WebKitWebContext.html#webkit-web-context-set-disk-cache-directory" deprecated="2.10. Use webkit_web_context_new_with_website_data_manager() instead."/>
+    <keyword type="function" name="webkit_web_context_allow_tls_certificate_for_host ()" link="WebKitWebContext.html#webkit-web-context-allow-tls-certificate-for-host" since="2.6"/>
+    <keyword type="function" name="webkit_web_context_get_process_model ()" link="WebKitWebContext.html#webkit-web-context-get-process-model" since="2.4"/>
+    <keyword type="function" name="webkit_web_context_set_process_model ()" link="WebKitWebContext.html#webkit-web-context-set-process-model" since="2.4"/>
+    <keyword type="function" name="webkit_web_context_initialize_notification_permissions ()" link="WebKitWebContext.html#webkit-web-context-initialize-notification-permissions" since="2.16"/>
     <keyword type="function" name="WebKitURISchemeRequestCallback ()" link="WebKitWebContext.html#WebKitURISchemeRequestCallback"/>
     <keyword type="function" name="webkit_web_context_register_uri_scheme ()" link="WebKitWebContext.html#webkit-web-context-register-uri-scheme"/>
     <keyword type="struct" name="struct WebKitWebContext" link="WebKitWebContext.html#WebKitWebContext-struct"/>
@@ -128,20 +128,20 @@
     <keyword type="signal" name="The “initialize-web-extensions” signal" link="WebKitWebContext.html#WebKitWebContext-initialize-web-extensions"/>
     <keyword type="function" name="webkit_web_view_new ()" link="WebKitWebView.html#webkit-web-view-new"/>
     <keyword type="function" name="webkit_web_view_new_with_context ()" link="WebKitWebView.html#webkit-web-view-new-with-context"/>
-    <keyword type="function" name="webkit_web_view_new_with_related_view ()" link="WebKitWebView.html#webkit-web-view-new-with-related-view"/>
-    <keyword type="function" name="webkit_web_view_new_with_settings ()" link="WebKitWebView.html#webkit-web-view-new-with-settings"/>
-    <keyword type="function" name="webkit_web_view_new_with_user_content_manager ()" link="WebKitWebView.html#webkit-web-view-new-with-user-content-manager"/>
-    <keyword type="function" name="webkit_web_view_is_ephemeral ()" link="WebKitWebView.html#webkit-web-view-is-ephemeral"/>
-    <keyword type="function" name="webkit_web_view_is_controlled_by_automation ()" link="WebKitWebView.html#webkit-web-view-is-controlled-by-automation"/>
+    <keyword type="function" name="webkit_web_view_new_with_related_view ()" link="WebKitWebView.html#webkit-web-view-new-with-related-view" since="2.4"/>
+    <keyword type="function" name="webkit_web_view_new_with_settings ()" link="WebKitWebView.html#webkit-web-view-new-with-settings" since="2.6"/>
+    <keyword type="function" name="webkit_web_view_new_with_user_content_manager ()" link="WebKitWebView.html#webkit-web-view-new-with-user-content-manager" since="2.6"/>
+    <keyword type="function" name="webkit_web_view_is_ephemeral ()" link="WebKitWebView.html#webkit-web-view-is-ephemeral" since="2.16"/>
+    <keyword type="function" name="webkit_web_view_is_controlled_by_automation ()" link="WebKitWebView.html#webkit-web-view-is-controlled-by-automation" since="2.18"/>
     <keyword type="function" name="webkit_web_view_get_context ()" link="WebKitWebView.html#webkit-web-view-get-context"/>
-    <keyword type="function" name="webkit_web_view_get_user_content_manager ()" link="WebKitWebView.html#webkit-web-view-get-user-content-manager"/>
-    <keyword type="function" name="webkit_web_view_get_website_data_manager ()" link="WebKitWebView.html#webkit-web-view-get-website-data-manager"/>
-    <keyword type="function" name="webkit_web_view_try_close ()" link="WebKitWebView.html#webkit-web-view-try-close"/>
+    <keyword type="function" name="webkit_web_view_get_user_content_manager ()" link="WebKitWebView.html#webkit-web-view-get-user-content-manager" since="2.6"/>
+    <keyword type="function" name="webkit_web_view_get_website_data_manager ()" link="WebKitWebView.html#webkit-web-view-get-website-data-manager" since="2.16"/>
+    <keyword type="function" name="webkit_web_view_try_close ()" link="WebKitWebView.html#webkit-web-view-try-close" since="2.12"/>
     <keyword type="function" name="webkit_web_view_load_uri ()" link="WebKitWebView.html#webkit-web-view-load-uri"/>
     <keyword type="function" name="webkit_web_view_load_html ()" link="WebKitWebView.html#webkit-web-view-load-html"/>
     <keyword type="function" name="webkit_web_view_load_alternate_html ()" link="WebKitWebView.html#webkit-web-view-load-alternate-html"/>
     <keyword type="function" name="webkit_web_view_load_plain_text ()" link="WebKitWebView.html#webkit-web-view-load-plain-text"/>
-    <keyword type="function" name="webkit_web_view_load_bytes ()" link="WebKitWebView.html#webkit-web-view-load-bytes"/>
+    <keyword type="function" name="webkit_web_view_load_bytes ()" link="WebKitWebView.html#webkit-web-view-load-bytes" since="2.6"/>
     <keyword type="function" name="webkit_web_view_load_request ()" link="WebKitWebView.html#webkit-web-view-load-request"/>
     <keyword type="function" name="webkit_web_view_can_go_back ()" link="WebKitWebView.html#webkit-web-view-can-go-back"/>
     <keyword type="function" name="webkit_web_view_go_back ()" link="WebKitWebView.html#webkit-web-view-go-back"/>
@@ -153,7 +153,7 @@
     <keyword type="function" name="webkit_web_view_reload_bypass_cache ()" link="WebKitWebView.html#webkit-web-view-reload-bypass-cache"/>
     <keyword type="function" name="webkit_web_view_stop_loading ()" link="WebKitWebView.html#webkit-web-view-stop-loading"/>
     <keyword type="function" name="webkit_web_view_is_loading ()" link="WebKitWebView.html#webkit-web-view-is-loading"/>
-    <keyword type="function" name="webkit_web_view_is_playing_audio ()" link="WebKitWebView.html#webkit-web-view-is-playing-audio"/>
+    <keyword type="function" name="webkit_web_view_is_playing_audio ()" link="WebKitWebView.html#webkit-web-view-is-playing-audio" since="2.8"/>
     <keyword type="function" name="webkit_web_view_get_estimated_load_progress ()" link="WebKitWebView.html#webkit-web-view-get-estimated-load-progress"/>
     <keyword type="function" name="webkit_web_view_get_custom_charset ()" link="WebKitWebView.html#webkit-web-view-get-custom-charset"/>
     <keyword type="function" name="webkit_web_view_set_custom_charset ()" link="WebKitWebView.html#webkit-web-view-set-custom-charset"/>
@@ -169,7 +169,7 @@
     <keyword type="function" name="webkit_web_view_can_execute_editing_command ()" link="WebKitWebView.html#webkit-web-view-can-execute-editing-command"/>
     <keyword type="function" name="webkit_web_view_can_execute_editing_command_finish ()" link="WebKitWebView.html#webkit-web-view-can-execute-editing-command-finish"/>
     <keyword type="function" name="webkit_web_view_execute_editing_command ()" link="WebKitWebView.html#webkit-web-view-execute-editing-command"/>
-    <keyword type="function" name="webkit_web_view_execute_editing_command_with_argument ()" link="WebKitWebView.html#webkit-web-view-execute-editing-command-with-argument"/>
+    <keyword type="function" name="webkit_web_view_execute_editing_command_with_argument ()" link="WebKitWebView.html#webkit-web-view-execute-editing-command-with-argument" since="2.10"/>
     <keyword type="function" name="webkit_web_view_get_find_controller ()" link="WebKitWebView.html#webkit-web-view-get-find-controller"/>
     <keyword type="function" name="webkit_web_view_get_inspector ()" link="WebKitWebView.html#webkit-web-view-get-inspector"/>
     <keyword type="function" name="webkit_web_view_get_javascript_global_context ()" link="WebKitWebView.html#webkit-web-view-get-javascript-global-context"/>
@@ -186,13 +186,13 @@
     <keyword type="function" name="webkit_web_view_get_tls_info ()" link="WebKitWebView.html#webkit-web-view-get-tls-info"/>
     <keyword type="function" name="webkit_web_view_get_snapshot ()" link="WebKitWebView.html#webkit-web-view-get-snapshot"/>
     <keyword type="function" name="webkit_web_view_get_snapshot_finish ()" link="WebKitWebView.html#webkit-web-view-get-snapshot-finish"/>
-    <keyword type="function" name="webkit_web_view_set_background_color ()" link="WebKitWebView.html#webkit-web-view-set-background-color"/>
-    <keyword type="function" name="webkit_web_view_get_background_color ()" link="WebKitWebView.html#webkit-web-view-get-background-color"/>
-    <keyword type="function" name="webkit_web_view_set_editable ()" link="WebKitWebView.html#webkit-web-view-set-editable"/>
+    <keyword type="function" name="webkit_web_view_set_background_color ()" link="WebKitWebView.html#webkit-web-view-set-background-color" since="2.8"/>
+    <keyword type="function" name="webkit_web_view_get_background_color ()" link="WebKitWebView.html#webkit-web-view-get-background-color" since="2.8"/>
+    <keyword type="function" name="webkit_web_view_set_editable ()" link="WebKitWebView.html#webkit-web-view-set-editable" since="2.8"/>
     <keyword type="function" name="webkit_web_view_is_editable ()" link="WebKitWebView.html#webkit-web-view-is-editable"/>
-    <keyword type="function" name="webkit_web_view_get_editor_state ()" link="WebKitWebView.html#webkit-web-view-get-editor-state"/>
-    <keyword type="function" name="webkit_web_view_get_session_state ()" link="WebKitWebView.html#webkit-web-view-get-session-state"/>
-    <keyword type="function" name="webkit_web_view_restore_session_state ()" link="WebKitWebView.html#webkit-web-view-restore-session-state"/>
+    <keyword type="function" name="webkit_web_view_get_editor_state ()" link="WebKitWebView.html#webkit-web-view-get-editor-state" since="2.10"/>
+    <keyword type="function" name="webkit_web_view_get_session_state ()" link="WebKitWebView.html#webkit-web-view-get-session-state" since="2.12"/>
+    <keyword type="function" name="webkit_web_view_restore_session_state ()" link="WebKitWebView.html#webkit-web-view-restore-session-state" since="2.12"/>
     <keyword type="function" name="webkit_javascript_result_ref ()" link="WebKitWebView.html#webkit-javascript-result-ref"/>
     <keyword type="function" name="webkit_javascript_result_unref ()" link="WebKitWebView.html#webkit-javascript-result-unref"/>
     <keyword type="function" name="webkit_javascript_result_get_global_context ()" link="WebKitWebView.html#webkit-javascript-result-get-global-context"/>
@@ -203,10 +203,10 @@
     <keyword type="function" name="webkit_script_dialog_prompt_get_default_text ()" link="WebKitWebView.html#webkit-script-dialog-prompt-get-default-text"/>
     <keyword type="function" name="webkit_script_dialog_prompt_set_text ()" link="WebKitWebView.html#webkit-script-dialog-prompt-set-text"/>
     <keyword type="function" name="webkit_web_view_get_main_resource ()" link="WebKitWebView.html#webkit-web-view-get-main-resource"/>
-    <keyword type="function" name="webkit_web_view_session_state_new ()" link="WebKitWebView.html#webkit-web-view-session-state-new"/>
-    <keyword type="function" name="webkit_web_view_session_state_ref ()" link="WebKitWebView.html#webkit-web-view-session-state-ref"/>
-    <keyword type="function" name="webkit_web_view_session_state_unref ()" link="WebKitWebView.html#webkit-web-view-session-state-unref"/>
-    <keyword type="function" name="webkit_web_view_session_state_serialize ()" link="WebKitWebView.html#webkit-web-view-session-state-serialize"/>
+    <keyword type="function" name="webkit_web_view_session_state_new ()" link="WebKitWebView.html#webkit-web-view-session-state-new" since="2.12"/>
+    <keyword type="function" name="webkit_web_view_session_state_ref ()" link="WebKitWebView.html#webkit-web-view-session-state-ref" since="2.12"/>
+    <keyword type="function" name="webkit_web_view_session_state_unref ()" link="WebKitWebView.html#webkit-web-view-session-state-unref" since="2.12"/>
+    <keyword type="function" name="webkit_web_view_session_state_serialize ()" link="WebKitWebView.html#webkit-web-view-session-state-serialize" since="2.12"/>
     <keyword type="struct" name="WebKitWebView" link="WebKitWebView.html#WebKitWebView-struct"/>
     <keyword type="enum" name="enum WebKitLoadEvent" link="WebKitWebView.html#WebKitLoadEvent"/>
     <keyword type="enum" name="enum WebKitPolicyDecisionType" link="WebKitWebView.html#WebKitPolicyDecisionType"/>
@@ -265,23 +265,23 @@
     <keyword type="signal" name="The “show-option-menu” signal" link="WebKitWebView.html#WebKitWebView-show-option-menu"/>
     <keyword type="signal" name="The “submit-form” signal" link="WebKitWebView.html#WebKitWebView-submit-form"/>
     <keyword type="signal" name="The “web-process-crashed” signal" link="WebKitWebView.html#WebKitWebView-web-process-crashed"/>
-    <keyword type="function" name="webkit_authentication_request_authenticate ()" link="WebKitAuthenticationRequest.html#webkit-authentication-request-authenticate"/>
-    <keyword type="function" name="webkit_authentication_request_cancel ()" link="WebKitAuthenticationRequest.html#webkit-authentication-request-cancel"/>
-    <keyword type="function" name="webkit_authentication_request_can_save_credentials ()" link="WebKitAuthenticationRequest.html#webkit-authentication-request-can-save-credentials"/>
-    <keyword type="function" name="webkit_authentication_request_get_host ()" link="WebKitAuthenticationRequest.html#webkit-authentication-request-get-host"/>
-    <keyword type="function" name="webkit_authentication_request_get_port ()" link="WebKitAuthenticationRequest.html#webkit-authentication-request-get-port"/>
-    <keyword type="function" name="webkit_authentication_request_is_retry ()" link="WebKitAuthenticationRequest.html#webkit-authentication-request-is-retry"/>
-    <keyword type="function" name="webkit_authentication_request_get_proposed_credential ()" link="WebKitAuthenticationRequest.html#webkit-authentication-request-get-proposed-credential"/>
-    <keyword type="function" name="webkit_authentication_request_get_realm ()" link="WebKitAuthenticationRequest.html#webkit-authentication-request-get-realm"/>
-    <keyword type="function" name="webkit_authentication_request_get_scheme ()" link="WebKitAuthenticationRequest.html#webkit-authentication-request-get-scheme"/>
-    <keyword type="function" name="webkit_authentication_request_is_for_proxy ()" link="WebKitAuthenticationRequest.html#webkit-authentication-request-is-for-proxy"/>
-    <keyword type="function" name="webkit_credential_new ()" link="WebKitAuthenticationRequest.html#webkit-credential-new"/>
-    <keyword type="function" name="webkit_credential_copy ()" link="WebKitAuthenticationRequest.html#webkit-credential-copy"/>
-    <keyword type="function" name="webkit_credential_free ()" link="WebKitAuthenticationRequest.html#webkit-credential-free"/>
-    <keyword type="function" name="webkit_credential_get_password ()" link="WebKitAuthenticationRequest.html#webkit-credential-get-password"/>
-    <keyword type="function" name="webkit_credential_get_persistence ()" link="WebKitAuthenticationRequest.html#webkit-credential-get-persistence"/>
-    <keyword type="function" name="webkit_credential_get_username ()" link="WebKitAuthenticationRequest.html#webkit-credential-get-username"/>
-    <keyword type="function" name="webkit_credential_has_password ()" link="WebKitAuthenticationRequest.html#webkit-credential-has-password"/>
+    <keyword type="function" name="webkit_authentication_request_authenticate ()" link="WebKitAuthenticationRequest.html#webkit-authentication-request-authenticate" since="2.2"/>
+    <keyword type="function" name="webkit_authentication_request_cancel ()" link="WebKitAuthenticationRequest.html#webkit-authentication-request-cancel" since="2.2"/>
+    <keyword type="function" name="webkit_authentication_request_can_save_credentials ()" link="WebKitAuthenticationRequest.html#webkit-authentication-request-can-save-credentials" since="2.2"/>
+    <keyword type="function" name="webkit_authentication_request_get_host ()" link="WebKitAuthenticationRequest.html#webkit-authentication-request-get-host" since="2.2"/>
+    <keyword type="function" name="webkit_authentication_request_get_port ()" link="WebKitAuthenticationRequest.html#webkit-authentication-request-get-port" since="2.2"/>
+    <keyword type="function" name="webkit_authentication_request_is_retry ()" link="WebKitAuthenticationRequest.html#webkit-authentication-request-is-retry" since="2.2"/>
+    <keyword type="function" name="webkit_authentication_request_get_proposed_credential ()" link="WebKitAuthenticationRequest.html#webkit-authentication-request-get-proposed-credential" since="2.2"/>
+    <keyword type="function" name="webkit_authentication_request_get_realm ()" link="WebKitAuthenticationRequest.html#webkit-authentication-request-get-realm" since="2.2"/>
+    <keyword type="function" name="webkit_authentication_request_get_scheme ()" link="WebKitAuthenticationRequest.html#webkit-authentication-request-get-scheme" since="2.2"/>
+    <keyword type="function" name="webkit_authentication_request_is_for_proxy ()" link="WebKitAuthenticationRequest.html#webkit-authentication-request-is-for-proxy" since="2.2"/>
+    <keyword type="function" name="webkit_credential_new ()" link="WebKitAuthenticationRequest.html#webkit-credential-new" since="2.2"/>
+    <keyword type="function" name="webkit_credential_copy ()" link="WebKitAuthenticationRequest.html#webkit-credential-copy" since="2.2"/>
+    <keyword type="function" name="webkit_credential_free ()" link="WebKitAuthenticationRequest.html#webkit-credential-free" since="2.2"/>
+    <keyword type="function" name="webkit_credential_get_password ()" link="WebKitAuthenticationRequest.html#webkit-credential-get-password" since="2.2"/>
+    <keyword type="function" name="webkit_credential_get_persistence ()" link="WebKitAuthenticationRequest.html#webkit-credential-get-persistence" since="2.2"/>
+    <keyword type="function" name="webkit_credential_get_username ()" link="WebKitAuthenticationRequest.html#webkit-credential-get-username" since="2.2"/>
+    <keyword type="function" name="webkit_credential_has_password ()" link="WebKitAuthenticationRequest.html#webkit-credential-has-password" since="2.2"/>
     <keyword type="struct" name="struct WebKitAuthenticationRequest" link="WebKitAuthenticationRequest.html#WebKitAuthenticationRequest-struct"/>
     <keyword type="enum" name="enum WebKitAuthenticationScheme" link="WebKitAuthenticationRequest.html#WebKitAuthenticationScheme" since="2.2"/>
     <keyword type="struct" name="WebKitCredential" link="WebKitAuthenticationRequest.html#WebKitCredential-struct"/>
@@ -350,8 +350,8 @@
     <keyword type="function" name="webkit_settings_set_minimum_font_size ()" link="WebKitSettings.html#webkit-settings-set-minimum-font-size"/>
     <keyword type="function" name="webkit_settings_get_default_charset ()" link="WebKitSettings.html#webkit-settings-get-default-charset"/>
     <keyword type="function" name="webkit_settings_set_default_charset ()" link="WebKitSettings.html#webkit-settings-set-default-charset"/>
-    <keyword type="function" name="webkit_settings_get_enable_private_browsing ()" link="WebKitSettings.html#webkit-settings-get-enable-private-browsing" deprecated=""/>
-    <keyword type="function" name="webkit_settings_set_enable_private_browsing ()" link="WebKitSettings.html#webkit-settings-set-enable-private-browsing" deprecated=""/>
+    <keyword type="function" name="webkit_settings_get_enable_private_browsing ()" link="WebKitSettings.html#webkit-settings-get-enable-private-browsing" deprecated="2.16. Use #WebKitWebView:is-ephemeral or #WebKitWebContext:is-ephemeral instead."/>
+    <keyword type="function" name="webkit_settings_set_enable_private_browsing ()" link="WebKitSettings.html#webkit-settings-set-enable-private-browsing" deprecated="2.16. Use #WebKitWebView:is-ephemeral or #WebKitWebContext:is-ephemeral instead."/>
     <keyword type="function" name="webkit_settings_get_enable_developer_extras ()" link="WebKitSettings.html#webkit-settings-get-enable-developer-extras"/>
     <keyword type="function" name="webkit_settings_set_enable_developer_extras ()" link="WebKitSettings.html#webkit-settings-set-enable-developer-extras"/>
     <keyword type="function" name="webkit_settings_get_enable_resizable_text_areas ()" link="WebKitSettings.html#webkit-settings-get-enable-resizable-text-areas"/>
@@ -391,22 +391,22 @@
     <keyword type="function" name="webkit_settings_set_user_agent_with_application_details ()" link="WebKitSettings.html#webkit-settings-set-user-agent-with-application-details"/>
     <keyword type="function" name="webkit_settings_get_enable_smooth_scrolling ()" link="WebKitSettings.html#webkit-settings-get-enable-smooth-scrolling"/>
     <keyword type="function" name="webkit_settings_set_enable_smooth_scrolling ()" link="WebKitSettings.html#webkit-settings-set-enable-smooth-scrolling"/>
-    <keyword type="function" name="webkit_settings_get_enable_accelerated_2d_canvas ()" link="WebKitSettings.html#webkit-settings-get-enable-accelerated-2d-canvas"/>
-    <keyword type="function" name="webkit_settings_set_enable_accelerated_2d_canvas ()" link="WebKitSettings.html#webkit-settings-set-enable-accelerated-2d-canvas"/>
-    <keyword type="function" name="webkit_settings_get_enable_write_console_messages_to_stdout ()" link="WebKitSettings.html#webkit-settings-get-enable-write-console-messages-to-stdout"/>
-    <keyword type="function" name="webkit_settings_set_enable_write_console_messages_to_stdout ()" link="WebKitSettings.html#webkit-settings-set-enable-write-console-messages-to-stdout"/>
-    <keyword type="function" name="webkit_settings_get_enable_media_stream ()" link="WebKitSettings.html#webkit-settings-get-enable-media-stream"/>
-    <keyword type="function" name="webkit_settings_set_enable_media_stream ()" link="WebKitSettings.html#webkit-settings-set-enable-media-stream"/>
-    <keyword type="function" name="webkit_settings_get_enable_spatial_navigation ()" link="WebKitSettings.html#webkit-settings-get-enable-spatial-navigation"/>
-    <keyword type="function" name="webkit_settings_set_enable_spatial_navigation ()" link="WebKitSettings.html#webkit-settings-set-enable-spatial-navigation"/>
-    <keyword type="function" name="webkit_settings_get_enable_mediasource ()" link="WebKitSettings.html#webkit-settings-get-enable-mediasource"/>
-    <keyword type="function" name="webkit_settings_set_enable_mediasource ()" link="WebKitSettings.html#webkit-settings-set-enable-mediasource"/>
-    <keyword type="function" name="webkit_settings_get_allow_file_access_from_file_urls ()" link="WebKitSettings.html#webkit-settings-get-allow-file-access-from-file-urls"/>
-    <keyword type="function" name="webkit_settings_set_allow_file_access_from_file_urls ()" link="WebKitSettings.html#webkit-settings-set-allow-file-access-from-file-urls"/>
-    <keyword type="function" name="webkit_settings_get_allow_universal_access_from_file_urls ()" link="WebKitSettings.html#webkit-settings-get-allow-universal-access-from-file-urls"/>
-    <keyword type="function" name="webkit_settings_set_allow_universal_access_from_file_urls ()" link="WebKitSettings.html#webkit-settings-set-allow-universal-access-from-file-urls"/>
-    <keyword type="function" name="webkit_settings_get_hardware_acceleration_policy ()" link="WebKitSettings.html#webkit-settings-get-hardware-acceleration-policy"/>
-    <keyword type="function" name="webkit_settings_set_hardware_acceleration_policy ()" link="WebKitSettings.html#webkit-settings-set-hardware-acceleration-policy"/>
+    <keyword type="function" name="webkit_settings_get_enable_accelerated_2d_canvas ()" link="WebKitSettings.html#webkit-settings-get-enable-accelerated-2d-canvas" since="2.2"/>
+    <keyword type="function" name="webkit_settings_set_enable_accelerated_2d_canvas ()" link="WebKitSettings.html#webkit-settings-set-enable-accelerated-2d-canvas" since="2.2"/>
+    <keyword type="function" name="webkit_settings_get_enable_write_console_messages_to_stdout ()" link="WebKitSettings.html#webkit-settings-get-enable-write-console-messages-to-stdout" since="2.2"/>
+    <keyword type="function" name="webkit_settings_set_enable_write_console_messages_to_stdout ()" link="WebKitSettings.html#webkit-settings-set-enable-write-console-messages-to-stdout" since="2.2"/>
+    <keyword type="function" name="webkit_settings_get_enable_media_stream ()" link="WebKitSettings.html#webkit-settings-get-enable-media-stream" since="2.4"/>
+    <keyword type="function" name="webkit_settings_set_enable_media_stream ()" link="WebKitSettings.html#webkit-settings-set-enable-media-stream" since="2.4"/>
+    <keyword type="function" name="webkit_settings_get_enable_spatial_navigation ()" link="WebKitSettings.html#webkit-settings-get-enable-spatial-navigation" since="2.2"/>
+    <keyword type="function" name="webkit_settings_set_enable_spatial_navigation ()" link="WebKitSettings.html#webkit-settings-set-enable-spatial-navigation" since="2.2"/>
+    <keyword type="function" name="webkit_settings_get_enable_mediasource ()" link="WebKitSettings.html#webkit-settings-get-enable-mediasource" since="2.4"/>
+    <keyword type="function" name="webkit_settings_set_enable_mediasource ()" link="WebKitSettings.html#webkit-settings-set-enable-mediasource" since="2.4"/>
+    <keyword type="function" name="webkit_settings_get_allow_file_access_from_file_urls ()" link="WebKitSettings.html#webkit-settings-get-allow-file-access-from-file-urls" since="2.10"/>
+    <keyword type="function" name="webkit_settings_set_allow_file_access_from_file_urls ()" link="WebKitSettings.html#webkit-settings-set-allow-file-access-from-file-urls" since="2.10"/>
+    <keyword type="function" name="webkit_settings_get_allow_universal_access_from_file_urls ()" link="WebKitSettings.html#webkit-settings-get-allow-universal-access-from-file-urls" since="2.14"/>
+    <keyword type="function" name="webkit_settings_set_allow_universal_access_from_file_urls ()" link="WebKitSettings.html#webkit-settings-set-allow-universal-access-from-file-urls" since="2.14"/>
+    <keyword type="function" name="webkit_settings_get_hardware_acceleration_policy ()" link="WebKitSettings.html#webkit-settings-get-hardware-acceleration-policy" since="2.16"/>
+    <keyword type="function" name="webkit_settings_set_hardware_acceleration_policy ()" link="WebKitSettings.html#webkit-settings-set-hardware-acceleration-policy" since="2.16"/>
     <keyword type="struct" name="struct WebKitSettings" link="WebKitSettings.html#WebKitSettings-struct"/>
     <keyword type="enum" name="enum WebKitHardwareAccelerationPolicy" link="WebKitSettings.html#WebKitHardwareAccelerationPolicy" since="2.16"/>
     <keyword type="property" name="The “allow-file-access-from-file-urls” property" link="WebKitSettings.html#WebKitSettings--allow-file-access-from-file-urls"/>
@@ -463,7 +463,7 @@
     <keyword type="function" name="webkit_uri_request_new ()" link="WebKitURIRequest.html#webkit-uri-request-new"/>
     <keyword type="function" name="webkit_uri_request_get_uri ()" link="WebKitURIRequest.html#webkit-uri-request-get-uri"/>
     <keyword type="function" name="webkit_uri_request_set_uri ()" link="WebKitURIRequest.html#webkit-uri-request-set-uri"/>
-    <keyword type="function" name="webkit_uri_request_get_http_method ()" link="WebKitURIRequest.html#webkit-uri-request-get-http-method"/>
+    <keyword type="function" name="webkit_uri_request_get_http_method ()" link="WebKitURIRequest.html#webkit-uri-request-get-http-method" since="2.12"/>
     <keyword type="function" name="webkit_uri_request_get_http_headers ()" link="WebKitURIRequest.html#webkit-uri-request-get-http-headers"/>
     <keyword type="struct" name="struct WebKitURIRequest" link="WebKitURIRequest.html#WebKitURIRequest-struct"/>
     <keyword type="property" name="The “uri” property" link="WebKitURIRequest.html#WebKitURIRequest--uri"/>
@@ -472,7 +472,7 @@
     <keyword type="function" name="webkit_uri_response_get_content_length ()" link="WebKitURIResponse.html#webkit-uri-response-get-content-length"/>
     <keyword type="function" name="webkit_uri_response_get_mime_type ()" link="WebKitURIResponse.html#webkit-uri-response-get-mime-type"/>
     <keyword type="function" name="webkit_uri_response_get_suggested_filename ()" link="WebKitURIResponse.html#webkit-uri-response-get-suggested-filename"/>
-    <keyword type="function" name="webkit_uri_response_get_http_headers ()" link="WebKitURIResponse.html#webkit-uri-response-get-http-headers"/>
+    <keyword type="function" name="webkit_uri_response_get_http_headers ()" link="WebKitURIResponse.html#webkit-uri-response-get-http-headers" since="2.6"/>
     <keyword type="struct" name="struct WebKitURIResponse" link="WebKitURIResponse.html#WebKitURIResponse-struct"/>
     <keyword type="property" name="The “content-length” property" link="WebKitURIResponse.html#WebKitURIResponse--content-length"/>
     <keyword type="property" name="The “http-headers” property" link="WebKitURIResponse.html#WebKitURIResponse--http-headers"/>
@@ -506,8 +506,8 @@
     <keyword type="function" name="webkit_download_get_elapsed_time ()" link="WebKitDownload.html#webkit-download-get-elapsed-time"/>
     <keyword type="function" name="webkit_download_get_received_data_length ()" link="WebKitDownload.html#webkit-download-get-received-data-length"/>
     <keyword type="function" name="webkit_download_get_web_view ()" link="WebKitDownload.html#webkit-download-get-web-view"/>
-    <keyword type="function" name="webkit_download_get_allow_overwrite ()" link="WebKitDownload.html#webkit-download-get-allow-overwrite"/>
-    <keyword type="function" name="webkit_download_set_allow_overwrite ()" link="WebKitDownload.html#webkit-download-set-allow-overwrite"/>
+    <keyword type="function" name="webkit_download_get_allow_overwrite ()" link="WebKitDownload.html#webkit-download-get-allow-overwrite" since="2.6"/>
+    <keyword type="function" name="webkit_download_set_allow_overwrite ()" link="WebKitDownload.html#webkit-download-set-allow-overwrite" since="2.6"/>
     <keyword type="struct" name="struct WebKitDownload" link="WebKitDownload.html#WebKitDownload-struct"/>
     <keyword type="property" name="The “allow-overwrite” property" link="WebKitDownload.html#WebKitDownload--allow-overwrite"/>
     <keyword type="property" name="The “destination” property" link="WebKitDownload.html#WebKitDownload--destination"/>
@@ -522,18 +522,18 @@
     <keyword type="function" name="webkit_permission_request_deny ()" link="WebKitPermissionRequest.html#webkit-permission-request-deny"/>
     <keyword type="struct" name="WebKitPermissionRequest" link="WebKitPermissionRequest.html#WebKitPermissionRequest-struct"/>
     <keyword type="struct" name="struct WebKitGeolocationPermissionRequest" link="WebKitGeolocationPermissionRequest.html#WebKitGeolocationPermissionRequest-struct"/>
-    <keyword type="function" name="webkit_install_missing_media_plugins_permission_request_get_description ()" link="WebKitInstallMissingMediaPluginsPermissionRequest.html#webkit-install-missing-media-plugins-permission-request-get-description"/>
+    <keyword type="function" name="webkit_install_missing_media_plugins_permission_request_get_description ()" link="WebKitInstallMissingMediaPluginsPermissionRequest.html#webkit-install-missing-media-plugins-permission-request-get-description" since="2.10"/>
     <keyword type="struct" name="struct WebKitInstallMissingMediaPluginsPermissionRequest" link="WebKitInstallMissingMediaPluginsPermissionRequest.html#WebKitInstallMissingMediaPluginsPermissionRequest-struct"/>
-    <keyword type="function" name="webkit_navigation_action_copy ()" link="WebKitNavigationAction.html#webkit-navigation-action-copy"/>
-    <keyword type="function" name="webkit_navigation_action_free ()" link="WebKitNavigationAction.html#webkit-navigation-action-free"/>
-    <keyword type="function" name="webkit_navigation_action_get_navigation_type ()" link="WebKitNavigationAction.html#webkit-navigation-action-get-navigation-type"/>
-    <keyword type="function" name="webkit_navigation_action_get_mouse_button ()" link="WebKitNavigationAction.html#webkit-navigation-action-get-mouse-button"/>
-    <keyword type="function" name="webkit_navigation_action_get_modifiers ()" link="WebKitNavigationAction.html#webkit-navigation-action-get-modifiers"/>
-    <keyword type="function" name="webkit_navigation_action_get_request ()" link="WebKitNavigationAction.html#webkit-navigation-action-get-request"/>
-    <keyword type="function" name="webkit_navigation_action_is_user_gesture ()" link="WebKitNavigationAction.html#webkit-navigation-action-is-user-gesture"/>
+    <keyword type="function" name="webkit_navigation_action_copy ()" link="WebKitNavigationAction.html#webkit-navigation-action-copy" since="2.6"/>
+    <keyword type="function" name="webkit_navigation_action_free ()" link="WebKitNavigationAction.html#webkit-navigation-action-free" since="2.6"/>
+    <keyword type="function" name="webkit_navigation_action_get_navigation_type ()" link="WebKitNavigationAction.html#webkit-navigation-action-get-navigation-type" since="2.6"/>
+    <keyword type="function" name="webkit_navigation_action_get_mouse_button ()" link="WebKitNavigationAction.html#webkit-navigation-action-get-mouse-button" since="2.6"/>
+    <keyword type="function" name="webkit_navigation_action_get_modifiers ()" link="WebKitNavigationAction.html#webkit-navigation-action-get-modifiers" since="2.6"/>
+    <keyword type="function" name="webkit_navigation_action_get_request ()" link="WebKitNavigationAction.html#webkit-navigation-action-get-request" since="2.6"/>
+    <keyword type="function" name="webkit_navigation_action_is_user_gesture ()" link="WebKitNavigationAction.html#webkit-navigation-action-is-user-gesture" since="2.6"/>
     <keyword type="struct" name="WebKitNavigationAction" link="WebKitNavigationAction.html#WebKitNavigationAction-struct"/>
-    <keyword type="function" name="webkit_user_media_permission_is_for_audio_device ()" link="WebKitUserMediaPermissionRequest.html#webkit-user-media-permission-is-for-audio-device"/>
-    <keyword type="function" name="webkit_user_media_permission_is_for_video_device ()" link="WebKitUserMediaPermissionRequest.html#webkit-user-media-permission-is-for-video-device"/>
+    <keyword type="function" name="webkit_user_media_permission_is_for_audio_device ()" link="WebKitUserMediaPermissionRequest.html#webkit-user-media-permission-is-for-audio-device" since="2.8"/>
+    <keyword type="function" name="webkit_user_media_permission_is_for_video_device ()" link="WebKitUserMediaPermissionRequest.html#webkit-user-media-permission-is-for-video-device" since="2.8"/>
     <keyword type="struct" name="struct WebKitUserMediaPermissionRequest" link="WebKitUserMediaPermissionRequest.html#WebKitUserMediaPermissionRequest-struct"/>
     <keyword type="property" name="The “is-for-audio-device” property" link="WebKitUserMediaPermissionRequest.html#WebKitUserMediaPermissionRequest--is-for-audio-device"/>
     <keyword type="property" name="The “is-for-video-device” property" link="WebKitUserMediaPermissionRequest.html#WebKitUserMediaPermissionRequest--is-for-video-device"/>
@@ -541,12 +541,12 @@
     <keyword type="function" name="webkit_policy_decision_ignore ()" link="WebKitPolicyDecision.html#webkit-policy-decision-ignore"/>
     <keyword type="function" name="webkit_policy_decision_use ()" link="WebKitPolicyDecision.html#webkit-policy-decision-use"/>
     <keyword type="struct" name="struct WebKitPolicyDecision" link="WebKitPolicyDecision.html#WebKitPolicyDecision-struct"/>
-    <keyword type="function" name="webkit_navigation_policy_decision_get_navigation_action ()" link="WebKitNavigationPolicyDecision.html#webkit-navigation-policy-decision-get-navigation-action"/>
+    <keyword type="function" name="webkit_navigation_policy_decision_get_navigation_action ()" link="WebKitNavigationPolicyDecision.html#webkit-navigation-policy-decision-get-navigation-action" since="2.6"/>
     <keyword type="function" name="webkit_navigation_policy_decision_get_frame_name ()" link="WebKitNavigationPolicyDecision.html#webkit-navigation-policy-decision-get-frame-name"/>
-    <keyword type="function" name="webkit_navigation_policy_decision_get_modifiers ()" link="WebKitNavigationPolicyDecision.html#webkit-navigation-policy-decision-get-modifiers" deprecated=""/>
-    <keyword type="function" name="webkit_navigation_policy_decision_get_mouse_button ()" link="WebKitNavigationPolicyDecision.html#webkit-navigation-policy-decision-get-mouse-button" deprecated=""/>
-    <keyword type="function" name="webkit_navigation_policy_decision_get_navigation_type ()" link="WebKitNavigationPolicyDecision.html#webkit-navigation-policy-decision-get-navigation-type" deprecated=""/>
-    <keyword type="function" name="webkit_navigation_policy_decision_get_request ()" link="WebKitNavigationPolicyDecision.html#webkit-navigation-policy-decision-get-request" deprecated=""/>
+    <keyword type="function" name="webkit_navigation_policy_decision_get_modifiers ()" link="WebKitNavigationPolicyDecision.html#webkit-navigation-policy-decision-get-modifiers" deprecated="2.6: Use webkit_navigation_policy_decision_get_navigation_action() instead."/>
+    <keyword type="function" name="webkit_navigation_policy_decision_get_mouse_button ()" link="WebKitNavigationPolicyDecision.html#webkit-navigation-policy-decision-get-mouse-button" deprecated="2.6: Use webkit_navigation_policy_decision_get_navigation_action() instead."/>
+    <keyword type="function" name="webkit_navigation_policy_decision_get_navigation_type ()" link="WebKitNavigationPolicyDecision.html#webkit-navigation-policy-decision-get-navigation-type" deprecated="2.6: Use webkit_navigation_policy_decision_get_navigation_action() instead."/>
+    <keyword type="function" name="webkit_navigation_policy_decision_get_request ()" link="WebKitNavigationPolicyDecision.html#webkit-navigation-policy-decision-get-request" deprecated="2.6: Use webkit_navigation_policy_decision_get_navigation_action() instead."/>
     <keyword type="struct" name="struct WebKitNavigationPolicyDecision" link="WebKitNavigationPolicyDecision.html#WebKitNavigationPolicyDecision-struct"/>
     <keyword type="enum" name="enum WebKitNavigationType" link="WebKitNavigationPolicyDecision.html#WebKitNavigationType"/>
     <keyword type="property" name="The “frame-name” property" link="WebKitNavigationPolicyDecision.html#WebKitNavigationPolicyDecision--frame-name"/>
@@ -557,7 +557,7 @@
     <keyword type="property" name="The “request” property" link="WebKitNavigationPolicyDecision.html#WebKitNavigationPolicyDecision--request"/>
     <keyword type="function" name="webkit_response_policy_decision_get_request ()" link="WebKitResponsePolicyDecision.html#webkit-response-policy-decision-get-request"/>
     <keyword type="function" name="webkit_response_policy_decision_get_response ()" link="WebKitResponsePolicyDecision.html#webkit-response-policy-decision-get-response"/>
-    <keyword type="function" name="webkit_response_policy_decision_is_mime_type_supported ()" link="WebKitResponsePolicyDecision.html#webkit-response-policy-decision-is-mime-type-supported"/>
+    <keyword type="function" name="webkit_response_policy_decision_is_mime_type_supported ()" link="WebKitResponsePolicyDecision.html#webkit-response-policy-decision-is-mime-type-supported" since="2.4"/>
     <keyword type="struct" name="struct WebKitResponsePolicyDecision" link="WebKitResponsePolicyDecision.html#WebKitResponsePolicyDecision-struct"/>
     <keyword type="property" name="The “request” property" link="WebKitResponsePolicyDecision.html#WebKitResponsePolicyDecision--request"/>
     <keyword type="property" name="The “response” property" link="WebKitResponsePolicyDecision.html#WebKitResponsePolicyDecision--response"/>
@@ -566,7 +566,7 @@
     <keyword type="function" name="webkit_hit_test_result_context_is_image ()" link="WebKitHitTestResult.html#webkit-hit-test-result-context-is-image"/>
     <keyword type="function" name="webkit_hit_test_result_context_is_media ()" link="WebKitHitTestResult.html#webkit-hit-test-result-context-is-media"/>
     <keyword type="function" name="webkit_hit_test_result_context_is_editable ()" link="WebKitHitTestResult.html#webkit-hit-test-result-context-is-editable"/>
-    <keyword type="function" name="webkit_hit_test_result_context_is_selection ()" link="WebKitHitTestResult.html#webkit-hit-test-result-context-is-selection"/>
+    <keyword type="function" name="webkit_hit_test_result_context_is_selection ()" link="WebKitHitTestResult.html#webkit-hit-test-result-context-is-selection" since="2.8"/>
     <keyword type="function" name="webkit_hit_test_result_get_link_uri ()" link="WebKitHitTestResult.html#webkit-hit-test-result-get-link-uri"/>
     <keyword type="function" name="webkit_hit_test_result_get_link_title ()" link="WebKitHitTestResult.html#webkit-hit-test-result-get-link-title"/>
     <keyword type="function" name="webkit_hit_test_result_get_link_label ()" link="WebKitHitTestResult.html#webkit-hit-test-result-get-link-label"/>
@@ -581,7 +581,7 @@
     <keyword type="property" name="The “link-title” property" link="WebKitHitTestResult.html#WebKitHitTestResult--link-title"/>
     <keyword type="property" name="The “link-uri” property" link="WebKitHitTestResult.html#WebKitHitTestResult--link-uri"/>
     <keyword type="property" name="The “media-uri” property" link="WebKitHitTestResult.html#WebKitHitTestResult--media-uri"/>
-    <keyword type="function" name="webkit_editor_state_get_typing_attributes ()" link="WebKitEditorState.html#webkit-editor-state-get-typing-attributes"/>
+    <keyword type="function" name="webkit_editor_state_get_typing_attributes ()" link="WebKitEditorState.html#webkit-editor-state-get-typing-attributes" since="2.10"/>
     <keyword type="struct" name="struct WebKitEditorState" link="WebKitEditorState.html#WebKitEditorState-struct"/>
     <keyword type="enum" name="enum WebKitEditorTypingAttributes" link="WebKitEditorState.html#WebKitEditorTypingAttributes" since="2.10"/>
     <keyword type="property" name="The “typing-attributes” property" link="WebKitEditorState.html#WebKitEditorState--typing-attributes"/>
@@ -690,10 +690,10 @@
     <keyword type="function" name="webkit_cookie_manager_set_accept_policy ()" link="WebKitCookieManager.html#webkit-cookie-manager-set-accept-policy"/>
     <keyword type="function" name="webkit_cookie_manager_get_accept_policy ()" link="WebKitCookieManager.html#webkit-cookie-manager-get-accept-policy"/>
     <keyword type="function" name="webkit_cookie_manager_get_accept_policy_finish ()" link="WebKitCookieManager.html#webkit-cookie-manager-get-accept-policy-finish"/>
-    <keyword type="function" name="webkit_cookie_manager_get_domains_with_cookies ()" link="WebKitCookieManager.html#webkit-cookie-manager-get-domains-with-cookies" deprecated=""/>
-    <keyword type="function" name="webkit_cookie_manager_get_domains_with_cookies_finish ()" link="WebKitCookieManager.html#webkit-cookie-manager-get-domains-with-cookies-finish" deprecated=""/>
-    <keyword type="function" name="webkit_cookie_manager_delete_cookies_for_domain ()" link="WebKitCookieManager.html#webkit-cookie-manager-delete-cookies-for-domain" deprecated=""/>
-    <keyword type="function" name="webkit_cookie_manager_delete_all_cookies ()" link="WebKitCookieManager.html#webkit-cookie-manager-delete-all-cookies" deprecated=""/>
+    <keyword type="function" name="webkit_cookie_manager_get_domains_with_cookies ()" link="WebKitCookieManager.html#webkit-cookie-manager-get-domains-with-cookies" deprecated="2.16: Use webkit_website_data_manager_fetch() instead."/>
+    <keyword type="function" name="webkit_cookie_manager_get_domains_with_cookies_finish ()" link="WebKitCookieManager.html#webkit-cookie-manager-get-domains-with-cookies-finish" deprecated="2.16: Use webkit_website_data_manager_fetch_finish() instead."/>
+    <keyword type="function" name="webkit_cookie_manager_delete_cookies_for_domain ()" link="WebKitCookieManager.html#webkit-cookie-manager-delete-cookies-for-domain" deprecated="2.16: Use webkit_website_data_manager_remove() instead."/>
+    <keyword type="function" name="webkit_cookie_manager_delete_all_cookies ()" link="WebKitCookieManager.html#webkit-cookie-manager-delete-all-cookies" deprecated="2.16: Use webkit_website_data_manager_clear() instead."/>
     <keyword type="struct" name="struct WebKitCookieManager" link="WebKitCookieManager.html#WebKitCookieManager-struct"/>
     <keyword type="enum" name="enum WebKitCookiePersistentStorage" link="WebKitCookieManager.html#WebKitCookiePersistentStorage"/>
     <keyword type="enum" name="enum WebKitCookieAcceptPolicy" link="WebKitCookieManager.html#WebKitCookieAcceptPolicy"/>
@@ -732,7 +732,7 @@
     <keyword type="function" name="webkit_uri_scheme_request_get_path ()" link="WebKitURISchemeRequest.html#webkit-uri-scheme-request-get-path"/>
     <keyword type="function" name="webkit_uri_scheme_request_get_web_view ()" link="WebKitURISchemeRequest.html#webkit-uri-scheme-request-get-web-view"/>
     <keyword type="function" name="webkit_uri_scheme_request_finish ()" link="WebKitURISchemeRequest.html#webkit-uri-scheme-request-finish"/>
-    <keyword type="function" name="webkit_uri_scheme_request_finish_error ()" link="WebKitURISchemeRequest.html#webkit-uri-scheme-request-finish-error"/>
+    <keyword type="function" name="webkit_uri_scheme_request_finish_error ()" link="WebKitURISchemeRequest.html#webkit-uri-scheme-request-finish-error" since="2.2"/>
     <keyword type="struct" name="struct WebKitURISchemeRequest" link="WebKitURISchemeRequest.html#WebKitURISchemeRequest-struct"/>
     <keyword type="function" name="webkit_get_major_version ()" link="webkit2gtk-4.0-WebKitVersion.html#webkit-get-major-version"/>
     <keyword type="function" name="webkit_get_minor_version ()" link="webkit2gtk-4.0-WebKitVersion.html#webkit-get-minor-version"/>
@@ -754,17 +754,17 @@
     <keyword type="function" name="webkit_context_menu_get_item_at_position ()" link="WebKitContextMenu.html#webkit-context-menu-get-item-at-position"/>
     <keyword type="function" name="webkit_context_menu_remove ()" link="WebKitContextMenu.html#webkit-context-menu-remove"/>
     <keyword type="function" name="webkit_context_menu_remove_all ()" link="WebKitContextMenu.html#webkit-context-menu-remove-all"/>
-    <keyword type="function" name="webkit_context_menu_set_user_data ()" link="WebKitContextMenu.html#webkit-context-menu-set-user-data"/>
-    <keyword type="function" name="webkit_context_menu_get_user_data ()" link="WebKitContextMenu.html#webkit-context-menu-get-user-data"/>
+    <keyword type="function" name="webkit_context_menu_set_user_data ()" link="WebKitContextMenu.html#webkit-context-menu-set-user-data" since="2.8"/>
+    <keyword type="function" name="webkit_context_menu_get_user_data ()" link="WebKitContextMenu.html#webkit-context-menu-get-user-data" since="2.8"/>
     <keyword type="struct" name="WebKitContextMenu" link="WebKitContextMenu.html#WebKitContextMenu-struct"/>
-    <keyword type="function" name="webkit_context_menu_item_new ()" link="WebKitContextMenuItem.html#webkit-context-menu-item-new" deprecated=""/>
-    <keyword type="function" name="webkit_context_menu_item_new_from_gaction ()" link="WebKitContextMenuItem.html#webkit-context-menu-item-new-from-gaction"/>
+    <keyword type="function" name="webkit_context_menu_item_new ()" link="WebKitContextMenuItem.html#webkit-context-menu-item-new" deprecated="2.18: Use webkit_context_menu_item_new_from_gaction() instead."/>
+    <keyword type="function" name="webkit_context_menu_item_new_from_gaction ()" link="WebKitContextMenuItem.html#webkit-context-menu-item-new-from-gaction" since="2.18"/>
     <keyword type="function" name="webkit_context_menu_item_new_from_stock_action ()" link="WebKitContextMenuItem.html#webkit-context-menu-item-new-from-stock-action"/>
     <keyword type="function" name="webkit_context_menu_item_new_from_stock_action_with_label ()" link="WebKitContextMenuItem.html#webkit-context-menu-item-new-from-stock-action-with-label"/>
     <keyword type="function" name="webkit_context_menu_item_new_with_submenu ()" link="WebKitContextMenuItem.html#webkit-context-menu-item-new-with-submenu"/>
     <keyword type="function" name="webkit_context_menu_item_new_separator ()" link="WebKitContextMenuItem.html#webkit-context-menu-item-new-separator"/>
-    <keyword type="function" name="webkit_context_menu_item_get_action ()" link="WebKitContextMenuItem.html#webkit-context-menu-item-get-action" deprecated=""/>
-    <keyword type="function" name="webkit_context_menu_item_get_gaction ()" link="WebKitContextMenuItem.html#webkit-context-menu-item-get-gaction"/>
+    <keyword type="function" name="webkit_context_menu_item_get_action ()" link="WebKitContextMenuItem.html#webkit-context-menu-item-get-action" deprecated="2.18: Use webkit_context_menu_item_get_gaction() instead."/>
+    <keyword type="function" name="webkit_context_menu_item_get_gaction ()" link="WebKitContextMenuItem.html#webkit-context-menu-item-get-gaction" since="2.18"/>
     <keyword type="function" name="webkit_context_menu_item_get_stock_action ()" link="WebKitContextMenuItem.html#webkit-context-menu-item-get-stock-action"/>
     <keyword type="function" name="webkit_context_menu_item_is_separator ()" link="WebKitContextMenuItem.html#webkit-context-menu-item-is-separator"/>
     <keyword type="function" name="webkit_context_menu_item_set_submenu ()" link="WebKitContextMenuItem.html#webkit-context-menu-item-set-submenu"/>
@@ -803,32 +803,32 @@
     <keyword type="function" name="webkit_security_manager_register_uri_scheme_as_empty_document ()" link="WebKitSecurityManager.html#webkit-security-manager-register-uri-scheme-as-empty-document"/>
     <keyword type="function" name="webkit_security_manager_uri_scheme_is_empty_document ()" link="WebKitSecurityManager.html#webkit-security-manager-uri-scheme-is-empty-document"/>
     <keyword type="struct" name="struct WebKitSecurityManager" link="WebKitSecurityManager.html#WebKitSecurityManager-struct"/>
-    <keyword type="function" name="webkit_user_content_manager_new ()" link="WebKitUserContentManager.html#webkit-user-content-manager-new"/>
-    <keyword type="function" name="webkit_user_content_manager_add_style_sheet ()" link="WebKitUserContentManager.html#webkit-user-content-manager-add-style-sheet"/>
-    <keyword type="function" name="webkit_user_content_manager_remove_all_style_sheets ()" link="WebKitUserContentManager.html#webkit-user-content-manager-remove-all-style-sheets"/>
-    <keyword type="function" name="webkit_user_content_manager_add_script ()" link="WebKitUserContentManager.html#webkit-user-content-manager-add-script"/>
-    <keyword type="function" name="webkit_user_content_manager_remove_all_scripts ()" link="WebKitUserContentManager.html#webkit-user-content-manager-remove-all-scripts"/>
-    <keyword type="function" name="webkit_user_content_manager_register_script_message_handler ()" link="WebKitUserContentManager.html#webkit-user-content-manager-register-script-message-handler"/>
-    <keyword type="function" name="webkit_user_content_manager_unregister_script_message_handler ()" link="WebKitUserContentManager.html#webkit-user-content-manager-unregister-script-message-handler"/>
+    <keyword type="function" name="webkit_user_content_manager_new ()" link="WebKitUserContentManager.html#webkit-user-content-manager-new" since="2.6"/>
+    <keyword type="function" name="webkit_user_content_manager_add_style_sheet ()" link="WebKitUserContentManager.html#webkit-user-content-manager-add-style-sheet" since="2.6"/>
+    <keyword type="function" name="webkit_user_content_manager_remove_all_style_sheets ()" link="WebKitUserContentManager.html#webkit-user-content-manager-remove-all-style-sheets" since="2.6"/>
+    <keyword type="function" name="webkit_user_content_manager_add_script ()" link="WebKitUserContentManager.html#webkit-user-content-manager-add-script" since="2.6"/>
+    <keyword type="function" name="webkit_user_content_manager_remove_all_scripts ()" link="WebKitUserContentManager.html#webkit-user-content-manager-remove-all-scripts" since="2.6"/>
+    <keyword type="function" name="webkit_user_content_manager_register_script_message_handler ()" link="WebKitUserContentManager.html#webkit-user-content-manager-register-script-message-handler" since="2.8"/>
+    <keyword type="function" name="webkit_user_content_manager_unregister_script_message_handler ()" link="WebKitUserContentManager.html#webkit-user-content-manager-unregister-script-message-handler" since="2.8"/>
     <keyword type="struct" name="struct WebKitUserContentManager" link="WebKitUserContentManager.html#WebKitUserContentManager-struct"/>
     <keyword type="signal" name="The “script-message-received” signal" link="WebKitUserContentManager.html#WebKitUserContentManager-script-message-received"/>
-    <keyword type="function" name="webkit_user_style_sheet_ref ()" link="webkit2gtk-4.0-WebKitUserContent.html#webkit-user-style-sheet-ref"/>
-    <keyword type="function" name="webkit_user_style_sheet_unref ()" link="webkit2gtk-4.0-WebKitUserContent.html#webkit-user-style-sheet-unref"/>
-    <keyword type="function" name="webkit_user_style_sheet_new ()" link="webkit2gtk-4.0-WebKitUserContent.html#webkit-user-style-sheet-new"/>
-    <keyword type="function" name="webkit_user_script_ref ()" link="webkit2gtk-4.0-WebKitUserContent.html#webkit-user-script-ref"/>
-    <keyword type="function" name="webkit_user_script_unref ()" link="webkit2gtk-4.0-WebKitUserContent.html#webkit-user-script-unref"/>
-    <keyword type="function" name="webkit_user_script_new ()" link="webkit2gtk-4.0-WebKitUserContent.html#webkit-user-script-new"/>
+    <keyword type="function" name="webkit_user_style_sheet_ref ()" link="webkit2gtk-4.0-WebKitUserContent.html#webkit-user-style-sheet-ref" since="2.6"/>
+    <keyword type="function" name="webkit_user_style_sheet_unref ()" link="webkit2gtk-4.0-WebKitUserContent.html#webkit-user-style-sheet-unref" since="2.6"/>
+    <keyword type="function" name="webkit_user_style_sheet_new ()" link="webkit2gtk-4.0-WebKitUserContent.html#webkit-user-style-sheet-new" since="2.6"/>
+    <keyword type="function" name="webkit_user_script_ref ()" link="webkit2gtk-4.0-WebKitUserContent.html#webkit-user-script-ref" since="2.6"/>
+    <keyword type="function" name="webkit_user_script_unref ()" link="webkit2gtk-4.0-WebKitUserContent.html#webkit-user-script-unref" since="2.6"/>
+    <keyword type="function" name="webkit_user_script_new ()" link="webkit2gtk-4.0-WebKitUserContent.html#webkit-user-script-new" since="2.6"/>
     <keyword type="struct" name="WebKitUserStyleSheet" link="webkit2gtk-4.0-WebKitUserContent.html#WebKitUserStyleSheet-struct"/>
     <keyword type="struct" name="WebKitUserScript" link="webkit2gtk-4.0-WebKitUserContent.html#WebKitUserScript-struct"/>
     <keyword type="enum" name="enum WebKitUserContentInjectedFrames" link="webkit2gtk-4.0-WebKitUserContent.html#WebKitUserContentInjectedFrames" since="2.6"/>
     <keyword type="enum" name="enum WebKitUserStyleLevel" link="webkit2gtk-4.0-WebKitUserContent.html#WebKitUserStyleLevel" since="2.6"/>
     <keyword type="enum" name="enum WebKitUserScriptInjectionTime" link="webkit2gtk-4.0-WebKitUserContent.html#WebKitUserScriptInjectionTime" since="2.6"/>
-    <keyword type="function" name="webkit_notification_get_id ()" link="WebKitNotification.html#webkit-notification-get-id"/>
-    <keyword type="function" name="webkit_notification_get_title ()" link="WebKitNotification.html#webkit-notification-get-title"/>
-    <keyword type="function" name="webkit_notification_get_body ()" link="WebKitNotification.html#webkit-notification-get-body"/>
-    <keyword type="function" name="webkit_notification_get_tag ()" link="WebKitNotification.html#webkit-notification-get-tag"/>
-    <keyword type="function" name="webkit_notification_close ()" link="WebKitNotification.html#webkit-notification-close"/>
-    <keyword type="function" name="webkit_notification_clicked ()" link="WebKitNotification.html#webkit-notification-clicked"/>
+    <keyword type="function" name="webkit_notification_get_id ()" link="WebKitNotification.html#webkit-notification-get-id" since="2.8"/>
+    <keyword type="function" name="webkit_notification_get_title ()" link="WebKitNotification.html#webkit-notification-get-title" since="2.8"/>
+    <keyword type="function" name="webkit_notification_get_body ()" link="WebKitNotification.html#webkit-notification-get-body" since="2.8"/>
+    <keyword type="function" name="webkit_notification_get_tag ()" link="WebKitNotification.html#webkit-notification-get-tag" since="2.16"/>
+    <keyword type="function" name="webkit_notification_close ()" link="WebKitNotification.html#webkit-notification-close" since="2.8"/>
+    <keyword type="function" name="webkit_notification_clicked ()" link="WebKitNotification.html#webkit-notification-clicked" since="2.12"/>
     <keyword type="struct" name="struct WebKitNotification" link="WebKitNotification.html#WebKitNotification-struct"/>
     <keyword type="property" name="The “body” property" link="WebKitNotification.html#WebKitNotification--body"/>
     <keyword type="property" name="The “id” property" link="WebKitNotification.html#WebKitNotification--id"/>
@@ -837,33 +837,33 @@
     <keyword type="signal" name="The “clicked” signal" link="WebKitNotification.html#WebKitNotification-clicked"/>
     <keyword type="signal" name="The “closed” signal" link="WebKitNotification.html#WebKitNotification-closed"/>
     <keyword type="struct" name="struct WebKitNotificationPermissionRequest" link="WebKitNotificationPermissionRequest.html#WebKitNotificationPermissionRequest-struct"/>
-    <keyword type="function" name="webkit_security_origin_new ()" link="WebKitSecurityOrigin.html#webkit-security-origin-new"/>
-    <keyword type="function" name="webkit_security_origin_new_for_uri ()" link="WebKitSecurityOrigin.html#webkit-security-origin-new-for-uri"/>
-    <keyword type="function" name="webkit_security_origin_ref ()" link="WebKitSecurityOrigin.html#webkit-security-origin-ref"/>
-    <keyword type="function" name="webkit_security_origin_unref ()" link="WebKitSecurityOrigin.html#webkit-security-origin-unref"/>
-    <keyword type="function" name="webkit_security_origin_get_protocol ()" link="WebKitSecurityOrigin.html#webkit-security-origin-get-protocol"/>
-    <keyword type="function" name="webkit_security_origin_get_host ()" link="WebKitSecurityOrigin.html#webkit-security-origin-get-host"/>
-    <keyword type="function" name="webkit_security_origin_get_port ()" link="WebKitSecurityOrigin.html#webkit-security-origin-get-port"/>
-    <keyword type="function" name="webkit_security_origin_is_opaque ()" link="WebKitSecurityOrigin.html#webkit-security-origin-is-opaque"/>
-    <keyword type="function" name="webkit_security_origin_to_string ()" link="WebKitSecurityOrigin.html#webkit-security-origin-to-string"/>
+    <keyword type="function" name="webkit_security_origin_new ()" link="WebKitSecurityOrigin.html#webkit-security-origin-new" since="2.16"/>
+    <keyword type="function" name="webkit_security_origin_new_for_uri ()" link="WebKitSecurityOrigin.html#webkit-security-origin-new-for-uri" since="2.16"/>
+    <keyword type="function" name="webkit_security_origin_ref ()" link="WebKitSecurityOrigin.html#webkit-security-origin-ref" since="2.16"/>
+    <keyword type="function" name="webkit_security_origin_unref ()" link="WebKitSecurityOrigin.html#webkit-security-origin-unref" since="2.16"/>
+    <keyword type="function" name="webkit_security_origin_get_protocol ()" link="WebKitSecurityOrigin.html#webkit-security-origin-get-protocol" since="2.16"/>
+    <keyword type="function" name="webkit_security_origin_get_host ()" link="WebKitSecurityOrigin.html#webkit-security-origin-get-host" since="2.16"/>
+    <keyword type="function" name="webkit_security_origin_get_port ()" link="WebKitSecurityOrigin.html#webkit-security-origin-get-port" since="2.16"/>
+    <keyword type="function" name="webkit_security_origin_is_opaque ()" link="WebKitSecurityOrigin.html#webkit-security-origin-is-opaque" since="2.16"/>
+    <keyword type="function" name="webkit_security_origin_to_string ()" link="WebKitSecurityOrigin.html#webkit-security-origin-to-string" since="2.16"/>
     <keyword type="struct" name="WebKitSecurityOrigin" link="WebKitSecurityOrigin.html#WebKitSecurityOrigin-struct"/>
-    <keyword type="function" name="webkit_website_data_manager_new ()" link="WebKitWebsiteDataManager.html#webkit-website-data-manager-new"/>
-    <keyword type="function" name="webkit_website_data_manager_new_ephemeral ()" link="WebKitWebsiteDataManager.html#webkit-website-data-manager-new-ephemeral"/>
-    <keyword type="function" name="webkit_website_data_manager_is_ephemeral ()" link="WebKitWebsiteDataManager.html#webkit-website-data-manager-is-ephemeral"/>
-    <keyword type="function" name="webkit_website_data_manager_get_base_data_directory ()" link="WebKitWebsiteDataManager.html#webkit-website-data-manager-get-base-data-directory"/>
-    <keyword type="function" name="webkit_website_data_manager_get_base_cache_directory ()" link="WebKitWebsiteDataManager.html#webkit-website-data-manager-get-base-cache-directory"/>
-    <keyword type="function" name="webkit_website_data_manager_get_local_storage_directory ()" link="WebKitWebsiteDataManager.html#webkit-website-data-manager-get-local-storage-directory"/>
-    <keyword type="function" name="webkit_website_data_manager_get_disk_cache_directory ()" link="WebKitWebsiteDataManager.html#webkit-website-data-manager-get-disk-cache-directory"/>
-    <keyword type="function" name="webkit_website_data_manager_get_offline_application_cache_directory ()" link="WebKitWebsiteDataManager.html#webkit-website-data-manager-get-offline-application-cache-directory"/>
-    <keyword type="function" name="webkit_website_data_manager_get_indexeddb_directory ()" link="WebKitWebsiteDataManager.html#webkit-website-data-manager-get-indexeddb-directory"/>
-    <keyword type="function" name="webkit_website_data_manager_get_websql_directory ()" link="WebKitWebsiteDataManager.html#webkit-website-data-manager-get-websql-directory"/>
-    <keyword type="function" name="webkit_website_data_manager_get_cookie_manager ()" link="WebKitWebsiteDataManager.html#webkit-website-data-manager-get-cookie-manager"/>
-    <keyword type="function" name="webkit_website_data_manager_fetch ()" link="WebKitWebsiteDataManager.html#webkit-website-data-manager-fetch"/>
-    <keyword type="function" name="webkit_website_data_manager_fetch_finish ()" link="WebKitWebsiteDataManager.html#webkit-website-data-manager-fetch-finish"/>
-    <keyword type="function" name="webkit_website_data_manager_remove ()" link="WebKitWebsiteDataManager.html#webkit-website-data-manager-remove"/>
-    <keyword type="function" name="webkit_website_data_manager_remove_finish ()" link="WebKitWebsiteDataManager.html#webkit-website-data-manager-remove-finish"/>
-    <keyword type="function" name="webkit_website_data_manager_clear ()" link="WebKitWebsiteDataManager.html#webkit-website-data-manager-clear"/>
-    <keyword type="function" name="webkit_website_data_manager_clear_finish ()" link="WebKitWebsiteDataManager.html#webkit-website-data-manager-clear-finish"/>
+    <keyword type="function" name="webkit_website_data_manager_new ()" link="WebKitWebsiteDataManager.html#webkit-website-data-manager-new" since="2.10"/>
+    <keyword type="function" name="webkit_website_data_manager_new_ephemeral ()" link="WebKitWebsiteDataManager.html#webkit-website-data-manager-new-ephemeral" since="2.16"/>
+    <keyword type="function" name="webkit_website_data_manager_is_ephemeral ()" link="WebKitWebsiteDataManager.html#webkit-website-data-manager-is-ephemeral" since="2.16"/>
+    <keyword type="function" name="webkit_website_data_manager_get_base_data_directory ()" link="WebKitWebsiteDataManager.html#webkit-website-data-manager-get-base-data-directory" since="2.10"/>
+    <keyword type="function" name="webkit_website_data_manager_get_base_cache_directory ()" link="WebKitWebsiteDataManager.html#webkit-website-data-manager-get-base-cache-directory" since="2.10"/>
+    <keyword type="function" name="webkit_website_data_manager_get_local_storage_directory ()" link="WebKitWebsiteDataManager.html#webkit-website-data-manager-get-local-storage-directory" since="2.10"/>
+    <keyword type="function" name="webkit_website_data_manager_get_disk_cache_directory ()" link="WebKitWebsiteDataManager.html#webkit-website-data-manager-get-disk-cache-directory" since="2.10"/>
+    <keyword type="function" name="webkit_website_data_manager_get_offline_application_cache_directory ()" link="WebKitWebsiteDataManager.html#webkit-website-data-manager-get-offline-application-cache-directory" since="2.10"/>
+    <keyword type="function" name="webkit_website_data_manager_get_indexeddb_directory ()" link="WebKitWebsiteDataManager.html#webkit-website-data-manager-get-indexeddb-directory" since="2.10"/>
+    <keyword type="function" name="webkit_website_data_manager_get_websql_directory ()" link="WebKitWebsiteDataManager.html#webkit-website-data-manager-get-websql-directory" since="2.10"/>
+    <keyword type="function" name="webkit_website_data_manager_get_cookie_manager ()" link="WebKitWebsiteDataManager.html#webkit-website-data-manager-get-cookie-manager" since="2.16"/>
+    <keyword type="function" name="webkit_website_data_manager_fetch ()" link="WebKitWebsiteDataManager.html#webkit-website-data-manager-fetch" since="2.16"/>
+    <keyword type="function" name="webkit_website_data_manager_fetch_finish ()" link="WebKitWebsiteDataManager.html#webkit-website-data-manager-fetch-finish" since="2.16"/>
+    <keyword type="function" name="webkit_website_data_manager_remove ()" link="WebKitWebsiteDataManager.html#webkit-website-data-manager-remove" since="2.16"/>
+    <keyword type="function" name="webkit_website_data_manager_remove_finish ()" link="WebKitWebsiteDataManager.html#webkit-website-data-manager-remove-finish" since="2.16"/>
+    <keyword type="function" name="webkit_website_data_manager_clear ()" link="WebKitWebsiteDataManager.html#webkit-website-data-manager-clear" since="2.16"/>
+    <keyword type="function" name="webkit_website_data_manager_clear_finish ()" link="WebKitWebsiteDataManager.html#webkit-website-data-manager-clear-finish" since="2.16"/>
     <keyword type="struct" name="struct WebKitWebsiteDataManager" link="WebKitWebsiteDataManager.html#WebKitWebsiteDataManager-struct"/>
     <keyword type="property" name="The “base-cache-directory” property" link="WebKitWebsiteDataManager.html#WebKitWebsiteDataManager--base-cache-directory"/>
     <keyword type="property" name="The “base-data-directory” property" link="WebKitWebsiteDataManager.html#WebKitWebsiteDataManager--base-data-directory"/>
@@ -873,31 +873,31 @@
     <keyword type="property" name="The “local-storage-directory” property" link="WebKitWebsiteDataManager.html#WebKitWebsiteDataManager--local-storage-directory"/>
     <keyword type="property" name="The “offline-application-cache-directory” property" link="WebKitWebsiteDataManager.html#WebKitWebsiteDataManager--offline-application-cache-directory"/>
     <keyword type="property" name="The “websql-directory” property" link="WebKitWebsiteDataManager.html#WebKitWebsiteDataManager--websql-directory"/>
-    <keyword type="function" name="webkit_website_data_ref ()" link="WebKitWebsiteData.html#webkit-website-data-ref"/>
-    <keyword type="function" name="webkit_website_data_unref ()" link="WebKitWebsiteData.html#webkit-website-data-unref"/>
-    <keyword type="function" name="webkit_website_data_get_name ()" link="WebKitWebsiteData.html#webkit-website-data-get-name"/>
-    <keyword type="function" name="webkit_website_data_get_types ()" link="WebKitWebsiteData.html#webkit-website-data-get-types"/>
-    <keyword type="function" name="webkit_website_data_get_size ()" link="WebKitWebsiteData.html#webkit-website-data-get-size"/>
+    <keyword type="function" name="webkit_website_data_ref ()" link="WebKitWebsiteData.html#webkit-website-data-ref" since="2.16"/>
+    <keyword type="function" name="webkit_website_data_unref ()" link="WebKitWebsiteData.html#webkit-website-data-unref" since="2.16"/>
+    <keyword type="function" name="webkit_website_data_get_name ()" link="WebKitWebsiteData.html#webkit-website-data-get-name" since="2.16"/>
+    <keyword type="function" name="webkit_website_data_get_types ()" link="WebKitWebsiteData.html#webkit-website-data-get-types" since="2.16"/>
+    <keyword type="function" name="webkit_website_data_get_size ()" link="WebKitWebsiteData.html#webkit-website-data-get-size" since="2.16"/>
     <keyword type="struct" name="WebKitWebsiteData" link="WebKitWebsiteData.html#WebKitWebsiteData-struct"/>
     <keyword type="enum" name="enum WebKitWebsiteDataTypes" link="WebKitWebsiteData.html#WebKitWebsiteDataTypes" since="2.16"/>
-    <keyword type="function" name="webkit_network_proxy_settings_new ()" link="WebKitNetworkProxySettings.html#webkit-network-proxy-settings-new"/>
-    <keyword type="function" name="webkit_network_proxy_settings_copy ()" link="WebKitNetworkProxySettings.html#webkit-network-proxy-settings-copy"/>
-    <keyword type="function" name="webkit_network_proxy_settings_free ()" link="WebKitNetworkProxySettings.html#webkit-network-proxy-settings-free"/>
-    <keyword type="function" name="webkit_network_proxy_settings_add_proxy_for_scheme ()" link="WebKitNetworkProxySettings.html#webkit-network-proxy-settings-add-proxy-for-scheme"/>
+    <keyword type="function" name="webkit_network_proxy_settings_new ()" link="WebKitNetworkProxySettings.html#webkit-network-proxy-settings-new" since="2.16"/>
+    <keyword type="function" name="webkit_network_proxy_settings_copy ()" link="WebKitNetworkProxySettings.html#webkit-network-proxy-settings-copy" since="2.16"/>
+    <keyword type="function" name="webkit_network_proxy_settings_free ()" link="WebKitNetworkProxySettings.html#webkit-network-proxy-settings-free" since="2.16"/>
+    <keyword type="function" name="webkit_network_proxy_settings_add_proxy_for_scheme ()" link="WebKitNetworkProxySettings.html#webkit-network-proxy-settings-add-proxy-for-scheme" since="2.16"/>
     <keyword type="struct" name="WebKitNetworkProxySettings" link="WebKitNetworkProxySettings.html#WebKitNetworkProxySettings-struct"/>
-    <keyword type="function" name="webkit_automation_session_get_id ()" link="WebKitAutomationSession.html#webkit-automation-session-get-id"/>
-    <keyword type="function" name="webkit_automation_session_set_application_info ()" link="WebKitAutomationSession.html#webkit-automation-session-set-application-info"/>
-    <keyword type="function" name="webkit_automation_session_get_application_info ()" link="WebKitAutomationSession.html#webkit-automation-session-get-application-info"/>
+    <keyword type="function" name="webkit_automation_session_get_id ()" link="WebKitAutomationSession.html#webkit-automation-session-get-id" since="2.18"/>
+    <keyword type="function" name="webkit_automation_session_set_application_info ()" link="WebKitAutomationSession.html#webkit-automation-session-set-application-info" since="2.18"/>
+    <keyword type="function" name="webkit_automation_session_get_application_info ()" link="WebKitAutomationSession.html#webkit-automation-session-get-application-info" since="2.18"/>
     <keyword type="struct" name="struct WebKitAutomationSession" link="WebKitAutomationSession.html#WebKitAutomationSession-struct"/>
     <keyword type="property" name="The “id” property" link="WebKitAutomationSession.html#WebKitAutomationSession--id"/>
     <keyword type="signal" name="The “create-web-view” signal" link="WebKitAutomationSession.html#WebKitAutomationSession-create-web-view"/>
-    <keyword type="function" name="webkit_application_info_new ()" link="WebKitApplicationInfo.html#webkit-application-info-new"/>
-    <keyword type="function" name="webkit_application_info_ref ()" link="WebKitApplicationInfo.html#webkit-application-info-ref"/>
-    <keyword type="function" name="webkit_application_info_unref ()" link="WebKitApplicationInfo.html#webkit-application-info-unref"/>
-    <keyword type="function" name="webkit_application_info_set_name ()" link="WebKitApplicationInfo.html#webkit-application-info-set-name"/>
-    <keyword type="function" name="webkit_application_info_get_name ()" link="WebKitApplicationInfo.html#webkit-application-info-get-name"/>
-    <keyword type="function" name="webkit_application_info_set_version ()" link="WebKitApplicationInfo.html#webkit-application-info-set-version"/>
-    <keyword type="function" name="webkit_application_info_get_version ()" link="WebKitApplicationInfo.html#webkit-application-info-get-version"/>
+    <keyword type="function" name="webkit_application_info_new ()" link="WebKitApplicationInfo.html#webkit-application-info-new" since="2.18"/>
+    <keyword type="function" name="webkit_application_info_ref ()" link="WebKitApplicationInfo.html#webkit-application-info-ref" since="2.18"/>
+    <keyword type="function" name="webkit_application_info_unref ()" link="WebKitApplicationInfo.html#webkit-application-info-unref" since="2.18"/>
+    <keyword type="function" name="webkit_application_info_set_name ()" link="WebKitApplicationInfo.html#webkit-application-info-set-name" since="2.18"/>
+    <keyword type="function" name="webkit_application_info_get_name ()" link="WebKitApplicationInfo.html#webkit-application-info-get-name" since="2.18"/>
+    <keyword type="function" name="webkit_application_info_set_version ()" link="WebKitApplicationInfo.html#webkit-application-info-set-version" since="2.18"/>
+    <keyword type="function" name="webkit_application_info_get_version ()" link="WebKitApplicationInfo.html#webkit-application-info-get-version" since="2.18"/>
     <keyword type="struct" name="WebKitApplicationInfo" link="WebKitApplicationInfo.html#WebKitApplicationInfo-struct"/>
     <keyword type="function" name="WebKitWebExtensionInitializeFunction ()" link="WebKitWebExtension.html#WebKitWebExtensionInitializeFunction"/>
     <keyword type="function" name="WebKitWebExtensionInitializeWithUserDataFunction ()" link="WebKitWebExtension.html#WebKitWebExtensionInitializeWithUserDataFunction" since="2.4"/>
@@ -907,8 +907,8 @@
     <keyword type="function" name="webkit_web_page_get_dom_document ()" link="WebKitWebPage.html#webkit-web-page-get-dom-document"/>
     <keyword type="function" name="webkit_web_page_get_id ()" link="WebKitWebPage.html#webkit-web-page-get-id"/>
     <keyword type="function" name="webkit_web_page_get_uri ()" link="WebKitWebPage.html#webkit-web-page-get-uri"/>
-    <keyword type="function" name="webkit_web_page_get_main_frame ()" link="WebKitWebPage.html#webkit-web-page-get-main-frame"/>
-    <keyword type="function" name="webkit_web_page_get_editor ()" link="WebKitWebPage.html#webkit-web-page-get-editor"/>
+    <keyword type="function" name="webkit_web_page_get_main_frame ()" link="WebKitWebPage.html#webkit-web-page-get-main-frame" since="2.2"/>
+    <keyword type="function" name="webkit_web_page_get_editor ()" link="WebKitWebPage.html#webkit-web-page-get-editor" since="2.10"/>
     <keyword type="struct" name="WebKitWebPage" link="WebKitWebPage.html#WebKitWebPage-struct"/>
     <keyword type="property" name="The “uri” property" link="WebKitWebPage.html#WebKitWebPage--uri"/>
     <keyword type="signal" name="The “console-message-sent” signal" link="WebKitWebPage.html#WebKitWebPage-console-message-sent"/>
@@ -916,28 +916,28 @@
     <keyword type="signal" name="The “document-loaded” signal" link="WebKitWebPage.html#WebKitWebPage-document-loaded"/>
     <keyword type="signal" name="The “form-controls-associated” signal" link="WebKitWebPage.html#WebKitWebPage-form-controls-associated"/>
     <keyword type="signal" name="The “send-request” signal" link="WebKitWebPage.html#WebKitWebPage-send-request"/>
-    <keyword type="function" name="webkit_frame_is_main_frame ()" link="WebKitFrame.html#webkit-frame-is-main-frame"/>
-    <keyword type="function" name="webkit_frame_get_uri ()" link="WebKitFrame.html#webkit-frame-get-uri"/>
-    <keyword type="function" name="webkit_frame_get_javascript_global_context ()" link="WebKitFrame.html#webkit-frame-get-javascript-global-context"/>
-    <keyword type="function" name="webkit_frame_get_javascript_context_for_script_world ()" link="WebKitFrame.html#webkit-frame-get-javascript-context-for-script-world"/>
+    <keyword type="function" name="webkit_frame_is_main_frame ()" link="WebKitFrame.html#webkit-frame-is-main-frame" since="2.2"/>
+    <keyword type="function" name="webkit_frame_get_uri ()" link="WebKitFrame.html#webkit-frame-get-uri" since="2.2"/>
+    <keyword type="function" name="webkit_frame_get_javascript_global_context ()" link="WebKitFrame.html#webkit-frame-get-javascript-global-context" since="2.2"/>
+    <keyword type="function" name="webkit_frame_get_javascript_context_for_script_world ()" link="WebKitFrame.html#webkit-frame-get-javascript-context-for-script-world" since="2.2"/>
     <keyword type="struct" name="struct WebKitFrame" link="WebKitFrame.html#WebKitFrame-struct"/>
-    <keyword type="function" name="webkit_script_world_get_default ()" link="WebKitScriptWorld.html#webkit-script-world-get-default"/>
-    <keyword type="function" name="webkit_script_world_new ()" link="WebKitScriptWorld.html#webkit-script-world-new"/>
+    <keyword type="function" name="webkit_script_world_get_default ()" link="WebKitScriptWorld.html#webkit-script-world-get-default" since="2.2"/>
+    <keyword type="function" name="webkit_script_world_new ()" link="WebKitScriptWorld.html#webkit-script-world-new" since="2.2"/>
     <keyword type="struct" name="struct WebKitScriptWorld" link="WebKitScriptWorld.html#WebKitScriptWorld-struct"/>
     <keyword type="signal" name="The “window-object-cleared” signal" link="WebKitScriptWorld.html#WebKitScriptWorld-window-object-cleared"/>
-    <keyword type="function" name="webkit_web_hit_test_result_get_node ()" link="WebKitWebHitTestResult.html#webkit-web-hit-test-result-get-node"/>
+    <keyword type="function" name="webkit_web_hit_test_result_get_node ()" link="WebKitWebHitTestResult.html#webkit-web-hit-test-result-get-node" since="2.8"/>
     <keyword type="struct" name="struct WebKitWebHitTestResult" link="WebKitWebHitTestResult.html#WebKitWebHitTestResult-struct"/>
     <keyword type="property" name="The “node” property" link="WebKitWebHitTestResult.html#WebKitWebHitTestResult--node"/>
-    <keyword type="function" name="webkit_web_editor_get_page ()" link="WebKitWebEditor.html#webkit-web-editor-get-page"/>
+    <keyword type="function" name="webkit_web_editor_get_page ()" link="WebKitWebEditor.html#webkit-web-editor-get-page" since="2.10"/>
     <keyword type="struct" name="WebKitWebEditor" link="WebKitWebEditor.html#WebKitWebEditor-struct"/>
     <keyword type="signal" name="The “selection-changed” signal" link="WebKitWebEditor.html#WebKitWebEditor-selection-changed"/>
-    <keyword type="function" name="webkit_console_message_copy ()" link="WebKitConsoleMessage.html#webkit-console-message-copy"/>
-    <keyword type="function" name="webkit_console_message_free ()" link="WebKitConsoleMessage.html#webkit-console-message-free"/>
-    <keyword type="function" name="webkit_console_message_get_source ()" link="WebKitConsoleMessage.html#webkit-console-message-get-source"/>
-    <keyword type="function" name="webkit_console_message_get_level ()" link="WebKitConsoleMessage.html#webkit-console-message-get-level"/>
-    <keyword type="function" name="webkit_console_message_get_text ()" link="WebKitConsoleMessage.html#webkit-console-message-get-text"/>
-    <keyword type="function" name="webkit_console_message_get_line ()" link="WebKitConsoleMessage.html#webkit-console-message-get-line"/>
-    <keyword type="function" name="webkit_console_message_get_source_id ()" link="WebKitConsoleMessage.html#webkit-console-message-get-source-id"/>
+    <keyword type="function" name="webkit_console_message_copy ()" link="WebKitConsoleMessage.html#webkit-console-message-copy" since="2.12"/>
+    <keyword type="function" name="webkit_console_message_free ()" link="WebKitConsoleMessage.html#webkit-console-message-free" since="2.12"/>
+    <keyword type="function" name="webkit_console_message_get_source ()" link="WebKitConsoleMessage.html#webkit-console-message-get-source" since="2.12"/>
+    <keyword type="function" name="webkit_console_message_get_level ()" link="WebKitConsoleMessage.html#webkit-console-message-get-level" since="2.12"/>
+    <keyword type="function" name="webkit_console_message_get_text ()" link="WebKitConsoleMessage.html#webkit-console-message-get-text" since="2.12"/>
+    <keyword type="function" name="webkit_console_message_get_line ()" link="WebKitConsoleMessage.html#webkit-console-message-get-line" since="2.12"/>
+    <keyword type="function" name="webkit_console_message_get_source_id ()" link="WebKitConsoleMessage.html#webkit-console-message-get-source-id" since="2.12"/>
     <keyword type="struct" name="WebKitConsoleMessage" link="WebKitConsoleMessage.html#WebKitConsoleMessage-struct"/>
     <keyword type="enum" name="enum WebKitConsoleMessageSource" link="WebKitConsoleMessage.html#WebKitConsoleMessageSource" since="2.12"/>
     <keyword type="enum" name="enum WebKitConsoleMessageLevel" link="WebKitConsoleMessage.html#WebKitConsoleMessageLevel" since="2.12"/>

@@ -8,7 +8,7 @@
 <link rel="up" href="ch01.html" title="Class Overview">
 <link rel="prev" href="WebKitPolicyDecision.html" title="WebKitPolicyDecision">
 <link rel="next" href="WebKitResponsePolicyDecision.html" title="WebKitResponsePolicyDecision">
-<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.26.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -29,7 +29,7 @@
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
 <h2><span class="refentrytitle"><a name="WebKitNavigationPolicyDecision.top_of_page"></a>WebKitNavigationPolicyDecision</span></h2>
-<p>WebKitNavigationPolicyDecision</p>
+<p>WebKitNavigationPolicyDecision — A policy decision for navigation actions</p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
@@ -164,6 +164,9 @@
 </div>
 <div class="refsect1">
 <a name="WebKitNavigationPolicyDecision.description"></a><h2>Description</h2>
+<p>WebKitNavigationPolicyDecision represents a policy decision for events associated with
+navigations. If the value of <a class="link" href="WebKitNavigationPolicyDecision.html#WebKitNavigationPolicyDecision--mouse-button" title="The “mouse-button” property"><span class="type">“mouse-button”</span></a> is not 0, then
+the navigation was triggered by a mouse event.</p>
 </div>
 <div class="refsect1">
 <a name="WebKitNavigationPolicyDecision.functions_details"></a><h2>Functions</h2>
@@ -172,6 +175,28 @@
 <pre class="programlisting"><a class="link" href="WebKitNavigationAction.html" title="WebKitNavigationAction"><span class="returnvalue">WebKitNavigationAction</span></a> *
 webkit_navigation_policy_decision_get_navigation_action
                                (<em class="parameter"><code><a class="link" href="WebKitNavigationPolicyDecision.html" title="WebKitNavigationPolicyDecision"><span class="type">WebKitNavigationPolicyDecision</span></a> *decision</code></em>);</pre>
+<p>Gets the value of the <a class="link" href="WebKitNavigationPolicyDecision.html#WebKitNavigationPolicyDecision--navigation-action" title="The “navigation-action” property"><span class="type">“navigation-action”</span></a> property.</p>
+<div class="refsect3">
+<a name="webkit-navigation-policy-decision-get-navigation-action.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>decision</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitNavigationPolicyDecision.html" title="WebKitNavigationPolicyDecision"><span class="type">WebKitNavigationPolicyDecision</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-navigation-policy-decision-get-navigation-action.returns"></a><h4>Returns</h4>
+<p>The <a class="link" href="WebKitNavigationAction.html" title="WebKitNavigationAction"><span class="type">WebKitNavigationAction</span></a> triggering this policy decision. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-6.html#api-index-2.6">2.6</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -179,6 +204,26 @@ webkit_navigation_policy_decision_get_navigation_action
 <pre class="programlisting">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
 webkit_navigation_policy_decision_get_frame_name
                                (<em class="parameter"><code><a class="link" href="WebKitNavigationPolicyDecision.html" title="WebKitNavigationPolicyDecision"><span class="type">WebKitNavigationPolicyDecision</span></a> *decision</code></em>);</pre>
+<p>Gets the value of the <a class="link" href="WebKitNavigationPolicyDecision.html#WebKitNavigationPolicyDecision--frame-name" title="The “frame-name” property"><span class="type">“frame-name”</span></a> property.</p>
+<div class="refsect3">
+<a name="webkit-navigation-policy-decision-get-frame-name.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>decision</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitNavigationPolicyDecision.html" title="WebKitNavigationPolicyDecision"><span class="type">WebKitNavigationPolicyDecision</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-navigation-policy-decision-get-frame-name.returns"></a><h4>Returns</h4>
+<p> The name of the new frame this navigation action targets or <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a></p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
@@ -186,7 +231,30 @@ webkit_navigation_policy_decision_get_frame_name
 <pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
 webkit_navigation_policy_decision_get_modifiers
                                (<em class="parameter"><code><a class="link" href="WebKitNavigationPolicyDecision.html" title="WebKitNavigationPolicyDecision"><span class="type">WebKitNavigationPolicyDecision</span></a> *decision</code></em>);</pre>
-<div class="warning"><p><code class="literal">webkit_navigation_policy_decision_get_modifiers</code> is deprecated and should not be used in newly-written code.</p></div>
+<div class="warning">
+<p><code class="literal">webkit_navigation_policy_decision_get_modifiers</code> has been deprecated since version 2.6 and should not be used in newly-written code.</p>
+<p>Use <a class="link" href="WebKitNavigationPolicyDecision.html#webkit-navigation-policy-decision-get-navigation-action" title="webkit_navigation_policy_decision_get_navigation_action ()"><code class="function">webkit_navigation_policy_decision_get_navigation_action()</code></a> instead.</p>
+</div>
+<p>Gets the value of the <a class="link" href="WebKitNavigationPolicyDecision.html#WebKitNavigationPolicyDecision--modifiers" title="The “modifiers” property"><span class="type">“modifiers”</span></a> property.</p>
+<div class="refsect3">
+<a name="webkit-navigation-policy-decision-get-modifiers.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>decision</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitNavigationPolicyDecision.html" title="WebKitNavigationPolicyDecision"><span class="type">WebKitNavigationPolicyDecision</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-navigation-policy-decision-get-modifiers.returns"></a><h4>Returns</h4>
+<p> The modifiers active if this decision was triggered by a mouse event</p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
@@ -194,7 +262,30 @@ webkit_navigation_policy_decision_get_modifiers
 <pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
 webkit_navigation_policy_decision_get_mouse_button
                                (<em class="parameter"><code><a class="link" href="WebKitNavigationPolicyDecision.html" title="WebKitNavigationPolicyDecision"><span class="type">WebKitNavigationPolicyDecision</span></a> *decision</code></em>);</pre>
-<div class="warning"><p><code class="literal">webkit_navigation_policy_decision_get_mouse_button</code> is deprecated and should not be used in newly-written code.</p></div>
+<div class="warning">
+<p><code class="literal">webkit_navigation_policy_decision_get_mouse_button</code> has been deprecated since version 2.6 and should not be used in newly-written code.</p>
+<p>Use <a class="link" href="WebKitNavigationPolicyDecision.html#webkit-navigation-policy-decision-get-navigation-action" title="webkit_navigation_policy_decision_get_navigation_action ()"><code class="function">webkit_navigation_policy_decision_get_navigation_action()</code></a> instead.</p>
+</div>
+<p>Gets the value of the <a class="link" href="WebKitNavigationPolicyDecision.html#WebKitNavigationPolicyDecision--mouse-button" title="The “mouse-button” property"><span class="type">“mouse-button”</span></a> property.</p>
+<div class="refsect3">
+<a name="webkit-navigation-policy-decision-get-mouse-button.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>decision</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitNavigationPolicyDecision.html" title="WebKitNavigationPolicyDecision"><span class="type">WebKitNavigationPolicyDecision</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-navigation-policy-decision-get-mouse-button.returns"></a><h4>Returns</h4>
+<p> The mouse button used if this decision was triggered by a mouse event or 0 otherwise</p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
@@ -202,7 +293,30 @@ webkit_navigation_policy_decision_get_mouse_button
 <pre class="programlisting"><a class="link" href="WebKitNavigationPolicyDecision.html#WebKitNavigationType" title="enum WebKitNavigationType"><span class="returnvalue">WebKitNavigationType</span></a>
 webkit_navigation_policy_decision_get_navigation_type
                                (<em class="parameter"><code><a class="link" href="WebKitNavigationPolicyDecision.html" title="WebKitNavigationPolicyDecision"><span class="type">WebKitNavigationPolicyDecision</span></a> *decision</code></em>);</pre>
-<div class="warning"><p><code class="literal">webkit_navigation_policy_decision_get_navigation_type</code> is deprecated and should not be used in newly-written code.</p></div>
+<div class="warning">
+<p><code class="literal">webkit_navigation_policy_decision_get_navigation_type</code> has been deprecated since version 2.6 and should not be used in newly-written code.</p>
+<p>Use <a class="link" href="WebKitNavigationPolicyDecision.html#webkit-navigation-policy-decision-get-navigation-action" title="webkit_navigation_policy_decision_get_navigation_action ()"><code class="function">webkit_navigation_policy_decision_get_navigation_action()</code></a> instead.</p>
+</div>
+<p>Gets the value of the <a class="link" href="WebKitNavigationPolicyDecision.html#WebKitNavigationPolicyDecision--navigation-type" title="The “navigation-type” property"><span class="type">“navigation-type”</span></a> property.</p>
+<div class="refsect3">
+<a name="webkit-navigation-policy-decision-get-navigation-type.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>decision</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitNavigationPolicyDecision.html" title="WebKitNavigationPolicyDecision"><span class="type">WebKitNavigationPolicyDecision</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-navigation-policy-decision-get-navigation-type.returns"></a><h4>Returns</h4>
+<p> The type of navigation triggering this policy decision.</p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
@@ -210,7 +324,31 @@ webkit_navigation_policy_decision_get_navigation_type
 <pre class="programlisting"><a class="link" href="WebKitURIRequest.html" title="WebKitURIRequest"><span class="returnvalue">WebKitURIRequest</span></a> *
 webkit_navigation_policy_decision_get_request
                                (<em class="parameter"><code><a class="link" href="WebKitNavigationPolicyDecision.html" title="WebKitNavigationPolicyDecision"><span class="type">WebKitNavigationPolicyDecision</span></a> *decision</code></em>);</pre>
-<div class="warning"><p><code class="literal">webkit_navigation_policy_decision_get_request</code> is deprecated and should not be used in newly-written code.</p></div>
+<div class="warning">
+<p><code class="literal">webkit_navigation_policy_decision_get_request</code> has been deprecated since version 2.6 and should not be used in newly-written code.</p>
+<p>Use <a class="link" href="WebKitNavigationPolicyDecision.html#webkit-navigation-policy-decision-get-navigation-action" title="webkit_navigation_policy_decision_get_navigation_action ()"><code class="function">webkit_navigation_policy_decision_get_navigation_action()</code></a> instead.</p>
+</div>
+<p>Gets the value of the <a class="link" href="WebKitNavigationPolicyDecision.html#WebKitNavigationPolicyDecision--request" title="The “request” property"><span class="type">“request”</span></a> property.</p>
+<div class="refsect3">
+<a name="webkit-navigation-policy-decision-get-request.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>decision</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitNavigationPolicyDecision.html" title="WebKitNavigationPolicyDecision"><span class="type">WebKitNavigationPolicyDecision</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-navigation-policy-decision-get-request.returns"></a><h4>Returns</h4>
+<p>The URI request that is associated with this navigation. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
 </div>
 </div>
 <div class="refsect1">
@@ -284,7 +422,10 @@ webkit_navigation_policy_decision_get_request
 <div class="refsect2">
 <a name="WebKitNavigationPolicyDecision--frame-name"></a><h3>The <code class="literal">“frame-name”</code> property</h3>
 <pre class="programlisting">  “frame-name”               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
-<p>The name of the new frame this navigation action targets.</p>
+<p>If this navigation request targets a new frame, this property contains
+the name of that frame. For example if the decision was triggered by clicking a
+link with a target attribute equal to "_blank", this property will contain the
+value of that attribute. In all other cases, this value will be <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</p>
 <p>Flags: Read</p>
 <p>Default value: NULL</p>
 </div>
@@ -292,7 +433,15 @@ webkit_navigation_policy_decision_get_request
 <div class="refsect2">
 <a name="WebKitNavigationPolicyDecision--modifiers"></a><h3>The <code class="literal">“modifiers”</code> property</h3>
 <pre class="programlisting">  “modifiers”                <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
-<p>The modifiers active if this decision was triggered by a mouse event.</p>
+<p>If the navigation associated with this policy decision was originally
+triggered by a mouse event, this property contains a bitmask of various
+<a href="http://developer.gnome.org/gdk3/stable/gdk3-Windows.html#GdkModifierType"><span class="type">GdkModifierType</span></a> values describing the modifiers used for that click.
+If the navigation was not triggered by a mouse event or no modifiers
+were active, the value of this property will be zero.</p>
+<div class="warning">
+<p><code class="literal">WebKitNavigationPolicyDecision:modifiers</code> has been deprecated since version 2.6 and should not be used in newly-written code.</p>
+<p>Use <a class="link" href="WebKitNavigationPolicyDecision.html#WebKitNavigationPolicyDecision--navigation-action" title="The “navigation-action” property"><span class="type">“navigation-action”</span></a> instead</p>
+</div>
 <p>Flags: Read</p>
 <p>Default value: 0</p>
 </div>
@@ -300,7 +449,15 @@ webkit_navigation_policy_decision_get_request
 <div class="refsect2">
 <a name="WebKitNavigationPolicyDecision--mouse-button"></a><h3>The <code class="literal">“mouse-button”</code> property</h3>
 <pre class="programlisting">  “mouse-button”             <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
-<p>The mouse button used if this decision was triggered by a mouse event.</p>
+<p>If the navigation associated with this policy decision was originally
+triggered by a mouse event, this property contains non-zero button number
+of the button triggering that event. The button numbers match those from GDK.
+If the navigation was not triggered by a mouse event, the value of this
+property will be 0.</p>
+<div class="warning">
+<p><code class="literal">WebKitNavigationPolicyDecision:mouse-button</code> has been deprecated since version 2.6 and should not be used in newly-written code.</p>
+<p>Use <a class="link" href="WebKitNavigationPolicyDecision.html#WebKitNavigationPolicyDecision--navigation-action" title="The “navigation-action” property"><span class="type">“navigation-action”</span></a> instead</p>
+</div>
 <p>Flags: Read</p>
 <p>Default value: 0</p>
 </div>
@@ -308,14 +465,21 @@ webkit_navigation_policy_decision_get_request
 <div class="refsect2">
 <a name="WebKitNavigationPolicyDecision--navigation-action"></a><h3>The <code class="literal">“navigation-action”</code> property</h3>
 <pre class="programlisting">  “navigation-action”        <a class="link" href="WebKitNavigationAction.html" title="WebKitNavigationAction"><span class="type">WebKitNavigationAction</span></a> *</pre>
-<p>The WebKitNavigationAction triggering this decision.</p>
+<p>The <a class="link" href="WebKitNavigationAction.html" title="WebKitNavigationAction"><span class="type">WebKitNavigationAction</span></a> that triggered this policy decision.</p>
 <p>Flags: Read</p>
+<p class="since">Since: <a class="link" href="api-index-2-6.html#api-index-2.6">2.6</a></p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="WebKitNavigationPolicyDecision--navigation-type"></a><h3>The <code class="literal">“navigation-type”</code> property</h3>
 <pre class="programlisting">  “navigation-type”          <a class="link" href="WebKitNavigationPolicyDecision.html#WebKitNavigationType" title="enum WebKitNavigationType"><span class="type">WebKitNavigationType</span></a></pre>
-<p>The type of navigation triggering this decision.</p>
+<p>The type of navigation that triggered this policy decision. This is
+useful for enacting different policies depending on what type of user
+action caused the navigation.</p>
+<div class="warning">
+<p><code class="literal">WebKitNavigationPolicyDecision:navigation-type</code> has been deprecated since version 2.6 and should not be used in newly-written code.</p>
+<p>Use <a class="link" href="WebKitNavigationPolicyDecision.html#WebKitNavigationPolicyDecision--navigation-action" title="The “navigation-action” property"><span class="type">“navigation-action”</span></a> instead</p>
+</div>
 <p>Flags: Read</p>
 <p>Default value: WEBKIT_NAVIGATION_TYPE_LINK_CLICKED</p>
 </div>
@@ -323,12 +487,21 @@ webkit_navigation_policy_decision_get_request
 <div class="refsect2">
 <a name="WebKitNavigationPolicyDecision--request"></a><h3>The <code class="literal">“request”</code> property</h3>
 <pre class="programlisting">  “request”                  <a class="link" href="WebKitURIRequest.html" title="WebKitURIRequest"><span class="type">WebKitURIRequest</span></a> *</pre>
-<p>The URI request that is associated with this navigation.</p>
+<p>This property contains the <a class="link" href="WebKitURIRequest.html" title="WebKitURIRequest"><span class="type">WebKitURIRequest</span></a> associated with this
+navigation.</p>
+<div class="warning">
+<p><code class="literal">WebKitNavigationPolicyDecision:request</code> has been deprecated since version 2.6 and should not be used in newly-written code.</p>
+<p>Use <a class="link" href="WebKitNavigationPolicyDecision.html#WebKitNavigationPolicyDecision--navigation-action" title="The “navigation-action” property"><span class="type">“navigation-action”</span></a> instead</p>
+</div>
 <p>Flags: Read</p>
 </div>
 </div>
+<div class="refsect1">
+<a name="WebKitNavigationPolicyDecision.see-also"></a><h2>See Also</h2>
+<p><a class="link" href="WebKitPolicyDecision.html" title="WebKitPolicyDecision"><span class="type">WebKitPolicyDecision</span></a>, <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a></p>
+</div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.25.1</div>
+<hr>Generated by GTK-Doc V1.26.1</div>
 </body>
 </html>

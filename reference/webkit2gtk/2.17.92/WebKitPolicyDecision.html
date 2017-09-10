@@ -8,7 +8,7 @@
 <link rel="up" href="ch01.html" title="Class Overview">
 <link rel="prev" href="WebKitUserMediaPermissionRequest.html" title="WebKitUserMediaPermissionRequest">
 <link rel="next" href="WebKitNavigationPolicyDecision.html" title="WebKitNavigationPolicyDecision">
-<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.26.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -28,7 +28,7 @@
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
 <h2><span class="refentrytitle"><a name="WebKitPolicyDecision.top_of_page"></a>WebKitPolicyDecision</span></h2>
-<p>WebKitPolicyDecision</p>
+<p>WebKitPolicyDecision — A pending policy decision</p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
@@ -90,6 +90,15 @@
 </div>
 <div class="refsect1">
 <a name="WebKitPolicyDecision.description"></a><h2>Description</h2>
+<p>Often WebKit allows the client to decide the policy for certain
+operations. For instance, a client may want to open a link in a new
+tab, block a navigation entirely, query the user or trigger a download
+instead of a navigation. In these cases WebKit will fire the
+<a class="link" href="WebKitWebView.html#WebKitWebView-decide-policy" title="The “decide-policy” signal"><span class="type">“decide-policy”</span></a> signal with a <a class="link" href="WebKitPolicyDecision.html" title="WebKitPolicyDecision"><span class="type">WebKitPolicyDecision</span></a>
+object. If the signal handler does nothing, WebKit will act as if
+<a class="link" href="WebKitPolicyDecision.html#webkit-policy-decision-use" title="webkit_policy_decision_use ()"><code class="function">webkit_policy_decision_use()</code></a> was called as soon as signal handling
+completes. To make a policy decision asynchronously, simply increment
+the reference count of the <a class="link" href="WebKitPolicyDecision.html" title="WebKitPolicyDecision"><span class="type">WebKitPolicyDecision</span></a> object.</p>
 </div>
 <div class="refsect1">
 <a name="WebKitPolicyDecision.functions_details"></a><h2>Functions</h2>
@@ -97,18 +106,67 @@
 <a name="webkit-policy-decision-download"></a><h3>webkit_policy_decision_download ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 webkit_policy_decision_download (<em class="parameter"><code><a class="link" href="WebKitPolicyDecision.html" title="WebKitPolicyDecision"><span class="type">WebKitPolicyDecision</span></a> *decision</code></em>);</pre>
+<p>Spawn a download from this decision.</p>
+<div class="refsect3">
+<a name="webkit-policy-decision-download.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>decision</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitPolicyDecision.html" title="WebKitPolicyDecision"><span class="type">WebKitPolicyDecision</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="webkit-policy-decision-ignore"></a><h3>webkit_policy_decision_ignore ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 webkit_policy_decision_ignore (<em class="parameter"><code><a class="link" href="WebKitPolicyDecision.html" title="WebKitPolicyDecision"><span class="type">WebKitPolicyDecision</span></a> *decision</code></em>);</pre>
+<p>Ignore the action which triggered this decision. For instance, for a
+<a class="link" href="WebKitResponsePolicyDecision.html" title="WebKitResponsePolicyDecision"><span class="type">WebKitResponsePolicyDecision</span></a>, this would cancel the request.</p>
+<div class="refsect3">
+<a name="webkit-policy-decision-ignore.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>decision</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitPolicyDecision.html" title="WebKitPolicyDecision"><span class="type">WebKitPolicyDecision</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="webkit-policy-decision-use"></a><h3>webkit_policy_decision_use ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 webkit_policy_decision_use (<em class="parameter"><code><a class="link" href="WebKitPolicyDecision.html" title="WebKitPolicyDecision"><span class="type">WebKitPolicyDecision</span></a> *decision</code></em>);</pre>
+<p>Accept the action which triggered this decision.</p>
+<div class="refsect3">
+<a name="webkit-policy-decision-use.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>decision</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitPolicyDecision.html" title="WebKitPolicyDecision"><span class="type">WebKitPolicyDecision</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
 </div>
 </div>
 <div class="refsect1">
@@ -118,8 +176,12 @@ webkit_policy_decision_use (<em class="parameter"><code><a class="link" href="We
 <pre class="programlisting">struct WebKitPolicyDecision;</pre>
 </div>
 </div>
+<div class="refsect1">
+<a name="WebKitPolicyDecision.see-also"></a><h2>See Also</h2>
+<p><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a></p>
+</div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.25.1</div>
+<hr>Generated by GTK-Doc V1.26.1</div>
 </body>
 </html>

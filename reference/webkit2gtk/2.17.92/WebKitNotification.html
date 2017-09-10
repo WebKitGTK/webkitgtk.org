@@ -6,9 +6,9 @@
 <meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
 <link rel="home" href="index.html" title="WebKit2GTK+ Reference Manual">
 <link rel="up" href="ch01.html" title="Class Overview">
-<link rel="prev" href="webkit2gtk-4.0-WebKitUserContent.html" title="WebKitUserContent">
+<link rel="prev" href="webkit2gtk-4.0-WebKitUserContent.html" title="User content">
 <link rel="next" href="WebKitNotificationPermissionRequest.html" title="WebKitNotificationPermissionRequest">
-<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.26.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -30,7 +30,7 @@
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
 <h2><span class="refentrytitle"><a name="WebKitNotification.top_of_page"></a>WebKitNotification</span></h2>
-<p>WebKitNotification</p>
+<p>WebKitNotification — Object used to hold information about a notification that should be shown to the user.</p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
@@ -175,36 +175,156 @@
 <a name="webkit-notification-get-id"></a><h3>webkit_notification_get_id ()</h3>
 <pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#guint64"><span class="returnvalue">guint64</span></a>
 webkit_notification_get_id (<em class="parameter"><code><a class="link" href="WebKitNotification.html" title="WebKitNotification"><span class="type">WebKitNotification</span></a> *notification</code></em>);</pre>
+<p>Obtains the unique id for the notification.</p>
+<div class="refsect3">
+<a name="webkit-notification-get-id.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>notification</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitNotification.html" title="WebKitNotification"><span class="type">WebKitNotification</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-notification-get-id.returns"></a><h4>Returns</h4>
+<p> the unique id for the notification</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-8.html#api-index-2.8">2.8</a></p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="webkit-notification-get-title"></a><h3>webkit_notification_get_title ()</h3>
 <pre class="programlisting">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
 webkit_notification_get_title (<em class="parameter"><code><a class="link" href="WebKitNotification.html" title="WebKitNotification"><span class="type">WebKitNotification</span></a> *notification</code></em>);</pre>
+<p>Obtains the title for the notification.</p>
+<div class="refsect3">
+<a name="webkit-notification-get-title.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>notification</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitNotification.html" title="WebKitNotification"><span class="type">WebKitNotification</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-notification-get-title.returns"></a><h4>Returns</h4>
+<p> the title for the notification</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-8.html#api-index-2.8">2.8</a></p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="webkit-notification-get-body"></a><h3>webkit_notification_get_body ()</h3>
 <pre class="programlisting">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
 webkit_notification_get_body (<em class="parameter"><code><a class="link" href="WebKitNotification.html" title="WebKitNotification"><span class="type">WebKitNotification</span></a> *notification</code></em>);</pre>
+<p>Obtains the body for the notification.</p>
+<div class="refsect3">
+<a name="webkit-notification-get-body.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>notification</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitNotification.html" title="WebKitNotification"><span class="type">WebKitNotification</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-notification-get-body.returns"></a><h4>Returns</h4>
+<p> the body for the notification</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-8.html#api-index-2.8">2.8</a></p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="webkit-notification-get-tag"></a><h3>webkit_notification_get_tag ()</h3>
 <pre class="programlisting">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
 webkit_notification_get_tag (<em class="parameter"><code><a class="link" href="WebKitNotification.html" title="WebKitNotification"><span class="type">WebKitNotification</span></a> *notification</code></em>);</pre>
+<p>Obtains the tag identifier for the notification.</p>
+<div class="refsect3">
+<a name="webkit-notification-get-tag.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>notification</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitNotification.html" title="WebKitNotification"><span class="type">WebKitNotification</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-notification-get-tag.returns"></a><h4>Returns</h4>
+<p>the tag for the notification. </p>
+<p><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-16.html#api-index-2.16">2.16</a></p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="webkit-notification-close"></a><h3>webkit_notification_close ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 webkit_notification_close (<em class="parameter"><code><a class="link" href="WebKitNotification.html" title="WebKitNotification"><span class="type">WebKitNotification</span></a> *notification</code></em>);</pre>
+<p>Closes the notification.</p>
+<div class="refsect3">
+<a name="webkit-notification-close.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>notification</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitNotification.html" title="WebKitNotification"><span class="type">WebKitNotification</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-8.html#api-index-2.8">2.8</a></p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="webkit-notification-clicked"></a><h3>webkit_notification_clicked ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 webkit_notification_clicked (<em class="parameter"><code><a class="link" href="WebKitNotification.html" title="WebKitNotification"><span class="type">WebKitNotification</span></a> *notification</code></em>);</pre>
+<p>Tells WebKit the notification has been clicked. This will emit the
+<a class="link" href="WebKitNotification.html#WebKitNotification-clicked" title="The “clicked” signal"><span class="type">“clicked”</span></a> signal.</p>
+<div class="refsect3">
+<a name="webkit-notification-clicked.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>notification</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitNotification.html" title="WebKitNotification"><span class="type">WebKitNotification</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-12.html#api-index-2.12">2.12</a></p>
 </div>
 </div>
 <div class="refsect1">
@@ -222,6 +342,7 @@ webkit_notification_clicked (<em class="parameter"><code><a class="link" href="W
 <p>The body for the notification.</p>
 <p>Flags: Read</p>
 <p>Default value: NULL</p>
+<p class="since">Since: <a class="link" href="api-index-2-8.html#api-index-2.8">2.8</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -230,6 +351,7 @@ webkit_notification_clicked (<em class="parameter"><code><a class="link" href="W
 <p>The unique id for the notification.</p>
 <p>Flags: Read</p>
 <p>Default value: 0</p>
+<p class="since">Since: <a class="link" href="api-index-2-8.html#api-index-2.8">2.8</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -238,6 +360,7 @@ webkit_notification_clicked (<em class="parameter"><code><a class="link" href="W
 <p>The tag identifier for the notification.</p>
 <p>Flags: Read</p>
 <p>Default value: NULL</p>
+<p class="since">Since: <a class="link" href="api-index-2-16.html#api-index-2.16">2.16</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -246,6 +369,7 @@ webkit_notification_clicked (<em class="parameter"><code><a class="link" href="W
 <p>The title for the notification.</p>
 <p>Flags: Read</p>
 <p>Default value: NULL</p>
+<p class="since">Since: <a class="link" href="api-index-2-8.html#api-index-2.8">2.8</a></p>
 </div>
 </div>
 <div class="refsect1">
@@ -253,21 +377,71 @@ webkit_notification_clicked (<em class="parameter"><code><a class="link" href="W
 <div class="refsect2">
 <a name="WebKitNotification-clicked"></a><h3>The <code class="literal">“clicked”</code> signal</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
-user_function (<a class="link" href="WebKitNotification.html" title="WebKitNotification"><span class="type">WebKitNotification</span></a> *webkitnotification,
+user_function (<a class="link" href="WebKitNotification.html" title="WebKitNotification"><span class="type">WebKitNotification</span></a> *notification,
                <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>            user_data)</pre>
+<p>Emitted when a notification has been clicked. See <a class="link" href="WebKitNotification.html#webkit-notification-clicked" title="webkit_notification_clicked ()"><code class="function">webkit_notification_clicked()</code></a>.</p>
+<div class="refsect3">
+<a name="WebKitNotification-clicked.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>notification</p></td>
+<td class="parameter_description"><p>the <a class="link" href="WebKitNotification.html" title="WebKitNotification"><span class="type">WebKitNotification</span></a> on which the signal is emitted</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
 <p>Flags: <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+<p class="since">Since: <a class="link" href="api-index-2-12.html#api-index-2.12">2.12</a></p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="WebKitNotification-closed"></a><h3>The <code class="literal">“closed”</code> signal</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
-user_function (<a class="link" href="WebKitNotification.html" title="WebKitNotification"><span class="type">WebKitNotification</span></a> *webkitnotification,
+user_function (<a class="link" href="WebKitNotification.html" title="WebKitNotification"><span class="type">WebKitNotification</span></a> *notification,
                <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>            user_data)</pre>
+<p>Emitted when a notification has been withdrawn.</p>
+<p>The default handler will close the notification using libnotify, if built with
+support for it.</p>
+<div class="refsect3">
+<a name="WebKitNotification-closed.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>notification</p></td>
+<td class="parameter_description"><p>the <a class="link" href="WebKitNotification.html" title="WebKitNotification"><span class="type">WebKitNotification</span></a> on which the signal is emitted</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
 <p>Flags: <a href="http://developer.gnome.org/gobject/stable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+<p class="since">Since: <a class="link" href="api-index-2-8.html#api-index-2.8">2.8</a></p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.25.1</div>
+<hr>Generated by GTK-Doc V1.26.1</div>
 </body>
 </html>

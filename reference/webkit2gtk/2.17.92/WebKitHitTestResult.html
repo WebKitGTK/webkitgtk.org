@@ -8,7 +8,7 @@
 <link rel="up" href="ch01.html" title="Class Overview">
 <link rel="prev" href="WebKitResponsePolicyDecision.html" title="WebKitResponsePolicyDecision">
 <link rel="next" href="WebKitEditorState.html" title="WebKitEditorState">
-<meta name="generator" content="GTK-Doc V1.25.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.26.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -29,7 +29,7 @@
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
 <h2><span class="refentrytitle"><a name="WebKitHitTestResult.top_of_page"></a>WebKitHitTestResult</span></h2>
-<p>WebKitHitTestResult</p>
+<p>WebKitHitTestResult — Result of a Hit Test</p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
@@ -210,6 +210,22 @@
 </div>
 <div class="refsect1">
 <a name="WebKitHitTestResult.description"></a><h2>Description</h2>
+<p>A Hit Test is an operation to get context information about a given
+point in a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a>. <a class="link" href="WebKitHitTestResult.html" title="WebKitHitTestResult"><span class="type">WebKitHitTestResult</span></a> represents the
+result of a Hit Test. It provides context information about what is
+at the coordinates of the Hit Test, such as if there's a link,
+an image or a media.</p>
+<p>You can get the context of the HitTestResult with
+<a class="link" href="WebKitHitTestResult.html#webkit-hit-test-result-get-context" title="webkit_hit_test_result_get_context ()"><code class="function">webkit_hit_test_result_get_context()</code></a> that returns a bitmask of
+<a class="link" href="WebKitHitTestResult.html#WebKitHitTestResultContext" title="enum WebKitHitTestResultContext"><span class="type">WebKitHitTestResultContext</span></a> flags. You can also use
+<a class="link" href="WebKitHitTestResult.html#webkit-hit-test-result-context-is-link" title="webkit_hit_test_result_context_is_link ()"><code class="function">webkit_hit_test_result_context_is_link()</code></a>, <a class="link" href="WebKitHitTestResult.html#webkit-hit-test-result-context-is-image" title="webkit_hit_test_result_context_is_image ()"><code class="function">webkit_hit_test_result_context_is_image()</code></a> and
+<a class="link" href="WebKitHitTestResult.html#webkit-hit-test-result-context-is-media" title="webkit_hit_test_result_context_is_media ()"><code class="function">webkit_hit_test_result_context_is_media()</code></a> to determine whether there's
+a link, image or a media element at the coordinates of the Hit Test.
+Note that it's possible that several <a class="link" href="WebKitHitTestResult.html#WebKitHitTestResultContext" title="enum WebKitHitTestResultContext"><span class="type">WebKitHitTestResultContext</span></a> flags
+are active at the same time, for example if there's a link containing an image.</p>
+<p>When the mouse is moved over a <a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> a Hit Test is performed
+for the mouse coordinates and <a class="link" href="WebKitWebView.html#WebKitWebView-mouse-target-changed" title="The “mouse-target-changed” signal"><span class="type">“mouse-target-changed”</span></a>
+signal is emitted with a <a class="link" href="WebKitHitTestResult.html" title="WebKitHitTestResult"><span class="type">WebKitHitTestResult</span></a>.</p>
 </div>
 <div class="refsect1">
 <a name="WebKitHitTestResult.functions_details"></a><h2>Functions</h2>
@@ -217,6 +233,26 @@
 <a name="webkit-hit-test-result-get-context"></a><h3>webkit_hit_test_result_get_context ()</h3>
 <pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
 webkit_hit_test_result_get_context (<em class="parameter"><code><a class="link" href="WebKitHitTestResult.html" title="WebKitHitTestResult"><span class="type">WebKitHitTestResult</span></a> *hit_test_result</code></em>);</pre>
+<p>Gets the value of the <a class="link" href="WebKitHitTestResult.html#WebKitHitTestResult--context" title="The “context” property"><span class="type">“context”</span></a> property.</p>
+<div class="refsect3">
+<a name="webkit-hit-test-result-get-context.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>hit_test_result</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitHitTestResult.html" title="WebKitHitTestResult"><span class="type">WebKitHitTestResult</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-hit-test-result-get-context.returns"></a><h4>Returns</h4>
+<p> a bitmask of <a class="link" href="WebKitHitTestResult.html#WebKitHitTestResultContext" title="enum WebKitHitTestResultContext"><span class="type">WebKitHitTestResultContext</span></a> flags</p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
@@ -224,6 +260,28 @@ webkit_hit_test_result_get_context (<em class="parameter"><code><a class="link" 
 <pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 webkit_hit_test_result_context_is_link
                                (<em class="parameter"><code><a class="link" href="WebKitHitTestResult.html" title="WebKitHitTestResult"><span class="type">WebKitHitTestResult</span></a> *hit_test_result</code></em>);</pre>
+<p>Gets whether <a class="link" href="WebKitHitTestResult.html#WEBKIT-HIT-TEST-RESULT-CONTEXT-LINK:CAPS"><code class="literal">WEBKIT_HIT_TEST_RESULT_CONTEXT_LINK</code></a> flag is present in
+<a class="link" href="WebKitHitTestResult.html#WebKitHitTestResult--context" title="The “context” property"><span class="type">“context”</span></a>.</p>
+<div class="refsect3">
+<a name="webkit-hit-test-result-context-is-link.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>hit_test_result</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitHitTestResult.html" title="WebKitHitTestResult"><span class="type">WebKitHitTestResult</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-hit-test-result-context-is-link.returns"></a><h4>Returns</h4>
+<p> <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if there's a link element in the coordinates of the Hit Test,
+or <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise</p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
@@ -231,6 +289,28 @@ webkit_hit_test_result_context_is_link
 <pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 webkit_hit_test_result_context_is_image
                                (<em class="parameter"><code><a class="link" href="WebKitHitTestResult.html" title="WebKitHitTestResult"><span class="type">WebKitHitTestResult</span></a> *hit_test_result</code></em>);</pre>
+<p>Gets whether <a class="link" href="WebKitHitTestResult.html#WEBKIT-HIT-TEST-RESULT-CONTEXT-IMAGE:CAPS"><code class="literal">WEBKIT_HIT_TEST_RESULT_CONTEXT_IMAGE</code></a> flag is present in
+<a class="link" href="WebKitHitTestResult.html#WebKitHitTestResult--context" title="The “context” property"><span class="type">“context”</span></a>.</p>
+<div class="refsect3">
+<a name="webkit-hit-test-result-context-is-image.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>hit_test_result</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitHitTestResult.html" title="WebKitHitTestResult"><span class="type">WebKitHitTestResult</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-hit-test-result-context-is-image.returns"></a><h4>Returns</h4>
+<p> <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if there's an image element in the coordinates of the Hit Test,
+or <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise</p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
@@ -238,6 +318,28 @@ webkit_hit_test_result_context_is_image
 <pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 webkit_hit_test_result_context_is_media
                                (<em class="parameter"><code><a class="link" href="WebKitHitTestResult.html" title="WebKitHitTestResult"><span class="type">WebKitHitTestResult</span></a> *hit_test_result</code></em>);</pre>
+<p>Gets whether <a class="link" href="WebKitHitTestResult.html#WEBKIT-HIT-TEST-RESULT-CONTEXT-MEDIA:CAPS"><code class="literal">WEBKIT_HIT_TEST_RESULT_CONTEXT_MEDIA</code></a> flag is present in
+<a class="link" href="WebKitHitTestResult.html#WebKitHitTestResult--context" title="The “context” property"><span class="type">“context”</span></a>.</p>
+<div class="refsect3">
+<a name="webkit-hit-test-result-context-is-media.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>hit_test_result</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitHitTestResult.html" title="WebKitHitTestResult"><span class="type">WebKitHitTestResult</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-hit-test-result-context-is-media.returns"></a><h4>Returns</h4>
+<p> <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if there's a media element in the coordinates of the Hit Test,
+or <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise</p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
@@ -245,6 +347,29 @@ webkit_hit_test_result_context_is_media
 <pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 webkit_hit_test_result_context_is_editable
                                (<em class="parameter"><code><a class="link" href="WebKitHitTestResult.html" title="WebKitHitTestResult"><span class="type">WebKitHitTestResult</span></a> *hit_test_result</code></em>);</pre>
+<p>Gets whether <a class="link" href="WebKitHitTestResult.html#WEBKIT-HIT-TEST-RESULT-CONTEXT-EDITABLE:CAPS"><code class="literal">WEBKIT_HIT_TEST_RESULT_CONTEXT_EDITABLE</code></a> flag is present in
+<a class="link" href="WebKitHitTestResult.html#WebKitHitTestResult--context" title="The “context” property"><span class="type">“context”</span></a>.</p>
+<div class="refsect3">
+<a name="webkit-hit-test-result-context-is-editable.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>hit_test_result</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitHitTestResult.html" title="WebKitHitTestResult"><span class="type">WebKitHitTestResult</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-hit-test-result-context-is-editable.returns"></a><h4>Returns</h4>
+<p> <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if there's an editable element at the coordinates of the <em class="parameter"><code>hit_test_result</code></em>
+,
+or <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise</p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
@@ -252,36 +377,172 @@ webkit_hit_test_result_context_is_editable
 <pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 webkit_hit_test_result_context_is_selection
                                (<em class="parameter"><code><a class="link" href="WebKitHitTestResult.html" title="WebKitHitTestResult"><span class="type">WebKitHitTestResult</span></a> *hit_test_result</code></em>);</pre>
+<p>Gets whether <a class="link" href="WebKitHitTestResult.html#WEBKIT-HIT-TEST-RESULT-CONTEXT-SELECTION:CAPS"><code class="literal">WEBKIT_HIT_TEST_RESULT_CONTEXT_SELECTION</code></a> flag is present in
+<a class="link" href="WebKitHitTestResult.html#WebKitHitTestResult--context" title="The “context” property"><span class="type">“context”</span></a>.</p>
+<div class="refsect3">
+<a name="webkit-hit-test-result-context-is-selection.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>hit_test_result</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitHitTestResult.html" title="WebKitHitTestResult"><span class="type">WebKitHitTestResult</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-hit-test-result-context-is-selection.returns"></a><h4>Returns</h4>
+<p> <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if there's a selected element at the coordinates of the <em class="parameter"><code>hit_test_result</code></em>
+,
+or <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise</p>
+</div>
+<p class="since">Since: <a class="link" href="api-index-2-8.html#api-index-2.8">2.8</a></p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="webkit-hit-test-result-get-link-uri"></a><h3>webkit_hit_test_result_get_link_uri ()</h3>
 <pre class="programlisting">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
 webkit_hit_test_result_get_link_uri (<em class="parameter"><code><a class="link" href="WebKitHitTestResult.html" title="WebKitHitTestResult"><span class="type">WebKitHitTestResult</span></a> *hit_test_result</code></em>);</pre>
+<p>Gets the value of the <a class="link" href="WebKitHitTestResult.html#WebKitHitTestResult--link-uri" title="The “link-uri” property"><span class="type">“link-uri”</span></a> property.</p>
+<div class="refsect3">
+<a name="webkit-hit-test-result-get-link-uri.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>hit_test_result</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitHitTestResult.html" title="WebKitHitTestResult"><span class="type">WebKitHitTestResult</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-hit-test-result-get-link-uri.returns"></a><h4>Returns</h4>
+<p> the URI of the link element in the coordinates of the Hit Test,
+or <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if there isn't a link element in <em class="parameter"><code>hit_test_result</code></em>
+context</p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="webkit-hit-test-result-get-link-title"></a><h3>webkit_hit_test_result_get_link_title ()</h3>
 <pre class="programlisting">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
 webkit_hit_test_result_get_link_title (<em class="parameter"><code><a class="link" href="WebKitHitTestResult.html" title="WebKitHitTestResult"><span class="type">WebKitHitTestResult</span></a> *hit_test_result</code></em>);</pre>
+<p>Gets the value of the <a class="link" href="WebKitHitTestResult.html#WebKitHitTestResult--link-title" title="The “link-title” property"><span class="type">“link-title”</span></a> property.</p>
+<div class="refsect3">
+<a name="webkit-hit-test-result-get-link-title.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>hit_test_result</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitHitTestResult.html" title="WebKitHitTestResult"><span class="type">WebKitHitTestResult</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-hit-test-result-get-link-title.returns"></a><h4>Returns</h4>
+<p> the title of the link element in the coordinates of the Hit Test,
+or <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if there isn't a link element in <em class="parameter"><code>hit_test_result</code></em>
+context or the
+link element doesn't have a title</p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="webkit-hit-test-result-get-link-label"></a><h3>webkit_hit_test_result_get_link_label ()</h3>
 <pre class="programlisting">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
 webkit_hit_test_result_get_link_label (<em class="parameter"><code><a class="link" href="WebKitHitTestResult.html" title="WebKitHitTestResult"><span class="type">WebKitHitTestResult</span></a> *hit_test_result</code></em>);</pre>
+<p>Gets the value of the <a class="link" href="WebKitHitTestResult.html#WebKitHitTestResult--link-label" title="The “link-label” property"><span class="type">“link-label”</span></a> property.</p>
+<div class="refsect3">
+<a name="webkit-hit-test-result-get-link-label.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>hit_test_result</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitHitTestResult.html" title="WebKitHitTestResult"><span class="type">WebKitHitTestResult</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-hit-test-result-get-link-label.returns"></a><h4>Returns</h4>
+<p> the label of the link element in the coordinates of the Hit Test,
+or <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if there isn't a link element in <em class="parameter"><code>hit_test_result</code></em>
+context or the
+link element doesn't have a label</p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="webkit-hit-test-result-get-image-uri"></a><h3>webkit_hit_test_result_get_image_uri ()</h3>
 <pre class="programlisting">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
 webkit_hit_test_result_get_image_uri (<em class="parameter"><code><a class="link" href="WebKitHitTestResult.html" title="WebKitHitTestResult"><span class="type">WebKitHitTestResult</span></a> *hit_test_result</code></em>);</pre>
+<p>Gets the value of the <a class="link" href="WebKitHitTestResult.html#WebKitHitTestResult--image-uri" title="The “image-uri” property"><span class="type">“image-uri”</span></a> property.</p>
+<div class="refsect3">
+<a name="webkit-hit-test-result-get-image-uri.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>hit_test_result</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitHitTestResult.html" title="WebKitHitTestResult"><span class="type">WebKitHitTestResult</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-hit-test-result-get-image-uri.returns"></a><h4>Returns</h4>
+<p> the URI of the image element in the coordinates of the Hit Test,
+or <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if there isn't an image element in <em class="parameter"><code>hit_test_result</code></em>
+context</p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
 <a name="webkit-hit-test-result-get-media-uri"></a><h3>webkit_hit_test_result_get_media_uri ()</h3>
 <pre class="programlisting">const <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *
 webkit_hit_test_result_get_media_uri (<em class="parameter"><code><a class="link" href="WebKitHitTestResult.html" title="WebKitHitTestResult"><span class="type">WebKitHitTestResult</span></a> *hit_test_result</code></em>);</pre>
+<p>Gets the value of the <a class="link" href="WebKitHitTestResult.html#WebKitHitTestResult--media-uri" title="The “media-uri” property"><span class="type">“media-uri”</span></a> property.</p>
+<div class="refsect3">
+<a name="webkit-hit-test-result-get-media-uri.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>hit_test_result</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitHitTestResult.html" title="WebKitHitTestResult"><span class="type">WebKitHitTestResult</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-hit-test-result-get-media-uri.returns"></a><h4>Returns</h4>
+<p> the URI of the media element in the coordinates of the Hit Test,
+or <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if there isn't a media element in <em class="parameter"><code>hit_test_result</code></em>
+context</p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
@@ -289,6 +550,29 @@ webkit_hit_test_result_get_media_uri (<em class="parameter"><code><a class="link
 <pre class="programlisting"><a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 webkit_hit_test_result_context_is_scrollbar
                                (<em class="parameter"><code><a class="link" href="WebKitHitTestResult.html" title="WebKitHitTestResult"><span class="type">WebKitHitTestResult</span></a> *hit_test_result</code></em>);</pre>
+<p>Gets whether <a class="link" href="WebKitHitTestResult.html#WEBKIT-HIT-TEST-RESULT-CONTEXT-SCROLLBAR:CAPS"><code class="literal">WEBKIT_HIT_TEST_RESULT_CONTEXT_SCROLLBAR</code></a> flag is present in
+<a class="link" href="WebKitHitTestResult.html#WebKitHitTestResult--context" title="The “context” property"><span class="type">“context”</span></a>.</p>
+<div class="refsect3">
+<a name="webkit-hit-test-result-context-is-scrollbar.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>hit_test_result</p></td>
+<td class="parameter_description"><p>a <a class="link" href="WebKitHitTestResult.html" title="WebKitHitTestResult"><span class="type">WebKitHitTestResult</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="webkit-hit-test-result-context-is-scrollbar.returns"></a><h4>Returns</h4>
+<p> <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if there's a scrollbar element at the coordinates of the <em class="parameter"><code>hit_test_result</code></em>
+,
+or <a href="http://developer.gnome.org/glib/stable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise</p>
+</div>
 </div>
 </div>
 <div class="refsect1">
@@ -369,7 +653,8 @@ webkit_hit_test_result_context_is_scrollbar
 <div class="refsect2">
 <a name="WebKitHitTestResult--context"></a><h3>The <code class="literal">“context”</code> property</h3>
 <pre class="programlisting">  “context”                  <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
-<p>Flags with the context of the WebKitHitTestResult.</p>
+<p>Bitmask of <a class="link" href="WebKitHitTestResult.html#WebKitHitTestResultContext" title="enum WebKitHitTestResultContext"><span class="type">WebKitHitTestResultContext</span></a> flags representing
+the context of the <a class="link" href="WebKitHitTestResult.html" title="WebKitHitTestResult"><span class="type">WebKitHitTestResult</span></a>.</p>
 <p>Flags: Read / Write / Construct Only</p>
 <p>Default value: 0</p>
 </div>
@@ -377,7 +662,8 @@ webkit_hit_test_result_context_is_scrollbar
 <div class="refsect2">
 <a name="WebKitHitTestResult--image-uri"></a><h3>The <code class="literal">“image-uri”</code> property</h3>
 <pre class="programlisting">  “image-uri”                <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
-<p>The image URI.</p>
+<p>The URI of the image if flag <a class="link" href="WebKitHitTestResult.html#WEBKIT-HIT-TEST-RESULT-CONTEXT-IMAGE:CAPS"><code class="literal">WEBKIT_HIT_TEST_RESULT_CONTEXT_IMAGE</code></a>
+is present in <a class="link" href="WebKitHitTestResult.html#WebKitHitTestResult--context" title="The “context” property"><span class="type">“context”</span></a></p>
 <p>Flags: Read / Write / Construct Only</p>
 <p>Default value: NULL</p>
 </div>
@@ -385,7 +671,8 @@ webkit_hit_test_result_context_is_scrollbar
 <div class="refsect2">
 <a name="WebKitHitTestResult--link-label"></a><h3>The <code class="literal">“link-label”</code> property</h3>
 <pre class="programlisting">  “link-label”               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
-<p>The link label.</p>
+<p>The label of the link if flag <a class="link" href="WebKitHitTestResult.html#WEBKIT-HIT-TEST-RESULT-CONTEXT-LINK:CAPS"><code class="literal">WEBKIT_HIT_TEST_RESULT_CONTEXT_LINK</code></a>
+is present in <a class="link" href="WebKitHitTestResult.html#WebKitHitTestResult--context" title="The “context” property"><span class="type">“context”</span></a></p>
 <p>Flags: Read / Write / Construct Only</p>
 <p>Default value: NULL</p>
 </div>
@@ -393,7 +680,8 @@ webkit_hit_test_result_context_is_scrollbar
 <div class="refsect2">
 <a name="WebKitHitTestResult--link-title"></a><h3>The <code class="literal">“link-title”</code> property</h3>
 <pre class="programlisting">  “link-title”               <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
-<p>The link title.</p>
+<p>The title of the link if flag <a class="link" href="WebKitHitTestResult.html#WEBKIT-HIT-TEST-RESULT-CONTEXT-LINK:CAPS"><code class="literal">WEBKIT_HIT_TEST_RESULT_CONTEXT_LINK</code></a>
+is present in <a class="link" href="WebKitHitTestResult.html#WebKitHitTestResult--context" title="The “context” property"><span class="type">“context”</span></a></p>
 <p>Flags: Read / Write / Construct Only</p>
 <p>Default value: NULL</p>
 </div>
@@ -401,7 +689,8 @@ webkit_hit_test_result_context_is_scrollbar
 <div class="refsect2">
 <a name="WebKitHitTestResult--link-uri"></a><h3>The <code class="literal">“link-uri”</code> property</h3>
 <pre class="programlisting">  “link-uri”                 <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
-<p>The link URI.</p>
+<p>The URI of the link if flag <a class="link" href="WebKitHitTestResult.html#WEBKIT-HIT-TEST-RESULT-CONTEXT-LINK:CAPS"><code class="literal">WEBKIT_HIT_TEST_RESULT_CONTEXT_LINK</code></a>
+is present in <a class="link" href="WebKitHitTestResult.html#WebKitHitTestResult--context" title="The “context” property"><span class="type">“context”</span></a></p>
 <p>Flags: Read / Write / Construct Only</p>
 <p>Default value: NULL</p>
 </div>
@@ -409,13 +698,18 @@ webkit_hit_test_result_context_is_scrollbar
 <div class="refsect2">
 <a name="WebKitHitTestResult--media-uri"></a><h3>The <code class="literal">“media-uri”</code> property</h3>
 <pre class="programlisting">  “media-uri”                <a href="http://developer.gnome.org/glib/stable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
-<p>The media URI.</p>
+<p>The URI of the media if flag <a class="link" href="WebKitHitTestResult.html#WEBKIT-HIT-TEST-RESULT-CONTEXT-MEDIA:CAPS"><code class="literal">WEBKIT_HIT_TEST_RESULT_CONTEXT_MEDIA</code></a>
+is present in <a class="link" href="WebKitHitTestResult.html#WebKitHitTestResult--context" title="The “context” property"><span class="type">“context”</span></a></p>
 <p>Flags: Read / Write / Construct Only</p>
 <p>Default value: NULL</p>
 </div>
 </div>
+<div class="refsect1">
+<a name="WebKitHitTestResult.see-also"></a><h2>See Also</h2>
+<p><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a></p>
+</div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.25.1</div>
+<hr>Generated by GTK-Doc V1.26.1</div>
 </body>
 </html>
