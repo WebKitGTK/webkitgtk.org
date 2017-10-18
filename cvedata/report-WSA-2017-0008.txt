@@ -1,0 +1,44 @@
+CVE-2017-7081: Apple (2.16.1)
+CVE-2017-7087: Apple (2.18.0)
+CVE-2017-7089: Anton Lopanitsyn of ONSEC, Frans Rosén of Detectify (2.18.0)
+CVE-2017-7090: Apple (2.18.0)
+CVE-2017-7091: Wei Yuan of Baidu Security Lab working with Trend Micro’s Zero Day Initiative (2.18.0)
+CVE-2017-7092: Qixun Zhao (@S0rryMybad) of Qihoo 360 Vulcan Team, Samuel Gro and Niklas Baumstark working with Trend Micro's Zero Day Initiative (2.18.0)
+CVE-2017-7093: Samuel Gro and Niklas Baumstark working with Trend Micro’s Zero Day Initiative (2.18.0)
+CVE-2017-7094: Tim Michaud (@TimGMichaud) of Leviathan Security Group (2.16.3)
+CVE-2017-7095: Wang Junjie, Wei Lei, and Liu Yang of Nanyang Technological University working with Trend Micro’s Zero Day Initiative (2.18.0)
+CVE-2017-7096: Wei Yuan of Baidu Security Lab (2.18.0)
+CVE-2017-7098: Felipe Freitas of Instituto Tecnológico de Aeronáutica (2.18.0)
+CVE-2017-7099: Apple (2.16.4)
+CVE-2017-7100: Masato Kinugawa and Mario Heiderich of Cure53 (2.18.0)
+CVE-2017-7102: Wang Junjie, Wei Lei, and Liu Yang of Nanyang Technological University (2.18.0)
+CVE-2017-7104: likemeng of Baidu Secutity Lab (2.18.0)
+CVE-2017-7107: Wang Junjie, Wei Lei, and Liu Yang of Nanyang Technological University (2.18.0)
+CVE-2017-7109: avlidienbrunn (2.18.0)
+CVE-2017-7111: likemeng of Baidu Security Lab (xlab.baidu.com) working with Trend Micro's Zero Day Initiative (2.18.0)
+CVE-2017-7117: lokihardt of Google Project Zero (2.18.0)
+CVE-2017-7120: chenqin (陈钦) of Ant-financial Light-Year Security Lab (2.18.0)
+CVE-2017-7142: an anonymous researcher (2.16.1)
+
+
+MANUALDESCRIPTION: CVE-2017-7081: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: A memory corruption issue was addressed through improved input validation.
+MANUALDESCRIPTION: CVE-2017-7087: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-7089: Impact: Processing maliciously crafted web content may lead to universal cross site scripting. Description: A logic issue existed in the handling of the parent-tab. This issue was addressed with improved state management.
+MANUALDESCRIPTION: CVE-2017-7090: Impact: Cookies belonging to one origin may be sent to another origin. Description: A permissions issue existed in the handling of web browser cookies. This issue was addressed by no longer returning cookies for custom URL schemes.
+MANUALDESCRIPTION: CVE-2017-7091: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-7092: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-7093: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-7094: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-7095: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-7096: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-7098: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-7099: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-7100: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-7102: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-7104: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-7107: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-7109: Impact: Processing maliciously crafted web content may lead to a cross site scripting attack. Description: Application Cache policy may be unexpectedly applied.
+MANUALDESCRIPTION: CVE-2017-7111: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-7117: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-7120: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-7142: Impact: Website data may persist after a Safari Private browsing session. Description: An information leakage issue existed in the handling of website data in Safari Private windows. This issue was addressed with improved data handling.
