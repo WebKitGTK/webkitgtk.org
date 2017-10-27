@@ -213,10 +213,7 @@ class WebKitTarball:
                                         ('GUdev', 'gudev'),
                                         ('CairoGL', 'cairo-gl') ]
 
-        major_version_pattern = re.compile('^set\(PROJECT_VERSION_MAJOR ([0-9]+)\)$')
-        minor_version_pattern = re.compile('^set\(PROJECT_VERSION_MINOR ([0-9]+)\)$')
-        micro_version_pattern = re.compile('^set\(PROJECT_VERSION_MICRO ([0-9]+)\)$')
-        patch_version_pattern = re.compile('^set\(PROJECT_VERSION_PATCH ([0-9]+)\)$')
+        version_pattern = re.compile('^SET_PROJECT_VERSION\(([0-9]+) ([0-9]+) ([0-9]+) ?([0-9]+)?\)$');
         api_version_pattern = re.compile('^set\(WEBKITGTK_API_VERSION ([0-9]+\.[0-9]+)\)$')
         dependency_pattern = re.compile('^find_package\(([a-zA-Z0-9]+) ?([0-9\.]+)?.*\)$')
 
@@ -227,27 +224,14 @@ class WebKitTarball:
                 continue
 
             if self._major is None:
-                match = major_version_pattern.match(line)
+                match = version_pattern.match(line)
                 if match:
                     self._major = int(match.group(1))
-                    continue
-
-            if self._minor is None:
-                match = minor_version_pattern.match(line)
-                if match:
-                    self._minor = int(match.group(1))
-                    continue
-
-            if self._micro is None:
-                match = micro_version_pattern.match(line)
-                if match:
-                    self._micro = int(match.group(1))
-                    continue
-
-            if self._patch is None and not self._minimum_versions:
-                match = patch_version_pattern.match(line)
-                if match:
-                    self._patch = int(match.group(1))
+                    self._minor = int(match.group(2))
+                    self._micro = int(match.group(3))
+                    patch = match.group(4)
+                    if patch is not None:
+                        self._patch = int(patch)
                     continue
 
             if self._api is None:
