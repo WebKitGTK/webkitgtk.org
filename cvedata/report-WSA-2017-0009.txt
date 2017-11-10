@@ -1,0 +1,27 @@
+CVE-2017-13783: Ivan Fratric of Google Project Zero  (2.18.1)
+CVE-2017-13784: Ivan Fratric of Google Project Zero (2.18.1)
+CVE-2017-13785: Ivan Fratric of Google Project Zero (2.18.1)
+CVE-2017-13788: xisigr of Tencent's Xuanwu Lab (tencent.com) (2.18.3)
+CVE-2017-13791: Ivan Fratric of Google Project Zero (2.18.1)
+CVE-2017-13792: Ivan Fratric of Google Project Zero (2.18.1)
+CVE-2017-13793: Hanul Choi working with Trend Micro's Zero Day Initiative (2.18.1)
+CVE-2017-13794: Ivan Fratric of Google Project Zero (2.18.1)
+CVE-2017-13795: Ivan Fratric of Google Project Zero (2.18.1)
+CVE-2017-13796: Ivan Fratric of Google Project Zero (2.18.1)
+CVE-2017-13798: Ivan Fratric of Google Project Zero (2.18.3)
+CVE-2017-13802: Ivan Fratric of Google Project Zero (2.18.1)
+CVE-2017-13803: chenqin (陈钦) of Ant-financial Light-Year Security (2.18.3)
+
+MANUALDESCRIPTION: CVE-2017-13783: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-13784: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-13785: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-13788: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-13791: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-13792: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-13793: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-13794: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-13795: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-13796: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-13798: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-13802: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-13803: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
