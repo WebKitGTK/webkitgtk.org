@@ -1,0 +1,11 @@
+CVE-2017-7156 : an anonymous researcher (2.18.4)
+CVE-2017-7157 : an anonymous researcher (2.18.1)
+CVE-2017-13856 : Jeonghoon Shin (2.18.4)
+CVE-2017-13866 : an anonymous researcher (2.18.4)
+CVE-2017-13870 : an anonymous researcher (2.18.4)
+
+MANUALDESCRIPTION: CVE-2017-7156: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-7157: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-13856: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-13866: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2017-13870: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
