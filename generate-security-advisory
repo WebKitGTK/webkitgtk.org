@@ -127,11 +127,12 @@ def _parse_cve_report(textfile):
             if ":" not in line:
                 continue
             if line.startswith("MANUALDESCRIPTION"):
-                _, cvenumber, cvedescription = line.split(':',2)
-                cvenumber = cvenumber.strip()
-                if cvenumber not in cve_info:
-                    raise ValueError("MANUALDESCRIPTION entry for CVE %s don't has a matching entry above\n", cvenumber)
-                cve_info[cvenumber]['Description'] =  cvedescription.strip()
+                _, cvenumbers, cvedescription = line.split(':',2)
+                for cvenumber in cvenumbers.split(','):
+                    cvenumber = cvenumber.strip()
+                    if cvenumber not in cve_info:
+                        raise ValueError("MANUALDESCRIPTION entry for CVE %s don't has a matching entry above\n", cvenumber)
+                    cve_info[cvenumber]['Description'] =  cvedescription.strip()
                 continue
             cvenumber,cvedata = line.split(':',1)
             # FIXME: Add some check that is a valid CVE
