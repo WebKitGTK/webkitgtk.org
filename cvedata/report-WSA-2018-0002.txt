@@ -1,0 +1,14 @@
+CVE-2018-4088  : Jeonghoon Shin of Theori (2.18.6)
+CVE-2018-4089  : Ivan Fratric of Google Project Zero (2.18.4)
+CVE-2018-4096  : OSS-Fuzz (2.18.6)
+CVE-2017-7153  : Jerry Decime (2.18.6)
+CVE-2017-7160  : Richard Zhu (fluorescence) working with Trend Micro's Zero Day Initiative (2.18.6)
+CVE-2017-7161  : Mitin Svyat (2.18.6)
+CVE-2017-7165  : 360 Security working with Trend Micro's Zero Day Initiative (2.18.6)
+CVE-2017-13884 : 360 Security working with Trend Micro's Zero Day Initiative (2.18.6)
+CVE-2017-13885 : 360 Security working with Trend Micro's Zero Day Initiative (2.18.6)
+
+
+MANUALDESCRIPTION : CVE-2018-4088, CVE-2018-4089, CVE-2018-4096, CVE-2017-7160, CVE-2017-7165, CVE-2017-13884, CVE-2017-13885 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2017-7153 : Impact: Visiting a malicious website may lead to user interface spoofing. Description: Redirect responses to 401 Unauthorized may allow a malicious website to incorrectly display the lock icon on mixed content. This issue was addressed through improved URL display logic.
+MANUALDESCRIPTION : CVE-2017-7161 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: A command injection issue existed in Web Inspector. This issue was addressed through improved escaping of special characters.
