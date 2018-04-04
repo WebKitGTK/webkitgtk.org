@@ -1,0 +1,24 @@
+CVE-2018-4101 : Yuan Deng of Ant-financial Light-Year Security Lab (2.20.0)
+CVE-2018-4113 : OSS-Fuzz (2.20.0)
+CVE-2018-4114 : OSS-Fuzz (2.20.0)
+CVE-2018-4117 : an anonymous researcher (2.20.0)
+CVE-2018-4118 : Jun Kokatsu (@shhnjk) (2.18.1)
+CVE-2018-4119 : an anonymous researcher working with Trend Micro’s Zero Day Initiative (2.20.0)
+CVE-2018-4120 : Hanming Zhang (@4shitak4) of Qihoo 360 Vulcan Team (2.20.0)
+CVE-2018-4122 : WanderingGlitch of Trend Micro's Zero Day Initiative (2.20.0)
+CVE-2018-4125 : WanderingGlitch of Trend Micro's Zero Day Initiative (2.20.0)
+CVE-2018-4127 : an anonymous researcher working with Trend Micro’s Zero Day Initiative (2.20.0)
+CVE-2018-4128 : Zach Markley (2.20.0)
+CVE-2018-4129 : likemeng of Baidu Security Lab working with Trend Micro's Zero Day Initiative (2.20.0)
+CVE-2018-4133 : Anton Lopanitsyn of Wallarm, Linus Särud of Detectify (detectify.com), Yuji Tounai of NTT Communications Corporation (2.20.0)
+CVE-2018-4146 : OSS-Fuzz (2.20.0)
+CVE-2018-4161 : WanderingGlitch of Trend Micro's Zero Day Initiative (2.20.0)
+CVE-2018-4162 : WanderingGlitch of Trend Micro's Zero Day Initiative (2.20.0)
+CVE-2018-4163 : WanderingGlitch of Trend Micro's Zero Day Initiative (2.20.0)
+CVE-2018-4165 : Hanming Zhang (@4shitak4) of Qihoo 360 Vulcan Team (2.20.0)
+
+MANUALDESCRIPTION : CVE-2018-4101, CVE-2018-4114, CVE-2018-4118, CVE-2018-4119, CVE-2018-4120, CVE-2018-4122, CVE-2018-4125, CVE-2018-4127, CVE-2018-4128, CVE-2018-4129, CVE-2018-4161, CVE-2018-4162, CVE-2018-4163, CVE-2018-4165 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2018-4133 : Impact: Visiting a maliciously crafted website may lead to a cross-site scripting attack. Description: A cross-site scripting issue existed in WebKit. This issue was addressed with improved URL validation.
+MANUALDESCRIPTION : CVE-2018-4113 : Impact: Unexpected interaction with indexing types causing an ASSERT failure. Description: An array indexing issue existed in the handling of a function in JavaScriptCore. This issue was addressed through improved checks.
+MANUALDESCRIPTION : CVE-2018-4146 : Impact: Processing maliciously crafted web content may lead to a denial of service. Description: A memory corruption issue was addressed through improved input validation.
+MANUALDESCRIPTION : CVE-2018-4117 : Impact: A malicious website may exfiltrate data cross-origin. Description: A cross-origin issue existed with the fetch API. This was addressed through improved input validation.
