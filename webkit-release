@@ -126,26 +126,6 @@ class WebKitTarball:
     def _parse_versions_autotools(self, versions):
         versions_file = self._tar.extractfile(versions)
 
-        self._requirements = [ ('gtk3', 'gtk+'),
-                               ('glib', 'glib'),
-                               ('libsoup', 'libsoup'),
-                               ('cairo', 'cairo'),
-                               ('pango', 'pango'),
-                               ('libxml', 'libxml'),
-                               ('fontconfig', 'fontconfig'),
-                               ('freetype2', 'FreeType2'),
-                               ('libsecret', 'libsecret') ]
-        self._optional_requirements = [ ('gtk2', 'gtk+'),
-                                        ('gail2', 'gail'),
-                                        ('gobject_introspection', 'GObject introspection'),
-                                        ('libxslt', 'libxslt'),
-                                        ('sqlite', 'SQLite'),
-                                        ('gstreamer', 'gstreamer'),
-                                        ('gstreamer_plugins_base', 'gstreamer-plugins-base'),
-                                        ('enchant', 'enchant'),
-                                        ('clutter', 'Clutter'),
-                                        ('clutter_gtk', 'Clutter GTK+') ]
-
         major_version_pattern = re.compile('^m4_define\(\[webkit_major_version\], \[(.+)\]\)$')
         minor_version_pattern = re.compile('^m4_define\(\[webkit_minor_version\], \[(.+)\]\)$')
         micro_version_pattern = re.compile('^m4_define\(\[webkit_micro_version\], \[(.+)\]\)$')
@@ -181,41 +161,13 @@ class WebKitTarball:
                     self._patch = int(match.group(1))
                     continue
 
-            match = required_version_pattern.match(line)
-            if not match:
-                continue
-
-            name, version = match.groups()
-            self._minimum_versions[name.strip()] = version.strip()
-
         versions_file.close()
 
     def _parse_versions_cmake(self, versions):
         versions_file = self._tar.extractfile(versions)
 
-        self._requirements = [ ('GTK3', 'gtk+'),
-                               ('GLIB', 'glib'),
-                               ('LibSoup', 'libsoup'),
-                               ('Cairo', 'cairo'),
-                               ('LibXml2', 'libxml'),
-                               ('LibXslt', 'libxslt'),
-                               ('HarfBuzz', 'HarfBuzz'),
-                               ('ICU', 'icu'),
-                               ('Fontconfig', 'fontconfig'),
-                               ('Freetype2', 'FreeType2'),
-                               ('Libsecret', 'libsecret'),
-                               ('Sqlite', 'SQLite'),
-                               ('Enchant', 'enchant') ]
-        self._optional_requirements = [('GTK2', 'gtk+'),
-                                       ('GObjectIntrospection', 'GObject introspection'),
-                                        ('GStreamer', 'gstreamer'),
-                                        ('GeoClue2', 'GeoClue'),
-                                        ('GUdev', 'gudev'),
-                                        ('CairoGL', 'cairo-gl') ]
-
         version_pattern = re.compile('^SET_PROJECT_VERSION\(([0-9]+) ([0-9]+) ([0-9]+) ?([0-9]+)?\)$');
         api_version_pattern = re.compile('^set\(WEBKITGTK_API_VERSION ([0-9]+\.[0-9]+)\)$')
-        dependency_pattern = re.compile('^find_package\(([a-zA-Z0-9]+) ?([0-9\.]+)?.*\)$')
 
         self._required_deps = []
         for line in versions_file.readlines():
@@ -238,19 +190,6 @@ class WebKitTarball:
                 match = api_version_pattern.match(line)
                 if match:
                     self._api = match.group(1)
-
-            match = dependency_pattern.match(line)
-            if not match:
-                continue
-
-            name, version = match.groups()
-            # We need a special case for GTK3, because the required version depends on
-            # whether wayland support is enabled or not.
-            if name == 'GTK3':
-                self._minimum_versions[name] = '3.6.0'
-                continue
-            if version is not None:
-                self._minimum_versions[name] = version
 
         versions_file.close()
 
@@ -362,15 +301,6 @@ class WebKitTarball:
 
         return retval
 
-    def get_required_version(self, dependency):
-        return self._minimum_versions[dependency]
-
-    def get_required_dependencies(self):
-        return self._requirements
-
-    def get_optional_dependencies(self):
-        return self._optional_requirements
-
     def extract_docs(self, path, wk_pkg):
         docdir = os.path.join(self._basedir, 'Documentation', wk_pkg, "html")
         for member in self._tar.getmembers():
@@ -453,30 +383,6 @@ APIs, it is suitable for projects requiring any kind of web
 integration, from hybrid HTML/CSS applications to full-fledged web
 browsers.
 '''
-        body += "\n"
-
-        # Requirements
-        reqs = "Requirements\n"
-        body += reqs
-        body += "=" * (len(reqs) - 1)
-        body += "\n\n"
-        for key, name in self._tarball.get_required_dependencies():
-            body += name
-            try:
-                body += " >= %s\n" % self._tarball.get_required_version(key)
-            except KeyError:
-                body += "\n"
-        body += "\n"
-
-        body += "Depending on your configuration options WebKitGTK+ may also depend on:\n"
-        body += "\n"
-
-        for key, name in self._tarball.get_optional_dependencies():
-            body += name
-            try:
-                body += " >= %s\n" % self._tarball.get_required_version(key)
-            except KeyError:
-                body += "\n"
         body += "\n"
 
         # More info
