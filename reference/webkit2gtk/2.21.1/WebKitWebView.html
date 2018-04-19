@@ -610,7 +610,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="http://developer.gnome.org/html/stable/JSCValue.html#JSCValue-struct"><span class="returnvalue">JSCValue</span></a> *
+<a href="../../jsc-glib/2.21.1/JSCValue.html#JSCValue-struct"><span class="returnvalue">JSCValue</span></a> *
 </td>
 <td class="function_name">
 <a class="link" href="WebKitWebView.html#webkit-javascript-result-get-js-value" title="webkit_javascript_result_get_js_value ()">webkit_javascript_result_get_js_value</a> <span class="c_punctuation">()</span>
@@ -1021,11 +1021,11 @@
 </div>
 <div class="refsect1">
 <a name="WebKitWebView.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="/home/cgarcia/gnome/share/gtk-doc/html/gobject/gobject-Boxed-Types.html">GBoxed</a>
+<pre class="screen">    <a href="http://developer.gnome.org/gobject/stable/gobject-Boxed-Types.html">GBoxed</a>
     <span class="lineart">├──</span> WebKitJavascriptResult
     <span class="lineart">├──</span> WebKitScriptDialog
     <span class="lineart">╰──</span> WebKitWebViewSessionState
-    <a href="/home/cgarcia/gnome/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
+    <a href="http://developer.gnome.org/gobject/stable/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
     <span class="lineart">├──</span> WebKitInsecureContentEvent
     <span class="lineart">├──</span> WebKitLoadEvent
     <span class="lineart">├──</span> WebKitPolicyDecisionType
@@ -2625,7 +2625,7 @@ webkit_web_view_get_javascript_global_context
                                (<em class="parameter"><code><a class="link" href="WebKitWebView.html" title="WebKitWebView"><span class="type">WebKitWebView</span></a> *web_view</code></em>);</pre>
 <div class="warning">
 <p><code class="literal">webkit_web_view_get_javascript_global_context</code> has been deprecated since version 2.22 and should not be used in newly-written code.</p>
-<p>Use <a href="http://developer.gnome.org/html/stable/JSCValue.html#jsc-value-get-context"><code class="function">jsc_value_get_context()</code></a> instead.</p>
+<p>Use <a href="../../jsc-glib/2.21.1/JSCValue.html#jsc-value-get-context"><code class="function">jsc_value_get_context()</code></a> instead.</p>
 </div>
 <p>Get the global JavaScript context used by <em class="parameter"><code>web_view</code></em>
  to deserialize the
@@ -2782,14 +2782,14 @@ a string:</p>
 <span class="normal">    </span><span class="cbracket">}</span>
 
 <span class="normal">    value </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="WebKitWebView.html#webkit-javascript-result-get-js-value">webkit_javascript_result_get_js_value</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">js_result</span><span class="symbol">);</span>
-<span class="normal">    </span><span class="keyword">if</span><span class="normal"> </span><span class="symbol">(</span><span class="function"><a href="http://developer.gnome.org/html/stable/JSCValue.html#jsc-value-is-string">jsc_value_is_string</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">value</span><span class="symbol">))</span><span class="normal"> </span><span class="cbracket">{</span>
+<span class="normal">    </span><span class="keyword">if</span><span class="normal"> </span><span class="symbol">(</span><span class="function"><a href="../../jsc-glib/2.21.1/JSCValue.html#jsc-value-is-string">jsc_value_is_string</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">value</span><span class="symbol">))</span><span class="normal"> </span><span class="cbracket">{</span>
 <span class="normal">        </span><span class="usertype">JSCException</span><span class="normal"> </span><span class="symbol">*</span><span class="normal">exception</span><span class="symbol">;</span>
 <span class="normal">        </span><span class="usertype">gchar</span><span class="normal">        </span><span class="symbol">*</span><span class="normal">str_value</span><span class="symbol">;</span>
 
-<span class="normal">        str_value </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="http://developer.gnome.org/html/stable/JSCValue.html#jsc-value-to-string">jsc_value_to_string</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">value</span><span class="symbol">);</span>
-<span class="normal">        exception </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="http://developer.gnome.org/html/stable/JSCContext.html#jsc-context-get-exception">jsc_context_get_exception</a></span><span class="normal"> </span><span class="symbol">(</span><span class="function"><a href="http://developer.gnome.org/html/stable/JSCValue.html#jsc-value-get-context">jsc_value_get_context</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">value</span><span class="symbol">));</span>
+<span class="normal">        str_value </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="../../jsc-glib/2.21.1/JSCValue.html#jsc-value-to-string">jsc_value_to_string</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">value</span><span class="symbol">);</span>
+<span class="normal">        exception </span><span class="symbol">=</span><span class="normal"> </span><span class="function"><a href="../../jsc-glib/2.21.1/JSCContext.html#jsc-context-get-exception">jsc_context_get_exception</a></span><span class="normal"> </span><span class="symbol">(</span><span class="function"><a href="../../jsc-glib/2.21.1/JSCValue.html#jsc-value-get-context">jsc_value_get_context</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">value</span><span class="symbol">));</span>
 <span class="normal">        </span><span class="keyword">if</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">exception</span><span class="symbol">)</span>
-<span class="normal">            </span><span class="function"><a href="http://developer.gnome.org/glib/stable/glib-Message-Logging.html#g-warning">g_warning</a></span><span class="normal"> </span><span class="symbol">(</span><span class="string">"Error running javascript: %s"</span><span class="symbol">,</span><span class="normal"> </span><span class="function"><a href="http://developer.gnome.org/html/stable/JSCException.html#jsc-exception-get-message">jsc_exception_get_message</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">exception</span><span class="symbol">));</span>
+<span class="normal">            </span><span class="function"><a href="http://developer.gnome.org/glib/stable/glib-Message-Logging.html#g-warning">g_warning</a></span><span class="normal"> </span><span class="symbol">(</span><span class="string">"Error running javascript: %s"</span><span class="symbol">,</span><span class="normal"> </span><span class="function"><a href="../../jsc-glib/2.21.1/JSCException.html#jsc-exception-get-message">jsc_exception_get_message</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">exception</span><span class="symbol">));</span>
 <span class="normal">        </span><span class="keyword">else</span>
 <span class="normal">            </span><span class="function"><a href="http://developer.gnome.org/glib/stable/glib-Warnings-and-Assertions.html#g-print">g_print</a></span><span class="normal"> </span><span class="symbol">(</span><span class="string">"Script result: %s</span><span class="specialchar">\n</span><span class="string">"</span><span class="symbol">,</span><span class="normal"> str_value</span><span class="symbol">);</span>
 <span class="normal">        </span><span class="function"><a href="http://developer.gnome.org/glib/stable/glib-Memory-Allocation.html#g-free">g_free</a></span><span class="normal"> </span><span class="symbol">(</span><span class="normal">str_value</span><span class="symbol">);</span>
@@ -3697,7 +3697,7 @@ webkit_javascript_result_get_global_context
                                (<em class="parameter"><code><a class="link" href="WebKitWebView.html#WebKitJavascriptResult"><span class="type">WebKitJavascriptResult</span></a> *js_result</code></em>);</pre>
 <div class="warning">
 <p><code class="literal">webkit_javascript_result_get_global_context</code> has been deprecated since version 2.22 and should not be used in newly-written code.</p>
-<p>Use <a href="http://developer.gnome.org/html/stable/JSCValue.html#jsc-value-get-context"><code class="function">jsc_value_get_context()</code></a> instead.</p>
+<p>Use <a href="../../jsc-glib/2.21.1/JSCValue.html#jsc-value-get-context"><code class="function">jsc_value_get_context()</code></a> instead.</p>
 </div>
 <p>Get the global Javascript context that should be used with the
 <code class="function">JSValueRef</code> returned by <a class="link" href="WebKitWebView.html#webkit-javascript-result-get-value" title="webkit_javascript_result_get_value ()"><code class="function">webkit_javascript_result_get_value()</code></a>.</p>
@@ -3758,9 +3758,9 @@ returned by <a class="link" href="WebKitWebView.html#webkit-javascript-result-ge
 <hr>
 <div class="refsect2">
 <a name="webkit-javascript-result-get-js-value"></a><h3>webkit_javascript_result_get_js_value ()</h3>
-<pre class="programlisting"><a href="http://developer.gnome.org/html/stable/JSCValue.html#JSCValue-struct"><span class="returnvalue">JSCValue</span></a> *
+<pre class="programlisting"><a href="../../jsc-glib/2.21.1/JSCValue.html#JSCValue-struct"><span class="returnvalue">JSCValue</span></a> *
 webkit_javascript_result_get_js_value (<em class="parameter"><code><a class="link" href="WebKitWebView.html#WebKitJavascriptResult"><span class="type">WebKitJavascriptResult</span></a> *js_result</code></em>);</pre>
-<p>Get the <a href="http://developer.gnome.org/html/stable/JSCValue.html#JSCValue-struct"><span class="type">JSCValue</span></a> of <em class="parameter"><code>js_result</code></em>
+<p>Get the <a href="../../jsc-glib/2.21.1/JSCValue.html#JSCValue-struct"><span class="type">JSCValue</span></a> of <em class="parameter"><code>js_result</code></em>
 .</p>
 <div class="refsect3">
 <a name="webkit-javascript-result-get-js-value.parameters"></a><h4>Parameters</h4>
@@ -3779,7 +3779,7 @@ webkit_javascript_result_get_js_value (<em class="parameter"><code><a class="lin
 </div>
 <div class="refsect3">
 <a name="webkit-javascript-result-get-js-value.returns"></a><h4>Returns</h4>
-<p>the <a href="http://developer.gnome.org/html/stable/JSCValue.html#JSCValue-struct"><span class="type">JSCValue</span></a> of the <a class="link" href="WebKitWebView.html#WebKitJavascriptResult"><span class="type">WebKitJavascriptResult</span></a>. </p>
+<p>the <a href="../../jsc-glib/2.21.1/JSCValue.html#JSCValue-struct"><span class="type">JSCValue</span></a> of the <a class="link" href="WebKitWebView.html#WebKitJavascriptResult"><span class="type">WebKitJavascriptResult</span></a>. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 <p class="since">Since: <a class="link" href="api-index-2-22.html#api-index-2.22">2.22</a></p>
