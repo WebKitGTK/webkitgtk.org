@@ -319,6 +319,7 @@ class WebKitRelease:
     WK1_PKG_NAME = "webkitgtk"
     WK2_PKG_NAME = "webkit2gtk"
     WKDOM_PKG_NAME = "webkitdomgtk"
+    JSC_PKG_NAME = "jsc-glib"
     RELEASE_BASE_URL = "https://webkitgtk.org/releases/"
     ONLINE_DOCS_BASE_URL = "http://developer.gnome.org"
 
@@ -465,7 +466,10 @@ are far too many to list!
     def _rebase_docs(self, docdir, wk_pkg):
         subs = {}
         xref_map = {
-                'libsoup-2.4' : 'libsoup'
+            'jsc-glib-4.0' : 'jsc-glib',
+            'libsoup-2.4' : 'libsoup',
+            'webkit2gtk-4.0' : 'webkit2gtk',
+            'webkitdomgtk-4.0' : 'webkitdomgtk'
         }
 
         def rebase_link(match):
@@ -482,14 +486,14 @@ are far too many to list!
             except KeyError:
                 module = match.group(1)
 
-            if module == WebKitRelease.WKDOM_PKG_NAME:
+            if module in [WebKitRelease.JSC_PKG_NAME, WebKitRelease.WKDOM_PKG_NAME]:
                 sub = '%s -> ../../%s/%s/' % (match.group(1), module, os.path.basename(docdir))
             else:
                 sub = '%s -> %s/%s/stable/' % (match.group(1), WebKitRelease.ONLINE_DOCS_BASE_URL, module)
             subs.setdefault(sub, 0)
             subs[sub] += 1
 
-            if module == WebKitRelease.WKDOM_PKG_NAME:
+            if module in [WebKitRelease.JSC_PKG_NAME, WebKitRelease.WKDOM_PKG_NAME]:
                 return '<a href="../../%s/%s/%s' % (module, os.path.basename(docdir), match.group(2))
 
             return '<a href="%s/%s/stable/%s' % (WebKitRelease.ONLINE_DOCS_BASE_URL, module, match.group(2))
@@ -536,6 +540,10 @@ are far too many to list!
         # WebKit1 was removed in 2.5
         if major <= 2 and minor < 5:
             pkg_names.append(self.WK1_PKG_NAME)
+
+        # JSC API docs were introduced in 2.21.
+        if major > 2 or (major == 2 and minor >= 21):
+            pkg_names.append(self.JSC_PKG_NAME)
 
         pkg_names.append(self.WK2_PKG_NAME)
 
