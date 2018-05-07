@@ -1,0 +1,7 @@
+CVE-2018-4121 : Natalie Silvanovich of Google Project Zero (2.20.0)
+CVE-2018-4200 : Ivan Fratric of Google Project Zero (2.20.2)
+CVE-2018-4204 : Richard Zhu (fluorescence) working with Trend Micro's Zero Day Initiative, found by OSS-Fuzz (2.20.1)
+
+MANUALDESCRIPTION : CVE-2018-4121 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2018-4200 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: A memory corruption issue was addressed with improved state management.
+MANUALDESCRIPTION : CVE-2018-4204 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: A memory corruption issue was addressed with improved memory handling.
