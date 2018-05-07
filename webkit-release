@@ -654,10 +654,13 @@ are far too many to list!
             # Create the LATEST symlink.
             if self._tarball.is_stable():
                 symlink_prefix = "LATEST-STABLE-"
+                generic_symlink = "webkitgtk-stable.tar.xz"
             else:
                 symlink_prefix = "LATEST-UNSTABLE-"
+                generic_symlink = "webkitgtk-unstable.tar.xz"
             latest = symlink_prefix + self._tarball.get_version_str()
-            command = ['ssh', host, 'rm -f %s/%s[0-9]* && ln -s %s %s/%s' % (releases_dir, symlink_prefix, tarball_name, releases_dir, latest)]
+            command = ['ssh', host, 'rm -f %s/%s[0-9]* %s && ln -s %s %s/%s && ln -s %s %s/%s' %
+                       (releases_dir, symlink_prefix, generic_symlink, tarball_name, releases_dir, latest, tarball_name, releases_dir, generic_symlink)]
             subprocess.call(command)
 
     def _update_config_file(self, website_dir):
