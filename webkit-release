@@ -222,6 +222,18 @@ class WebKitTarball:
 
         versions_file.close()
 
+    def _parse_versions_filename(self):
+        version_pattern = re.compile(r'^[\w-]+-(\d+)\.(\d+)\.?(\d+)?')
+        match = version_pattern.match(self.get_name())
+        if match:
+            self._major = int(match.group(1))
+            self._minor = int(match.group(2))
+            micro = match.group(3)
+            if micro is not None:
+                self._micro = int(micro)
+            else:
+                self._micro = 0
+
     def _parse_versions(self):
         self._minimum_versions = {}
         self._major = self._minor = self._micro = self._patch = self._api = None
@@ -229,9 +241,16 @@ class WebKitTarball:
         try:
             versions = self._tar.getmember(os.path.join(self._basedir, 'Source', 'autotools', 'Versions.m4'))
             self._parse_versions_autotools(versions)
+            return
         except KeyError:
-            versions = self._tar.getmember(os.path.join(self._basedir, 'Source', 'cmake', 'OptionsGTK.cmake'))
+            pass
+        try:
+            versions = self._tar.getmember(os.path.join(self._basedir, 'Source', 'cmake', 'Options%s.cmake' % self._port_name.upper()))
             self._parse_versions_cmake(versions)
+            return
+        except KeyError:
+            pass
+        self._parse_versions_filename()
 
     def delete(self):
         os.unlink(self._tarball)
@@ -655,6 +674,53 @@ are far too many to list!
                 if e.errno != errno.EEXIST:
                     raise
 
+    @property
+    def tar_file(self):
+        return self._tarball.get_tarball()
+
+    @property
+    def tar_news_file(self):
+        return self._tarball.get_tarball() + '.news'
+
+    @property
+    def tar_sums_file(self):
+        return self._tarball.get_tarball() + '.sums'
+
+    @property
+    def tar_gpg_file(self):
+        return self._tarball.get_tarball() + '.asc'
+
+    def gen_tarball_meta(self, do_news=True):
+        # Create the news file.
+        if do_news:
+            tmp = tempfile.NamedTemporaryFile(delete=False)
+            whatsnew = "What's new in the %s %s release?\n" % (self.port.name,
+                                                               self._tarball.get_version_str())
+            tmp.write(whatsnew)
+            tmp.write("%s\n" % ("=" * (len(whatsnew) - 1)))
+            tmp.write("%s\n" % ("".join(self._tarball.get_news())))
+            tmp.close()
+            shutil.move(tmp.name, self.tar_news_file)
+
+        # Create the sums file.
+        tmp = tempfile.NamedTemporaryFile(delete=False)
+        tmp.write("%s (%s)\n" % (self._tarball.get_name(), human_size(self._tarball.get_size())))
+        tmp.write("   md5sum: %s\n" % (self._tarball.get_md5sum()))
+        tmp.write("   sha1sum: %s\n" % (self._tarball.get_sha1sum()))
+        tmp.write("   sha256sum: %s\n" % (self._tarball.get_sha256sum()))
+        tmp.close()
+        shutil.move(tmp.name, self.tar_sums_file)
+
+        # Sign the tarball file.
+        subprocess.call(['gpg', '--armor', '--detach-sign', self.tar_file])
+
+        # Set same file perms as tarball to generated files.
+        mode = os.stat(self.tar_file).st_mode
+        if do_news:
+            os.chmod(self.tar_news_file, mode)
+        os.chmod(self.tar_sums_file, mode)
+        os.chmod(self.tar_gpg_file, mode)
+
     def install_tarball(self, host, releases_dir, update_symlinks):
         tarball_name = self._tarball.get_name()
         command = ['ssh', host, 'test ! -e %s/%s' % (releases_dir, tarball_name)]
@@ -662,48 +728,19 @@ are far too many to list!
             sys.stderr.write("Found: %s:%s/%s. This should never happen\n" % (host, releases_dir, tarball_name))
             sys.exit(1)
 
-        tarball_file = self._tarball.get_tarball()
-
-        # Create the news file.
-        news_file = tarball_file + ".news"
-        tmp = tempfile.NamedTemporaryFile(delete=False)
-        whatsnew = "What's new in the WebKitGTK %s release?\n" % self._tarball.get_version_str()
-        tmp.write(whatsnew)
-        tmp.write("%s\n" % ("=" * (len(whatsnew) - 1)))
-        tmp.write("%s\n" % ("".join(self._tarball.get_news())))
-        tmp.close()
-        shutil.move(tmp.name, news_file)
-
-        # Create the sums file.
-        sums_file = tarball_file + ".sums"
-        tmp = tempfile.NamedTemporaryFile(delete=False)
-        tmp.write("%s (%s)\n" % (self._tarball.get_name(), human_size(self._tarball.get_size())))
-        tmp.write("   md5sum: %s\n" % (self._tarball.get_md5sum()))
-        tmp.write("   sha1sum: %s\n" % (self._tarball.get_sha1sum()))
-        tmp.write("   sha256sum: %s\n" % (self._tarball.get_sha256sum()))
-        tmp.close()
-        shutil.move(tmp.name, sums_file)
-
-        # Sign the tarball file.
-        gpg_file = tarball_file + ".asc"
-        subprocess.call(['gpg', '--armor', '--detach-sign', tarball_file])
-
-        # Set same file perms as tarball to generated files.
-        mode = os.stat(tarball_file).st_mode
-        os.chmod(news_file, mode)
-        os.chmod(sums_file, mode)
-        os.chmod(gpg_file, mode)
+        self.gen_tarball_meta()
 
         # Upload the files.
-        command = ['scp', tarball_file, news_file, sums_file, gpg_file, '%s:%s' % (host, releases_dir)]
+        command = ['scp', self.tar_file, self.tar_news_file,
+                   self.tar_sums_file, self.tar_gpg_file, '%s:%s' % (host, releases_dir)]
         if subprocess.call(command) != 0:
-            sys.stderr.write("Error uploading %s to %s:%s\n" % (tarball_file, host, releases_dir))
+            sys.stderr.write("Error uploading %s to %s:%s\n" % (self.tar_file, host, releases_dir))
             sys.exit(1)
 
         # Remove generated files.
-        os.unlink(news_file)
-        os.unlink(sums_file)
-        os.unlink(gpg_file)
+        os.unlink(self.tar_news_file)
+        os.unlink(self.tar_sums_file)
+        os.unlink(self.tar_gpg_file)
 
         if update_symlinks:
             # Create the LATEST symlink.
@@ -840,6 +877,11 @@ if __name__ == '__main__':
 
     subparsers = parser.add_subparsers(dest = 'command')
 
+    subparser = subparsers.add_parser('gen-tarball-meta', help = 'Generate metadata for a tarball')
+    subparser.add_argument('--no-news', dest = 'no-news', action = 'store_true', default = False,
+                           help = 'Do not generate a .news file')
+    subparser.add_argument('tarball')
+
     subparser = subparsers.add_parser('install-tarball', help = 'Install sources tarball')
     subparser.add_argument('--host', dest = 'host', default = 'localhost',
                            help = 'Host to upload the tarball')
@@ -902,6 +944,8 @@ if __name__ == '__main__':
         wk.send_announcement(not options['no-send'], options['from'])
     elif command == 'install-docs':
         wk.install_docs(options['docs-dir'])
+    elif command == 'gen-tarball-meta':
+        wk.gen_tarball_meta(not options['no-news'])
     elif command == 'install-tarball':
         wk.install_tarball(options['host'], options['releases-dir'], not options['no-update-symlinks'])
     elif command == 'update-website':
