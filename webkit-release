@@ -432,14 +432,14 @@ class WebKitRelease:
         whatsnew = "What's new in the %s %s release?\n" % (self.port.name, version)
         body += whatsnew
         body += "=" * (len(whatsnew) - 1)
-        body += "\n"
+        body += "\n\n"
         body += "".join(self._tarball.get_news())
 
         # What's <PORTNAME>
-        whatsit = "What is %s?\n" % self.port.name
+        whatsit = "\nWhat is %s?\n" % self.port.name
         body += whatsit
         body += "=" * (len(whatsit) - 1)
-        body += "\n"
+        body += "\n\n"
         body += self.port.description
         body += '''
 Offering WebKit's full functionality through a set of GObject-based
