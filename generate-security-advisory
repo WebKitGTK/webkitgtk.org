@@ -35,22 +35,22 @@ import time
 from urllib.request import urlretrieve
 from collections import OrderedDict
 
-known_branches = [ '2.4', '2.6', '2.8', '2.10' ]
 postsdir = "_posts"
 
 headertemplate_mail = """\
 Subject: %(title)s %(WSA)s
-To: webkit-gtk@lists.webkit.org
+To: webkit-gtk@lists.webkit.org, webkit-wpe@lists.webkit.org
 Cc: security@webkit.org, distributor-list@gnome.org, oss-security@lists.openwall.com, bugtraq@securityfocus.com
 
 ------------------------------------------------------------------------
 %(title)s%(titlespaces)s%(WSA)s
 ------------------------------------------------------------------------
 
-Date reported      : %(reportdate)s
-Advisory ID        : %(WSA)s
-Advisory URL       : https://webkitgtk.org/security/%(WSA)s.html
-CVE identifiers    : %(cvelist)s
+Date reported           : %(reportdate)s
+Advisory ID             : %(WSA)s
+WebKitGTK+ Advisory URL : https://webkitgtk.org/security/%(WSA)s.html
+WPE WebKit Advisory URL : https://wpewebkit.org/security/%(WSA)s.html
+CVE identifiers         : %(cvelist)s
 
 %(affectedtext)s
 
@@ -139,14 +139,12 @@ def _parse_cve_report(textfile):
             cvenumber = cvenumber.strip()
             cveauthor,cveversions = cvedata.rsplit('(',1)
             cveauthor = cveauthor.strip()
-            # Remove characters ')' 'and' and ','
-            # Double spacing is taking care after on the .split() call
-            cveversions = cveversions.replace(')',' ').replace('and',' ').replace(',', ' ')
+            cveversions = cveversions.split(')', 1)[0]
             if cvenumber in cve_info:
                 raise ValueError("Duplicated CVE!")
             cve_info[cvenumber] = {}
             cve_info[cvenumber]['Author'] = cveauthor
-            cve_info[cvenumber]['Versions'] =  cveversions.split()
+            cve_info[cvenumber]['Versions'] =  cveversions
         except:
             raise ValueError("Error parsing line %s" %line)
             raise
@@ -165,36 +163,6 @@ def _get_list_cves(cve_info):
     for cvenumber in cve_info:
         cves.append(cvenumber)
     return cves
-
-def _get_affected_branch_releases(cve_info):
-    affected = {}
-    for cvenumber in cve_info:
-        for affected_version in cve_info[cvenumber]['Versions']:
-            for branch in known_branches:
-                if affected_version.startswith(branch):
-                    if branch not in affected:
-                        affected[branch] = set()
-                    affected[branch].add(affected_version)
-    return affected
-
-def _and_comma_join(listojoin):
-    strtext=""
-    if len(listojoin) > 1:
-        strtext+=", ".join(listojoin[:-1])
-        strtext+=" and " + listojoin[-1]
-    else:
-        strtext+=", ".join(listojoin)
-    strtext.strip()
-    return strtext
-
-def _get_branch_for_cve(cve_info,cve):
-    versions = cve_info[cve]['Versions']
-    found_branches=set()
-    for version in versions:
-        for branch in known_branches:
-            if version.startswith(branch):
-                found_branches.add(branch+".X")
-    return _and_comma_join(sorted(found_branches))
 
 def _cve_mitre_links(cvetext, anchor=False):
     CVE_PATTERN = "(CVE-[0-9][0-9][0-9][0-9]-[0-9]+)"
@@ -234,7 +202,7 @@ def generate_advisory(cve_info,mail=True):
     advisorytext = ""
     WSA=_getWSAid(postsdir)
     reportdate=time.strftime("%B %d, %Y")
-    title = "WebKitGTK+ Security Advisory"
+    title = "WebKitGTK+ and WPE WebKit Security Advisory"
     titlespaces=" "*(72-len(title)-len(WSA) if mail else 1)
     ident=" "*4
 
@@ -245,12 +213,12 @@ def generate_advisory(cve_info,mail=True):
     cves = _get_list_cves(cve_info)
     cves = ", ".join(cves)
     if mail:
-        cves = _beautify_line_for_print(cves, " "*21)
+        cves = _beautify_line_for_print(cves, " "*26)
     else:
         cves = _cve_mitre_links(cves,anchor=True)
         cves = _beautify_line_for_print(cves, " "*2, width=90)
 
-    affectedtext = ("Several vulnerabilities were discovered in WebKitGTK+.")
+    affectedtext = ("Several vulnerabilities were discovered in WebKitGTK+ and WPE WebKit.")
     affectedtext = _beautify_line_for_print(affectedtext, "")
 
     advisorytext += (headertemplate %{ 'reportdate':reportdate,
@@ -263,7 +231,7 @@ def generate_advisory(cve_info,mail=True):
     # Generate text for CVEs
     for cve in cve_info:
         cvetext=cve
-        affected = "Versions affected: WebKitGTK+ before " + _and_comma_join(cve_info[cve]['Versions'])
+        affected = "Versions affected: " + cve_info[cve]['Versions']
         affected = _beautify_line_for_print(affected, ident)
         credits = "Credit to " + cve_info[cve]['Author']
         credits = _beautify_line_for_print(credits, ident)
@@ -277,16 +245,16 @@ def generate_advisory(cve_info,mail=True):
                               'description':description.strip()
                               })
     # Generate text for Footer
-    fixedvers =  "We recommend updating to the last stable version of WebKitGTK+. "
-    fixedvers += "It is the best way of ensuring that you are running a safe version of WebKitGTK+. "
-    fixedvers += "Please check our website for information about the last stable releases."
+    fixedvers =  "We recommend updating to the latest stable versions of WebKitGTK+ and WPE WebKit. "
+    fixedvers += "It is the best way to ensure that you are running safe versions of WebKit. "
+    fixedvers += "Please check our websites for information about the latest stable releases."
     fixedvers = _beautify_line_for_print(fixedvers,"", dot=False)
-    moreinfo="Further information about WebKitGTK+ Security Advisories can be found at: "
+    moreinfo="Further information about WebKitGTK+ and WPE WebKit security advisories can be found at: "
     if mail:
-        moreinfo = _beautify_line_for_print(moreinfo + "https://webkitgtk.org/security.html", "", dot=False)
-        signature = "The WebKitGTK+ team," + "\n" + reportdate
+        moreinfo = _beautify_line_for_print(moreinfo + "https://webkitgtk.org/security.html or https://wpewebkit.org/security/", "")
+        signature = "The WebKitGTK+ and WPE WebKit team," + "\n" + reportdate
     else:
-        moreinfo = moreinfo + "\n" + "[https://webkitgtk.org/security.html](https://webkitgtk.org/security.html)"
+        moreinfo = moreinfo + "\n" + "[https://webkitgtk.org/security.html](https://webkitgtk.org/security.html) or [https://wpewebkit.org/security/](https://wpewebkit.org/security/)."
         signature = ""
 
     advisorytext += ( footertemplate %{ 'fixedvers':fixedvers,
