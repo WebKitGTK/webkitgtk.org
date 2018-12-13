@@ -1,0 +1,13 @@
+CVE-2018-4437 : HyungSeok Han, DongHyeon Oh, and Sang Kil Cha of KAIST Softsec Lab, Korea (WebKitGTK+ before 2.22.5 and WPE WebKit before 2.22.3)
+CVE-2018-4438 : lokihardt of Google Project Zero (WebKitGTK+ before 2.22.3 and WPE WebKit before 2.22.1)
+CVE-2018-4441 : lokihardt of Google Project Zero (WebKitGTK+ before 2.22.3 and WPE WebKit before 2.22.1)
+CVE-2018-4442 : lokihardt of Google Project Zero (WebKitGTK+ before 2.22.3 and WPE WebKit before 2.22.1)
+CVE-2018-4443 : lokihardt of Google Project Zero (WebKitGTK+ before 2.22.3 and WPE WebKit before 2.22.1)
+CVE-2018-4464 : HyungSeok Han, DongHyeon Oh, and Sang Kil Cha of KAIST Softsec Lab, Korea (WebKitGTK+ and WPE WebKit before 2.22.0)
+
+MANUALDESCRIPTION : CVE-2018-4437 : Processing maliciously crafted web content may lead to arbitrary code execution. Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2018-4438 : Processing maliciously crafted web content may lead to arbitrary code execution. A logic issue existed resulting in memory corruption. This was addressed with improved state management.
+MANUALDESCRIPTION : CVE-2018-4441 : Processing maliciously crafted web content may lead to arbitrary code execution. A memory corruption issue was addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2018-4442 : Processing maliciously crafted web content may lead to arbitrary code execution. A memory corruption issue was addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2018-4443 : Processing maliciously crafted web content may lead to arbitrary code execution. A memory corruption issue was addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2018-4464 : Processing maliciously crafted web content may lead to arbitrary code execution. Multiple memory corruption issues were addressed with improved memory handling.
