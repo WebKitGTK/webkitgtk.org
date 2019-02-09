@@ -2,16 +2,16 @@
 layout: default
 ---
 
-![Screenshot of Epiphany using WebKitGTK+](/images/screenshot.png)
+![Screenshot of Epiphany using WebKitGTK](/images/screenshot.png)
 
 ## Web content rendering ##
 
-WebKitGTK+ is a full-featured port of the WebKit rendering engine,
+WebKitGTK is a full-featured port of the WebKit rendering engine,
 suitable for projects requiring any kind of web integration, from hybrid
 HTML/CSS applications to full-fledged web browsers. It offers WebKit's
 full functionality and is useful in a wide range of systems from desktop
 computers to embedded systems like phones, tablets, and televisions.
-WebKitGTK+ is made by a lively community of developers and designers,
+WebKitGTK is made by a lively community of developers and designers,
 who hope to bring the web platform to everyone.
 It's the official web engine of the GNOME platform and is used in
 browsers such as [Epiphany](http://projects.gnome.org/epiphany/) and
@@ -22,8 +22,8 @@ browsers such as [Epiphany](http://projects.gnome.org/epiphany/) and
 Since adding support for WebKit2, it's possible to build applications that
 use the web platform with increased security and responsiveness. The web
 is a jungle, but web pages cannot crash the main application or freeze the
-UI. WebKitGTK+ also uses process separation to seamlessly support GTK+2 plugins
-(like Flash) in GTK+3 applications.
+UI. WebKitGTK also uses process separation to seamlessly support GTK 2 plugins
+(like Flash) in GTK 3 applications.
 
 ## Accessibility ##
 
@@ -40,7 +40,7 @@ support for WebAudio and WebRTC.
 
 ## 3D CSS and accelerated rendering ##
 
-WebKitGTK+ can use the GPU to enable smooth page compositing and
+WebKitGTK can use the GPU to enable smooth page compositing and
 scrolling, as well as 3D CSS transforms and 3D HTML canvas (otherwise
-known as WebGL). This makes WebKitGTK+ suitable for a whole range
+known as WebGL). This makes WebKitGTK suitable for a whole range
 of games and visualization applications.
