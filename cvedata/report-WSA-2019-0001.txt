@@ -1,0 +1,19 @@
+CVE-2019-6212 : an anonymous researcher (WebKitGTK+ before 2.22.6 and WPE WebKit before 2.22.4)
+CVE-2019-6215 : Lokihardt of Google Project Zero (WebKitGTK+ before 2.22.6 and WPE WebKit before 2.22.4)
+CVE-2019-6216 : Fluoroacetate working with Trend Micro's Zero Day Initiative (WebKitGTK+ before 2.22.5 and WPE WebKit before 2.22.3)
+CVE-2019-6217 : Fluoroacetate working with Trend Micro's Zero Day Initiative, Proteas, Shrek_wzw, and Zhuo Liang of Qihoo 360 Nirvan Team (WebKitGTK+ before 2.22.5 and WPE WebKit before 2.22.3)
+CVE-2019-6226 : Apple (WebKitGTK+ and WPE WebKit before 2.22.0)
+CVE-2019-6227 : Qixun Zhao of Qihoo 360 Vulcan Team (WebKitGTK+ before 2.22.5 and WPE WebKit before 2.22.3)
+CVE-2019-6229 : Ryan Pickren (WebKitGTK+ before 2.22.5 and WPE WebKit before 2.22.3)
+CVE-2019-6233 : G. Geshev from MWR Labs working with Trend Micro's Zero Day Initiative (WebKitGTK+ before 2.22.4 and WPE WebKit before 2.22.2)
+CVE-2019-6234 : G. Geshev from MWR Labs working with Trend Micro's Zero Day Initiative (WebKitGTK+ before 2.22.4 and WPE WebKit before 2.22.2)
+
+MANUALDESCRIPTION : CVE-2019-6212 : Processing maliciously crafted web content may lead to arbitrary code execution. Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2019-6215 : Processing maliciously crafted web content may lead to arbitrary code execution. A type confusion issue was addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2019-6216 : Processing maliciously crafted web content may lead to arbitrary code execution. Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2019-6217 : Processing maliciously crafted web content may lead to arbitrary code execution. Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2019-6226 : Processing maliciously crafted web content may lead to arbitrary code execution. Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2019-6227 : Processing maliciously crafted web content may lead to arbitrary code execution. A memory corruption issue was addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2019-6229 : Processing maliciously crafted web content may lead to universal cross site scripting. A logic issue was addressed with improved validation.
+MANUALDESCRIPTION : CVE-2019-6233 : Processing maliciously crafted web content may lead to arbitrary code execution. A memory corruption issue was addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2019-6234 : Processing maliciously crafted web content may lead to arbitrary code execution. A memory corruption issue was addressed with improved memory handling.
