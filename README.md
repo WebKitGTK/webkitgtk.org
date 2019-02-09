@@ -1,9 +1,9 @@
 webkitgtk.org
 =============
 
-The WebKitGTK+ website.
+The WebKitGTK website.
 
-New version of the WebKitGTK+ website done in [Jekyll](http://jekyllrb.com/)
+New version of the WebKitGTK website done in [Jekyll](http://jekyllrb.com/)
 using the style of GNOME project pages.
 
 In order to test it you need to install Jeykyll, you can do it with the
