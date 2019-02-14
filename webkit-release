@@ -291,7 +291,7 @@ class WebKitTarball:
                     break
                 continue
 
-            if line.strip().startswith("What's new in WebKitGTK+"):
+            if line.strip().startswith("What's new in WebKitGTK"):
                 ignore_empty = False
                 continue
 
@@ -354,7 +354,7 @@ class WebKitRelease:
         version = self._tarball.get_version_str()
 
         # Header
-        body += "WebKitGTK+ %s is available for download at:\n" % version
+        body += "WebKitGTK %s is available for download at:\n" % version
         body += "\n"
         body += "%s%s (%s)\n" % (self.RELEASE_BASE_URL, self._tarball.get_name(), human_size(self._tarball.get_size()))
         body += "   md5sum: %s\n" % (self._tarball.get_md5sum())
@@ -366,19 +366,19 @@ class WebKitRelease:
         body += "\n"
 
         # NEWS
-        whatsnew = "What's new in the WebKitGTK+ %s release?\n" % version
+        whatsnew = "What's new in the WebKitGTK %s release?\n" % version
         body += whatsnew
         body += "=" * (len(whatsnew) - 1)
         body += "\n"
         body += "".join(self._tarball.get_news())
 
-        # What's WebKitGTK+
-        whatswkgtk = "What is WebKitGTK+?\n"
+        # What's WebKitGTK
+        whatswkgtk = "What is WebKitGTK?\n"
         body += whatswkgtk
         body += "=" * (len(whatswkgtk) - 1)
         body += "\n"
         body += '''
-WebKitGTK+ is the GNOME platform port of the WebKit rendering engine.
+WebKitGTK is the GNOME platform port of the WebKit rendering engine.
 Offering WebKit's full functionality through a set of GObject-based
 APIs, it is suitable for projects requiring any kind of web
 integration, from hybrid HTML/CSS applications to full-fledged web
@@ -399,13 +399,13 @@ you may:
   site at https://www.webkit.org. People interested in contributing
   should read: https://www.webkit.org/coding/contributing.html.
 
-- Browse the bug list at https://bugs.webkit.org, WebKitGTK+ bugs are
+- Browse the bug list at https://bugs.webkit.org, WebKitGTK bugs are
   typically prefixed by "[GTK]." A bug report with a minimal,
   reproducible test case is often just as valuable as a patch.
 
 - Join the #webkit and #webkitgtk+ IRC channels at irc.freenode.net.
 
-- Subscribe to the WebKitGTK+ mailing list,
+- Subscribe to the WebKitGTK mailing list,
   https://lists.webkit.org/mailman/listinfo/webkit-gtk, or the
   WebKit development mailing list,
   https://lists.webkit.org/mailman/listinfo/webkit-dev
@@ -425,7 +425,7 @@ are far too many to list!
         body += "\n"
 
         # Footer
-        body += "The WebKitGTK+ team,\n"
+        body += "The WebKitGTK team,\n"
         body += date.strftime(date.today(), "%B %d, %Y")
         body += "\n"
 
@@ -438,7 +438,7 @@ are far too many to list!
 
             msg = MIMEText(self._get_announcement_text())
             msg.set_charset('utf-8')
-            msg['Subject'] = 'WebKitGTK+ %s released!' % (self._tarball.get_version_str())
+            msg['Subject'] = 'WebKitGTK %s released!' % (self._tarball.get_version_str())
             msg['From'] = email_from
             msg['To'] = 'webkit-gtk@lists.webkit.org'
             msg['Cc'] = 'gnome-announce-list@gnome.org'
@@ -612,7 +612,7 @@ are far too many to list!
         # Create the news file.
         news_file = tarball_file + ".news"
         tmp = tempfile.NamedTemporaryFile(delete=False)
-        whatsnew = "What's new in the WebKitGTK+ %s release?\n" % self._tarball.get_version_str()
+        whatsnew = "What's new in the WebKitGTK %s release?\n" % self._tarball.get_version_str()
         tmp.write(whatsnew)
         tmp.write("%s\n" % ("=" * (len(whatsnew) - 1)))
         tmp.write("%s\n" % ("".join(self._tarball.get_news())))
@@ -716,13 +716,13 @@ are far too many to list!
 
         post = "---\n"
         post += "layout: post\n"
-        post += "title: WebKitGTK+ %s released!\n" % version
+        post += "title: WebKitGTK %s released!\n" % version
         post += "---\n\n"
 
         post += self._get_release_description()
         post += "\n"
 
-        post += "### What's new in the WebKitGTK+ %s release?\n" % version
+        post += "### What's new in the WebKitGTK %s release?\n" % version
         post += "\n"
         post += get_news()
         post += "\n"
@@ -747,7 +747,7 @@ are far too many to list!
             sys.stdout.write("Website changes committed, run git push to update the website\n")
 
     def release(self, delete, host, releases_dir, update_symlinks, docs_dir, website_dir, send_email, email_from = None):
-        sys.stdout.write("Releasing WebKitGTK+ %s\n" % self._tarball.get_version_str())
+        sys.stdout.write("Releasing WebKitGTK %s\n" % self._tarball.get_version_str())
 
         sys.stdout.write("Installing tarball %s to %s:%s\n" % (self._tarball.get_name(), host, releases_dir))
         self.install_tarball(host, releases_dir, update_symlinks)
@@ -769,7 +769,7 @@ are far too many to list!
             sys.stdout.write("Deleting tarball %s\n" % self._tarball.get_name())
             self._tarball.delete()
 
-        sys.stdout.write("WebKitGTK+ %s succesfully released\n" % self._tarball.get_version_str())
+        sys.stdout.write("WebKitGTK %s succesfully released\n" % self._tarball.get_version_str())
 
 if __name__ == '__main__':
     import argparse
