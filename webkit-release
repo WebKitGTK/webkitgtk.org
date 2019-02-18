@@ -403,7 +403,7 @@ you may:
   typically prefixed by "[GTK]." A bug report with a minimal,
   reproducible test case is often just as valuable as a patch.
 
-- Join the #webkit and #webkitgtk+ IRC channels at irc.freenode.net.
+- Join the #webkit and #webkitgtk IRC channels at irc.freenode.net.
 
 - Subscribe to the WebKitGTK mailing list,
   https://lists.webkit.org/mailman/listinfo/webkit-gtk, or the
