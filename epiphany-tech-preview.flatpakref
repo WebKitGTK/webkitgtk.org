@@ -1,6 +1,6 @@
 [Flatpak Ref]
 Title=GNOME Web
-Name=org.gnome.Epiphany
+Name=org.gnome.Epiphany.Devel
 Branch=master
 Url=https://sdk.gnome.org/nightly/repo-apps/
 IsRuntime=False
