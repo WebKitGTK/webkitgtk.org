@@ -1,3 +1,5 @@
+# Please keep this in sync with GNOME:
+# https://gitlab.gnome.org/GNOME/gnome-apps-nightly/blob/master/epiphany.flatpakref
 [Flatpak Ref]
 Title=GNOME Web
 Name=org.gnome.Epiphany.Devel
