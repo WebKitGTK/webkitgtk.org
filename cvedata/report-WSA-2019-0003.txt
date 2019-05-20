@@ -1,0 +1,42 @@
+CVE-2019-6237 : G. Geshev working with Trend Micro Zero Day Initiative, Liu Long of Qihoo 360 Vulcan Team (WebKitGTK and WPE WebKit before 2.24.1)
+CVE-2019-8571 : 01 working with Trend Micro's Zero Day Initiative (WebKitGTK and WPE WebKit before 2.24.0)
+CVE-2019-8583 : sakura of Tencent Xuanwu Lab, jessica (@babyjess1ca_) of Tencent Keen Lab, and dwfault working at ADLab of Venustech (WebKitGTK and WPE WebKit before 2.24.0)
+CVE-2019-8584 : G. Geshev of MWR Labs working with Trend Micro Zero Day Initiative (WebKitGTK and WPE WebKit before 2.24.1)
+CVE-2019-8586 : an anonymous researcher (WebKitGTK and WPE WebKit before 2.24.0)
+CVE-2019-8587 : G. Geshev working with Trend Micro Zero Day Initiative (WebKitGTK and WPE WebKit before 2.24.1)
+CVE-2019-8594 : Suyoung Lee and Sooel Son of KAIST Web Security & Privacy Lab and HyungSeok Han and Sang Kil Cha of KAIST SoftSec Lab (WebKitGTK and WPE WebKit before 2.24.0)
+CVE-2019-8595 : G. Geshev from MWR Labs working with Trend Micro Zero Day Initiative (WebKitGTK and WPE WebKit before 2.24.2)
+CVE-2019-8596 : Wen Xu of SSLab at Georgia Tech (WebKitGTK and WPE WebKit before 2.24.1)
+CVE-2019-8597 : 01 working with Trend Micro Zero Day Initiative (WebKitGTK and WPE WebKit before 2.24.1)
+CVE-2019-8601 : Fluoroacetate working with Trend Micro's Zero Day Initiative (WebKitGTK and WPE WebKit before 2.24.1)
+CVE-2019-8607 : Junho Jang and Hanul Choi of LINE Security Team (WebKitGTK and WPE WebKit before 2.24.2)
+CVE-2019-8608 : G. Geshev working with Trend Micro Zero Day Initiative (WebKitGTK and WPE WebKit before 2.24.1)
+CVE-2019-8609 : Wen Xu of SSLab, Georgia Tech (WebKitGTK and WPE WebKit before 2.24.0)
+CVE-2019-8610 : Anonymous working with Trend Micro Zero Day Initiative (WebKitGTK and WPE WebKit before 2.24.1)
+CVE-2019-8615 : G. Geshev from MWR Labs working with Trend Micro's Zero Day Initiative (WebKitGTK and WPE WebKit before 2.24.2)
+CVE-2019-8611 : Samuel Groß of Google Project Zero (WebKitGTK and WPE WebKit before 2.24.0)
+CVE-2019-8619 : Wen Xu of SSLab at Georgia Tech and Hanqing Zhao of Chaitin Security Research Lab (WebKitGTK and WPE WebKit before 2.24.1)
+CVE-2019-8622 : Samuel Groß of Google Project Zero (WebKitGTK and WPE WebKit before 2.24.0)
+CVE-2019-8623 : Samuel Groß of Google Project Zero (WebKitGTK and WPE WebKit before 2.24.0)
+
+MANUALDESCRIPTION : CVE-2019-6237 : Processing maliciously crafted web content may lead to arbitrary code execution. Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2019-8571 : Processing maliciously crafted web content may lead to arbitrary code execution. Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2019-8583 : Processing maliciously crafted web content may lead to arbitrary code execution. Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2019-8584 : Processing maliciously crafted web content may lead to arbitrary code execution. Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2019-8586 : Processing maliciously crafted web content may lead to arbitrary code execution. Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2019-8587 : Processing maliciously crafted web content may lead to arbitrary code execution. Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2019-8594 : Processing maliciously crafted web content may lead to arbitrary code execution. Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2019-8595 : Processing maliciously crafted web content may lead to arbitrary code execution. Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2019-8596 : Processing maliciously crafted web content may lead to arbitrary code execution. Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2019-8597 : Processing maliciously crafted web content may lead to arbitrary code execution. Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2019-8601 : Processing maliciously crafted web content may lead to arbitrary code execution. Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2019-8607 : Processing maliciously crafted web content may result in the disclosure of process memory. An out-of-bounds read was addressed with improved input validation.
+MANUALDESCRIPTION : CVE-2019-8608 : Processing maliciously crafted web content may lead to arbitrary code execution. Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2019-8609 : Processing maliciously crafted web content may lead to arbitrary code execution. Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2019-8610 : Processing maliciously crafted web content may lead to arbitrary code execution. Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2019-8611 : Processing maliciously crafted web content may lead to arbitrary code execution. Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2019-8615 : Processing maliciously crafted web content may lead to arbitrary code execution. Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2019-8619 : Processing maliciously crafted web content may lead to arbitrary code execution. Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2019-8622 : Processing maliciously crafted web content may lead to arbitrary code execution. Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2019-8623 : Processing maliciously crafted web content may lead to arbitrary code execution. Multiple memory corruption issues were addressed with improved memory handling.
+
