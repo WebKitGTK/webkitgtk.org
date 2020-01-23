@@ -1,0 +1,7 @@
+CVE-2019-8835 : Anonymous working with Trend Micro's Zero Day Initiative, Mike Zhang of Pangu Team (WebKitGTK before 2.26.3 and WPE WebKit before 2.26.3)
+CVE-2019-8844 : William Bowling (@wcbowling) (WebKitGTK before 2.26.3 and WPE WebKit before 2.26.3)
+CVE-2019-8846 : Marcin Towalski of Cisco Talos (WebKitGTK before 2.26.3 and WPE WebKit before 2.26.3)
+
+
+MANUALDESCRIPTION : CVE-2019-8846 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: A use after free issue was addressed with improved memory management.
+MANUALDESCRIPTION : CVE-2019-8835, CVE-2019-8844 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
