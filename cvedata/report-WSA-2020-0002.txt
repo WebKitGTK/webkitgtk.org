@@ -1,0 +1,12 @@
+CVE-2020-3862 : Srikanth Gatta of Google Chrome (WebKitGTK before 2.26.4 and WPE WebKit before 2.26.4)
+CVE-2020-3864 : Ryan Pickren (ryanpickren.com) (WebKitGTK before 2.26.4 and WPE WebKit before 2.26.4)
+CVE-2020-3865 : Ryan Pickren (ryanpickren.com) (WebKitGTK before 2.26.4 and WPE WebKit before 2.26.4)
+CVE-2020-3867 : an anonymous researcher (WebKitGTK before 2.26.4 and WPE WebKit before 2.26.4)
+CVE-2020-3868 : Marcin Towalski of Cisco Talos (WebKitGTK before 2.26.4 and WPE WebKit before 2.26.4)
+
+
+MANUALDESCRIPTION : CVE-2020-3862 : Impact: A malicious website may be able to cause a denial of service. Description: A denial of service issue was addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2020-3864 : Impact: A DOM object context may not have had a unique security origin. Description: A logic issue was addressed with improved validation.
+MANUALDESCRIPTION : CVE-2020-3865 : Impact: A top-level DOM object context may have incorrectly been considered secure. Description: A logic issue was addressed with improved validation.
+MANUALDESCRIPTION : CVE-2020-3867 : Impact: Processing maliciously crafted web content may lead to universal cross site scripting. Description: A logic issue was addressed with improved state management.
+MANUALDESCRIPTION : CVE-2020-3868 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
