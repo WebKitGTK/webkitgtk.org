@@ -1,0 +1,4 @@
+CVE-2020-11793 : Cim Stordal of Cognite (WebKitGTK before 2.28.1 and WPE WebKit before 2.28.1)
+
+
+MANUALDESCRIPTION : CVE-2020-11793 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution or application crash (denial of service). Description: A memory corruption issue (use-after-free) was addressed with improved memory handling.
