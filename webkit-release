@@ -190,6 +190,9 @@ class WebKitTarball:
                 match = api_version_pattern.match(line)
                 if match:
                     self._api = match.group(1)
+                    # Ignore GTK4 API version for now.
+                    if self._api == '5.0':
+                        self._api = None
 
         versions_file.close()
 
