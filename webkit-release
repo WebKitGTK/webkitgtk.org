@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import tarfile
 import re
@@ -133,7 +133,7 @@ class WebKitTarball:
         required_version_pattern = re.compile('^m4_define\(\[(.+)_required_version\], \[(.+)\]\)$')
 
         for line in versions_file.readlines():
-            line = line.strip(' \t\n')
+            line = line.decode('utf-8').strip(' \t\n')
             if not line:
                 continue
 
@@ -171,7 +171,7 @@ class WebKitTarball:
 
         self._required_deps = []
         for line in versions_file.readlines():
-            line = line.strip(' \t\n')
+            line = line.decode('utf-8').strip(' \t\n')
             if not line:
                 continue
 
@@ -279,6 +279,7 @@ class WebKitTarball:
         ignore_next = False
         ignore_empty = True
         for line in news_file.readlines():
+            line = line.decode('utf-8')
             if ignore_empty and not line.strip(' \n'):
                 continue
 
@@ -311,7 +312,7 @@ class WebKitTarball:
                 continue
 
             source = self._tar.extractfile(member)
-            dest = open(os.path.join(path, os.path.basename(member.name)), 'w')
+            dest = open(os.path.join(path, os.path.basename(member.name)), 'w+b')
             dest.write(source.read())
             dest.close()
             source.close()
@@ -506,7 +507,7 @@ are far too many to list!
                 continue
 
             path = os.path.join(docdir, filename)
-            tmp_file = tempfile.NamedTemporaryFile(delete=False)
+            tmp_file = tempfile.NamedTemporaryFile(mode="w", delete=False)
             fd = open(path, 'r')
             tmp_file.write(re.sub(r'<a href=[\'"]?([^\'" >]+)', rebase_link, fd.read()))
             fd.close()
@@ -517,7 +518,7 @@ are far too many to list!
             os.chmod(path, mode)
 
         for sub in subs:
-            print "%s (%d)" % (sub, subs[sub])
+            sys.stdout.write("%s (%d)\n" % (sub, subs[sub]))
 
     def _create_doc_tarball(self, docdir, tar_path):
         tar = tarfile.open(tar_path, 'w:gz')
@@ -529,7 +530,7 @@ are far too many to list!
 
             file_path = os.path.join(docdir, f)
             member = tar.gettarinfo(file_path, '%s/%s' % (basedir, f))
-            tar.addfile(member, open(file_path))
+            tar.addfile(member, open(file_path, "r+b"))
         tar.close()
 
     def _get_doc_pkg_names(self):
@@ -614,7 +615,7 @@ are far too many to list!
 
         # Create the news file.
         news_file = tarball_file + ".news"
-        tmp = tempfile.NamedTemporaryFile(delete=False)
+        tmp = tempfile.NamedTemporaryFile(mode="w", delete=False)
         whatsnew = "What's new in the WebKitGTK %s release?\n" % self._tarball.get_version_str()
         tmp.write(whatsnew)
         tmp.write("%s\n" % ("=" * (len(whatsnew) - 1)))
@@ -624,7 +625,7 @@ are far too many to list!
 
         # Create the sums file.
         sums_file = tarball_file + ".sums"
-        tmp = tempfile.NamedTemporaryFile(delete=False)
+        tmp = tempfile.NamedTemporaryFile(mode="w", delete=False)
         tmp.write("%s (%s)\n" % (self._tarball.get_name(), human_size(self._tarball.get_size())))
         tmp.write("   md5sum: %s\n" % (self._tarball.get_md5sum()))
         tmp.write("   sha1sum: %s\n" % (self._tarball.get_sha1sum()))
@@ -672,7 +673,7 @@ are far too many to list!
         version = self._tarball.get_version_str()
 
         fd = open(config_file, 'r')
-        tmp = tempfile.NamedTemporaryFile(delete=False)
+        tmp = tempfile.NamedTemporaryFile(mode="w", delete=False)
         for line in fd.readlines():
             if is_stable and line.startswith("stable-release-version:"):
                 tmp.write("stable-release-version: %s\n" % version)
@@ -732,12 +733,12 @@ are far too many to list!
 
         post += "Thanks to all the contributors who made possible this release."
 
-        tmp = tempfile.NamedTemporaryFile(delete=False)
+        tmp = tempfile.NamedTemporaryFile(mode="w", delete=False)
         tmp.write(post)
         tmp.close()
 
         shutil.move(tmp.name, post_file)
-        os.chmod(post_file, 0644)
+        os.chmod(post_file, 0o644)
         subprocess.call(['git', 'add', post_file])
 
     def update_website(self, website_dir):
