@@ -1,9 +1,19 @@
----
-layout: post
-title: WebKitGTK Security Advisories
----
+webkitgtk.org
+=============
 
-{% for post in site.tags.WSA %}
-    <h3 class="news_title" style="margin-top: 2ex;"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-    <p class="news_entry">{{ post.date | date_to_long_string | upcase }}</p>
-{% endfor %}
+The Web Kit GTK website.
+
+New version of the Web Kit GTK website done in [Jekyll] (http://jekyllrb.com/)
+Using the style of GNOME project pages.
+
+In order to test it you need to install Jekyll, you can do it with the
+Following commands in a Deben based system:
+
+    Suds apt-get installs Jekyll
+
+And then you can run the command `Jekyll build` that will generate the site under
+`_site` folder.  BTW, you can use `Jekyll serve` to test it locally.
+
+In order to write a piece of news in the new website you just have to create a
+New file inside `_posts` folder using
+[Markdown](http://daringfireball.net/projects/markdown/) syntax.
