@@ -1,4 +1,4 @@
-CVE-2020-13584 : Cisco (WebKitGTK before 2.30.3 and WPE WebKit before 2.30.3)
+CVE-2020-13584 : Marcin 'Icewall' Noga of Cisco Talos (WebKitGTK before 2.30.3 and WPE WebKit before 2.30.3)
 CVE-2020-9948  : Brendan Draper (@6r3nd4n) working with Trend Micro Zero Day Initiative (WebKitGTK before 2.30.0 and WPE WebKit before 2.30.0)
 CVE-2020-9951  : Marcin 'Icewall' Noga of Cisco Talos (WebKitGTK before 2.30.0 and WPE WebKit before 2.30.0)
 CVE-2020-9952  : Ryan Pickren (ryanpickren.com) (WebKitGTK before 2.28.3 and WPE WebKit before 2.28.3)
