@@ -1,0 +1,17 @@
+CVE-2020-27918 : Liu Long of Ant Security Light-Year Lab (WebKitGTK before 2.30.6 and WPE WebKit before 2.30.6)
+CVE-2020-29623 : Simon Hunt of OvalTwo LTD (WebKitGTK before 2.30.6 and WPE WebKit before 2.30.6)
+CVE-2020-9947 : cc working with Trend Micro Zero Day Initiative (WebKitGTK before 2.30.0 and WPE WebKit before 2.30.0)
+CVE-2021-1765 : Eliya Stein of Confiant (WebKitGTK before 2.30.6 and WPE WebKit before 2.30.6)
+CVE-2021-1789 : @S0rryMybad of 360 Vulcan Team (WebKitGTK before 2.30.6 and WPE WebKit before 2.30.6)
+CVE-2021-1799 : Gregory Vishnepolsky & Ben Seri of Armis Security, and Samy Kamkar (WebKitGTK before 2.30.6 and WPE WebKit before 2.30.6)
+CVE-2021-1801 : Eliya Stein of Confiant (WebKitGTK before 2.30.6 and WPE WebKit before 2.30.6)
+CVE-2021-1870 : an anonymous researcher (WebKitGTK before 2.30.6 and WPE WebKit before 2.30.6)
+
+
+MANUALDESCRIPTION : CVE-2020-27918 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: A use after free issue was addressed with improved memory management.
+MANUALDESCRIPTION : CVE-2020-29623 : Impact: A user may be unable to fully delete browsing history. Description: "Clear History and Website Data" did not clear the history in some circumstances. The issue was addressed with improved data deletion.
+MANUALDESCRIPTION : CVE-2020-9947 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: A use after free issue was addressed with improved memory management.
+MANUALDESCRIPTION : CVE-2021-1765, CVE-2021-1801 : Impact: Maliciously crafted web content may violate iframe sandboxing policy. Description: This issue was addressed with improved iframe sandbox enforcement.
+MANUALDESCRIPTION : CVE-2021-1789 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: A type confusion issue was addressed with improved state handling.
+MANUALDESCRIPTION : CVE-2021-1799 : Impact: A malicious website may be able to access restricted ports on arbitrary servers, Description: A port redirection issue was addressed with additional port validation.
+MANUALDESCRIPTION : CVE-2021-1870 : Impact: A remote attacker may be able to cause arbitrary code execution. Apple is aware of a report that this issue may have been actively exploited. Description: A logic issue was addressed with improved restrictions.
