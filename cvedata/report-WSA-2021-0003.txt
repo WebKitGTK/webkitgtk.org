@@ -1,0 +1,8 @@
+CVE-2021-1788 : Francisco Alonso (@revskills) (WebKitGTK before 2.32.0 and WPE WebKit before 2.32.0)
+CVE-2021-1844 : Clément Lecigne of Google’s Threat Analysis Group, Alison Huffman of Microsoft Browser Vulnerability Research (WebKitGTK before 2.32.0 and WPE WebKit before 2.32.0)
+CVE-2021-1871 : an anonymous researcher (WebKitGTK before 2.32.0 and WPE WebKit before 2.32.0)
+
+
+MANUALDESCRIPTION : CVE-2021-1788 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: A use after free issue was addressed with improved memory management.
+MANUALDESCRIPTION : CVE-2021-1844 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: A memory corruption issue was addressed with improved validation.
+MANUALDESCRIPTION : CVE-2021-1871 : Impact: A remote attacker may be able to cause arbitrary code execution. Apple is aware of a report that this issue may have been actively exploited. Description: A logic issue was addressed with improved restrictions.
