@@ -558,6 +558,10 @@ are far too many to list!
         if api_version is None:
             return pkg_name
 
+        # API version 4.1 uses 4.0 for documentation.
+        if api_version == '4.1':
+            api_version = '4.0'
+
         major, minor, micro, patch = self._tarball.get_version()
         # Version > 2.7.90 or 2.6.6 include api version.
         if major > 2 or (major == 2 and minor >= 6):
