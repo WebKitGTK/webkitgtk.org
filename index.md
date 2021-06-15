@@ -15,7 +15,7 @@ WebKitGTK is made by a lively community of developers and designers,
 who hope to bring the web platform to everyone.
 It's the official web engine of the GNOME platform and is used in
 browsers such as [Epiphany](http://projects.gnome.org/epiphany/) and
-[Midori](http://twotoasts.de/index.php/midori/).
+[Eolie](https://wiki.gnome.org/Apps/Eolie).
 
 ## Web process separation ##
 
