@@ -14,8 +14,9 @@ computers to embedded systems like phones, tablets, and televisions.
 WebKitGTK is made by a lively community of developers and designers,
 who hope to bring the web platform to everyone.
 It's the official web engine of the GNOME platform and is used in
-browsers such as [Epiphany](http://projects.gnome.org/epiphany/) and
-[Eolie](https://wiki.gnome.org/Apps/Eolie).
+browsers such as [Epiphany](http://projects.gnome.org/epiphany/),
+[Eolie](https://wiki.gnome.org/Apps/Eolie), and
+[Tangram](https://github.com/sonnyp/Tangram).
 
 ## Web process separation ##
 
