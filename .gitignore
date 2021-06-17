@@ -1,5 +1,6 @@
 releases
 _site/
+.jekyll-cache/
 
 # Planet
 _cache/
