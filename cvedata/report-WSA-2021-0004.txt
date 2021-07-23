@@ -1,0 +1,47 @@
+CVE-2021-1817 : zhunki (WebKitGTK and WPE WebKit before 2.30.0)
+CVE-2021-1820 : André Bargull (WebKitGTK and WPE WebKit before 2.30.0)
+CVE-2021-1825 : Alex Camboe of Aon’s Cyber Solutions (WebKitGTK and WPE WebKit before 2.30.0)
+CVE-2021-1826 : an anonymous researcher (WebKitGTK and WPE WebKit before 2.30.0)
+CVE-2021-21775 : Marcin Towalski of Cisco Talos (WebKitGTK and WPE WebKit before 2.32.3)
+CVE-2021-21779 : Marcin Towalski of Cisco Talos (WebKitGTK and WPE WebKit before 2.32.3)
+CVE-2021-21806 : Marcin 'Icewall' Noga of Cisco Talos (WebKitGTK and WPE WebKit before 2.30.6)
+CVE-2021-30661 : yangkang(@dnpushme) of 360 ATA (WebKitGTK and WPE WebKit before 2.30.0)
+CVE-2021-30663 : an anonymous researcher (WebKitGTK and WPE WebKit before 2.32.3)
+CVE-2021-30665 : yangkang (@dnpushme)&zerokeeper&bianliang of 360 ATA (WebKitGTK and WPE WebKit before 2.32.3)
+CVE-2021-30666 : yangkang (@dnpushme)&zerokeeper&bianliang of 360 ATA (WebKitGTK and WPE WebKit before 2.26.0)
+CVE-2021-30682 : an anonymous researcher and 1lastBr3ath (WebKitGTK and WPE WebKit before 2.32.0)
+CVE-2021-30689 : an anonymous researcher (WebKitGTK and WPE WebKit before 2.32.3)
+CVE-2021-30720 : David Schütz (@xdavidhu) (WebKitGTK and WPE WebKit before 2.32.3)
+CVE-2021-30734 : Jack Dates of RET2 Systems, Inc. (@ret2systems) working with Trend Micro Zero Day Initiative (WebKitGTK and WPE WebKit before 2.32.3)
+CVE-2021-30744 : Dan Hite of jsontop (WebKitGTK and WPE WebKit before 2.32.3)
+CVE-2021-30749 : an anonymous researcher and mipu94 of SEFCOM lab, ASU. working with Trend Micro Zero Day Initiative (WebKitGTK and WPE WebKit before 2.32.3)
+CVE-2021-30758 : Christoph Guttandin of Media Codings (WebKitGTK and WPE WebKit before 2.32.2)
+CVE-2021-30761 : an anonymous researcher (WebKitGTK and WPE WebKit before 2.26.0)
+CVE-2021-30762 : an anonymous researcher (WebKitGTK and WPE WebKit before 2.28.0)
+CVE-2021-30795 : Sergei Glazunov of Google Project Zero (WebKitGTK and WPE WebKit before 2.32.3)
+CVE-2021-30797 : Ivan Fratric of Google Project Zero (WebKitGTK and WPE WebKit before 2.32.3)
+CVE-2021-30799 : Sergei Glazunov of Google Project Zero (WebKitGTK and WPE WebKit before 2.32.3)
+
+
+MANUALDESCRIPTION : CVE-2021-1817 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: A memory corruption issue was addressed with improved state management.
+MANUALDESCRIPTION : CVE-2021-1820 : Impact: Processing maliciously crafted web content may result in the disclosure of process memory. Description: A memory initialization issue was addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2021-1825 : Impact: Processing maliciously crafted web content may lead to a cross site scripting attack. Description: An input validation issue was addressed with improved input validation.
+MANUALDESCRIPTION : CVE-2021-1826 : Impact: Processing maliciously crafted web content may lead to universal cross site scripting. Description: A logic issue was addressed with improved restrictions.
+MANUALDESCRIPTION : CVE-2021-21775 : A use-after-free vulnerability exists in the way certain events are processed for ImageLoader objects of WebKit. A specially crafted web page can lead to a potential information leak and further memory corruption. In order to trigger the vulnerability, a victim must be tricked into visiting a malicious webpage.
+MANUALDESCRIPTION : CVE-2021-21779 : A use-after-free vulnerability exists in the way that WebKit GraphicsContext handles certain events. A specially crafted web page can lead to a potential information leak and further memory corruption. A victim must be tricked into visiting a malicious web page to trigger this vulnerability.
+MANUALDESCRIPTION : CVE-2021-21806 : An exploitable use-after-free vulnerability exists in WebKit. A specially crafted HTML web page can cause a use-after-free condition, resulting in remote code execution. The victim needs to visit a malicious web site to trigger the vulnerability.
+MANUALDESCRIPTION : CVE-2021-30661 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Apple is aware of a report that this issue may have been actively exploited. Description: A use after free issue was addressed with improved memory management.
+MANUALDESCRIPTION : CVE-2021-30663 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: An integer overflow was addressed with improved input validation.
+MANUALDESCRIPTION : CVE-2021-30665 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Apple is aware of a report that this issue may have been actively exploited. Description: A memory corruption issue was addressed with improved state management.
+MANUALDESCRIPTION : CVE-2021-30666 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Apple is aware of a report that this issue may have been actively exploited. Description: A buffer overflow issue was addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2021-30682 : Impact: A malicious application may be able to leak sensitive user information. Description: A logic issue was addressed with improved restrictions.
+MANUALDESCRIPTION : CVE-2021-30689 : Impact: Processing maliciously crafted web content may lead to universal cross site scripting. Description: A logic issue was addressed with improved state management.
+MANUALDESCRIPTION : CVE-2021-30720 : Impact: A malicious website may be able to access restricted ports on arbitrary servers. Description: A logic issue was addressed with improved restrictions.
+MANUALDESCRIPTION : CVE-2021-30744 : Impact: Processing maliciously crafted web content may lead to universal cross site scripting. Description: A cross-origin issue with iframe elements was addressed with improved tracking of security origins.
+MANUALDESCRIPTION : CVE-2021-30734, CVE-2021-30749 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2021-30758 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: A type confusion issue was addressed with improved state handling.
+MANUALDESCRIPTION : CVE-2021-30761 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Apple is aware of a report that this issue may have been actively exploited. Description: A memory corruption issue was addressed with improved state management.
+MANUALDESCRIPTION : CVE-2021-30762 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Apple is aware of a report that this issue may have been actively exploited. Description: A use after free issue was addressed with improved memory management.
+MANUALDESCRIPTION : CVE-2021-30795 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: A use after free issue was addressed with improved memory management.
+MANUALDESCRIPTION : CVE-2021-30797 : Impact: Processing maliciously crafted web content may lead to code execution. Description: This issue was addressed with improved checks.
+MANUALDESCRIPTION : CVE-2021-30799 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
