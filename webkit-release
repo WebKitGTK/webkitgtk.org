@@ -399,19 +399,19 @@ browsers.
 If you want to know more about the project or get in touch with us
 you may:
 
-- Visit our website at https://www.webkitgtk.org, or the upstream
-  site at https://www.webkit.org. People interested in contributing
+- Visit our website at https://www.webkitgtk.org or the upstream
+  site at https://www.webkit.org - people interested in contributing
   should read: https://www.webkit.org/coding/contributing.html.
 
-- Browse the bug list at https://bugs.webkit.org, WebKitGTK bugs are
-  typically prefixed by "[GTK]." A bug report with a minimal,
-  reproducible test case is often just as valuable as a patch.
+- Browse the bug list at https://bugs.webkit.org
+  WebKitGTK bugs are typically prefixed by "[GTK]." A bug report with
+  a minimal, reproducible test case is often just as valuable as a patch.
 
 - Join the #webkitgtk IRC channel at irc.gnome.org or on Matrix at
   #webkitgtk:matrix.org.
 
 - Subscribe to the WebKitGTK mailing list,
-  https://lists.webkit.org/mailman/listinfo/webkit-gtk, or the
+  https://lists.webkit.org/mailman/listinfo/webkit-gtk or the
   WebKit development mailing list,
   https://lists.webkit.org/mailman/listinfo/webkit-dev
 '''
