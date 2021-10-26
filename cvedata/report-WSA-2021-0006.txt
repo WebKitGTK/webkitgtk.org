@@ -1,0 +1,13 @@
+CVE-2021-30846 : Sergei Glazunov of Google Project Zero (WebKitGTK and WPE WebKit before 2.34.0)
+CVE-2021-30848 : Sergei Glazunov of Google Project Zero (WebKitGTK and WPE WebKit before 2.32.4)
+CVE-2021-30849 : Sergei Glazunov of Google Project Zero (WebKitGTK and WPE WebKit before 2.32.4)
+CVE-2021-30851 : Samuel Groß of Google Project Zero (WebKitGTK and WPE WebKit before 2.34.0)
+CVE-2021-30858 : an anonymous researcher (WebKitGTK and WPE WebKit before 2.32.4)
+CVE-2021-42762 : an anonymous reporter (WebKitGTK and WPE WebKit before 2.34.1)
+
+MANUALDESCRIPTION : CVE-2021-30846 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: A memory corruption issue was addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2021-30848 : Impact: Processing maliciously crafted web content may lead to code execution. Description: A memory corruption issue was addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2021-30849 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2021-30851 : Impact: Processing maliciously crafted web content may lead to code execution. Description: A memory corruption vulnerability was addressed with improved locking.
+MANUALDESCRIPTION : CVE-2021-30858 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Apple is aware of a report that this issue may have been actively exploited. Description: A use after free issue was addressed with improved memory management.
+MANUALDESCRIPTION : CVE-2021-42762 : BubblewrapLauncher.cpp allows a limited sandbox bypass that allows a sandboxed process to trick host processes into thinking the sandboxed process is not confined by the sandbox, by abusing VFS syscalls that manipulate its filesystem namespace. The impact is limited to host services that create UNIX sockets that WebKit mounts inside its sandbox, and the sandboxed process remains otherwise confined. NOTE: this is similar to CVE-2021-41133
