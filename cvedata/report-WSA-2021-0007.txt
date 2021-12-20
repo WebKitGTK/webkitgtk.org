@@ -1,0 +1,22 @@
+CVE-2021-30809 : an anonymous researcher (WebKitGTK and WPE WebKit before 2.32.4)
+CVE-2021-30818 : Amar Menezes (@amarekano) of Zon8Research (WebKitGTK and WPE WebKit before 2.34.0)
+CVE-2021-30823 : David Gullasch of Recurity Labs (WebKitGTK and WPE WebKit before 2.34.0)
+CVE-2021-30836 : Peter Nguyen Vu Hoang of STAR Labs (WebKitGTK and WPE WebKit before 2.32.4)
+CVE-2021-30884 : an anonymous researcher (WebKitGTK and WPE WebKit before 2.34.0)
+CVE-2021-30887 : Narendra Bhati (@imnarendrabhati) of Suma Soft Pvt. Ltd. (WebKitGTK and WPE WebKit before 2.34.3)
+CVE-2021-30888 : Prakash (@1lastBr3ath) (WebKitGTK and WPE WebKit before 2.34.0)
+CVE-2021-30889 : Chijin Zhou of ShuiMuYuLin Ltd and Tsinghua wingtecher lab (WebKitGTK and WPE WebKit before 2.34.0)
+CVE-2021-30890 : an anonymous researcher (WebKitGTK and WPE WebKit before 2.34.3)
+CVE-2021-30897 : an anonymous researcher (WebKitGTK and WPE WebKit before 2.34.0)
+
+
+MANUALDESCRIPTION : CVE-2021-30809 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: A use after free issue was addressed with improved memory management.
+MANUALDESCRIPTION : CVE-2021-30818 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: A type confusion issue was addressed with improved state handling.
+MANUALDESCRIPTION : CVE-2021-30823 : Impact: An attacker in a privileged network position may be able to bypass HSTS. Description: A logic issue was addressed with improved restrictions.
+MANUALDESCRIPTION : CVE-2021-30836 : Impact: Processing a maliciously crafted audio file may disclose restricted memory. Description: An out-of-bounds read was addressed with improved input validation.
+MANUALDESCRIPTION : CVE-2021-30884 : Impact: Visiting a maliciously crafted website may reveal a user's browsing history. Description: The issue was resolved with additional restrictions on CSS compositing.
+MANUALDESCRIPTION : CVE-2021-30887 : Impact: Processing maliciously crafted web content may lead to unexpectedly unenforced Content Security Policy. Description: A logic issue was addressed with improved restrictions.
+MANUALDESCRIPTION : CVE-2021-30888 : Impact: A malicious website using Content Security Policy reports may be able to leak information via redirect behavior. Description: An information leakage issue was addressed.
+MANUALDESCRIPTION : CVE-2021-30889 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution, Description: A buffer overflow issue was addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2021-30890 : Impact: Processing maliciously crafted web content may lead to universal cross site scripting. Description: A logic issue was addressed with improved state management.
+MANUALDESCRIPTION : CVE-2021-30897 : Impact: A malicious website may exfiltrate data cross-origin. Description: An issue existed in the specification for the resource timing API. The specification was updated and the updated specification was implemented.
