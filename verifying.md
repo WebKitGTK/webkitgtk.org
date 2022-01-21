@@ -14,7 +14,7 @@ the integrity of downloaded files using them.
 Every release is accompanied by a cryptographic signature produced by the
 person in charge of publishing the release. This signature allows anyone to
 check whether the files have been tampered with after they have been signed.
-Forging a is signature is practically impossible without gaining access to the
+Forging a signature is practically impossible without gaining access to the
 private key used. If that were to happen, the compromised key would be revoked
 and all files re-signed with new keys.
 
