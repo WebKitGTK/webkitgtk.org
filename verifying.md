@@ -96,7 +96,7 @@ checksum on your end:
 This can be compared with the value of the last line of the `.sums` file:
 
 ```
-% cat webkitgtk-2.34.3
+% cat webkitgtk-2.34.3.tar.xz.sums
 webkitgtk-2.34.3.tar.xz (23.8MB)
    md5sum: de30c41fb57b2b024417669c22914752
    sha1sum: 42b96ddaa89f7c3757860efd0b983f6e5b6ade51
