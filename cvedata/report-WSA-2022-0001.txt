@@ -1,0 +1,23 @@
+CVE-2021-30934 : Dani Biro (WebKitGTK and WPE WebKit before 2.34.4)
+CVE-2021-30936 : Chijin Zhou of ShuiMuYuLin Ltd and Tsinghua wingtecher lab (WebKitGTK and WPE WebKit before 2.34.4)
+CVE-2021-30951 : Pangu (WebKitGTK and WPE WebKit before 2.34.4)
+CVE-2021-30952 : WeBin (WebKitGTK and WPE WebKit before 2.34.4)
+CVE-2021-30953 : VRIJ (WebKitGTK and WPE WebKit before 2.34.4)
+CVE-2021-30954 : Kunlun Lab (WebKitGTK and WPE WebKit before 2.34.4)
+CVE-2021-30984 : Kunlun Lab (WebKitGTK and WPE WebKit before 2.34.4)
+CVE-2022-XXXXX : Martin Bajanik from fingerprintjs.com (WebKitGTK and WPE WebKit before 2.34.4)
+
+CVE-2021-45481 : Chijin Zhou of ShuiMuYuLin Ltd and Tsinghua wingtecher lab (WebKitGTK and WPE WebKit before 2.34.0)
+CVE-2021-45482 : Chijin Zhou of ShuiMuYuLin Ltd and Tsinghua wingtecher lab (WebKitGTK and WPE WebKit before 2.32.4)
+CVE-2021-45483 : Chijin Zhou of ShuiMuYuLin Ltd and Tsinghua wingtecher lab (WebKitGTK and WPE WebKit before 2.34.0)
+
+MANUALDESCRIPTION : CVE-2021-30934 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: A buffer overflow issue was addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2021-30936, CVE-2021-30951 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: A use after free issue was addressed with improved memory management.
+MANUALDESCRIPTION : CVE-2021-30952 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: An integer overflow was addressed with improved input validation.
+MANUALDESCRIPTION : CVE-2021-30953 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: An out-of-bounds read was addressed with improved bounds checking.
+MANUALDESCRIPTION : CVE-2021-30954 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: A type confusion issue was addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2021-30984 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: A race condition was addressed with improved state handling.
+MANUALDESCRIPTION : CVE-2021-45481 : Processing maliciously crafted web content may cause an application crash due to an incorrect memory allocation in WebCore::ImageBufferCairoImageSurfaceBackend::create.
+MANUALDESCRIPTION : CVE-2021-45482 : Processing maliciously crafted web content may cause a memory corruption issue (use-after-free) in WebCore::ContainerNode::firstChild.
+MANUALDESCRIPTION : CVE-2021-45483 : Processing maliciously crafted web content may cause a memory corruption issue (heap-use-after-free) in WebCore::Frame::page.
+MANUALDESCRIPTION : CVE-2022-XXXXX : Impact: A malicious website may exfiltrate data cross-origin. Description: A cross-origin issue existed with the IndexedDB. This was addressed with improved checking of security origins. Notes: There is a public PoC demonstrating this issue at https://safarileaks.com so this issue may have been actively exploited. We still don't know the CVE number that will be assigned to this issue. We will update this advisory once we know it.
