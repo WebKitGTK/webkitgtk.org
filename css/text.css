@@ -36,3 +36,11 @@
     background: rgba(0,0,0,0.1);
     padding: 1px;
 }
+pre.highlight {
+    background: #ececec;
+    background: rgba(0,0,0,0.1);
+    padding: 0.25rem 0.5rem;
+	border: 1px solid #bbb;
+	margin: 0.5em 0;
+	overflow: scroll;
+}

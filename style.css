@@ -319,3 +319,22 @@ h2 a {
     max-width: 670px;
     height: auto;
 }
+
+table {
+	width: 100%;
+	margin: 0.5em 0;
+    background: #ececec;
+    background: rgba(0,0,0,0.1);
+	border: 1px solid #bbb;
+	border-radius: 3px;
+}
+table > thead {
+    background: #bbb;
+}
+table > tbody > tr {
+	border-top: 1px solid #bbb;
+}
+table > thead > tr > th,
+table > tbody > tr > td {
+	padding: 0.25rem 0.5rem;
+}
