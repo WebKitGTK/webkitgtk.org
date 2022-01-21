@@ -19,27 +19,6 @@ private key used. If that were to happen, the compromised key would be revoked
 and all files re-signed with new keys.
 
 
-### Checking
-
-The signature file for each release has the same name plus the `.asc` suffix.
-Given a download URL, the following illustrates the process:
-
-```
-% curl -sLO https://webkitgtk.org/releases/webkitgtk-2.34.3.tar.xz
-% curl -sLO https://webkitgtk.org/releases/webkitgtk-2.34.3.tar.xz.asc
-```
-
-Now it is possible to verify the `.tar.xz` file against its signature:
-
-```
-% gpg --verify webkitgtk-2.34.3.tar.xz.asc
-gpg: assuming signed data in 'webkitgtk-2.34.3.tar.xz'
-gpg: Signature made lun 20 dic 2021 12:41:15 EET
-gpg:                using DSA key D7FCF61CF9A2DEAB31D81BD3F3D322D0EC4582C3
-gpg: Good signature from "Carlos Garcia Campos <cgarcia@igalia.com>" [full]
-Primary key fingerprint: D7FC F61C F9A2 DEAB 31D8  1BD3 F3D3 22D0 EC45 82C3
-```
-
 ### Keys
 
 The following PGP keys are currently in use for signing releases:
@@ -61,6 +40,8 @@ The following PGP keys are currently in use for signing releases:
 </table>
 
 
+### Importing keys
+
 Once downloaded, keys need to be imported in the PGP keyring, for example with
 GnuPG:
 
@@ -71,6 +52,28 @@ gpg: key F3D322D0EC4582C3: public key "Carlos Garcia Campos <cgarcia@igalia.com>
 gpg: Total number processed: 1
 gpg:               imported: 1
 gpg: no ultimately trusted keys found
+```
+
+
+### Checking
+
+The signature file for each release has the same name plus the `.asc` suffix.
+Given a download URL, the following illustrates the process:
+
+```
+% curl -sLO https://webkitgtk.org/releases/webkitgtk-2.34.3.tar.xz
+% curl -sLO https://webkitgtk.org/releases/webkitgtk-2.34.3.tar.xz.asc
+```
+
+Now it is possible to verify the `.tar.xz` file against its signature:
+
+```
+% gpg --verify webkitgtk-2.34.3.tar.xz.asc
+gpg: assuming signed data in 'webkitgtk-2.34.3.tar.xz'
+gpg: Signature made lun 20 dic 2021 12:41:15 EET
+gpg:                using DSA key D7FCF61CF9A2DEAB31D81BD3F3D322D0EC4582C3
+gpg: Good signature from "Carlos Garcia Campos <cgarcia@igalia.com>" [full]
+Primary key fingerprint: D7FC F61C F9A2 DEAB 31D8  1BD3 F3D3 22D0 EC45 82C3
 ```
 
 
