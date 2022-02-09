@@ -256,6 +256,7 @@ h3 {
 .subtle_box .contact { background: url(images/contact.png) 0 center no-repeat; }
 .subtle_box .contribute { background: url(images/heart.png) 0 center no-repeat; }
 .subtle_box .news { background: url(images/bolt.png) 0 center no-repeat; }
+.subtle_box .security { background: url(images/shield.png) 0 center no-repeat; }
 .subtle_box .feeds { background: url(images/group.png) 0 center no-repeat; }
 .subtle_box .subscribe { background: url(images/wheel.png) 0 center no-repeat; }
 .subtle_box .rss { background: url(images/rss.png) 0 center no-repeat; }
