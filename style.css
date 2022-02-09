@@ -245,6 +245,7 @@ h3 {
     font-weight: bold;
     font-size: 20px;
     margin-bottom: 10px;
+    white-space: nowrap;
 
     /* Room for the icon. */
     padding-left: 26px;
