@@ -44,11 +44,25 @@
                         <div class="header news"><span>Latest News</span></div>
                         <ul class="navigation_list">
                             {% for post in site.posts limit:2 %}
+                                {% unless post.tags contains "WSA" %}
+                                    <li><span class="subheader">&#8227; <a href="{{ post.url }}">{{ post.title }}</a></span>
+                                        <p>{{ post.date | date_to_long_string | upcase }}</p>
+                                    </li>
+                                {% endunless %}
+                            {% endfor %}
+                            <li><span class="subheader">(<a href="/news.html">more</a>)</span>
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <div class="header security"><span>Security Advisories</span></div>
+                        <ul class="navigation_list">
+                            {% for post in site.tags.WSA limit:2 %}
                                 <li><span class="subheader">&#8227; <a href="{{ post.url }}">{{ post.title }}</a></span>
                                     <p>{{ post.date | date_to_long_string | upcase }}</p>
                                 </li>
                             {% endfor %}
-                            <li><span class="subheader">(<a href="/news.html">more</a>)</span>
+                            <li><span class="subheader">(<a href="/security.html">more</a>)</span>
                         </ul>
                     </div>
 
@@ -118,7 +132,7 @@
 
     <div id="footer">
         <div class="maxwidth">
-            <span class="left">Copyright © 2009‒2019 The WebKitGTK Team</span>
+            <span class="left">Copyright © 2009‒2022 The WebKitGTK Team</span>
             <span class="right">Hosting kindly provided by <a href="https://www.igalia.com/">Igalia</a>.</span>
             <div class="clear"></div>
         </div>
