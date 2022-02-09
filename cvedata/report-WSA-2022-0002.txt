@@ -1,0 +1,7 @@
+CVE-2022-22589 : Heige of KnownSec 404 Team (knownsec.com) and Bo Qu of Palo Alto Networks (paloaltonetworks.com) (WebKitGTK and WPE WebKit before 2.34.5)
+CVE-2022-22590 : Toan Pham from Team Orca of Sea Security (security.sea.com) (WebKitGTK and WPE WebKit before 2.34.5)
+CVE-2022-22592 : Prakash (@1lastBr3ath) (WebKitGTK and WPE WebKit before 2.34.5)
+
+MANUALDESCRIPTION : CVE-2022-22589 : Impact: Processing a maliciously crafted mail message may lead to running arbitrary javascript. Description: A validation issue was addressed with improved input sanitization.
+MANUALDESCRIPTION : CVE-2022-22590 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: A use after free issue was addressed with improved memory management.
+MANUALDESCRIPTION : CVE-2022-22592 : Impact: Processing maliciously crafted web content may prevent Content Security Policy from being enforced. Description: A logic issue was addressed with improved state management.
