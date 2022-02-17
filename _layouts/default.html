@@ -43,12 +43,21 @@
                     <div class="section">
                         <div class="header news"><span>Latest News</span></div>
                         <ul class="navigation_list">
-                            {% for post in site.posts limit:2 %}
+                            {% comment %}
+                            Using limit:2 on the for loop doesn't work well because it returns the last two posts (and one of them may be a WSA one).
+                            So we can end displaying only one news or no news. Use a counter and break the loop once 2 non-WSA news are displayed.
+                            {% endcomment %}
+                            {% assign i = 1 %}
+                            {% for post in site.posts %}
                                 {% unless post.tags contains "WSA" %}
                                     <li><span class="subheader">&#8227; <a href="{{ post.url }}">{{ post.title }}</a></span>
                                         <p>{{ post.date | date_to_long_string | upcase }}</p>
                                     </li>
+                                    {% assign i = i | plus:1 %}
                                 {% endunless %}
+                                {% if i > 2 %}
+                                    {% break %}
+                                {% endif %}
                             {% endfor %}
                             <li><span class="subheader">(<a href="/news.html">more</a>)</span>
                         </ul>
