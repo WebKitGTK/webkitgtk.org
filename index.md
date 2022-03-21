@@ -23,8 +23,7 @@ browsers such as [Epiphany](http://projects.gnome.org/epiphany/),
 Since adding support for WebKit2, it's possible to build applications that
 use the web platform with increased security and responsiveness. The web
 is a jungle, but web pages cannot crash the main application or freeze the
-UI. WebKitGTK also uses process separation to seamlessly support GTK 2 plugins
-(like Flash) in GTK 3 applications.
+UI.
 
 ## Accessibility ##
 
