@@ -1,0 +1,14 @@
+CVE-2022-26700 : ryuzaki (WebKitGTK and WPE WebKit before 2.36.3)
+CVE-2022-26709 : Chijin Zhou of ShuiMuYuLin Ltd and Tsinghua wingtecher lab (WebKitGTK and WPE WebKit before 2.36.3)
+CVE-2022-26717 : Jeonghoon Shin of Theori (WebKitGTK and WPE WebKit before 2.36.3)
+CVE-2022-26716 : SorryMybad (@S0rryMybad) of Kunlun Lab (WebKitGTK and WPE WebKit before 2.36.3)
+CVE-2022-26719 : Dongzhuo Zhao working with ADLab of Venustech (WebKitGTK and WPE WebKit before 2.36.3)
+CVE-2022-30293 : Chijin Zhou of ShuiMuYuLin Ltd and Tsinghua wingtecher lab (WebKitGTK and WPE WebKit before 2.36.1)
+CVE-2022-30294 : Chijin Zhou of ShuiMuYuLin Ltd and Tsinghua wingtecher lab (WebKitGTK and WPE WebKit before 2.36.1)
+
+
+MANUALDESCRIPTION : CVE-2022-26700 : Impact: Processing maliciously crafted web content may lead to code execution. Description: A memory corruption issue was addressed with improved state management.
+MANUALDESCRIPTION : CVE-2022-26709, CVE-2022-26717 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: A use after free issue was addressed with improved memory management.
+MANUALDESCRIPTION : CVE-2022-26716, CVE-2022-26719 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: A memory corruption issue was addressed with improved state management.
+MANUALDESCRIPTION : CVE-2022-30293 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution or to a denial of service (application crash). Description: A memory corruption issue that could cause a heap use after free or a heap buffer overflow in WebCore::TextureMapperLayer::setContentsLayer was addressed with improved state management.
+MANUALDESCRIPTION : CVE-2022-30294 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution or to a denial of service (application crash). Description: A memory corruption issue that could cause a heap use after free or a heap buffer overflow in WebCore::TextureMapperLayer::setContentsLayer was addressed with improved state management. This is the same issue than CVE-2022-30293.
