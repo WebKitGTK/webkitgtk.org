@@ -121,13 +121,13 @@ class WebKitTarball:
         self._tar = tarfile.open(tarball)
         self._basedir = self._tar.getmembers()[0].name.split(os.path.sep)[0]
 
+        self._api = None
         self._parse_versions()
 
     def _parse_versions_cmake(self, versions):
         versions_file = self._tar.extractfile(versions)
 
         version_pattern = re.compile('^SET_PROJECT_VERSION\(([0-9]+) ([0-9]+) ([0-9]+) ?([0-9]+)?\)$');
-        api_version_pattern = re.compile('^set\(WEBKITGTK_API_VERSION ([0-9]+\.[0-9]+)\)$')
 
         self._required_deps = []
         for line in versions_file.readlines():
@@ -144,15 +144,6 @@ class WebKitTarball:
                     patch = match.group(4)
                     if patch is not None:
                         self._patch = int(patch)
-                    continue
-
-            if self._api is None:
-                match = api_version_pattern.match(line)
-                if match:
-                    self._api = match.group(1)
-                    # Ignore GTK4 API version for now.
-                    if self._api == '5.0':
-                        self._api = None
 
         versions_file.close()
 
@@ -176,7 +167,22 @@ class WebKitTarball:
         return self._major, self._minor, self._micro, 0
 
     def get_api_version(self):
-        return self._api
+        if self._api is not None:
+            return self._api
+
+        docdir = os.path.join(self._basedir, "Documentation", "webkit2gtk-")
+        for api_version in ["4.1", "4.1", "4.0"]:
+            versioned_docdir = docdir + api_version
+            for html_dir in ["", "html"]:
+                docfile = os.path.join(versioned_docdir, html_dir, "index.html")
+                try:
+                    self._tar.getmember(docfile)
+                    self._api = api_version
+                    return self._api
+                except KeyError:
+                    continue
+
+        return None
 
     def get_version_str(self):
         version_str = "%d.%d.%d" % (self._major, self._minor, self._micro)
@@ -261,8 +267,9 @@ class WebKitTarball:
 
         return retval
 
-    def extract_docs(self, path, wk_pkg):
-        docdir = os.path.join(self._basedir, 'Documentation', wk_pkg, "html")
+    def extract_docs(self, path, html_dir):
+        docdir = os.path.join(self._basedir, html_dir)
+        print("Extract docs from %s to %s" % (docdir, path))
         for member in self._tar.getmembers():
             if not os.path.dirname(member.name) == docdir:
                 continue
@@ -515,19 +522,13 @@ are far too many to list!
         if api_version is None:
             return pkg_name
 
-        # API version 4.1 uses 4.0 for documentation.
-        if api_version == '4.1':
-            api_version = '4.0'
-
-        major, minor, micro, patch = self._tarball.get_version()
-        # Version > 2.7.90 or 2.6.6 include api version.
-        if major > 2 or (major == 2 and minor >= 6):
-            return pkg_name + '-' + api_version
-
-        return pkg_name
+        return pkg_name + '-' + api_version
 
     def install_docs(self, docs_dir):
         version = self._tarball.get_version_str()
+        # gi-docgen is used since version 2.37.
+        major, minor, micro, patch = self._tarball.get_version()
+        is_gi_docgen = major < 2 or (major == 2 and minor >= 37)
         for wk_pkg in self._get_doc_pkg_names():
             docdir = os.path.join(docs_dir, wk_pkg, version)
             try:
@@ -536,9 +537,13 @@ are far too many to list!
                 if e.errno != errno.EEXIST:
                     raise
 
-            self._tarball.extract_docs(docdir, self._get_versioned_pkg_name(wk_pkg))
+            html_dir = os.path.join("Documentation", self._get_versioned_pkg_name(wk_pkg))
+            if not is_gi_docgen:
+                html_dir = os.path.join(html_dir, "html")
+            self._tarball.extract_docs(docdir, html_dir)
 
-            self._rebase_docs(docdir, wk_pkg)
+            if not is_gi_docgen:
+                self._rebase_docs(docdir, wk_pkg)
 
             doc_tarball = os.path.join(os.path.dirname(docdir), wk_pkg + "-html-" + version + ".tar.gz")
             self._create_doc_tarball(docdir, doc_tarball)
