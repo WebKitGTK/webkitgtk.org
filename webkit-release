@@ -123,46 +123,6 @@ class WebKitTarball:
 
         self._parse_versions()
 
-    def _parse_versions_autotools(self, versions):
-        versions_file = self._tar.extractfile(versions)
-
-        major_version_pattern = re.compile('^m4_define\(\[webkit_major_version\], \[(.+)\]\)$')
-        minor_version_pattern = re.compile('^m4_define\(\[webkit_minor_version\], \[(.+)\]\)$')
-        micro_version_pattern = re.compile('^m4_define\(\[webkit_micro_version\], \[(.+)\]\)$')
-        patch_version_pattern = re.compile('^m4_define\(\[webkit_patch_version\], \[(.+)\]\)$')
-        required_version_pattern = re.compile('^m4_define\(\[(.+)_required_version\], \[(.+)\]\)$')
-
-        for line in versions_file.readlines():
-            line = line.decode('utf-8').strip(' \t\n')
-            if not line:
-                continue
-
-            if self._major is None:
-                match = major_version_pattern.match(line)
-                if match:
-                    self._major = int(match.group(1))
-                    continue
-
-            if self._minor is None:
-                match = minor_version_pattern.match(line)
-                if match:
-                    self._minor = int(match.group(1))
-                    continue
-
-            if self._micro is None:
-                match = micro_version_pattern.match(line)
-                if match:
-                    self._micro = int(match.group(1))
-                    continue
-
-            if self._patch is None and not self._minimum_versions:
-                match = patch_version_pattern.match(line)
-                if match:
-                    self._patch = int(match.group(1))
-                    continue
-
-        versions_file.close()
-
     def _parse_versions_cmake(self, versions):
         versions_file = self._tar.extractfile(versions)
 
@@ -200,12 +160,8 @@ class WebKitTarball:
         self._minimum_versions = {}
         self._major = self._minor = self._micro = self._patch = self._api = None
 
-        try:
-            versions = self._tar.getmember(os.path.join(self._basedir, 'Source', 'autotools', 'Versions.m4'))
-            self._parse_versions_autotools(versions)
-        except KeyError:
-            versions = self._tar.getmember(os.path.join(self._basedir, 'Source', 'cmake', 'OptionsGTK.cmake'))
-            self._parse_versions_cmake(versions)
+        versions = self._tar.getmember(os.path.join(self._basedir, 'Source', 'cmake', 'OptionsGTK.cmake'))
+        self._parse_versions_cmake(versions)
 
     def delete(self):
         os.unlink(self._tarball)
