@@ -1,0 +1,8 @@
+CVE-2022-32792 : Manfred Paul (@_manfp) working with Trend Micro Zero Day Initiative. (WebKitGTK and WPE WebKit before 2.36.5)
+CVE-2022-32816 : Dohyun Lee (@l33d0hyun) of SSD Secure Disclosure Labs & DNSLab, Korea Univ. (WebKitGTK and WPE WebKit before 2.36.5)
+CVE-2022-2294 : Jan Vojtesek of Avast Threat Intelligence team. (WebKitGTK and WPE WebKit before 2.36.5 if USE_LIBWEBRTC is enabled)
+
+
+MANUALDESCRIPTION : CVE-2022-32792 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: An out-of-bounds write issue was addressed with improved input validation.
+MANUALDESCRIPTION : CVE-2022-32816 : Impact: Visiting a website that frames malicious content may lead to UI spoofing. Description: The issue was addressed with improved UI handling.
+MANUALDESCRIPTION : CVE-2022-2294 : Heap buffer overflow in LibWebRTC allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. NOTE: The tarballs of WebKitGTK or WPE WebKit don't ship LibWebRTC. Also the LibWebRTC support is disabled by default. You only are affected by this vulnerability if your build enabled the USE_LIBWEBRTC CMake option and used the repository as source instead of the tarballs.
