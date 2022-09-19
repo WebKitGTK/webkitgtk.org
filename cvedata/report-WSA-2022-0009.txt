@@ -1,0 +1,8 @@
+CVE-2022-32886 : P1umer, afang5472, xmzyshypnc. (WebKitGTK and WPE WebKit before 2.36.8)
+CVE-2022-32891 : @real_as3617, an anonymous researcher. (WebKitGTK and WPE WebKit before 2.36.5)
+CVE-2022-32912 : Jeonghoon Shin (@singi21a) at Theori working with Trend Micro Zero Day Initiative. (WebKitGTK and WPE WebKit before 2.36.8)
+
+
+MANUALDESCRIPTION : CVE-2022-32886 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: A buffer overflow issue was addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2022-32891 : Impact: Visiting a website that frames malicious content may lead to UI spoofing. Description: The issue was addressed with improved UI handling.
+MANUALDESCRIPTION : CVE-2022-32912 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: An out-of-bounds read was addressed with improved bounds checking.
