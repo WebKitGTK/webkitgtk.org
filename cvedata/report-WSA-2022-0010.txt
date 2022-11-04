@@ -1,0 +1,12 @@
+CVE-2022-32888 : P1umer (@p1umer). (WebKitGTK and WPE WebKit before 2.38.0)
+CVE-2022-32923 : Wonyoung Jung (@nonetype_pwn) of KAIST Hacking Lab. (WebKitGTK and WPE WebKit before 2.38.0)
+CVE-2022-42799 : Jihwan Kim (@gPayl0ad), Dohyun Lee. (@l33d0hyun) (WebKitGTK and WPE WebKit before 2.38.2)
+CVE-2022-42823 : Dohyun Lee (@l33d0hyun) of SSD Labs. (WebKitGTK and WPE WebKit before 2.38.2)
+CVE-2022-42824 : Abdulrahman Alqabandi of Microsoft Browser Vulnerability Research, Ryan Shin of IAAI SecLab at Korea University, Dohyun Lee (@l33d0hyun) of DNSLab at Korea University. (WebKitGTK before 2.38.2)
+
+
+MANUALDESCRIPTION : CVE-2022-32888 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: An out-of-bounds write issue was addressed with improved bounds checking.
+MANUALDESCRIPTION : CVE-2022-32923 : Impact: Processing maliciously crafted web content may disclose internal states of the app. Description: A correctness issue in the JIT was addressed with improved checks.
+MANUALDESCRIPTION : CVE-2022-42799 : Impact: Visiting a malicious website may lead to user interface spoofing. Description: The issue was addressed with improved UI handling.
+MANUALDESCRIPTION : CVE-2022-42823 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: A type confusion issue was addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2022-42824 : Impact: Processing maliciously crafted web content may disclose sensitive user information. Description: A logic issue was addressed with improved state management.
