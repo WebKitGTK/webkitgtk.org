@@ -285,6 +285,7 @@ class WebKitRelease:
 
     WK1_PKG_NAME = "webkitgtk"
     WK2_PKG_NAME = "webkit2gtk"
+    WK2WE_PKG_NAME = "webkit2gtk-web-extension"
     WKDOM_PKG_NAME = "webkitdomgtk"
     JSC_PKG_NAME = "jsc-glib"
     RELEASE_BASE_URL = "https://webkitgtk.org/releases/"
@@ -477,8 +478,8 @@ are far too many to list!
         pkg_names = []
 
         major, minor, micro, patch = self._tarball.get_version()
-        # DOM Bindings API docs were introduced in 2.3.
-        if major > 2 or (major == 2 and minor >= 3):
+        # DOM Bindings API docs were introduced in 2.3 and removed in 2.37
+        if major == 2 and (minor >= 3 and minor < 2.37):
             pkg_names.append(self.WKDOM_PKG_NAME)
 
         # WebKit1 was removed in 2.5
@@ -488,6 +489,10 @@ are far too many to list!
         # JSC API docs were introduced in 2.21.
         if major > 2 or (major == 2 and minor >= 21):
             pkg_names.append(self.JSC_PKG_NAME)
+
+        # WebExtension API docs have its own moduel since 2.37.
+        if major > 2 or (major == 2 and minor >= 37):
+            pkg_names.append(self.WK2WE_PKG_NAME)
 
         pkg_names.append(self.WK2_PKG_NAME)
 
@@ -504,7 +509,7 @@ are far too many to list!
         version = self._tarball.get_version_str()
         # gi-docgen is used since version 2.37.
         major, minor, micro, patch = self._tarball.get_version()
-        is_gi_docgen = major < 2 or (major == 2 and minor >= 37)
+        is_gi_docgen = major > 2 or (major == 2 and minor >= 37)
         for wk_pkg in self._get_doc_pkg_names():
             docdir = os.path.join(docs_dir, wk_pkg, version)
             try:
