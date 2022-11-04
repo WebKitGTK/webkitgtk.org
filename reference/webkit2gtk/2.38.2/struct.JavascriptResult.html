@@ -1,0 +1,252 @@
+<!--
+SPDX-FileCopyrightText: 2021 GNOME Foundation
+
+SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
+-->
+
+<!--
+SPDX-FileCopyrightText: 2021 GNOME Foundation
+
+SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>WebKit2.JavascriptResult</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8" />
+
+  
+  <meta property="og:type" content="website"/>
+
+  
+
+  
+  <meta property="og:title" content="WebKit2.JavascriptResult"/>
+  <meta property="og:description" content="Reference for WebKit2.JavascriptResult"/>
+  <meta name="twitter:title" content="WebKit2.JavascriptResult"/>
+  <meta name="twitter:description" content="Reference for WebKit2.JavascriptResult"/>
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+  <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    <nav class="sidebar devhelp-hidden">
+      
+      
+      <div class="search section">
+        <form id="search-form" autocomplete="off">
+          <input id="search-input" type="text" name="do-not-autocomplete" placeholder="Click, or press 's' to search" autocomplete="off"/>
+        </form>
+      </div>
+      
+      <div class="section namespace">
+        <h3><a href="index.html">WebKit2</a></h3>
+        <p>API Version: 4.1</p>
+        
+        <p>Library Version: 2.38.2</p>
+        
+      </div>
+      
+<div class="section">
+  <h5>Type</h5>
+  <div class="links">
+    <a class="current" href="struct.JavascriptResult.html#description">JavascriptResult</a>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="section">
+  <h5>Instance methods</h5>
+  <div class="links">
+  
+    <a class="method" href="method.JavascriptResult.get_global_context.html">get_global_context</a>
+  
+    <a class="method" href="method.JavascriptResult.get_js_value.html">get_js_value</a>
+  
+    <a class="method" href="method.JavascriptResult.get_value.html">get_value</a>
+  
+    <a class="method" href="method.JavascriptResult.ref.html">ref</a>
+  
+    <a class="method" href="method.JavascriptResult.unref.html">unref</a>
+  
+  </div>
+</div>
+
+
+
+    </nav>
+    
+    <button id="btn-to-top" class="hidden"><span class="up-arrow"></span></button>
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Struct</h3>
+    <h1><a href="index.html">WebKit2</a><span class="sep"></span>JavascriptResult</h1>
+  </header>
+
+  <section>
+    <summary>
+      <div class="toggle-wrapper">
+        <h4 style="display:flex;" id="description">
+          Description
+          <a href="#description" class="anchor"></a>
+          
+          <a class="srclink" title="go to source location" href="https://github.com/WebKit/WebKit/tree/Source/WebKit/UIProcess/API/glib/WebKitJavascriptResult.cpp#L28">[src]</a>
+          
+        </h4>
+
+        <pre><code><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">WebKitJavascriptResult</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="cm">/* No available fields */</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</code></pre>
+
+        <div class="docblock">
+          <p>Result of JavaScript evaluation in a web&nbsp;view.</p>
+        </div>
+
+        
+
+        <div class="docblock">
+          <table class="attributes">
+            
+            
+            
+          </table>
+        </div>
+
+        
+      </div>
+    </summary>
+
+    
+
+    
+
+    
+    <div class="toggle-wrapper methods">
+      <h4 id="methods">
+        Instance methods
+        <a href="#methods" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      
+        <div class="deprecated">
+          <h6><a href="method.JavascriptResult.get_global_context.html">webkit_javascript_result_get_global_context</a></h6>
+
+          <div class="docblock">
+            <p>Get the global Javascript&nbsp;context.</p>
+          </div>
+
+          <div class="docblock"><p>Deprecated since: 2.22</p></div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.JavascriptResult.get_js_value.html">webkit_javascript_result_get_js_value</a></h6>
+
+          <div class="docblock">
+            <p>Get the <code>JSCValue</code> of <code>js_result</code>.</p>
+          </div>
+
+          <div class="docblock"><p>Available since: 2.22</p></div>
+        </div>
+      
+        <div class="deprecated">
+          <h6><a href="method.JavascriptResult.get_value.html">webkit_javascript_result_get_value</a></h6>
+
+          <div class="docblock">
+            <p>Get the value of <code>js_result</code>.</p>
+          </div>
+
+          <div class="docblock"><p>Deprecated since: 2.22</p></div>
+        </div>
+      
+        <div class="">
+          <h6><a href="method.JavascriptResult.ref.html">webkit_javascript_result_ref</a></h6>
+
+          <div class="docblock">
+            <p>Atomically increments the reference count of <code>js_result</code> by&nbsp;one.</p>
+          </div>
+
+          
+        </div>
+      
+        <div class="">
+          <h6><a href="method.JavascriptResult.unref.html">webkit_javascript_result_unref</a></h6>
+
+          <div class="docblock">
+            <p>Atomically decrements the reference count of <code>js_result</code> by&nbsp;one.</p>
+          </div>
+
+          
+        </div>
+      
+      </div>
+
+    </div>
+    
+
+  </section>
+</section>
+
+
+    
+<div id="toc" class="toc">
+  <nav aria-labelledby="toc-title">
+    <p id="toc-title">Content</p>
+    <ul class="toc-list">
+      <li class="toc-list-item"><a href="#description"><span class="link-text">Description</span></a></li>
+      
+      
+
+      
+
+      
+<li class="toc-list-item"><a href="#methods"><span class="link-text">Methods</span></a></li>
+
+
+    </ul>
+  </nav>
+</div>
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+</body>
+</html>
