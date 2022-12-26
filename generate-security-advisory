@@ -40,7 +40,7 @@ postsdir = "_posts"
 headertemplate_mail = """\
 Subject: %(title)s %(WSA)s
 To: webkit-gtk@lists.webkit.org, webkit-wpe@lists.webkit.org
-Cc: security@webkit.org, distributor-list@gnome.org, oss-security@lists.openwall.com, bugtraq@securityfocus.com
+Cc: security@webkit.org, oss-security@lists.openwall.com
 
 ------------------------------------------------------------------------
 %(title)s%(titlespaces)s%(WSA)s
