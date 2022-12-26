@@ -1,0 +1,19 @@
+CVE-2022-42852: hazbinhotel working with Trend Micro Zero Day Initiative. (WebKitGTK and WPE WebKit before 2.38.3)
+CVE-2022-42856: Clément Lecigne of Google's Threat Analysis Group. (WebKitGTK and WPE WebKit before 2.38.3)
+CVE-2022-42863: an anonymous researcher. (WebKitGTK and WPE WebKit before 2.38.0)
+CVE-2022-42867: Maddie Stone of Google Project Zero. (WebKitGTK and WPE WebKit before 2.38.3)
+CVE-2022-46691: an anonymous researcher. (WebKitGTK and WPE WebKit before 2.38.1)
+CVE-2022-46692: KirtiKumar Anandrao Ramchandani. (WebKitGTK and WPE WebKit before 2.38.3)
+CVE-2022-46698: Dohyun Lee (@l33d0hyun) of DNSLab at Korea University, Ryan Shin of IAAI SecLab at Korea University. (WebKitGTK and WPE WebKit before 2.38.3)
+CVE-2022-46699: Samuel Groß of Google V8 Security. (WebKitGTK and WPE WebKit before 2.38.3)
+CVE-2022-46700: Samuel Groß of Google V8 Security. (WebKitGTK and WPE WebKit before 2.38.3)
+
+
+MANUALDESCRIPTION : CVE-2022-42852 : Impact: Processing maliciously crafted web content may result in the disclosure of process memory. Description: The issue was addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2022-42856 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: A type confusion issue was addressed with improved state handling.
+MANUALDESCRIPTION : CVE-2022-42863, CVE-2022-46699 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: A memory corruption issue was addressed with improved state management.
+MANUALDESCRIPTION : CVE-2022-42867 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: A use after free issue was addressed with improved memory management.
+MANUALDESCRIPTION : CVE-2022-46691 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: A memory consumption issue was addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2022-46692 : Impact: Processing maliciously crafted web content may bypass Same Origin Policy. Description: A logic issue was addressed with improved state management.
+MANUALDESCRIPTION : CVE-2022-46698 : Impact: Processing maliciously crafted web content may disclose sensitive user information. Description: A logic issue was addressed with improved checks.
+MANUALDESCRIPTION : CVE-2022-46700 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: A memory corruption issue was addressed with improved input validation.
