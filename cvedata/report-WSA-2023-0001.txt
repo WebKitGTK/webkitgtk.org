@@ -1,0 +1,7 @@
+CVE-2023-23517: YeongHyeon Choi (@hyeon101010), Hyeon Park (@tree_segment), SeOk JEON (@_seokjeon), YoungSung Ahn (@_ZeroSung), JunSeo Bae (@snakebjs0107), Dohyun Lee (@l33d0hyun) of Team ApplePIE. (WebKitGTK and WPE WebKit before 2.38.4)
+CVE-2023-23518: YeongHyeon Choi (@hyeon101010), Hyeon Park (@tree_segment), SeOk JEON (@_seokjeon), YoungSung Ahn (@_ZeroSung), JunSeo Bae (@snakebjs0107), Dohyun Lee (@l33d0hyun) of Team ApplePIE. (WebKitGTK and WPE WebKit before 2.38.4)
+CVE-2022-42826: Francisco Alonso (@revskills) (WebKitGTK and WPE WebKit before 2.38.4)
+
+
+MANUALDESCRIPTION : CVE-2023-23517, CVE-2023-23518 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: The issue was addressed with improved memory handling.
+MANUALDESCRIPTION : CVE-2022-42826 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: A use after free issue was addressed with improved memory management.
