@@ -1,0 +1,259 @@
+<!--
+SPDX-FileCopyrightText: 2021 GNOME Foundation
+
+SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
+-->
+
+<!--
+SPDX-FileCopyrightText: 2021 GNOME Foundation
+
+SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>WebKit2.WebsiteDataTypes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8" />
+
+  
+  <meta property="og:type" content="website"/>
+
+  
+
+  
+  <meta property="og:title" content="WebKit2.WebsiteDataTypes"/>
+  <meta property="og:description" content="Reference for WebKit2.WebsiteDataTypes"/>
+  <meta name="twitter:title" content="WebKit2.WebsiteDataTypes"/>
+  <meta name="twitter:description" content="Reference for WebKit2.WebsiteDataTypes"/>
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+  <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    <nav class="sidebar devhelp-hidden">
+      
+      
+      <div class="search section">
+        <form id="search-form" autocomplete="off">
+          <input id="search-input" type="text" name="do-not-autocomplete" placeholder="Click, or press 's' to search" autocomplete="off"/>
+        </form>
+      </div>
+      
+      <div class="section namespace">
+        <h3><a href="index.html">WebKit2</a></h3>
+        <p>API Version: 4.1</p>
+        
+        <p>Library Version: 2.38.5</p>
+        
+      </div>
+      
+<div class="section">
+  <h5>Type</h5>
+  <div class="links">
+    <a class="current" href="flags.WebsiteDataTypes.html">WebsiteDataTypes</a>
+  </div>
+</div>
+
+
+
+
+    </nav>
+    
+    <button id="btn-to-top" class="hidden"><span class="up-arrow"></span></button>
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Enumeration</h3>
+    <h1><a href="index.html">WebKit2</a><span class="sep"></span>WebsiteDataTypes</h1>
+  </header>
+
+  <section>
+    <div class="declaration toggle-wrapper">
+      <h4 style="display:flex;" id="declaration">
+        Declaration
+        <a href="#declaration" class="anchor"></a>
+        
+      </h4>
+
+      <div class="docblock">
+        <pre><code>flags WebKit2.WebsiteDataTypes</code></pre>
+      </div>
+    </div>
+
+    <div class="description toggle-wrapper">
+      <h4 style="display:flex;" id="description">
+        Description
+        <a href="#description" class="anchor"></a>
+        
+        <a class="srclink" title="go to source location" href="https://github.com/WebKit/WebKit/tree/Source/WebKit/UIProcess/API/gtk/WebKitWebsiteData.h#L36">[src]</a>
+        
+      </h4>
+
+      <div class="docblock">
+      <p>Enum values with flags representing types of Website&nbsp;data.</p>
+      </div>
+
+      <div class="docblock">
+        <table class="attributes">
+          
+          
+          <tr><td>Available since:</td><td>2.16</td></tr>
+          
+          
+        </table>
+      </div>
+
+      
+    </div>
+
+    <div class="members toggle-wrapper">
+      <h4 id="members">
+        Members
+        <a href="#members" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      <table class="enum-members">
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+      
+        <tr>
+          <td><a id="memory_cache" href="#memory_cache"><code title="Value: 1">WEBKIT_WEBSITE_DATA_MEMORY_CACHE</code></a></td>
+          <td><p>Memory&nbsp;cache.</p></td>
+        </tr>
+      
+        <tr>
+          <td><a id="disk_cache" href="#disk_cache"><code title="Value: 2">WEBKIT_WEBSITE_DATA_DISK_CACHE</code></a></td>
+          <td><p><span class="caps">HTTP</span> disk&nbsp;cache.</p></td>
+        </tr>
+      
+        <tr>
+          <td><a id="offline_application_cache" href="#offline_application_cache"><code title="Value: 4">WEBKIT_WEBSITE_DATA_OFFLINE_APPLICATION_CACHE</code></a></td>
+          <td><p>Offline web application&nbsp;cache.</p></td>
+        </tr>
+      
+        <tr>
+          <td><a id="session_storage" href="#session_storage"><code title="Value: 8">WEBKIT_WEBSITE_DATA_SESSION_STORAGE</code></a></td>
+          <td><p>Session storage&nbsp;data.</p></td>
+        </tr>
+      
+        <tr>
+          <td><a id="local_storage" href="#local_storage"><code title="Value: 16">WEBKIT_WEBSITE_DATA_LOCAL_STORAGE</code></a></td>
+          <td><p>Local storage&nbsp;data.</p></td>
+        </tr>
+      
+        <tr>
+          <td><a id="websql_databases" href="#websql_databases"><code title="Value: 32">WEBKIT_WEBSITE_DATA_WEBSQL_DATABASES</code></a></td>
+          <td><p>WebSQL databases. Deprecated&nbsp;2.24</p></td>
+        </tr>
+      
+        <tr>
+          <td><a id="indexeddb_databases" href="#indexeddb_databases"><code title="Value: 64">WEBKIT_WEBSITE_DATA_INDEXEDDB_DATABASES</code></a></td>
+          <td><p>IndexedDB&nbsp;databases.</p></td>
+        </tr>
+      
+        <tr>
+          <td><a id="plugin_data" href="#plugin_data"><code title="Value: 128">WEBKIT_WEBSITE_DATA_PLUGIN_DATA</code></a></td>
+          <td><p>Plugins data. Deprecated&nbsp;2.32</p></td>
+        </tr>
+      
+        <tr>
+          <td><a id="cookies" href="#cookies"><code title="Value: 256">WEBKIT_WEBSITE_DATA_COOKIES</code></a></td>
+          <td><p>Cookies.</p></td>
+        </tr>
+      
+        <tr>
+          <td><a id="device_id_hash_salt" href="#device_id_hash_salt"><code title="Value: 512">WEBKIT_WEBSITE_DATA_DEVICE_ID_HASH_SALT</code></a></td>
+          <td><p>Hash salt used to generate the device ids used by webpages. Since&nbsp;2.24</p></td>
+        </tr>
+      
+        <tr>
+          <td><a id="hsts_cache" href="#hsts_cache"><code title="Value: 1024">WEBKIT_WEBSITE_DATA_HSTS_CACHE</code></a></td>
+          <td><p><span class="caps">HSTS</span> cache. Since&nbsp;2.26</p></td>
+        </tr>
+      
+        <tr>
+          <td><a id="itp" href="#itp"><code title="Value: 2048">WEBKIT_WEBSITE_DATA_ITP</code></a></td>
+          <td><p>Intelligent Tracking Prevention data. Since&nbsp;2.30.</p></td>
+        </tr>
+      
+        <tr>
+          <td><a id="service_worker_registrations" href="#service_worker_registrations"><code title="Value: 4096">WEBKIT_WEBSITE_DATA_SERVICE_WORKER_REGISTRATIONS</code></a></td>
+          <td><p>Service worker registrations. Since&nbsp;2.30</p></td>
+        </tr>
+      
+        <tr>
+          <td><a id="dom_cache" href="#dom_cache"><code title="Value: 8192">WEBKIT_WEBSITE_DATA_DOM_CACHE</code></a></td>
+          <td><p><span class="caps">DOM</span> (CacheStorage) cache. Since&nbsp;2.30</p></td>
+        </tr>
+      
+        <tr>
+          <td><a id="all" href="#all"><code title="Value: 16383">WEBKIT_WEBSITE_DATA_ALL</code></a></td>
+          <td><p>All&nbsp;types.</p></td>
+        </tr>
+      
+      </table>
+      </div>
+    </div>
+
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+<div id="toc" class="toc">
+  <nav aria-labelledby="toc-title">
+    <p id="toc-title">Content</p>
+    <ul class="toc-list">
+      <li class="toc-list-item"><a href="#description"><span class="link-text">Description</span></a></li>
+      <li class="toc-list-item"><a href="#members"><span class="link-text">Members</span></a></li>
+      
+
+      
+
+    </ul>
+  </nav>
+</div>
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+</body>
+</html>
