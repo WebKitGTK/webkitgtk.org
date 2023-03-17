@@ -1,0 +1,340 @@
+<!--
+SPDX-FileCopyrightText: 2021 GNOME Foundation
+
+SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
+-->
+
+<!--
+SPDX-FileCopyrightText: 2021 GNOME Foundation
+
+SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>WebKit2WebExtension.WebPage::will-submit-form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8" />
+
+  
+  <meta property="og:type" content="website"/>
+
+  
+
+  
+  <meta property="og:title" content="WebKit2WebExtension.WebPage::will-submit-form"/>
+  <meta property="og:description" content="Reference for signal WebKit2WebExtension.WebPage::will-submit-form"/>
+  <meta name="twitter:title" content="WebKit2WebExtension.WebPage::will-submit-form"/>
+  <meta name="twitter:description" content="Reference for signal WebKit2WebExtension.WebPage::will-submit-form"/>
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  
+
+  
+  <script src="gtk3-urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+  <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    <nav class="sidebar devhelp-hidden">
+      
+      
+      <div class="search section">
+        <form id="search-form" autocomplete="off">
+          <input id="search-input" type="text" name="do-not-autocomplete" placeholder="Click, or press 's' to search" autocomplete="off"/>
+        </form>
+      </div>
+      
+      <div class="section namespace">
+        <h3><a href="index.html">WebKit2WebExtension</a></h3>
+        <p>API Version: 4.1</p>
+        
+        <p>Library Version: 2.40.0</p>
+        
+      </div>
+      
+<div class="section">
+  <h5>Type</h5>
+  <div class="links">
+    <a href="class.WebPage.html">WebPage</a>
+  </div>
+</div>
+<div class="section">
+  <h5>Signals</h5>
+  <div class="links">
+  
+    <a class="signal" href="signal.WebPage.console-message-sent.html">console-message-sent</a>
+  
+    <a class="signal" href="signal.WebPage.context-menu.html">context-menu</a>
+  
+    <a class="signal" href="signal.WebPage.document-loaded.html">document-loaded</a>
+  
+    <a class="signal" href="signal.WebPage.form-controls-associated.html">form-controls-associated</a>
+  
+    <a class="signal" href="signal.WebPage.form-controls-associated-for-frame.html">form-controls-associated-for-frame</a>
+  
+    <a class="signal" href="signal.WebPage.send-request.html">send-request</a>
+  
+    <a class="signal" href="signal.WebPage.user-message-received.html">user-message-received</a>
+  
+    <a class="signal current" href="signal.WebPage.will-submit-form.html">will-submit-form</a>
+  
+  </div>
+</div>
+
+    </nav>
+    
+    <button id="btn-to-top" class="hidden"><span class="up-arrow"></span></button>
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Signal</h3>
+    <h1><a href="index.html">WebKit2WebExtension</a><span class="sep"></span><a href="class.WebPage.html">WebPage</a>::will-submit-form</h1>
+  </header>
+
+  <section>
+    <div class="declaration toggle-wrapper">
+      <h4 id="declaration">
+        Declaration
+        <a href="#declaration" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <pre><code><div class="highlight"><pre><span></span><span class="kt">void</span>
+<span class="n">will_submit_form</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">WebKitWebPage</span><span class="o">*</span><span class="w"> </span><span class="n">self</span><span class="p">,</span>
+<span class="w">  </span><span class="n">WebKitDOMElement</span><span class="o">*</span><span class="w"> </span><span class="n">form</span><span class="p">,</span>
+<span class="w">  </span><span class="n">WebKit2WebExtensionFormSubmissionStep</span><span class="o">*</span><span class="w"> </span><span class="n">step</span><span class="p">,</span>
+<span class="w">  </span><span class="n">WebKitFrame</span><span class="o">*</span><span class="w"> </span><span class="n">source_frame</span><span class="p">,</span>
+<span class="w">  </span><span class="n">WebKitFrame</span><span class="o">*</span><span class="w"> </span><span class="n">target_frame</span><span class="p">,</span>
+<span class="w">  </span><span class="kt">char</span><span class="o">**</span><span class="w"> </span><span class="n">text_field_names</span><span class="p">,</span>
+<span class="w">  </span><span class="kt">char</span><span class="o">**</span><span class="w"> </span><span class="n">text_field_values</span><span class="p">,</span>
+<span class="w">  </span><span class="n">gpointer</span><span class="w"> </span><span class="n">user_data</span>
+<span class="p">)</span>
+</pre></div>
+</code></pre>
+      </div>
+    </div>
+
+    <div class="description toggle-wrapper">
+      <h4 id="description" style="display:flex;">
+        Description
+        <a href="#description" class="anchor"></a>
+        
+        <a class="srclink" title="go to source location" href="https://github.com/WebKit/WebKit/tree/Source/WebKit/WebProcess/InjectedBundle/API/glib/WebKitWebPage.cpp#L688">[src]</a>
+        
+      </h4>
+
+      <div class="docblock">
+        <p>This signal is emitted to indicate various points during form
+submission. <code>step</code> indicates the current stage of form&nbsp;submission.</p>
+<p>If this signal is emitted with <code>WEBKIT_FORM_SUBMISSION_WILL_SEND_DOM_EVENT</code>,
+then the <span class="caps">DOM</span> submit event is about to be emitted. JavaScript code
+may rely on the submit event to detect that the user has clicked
+on a submit button, and to possibly cancel the form submission
+before <code>WEBKIT_FORM_SUBMISSION_WILL_COMPLETE</code>. However, beware
+that, for historical reasons, the submit event is not emitted at
+all if the form submission is triggered by JavaScript. For these
+reasons, <code>WEBKIT_FORM_SUBMISSION_WILL_SEND_DOM_EVENT</code> may not
+be used to reliably detect whether a form will be submitted.
+Instead, use it to detect if a user has clicked on a form&#8217;s
+submit button even if JavaScript later cancels the form
+submission, or to read the values of the form&#8217;s fields even if
+JavaScript later clears certain fields before submitting. This
+may be needed, for example, to implement a robust browser
+password manager, as some misguided websites may use such
+techniques to attempt to thwart password&nbsp;managers.</p>
+<p>If this signal is emitted with <code>WEBKIT_FORM_SUBMISSION_WILL_COMPLETE</code>,
+the form will imminently be submitted. It can no longer be
+cancelled. This event always occurs immediately before a form is
+submitted to its target, so use this event to reliably detect
+when a form is submitted. This event occurs after
+<code>WEBKIT_FORM_SUBMISSION_WILL_SEND_DOM_EVENT</code> if that event is&nbsp;emitted.</p>
+      </div>
+
+      <div class="docblock">
+        <table>
+          <tr><td>Default handler:</td><td> <p>The default handler is called after the handlers added via <code>g_signal_connect()</code>.</p></td></tr>
+          
+          
+          
+          
+          
+          
+          <tr><td>Available since:</td><td>2.20</td></tr>
+          
+          
+          <tr><td>Deprecated since:</td><td>2.40</td></tr>
+          <tr><td colspan="2"><p>Use <code>WebKitWebFormManager::will-send-submit-event</code> and <code>WebKitWebFormManager::will-submit-form</code> instead.</p></td></tr>
+          
+        </table>
+      </div>
+
+      
+    </div>
+
+    
+    <div class="parameters toggle-wrapper">
+      <h4 id="parameters">
+        Parameters
+        <a href="#parameters" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <table class="arguments">
+          
+          <tr class="arg-name">
+            <td><code>form</code></td>
+            <td><a href="class.DOMElement.html"><code>WebKitDOMElement</code></a></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>The <code>WebKitDOMElement</code> to be submitted, which will always correspond to an&nbsp;HTMLFormElement.</p></td>
+          </tr>
+          
+          
+          
+          
+          
+          
+          
+          <tr><td>&nbsp;</td><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
+          
+          
+          <tr class="arg-name">
+            <td><code>step</code></td>
+            <td><a href="enum.FormSubmissionStep.html"><code>WebKitFormSubmissionStep</code></a></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>A <code>WebKitFormSubmissionEventType</code> indicating the current
+stage of form&nbsp;submission.</p></td>
+          </tr>
+          
+          
+          
+          
+          
+          
+          
+          <tr><td>&nbsp;</td><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
+          
+          
+          <tr class="arg-name">
+            <td><code>source_frame</code></td>
+            <td><a href="class.Frame.html"><code>WebKitFrame</code></a></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>The <code>WebKitFrame</code> containing the form to be&nbsp;submitted.</p></td>
+          </tr>
+          
+          
+          
+          
+          
+          
+          
+          <tr><td>&nbsp;</td><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
+          
+          
+          <tr class="arg-name">
+            <td><code>target_frame</code></td>
+            <td><a href="class.Frame.html"><code>WebKitFrame</code></a></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>The <code>WebKitFrame</code> containing the form&#8217;s target,
+which may be the same as <code>source_frame</code> if no target was&nbsp;specified.</p></td>
+          </tr>
+          
+          
+          
+          
+          
+          
+          
+          <tr><td>&nbsp;</td><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
+          
+          
+          <tr class="arg-name">
+            <td><code>text_field_names</code></td>
+            <td>An array of&nbsp;<code>utf8</code></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>Names of
+the form&#8217;s text&nbsp;fields.</p></td>
+          </tr>
+          
+          
+          
+          
+          
+          
+          
+          <tr><td>&nbsp;</td><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
+          <tr><td>&nbsp;</td><td>Each element is a NUL terminated UTF-8 string.</td></tr>
+          
+          <tr class="arg-name">
+            <td><code>text_field_values</code></td>
+            <td>An array of&nbsp;<code>utf8</code></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>Values
+of the form&#8217;s text&nbsp;fields.</p></td>
+          </tr>
+          
+          
+          
+          
+          
+          
+          
+          <tr><td>&nbsp;</td><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
+          <tr><td>&nbsp;</td><td>Each element is a NUL terminated UTF-8 string.</td></tr>
+          
+          
+        </table>
+      </div>
+    </div>
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+</body>
+</html>

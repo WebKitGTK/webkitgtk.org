@@ -1,0 +1,234 @@
+<!--
+SPDX-FileCopyrightText: 2021 GNOME Foundation
+
+SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
+-->
+
+<!--
+SPDX-FileCopyrightText: 2021 GNOME Foundation
+
+SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>WebKit2WebExtension.ContextMenuItem.new</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8" />
+
+  
+  <meta property="og:type" content="website"/>
+
+  
+
+  
+  <meta property="og:title" content="WebKit2WebExtension.ContextMenuItem.new"/>
+  <meta property="og:description" content="Reference for WebKit2WebExtension.ContextMenuItem.new"/>
+  <meta name="twitter:title" content="WebKit2WebExtension.ContextMenuItem.new"/>
+  <meta name="twitter:description" content="Reference for WebKit2WebExtension.ContextMenuItem.new"/>
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  
+
+  
+  <script src="gtk3-urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+  <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    <nav class="sidebar devhelp-hidden">
+      
+      
+      <div class="search section">
+        <form id="search-form" autocomplete="off">
+          <input id="search-input" type="text" name="do-not-autocomplete" placeholder="Click, or press 's' to search" autocomplete="off"/>
+        </form>
+      </div>
+      
+      <div class="section namespace">
+        <h3><a href="index.html">WebKit2WebExtension</a></h3>
+        <p>API Version: 4.1</p>
+        
+        <p>Library Version: 2.40.0</p>
+        
+      </div>
+      
+<div class="section">
+  <h5>Type</h5>
+  <div class="links">
+    <a href="class.ContextMenuItem.html">ContextMenuItem</a>
+  </div>
+</div>
+<div class="section">
+  <h5>Constructors</h5>
+  <div class="links">
+  
+    <a class="method current" href="ctor.ContextMenuItem.new.html">new</a>
+  
+    <a class="method" href="ctor.ContextMenuItem.new_from_gaction.html">new_from_gaction</a>
+  
+    <a class="method" href="ctor.ContextMenuItem.new_from_stock_action.html">new_from_stock_action</a>
+  
+    <a class="method" href="ctor.ContextMenuItem.new_from_stock_action_with_label.html">new_from_stock_action_with_label</a>
+  
+    <a class="method" href="ctor.ContextMenuItem.new_separator.html">new_separator</a>
+  
+    <a class="method" href="ctor.ContextMenuItem.new_with_submenu.html">new_with_submenu</a>
+  
+  </div>
+</div>
+
+    </nav>
+    
+    <button id="btn-to-top" class="hidden"><span class="up-arrow"></span></button>
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Constructor</h3>
+    <h1><a href="index.html">WebKit2WebExtension</a><span class="sep"></span><a href="class.ContextMenuItem.html">ContextMenuItem</a><span class="sep"></span>new</h1>
+  </header>
+
+  <section>
+    <div class="declaration toggle-wrapper">
+      <h4 id="declaration" style="display:flex;">
+        Declaration
+        <a href="#declaration" class="anchor"></a>
+        
+        <a class="srclink" title="go to source location" href="https://github.com/WebKit/WebKit/tree/WebKitBuild/Release/WebKitGTK/DerivedSources/webkit/WebKitContextMenuItem.h#L56">[src]</a>
+        
+      </h4>
+
+      <div class="docblock">
+        <pre><code><div class="highlight"><pre><span></span><span class="n">WebKitContextMenuItem</span><span class="o">*</span>
+<span class="n">webkit_context_menu_item_new</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">GtkAction</span><span class="o">*</span><span class="w"> </span><span class="n">action</span>
+<span class="p">)</span>
+</pre></div>
+</code></pre>
+      </div>
+    </div>
+
+    <div class="description toggle-wrapper">
+      <h4 id="description" style="display:flex;">
+        Description
+        <a href="#description" class="anchor"></a>
+        
+        <a class="srclink" title="go to source location" href="https://github.com/WebKit/WebKit/tree/Source/WebKit/Shared/API/glib/WebKitContextMenuItem.cpp#L128">[src]</a>
+        
+      </h4>
+
+      <div class="docblock">
+        <p>Creates a new <code>WebKitContextMenuItem</code> for the given <code>action</code>.</p>
+      </div>
+
+      <div class="docblock">
+        <table>
+          
+          
+          
+          <tr><td>Deprecated since:</td><td>2.18</td></tr>
+          <tr><td colspan="2"><p>Use <code>webkit_context_menu_item_new_from_gaction()</code> instead.</p></td></tr>
+          
+          
+        </table>
+      </div>
+
+      
+    </div>
+
+    
+    <div class="parameters toggle-wrapper">
+      <h4 id="parameters">
+        Parameters
+        <a href="#parameters" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <table class="arguments">
+          
+          <tr class="arg-name">
+            <td><code>action</code></td>
+            <td><a href="javascript:void(0)" data-link="class.Action.html" data-namespace="Gtk" class="external"><code>GtkAction</code></a></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>A <code>GtkAction</code>.</p></td>
+          </tr>
+          
+          
+          
+          
+          
+          
+          
+          <tr><td>&nbsp;</td><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
+          
+          
+          
+        </table>
+      </div>
+    </div>
+    
+
+    
+    <div class="return-value toggle-wrapper">
+      <h4 id="return-value">
+        Return value
+        <a href="#return-value" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <table class="returns">
+          <tr class="arg-name">
+            <td>Returns:</td>
+            <td><a href="class.ContextMenuItem.html"><code>WebKitContextMenuItem</code></a></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>The newly created <code>WebKitContextMenuItem</code> object.</p></td>
+          </tr>
+          
+          
+          
+          <tr><td>&nbsp;</td><td title="transfer: none">The data is owned by the called function.</td></tr>
+          
+          
+        </table>
+      </div>
+    </div>
+    
+  </section>
+</section>
+
+
+    
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+</body>
+</html>
