@@ -1,0 +1,8 @@
+CVE-2022-48503: Dongzhuo Zhao working with ADLab of Venustech, and ZhaoHai of Cyberpeace Tech Co., Ltd. (WebKitGTK and WPE WebKit before 2.38.0)
+CVE-2023-32435: Georgy Kucherin (@kucher1n), Leonid Bezvershenko (@bzvr_), and Boris Larin (@oct0xor) of Kaspersky (WebKitGTK and WPE WebKit before 2.40.0)
+CVE-2023-32439: an anonymous researcher (WebKitGTK and WPE WebKit before 2.40.3)
+
+
+MANUALDESCRIPTION : CVE-2022-48503 : Impact: Processing web content may lead to arbitrary code execution. Description: The issue was addressed with improved bounds checks.
+MANUALDESCRIPTION : CVE-2023-32435 : Impact: Processing web content may lead to arbitrary code execution. Apple is aware of a report that this issue may have been actively exploited. Description: A memory corruption issue was addressed with improved state management.
+MANUALDESCRIPTION : CVE-2023-32439 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Apple is aware of a report that this issue may have been actively exploited. Description: A type confusion issue was addressed with improved checks.
