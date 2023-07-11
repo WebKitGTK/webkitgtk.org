@@ -374,8 +374,7 @@ you may:
   WebKitGTK bugs are typically prefixed by "[GTK]." A bug report with
   a minimal, reproducible test case is often just as valuable as a patch.
 
-- Join the #webkitgtk IRC channel at irc.gnome.org or on Matrix at
-  #webkitgtk:matrix.org.
+- Join the #webkitgtk:matrix.org Matrix channel.
 
 - Subscribe to the WebKitGTK mailing list,
   https://lists.webkit.org/mailman/listinfo/webkit-gtk or the
