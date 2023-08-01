@@ -1,0 +1,498 @@
+<!--
+SPDX-FileCopyrightText: 2021 GNOME Foundation
+
+SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
+-->
+
+<!--
+SPDX-FileCopyrightText: 2021 GNOME Foundation
+
+SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>WebKit2WebExtension.DOMMouseEvent.init_mouse_event</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8" />
+
+  
+  <meta property="og:type" content="website"/>
+
+  
+
+  
+  <meta priority="og:title" content="WebKit2WebExtension.DOMMouseEvent.init_mouse_event"/>
+  <meta priority="og:description" content="Reference for WebKit2WebExtension.DOMMouseEvent.init_mouse_event"/>
+  <meta name="twitter:title" content="WebKit2WebExtension.DOMMouseEvent.init_mouse_event"/>
+  <meta name="twitter:description" content="Reference for WebKit2WebExtension.DOMMouseEvent.init_mouse_event"/>
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  
+
+  
+  <script src="gtk3-urlmap.js"></script>
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+  <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    <nav class="sidebar devhelp-hidden">
+      
+      
+      <div class="search section">
+        <form id="search-form" autocomplete="off">
+          <input id="search-input" type="text" name="do-not-autocomplete" placeholder="Click, or press 's' to search" autocomplete="off"/>
+        </form>
+      </div>
+      
+      <div class="section namespace">
+        <h3><a href="index.html">WebKit2WebExtension</a></h3>
+        <p>API Version: 4.1</p>
+        
+        <p>Library Version: 2.40.5</p>
+        
+      </div>
+      
+<div class="section">
+  <h5>Type</h5>
+  <div class="links">
+    <a href="class.DOMMouseEvent.html">DOMMouseEvent</a>
+  </div>
+</div>
+<div class="section">
+  <h5>Methods</h5>
+  <div class="links">
+  
+    <a class="method" href="method.DOMMouseEvent.get_alt_key.html">get_alt_key</a>
+  
+    <a class="method" href="method.DOMMouseEvent.get_button.html">get_button</a>
+  
+    <a class="method" href="method.DOMMouseEvent.get_client_x.html">get_client_x</a>
+  
+    <a class="method" href="method.DOMMouseEvent.get_client_y.html">get_client_y</a>
+  
+    <a class="method" href="method.DOMMouseEvent.get_ctrl_key.html">get_ctrl_key</a>
+  
+    <a class="method" href="method.DOMMouseEvent.get_from_element.html">get_from_element</a>
+  
+    <a class="method" href="method.DOMMouseEvent.get_meta_key.html">get_meta_key</a>
+  
+    <a class="method" href="method.DOMMouseEvent.get_offset_x.html">get_offset_x</a>
+  
+    <a class="method" href="method.DOMMouseEvent.get_offset_y.html">get_offset_y</a>
+  
+    <a class="method" href="method.DOMMouseEvent.get_related_target.html">get_related_target</a>
+  
+    <a class="method" href="method.DOMMouseEvent.get_screen_x.html">get_screen_x</a>
+  
+    <a class="method" href="method.DOMMouseEvent.get_screen_y.html">get_screen_y</a>
+  
+    <a class="method" href="method.DOMMouseEvent.get_shift_key.html">get_shift_key</a>
+  
+    <a class="method" href="method.DOMMouseEvent.get_to_element.html">get_to_element</a>
+  
+    <a class="method" href="method.DOMMouseEvent.get_x.html">get_x</a>
+  
+    <a class="method" href="method.DOMMouseEvent.get_y.html">get_y</a>
+  
+    <a class="method current" href="method.DOMMouseEvent.init_mouse_event.html">init_mouse_event</a>
+  
+  </div>
+</div>
+
+    </nav>
+    
+    <button id="btn-to-top" class="hidden"><span class="up-arrow"></span></button>
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Method</h3>
+    <h1><a href="index.html">WebKit2WebExtension</a><span class="sep"></span><a href="class.DOMMouseEvent.html">DOMMouseEvent</a><span class="sep"></span>init_mouse_event</h1>
+  </header>
+
+  <section>
+    <div class="declaration toggle-wrapper">
+      <h4 style="display:flex;" id="declaration">
+        Declaration
+        <a class="anchor" href="#declaration"></a>
+        
+        <a class="srclink" title="go to source location" href="https://github.com/WebKit/WebKit/tree/Source/WebKit/WebProcess/InjectedBundle/API/gtk/DOM/WebKitDOMMouseEvent.h#L74">[src]</a>
+        
+      </h4>
+
+      <div class="docblock c-decl">
+        <pre><code><div class="highlight"><pre><span></span><span class="kt">void</span>
+<span class="n">webkit_dom_mouse_event_init_mouse_event</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">WebKitDOMMouseEvent</span><span class="o">*</span><span class="w"> </span><span class="n">self</span><span class="p">,</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">gchar</span><span class="o">*</span><span class="w"> </span><span class="n">type</span><span class="p">,</span>
+<span class="w">  </span><span class="n">gboolean</span><span class="w"> </span><span class="n">canBubble</span><span class="p">,</span>
+<span class="w">  </span><span class="n">gboolean</span><span class="w"> </span><span class="n">cancelable</span><span class="p">,</span>
+<span class="w">  </span><span class="n">WebKitDOMDOMWindow</span><span class="o">*</span><span class="w"> </span><span class="n">view</span><span class="p">,</span>
+<span class="w">  </span><span class="n">glong</span><span class="w"> </span><span class="n">detail</span><span class="p">,</span>
+<span class="w">  </span><span class="n">glong</span><span class="w"> </span><span class="n">screenX</span><span class="p">,</span>
+<span class="w">  </span><span class="n">glong</span><span class="w"> </span><span class="n">screenY</span><span class="p">,</span>
+<span class="w">  </span><span class="n">glong</span><span class="w"> </span><span class="n">clientX</span><span class="p">,</span>
+<span class="w">  </span><span class="n">glong</span><span class="w"> </span><span class="n">clientY</span><span class="p">,</span>
+<span class="w">  </span><span class="n">gboolean</span><span class="w"> </span><span class="n">ctrlKey</span><span class="p">,</span>
+<span class="w">  </span><span class="n">gboolean</span><span class="w"> </span><span class="n">altKey</span><span class="p">,</span>
+<span class="w">  </span><span class="n">gboolean</span><span class="w"> </span><span class="n">shiftKey</span><span class="p">,</span>
+<span class="w">  </span><span class="n">gboolean</span><span class="w"> </span><span class="n">metaKey</span><span class="p">,</span>
+<span class="w">  </span><span class="n">gushort</span><span class="w"> </span><span class="n">button</span><span class="p">,</span>
+<span class="w">  </span><span class="n">WebKitDOMEventTarget</span><span class="o">*</span><span class="w"> </span><span class="n">relatedTarget</span>
+<span class="p">)</span>
+</pre></div>
+</code></pre>
+      </div>
+    </div>
+
+    <div class="description toggle-wrapper">
+      <h4 style="display:flex;" id="description">
+        Description
+        <a class="anchor" href="#description"></a>
+        
+      </h4>
+
+      <div class="docblock">
+        No description available.
+      </div>
+
+      <div class="docblock">
+        <table>
+          
+          
+          
+          <tr><td>Deprecated since:</td><td>2.22</td></tr>
+          <tr><td colspan="2"><p>Use JavaScriptCore <span class="caps">API</span>&nbsp;instead.</p></td></tr>
+          
+          
+          
+          
+        </table>
+      </div>
+
+      
+    </div>
+
+    
+    <div class="parameters toggle-wrapper">
+      <h4 id="parameters">
+        Parameters
+        <a href="#parameters" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <table class="arguments">
+          
+          <tr class="arg-name">
+            <td><code>type</code></td>
+            <td><code>const gchar*</code></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>A&nbsp;#gchar.</p></td>
+          </tr>
+          
+          
+          
+          
+          
+          
+          
+          <tr><td>&nbsp;</td><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
+          <tr><td>&nbsp;</td><td>The value is a NUL terminated UTF-8 string.</td></tr>
+          
+          <tr class="arg-name">
+            <td><code>canBubble</code></td>
+            <td><code>gboolean</code></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>A&nbsp;#gboolean.</p></td>
+          </tr>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <tr class="arg-name">
+            <td><code>cancelable</code></td>
+            <td><code>gboolean</code></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>A&nbsp;#gboolean.</p></td>
+          </tr>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <tr class="arg-name">
+            <td><code>view</code></td>
+            <td><a href="class.DOMDOMWindow.html"><code>WebKitDOMDOMWindow</code></a></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>A <code>WebKitDOMDOMWindow</code>.</p></td>
+          </tr>
+          
+          
+          
+          
+          
+          
+          
+          <tr><td>&nbsp;</td><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
+          
+          
+          <tr class="arg-name">
+            <td><code>detail</code></td>
+            <td><code>glong</code></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>A&nbsp;#glong.</p></td>
+          </tr>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <tr class="arg-name">
+            <td><code>screenX</code></td>
+            <td><code>glong</code></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>A&nbsp;#glong.</p></td>
+          </tr>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <tr class="arg-name">
+            <td><code>screenY</code></td>
+            <td><code>glong</code></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>A&nbsp;#glong.</p></td>
+          </tr>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <tr class="arg-name">
+            <td><code>clientX</code></td>
+            <td><code>glong</code></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>A&nbsp;#glong.</p></td>
+          </tr>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <tr class="arg-name">
+            <td><code>clientY</code></td>
+            <td><code>glong</code></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>A&nbsp;#glong.</p></td>
+          </tr>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <tr class="arg-name">
+            <td><code>ctrlKey</code></td>
+            <td><code>gboolean</code></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>A&nbsp;#gboolean.</p></td>
+          </tr>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <tr class="arg-name">
+            <td><code>altKey</code></td>
+            <td><code>gboolean</code></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>A&nbsp;#gboolean.</p></td>
+          </tr>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <tr class="arg-name">
+            <td><code>shiftKey</code></td>
+            <td><code>gboolean</code></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>A&nbsp;#gboolean.</p></td>
+          </tr>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <tr class="arg-name">
+            <td><code>metaKey</code></td>
+            <td><code>gboolean</code></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>A&nbsp;#gboolean.</p></td>
+          </tr>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <tr class="arg-name">
+            <td><code>button</code></td>
+            <td><code>gushort</code></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>A&nbsp;#gushort.</p></td>
+          </tr>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <tr class="arg-name">
+            <td><code>relatedTarget</code></td>
+            <td><a href="iface.DOMEventTarget.html"><code>WebKitDOMEventTarget</code></a></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>A <code>WebKitDOMEventTarget</code>.</p></td>
+          </tr>
+          
+          
+          
+          
+          
+          
+          
+          <tr><td>&nbsp;</td><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
+          
+          
+          
+        </table>
+      </div>
+    </div>
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!--
+SPDX-FileCopyrightText: 2021 GNOME Foundation
+
+SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
+-->
+
+<!--
+SPDX-FileCopyrightText: 2021 GNOME Foundation
+
+SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>WebKit2.UserContentFilterStore.fetch_identifiers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8" />
+
+  
+  <meta property="og:type" content="website"/>
+
+  
+
+  
+  <meta priority="og:title" content="WebKit2.UserContentFilterStore.fetch_identifiers"/>
+  <meta priority="og:description" content="Reference for WebKit2.UserContentFilterStore.fetch_identifiers"/>
+  <meta name="twitter:title" content="WebKit2.UserContentFilterStore.fetch_identifiers"/>
+  <meta name="twitter:description" content="Reference for WebKit2.UserContentFilterStore.fetch_identifiers"/>
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+
+  
+  
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  
+
+  
+  
+  <script src="fzy.js"></script>
+  <script src="search.js"></script>
+  
+  <script src="main.js"></script>
+  <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    <nav class="sidebar devhelp-hidden">
+      
+      
+      <div class="search section">
+        <form id="search-form" autocomplete="off">
+          <input id="search-input" type="text" name="do-not-autocomplete" placeholder="Click, or press 's' to search" autocomplete="off"/>
+        </form>
+      </div>
+      
+      <div class="section namespace">
+        <h3><a href="index.html">WebKit2</a></h3>
+        <p>API Version: 4.1</p>
+        
+        <p>Library Version: 2.40.5</p>
+        
+      </div>
+      
+<div class="section">
+  <h5>Type</h5>
+  <div class="links">
+    <a href="class.UserContentFilterStore.html">UserContentFilterStore</a>
+  </div>
+</div>
+<div class="section">
+  <h5>Methods</h5>
+  <div class="links">
+  
+    <a class="method current" href="method.UserContentFilterStore.fetch_identifiers.html">fetch_identifiers</a>
+  
+    <a class="method" href="method.UserContentFilterStore.fetch_identifiers_finish.html">fetch_identifiers_finish</a>
+  
+    <a class="method" href="method.UserContentFilterStore.get_path.html">get_path</a>
+  
+    <a class="method" href="method.UserContentFilterStore.load.html">load</a>
+  
+    <a class="method" href="method.UserContentFilterStore.load_finish.html">load_finish</a>
+  
+    <a class="method" href="method.UserContentFilterStore.remove.html">remove</a>
+  
+    <a class="method" href="method.UserContentFilterStore.remove_finish.html">remove_finish</a>
+  
+    <a class="method" href="method.UserContentFilterStore.save.html">save</a>
+  
+    <a class="method" href="method.UserContentFilterStore.save_finish.html">save_finish</a>
+  
+    <a class="method" href="method.UserContentFilterStore.save_from_file.html">save_from_file</a>
+  
+    <a class="method" href="method.UserContentFilterStore.save_from_file_finish.html">save_from_file_finish</a>
+  
+  </div>
+</div>
+
+    </nav>
+    
+    <button id="btn-to-top" class="hidden"><span class="up-arrow"></span></button>
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Method</h3>
+    <h1><a href="index.html">WebKit2</a><span class="sep"></span><a href="class.UserContentFilterStore.html">UserContentFilterStore</a><span class="sep"></span>fetch_identifiers</h1>
+  </header>
+
+  <section>
+    <div class="declaration toggle-wrapper">
+      <h4 style="display:flex;" id="declaration">
+        Declaration
+        <a class="anchor" href="#declaration"></a>
+        
+        <a class="srclink" title="go to source location" href="https://github.com/WebKit/WebKit/tree/WebKitBuild/Release/WebKitGTK/DerivedSources/webkit/WebKitUserContentFilterStore.h#L116">[src]</a>
+        
+      </h4>
+
+      <div class="docblock c-decl">
+        <pre><code><div class="highlight"><pre><span></span><span class="kt">void</span>
+<span class="n">webkit_user_content_filter_store_fetch_identifiers</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">WebKitUserContentFilterStore</span><span class="o">*</span><span class="w"> </span><span class="n">store</span><span class="p">,</span>
+<span class="w">  </span><span class="n">GCancellable</span><span class="o">*</span><span class="w"> </span><span class="n">cancellable</span><span class="p">,</span>
+<span class="w">  </span><span class="n">GAsyncReadyCallback</span><span class="w"> </span><span class="n">callback</span><span class="p">,</span>
+<span class="w">  </span><span class="n">gpointer</span><span class="w"> </span><span class="n">user_data</span>
+<span class="p">)</span>
+</pre></div>
+</code></pre>
+      </div>
+    </div>
+
+    <div class="description toggle-wrapper">
+      <h4 style="display:flex;" id="description">
+        Description
+        <a class="anchor" href="#description"></a>
+        
+        <a class="srclink" title="go to source location" href="https://github.com/WebKit/WebKit/tree/Source/WebKit/UIProcess/API/glib/WebKitUserContentFilterStore.cpp#L483">[src]</a>
+        
+      </h4>
+
+      <div class="docblock">
+        <p>Asynchronously retrieve a list of the identifiers for all the stored&nbsp;filters.</p>
+<p>When the operation is finished, <code>callback</code> will be invoked, which then can use
+<code>webkit_user_content_filter_store_fetch_identifiers_finish()</code> to obtain the list of
+filter&nbsp;identifiers.</p>
+      </div>
+
+      <div class="docblock">
+        <table>
+          
+          
+          <tr><td>Available since:</td><td>2.24</td></tr>
+          
+          
+          
+          
+          
+        </table>
+      </div>
+
+      
+    </div>
+
+    
+    <div class="parameters toggle-wrapper">
+      <h4 id="parameters">
+        Parameters
+        <a href="#parameters" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <table class="arguments">
+          
+          <tr class="arg-name">
+            <td><code>cancellable</code></td>
+            <td><a href="javascript:void(0)" data-link="class.Cancellable.html" data-namespace="Gio" class="external"><code>GCancellable</code></a></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>A <code>GCancellable</code> or <code>NULL</code> to&nbsp;ignore.</p></td>
+          </tr>
+          
+          <tr><td>&nbsp;</td><td>The argument can be <code>NULL</code>.</td></tr>
+          
+          
+          
+          
+          
+          <tr><td>&nbsp;</td><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
+          
+          
+          <tr class="arg-name">
+            <td><code>callback</code></td>
+            <td><a href="javascript:void(0)" data-link="callback.AsyncReadyCallback.html" data-namespace="Gio" class="external"><code>GAsyncReadyCallback</code></a></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>A <code>GAsyncReadyCallback</code> to call when the removal is&nbsp;completed.</p></td>
+          </tr>
+          
+          <tr><td>&nbsp;</td><td>The argument can be <code>NULL</code>.</td></tr>
+          
+          
+          
+          
+          
+          
+          
+          
+          <tr class="arg-name">
+            <td><code>user_data</code></td>
+            <td><code>gpointer</code></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>The data to pass to the callback&nbsp;function.</p></td>
+          </tr>
+          
+          <tr><td>&nbsp;</td><td>The argument can be <code>NULL</code>.</td></tr>
+          
+          
+          
+          
+          
+          <tr><td>&nbsp;</td><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
+          
+          
+          
+        </table>
+      </div>
+    </div>
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+</body>
+</html>
