@@ -1,0 +1,45 @@
+#!/bin/bash
+# This script basically tries to get all WebKit-related CVEs from the Apple security advisories
+# and for each of such CVEs it checks if it has been already reported here in a WSA
+# or if it is marked as IGNORED and if a CVE is not handled it prints the info about it.
+#
+set -u
+
+fatal () {
+	echo "FATAL: ${@}" 1>&2
+	exit 1
+}
+
+THISDIR="$(dirname $(readlink -f ${0}))"
+CVEDATADIR="${THISDIR}/cvedata"
+test -d "${CVEDATADIR}" || fatal "Can not found dir: ${CVEDATADIR}"
+
+IGNOREDCVES="(CVE-1999-0001|CVE-2022-22610|CVE-2022-32868|CVE-2022-32922|CVE-2022-32892|CVE-2022-46696|CVE-2023-23496|CVE-2023-32423|CVE-2023-32402|CVE-2023-32409|CVE-2023-32358|CVE-2023-32445)"
+
+echo "Fetching info about WebKit-related CVEs on Apple advisories ..."
+CHECKTMPFILE="$(mktemp)"
+curl -Ls https://support.apple.com/en-us/HT201222 | grep "href.*support.apple.com/kb/"  |awk -F'href="' '{print $2}' | awk -F'"' '{print $1}' |\
+	while read url; do
+		curl  -Ls "${url}" | html2text | grep -i "webkit bugzilla" -A1 | grep -oPi '(WebKit Bugzilla.*[0-9]+|CVE-[0-9]+-[0-9]+)' |\
+			while read b; do
+				echo "${b}" | grep -qi 'webkit bugzilla'
+				b="$(echo ${b}|cut -d\:  -f2-)"
+				read c
+				echo "${c}" | grep -q 'CVE' || fatal "Unexpected string for CVE $c"
+				if grep -rq "${c}"  "${CVEDATADIR}"; then
+					grep -q "${c}" "${CHECKTMPFILE}" || echo "HANDLED: ${c}" >>  "${CHECKTMPFILE}"
+				elif echo "${IGNOREDCVES}" | grep -q "${c}"; then
+					grep -q "${c}" "${CHECKTMPFILE}" || echo "IGNORED: ${c}" >>  "${CHECKTMPFILE}"
+				else
+					grep -q "${c}" "${CHECKTMPFILE}" || echo "NEW: ${c}" >>  "${CHECKTMPFILE}"
+					echo "NEW! | ${c} | bug${b} | ${url}"
+				fi
+			done
+	done
+# Report summary
+TOTALCVES="$(wc -l ${CHECKTMPFILE}|awk '{print $1}')"
+HANDLEDCVES="$(grep -c HANDLED: ${CHECKTMPFILE})"
+IGNOREDCVES="$(grep -c IGNORED: ${CHECKTMPFILE})"
+NEWCVES="$(grep -c NEW: ${CHECKTMPFILE})"
+echo "Done. ${TOTALCVES} CVEs processed: ${NEWCVES} new CVEs. [${HANDLEDCVES} already reported and ${IGNOREDCVES} ignored]."
+rm -f "${CHECKTMPFILE}"
