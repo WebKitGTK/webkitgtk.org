@@ -6,8 +6,8 @@
 set -u
 
 fatal () {
-	echo "FATAL: ${@}" 1>&2
-	exit 1
+    echo "FATAL: ${@}" 1>&2
+    exit 1
 }
 
 THISDIR="$(dirname $(readlink -f ${0}))"
@@ -19,23 +19,23 @@ IGNOREDCVES="(CVE-1999-0001|CVE-2022-22610|CVE-2022-32868|CVE-2022-32922|CVE-202
 echo "Fetching info about WebKit-related CVEs on Apple advisories ..."
 CHECKTMPFILE="$(mktemp)"
 curl -Ls https://support.apple.com/en-us/HT201222 | grep "href.*support.apple.com/kb/"  |awk -F'href="' '{print $2}' | awk -F'"' '{print $1}' |\
-	while read url; do
-		curl  -Ls "${url}" | html2text | grep -i "webkit bugzilla" -A1 | grep -oPi '(WebKit Bugzilla.*[0-9]+|CVE-[0-9]+-[0-9]+)' |\
-			while read b; do
-				echo "${b}" | grep -qi 'webkit bugzilla'
-				b="$(echo ${b}|cut -d\:  -f2-)"
-				read c
-				echo "${c}" | grep -q 'CVE' || fatal "Unexpected string for CVE $c"
-				if grep -rq "${c}"  "${CVEDATADIR}"; then
-					grep -q "${c}" "${CHECKTMPFILE}" || echo "HANDLED: ${c}" >>  "${CHECKTMPFILE}"
-				elif echo "${IGNOREDCVES}" | grep -q "${c}"; then
-					grep -q "${c}" "${CHECKTMPFILE}" || echo "IGNORED: ${c}" >>  "${CHECKTMPFILE}"
-				else
-					grep -q "${c}" "${CHECKTMPFILE}" || echo "NEW: ${c}" >>  "${CHECKTMPFILE}"
-					echo "NEW! | ${c} | bug${b} | ${url}"
-				fi
-			done
-	done
+    while read url; do
+        curl  -Ls "${url}" | html2text | grep -i "WebKit" -A1 | grep -oPi '(WebKit[^-].*[0-9]+|CVE-[0-9]+-[0-9]+)' |\
+            while read b; do
+                b="$(echo ${b}|grep -Po "[0-9]+")"
+                echo "${b}" | grep -qP '^[0-9]+$' || fatal "Bug number should be numeric but got: $b"
+                read c
+                echo "${c}" | grep -qP 'CVE-[0-9]+-[0-9]+' || fatal "Unexpected string for CVE: $c"
+                if grep -rq "${c}"  "${CVEDATADIR}"; then
+                    grep -q "${c}" "${CHECKTMPFILE}" || echo "HANDLED: ${c}" >>  "${CHECKTMPFILE}"
+                elif echo "${IGNOREDCVES}" | grep -q "${c}"; then
+                    grep -q "${c}" "${CHECKTMPFILE}" || echo "IGNORED: ${c}" >>  "${CHECKTMPFILE}"
+                else
+                    grep -q "${c}" "${CHECKTMPFILE}" || echo "NEW: ${c}" >>  "${CHECKTMPFILE}"
+                    echo "NEW! | ${c} | bug ${b} | ${url}"
+                fi
+            done
+    done
 # Report summary
 TOTALCVES="$(wc -l ${CHECKTMPFILE}|awk '{print $1}')"
 HANDLEDCVES="$(grep -c HANDLED: ${CHECKTMPFILE})"
