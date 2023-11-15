@@ -77,6 +77,7 @@ cvetemplate_mail  = """\
     %(affected)s
     %(credits)s
     %(description)s
+    %(maybeLinkbug)s
 
 """
 
@@ -85,6 +86,7 @@ cvetemplate_md  = """\
   * %(affected)s
   * %(credits)s
   * %(description)s
+  %(maybeLinkbug)s
 
 """
 
@@ -133,6 +135,14 @@ def _parse_cve_report(textfile):
                     if cvenumber not in cve_info:
                         raise ValueError("MANUALDESCRIPTION entry for CVE %s don't has a matching entry above\n", cvenumber)
                     cve_info[cvenumber]['Description'] =  cvedescription.strip()
+                continue
+            if line.startswith("LINKBUG"):
+                _, cvenumbers, linkbug = line.split(':',2)
+                for cvenumber in cvenumbers.split(','):
+                    cvenumber = cvenumber.strip()
+                    if cvenumber not in cve_info:
+                        raise ValueError("LINKBUG entry for CVE %s don't has a matching entry above\n", cvenumber)
+                    cve_info[cvenumber]['linkbug'] =  linkbug.strip()
                 continue
             cvenumber,cvedata = line.split(':',1)
             # FIXME: Add some check that is a valid CVE
@@ -237,12 +247,18 @@ def generate_advisory(cve_info,mail=True):
         credits = _beautify_line_for_print(credits, ident)
         description = cve_info[cve]['Description']
         description = _beautify_line_for_print(description, ident)
+        maybeLinkbug = ''
+        if 'linkbug' in cve_info[cve]:
+            maybeLinkbug = cve_info[cve]['linkbug']
         if not mail:
             cvetext= '<a name="' + cve + '" href="' + _cve_mitre_links(cve) + '">' + cve +'</a>'
+            if len(maybeLinkbug) > 1:
+                maybeLinkbug  = '* ' + maybeLinkbug
         advisorytext += (cvetemplate %{ 'CVE':cvetext.strip(),
                               'affected':affected.strip(),
                               'credits':credits.strip(),
-                              'description':description.strip()
+                              'description':description.strip(),
+                              'maybeLinkbug':maybeLinkbug.strip()
                               })
     # Generate text for Footer
     fixedvers =  "We recommend updating to the latest stable versions of WebKitGTK and WPE WebKit. "
