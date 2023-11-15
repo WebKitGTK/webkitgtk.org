@@ -1,0 +1,23 @@
+CVE-2022-32919 : @real_as3617 (WebKitGTK and WPE WebKit before 2.38.4)
+CVE-2022-32933 : Binoy Chitale, MS student, Stony Brook University, Nick Nikiforakis, Associate Professor, Stony Brook University, Jason Polakis, Associate Professor, University of Illinois at Chicago, Mir Masood Ali, PhD student, University of Illinois at Chicago, Chris Kanich, Associate Professor, University of Illinois at Chicago, and Mohammad Ghasemisharif, PhD Candidate, University of Illinois at Chicago (WebKitGTK and WPE WebKit before 2.38.0)
+CVE-2022-46705 : Hyeon Park (@tree_segment) of Team ApplePIE (WebKitGTK and WPE WebKit before 2.38.4)
+CVE-2022-46725 : Hyeon Park (@tree_segment) of Team ApplePIE (WebKitGTK and WPE WebKit before 2.38.4)
+CVE-2023-32359 : Claire Houston (WebKitGTK and WPE WebKit before 2.42.0)
+CVE-2023-41983 : 이준성(Junsung Lee) (WebKitGTK and WPE WebKit before 2.42.2)
+CVE-2023-42852 : an anonymous researcher (WebKitGTK and WPE WebKit before 2.42.2)
+
+
+MANUALDESCRIPTION: CVE-2022-32919 : Impact: Visiting a website that frames malicious content may lead to UI spoofing. Description: The issue was addressed with improved UI handling.
+MANUALDESCRIPTION: CVE-2022-32933 : Impact: A website may be able to track the websites a user visited in private browsing mode. Description: An information disclosure issue was addressed by removing the vulnerable code.
+MANUALDESCRIPTION: CVE-2022-46705, CVE-2022-46725 : Impact: Visiting a malicious website may lead to address bar spoofing. Description: A spoofing issue existed in the handling of URLs. This issue was addressed with improved input validation.
+MANUALDESCRIPTION: CVE-2023-32359 : Impact: A user's password may be read aloud by a text-to-speech accessibility feature. Description: This issue was addressed with improved redaction of sensitive information.
+MANUALDESCRIPTION: CVE-2023-41983 : Impact: Processing web content may lead to a denial-of-service. Description: The issue was addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2023-42852 : Impact: Processing web content may lead to arbitrary code execution. Description: A logic issue was addressed with improved checks.
+
+LINKBUG: CVE-2022-32919 : WebKit Bugzilla: 247461
+LINKBUG: CVE-2022-32933 : WebKit Bugzilla: 239547
+LINKBUG: CVE-2022-46705 : WebKit Bugzilla: 247287
+LINKBUG: CVE-2022-46725 : WebKit Bugzilla: 247289
+LINKBUG: CVE-2023-32359 : WebKit Bugzilla: 248717
+LINKBUG: CVE-2023-41983 : WebKit Bugzilla: 260757
+LINKBUG: CVE-2023-42852 : WebKit Bugzilla: 260173
