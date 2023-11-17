@@ -170,17 +170,18 @@ class WebKitTarball:
         if self._api is not None:
             return self._api
 
-        docdir = os.path.join(self._basedir, "Documentation", "webkit2gtk-")
-        for api_version in ["4.1", "4.1", "4.0"]:
-            versioned_docdir = docdir + api_version
-            for html_dir in ["", "html"]:
-                docfile = os.path.join(versioned_docdir, html_dir, "index.html")
-                try:
-                    self._tar.getmember(docfile)
-                    self._api = api_version
-                    return self._api
-                except KeyError:
-                    continue
+        for module_name in ["webkitgtk", "webkit2gtk"]:
+            docdir = os.path.join(self._basedir, "Documentation", module_name + "-")
+            for api_version in ["6.0", "4.1", "4.0"]:
+                versioned_docdir = docdir + api_version
+                for html_dir in ["", "html"]:
+                    docfile = os.path.join(versioned_docdir, html_dir, "index.html")
+                    try:
+                        self._tar.getmember(docfile)
+                        self._api = api_version
+                        return self._api
+                    except KeyError:
+                        continue
 
         return None
 
@@ -285,7 +286,9 @@ class WebKitRelease:
 
     WK1_PKG_NAME = "webkitgtk"
     WK2_PKG_NAME = "webkit2gtk"
+    WK_PKG_NAME = "webkitgtk"
     WK2WE_PKG_NAME = "webkit2gtk-web-extension"
+    WKWE_PKG_NAME = "webkitgtk-web-process-extension"
     WKDOM_PKG_NAME = "webkitdomgtk"
     JSC_PKG_NAME = "jsc-glib"
     RELEASE_BASE_URL = "https://webkitgtk.org/releases/"
@@ -477,6 +480,7 @@ are far too many to list!
     def _get_doc_pkg_names(self):
         pkg_names = []
 
+        api_version = self._tarball.get_api_version()
         major, minor, micro, patch = self._tarball.get_version()
         # DOM Bindings API docs were introduced in 2.3 and removed in 2.37
         if major == 2 and (minor >= 3 and minor < 2.37):
@@ -492,9 +496,15 @@ are far too many to list!
 
         # WebExtension API docs have its own moduel since 2.37.
         if major > 2 or (major == 2 and minor >= 37):
-            pkg_names.append(self.WK2WE_PKG_NAME)
+            if api_version == '6.0':
+                pkg_names.append(self.WKWE_PKG_NAME)
+            else:
+                pkg_names.append(self.WK2WE_PKG_NAME)
 
-        pkg_names.append(self.WK2_PKG_NAME)
+        if api_version == '6.0':
+            pkg_names.append(self.WK_PKG_NAME)
+        else:
+            pkg_names.append(self.WK2_PKG_NAME)
 
         return pkg_names
 
