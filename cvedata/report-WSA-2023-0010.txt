@@ -4,7 +4,7 @@ CVE-2022-46705 : Hyeon Park (@tree_segment) of Team ApplePIE (WebKitGTK and WPE 
 CVE-2022-46725 : Hyeon Park (@tree_segment) of Team ApplePIE (WebKitGTK and WPE WebKit before 2.38.4)
 CVE-2023-32359 : Claire Houston (WebKitGTK and WPE WebKit before 2.42.0)
 CVE-2023-41983 : 이준성(Junsung Lee) (WebKitGTK and WPE WebKit before 2.42.2)
-CVE-2023-42852 : an anonymous researcher (WebKitGTK and WPE WebKit before 2.42.2)
+CVE-2023-42852 : Pedro Ribeiro (@pedrib1337) and Vitor Pedreira (@0xvhp_) of Agile Information Security (WebKitGTK and WPE WebKit before 2.42.2)
 
 
 MANUALDESCRIPTION: CVE-2022-32919 : Impact: Visiting a website that frames malicious content may lead to UI spoofing. Description: The issue was addressed with improved UI handling.
