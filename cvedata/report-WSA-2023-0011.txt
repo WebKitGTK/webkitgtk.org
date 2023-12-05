@@ -1,0 +1,8 @@
+CVE-2023-42916 : Clément Lecigne of Google's Threat Analysis Group (WebKitGTK and WPE WebKit before 2.42.3)
+CVE-2023-42917 : Clément Lecigne of Google's Threat Analysis Group (WebKitGTK and WPE WebKit before 2.42.3)
+
+MANUALDESCRIPTION: CVE-2023-42916 : Impact: Processing web content may disclose sensitive information. Apple is aware of a report that this issue may have been actively exploited. Description: An out-of-bounds read was addressed with improved input validation.
+MANUALDESCRIPTION: CVE-2023-42917 : Impact: Processing web content may lead to arbitrary code execution. Apple is aware of a report that this issue may have been actively exploited. Description: A memory corruption vulnerability was addressed with improved locking.
+
+LINKBUG: CVE-2023-42916 : WebKit Bugzilla: 265041
+LINKBUG: CVE-2023-42917 : WebKit Bugzilla: 265067
