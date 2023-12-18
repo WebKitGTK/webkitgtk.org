@@ -1,0 +1,10 @@
+CVE-2023-42883 : Zoom Offensive Security Team (WebKitGTK and WPE WebKit before 2.42.4)
+CVE-2023-42890 : Pwn2car (WebKitGTK and WPE WebKit before 2.42.0)
+
+
+MANUALDESCRIPTION: CVE-2023-42883 : Impact: Processing a SVG image may lead to a denial-of-service. Description: The issue was addressed with improved memory handling.
+MANUALDESCRIPTION: CVE-2023-42890 : Impact: Processing web content may lead to arbitrary code execution. Description: The issue was addressed with improved memory handling.
+
+
+LINKBUG: CVE-2023-42883 : WebKit Bugzilla: 263349
+LINKBUG: CVE-2023-42890 : WebKit Bugzilla: 259830
