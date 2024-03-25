@@ -1,0 +1,31 @@
+CVE-2024-23252 : anbu1024 of SecANT (WebKitGTK and WPE WebKit before 2.44.0)
+LINKBUG : CVE-2024-23252 : WebKit Bugzilla: 263758
+MANUALDESCRIPTION: CVE-2024-23252 : Impact: Processing web content may lead to a denial-of-service. Description: The issue was addressed with improved memory handling.
+
+CVE-2024-23254 : James Lee (@Windowsrcer) (WebKitGTK and WPE WebKit before 2.44.0)
+LINKBUG : CVE-2024-23254 : WebKit Bugzilla: 263795
+MANUALDESCRIPTION: CVE-2024-23254 : Impact: A malicious website may exfiltrate audio data cross-origin. Description: The issue was addressed with improved UI handling.
+
+CVE-2024-23263 : Johan Carlsson (joaxcar) (WebKitGTK and WPE WebKit before 2.44.0)
+LINKBUG : CVE-2024-23263 : WebKit Bugzilla: 264811
+MANUALDESCRIPTION: CVE-2024-23263 : Impact: Processing maliciously crafted web content may prevent Content Security Policy from being enforced. Description: A logic issue was addressed with improved validation.
+
+CVE-2024-23280 : An anonymous researcher (WebKitGTK and WPE WebKit before 2.44.0)
+LINKBUG : CVE-2024-23280 : WebKit Bugzilla: 266703
+MANUALDESCRIPTION: CVE-2024-23280 : Impact: A maliciously crafted webpage may be able to fingerprint the user. Description: An injection issue was addressed with improved validation.
+
+CVE-2024-23284: Georg Felber and Marco Squarcina (WebKitGTK and WPE WebKit before 2.44.0)
+LINKBUG : CVE-2024-23284 : WebKit Bugzilla: 267241
+MANUALDESCRIPTION: CVE-2024-23284 : Impact: Processing maliciously crafted web content may prevent Content Security Policy from being enforced. Description: A logic issue was addressed with improved state management.
+
+CVE-2023-42950: Nan Wang (@eternalsakura13) of 360 Vulnerability Research Institute and rushikesh nandedkar (WebKitGTK and WPE WebKit before 2.44.0)
+LINKBUG : CVE-2023-42950 : WebKit Bugzilla: 263682
+MANUALDESCRIPTION: CVE-2023-42950 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: A use after free issue was addressed with improved memory management.
+
+CVE-2023-42956: SungKwon Lee (Demon.Team) (WebKitGTK and WPE WebKit before 2.44.0)
+LINKBUG : CVE-2023-42956 : WebKit Bugzilla: 263989
+MANUALDESCRIPTION: CVE-2023-42956 : Impact: Processing web content may lead to a denial-of-service. Description: The issue was addressed with improved memory handling.
+
+CVE-2023-42843: Kacper Kwapisz (@KKKas_) (WebKitGTK and WPE WebKit before 2.44.0)
+LINKBUG : CVE-2023-42843 : WebKit Bugzilla: 260046
+MANUALDESCRIPTION: CVE-2023-42843 : Impact: Visiting a malicious website may lead to address bar spoofing. Description: An inconsistent user interface issue was addressed with improved state management.
