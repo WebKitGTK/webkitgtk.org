@@ -1,0 +1,6 @@
+CVE-2022-22620:
+  author: an anonymous researcher
+  version: 2.34.6
+  description: A use after free issue was addressed with improved memory management.
+  impact: processing maliciously crafted web content may lead to arbitrary code execution.
+    Apple is aware of a report that this issue may have been actively exploited.

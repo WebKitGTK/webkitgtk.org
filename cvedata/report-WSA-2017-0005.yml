@@ -1,0 +1,14 @@
+CVE-2017-2538:
+  author: Richard Zhu (fluorescence) working with Trend Micro's Zero Day Initiative
+  version: 2.16.4
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-2424:
+  author: Paul Thomson (using the GLFuzz tool) of the Multicore Programming Group,
+    Imperial College London
+  version: 2.16.0
+  description: An information disclosure issue existed in the processing of OpenGL
+    shaders. This issue was addressed through improved memory management.
+  impact: Processing maliciously crafted web content may result in the disclosure
+    of process memory.

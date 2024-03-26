@@ -1,0 +1,6 @@
+CVE-2022-32893:
+  author: an anonymous researcher.
+  version: 2.36.7
+  description: 'Impact: Processing maliciously crafted web content may lead to arbitrary
+    code execution. Apple is aware of a report that this issue may have been actively
+    exploited.'

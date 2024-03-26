@@ -1,5 +1,0 @@
-CVE-2016-1854 : Anonymous working with Trend Micro's Zero Day Initiative (2.12.1)
-CVE-2016-1856 : lokihardt working with Trend Micro's Zero Day Initiative (2.12.1)
-CVE-2016-1857 : Jeonghoon Shin@A.D.D and Liang Chen, Zhen Feng, wushi of KeenLab, Tencent working with Trend Micro's Zero Day Initiative (2.12.3)
-CVE-2016-1858 : Anonymous (2.12.0)
-CVE-2016-1859 : Liang Chen, wushi of KeenLab, Tencent working with Trend Micro's Zero Day Initiative (2.12.1)

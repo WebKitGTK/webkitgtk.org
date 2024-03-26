@@ -1,4 +1,0 @@
- CVE-2021-30858 : an anonymous researcher (WebKitGTK and WPE WebKit before 2.32.4)
-
-
-MANUALDESCRIPTION : CVE-2021-30858 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Apple is aware of a report that this issue may have been actively exploited. Description: A use after free issue was addressed with improved memory management.

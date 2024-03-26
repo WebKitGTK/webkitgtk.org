@@ -1,8 +1,0 @@
-CVE-2022-22662 : Prakash (@1lastBr3ath) of Threat Nix (WebKitGTK and WPE WebKit before 2.36.0)
-CVE-2022-22677 : an anonymous researcher (WebKitGTK and WPE WebKit before 2.36.4)
-CVE-2022-26710 : Chijin Zhou of ShuiMuYuLin Ltd and Tsinghua wingtecher lab (WebKitGTK and WPE WebKit before 2.36.4)
-
-
-MANUALDESCRIPTION : CVE-2022-22662 : Impact: Processing maliciously crafted web content may disclose sensitive user information. Description: A cookie management issue was addressed with improved state management.
-MANUALDESCRIPTION : CVE-2022-22677 : Impact: The video in a webRTC call may be interrupted if the audio capture gets interrupted. Description: A logic issue in the handling of concurrent media was addressed with improved state handling. NOTE: The tarballs of WebKitGTK or WPE WebKit don't ship LibWebRTC. Also the LibWebRTC support is disabled by default. You only are affected by this vulnerability if your build enabled the USE_LIBWEBRTC CMake option and used the repository as source instead of the tarballs.
-MANUALDESCRIPTION : CVE-2022-26710 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: A use after free issue was addressed with improved memory management.

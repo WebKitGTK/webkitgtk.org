@@ -1,0 +1,47 @@
+CVE-2022-42852:
+  author: hazbinhotel working with Trend Micro Zero Day Initiative.
+  version: 2.38.3
+  description: The issue was addressed with improved memory handling.
+  impact: Processing maliciously crafted web content may result in the disclosure
+    of process memory.
+CVE-2022-42856:
+  author: Clément Lecigne of Google's Threat Analysis Group.
+  version: 2.38.3
+  description: A type confusion issue was addressed with improved state handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2022-42863:
+  author: an anonymous researcher.
+  version: 2.38.0
+  description: A memory corruption issue was addressed with improved state management.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2022-42867:
+  author: Maddie Stone of Google Project Zero.
+  version: 2.38.3
+  description: A use after free issue was addressed with improved memory management.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2022-46691:
+  author: an anonymous researcher.
+  version: 2.38.1
+  description: A memory consumption issue was addressed with improved memory handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2022-46692:
+  author: KirtiKumar Anandrao Ramchandani.
+  version: 2.38.3
+  description: A logic issue was addressed with improved state management.
+  impact: Processing maliciously crafted web content may bypass Same Origin Policy.
+CVE-2022-46698:
+  author: Dohyun Lee (@l33d0hyun) of DNSLab at Korea University, Ryan Shin of IAAI
+    SecLab at Korea University.
+  version: 2.38.3
+  description: A logic issue was addressed with improved checks.
+  impact: Processing maliciously crafted web content may disclose sensitive user information.
+CVE-2022-46699:
+  author: Samuel Groß of Google V8 Security.
+  version: 2.38.3
+  description: A memory corruption issue was addressed with improved state management.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2022-46700:
+  author: Samuel Groß of Google V8 Security.
+  version: 2.38.3
+  description: A memory corruption issue was addressed with improved input validation.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.

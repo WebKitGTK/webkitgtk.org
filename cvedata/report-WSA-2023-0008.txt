@@ -1,8 +1,0 @@
-CVE-2023-28198 : hazbinhotel working with Trend Micro Zero Day Initiative (WebKitGTK and WPE WebKit before 2.40.1)
-CVE-2023-32370 : Gertjan Franken of imec-DistriNet, KU Leuven (WebKitGTK and WPE WebKit before 2.40.1)
-CVE-2023-40397 : Johan Carlsson (joaxcar) (WebKitGTK and WPE WebKit before 2.40.5)
-
-
-MANUALDESCRIPTION: CVE-2023-28198 : Impact: Processing web content may lead to arbitrary code execution. Description: A use-after-free issue was addressed with improved memory management.
-MANUALDESCRIPTION: CVE-2023-32370 : Impact: Content Security Policy to block domains with wildcards may fail. Description: A logic issue was addressed with improved validation.
-MANUALDESCRIPTION: CVE-2023-40397 : Impact: A remote attacker may be able to cause arbitrary javascript code execution. Description: The issue was addressed with improved checks.

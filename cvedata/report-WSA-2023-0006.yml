@@ -1,0 +1,11 @@
+CVE-2023-37450:
+  author: an anonymous researcher
+  version: 2.40.4
+  description: The issue was addressed with improved checks.
+  impact: Processing web content may lead to arbitrary code execution. Apple is aware
+    of a report that this issue may have been actively exploited.
+CVE-2023-32393:
+  author: Francisco Alonso (@revskills)
+  version: 2.40.0
+  description: The issue was addressed with improved memory handling.
+  impact: Processing web content may lead to arbitrary code execution.

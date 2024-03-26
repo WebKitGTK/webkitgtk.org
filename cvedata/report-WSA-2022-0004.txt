@@ -1,8 +1,0 @@
-CVE-2022-22624 : Kirin (@Pwnrin) of Tencent Security Xuanwu Lab (WebKitGTK before 2.36.0 and WPE WebKit before 2.34.7)
-CVE-2022-22628 : Kirin (@Pwnrin) of Tencent Security Xuanwu Lab (WebKitGTK before 2.36.0 and WPE WebKit before 2.34.7)
-CVE-2022-22629 : Jeonghoon Shin at Theori working with Trend Micro Zero Day Initiative (WebKitGTK before 2.36.0 and WPE WebKit before 2.34.7)
-CVE-2022-22637 : Tom McKee of Google (WebKitGTK before 2.34.4 and WPE WebKit before 2.34.4)
-
-MANUALDESCRIPTION : CVE-2022-22624, CVE-2022-22628 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: A use after free issue was addressed with improved memory management.
-MANUALDESCRIPTION : CVE-2022-22629 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: A buffer overflow issue was addressed with improved memory handling.
-MANUALDESCRIPTION : CVE-2022-22637 : Impact: A malicious website may cause unexpected cross-origin behavior. Description: A logic issue was addressed with improved state management.
