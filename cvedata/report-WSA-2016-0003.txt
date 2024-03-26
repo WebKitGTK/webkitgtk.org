@@ -1,7 +1,0 @@
-CVE-2016-1778 : 0x1byte working with Trend Micro's Zero Day Initiative (ZDI) (2.10.5)
-CVE-2016-1779 : xisigr of Tencent's Xuanwu Lab (http://www.tencent.com) (2.10.5)
-CVE-2016-1781 : Devdatta Akhawe of Dropbox, Inc (2.10.5)
-CVE-2016-1782 : Muneaki Nishimura (nishimunea) of Recruit Technologies Co.,Ltd. (2.10.5)
-CVE-2016-1783 : Mihai Parparita of Google (2.10.5)
-CVE-2016-1785 : an anonymous researcher (2.10.5)
-CVE-2016-1786 : ma.la of LINE Corporation (2.10.5)

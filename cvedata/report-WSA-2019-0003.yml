@@ -1,0 +1,123 @@
+CVE-2019-6237:
+  author: G. Geshev working with Trend Micro Zero Day Initiative, Liu Long of Qihoo
+    360 Vulcan Team
+  version: 2.24.1
+  description: Processing maliciously crafted web content may lead to arbitrary code
+    execution. Multiple memory corruption issues were addressed with improved memory
+    handling.
+CVE-2019-8571:
+  author: 01 working with Trend Micro's Zero Day Initiative
+  version: 2.24.0
+  description: Processing maliciously crafted web content may lead to arbitrary code
+    execution. Multiple memory corruption issues were addressed with improved memory
+    handling.
+CVE-2019-8583:
+  author: sakura of Tencent Xuanwu Lab, jessica (@babyjess1ca_) of Tencent Keen Lab,
+    and dwfault working at ADLab of Venustech
+  version: 2.24.0
+  description: Processing maliciously crafted web content may lead to arbitrary code
+    execution. Multiple memory corruption issues were addressed with improved memory
+    handling.
+CVE-2019-8584:
+  author: G. Geshev of MWR Labs working with Trend Micro Zero Day Initiative
+  version: 2.24.1
+  description: Processing maliciously crafted web content may lead to arbitrary code
+    execution. Multiple memory corruption issues were addressed with improved memory
+    handling.
+CVE-2019-8586:
+  author: an anonymous researcher
+  version: 2.24.0
+  description: Processing maliciously crafted web content may lead to arbitrary code
+    execution. Multiple memory corruption issues were addressed with improved memory
+    handling.
+CVE-2019-8587:
+  author: G. Geshev working with Trend Micro Zero Day Initiative
+  version: 2.24.1
+  description: Processing maliciously crafted web content may lead to arbitrary code
+    execution. Multiple memory corruption issues were addressed with improved memory
+    handling.
+CVE-2019-8594:
+  author: Suyoung Lee and Sooel Son of KAIST Web Security & Privacy Lab and HyungSeok
+    Han and Sang Kil Cha of KAIST SoftSec Lab
+  version: 2.24.0
+  description: Processing maliciously crafted web content may lead to arbitrary code
+    execution. Multiple memory corruption issues were addressed with improved memory
+    handling.
+CVE-2019-8595:
+  author: G. Geshev from MWR Labs working with Trend Micro Zero Day Initiative
+  version: 2.24.2
+  description: Processing maliciously crafted web content may lead to arbitrary code
+    execution. Multiple memory corruption issues were addressed with improved memory
+    handling.
+CVE-2019-8596:
+  author: Wen Xu of SSLab at Georgia Tech
+  version: 2.24.1
+  description: Processing maliciously crafted web content may lead to arbitrary code
+    execution. Multiple memory corruption issues were addressed with improved memory
+    handling.
+CVE-2019-8597:
+  author: 01 working with Trend Micro Zero Day Initiative
+  version: 2.24.1
+  description: Processing maliciously crafted web content may lead to arbitrary code
+    execution. Multiple memory corruption issues were addressed with improved memory
+    handling.
+CVE-2019-8601:
+  author: Fluoroacetate working with Trend Micro's Zero Day Initiative
+  version: 2.24.1
+  description: Processing maliciously crafted web content may lead to arbitrary code
+    execution. Multiple memory corruption issues were addressed with improved memory
+    handling.
+CVE-2019-8607:
+  author: Junho Jang and Hanul Choi of LINE Security Team
+  version: 2.24.2
+  description: Processing maliciously crafted web content may result in the disclosure
+    of process memory. An out-of-bounds read was addressed with improved input validation.
+CVE-2019-8608:
+  author: G. Geshev working with Trend Micro Zero Day Initiative
+  version: 2.24.1
+  description: Processing maliciously crafted web content may lead to arbitrary code
+    execution. Multiple memory corruption issues were addressed with improved memory
+    handling.
+CVE-2019-8609:
+  author: Wen Xu of SSLab, Georgia Tech
+  version: 2.24.0
+  description: Processing maliciously crafted web content may lead to arbitrary code
+    execution. Multiple memory corruption issues were addressed with improved memory
+    handling.
+CVE-2019-8610:
+  author: Anonymous working with Trend Micro Zero Day Initiative
+  version: 2.24.1
+  description: Processing maliciously crafted web content may lead to arbitrary code
+    execution. Multiple memory corruption issues were addressed with improved memory
+    handling.
+CVE-2019-8615:
+  author: G. Geshev from MWR Labs working with Trend Micro's Zero Day Initiative
+  version: 2.24.2
+  description: Processing maliciously crafted web content may lead to arbitrary code
+    execution. Multiple memory corruption issues were addressed with improved memory
+    handling.
+CVE-2019-8611:
+  author: Samuel Groß of Google Project Zero
+  version: 2.24.0
+  description: Processing maliciously crafted web content may lead to arbitrary code
+    execution. Multiple memory corruption issues were addressed with improved memory
+    handling.
+CVE-2019-8619:
+  author: Wen Xu of SSLab at Georgia Tech and Hanqing Zhao of Chaitin Security Research
+    Lab
+  version: 2.24.1
+  description: Processing maliciously crafted web content may lead to arbitrary code
+    execution. Multiple memory corruption issues were addressed with improved memory
+    handling.
+CVE-2019-8622:
+  author: Samuel Groß of Google Project Zero
+  version: 2.24.0
+  description: Processing maliciously crafted web content may lead to arbitrary code
+    execution. Multiple memory corruption issues were addressed with improved memory
+    handling.
+CVE-2019-8623:
+  author: Samuel Groß of Google Project Zero
+  version: 2.24.0
+  description: Processing maliciously crafted web content may lead to arbitrary code
+    execution. Multiple memory corruption issues were addressed with improved memory
+    handling.

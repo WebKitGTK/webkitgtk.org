@@ -1,5 +1,0 @@
-CVE-2017-2538: Richard Zhu (fluorescence) working with Trend Micro's Zero Day Initiative (2.16.4)
-CVE-2017-2424: Paul Thomson (using the GLFuzz tool) of the Multicore Programming Group, Imperial College London (2.16.0)
-
-MANUALDESCRIPTION: CVE-2017-2538: Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Description: Multiple memory corruption issues were addressed with improved memory handling.
-MANUALDESCRIPTION: CVE-2017-2424: Impact: Processing maliciously crafted web content may result in the disclosure of process memory. Description: An information disclosure issue existed in the processing of OpenGL shaders. This issue was addressed through improved memory management.

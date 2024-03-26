@@ -1,0 +1,52 @@
+CVE-2024-23252:
+  author: anbu1024 of SecANT
+  version: 2.44.0
+  bugzilla: 263758
+  description: The issue was addressed with improved memory handling.
+  impact: Processing web content may lead to a denial-of-service.
+CVE-2024-23254:
+  author: James Lee (@Windowsrcer)
+  version: 2.44.0
+  bugzilla: 263795
+  description: The issue was addressed with improved UI handling.
+  impact: A malicious website may exfiltrate audio data cross-origin.
+CVE-2024-23263:
+  author: Johan Carlsson (joaxcar)
+  version: 2.44.0
+  bugzilla: 264811
+  description: A logic issue was addressed with improved validation.
+  impact: Processing maliciously crafted web content may prevent Content Security
+    Policy from being enforced.
+CVE-2024-23280:
+  author: An anonymous researcher
+  version: 2.44.0
+  bugzilla: 266703
+  description: An injection issue was addressed with improved validation.
+  impact: A maliciously crafted webpage may be able to fingerprint the user.
+CVE-2024-23284:
+  author: Georg Felber and Marco Squarcina
+  version: 2.44.0
+  bugzilla: 267241
+  description: A logic issue was addressed with improved state management.
+  impact: Processing maliciously crafted web content may prevent Content Security
+    Policy from being enforced.
+CVE-2023-42950:
+  author: Nan Wang (@eternalsakura13) of 360 Vulnerability Research Institute and
+    rushikesh nandedkar
+  version: 2.44.0
+  bugzilla: 263682
+  description: A use after free issue was addressed with improved memory management.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2023-42956:
+  author: SungKwon Lee (Demon.Team)
+  version: 2.44.0
+  bugzilla: 263989
+  description: The issue was addressed with improved memory handling.
+  impact: Processing web content may lead to a denial-of-service.
+CVE-2023-42843:
+  author: Kacper Kwapisz (@KKKas_)
+  version: 2.44.0
+  bugzilla: 260046
+  description: An inconsistent user interface issue was addressed with improved state
+    management.
+  impact: Visiting a malicious website may lead to address bar spoofing.

@@ -1,0 +1,35 @@
+CVE-2023-39928:
+  author: Marcin 'Icewall' Noga of Cisco Talos
+  version: 2.42.0
+  description: 'A use-after-free vulnerability exists in the MediaRecorder API of
+    the WebKit GStreamer-based ports (WebKitGTK and WPE WebKit). A specially crafted
+    web page can abuse this vulnerability to cause memory corruption and potentially
+    arbitrary code execution. A user would need to to visit a malicious webpage to
+    trigger this vulnerability. WebKit Bugzilla: 260649'
+CVE-2023-35074:
+  author: Abysslab Dong Jun Kim(@smlijun) and Jong Seong Kim(@nevul37)
+  version: 2.40.0
+  description: The issue was addressed with improved memory handling.
+  impact: Processing web content may lead to arbitrary code execution.
+CVE-2023-39434:
+  author: Francisco Alonso (@revskills), and Dohyun Lee (@l33d0hyun) of PK Security
+  version: 2.40.5
+  description: A use-after-free issue was addressed with improved memory management.
+  impact: Processing web content may lead to arbitrary code execution.
+CVE-2023-40451:
+  author: an anonymous researcher
+  version: 2.40.5
+  description: This issue was addressed with improved iframe sandbox enforcement.
+  impact: An attacker with JavaScript execution may be able to execute arbitrary code.
+CVE-2023-41074:
+  author: 이준성(Junsung Lee) of Cross Republic and me Li
+  version: 2.42.0
+  description: The issue was addressed with improved checks.
+  impact: Processing web content may lead to arbitrary code execution.
+CVE-2023-41993:
+  author: Bill Marczak of The Citizen Lab at The University of Toronto's Munk School
+    and Maddie Stone of Google's Threat Analysis Group
+  version: 2.42.1
+  description: The issue was addressed with improved checks.
+  impact: Processing web content may lead to arbitrary code execution. Apple is aware
+    of a report that this issue may have been actively exploited.

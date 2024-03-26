@@ -1,0 +1,151 @@
+CVE-2017-2496:
+  author: Apple
+  version: 2.16.3
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution
+    or cause a denial of service (memory corruption and application crash).
+CVE-2017-2504:
+  author: lokihardt of Google Project Zero
+  version: 2.16.1
+  description: A logic issue existed in the handling of WebKit Editor commands. This
+    issue was addressed with improved state management.
+  impact: Processing maliciously crafted web content may lead to universal cross site
+    scripting (UXSS).
+CVE-2017-2505:
+  author: lokihardt of Google Project Zero
+  version: 2.16.0
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution
+    or cause a denial of service (memory corruption and application crash).
+CVE-2017-2506:
+  author: Zheng Huang of the Baidu Security Lab working with Trend Micro’s Zero Day
+    Initiative
+  version: 2.16.1
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution
+    or cause a denial of service (memory corruption and application crash).
+CVE-2017-2508:
+  author: lokihardt of Google Project Zero
+  version: 2.16.0
+  description: A logic issue existed in the handling of WebKit container nodes. This
+    issue was addressed with improved state management.
+  impact: Processing maliciously crafted web content may lead to universal cross site
+    scripting (UXSS).
+CVE-2017-2510:
+  author: lokihardt of Google Project Zero
+  version: 2.16.3
+  description: A logic issue existed in the handling of pageshow events. This issue
+    was addressed with improved state management.
+  impact: Processing maliciously crafted web content may lead to universal cross site
+    scripting (UXSS).
+CVE-2017-2514:
+  author: lokihardt of Google Project Zero
+  version: 2.16.0
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution
+    or cause a denial of service (memory corruption and application crash).
+CVE-2017-2515:
+  author: lokihardt of Google Project Zero
+  version: 2.16.1
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution
+    or cause a denial of service (memory corruption and application crash).
+CVE-2017-2521:
+  author: lokihardt of Google Project Zero
+  version: 2.16.0
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution
+    or cause a denial of service (memory corruption and application crash).
+CVE-2017-2525:
+  author: Kai Kang (4B5F5F4B) of Tencent’s Xuanwu Lab (tencent.com) working with Trend
+    Micro’s Zero Day Initiative
+  version: 2.16.1
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution
+    or cause a denial of service (memory corruption and application crash).
+CVE-2017-2526:
+  author: Kai Kang (4B5F5F4B) of Tencent’s Xuanwu Lab (tencent.com) working with Trend
+    Micro’s Zero Day Initiative
+  version: 2.16.1
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution
+    or cause a denial of service (memory corruption and application crash).
+CVE-2017-2528:
+  author: lokihardt of Google Project Zero
+  version: 2.16.1
+  description: A logic issue existed in the handling of WebKit cached frames. This
+    issue was addressed with improved state management.
+  impact: Processing maliciously crafted web content may lead to universal cross site
+    scripting (UXSS).
+CVE-2017-2530:
+  author: Wei Yuan of Baidu Security Lab
+  version: 2.16.1
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution
+    or cause a denial of service (memory corruption and application crash).
+CVE-2017-2531:
+  author: lokihardt of Google Project Zero
+  version: 2.16.1
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution
+    or cause a denial of service (memory corruption and application crash).
+CVE-2017-2536:
+  author: Samuel Groß and Niklas Baumstark working with Trend Micro's Zero Day Initiative
+  version: 2.16.1
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution
+    or cause a denial of service (memory corruption and application crash).
+CVE-2017-2539:
+  author: Richard Zhu (fluorescence) working with Trend Micro's Zero Day Initiative
+  version: 2.16.3
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution
+    or cause a denial of service (memory corruption and application crash).
+CVE-2017-2544:
+  author: 360 Security (@mj0011sec) working with Trend Micro's Zero Day Initiative
+  version: 2.16.1
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution
+    or cause a denial of service (memory corruption and application crash).
+CVE-2017-2547:
+  author: lokihardt of Google Project Zero, Team Sniper (Keen Lab and PC Mgr) working
+    with Trend Micro's Zero Day Initiative
+  version: 2.16.1
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution
+    or cause a denial of service (memory corruption and application crash).
+CVE-2017-2549:
+  author: lokihardt of Google Project Zero
+  version: 2.16.1
+  description: A logic issue existed in frame loading. This issue was addressed with
+    improved state management.
+  impact: Processing maliciously crafted web content may lead to universal cross site
+    scripting (UXSS).
+CVE-2017-6980:
+  author: lokihardt of Google Project Zero
+  version: 2.16.1
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution
+    or cause a denial of service (memory corruption and application crash).
+CVE-2017-6984:
+  author: lokihardt of Google Project Zero
+  version: 2.16.1
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution
+    or cause a denial of service (memory corruption and application crash).

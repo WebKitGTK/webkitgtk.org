@@ -1,0 +1,36 @@
+CVE-2020-13584:
+  author: Marcin 'Icewall' Noga of Cisco Talos
+  version:
+    gtk: 2.30.3
+    wpe: 2.30.3
+  description: A use after free issue was addressed with improved memory management.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2020-9948:
+  author: Brendan Draper (@6r3nd4n) working with Trend Micro Zero Day Initiative
+  version:
+    gtk: 2.30.0
+    wpe: 2.30.0
+  description: A type confusion issue was addressed with improved memory handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2020-9951:
+  author: Marcin 'Icewall' Noga of Cisco Talos
+  version:
+    gtk: 2.30.0
+    wpe: 2.30.0
+  description: A use after free issue was addressed with improved memory management.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2020-9952:
+  author: Ryan Pickren (ryanpickren.com)
+  version:
+    gtk: 2.28.3
+    wpe: 2.28.3
+  description: An input validation issue was addressed with improved input validation.
+  impact: Processing maliciously crafted web content may lead to a cross site scripting
+    attack.
+CVE-2020-9983:
+  author: zhunki
+  version:
+    gtk: 2.30.3
+    wpe: 2.30.3
+  description: An out-of-bounds write issue was addressed with improved bounds checking.
+  impact: Processing maliciously crafted web content may lead to code execution.

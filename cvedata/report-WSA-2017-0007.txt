@@ -1,6 +1,0 @@
-CVE-2017-1000121: Nathan Crandall (2.16.3)
-CVE-2017-1000122: Nathan Crandall (2.16.3)
-
-MANUALDESCRIPTION: CVE-2017-1000121: Impact: Processing maliciously crafted input may lead to arbitrary code execution or application crash. Description: An input validation issue on the handling of UNIX IPC messages may allow an attacker to trigger an integer overflow. The issue was addressed through improved state management.
-
-MANUALDESCRIPTION: CVE-2017-1000122: Impact: Processing maliciously crafted input may lead to application crash. Description: An input validation issue on the handling of UNIX IPC messages allows an attacker to trigger an application crash. The issue was addressed through improved state management.

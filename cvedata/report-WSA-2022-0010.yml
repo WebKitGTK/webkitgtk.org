@@ -1,0 +1,29 @@
+CVE-2022-32888:
+  author: P1umer (@p1umer).
+  version: 2.38.0
+  description: An out-of-bounds write issue was addressed with improved bounds checking.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2022-32923:
+  author: Wonyoung Jung (@nonetype_pwn) of KAIST Hacking Lab.
+  version: 2.38.0
+  description: A correctness issue in the JIT was addressed with improved checks.
+  impact: Processing maliciously crafted web content may disclose internal states
+    of the app.
+CVE-2022-42799:
+  author: Jihwan Kim (@gPayl0ad), Dohyun Lee. (@l33d0hyun)
+  version: 2.38.2
+  description: The issue was addressed with improved UI handling.
+  impact: Visiting a malicious website may lead to user interface spoofing.
+CVE-2022-42823:
+  author: Dohyun Lee (@l33d0hyun) of SSD Labs.
+  version: 2.38.2
+  description: A type confusion issue was addressed with improved memory handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2022-42824:
+  author: Abdulrahman Alqabandi of Microsoft Browser Vulnerability Research, Ryan
+    Shin of IAAI SecLab at Korea University, Dohyun Lee (@l33d0hyun) of DNSLab at
+    Korea University.
+  version:
+    gtk: 2.38.2
+  description: A logic issue was addressed with improved state management.
+  impact: Processing maliciously crafted web content may disclose sensitive user information.

@@ -1,6 +1,0 @@
-CVE-2016-1723 : Apple (2.10.5)
-CVE-2016-1724 : Apple (2.10.5)
-CVE-2016-1725 : Apple (2.10.5)
-CVE-2016-1726 : Apple (2.10.8)
-CVE-2016-1727 : Apple (2.10.5)
-CVE-2016-1728 : an anonymous researcher coordinated via Joe Vennix (2.10.5)

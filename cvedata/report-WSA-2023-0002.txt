@@ -1,4 +1,0 @@
-CVE-2023-23529: an anonymous researcher. (WebKitGTK and WPE WebKit before 2.38.5)
-
-
-MANUALDESCRIPTION : CVE-2023-23529 : Impact: Processing maliciously crafted web content may lead to arbitrary code execution. Apple is aware of a report that this issue may have been actively exploited. Description: A type confusion issue was addressed with improved checks.

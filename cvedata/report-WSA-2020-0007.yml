@@ -1,0 +1,49 @@
+CVE-2020-9862:
+  author: Ophir Lojkine (@lovasoa)
+  version:
+    gtk: 2.28.4
+    wpe: 2.28.4
+  description: A command injection issue existed in Web Inspector. This issue was
+    addressed with improved escaping.
+  impact: Copying a URL from Web Inspector may lead to command injection.
+CVE-2020-9893:
+  author: 0011 working with Trend Micro Zero Day Initiative
+  version:
+    gtk: 2.28.4
+    wpe: 2.28.4
+  description: An use-after-free issue was addressed with improved memory management.
+  impact: A remote attacker may be able to cause unexpected application termination
+    or arbitrary code execution.
+CVE-2020-9894:
+  author: 0011 working with Trend Micro Zero Day Initiative
+  version:
+    gtk: 2.28.4
+    wpe: 2.28.4
+  description: An out-of-bounds read was addressed with improved input validation.
+  impact: A remote attacker may be able to cause unexpected application termination
+    or arbitrary code execution.
+CVE-2020-9895:
+  author: Wen Xu of SSLab, Georgia Tech
+  version:
+    gtk: 2.28.4
+    wpe: 2.28.4
+  description: An use-after-free issue was addressed with improved memory management.
+  impact: A remote attacker may be able to cause unexpected application termination
+    or arbitrary code execution.
+CVE-2020-9915:
+  author: Ayoub AIT ELMOKHTAR of Noon
+  version:
+    gtk: 2.28.4
+    wpe: 2.28.4
+  description: An access issue existed in Content Security Policy.  This issue was
+    addressed with improved access restrictions.
+  impact: Processing maliciously crafted web content may prevent Content Security
+    Policy from being enforced.
+CVE-2020-9925:
+  author: an anonymous researcher
+  version:
+    gtk: 2.28.4
+    wpe: 2.28.4
+  description: A logic issue was addressed with improved state management.
+  impact: Processing maliciously crafted web content may lead to universal cross site
+    scripting.

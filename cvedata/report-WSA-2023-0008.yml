@@ -1,0 +1,15 @@
+CVE-2023-28198:
+  author: hazbinhotel working with Trend Micro Zero Day Initiative
+  version: 2.40.1
+  description: A use-after-free issue was addressed with improved memory management.
+  impact: Processing web content may lead to arbitrary code execution.
+CVE-2023-32370:
+  author: Gertjan Franken of imec-DistriNet, KU Leuven
+  version: 2.40.1
+  description: A logic issue was addressed with improved validation.
+  impact: Content Security Policy to block domains with wildcards may fail.
+CVE-2023-40397:
+  author: Johan Carlsson (joaxcar)
+  version: 2.40.5
+  description: The issue was addressed with improved checks.
+  impact: A remote attacker may be able to cause arbitrary javascript code execution.
