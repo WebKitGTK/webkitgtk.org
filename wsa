@@ -231,11 +231,13 @@ def determine_wsa_id(s: str) -> str | None:
         return m[1]
     return None
 
-arg_parser = ArgumentParser(usage="%(prog)s [--email|--markdown] report.yml")
-arg_parser.add_argument("--wsa-id", type=str, help="Manually specify generated WSA identifier.")
-arg_parser.add_argument("--markdown", action="store_true", default=False, help="Generate Markdown.")
-arg_parser.add_argument("--email", action="store_true", default=False, help="Generate E-mail.")
-arg_parser.add_argument("report_yml", type=Path, help="Path to the WSA report YAML source.")
+arg_parser = ArgumentParser()
+subparsers = arg_parser.add_subparsers(dest="subcommand", required=True)
+gen_parser = subparsers.add_parser("generate", aliases=("gen",), description="Generate advisory text.")
+gen_parser.add_argument("--wsa-id", type=str, help="Manually specify generated WSA identifier.")
+gen_parser.add_argument("--markdown", action="store_true", default=False, help="Generate Markdown.")
+gen_parser.add_argument("--email", action="store_true", default=False, help="Generate E-mail.")
+gen_parser.add_argument("report_yml", type=Path, help="Path to the WSA report YAML source.")
 args = arg_parser.parse_args()
 
 if (not (args.email or args.markdown)) or (args.email and args.markdown):
