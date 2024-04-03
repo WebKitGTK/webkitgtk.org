@@ -1,0 +1,262 @@
+#! /usr/bin/env python3
+
+from argparse import ArgumentParser
+from pathlib import Path
+from ruamel.yaml import YAML
+from time import strftime
+
+import re
+import sys
+import textwrap
+
+class Formatter:
+    text_width: int
+    item_indent: int
+    cve_list_indent: int
+
+    bug_bullet = ""
+
+    t_header: str
+    t_cve: str
+    t_footer: str
+
+    t_footer_common = textwrap.dedent("""\
+        We recommend updating to the latest stable versions of WebKitGTK
+        and WPE WebKit. It is the best way to ensure that you are running
+        safe versions of WebKit. Please check our websites for information
+        about the latest stable releases.""")
+
+    def __init__(self, wsa_id: str, wsa_data: dict):
+        self.wsa_id = wsa_id
+        self.wsa_data = wsa_data
+        self._data = {
+            "WSA": wsa_id,
+            "reportdate": strftime("%B %d, %Y"),
+            "affectedtext": self._line_for_print(
+                "Several vulnerabilities were discovered in WebKitGTK"
+                " and WPE WebKit."),
+        }
+
+    def _line_for_print(self, line, indent=2, width=None, dot=True):
+        if width is None:
+            width = self.text_width
+        if dot and not line.endswith('.'):
+            line += '.'
+        line = textwrap.wrap(line, width=(width - indent))
+        line = "\n".join(line)
+        line = textwrap.indent(line, " " * indent)
+        return line.strip()
+
+    def _expand_template(self, template: str, **kw) -> str:
+        tvars = dict(self._data)
+        tvars.update(kw)
+        return template % tvars
+
+    @staticmethod
+    def linkify(target: str) -> str:
+        return target
+
+    def title_spaces(self, title: str) -> str:
+        return " "
+
+    def cve_list(self) -> str:
+        raise NotImplementedError
+
+    def generate(self, write):
+        self.header(write)
+
+        for cve_id in sorted(self.wsa_data.keys()):
+            cve_data = self.wsa_data[cve_id]
+            affected_text = "Versions affected:"
+            version = cve_data["version"]
+            if isinstance(version, str):
+                affected_text += f" WebKitGTK and WPE WebKit before {version}"
+            else:
+                assert isinstance(cve_data, dict)
+                if "gtk" in version:
+                    affected_text += f" WebKitGTK before {version['gtk']}"
+                    if "wpe" in version:
+                        affected_text += f" and WPE WebKit before {version['wpe']}"
+                else:
+                    assert "wpe" in version
+                    affected_text += f" WPE WebKit before {version['wpe']}"
+            affected_text += "."
+
+            if "impact" in cve_data:
+                description = f"Impact: {cve_data['impact']} Description: {cve_data['description']}"
+            else:
+                description = cve_data["description"]
+
+            bug_link = ""
+            bug_bullet = ""
+            if "bugzilla" in cve_data:
+                bug_link = f"WebKit Bugzilla: {cve_data['bugzilla']}"
+                bug_bullet = self.bug_bullet
+
+            write(self._expand_template(self.t_cve,
+                                        CVE=self.linkify(cve_id),
+                                        affected=self._line_for_print(affected_text, indent=self.item_indent),
+                                        credits=self._line_for_print(cve_data["author"], indent=self.item_indent),
+                                        description=self._line_for_print(description, indent=self.item_indent),
+                                        maybeLinkbug=bug_link,
+                                        maybeLinkbugBullet=bug_bullet))
+
+        self.footer(write)
+
+    def header(self, write):
+        title = "WebKitGTK and WPE WebKit Security Advisory"
+        write(self._expand_template(self.t_header, title=title,
+                                    titlespaces=self.title_spaces(title),
+                                    cvelist=self.cve_list()))
+
+    def footer(self, write):
+        write(self._line_for_print(self.t_footer_common, indent=0))
+        moreinfo = "Further information about WebKitGTK and WPE WebKit" \
+            " security advisories can be found at: "
+        moreinfo += self.linkify("https://webkitgtk.org/security.html")
+        moreinfo += " or "
+        moreinfo += self.linkify("https://wpewebkit.org/security")
+        write(self._expand_template(self.t_footer, moreinfo=self._line_for_print(moreinfo, indent=0)))
+
+class Mail(Formatter):
+    text_width = 72
+    item_indent = 4
+    cve_list_indent = 26
+
+    t_header = textwrap.dedent("""\
+        Subject: %(title)s %(WSA)s
+        To: webkit-gtk@lists.webkit.org, webkit-wpe@lists.webkit.org
+        Cc: security@webkit.org, oss-security@lists.openwall.com
+
+        ------------------------------------------------------------------------
+        %(title)s%(titlespaces)s%(WSA)s
+        ------------------------------------------------------------------------
+
+        Date reported           : %(reportdate)s
+        Advisory ID             : %(WSA)s
+        WebKitGTK Advisory URL  : https://webkitgtk.org/security/%(WSA)s.html
+        WPE WebKit Advisory URL : https://wpewebkit.org/security/%(WSA)s.html
+        CVE identifiers         : %(cvelist)s
+
+        %(affectedtext)s
+
+        """)
+
+    t_cve = textwrap.dedent("""\
+        %(CVE)s
+            %(affected)s
+            %(credits)s
+            %(description)s
+            %(maybeLinkbugBullet)s%(maybeLinkbug)s
+
+        """)
+
+    t_footer = textwrap.dedent("""\
+
+
+        %(moreinfo)s
+
+        The WebKitGTK and WPE WebKit team,
+        """)
+
+    def title_spaces(self, title: str) -> str:
+        return " " * (72 - len(title) - len(self.wsa_id))
+
+    def cve_list(self) -> str:
+        return self._line_for_print(", ".join(sorted(self.wsa_data.keys())),
+                                    indent=self.cve_list_indent)
+
+class Markdown(Formatter):
+    cve_list_indent = 2
+    item_indent = 4
+    text_width = 90
+
+    bug_bullet = "* "
+
+    t_header = textwrap.dedent("""\
+        ---
+        layout: post
+        title: %(title)s%(titlespaces)s%(WSA)s
+        permalink: /security/%(WSA)s.html
+        tags: WSA
+        ---
+
+        * Date Reported: **%(reportdate)s**\n
+        * Advisory ID: **%(WSA)s**\n
+        * CVE identifiers: %(cvelist)s\n
+
+        %(affectedtext)s
+
+        """)
+
+    t_cve = textwrap.dedent("""\
+        * %(CVE)s
+          * %(affected)s
+          * %(credits)s
+          * %(description)s
+          %(maybeLinkbugBullet)s%(maybeLinkbug)s
+
+        """)
+
+    t_footer = textwrap.dedent("""\
+
+
+        %(moreinfo)s
+        """)
+
+    def cve_list(self) -> str:
+        return ", ".join(map(lambda x: self.linkify(x, anchor=True),
+                             sorted(self.wsa_data.keys())))
+
+    @staticmethod
+    def linkify(target: str, anchor=False) -> str:
+        if target.startswith("http://"):
+            text = target[len("http://"):]
+        elif target.startswith("https://"):
+            text = target[len("https://"):]
+        elif target.startswith("CVE-"):
+            if anchor:
+                return f"[{target}](#{target})"
+            else:
+                return f"<a name='{target}' href='https://cve.mitre.org/cgi-bin/cvename.cgi?name={target}'>{target}</a>"
+        else:
+            text = target
+        return f"[{text}]({target})"
+
+
+wsa_id_re = re.compile(r"(WSA-\d{4}-\d+)")
+
+def determine_wsa_id(s: str) -> str | None:
+    for m in wsa_id_re.finditer(s):
+        return m[1]
+    return None
+
+arg_parser = ArgumentParser(usage="%(prog)s [--email|--markdown] report.yml")
+arg_parser.add_argument("--wsa-id", type=str, help="Manually specify generated WSA identifier.")
+arg_parser.add_argument("--markdown", action="store_true", default=False, help="Generate Markdown.")
+arg_parser.add_argument("--email", action="store_true", default=False, help="Generate E-mail.")
+arg_parser.add_argument("report_yml", type=Path, help="Path to the WSA report YAML source.")
+args = arg_parser.parse_args()
+
+if (not (args.email or args.markdown)) or (args.email and args.markdown):
+    raise SystemExit("Must use one of --email or --markdown")
+
+if not args.report_yml.is_file():
+    raise SystemExit(f"File '{args.report_yml!s}' does not exist")
+
+if args.wsa_id is None:
+    if args.report_yml.suffix.lower() in ("yml", "yaml"):
+        filename = args.report_yml.stem
+    else:
+        filename = args.report_yml.name
+    args.wsa_id = determine_wsa_id(filename)
+    if args.wsa_id is None:
+        raise SystemExit(f"Could not determine WSA identifier from '{filename}'")
+if not wsa_id_re.match(args.wsa_id):
+    raise SystemExit(f"Invalid WSA identifier format '{args.wsa_id}'")
+
+with args.report_yml.open("r") as f:
+    wsa_data = YAML(typ="safe").load(f)
+
+Fmt = Mail if args.email else Markdown
+Fmt(args.wsa_id, wsa_data).generate(sys.stdout.write)
