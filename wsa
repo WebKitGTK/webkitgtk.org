@@ -231,34 +231,117 @@ def determine_wsa_id(s: str) -> str | None:
         return m[1]
     return None
 
+def cmd_generate(args):
+    if (not (args.email or args.markdown)) or (args.email and args.markdown):
+        raise SystemExit("Must use one of --email or --markdown")
+
+    if not args.report_yml.is_file():
+        raise SystemExit(f"File '{args.report_yml!s}' does not exist")
+
+    if args.wsa_id is None:
+        if args.report_yml.suffix.lower() in ("yml", "yaml"):
+            filename = args.report_yml.stem
+        else:
+            filename = args.report_yml.name
+        args.wsa_id = determine_wsa_id(filename)
+        if args.wsa_id is None:
+            raise SystemExit(f"Could not determine WSA identifier from '{filename}'")
+    if not wsa_id_re.match(args.wsa_id):
+        raise SystemExit(f"Invalid WSA identifier format '{args.wsa_id}'")
+
+    with args.report_yml.open("r") as f:
+        wsa_data = YAML(typ="safe").load(f)
+
+    Fmt = Mail if args.email else Markdown
+    Fmt(args.wsa_id, wsa_data).generate(sys.stdout.write)
+
+_CVE_DESCRIPTION = None
+
+def _get_cve_description(cve_id: str, csv: Path|None = None, pck: Path|None = None) -> str | None:
+    global _CVE_DESCRIPTION
+    if _CVE_DESCRIPTION is None:
+        import gzip, pickle
+
+        if pck is None or not pck.is_file():
+            raise SystemExit("Cannot load CVE data dump")
+
+        _CVE_DESCRIPTION = {}
+        if pck.is_file() and (csv is None or (pck.stat().st_mtime >= csv.stat().st_mtime)):
+            with pck.open("rb") as pckf:
+                _CVE_DESCRIPTION = pickle.load(pckf)
+        elif csv is None:
+            raise SystemExit("No CSV file specified")
+        else:
+            with gzip.open(csv, "rt", errors="replace") as gzf:
+                from csv import reader as csvreader
+                reader = csvreader(gzf)
+                for entry in reader:
+                    if not entry[0].startswith("CVE-"):
+                        continue
+                    if entry[1] not in ("Entry", "Candidate"):
+                        continue
+                    _CVE_DESCRIPTION[entry[0]] = entry[2]
+            if pck is not None:
+                with pck.open("wb") as pckf:
+                    pickle.dump(_CVE_DESCRIPTION, pckf)
+
+    return _CVE_DESCRIPTION.get(cve_id, None)
+
+def cmd_fill(args):
+    if args.cve_data is None:
+        args.cve_data = Path(__file__).parent / "cvedata" / "cvedata.pickle"
+
+    if len(args.report_yml) > 1 and not args.inplace:
+        raise SystemExit("Option --inplace needs to be used with multiple inputs")
+
+    yaml = YAML(typ="safe")
+    yaml.indent(mapping=2, sequence=4, offset=2)
+
+    for report_yml in args.report_yml:
+        with report_yml.open("r") as f:
+            wsa_data = YAML(typ="safe").load(f)
+
+        modified = False
+        for cve_id, cve_data in wsa_data.items():
+            if "description" not in cve_data:
+                desc = _get_cve_description(cve_id, pck=args.cve_data)
+                if desc is not None:
+                    cve_data["description"] = desc
+                    modified = True
+
+        if args.inplace:
+            if modified:
+                with report_yml.open("w") as f:
+                    yaml.dump(wsa_data, f)
+        else:
+            yaml.dump(wsa_data, sys.stdout)
+
+def cmd_cve_data(args):
+    raise NotImplementedError
+
 arg_parser = ArgumentParser()
 subparsers = arg_parser.add_subparsers(dest="subcommand", required=True)
+
 gen_parser = subparsers.add_parser("generate", aliases=("gen",), description="Generate advisory text.")
-gen_parser.add_argument("--wsa-id", type=str, help="Manually specify generated WSA identifier.")
-gen_parser.add_argument("--markdown", action="store_true", default=False, help="Generate Markdown.")
-gen_parser.add_argument("--email", action="store_true", default=False, help="Generate E-mail.")
-gen_parser.add_argument("report_yml", type=Path, help="Path to the WSA report YAML source.")
+gen_parser.add_argument("--wsa-id", type=str, help="manually specify generated WSA identifier")
+gen_parser.add_argument("--markdown", action="store_true", default=False, help="generate Markdown")
+gen_parser.add_argument("--email", action="store_true", default=False, help="generate e-mail")
+gen_parser.add_argument("report_yml", type=Path, help="path to the WSA report YAML source")
+
+fil_parser = subparsers.add_parser("fill", description="Fill missing advisory fields.")
+fil_parser.add_argument("-c", "--cve-data", type=Path, default=None, help="path to the CVE data dump")
+fil_parser.add_argument("-i", "--inplace", action="store_true", default=False, help="edit YAML file in-place")
+fil_parser.add_argument("report_yml", type=Path, nargs="+", help="path to the WSA report YAML source")
+
+cve_parser = subparsers.add_parser("cve-data", aliases=("cve",), description="Manipulate CVE data bundle.")
+cve_parser.add_argument("--keep-csv", type=Path, default=None, help="keep CSV data at the given path")
+cve_parser.add_argument("--input", type=str, default=None, help="file path or URL for the CVE CSV data")
+cve_parser.add_argument("cve_data", type=Path, default=None, help="path to the CVE data dump")
+
 args = arg_parser.parse_args()
 
-if (not (args.email or args.markdown)) or (args.email and args.markdown):
-    raise SystemExit("Must use one of --email or --markdown")
-
-if not args.report_yml.is_file():
-    raise SystemExit(f"File '{args.report_yml!s}' does not exist")
-
-if args.wsa_id is None:
-    if args.report_yml.suffix.lower() in ("yml", "yaml"):
-        filename = args.report_yml.stem
-    else:
-        filename = args.report_yml.name
-    args.wsa_id = determine_wsa_id(filename)
-    if args.wsa_id is None:
-        raise SystemExit(f"Could not determine WSA identifier from '{filename}'")
-if not wsa_id_re.match(args.wsa_id):
-    raise SystemExit(f"Invalid WSA identifier format '{args.wsa_id}'")
-
-with args.report_yml.open("r") as f:
-    wsa_data = YAML(typ="safe").load(f)
-
-Fmt = Mail if args.email else Markdown
-Fmt(args.wsa_id, wsa_data).generate(sys.stdout.write)
+({
+    "generate": cmd_generate, "gen": cmd_generate,
+    "cve-data": cmd_cve_data, "cve": cmd_cve_data,
+    "fill": cmd_fill,
+})[args.subcommand](args)
