@@ -62,7 +62,8 @@ class Formatter:
     def cve_list(self) -> str:
         raise NotImplementedError
 
-    def generate(self, write):
+    def generate(self, write, cve_data_path: Path|None = None,
+                 fill_missing_description=False):
         self.header(write)
 
         for cve_id in sorted(self.wsa_data.keys()):
@@ -82,10 +83,20 @@ class Formatter:
                     affected_text += f" WPE WebKit before {version['wpe']}"
             affected_text += "."
 
+            description = None
             if "impact" in cve_data:
-                description = f"Impact: {cve_data['impact']} Description: {cve_data['description']}"
-            else:
+                if "description" in cve_data:
+                    description = f"Impact: {cve_data['impact']} Description: {cve_data['description']}"
+                else:
+                    description = f"Impact: {cve_data['impact']}"
+            elif "description" in cve_data:
                 description = cve_data["description"]
+            elif fill_missing_description:
+                assert isinstance(cve_data_path, Path)
+                description = get_cve_description(cve_id, pck=cve_data_path)
+
+            if description is None:
+                description = "No description was provided"
 
             bug_link = ""
             bug_bullet = ""
@@ -223,6 +234,42 @@ class Markdown(Formatter):
             text = target
         return f"[{text}]({target})"
 
+_CVE_DESCRIPTION = None
+
+def get_cve_description(cve_id: str, csv: Path|None = None, pck: Path|None = None) -> str | None:
+    global _CVE_DESCRIPTION
+    if _CVE_DESCRIPTION is None:
+        import gzip, pickle
+
+        if pck is None or not pck.is_file():
+            raise SystemExit("Cannot load CVE data dump")
+
+        _CVE_DESCRIPTION = {}
+        if pck.is_file() and (csv is None or (pck.stat().st_mtime >= csv.stat().st_mtime)):
+            with pck.open("rb") as pckf:
+                _CVE_DESCRIPTION = pickle.load(pckf)
+        elif csv is None:
+            raise SystemExit("No CSV file specified")
+        else:
+            with gzip.open(csv, "rt", errors="replace") as gzf:
+                from csv import reader as csvreader
+                reader = csvreader(gzf)
+                for entry in reader:
+                    if not entry[0].startswith("CVE-"):
+                        continue
+                    if entry[1] not in ("Entry", "Candidate"):
+                        continue
+                    _CVE_DESCRIPTION[entry[0]] = entry[2]
+            if pck is not None:
+                with pck.open("wb") as pckf:
+                    pickle.dump(_CVE_DESCRIPTION, pckf)
+
+    return _CVE_DESCRIPTION.get(cve_id, None)
+
+def get_cve_data_path(p: Path | None) -> Path:
+    if p is None:
+        p = Path(__file__).parent / "cvedata" / "cvedata.pickle"
+    return p.resolve()
 
 wsa_id_re = re.compile(r"(WSA-\d{4}-\d+)")
 
@@ -254,46 +301,15 @@ def cmd_generate(args):
 
     Fmt = Mail if args.email else Markdown
     Fmt(args.wsa_id, wsa_data).generate(sys.stdout.write if args.output is None
-                                        else args.output.open("w").write)
-
-_CVE_DESCRIPTION = None
-
-def _get_cve_description(cve_id: str, csv: Path|None = None, pck: Path|None = None) -> str | None:
-    global _CVE_DESCRIPTION
-    if _CVE_DESCRIPTION is None:
-        import gzip, pickle
-
-        if pck is None or not pck.is_file():
-            raise SystemExit("Cannot load CVE data dump")
-
-        _CVE_DESCRIPTION = {}
-        if pck.is_file() and (csv is None or (pck.stat().st_mtime >= csv.stat().st_mtime)):
-            with pck.open("rb") as pckf:
-                _CVE_DESCRIPTION = pickle.load(pckf)
-        elif csv is None:
-            raise SystemExit("No CSV file specified")
-        else:
-            with gzip.open(csv, "rt", errors="replace") as gzf:
-                from csv import reader as csvreader
-                reader = csvreader(gzf)
-                for entry in reader:
-                    if not entry[0].startswith("CVE-"):
-                        continue
-                    if entry[1] not in ("Entry", "Candidate"):
-                        continue
-                    _CVE_DESCRIPTION[entry[0]] = entry[2]
-            if pck is not None:
-                with pck.open("wb") as pckf:
-                    pickle.dump(_CVE_DESCRIPTION, pckf)
-
-    return _CVE_DESCRIPTION.get(cve_id, None)
+                                        else args.output.open("w").write,
+                                        cve_data_path=get_cve_data_path(args.cve_data),
+                                        fill_missing_description=(args.cve_data is not None))
 
 def cmd_fill(args):
-    if args.cve_data is None:
-        args.cve_data = Path(__file__).parent / "cvedata" / "cvedata.pickle"
-
     if len(args.report_yml) > 1 and not args.inplace:
         raise SystemExit("Option --inplace needs to be used with multiple inputs")
+
+    cve_data_path = get_cve_data_path(args.cve_data)
 
     yaml = YAML(typ="safe")
     yaml.indent(mapping=2, sequence=4, offset=2)
@@ -305,7 +321,7 @@ def cmd_fill(args):
         modified = False
         for cve_id, cve_data in wsa_data.items():
             if "description" not in cve_data:
-                desc = _get_cve_description(cve_id, pck=args.cve_data)
+                desc = get_cve_description(cve_id, pck=cve_data_path)
                 if desc is not None:
                     cve_data["description"] = desc
                     modified = True
@@ -324,6 +340,7 @@ arg_parser = ArgumentParser()
 subparsers = arg_parser.add_subparsers(dest="subcommand", required=True)
 
 gen_parser = subparsers.add_parser("generate", aliases=("gen",), description="Generate advisory text.")
+gen_parser.add_argument("-c", "--cve-data", type=Path, default=None, help="path to the CVE data dump")
 gen_parser.add_argument("-w", "--wsa-id", type=str, help="manually specify generated WSA identifier")
 gen_parser.add_argument("-o", "--output", type=Path, default=None, help="output file path, instead of stdout")
 gen_parser.add_argument("-m", "--markdown", action="store_true", default=False, help="generate Markdown")
