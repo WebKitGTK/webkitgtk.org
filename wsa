@@ -4,6 +4,7 @@ from argparse import ArgumentParser
 from pathlib import Path
 from ruamel.yaml import YAML
 from time import strftime
+from urllib.parse import urlparse, urlunparse
 
 import re
 import sys
@@ -333,8 +334,132 @@ def cmd_fill(args):
         else:
             yaml.dump(wsa_data, sys.stdout)
 
+class TeeStream:
+    def __init__(self, readable, output: Path):
+        self._output = output.open("wb")
+        self._readable = readable
+
+    def read(self, size):
+        data = self._readable.read(size)
+        self._output.write(data)
+        return data
+
+    def close(self):
+        self._output.close()
+
+    def __del__(self):
+        self.close()
+
+class ReportStream:
+    def __init__(self, readable, length):
+        self._readable = readable
+        self._position = 0
+        self._length = length
+
+        from time import clock_gettime, CLOCK_MONOTONIC
+        self._gettime = lambda : clock_gettime(CLOCK_MONOTONIC)
+        self._last_update = 0
+        self._updating = True
+
+    def __should_update(self):
+        result = False
+        now = self._gettime()
+        if (now - self._last_update) >= 0.5:
+            self._last_update = now
+            result = True
+        return self._updating and (result or self.__finished())
+
+    def __finished(self):
+        return self._position >= self._length
+
+    def read(self, size):
+        if self.__should_update():
+            kib = self._position // 1024
+            if self._length:
+                percent = min(self._position / self._length * 100.0, 100.0)
+                bar_length = int(percent / 5)
+                bar = "#" * bar_length + " " * (20 - bar_length)
+                print(f"\x1b[K{percent:6.2f}% [{bar}] {kib} KiB\r", end="", flush=True)
+            else:
+                print(f"\r\x1b[KDownloaded {kib} KiB...", end="", flush=True)
+            if self.__finished():
+                self._updating = False
+                print()
+        self._position += size
+        return self._readable.read(size)
+
 def cmd_cve_data(args):
-    raise NotImplementedError
+    if args.input and args.fetch_url:
+        raise SystemExit("Must use either --input or --fetch-url, but not both at the same time")
+    if args.input and args.keep_csv:
+        raise SystemExit("Option --keep-csv must be used with --fetch-url")
+
+    tty_output = False
+    stdout_fd = sys.stdout.fileno()
+    if stdout_fd:
+        import os
+        tty_output = os.isatty(stdout_fd)
+
+    cve_data_path = get_cve_data_path(args.cve_data)
+
+    if args.input is not None:
+        readable = args.input.open("rb")
+    else:
+        from urllib.request import urlopen
+        fetch_url = urlunparse(args.fetch_url) if args.fetch_url \
+            else "https://cve.mitre.org/data/downloads/allitems.csv.gz"
+        if tty_output:
+            print(f"URL: {fetch_url}")
+
+        response = urlopen(fetch_url)
+        readable = response
+
+        content_type = response.getheader("content-type")
+        content_length = response.getheader("content-length")
+        content_encoding = response.getheader("content-encoding")
+
+        if tty_output:
+            print(f"Content-Type: {content_type}")
+            print(f"Content-Length: {content_length}")
+            print(f"Content-Encoding: {content_encoding}")
+            if content_length:
+                readable = ReportStream(readable, int(content_length))
+
+        if content_encoding:
+            content_encoding = content_encoding.lower()
+            if content_encoding in ("gzip", "x-gzip"):
+                from gzip import GzipFile
+                readable = GzipFile(fileobj=readable)
+
+        if args.keep_csv:
+            readable = TeeStream(readable, args.keep_csv)
+
+    from encodings import utf_8
+    readable = utf_8.StreamReader(readable, errors="replace")
+
+    import csv
+    cvecsv = csv.reader(readable)
+
+    cve_descriptions = {}
+    for entry in cvecsv:
+        if not entry[0].startswith("CVE-"):
+            continue
+        if entry[1] not in ("Entry", "Candidate"):
+            continue
+        cve_descriptions[entry[0]] = entry[2]
+
+    if tty_output:
+        print(f"Processed {len(cve_descriptions)} entries.")
+        if args.keep_csv:
+            print(f"Saved: {args.keep_csv!s}")
+    readable.close()
+
+    import pickle
+    with cve_data_path.open("wb") as pckf:
+        pickle.dump(cve_descriptions, pckf)
+    if tty_output:
+        print(f"Saved: {cve_data_path!s}")
+
 
 arg_parser = ArgumentParser()
 subparsers = arg_parser.add_subparsers(dest="subcommand", required=True)
@@ -353,9 +478,10 @@ fil_parser.add_argument("-i", "--inplace", action="store_true", default=False, h
 fil_parser.add_argument("report_yml", type=Path, nargs="+", help="path to the WSA report YAML source")
 
 cve_parser = subparsers.add_parser("cve-data", aliases=("cve",), description="Manipulate CVE data bundle.")
-cve_parser.add_argument("--keep-csv", type=Path, default=None, help="keep CSV data at the given path")
-cve_parser.add_argument("--input", type=str, default=None, help="file path or URL for the CVE CSV data")
-cve_parser.add_argument("cve_data", type=Path, default=None, help="path to the CVE data dump")
+cve_parser.add_argument("-i", "--input", type=Path, help="file for the CVE CSV data")
+cve_parser.add_argument("-f", "--fetch-url", type=urlparse, help="URL for the CVE CSV data", metavar="URL")
+cve_parser.add_argument("-k", "--keep-csv", type=Path, help="keep CSV data at the given path")
+cve_parser.add_argument("cve_data", type=Path, nargs="?", help="path to the CVE data dump")
 
 args = arg_parser.parse_args()
 
