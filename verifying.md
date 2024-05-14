@@ -33,7 +33,7 @@ The following PGP keys are currently in use for signing releases:
     </tr>
     <tr>
       <td>Carlos García Campos (<a href="carlosgc.key">key</a>)</td>
-      <td><tt>D7FC F61C F9A2 DEAB 31D8  1BD3 F3D3 22D0 EC45 82C3</tt></td>
+      <td><tt>013A 0127 AC9C 65B3 4FFA 6252 6C10 09B6 9397 5393</tt></td>
     </tr>
   <tbody>
   </tbody>
@@ -47,8 +47,8 @@ GnuPG:
 
 ```
 % gpg --import carlosgc.key
-gpg: key F3D322D0EC4582C3: 3 signatures not checked due to missing keys
-gpg: key F3D322D0EC4582C3: public key "Carlos Garcia Campos <cgarcia@igalia.com>" imported
+gpg: key 6C1009B693975393: 3 signatures not checked due to missing keys
+gpg: key 6C1009B693975393: public key "Carlos Garcia Campos <cgarcia@igalia.com>" imported
 gpg: Total number processed: 1
 gpg:               imported: 1
 gpg: no ultimately trusted keys found
@@ -68,12 +68,11 @@ Given a download URL, the following illustrates the process:
 Now it is possible to verify the `.tar.xz` file against its signature:
 
 ```
-% gpg --verify webkitgtk-2.34.3.tar.xz.asc
-gpg: assuming signed data in 'webkitgtk-2.34.3.tar.xz'
-gpg: Signature made lun 20 dic 2021 12:41:15 EET
-gpg:                using DSA key D7FCF61CF9A2DEAB31D81BD3F3D322D0EC4582C3
+% gpg --verify webkitgtk-2.45.1.tar.xz.asc
+gpg: assuming signed data in 'webkitgtk-2.45.1.tar.xz'
+gpg: Signature made Fri May 10 10:18:07 2024 CEST
+gpg:                using RSA key 013A0127AC9C65B34FFA62526C1009B693975393
 gpg: Good signature from "Carlos Garcia Campos <cgarcia@igalia.com>" [full]
-Primary key fingerprint: D7FC F61C F9A2 DEAB 31D8  1BD3 F3D3 22D0 EC45 82C3
 ```
 
 
