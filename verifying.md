@@ -61,8 +61,8 @@ The signature file for each release has the same name plus the `.asc` suffix.
 Given a download URL, the following illustrates the process:
 
 ```
-% curl -sLO https://webkitgtk.org/releases/webkitgtk-2.34.3.tar.xz
-% curl -sLO https://webkitgtk.org/releases/webkitgtk-2.34.3.tar.xz.asc
+% curl -sLO https://webkitgtk.org/releases/webkitgtk-2.45.1.tar.xz
+% curl -sLO https://webkitgtk.org/releases/webkitgtk-2.45.1.tar.xz.asc
 ```
 
 Now it is possible to verify the `.tar.xz` file against its signature:
@@ -89,27 +89,27 @@ Given a download URL, the following illustrates how to calculate the SHA-256
 checksum on your end:
 
 ```
-% curl -sLO https://webkitgtk.org/releases/webkitgtk-2.34.3.tar.xz
-% curl -sLO https://webkitgtk.org/releases/webkitgtk-2.34.3.tar.xz.sums
-% sha256sum webkitgtk-2.34.3.tar.xz | cut -f1 -d' '
-0d2f37aa32e21a36e4dd5a5ce7ae5ce27435c29d6803b962b8c90cb0cc49c52d
+% curl -sLO https://webkitgtk.org/releases/webkitgtk-2.45.1.tar.xz
+% curl -sLO https://webkitgtk.org/releases/webkitgtk-2.45.1.tar.xz.sums
+% sha256sum webkitgtk-2.45.1.tar.xz | cut -f1 -d' '
+9813f5dfb81717c1a427f6947654edad0bdc1e21445902fdb9b9a5589d36c38d
 ```
 
 This can be compared with the value of the last line of the `.sums` file:
 
 ```
-% cat webkitgtk-2.34.3.tar.xz.sums
-webkitgtk-2.34.3.tar.xz (23.8MB)
-   md5sum: de30c41fb57b2b024417669c22914752
-   sha1sum: 42b96ddaa89f7c3757860efd0b983f6e5b6ade51
-   sha256sum: 0d2f37aa32e21a36e4dd5a5ce7ae5ce27435c29d6803b962b8c90cb0cc49c52d
+% cat webkitgtk-2.45.1.tar.xz.sums
+webkitgtk-2.45.1.tar.xz (38.8MB)
+   md5sum: 6f72d0a91b040d146738931357d70995
+   sha1sum: 89c5838996561df50c53dc1f2722a7bc68c4a325
+   sha256sum: 9813f5dfb81717c1a427f6947654edad0bdc1e21445902fdb9b9a5589d36c38d
 ```
 
 Or, programmatically:
 
 ```
-% expected=$(tail -1 webkitgtk-2.34.3.tar.xz.sums | cut -f5 -d' ')
-% calculated=$(sha256sum webkitgtk-2.34.3.tar.xz | cut -f1 -d' ')
+% expected=$(tail -1 webkitgtk-2.45.1.tar.xz.sums | cut -f5 -d' ')
+% calculated=$(sha256sum webkitgtk-2.45.1.tar.xz | cut -f1 -d' ')
 % if [ "$expected" = "$calculated" ]; then echo ok ; else echo failed ; fi
 ok
 ```
