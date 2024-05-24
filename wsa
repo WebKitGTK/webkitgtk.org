@@ -157,7 +157,7 @@ class Mail(Formatter):
     t_cve = textwrap.dedent("""\
         %(CVE)s
             %(affected)s
-            %(credits)s
+            Credit to %(credits)s
             %(description)s
             %(maybeLinkbugBullet)s%(maybeLinkbug)s
 
@@ -204,7 +204,7 @@ class Markdown(Formatter):
     t_cve = textwrap.dedent("""\
         * %(CVE)s
           * %(affected)s
-          * %(credits)s
+          * Credit to %(credits)s
           * %(description)s
           %(maybeLinkbugBullet)s%(maybeLinkbug)s
 
