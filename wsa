@@ -65,6 +65,8 @@ class Formatter:
 
     def generate(self, write, cve_data_path: Path|None = None,
                  fill_missing_description=False):
+        cve_cache = None
+
         self.header(write)
 
         for cve_id in sorted(self.wsa_data.keys()):
@@ -93,8 +95,13 @@ class Formatter:
             elif "description" in cve_data:
                 description = cve_data["description"]
             elif fill_missing_description:
-                assert isinstance(cve_data_path, Path)
-                description = get_cve_description(cve_id, pck=cve_data_path)
+                if cve_cache is None:
+                    import cve
+                    assert isinstance(cve_data_path, Path)
+                    cve_cache = cve.LRUMemDiskFetcherCache(cve_data_path)
+                cve = cve_cache.get(cve_id)
+                if cve and cve.description:
+                    description = cve.description
 
             if description is None:
                 description = "No description was provided"
@@ -237,41 +244,9 @@ class Markdown(Formatter):
             text = target
         return f"[{text}]({target})"
 
-_CVE_DESCRIPTION = None
-
-def get_cve_description(cve_id: str, csv: Path|None = None, pck: Path|None = None) -> str | None:
-    global _CVE_DESCRIPTION
-    if _CVE_DESCRIPTION is None:
-        import gzip, pickle
-
-        if pck is None or not pck.is_file():
-            raise SystemExit("Cannot load CVE data dump")
-
-        _CVE_DESCRIPTION = {}
-        if pck.is_file() and (csv is None or (pck.stat().st_mtime >= csv.stat().st_mtime)):
-            with pck.open("rb") as pckf:
-                _CVE_DESCRIPTION = pickle.load(pckf)
-        elif csv is None:
-            raise SystemExit("No CSV file specified")
-        else:
-            with gzip.open(csv, "rt", errors="replace") as gzf:
-                from csv import reader as csvreader
-                reader = csvreader(gzf)
-                for entry in reader:
-                    if not entry[0].startswith("CVE-"):
-                        continue
-                    if entry[1] not in ("Entry", "Candidate"):
-                        continue
-                    _CVE_DESCRIPTION[entry[0]] = entry[2]
-            if pck is not None:
-                with pck.open("wb") as pckf:
-                    pickle.dump(_CVE_DESCRIPTION, pckf)
-
-    return _CVE_DESCRIPTION.get(cve_id, None)
-
 def get_cve_data_path(p: Path | None) -> Path:
     if p is None:
-        p = Path(__file__).parent / "cvedata" / "cvedata.pickle"
+        p = Path(__file__).parent / "cvedata" / "cache"
     return p.resolve()
 
 wsa_id_re = re.compile(r"(WSA-\d{4}-\d+)")
@@ -306,13 +281,14 @@ def cmd_generate(args):
     Fmt(args.wsa_id, wsa_data).generate(sys.stdout.write if args.output is None
                                         else args.output.open("w").write,
                                         cve_data_path=get_cve_data_path(args.cve_data),
-                                        fill_missing_description=(args.cve_data is not None))
+                                        fill_missing_description=args.fill)
 
 def cmd_fill(args):
     if len(args.report_yml) > 1 and not args.inplace:
         raise SystemExit("Option --inplace needs to be used with multiple inputs")
 
-    cve_data_path = get_cve_data_path(args.cve_data)
+    import cve
+    cve_cache = cve.LRUMemDiskFetcherCache(get_cve_data_path(args.cve_data))
 
     yaml = YAML()
     yaml.indent(mapping=2, sequence=4, offset=2)
@@ -323,10 +299,12 @@ def cmd_fill(args):
 
         modified = False
         for cve_id, cve_data in wsa_data.items():
+            if cve_data is None:
+                wsa_data[cve_id] = cve_data = {}
             if "description" not in cve_data:
-                desc = get_cve_description(cve_id, pck=cve_data_path)
-                if desc is not None:
-                    cve_data["description"] = desc
+                cve = cve_cache.get(cve_id)
+                if cve and cve.description:
+                    cve_data["description"] = cve.description
                     modified = True
 
         if args.inplace:
@@ -336,138 +314,13 @@ def cmd_fill(args):
         else:
             yaml.dump(wsa_data, sys.stdout)
 
-class TeeStream:
-    def __init__(self, readable, output: Path):
-        self._output = output.open("wb")
-        self._readable = readable
-
-    def read(self, size):
-        data = self._readable.read(size)
-        self._output.write(data)
-        return data
-
-    def close(self):
-        self._output.close()
-
-    def __del__(self):
-        self.close()
-
-class ReportStream:
-    def __init__(self, readable, length):
-        self._readable = readable
-        self._position = 0
-        self._length = length
-
-        from time import clock_gettime, CLOCK_MONOTONIC
-        self._gettime = lambda : clock_gettime(CLOCK_MONOTONIC)
-        self._last_update = 0
-        self._updating = True
-
-    def __should_update(self):
-        result = False
-        now = self._gettime()
-        if (now - self._last_update) >= 0.5:
-            self._last_update = now
-            result = True
-        return self._updating and (result or self.__finished())
-
-    def __finished(self):
-        return self._position >= self._length
-
-    def read(self, size):
-        if self.__should_update():
-            kib = self._position // 1024
-            if self._length:
-                percent = min(self._position / self._length * 100.0, 100.0)
-                bar_length = int(percent / 5)
-                bar = "#" * bar_length + " " * (20 - bar_length)
-                print(f"\x1b[K{percent:6.2f}% [{bar}] {kib} KiB\r", end="", flush=True)
-            else:
-                print(f"\r\x1b[KDownloaded {kib} KiB...", end="", flush=True)
-            if self.__finished():
-                self._updating = False
-                print()
-        self._position += size
-        return self._readable.read(size)
-
-def cmd_cve_data(args):
-    if args.input and args.fetch_url:
-        raise SystemExit("Must use either --input or --fetch-url, but not both at the same time")
-    if args.input and args.keep_csv:
-        raise SystemExit("Option --keep-csv must be used with --fetch-url")
-
-    tty_output = False
-    stdout_fd = sys.stdout.fileno()
-    if stdout_fd:
-        import os
-        tty_output = os.isatty(stdout_fd)
-
-    cve_data_path = get_cve_data_path(args.cve_data)
-
-    if args.input is not None:
-        readable = args.input.open("rb")
-    else:
-        from urllib.request import urlopen
-        fetch_url = urlunparse(args.fetch_url) if args.fetch_url \
-            else "https://cve.mitre.org/data/downloads/allitems.csv.gz"
-        if tty_output:
-            print(f"URL: {fetch_url}")
-
-        response = urlopen(fetch_url)
-        readable = response
-
-        content_type = response.getheader("content-type")
-        content_length = response.getheader("content-length")
-        content_encoding = response.getheader("content-encoding")
-
-        if tty_output:
-            print(f"Content-Type: {content_type}")
-            print(f"Content-Length: {content_length}")
-            print(f"Content-Encoding: {content_encoding}")
-            if content_length:
-                readable = ReportStream(readable, int(content_length))
-
-        if content_encoding:
-            content_encoding = content_encoding.lower()
-            if content_encoding in ("gzip", "x-gzip"):
-                from gzip import GzipFile
-                readable = GzipFile(fileobj=readable)
-
-        if args.keep_csv:
-            readable = TeeStream(readable, args.keep_csv)
-
-    from encodings import utf_8
-    readable = utf_8.StreamReader(readable, errors="replace")
-
-    import csv
-    cvecsv = csv.reader(readable)
-
-    cve_descriptions = {}
-    for entry in cvecsv:
-        if not entry[0].startswith("CVE-"):
-            continue
-        if entry[1] not in ("Entry", "Candidate"):
-            continue
-        cve_descriptions[entry[0]] = entry[2]
-
-    if tty_output:
-        print(f"Processed {len(cve_descriptions)} entries.")
-        if args.keep_csv:
-            print(f"Saved: {args.keep_csv!s}")
-    readable.close()
-
-    import pickle
-    with cve_data_path.open("wb") as pckf:
-        pickle.dump(cve_descriptions, pckf)
-    if tty_output:
-        print(f"Saved: {cve_data_path!s}")
-
 
 arg_parser = ArgumentParser()
 subparsers = arg_parser.add_subparsers(dest="subcommand", required=True)
 
 gen_parser = subparsers.add_parser("generate", aliases=("gen",), description="Generate advisory text.")
 gen_parser.add_argument("-c", "--cve-data", type=Path, default=None, help="path to the CVE data dump")
+gen_parser.add_argument("-f", "--fill", action="store_true", default=False, help="fill missing fields from CVE data")
 gen_parser.add_argument("-w", "--wsa-id", type=str, help="manually specify generated WSA identifier")
 gen_parser.add_argument("-o", "--output", type=Path, default=None, help="output file path, instead of stdout")
 gen_parser.add_argument("-m", "--markdown", action="store_true", default=False, help="generate Markdown")
@@ -479,16 +332,9 @@ fil_parser.add_argument("-c", "--cve-data", type=Path, default=None, help="path 
 fil_parser.add_argument("-i", "--inplace", action="store_true", default=False, help="edit YAML file in-place")
 fil_parser.add_argument("report_yml", type=Path, nargs="+", help="path to the WSA report YAML source")
 
-cve_parser = subparsers.add_parser("cve-data", aliases=("cve",), description="Manipulate CVE data bundle.")
-cve_parser.add_argument("-i", "--input", type=Path, help="file for the CVE CSV data")
-cve_parser.add_argument("-f", "--fetch-url", type=urlparse, help="URL for the CVE CSV data", metavar="URL")
-cve_parser.add_argument("-k", "--keep-csv", type=Path, help="keep CSV data at the given path")
-cve_parser.add_argument("cve_data", type=Path, nargs="?", help="path to the CVE data dump")
-
 args = arg_parser.parse_args()
 
 ({
     "generate": cmd_generate, "gen": cmd_generate,
-    "cve-data": cmd_cve_data, "cve": cmd_cve_data,
     "fill": cmd_fill,
 })[args.subcommand](args)
