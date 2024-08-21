@@ -314,7 +314,7 @@ def cmd_fill(args):
 
     cve_data_path = get_cve_data_path(args.cve_data)
 
-    yaml = YAML(typ="safe")
+    yaml = YAML()
     yaml.indent(mapping=2, sequence=4, offset=2)
 
     for report_yml in args.report_yml:
