@@ -99,6 +99,8 @@ class Formatter:
             if description is None:
                 description = "No description was provided"
 
+            author = cve_data.get("author", "an anonymous researcher")
+
             bug_link = ""
             bug_bullet = ""
             if "bugzilla" in cve_data:
@@ -108,7 +110,7 @@ class Formatter:
             write(self._expand_template(self.t_cve,
                                         CVE=self.linkify(cve_id),
                                         affected=self._line_for_print(affected_text, indent=self.item_indent),
-                                        credits=self._line_for_print(cve_data["author"], indent=self.item_indent),
+                                        credits=self._line_for_print(author, indent=self.item_indent),
                                         description=self._line_for_print(description, indent=self.item_indent),
                                         maybeLinkbug=bug_link,
                                         maybeLinkbugBullet=bug_bullet))
