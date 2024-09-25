@@ -315,6 +315,161 @@ def cmd_fill(args):
             yaml.dump(wsa_data, sys.stdout)
 
 
+def cmd_check(args):
+    from urllib.request import urlopen
+    from urllib.error import HTTPError
+    from lxml.cssselect import CSSSelector
+    from lxml import html
+
+    apple_support_url_re = re.compile(r"^https://support.apple.com/(en-us/|kb/HT)\d+$")
+    advisory_bugzilla_re = re.compile(r"^WebKit\s+Bugzilla:\s*(\d+)\s*$")
+    advisory_cve_author_re = re.compile(r"^(CVE-\d+-\d+):\s*(.*)$")
+    advisory_cve_re = re.compile(r"^(CVE-\d+-\d+)$")
+    advisory_description_re = re.compile(r"^[Dd]escription:\s*(.*)$")
+    advisory_impact_re = re.compile(r"^[Ii]mpact:\s*(.*)$")
+
+    select_advisory_headers = CSSSelector("div#sections > h3")
+    select_advisory_links = CSSSelector("table > tbody > tr > td > p > a")
+    select_index_links = CSSSelector("ul > li > p > a")
+    select_paragraphs = CSSSelector("p")
+
+    if not args.report_yml:
+        from itertools import chain
+        cvedata_path = Path(__file__).parent / "cvedata"
+        args.report_yml = chain(cvedata_path.glob("*.yml"), cvedata_path.glob("*.yaml"))
+
+    reported_cves = set()
+    for wsa_yaml_path in args.report_yml:
+        with open(wsa_yaml_path, "r") as f:
+            wsa_data = YAML(typ="safe").load(f)
+            reported_cves.update(wsa_data.keys())
+    print("CVEs already in WSAs:", len(reported_cves), file=sys.stderr)
+
+    def webkit_cve_entries(url):
+        try:
+            data = urlopen(url).read()
+        except HTTPError as e:
+            if e.code == 404:
+                print("Not found:", url, "-", e, file=sys.stderr)
+                return
+        tree = html.fromstring(data)
+
+        for header in select_advisory_headers(tree):
+            if header.text is None:
+                continue
+            if header.text.strip().lower() != "webkit":
+                continue
+            items = []
+            current = header.getnext()
+            while current is not None and current.tag != header.tag:
+                if current.tag == "p":
+                    items.append(current.text)
+                else:
+                    items.extend((p.text for p in select_paragraphs(current)))
+                current = current.getnext()
+
+            cve_id = None
+            author = None
+            bugzilla = None
+            impact = None
+            description = None
+
+            for text in items:
+                if not text:
+                    continue
+                text = text.strip()
+                m = advisory_cve_author_re.match(text)
+                if m:
+                    cve_id, author = m[1], m[2]
+                    continue
+                m = advisory_cve_re.match(text)
+                if m:
+                    cve_id = m[1]
+                    continue
+                m = advisory_description_re.match(text)
+                if m:
+                    description = m[1]
+                    continue
+                m = advisory_impact_re.match(text)
+                if m:
+                    impact = m[1]
+                    continue
+                m = advisory_bugzilla_re.match(text)
+                if m:
+                    bugzilla = m[1]
+                    continue
+
+            if bugzilla and cve_id:
+                yield cve_id, bugzilla, author, impact, description
+
+    indexes = {"https://support.apple.com/en-us/HT201222"}
+    visited = set()
+    cves = {}
+
+    while indexes:
+        index_url = indexes.pop()
+        print("\x1b[2K*", index_url, "- visited:", len(visited),
+              "- pending:", len(indexes), "- CVEs:", len(cves), end="\r",
+              file=sys.stderr)
+        if index_url in visited:
+            continue
+
+        visited.add(index_url)
+
+        # TODO: Cache fetched data.
+        try:
+            data = urlopen(index_url).read()
+        except HTTPError as e:
+            if e.code == 404:
+                print("Not found:", index_url, "-", e, file=sys.stderr)
+                continue
+
+        tree = html.fromstring(data)
+        tree.make_links_absolute(index_url)
+
+        for item in select_advisory_links(tree):
+            url = item.get("href")
+            if apple_support_url_re.match(url) and url not in visited:
+                visited.add(url)
+                for cve_id, bugzilla, author, impact, description in webkit_cve_entries(url):
+                    if cve_id in cves:
+                        continue
+                    cves[cve_id] = {"id": cve_id,
+                                    "bug": int(bugzilla),
+                                    "author": author,
+                                    "impact": impact,
+                                    "description": description,
+                                    "url": url}
+                print("\x1b[2K*", url, "- visited:", len(visited),
+                      "- pending:", len(indexes), "- CVEs:", len(cves), end="\r",
+                      file=sys.stderr)
+        for item in select_index_links(tree):
+            url = item.get("href")
+            if apple_support_url_re.match(url) and url not in visited:
+                indexes.add(url)
+    print("\x1b[2KFetched CVEs:", len(cves), file=sys.stderr)
+
+    known_cves = set(cves.keys())
+    missing_cves = known_cves - reported_cves
+    print("Missing CVEs:", len(missing_cves), file=sys.stderr)
+    if not missing_cves:
+        return
+
+    from ruamel.yaml.comments import CommentedMap
+    cve_data = CommentedMap()
+    for cve_id in sorted(missing_cves):
+        item = {"bugzilla": cves[cve_id]["bug"]}
+        for key in ("author", "impact", "description"):
+            value = cves[cve_id].get(key, None)
+            if value:
+                item[key] = value
+        cve_data[cve_id] = item
+        cve_data.yaml_add_eol_comment(cves[cve_id]["url"], cve_id, column=0)
+    yaml = YAML()
+    yaml.indent(mapping=2, sequence=4, offset=2)
+    yaml.dump(cve_data, sys.stdout)
+
+
 arg_parser = ArgumentParser()
 subparsers = arg_parser.add_subparsers(dest="subcommand", required=True)
 
@@ -332,9 +487,13 @@ fil_parser.add_argument("-c", "--cve-data", type=Path, default=None, help="path 
 fil_parser.add_argument("-i", "--inplace", action="store_true", default=False, help="edit YAML file in-place")
 fil_parser.add_argument("report_yml", type=Path, nargs="+", help="path to the WSA report YAML source")
 
+chk_parser = subparsers.add_parser("check", description="Check for CVEs in Apple security advisories")
+chk_parser.add_argument("report_yml", type=Path, nargs="*", help="path to WSA report YAML source")
+
 args = arg_parser.parse_args()
 
 ({
     "generate": cmd_generate, "gen": cmd_generate,
     "fill": cmd_fill,
+    "check": cmd_check,
 })[args.subcommand](args)
