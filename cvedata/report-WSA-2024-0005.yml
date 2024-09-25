@@ -11,12 +11,6 @@ CVE-2024-44187:
   description: A cross-origin issue existed with "iframe" elements. This was addressed
     with improved tracking of security origins.
   impact: A malicious website may exfiltrate data cross-origin.
-CVE-2024-40857:
-  bugzilla: 268724
-  version: 2.46.0
-  author: Ron Masas
-  description: This issue was addressed through improved state management.
-  impact: Processing maliciously crafted web content may lead to universal cross site scripting.
 CVE-2024-23271:
   bugzilla: 265812
   version: 2.42.5
@@ -35,11 +29,6 @@ CVE-2024-27808:
   author: Lukas Bernhard of CISPA Helmholtz Center for Information Security
   impact: Processing web content may lead to arbitrary code execution.
   description: The issue was addressed with improved memory handling.
-CVE-2024-27850:
-  bugzilla: 270767
-  version: 2.44.2
-  impact: A maliciously crafted webpage may be able to fingerprint the user.
-  description: This issue was addressed with improvements to the noise injection algorithm.
 CVE-2024-27833:
   bugzilla: 271491
   version: 2.44.2
@@ -52,12 +41,6 @@ CVE-2024-27851:
   author: Nan Wang (@eternalsakura13) of 360 Vulnerability Research Institute
   impact: Processing maliciously crafted web content may lead to arbitrary code execution.
   description: The issue was addressed with improved bounds checks.
-CVE-2024-27830:
-  bugzilla: 271159
-  version: 2.44.3
-  author: Joe Rutkowski (@Joe12387) of Crawless and @abrahamjuliot
-  impact: A maliciously crafted webpage may be able to fingerprint the user.
-  description: This issue was addressed through improved state management.
 CVE-2024-27820:
   bugzilla: 270139
   version: 2.44.2
