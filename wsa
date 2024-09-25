@@ -327,6 +327,7 @@ def cmd_check(args):
     advisory_cve_re = re.compile(r"^(CVE-\d+-\d+)$")
     advisory_description_re = re.compile(r"^[Dd]escription:\s*(.*)$")
     advisory_impact_re = re.compile(r"^[Ii]mpact:\s*(.*)$")
+    webkit_boundary_re = re.compile(r"\bWebKit\b", re.IGNORECASE)
 
     select_advisory_headers = CSSSelector("div#sections > h3")
     select_advisory_links = CSSSelector("table > tbody > tr > td > p > a")
@@ -355,9 +356,7 @@ def cmd_check(args):
         tree = html.fromstring(data)
 
         for header in select_advisory_headers(tree):
-            if header.text is None:
-                continue
-            if header.text.strip().lower() != "webkit":
+            if header.text is None or not webkit_boundary_re.match(header.text):
                 continue
             items = []
             current = header.getnext()
