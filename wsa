@@ -4,7 +4,6 @@ from argparse import ArgumentParser
 from pathlib import Path
 from ruamel.yaml import YAML
 from time import strftime
-from urllib.parse import urlparse, urlunparse
 
 import re
 import sys
@@ -316,7 +315,7 @@ def cmd_fill(args):
 
 
 def cmd_check(args):
-    from urllib.request import urlopen
+    from httpcache import HTTPCache
     from urllib.error import HTTPError
     from lxml.cssselect import CSSSelector
     from lxml import html
@@ -334,10 +333,19 @@ def cmd_check(args):
     select_index_links = CSSSelector("ul > li > p > a")
     select_paragraphs = CSSSelector("p")
 
+    if not args.cache:
+        args.cache = Path(__file__).parent / "httpcache"
+
     if not args.report_yml:
         from itertools import chain
         cvedata_path = Path(__file__).parent / "cvedata"
         args.report_yml = chain(cvedata_path.glob("*.yml"), cvedata_path.glob("*.yaml"))
+
+    if args.cache.exists() and not args.cache.is_dir():
+        raise SystemExit(f"Path {args.cache!r} is not a directory")
+
+    args.cache.mkdir(parents=True, exist_ok=True)
+    cache = HTTPCache(args.cache)
 
     reported_cves = set()
     for wsa_yaml_path in args.report_yml:
@@ -347,13 +355,16 @@ def cmd_check(args):
     print("CVEs already in WSAs:", len(reported_cves), file=sys.stderr)
 
     def webkit_cve_entries(url):
+        entry = None
         try:
-            data = urlopen(url).read()
+            entry, _ = cache.get(url)
         except HTTPError as e:
             if e.code == 404:
                 print("Not found:", url, "-", e, file=sys.stderr)
                 return
-        tree = html.fromstring(data)
+
+        assert entry is not None
+        tree = html.fromstring(cache.read_blob(entry))
 
         for header in select_advisory_headers(tree):
             if header.text is None or not webkit_boundary_re.match(header.text):
@@ -416,14 +427,17 @@ def cmd_check(args):
         visited.add(index_url)
 
         # TODO: Cache fetched data.
+        entry = None
         try:
-            data = urlopen(index_url).read()
+            entry, _ = cache.get(index_url)
         except HTTPError as e:
             if e.code == 404:
                 print("Not found:", index_url, "-", e, file=sys.stderr)
                 continue
 
-        tree = html.fromstring(data)
+
+        assert entry is not None
+        tree = html.fromstring(cache.read_blob(entry))
         tree.make_links_absolute(index_url)
 
         for item in select_advisory_links(tree):
@@ -487,6 +501,7 @@ fil_parser.add_argument("-i", "--inplace", action="store_true", default=False, h
 fil_parser.add_argument("report_yml", type=Path, nargs="+", help="path to the WSA report YAML source")
 
 chk_parser = subparsers.add_parser("check", description="Check for CVEs in Apple security advisories")
+chk_parser.add_argument("-c", "--cache", type=Path, default=None, help="path to directory used as HTTP cache")
 chk_parser.add_argument("report_yml", type=Path, nargs="*", help="path to WSA report YAML source")
 
 args = arg_parser.parse_args()
