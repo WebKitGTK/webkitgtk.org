@@ -354,14 +354,24 @@ def cmd_check(args):
             reported_cves.update(wsa_data.keys())
     print("CVEs already in WSAs:", len(reported_cves), file=sys.stderr)
 
+    indexes = {"https://support.apple.com/en-us/HT201222"}
+    visited = set()
+    cves = {}
+
     def webkit_cve_entries(url):
+        entries = set()
+
         entry = None
         try:
             entry, _ = cache.get(url)
         except HTTPError as e:
             if e.code == 404:
-                print("Not found:", url, "-", e, file=sys.stderr)
-                return
+                print("\x1b[2KNot found:", url, "-", e, file=sys.stderr)
+                return entries
+
+        print("\x1b[2K*", url, "- visited:", len(visited),
+              "- pending:", len(indexes), "- CVEs:", len(cves), end="\r",
+                  file=sys.stderr)
 
         assert entry is not None
         tree = html.fromstring(cache.read_blob(entry))
@@ -410,56 +420,59 @@ def cmd_check(args):
                     continue
 
             if bugzilla and cve_id:
-                yield cve_id, bugzilla, author, impact, description
+                entries.add((cve_id, bugzilla, author, impact, description))
+        return entries
 
-    indexes = {"https://support.apple.com/en-us/HT201222"}
-    visited = set()
-    cves = {}
-
-    while indexes:
-        index_url = indexes.pop()
-        print("\x1b[2K*", index_url, "- visited:", len(visited),
-              "- pending:", len(indexes), "- CVEs:", len(cves), end="\r",
-              file=sys.stderr)
-        if index_url in visited:
-            continue
-
-        visited.add(index_url)
-
-        # TODO: Cache fetched data.
+    def fetch_index(url):
         entry = None
         try:
-            entry, _ = cache.get(index_url)
+            entry, _ = cache.get(url)
         except HTTPError as e:
             if e.code == 404:
-                print("Not found:", index_url, "-", e, file=sys.stderr)
-                continue
+                print("\x1b[2KNot found:", url, "-", e, file=sys.stderr)
+        return entry
 
-
-        assert entry is not None
-        tree = html.fromstring(cache.read_blob(entry))
-        tree.make_links_absolute(index_url)
-
+    def get_advisory_links(tree):
         for item in select_advisory_links(tree):
             url = item.get("href")
             if apple_support_url_re.match(url) and url not in visited:
-                visited.add(url)
-                for cve_id, bugzilla, author, impact, description in webkit_cve_entries(url):
-                    if cve_id in cves:
-                        continue
-                    cves[cve_id] = {"id": cve_id,
-                                    "bug": int(bugzilla),
-                                    "author": author,
-                                    "impact": impact,
-                                    "description": description,
-                                    "url": url}
+                yield url
+
+    from concurrent.futures import ThreadPoolExecutor
+    with ThreadPoolExecutor(max_workers=10) as exec:
+        while indexes:
+            urls = {url for url in indexes if url not in visited}
+            indexes.clear()
+
+            for url, entry in zip(urls, exec.map(fetch_index, urls)):
                 print("\x1b[2K*", url, "- visited:", len(visited),
                       "- pending:", len(indexes), "- CVEs:", len(cves), end="\r",
                       file=sys.stderr)
-        for item in select_index_links(tree):
-            url = item.get("href")
-            if apple_support_url_re.match(url) and url not in visited:
-                indexes.add(url)
+                visited.add(url)
+                if entry is None:
+                    continue
+
+                tree = html.fromstring(cache.read_blob(entry))
+                tree.make_links_absolute(url)
+
+                advisory_urls = set(get_advisory_links(tree))
+                visited.update(advisory_urls)
+
+                for item in select_index_links(tree):
+                    url = item.get("href")
+                    if apple_support_url_re.match(url) and url not in visited:
+                        indexes.add(url)
+
+                for entries in exec.map(webkit_cve_entries, advisory_urls):
+                    for cve_id, bugzilla, author, impact, description in entries:
+                        if cve_id in cves:
+                            continue
+                        cves[cve_id] = {"id": cve_id,
+                                        "bug": int(bugzilla),
+                                        "author": author,
+                                        "impact": impact,
+                                        "description": description,
+                                        "url": url}
     print("\x1b[2KFetched CVEs:", len(cves), file=sys.stderr)
 
     known_cves = set(cves.keys())
