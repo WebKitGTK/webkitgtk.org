@@ -1,6 +1,7 @@
 #! /usr/bin/env python3
 
 from argparse import ArgumentParser
+from dataclasses import asdict
 from pathlib import Path
 from ruamel.yaml import YAML
 from time import strftime
@@ -478,6 +479,12 @@ def cmd_check(args):
     known_cves = set(cves.keys())
     missing_cves = known_cves - reported_cves
     print("Missing CVEs:", len(missing_cves), file=sys.stderr)
+
+    yaml = YAML()
+    yaml.indent(mapping=2, sequence=4, offset=2)
+    if args.cache_stats:
+        yaml.dump(dict(cache_stats=asdict(cache.stats)), sys.stderr)
+
     if not missing_cves:
         return
 
@@ -491,8 +498,7 @@ def cmd_check(args):
                 item[key] = value
         cve_data[cve_id] = item
         cve_data.yaml_add_eol_comment(cves[cve_id]["url"], cve_id, column=0)
-    yaml = YAML()
-    yaml.indent(mapping=2, sequence=4, offset=2)
+
     yaml.dump(cve_data, sys.stdout)
 
 
@@ -515,6 +521,7 @@ fil_parser.add_argument("report_yml", type=Path, nargs="+", help="path to the WS
 
 chk_parser = subparsers.add_parser("check", description="Check for CVEs in Apple security advisories")
 chk_parser.add_argument("-c", "--cache", type=Path, default=None, help="path to directory used as HTTP cache")
+chk_parser.add_argument("--cache-stats", action="store_true", default=False, help="Print HTTP cache statistics")
 chk_parser.add_argument("report_yml", type=Path, nargs="*", help="path to WSA report YAML source")
 
 args = arg_parser.parse_args()
