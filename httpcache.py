@@ -28,8 +28,23 @@ class CacheEntry:
     etag: str | None = None
     type: str | None = None
     size: int | None = None
+    expires: datetime | None = None
     mtime: datetime = __TIME_DEFAULT
     data: dict[str, Any] = field(default_factory=dict)
+
+    def __get_http_expires(self) -> str:
+        if self.expires is None:
+            raise ValueError("Cannot format None expires value")
+        return format_datetime(self.expires, usegmt=True)
+
+    def __set_http_expires(self, value: str | None):
+        value = value.strip()
+        if value and value not in ("0", "-1"):
+            self.expires = parsedate_to_datetime(value)
+        else:
+            self.expires = None
+
+    http_expires = property(__get_http_expires, __set_http_expires)
 
     def __get_http_mtime(self) -> str:
         return format_datetime(self.mtime, usegmt=True)
@@ -97,12 +112,17 @@ class CacheEntry:
 
 @dataclass(slots=True)
 class Stats:
-    hits: int = 0
     misses: int = 0
     errors: int = 0
+    hits_local: int = 0
+    hits_remote: int = 0
 
     bytes_remote: int = 0
     bytes_local: int = 0
+
+    @property
+    def hits(self):
+        return self.hits_local + self.hits_remote
 
     @property
     def all(self):
@@ -136,6 +156,12 @@ class HTTPCache:
         if entry.blob:
             blob_path = entry.get_blob_path(self.__path)
             if blob_path.is_file():
+                if entry.expires and entry.expires > datetime.now(tz=UTC):
+                    if entry.size:
+                        self.stats.bytes_local += entry.size
+                    self.stats.hits_local += 1
+                    return True
+
                 if entry.mtime is not None:
                     log.debug("fetch:  - Last-Modified-Since: %s", entry.http_mtime)
                     request.add_header("If-Modified-Since", entry.http_mtime)
@@ -150,18 +176,20 @@ class HTTPCache:
                 log.debug("fetch: ** Cache hit: 304 - Not Modified")
                 if entry.size:
                     self.stats.bytes_local += entry.size
-                self.stats.hits += 1
+                self.stats.hits_remote += 1
                 return True
             self.stats.errors += 1
             raise
 
         log.debug("fetch: ** Cache miss: %d" % response.status)
 
+        entry.http_expires = response.headers.get("Expires")
         entry.http_mtime = response.headers.get("Last-Modified")
         entry.size = int(response.headers.get("Content-Length", 0))
         entry.type = response.headers.get("Content-Type")
         entry.etag = response.headers.get("ETag")
         log.debug("fetch:  - Last-Modified: %s", entry.http_mtime)
+        log.debug("fetch:  - Expires: %s", entry.http_expires)
         log.debug("fetch:  - Content-Length: %r", entry.size)
         log.debug("fetch:  - Content-Type: %s", entry.type or "")
         log.debug("fetch:  - ETag: %s", entry.etag or "")
