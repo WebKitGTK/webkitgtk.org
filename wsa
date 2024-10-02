@@ -8,6 +8,7 @@ from time import strftime
 
 import re
 import sys
+import logging
 import textwrap
 
 class Formatter:
@@ -502,7 +503,13 @@ def cmd_check(args):
     yaml.dump(cve_data, sys.stdout)
 
 
+log_levels = {logging.getLevelName(level).lower(): level
+    for level in (logging.INFO, logging.DEBUG, logging.ERROR, logging.WARNING, logging.FATAL)}
+log_level_default_name = logging.getLevelName(logging.WARNING).lower()
+
 arg_parser = ArgumentParser()
+arg_parser.add_argument("--log", choices=log_levels.keys(), default=log_level_default_name,
+    help=f"set log level (default: {log_level_default_name})")
 subparsers = arg_parser.add_subparsers(dest="subcommand", required=True)
 
 gen_parser = subparsers.add_parser("generate", aliases=("gen",), description="Generate advisory text.")
@@ -525,7 +532,7 @@ chk_parser.add_argument("--cache-stats", action="store_true", default=False, hel
 chk_parser.add_argument("report_yml", type=Path, nargs="*", help="path to WSA report YAML source")
 
 args = arg_parser.parse_args()
-
+logging.basicConfig(level=log_levels[args.log])
 ({
     "generate": cmd_generate, "gen": cmd_generate,
     "fill": cmd_fill,
