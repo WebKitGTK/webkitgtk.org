@@ -340,3 +340,65 @@ table > thead > tr > th,
 table > tbody > tr > td {
 	padding: 0.25rem 0.5rem;
 }
+
+pre {
+    padding: 0.25em 1em;
+    border: 1px dotted #aaa;
+}
+
+hr {
+    margin: 3em auto;
+    width: 33%;
+    border: none;
+    border-top: 2px dotted #aaa;
+}
+
+figure {
+    margin: 1em 0;
+    padding: 1em;
+    text-align: center;
+}
+figure > img {
+    display: block;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    background-color: white;
+    margin: 0.5em auto;
+}
+figure > figcaption {
+    color: #666;
+    font-size: 90%;
+    margin: 0.5em 1em 1em 1em;
+}
+
+@supports not (-ms-ime-align: auto) {
+    /*
+     * Resets for <details>/<summary>, see:
+     * https://css-tricks.com/two-issues-styling-the-details-element-and-how-to-solve-them/
+     */
+    details > summary {
+        cursor: pointer;
+    }
+    details > summary > * {
+        display: inline;
+    }
+}
+
+details {
+    margin: 1em 0;
+    border: 1px solid #aaa;
+    background: rgba(100%, 100%, 100%, 0.4);
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+}
+details > summary,
+details > div {
+    padding: 0.5em 1em;
+}
+details > div {
+    border-top: 1px solid #aaa;
+    background: rgba(100%, 100%, 100%, 0.25);
+}
+details > div > pre {
+    white-space: pre-wrap;
+}
