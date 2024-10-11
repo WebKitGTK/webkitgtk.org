@@ -98,7 +98,7 @@ class CacheEntry:
             data = self.__YAML.load(f)
         if data["url"] != self.url:
             raise RuntimeError(f"Inconsitent URL in cache entry:\n "
-                f"- Expected: {self.url}\n - Found: {data["url"]}")
+                f"- Expected: {self.url}\n - Found: {data['url']}")
         for f in fields(self):
             if f.name == "url":
                 continue
