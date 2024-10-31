@@ -24,3 +24,4 @@ CVE-2024-27850: Canvas noise injection unsupported
 CVE-2024-40785: iOS only
 CVE-2024-40794: Cocoa only
 CVE-2024-40857: WebArchive unsupported
+CVE-2024-44206: Cocoa only
