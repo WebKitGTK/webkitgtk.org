@@ -12,11 +12,13 @@ CVE-2023-32409: true
 CVE-2023-32423: true
 CVE-2023-32430: true
 CVE-2023-32445: true
+CVE-2023-39434: Affects GPUProcess, which is still disabled for GTK/WPE
 CVE-2023-40385: true
 CVE-2023-40447: true
 CVE-2023-41976: true
 CVE-2023-42866: true
 CVE-2023-5217: true
+CVE-2024-23206: iOS only
 CVE-2024-23214: true
 CVE-2024-23226: true
 CVE-2024-27830: Canvas noise injection unsupported
