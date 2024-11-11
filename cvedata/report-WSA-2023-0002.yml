@@ -1,6 +1,0 @@
-CVE-2023-23529:
-  author: an anonymous researcher.
-  version: 2.38.5
-  description: A type confusion issue was addressed with improved checks.
-  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
-    Apple is aware of a report that this issue may have been actively exploited.

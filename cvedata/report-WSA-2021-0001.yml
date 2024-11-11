@@ -1,8 +1,0 @@
-CVE-2020-13558:
-  author: Marcin 'Icewall' Noga of Cisco Talos
-  version:
-    gtk: 2.30.5
-    wpe: 2.30.5
-  description: A use after free issue in the AudioSourceProviderGStreamer class was
-    addressed with improved memory management.
-  impact: Processing maliciously crafted web content may lead to arbitrary code execution.

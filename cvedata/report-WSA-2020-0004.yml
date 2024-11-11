@@ -1,9 +1,0 @@
-CVE-2020-11793:
-  author: Cim Stordal of Cognite
-  version:
-    gtk: 2.28.1
-    wpe: 2.28.1
-  description: A memory corruption issue (use-after-free) was addressed with improved
-    memory handling.
-  impact: Processing maliciously crafted web content may lead to arbitrary code execution
-    or application crash (denial of service).

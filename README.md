@@ -1,19 +1,15 @@
-webkitgtk.org
-=============
+<div align="center">
+  <img src="assets/favicon.svg" width="128" height="128">
 
-The WebKitGTK website.
+  # WebKitGTK.org
 
-New version of the WebKitGTK website done in [Jekyll](http://jekyllrb.com/)
-using the style of GNOME project pages.
+  The WebKitGTK website.
+</div>
 
-In order to test it you need to install Jeykyll, you can do it with the
-following commands in a Debian based system:
+This site is made in [Jekyll](http://jekyllrb.com/) using the style of GNOME project pages.
 
-    sudo apt-get install jekyll
+In order to test it, see [Setup](https://jimmac.github.io/os-component-website/#setup).
 
-And then you can run the command `jekyll build` that will generate the site under
-`_site` folder. BTW, you can use `jekyll serve` to test it locally.
-
-In order to write a piece of news in the new website you just have to create a
-new file inside `_posts` folder using
+In order to write a piece of news you have to create a
+new file inside the `_posts` folder using
 [Markdown](http://daringfireball.net/projects/markdown/) syntax.
