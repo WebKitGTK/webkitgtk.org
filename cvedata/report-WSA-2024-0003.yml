@@ -1,6 +1,0 @@
-CVE-2024-27834:
-  author: Manfred Paul working with Trend Micro's Zero Day Initiative
-  version: 2.44.2
-  bugzilla: 272750
-  description: The issue was addressed with improved checks.
-  impact: An attacker with arbitrary read and write capability may be able to bypass Pointer Authentication.

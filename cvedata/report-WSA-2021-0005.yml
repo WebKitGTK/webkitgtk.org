@@ -1,6 +1,0 @@
-CVE-2021-30858:
-  author: an anonymous researcher
-  version: 2.32.4
-  description: A use after free issue was addressed with improved memory management.
-  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
-    Apple is aware of a report that this issue may have been actively exploited.

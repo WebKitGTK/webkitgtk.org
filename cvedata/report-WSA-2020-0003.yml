@@ -1,8 +1,0 @@
-CVE-2020-10018:
-  author: Sudhakar Verma, Ashfaq Ansari & Siddhant Badhe - Project Srishti of CloudFuzz
-  version:
-    gtk: 2.28.0
-    wpe: 2.28.0
-  description: A memory corruption issue (use-after-free) was addressed with improved
-    memory handling.
-  impact: Processing maliciously crafted web content may lead to arbitrary code execution.

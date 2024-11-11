@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: Non-free files in some versions of WebKitGTK+
 ---
 
