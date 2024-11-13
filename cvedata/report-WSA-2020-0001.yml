@@ -1,0 +1,24 @@
+CVE-2019-8835:
+  author: Anonymous working with Trend Micro's Zero Day Initiative, Mike Zhang of
+    Pangu Team
+  version:
+    gtk: 2.26.3
+    wpe: 2.26.3
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2019-8844:
+  author: William Bowling (@wcbowling)
+  version:
+    gtk: 2.26.3
+    wpe: 2.26.3
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2019-8846:
+  author: Marcin Towalski of Cisco Talos
+  version:
+    gtk: 2.26.3
+    wpe: 2.26.3
+  description: A use after free issue was addressed with improved memory management.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.

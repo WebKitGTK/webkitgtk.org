@@ -1,0 +1,42 @@
+CVE-2024-40776:
+  bugzilla: 273176
+  author: Huang Xilin of Ant Group Light-Year Security Lab
+  version: 2.44.3
+  description: A use-after-free issue was addressed with improved memory management.
+  impact: Processing maliciously crafted web content may lead to an unexpected process
+    crash.
+CVE-2024-40779:
+  bugzilla: 275431
+  author: Huang Xilin of Ant Group Light-Year Security Lab
+  version: 2.44.3
+  description: An out-of-bounds read was addressed with improved bounds checking.
+  impact: Processing maliciously crafted web content may lead to an unexpected process
+    crash.
+CVE-2024-40780:
+  bugzilla: 275273
+  author: Huang Xilin of Ant Group Light-Year Security Lab
+  version: 2.44.3
+  description: An out-of-bounds read was addressed with improved bounds checking.
+  impact: Processing maliciously crafted web content may lead to an unexpected process
+    crash.
+CVE-2024-40782:
+  bugzilla: 268770
+  author: Maksymilian Motyl
+  version: 2.44.3
+  description: A use-after-free issue was addressed with improved memory management.
+  impact: Processing maliciously crafted web content may lead to an unexpected process
+    crash.
+CVE-2024-40789:
+  author: Seunghyun Lee (@0x10n) of KAIST Hacking Lab working with Trend Micro Zero
+    Day Initiative
+  version: 2.44.3
+  description: An out-of-bounds access issue was addressed with improved bounds checking.
+  impact: Processing maliciously crafted web content may lead to an unexpected process
+    crash.
+CVE-2024-4558:
+  bugzilla: 274165
+  version: 2.44.3
+  impact: Processing maliciously crafted web content may lead to an unexpected process
+    crash.
+  description: Use after free in ANGLE allowed a remote attacker to potentially exploit
+    heap corruption via a crafted HTML page.

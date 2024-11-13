@@ -1,0 +1,21 @@
+CVE-2024-44185: # https://support.apple.com/en-us/104191
+  bugzilla: 276097
+  version: 2.46.0
+  author: Gary Kwong
+  impact: Processing maliciously crafted web content may lead to an unexpected process
+    crash
+  description: The issue was addressed with improved checks.
+CVE-2024-44244: # https://support.apple.com/en-us/104191
+  bugzilla: 279780
+  version: 2.46.3
+  author: an anonymous researcher, Q1IQ (@q1iqF) and P1umer (@p1umer)
+  impact: Processing maliciously crafted web content may lead to an unexpected process
+    crash
+  description: A memory corruption issue was addressed with improved input validation.
+CVE-2024-44296: # https://support.apple.com/en-us/104191
+  bugzilla: 278765
+  version: 2.46.3
+  author: Narendra Bhati, Manager of Cyber Security at Suma Soft Pvt. Ltd, Pune (India)
+  impact: Processing maliciously crafted web content may prevent Content Security
+    Policy from being enforced
+  description: The issue was addressed with improved checks.

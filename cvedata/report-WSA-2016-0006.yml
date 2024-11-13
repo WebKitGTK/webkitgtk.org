@@ -1,0 +1,159 @@
+CVE-2016-4611:
+  author: Apple
+  version: 2.12.0
+  description: WebKit in Apple iOS before 10, Safari before 10, and tvOS before 10
+    allows remote attackers to execute arbitrary code or cause a denial of service
+    (memory corruption) via a crafted web site, a different vulnerability than CVE-2016-4730,
+    CVE-2016-4733, CVE-2016-4734, and CVE-2016-4735.
+CVE-2016-4613:
+  author: Chris Palmer
+  version: 2.14.0
+  description: An input validation issue was addressed through improved state management.
+  impact: Processing maliciously crafted web content may result in the disclosure
+    of user information.
+CVE-2016-4657:
+  author: Citizen Lab and Lookout
+  version: 2.14.0
+  description: WebKit in Apple iOS before 9.3.5 allows remote attackers to execute
+    arbitrary code or cause a denial of service (memory corruption) via a crafted
+    web site.
+CVE-2016-4666:
+  author: Apple
+  version: 2.14.0
+  description: Multiple memory corruption issues were addressed through improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2016-4707:
+  author: Anonymous Researcher
+  version: 2.14.0
+  description: CFNetwork in Apple iOS before 10 and OS X before 10.12 mishandles Local
+    Storage deletion, which allows local users to discover the visited web sites of
+    arbitrary users via unspecified vectors.
+CVE-2016-4728:
+  author: Daniel Divricean
+  version: 2.14.0
+  description: WebKit in Apple iOS before 10, tvOS before 10, iTunes before 12.5.1
+    on Windows, and Safari before 10 mishandles error prototypes, which allows remote
+    attackers to execute arbitrary code via a crafted web site.
+CVE-2016-4729:
+  author: Apple
+  version: 2.12.0
+  description: WebKit in Apple iOS before 10 and Safari before 10 allows remote attackers
+    to execute arbitrary code or cause a denial of service (memory corruption) via
+    a crafted web site, a different vulnerability than CVE-2016-4731.
+CVE-2016-4730:
+  author: Apple
+  version: 2.12.0
+  description: WebKit in Apple iOS before 10, Safari before 10, and tvOS before 10
+    allows remote attackers to execute arbitrary code or cause a denial of service
+    (memory corruption) via a crafted web site, a different vulnerability than CVE-2016-4611,
+    CVE-2016-4733, CVE-2016-4734, and CVE-2016-4735.
+CVE-2016-4731:
+  author: Apple
+  version: 2.12.0
+  description: WebKit in Apple iOS before 10 and Safari before 10 allows remote attackers
+    to execute arbitrary code or cause a denial of service (memory corruption) via
+    a crafted web site, a different vulnerability than CVE-2016-4729.
+CVE-2016-4733:
+  author: Natalie Silvanovich of Google Project Zero
+  version: 2.14.0
+  description: WebKit in Apple iOS before 10, Safari before 10, and tvOS before 10
+    allows remote attackers to execute arbitrary code or cause a denial of service
+    (memory corruption) via a crafted web site, a different vulnerability than CVE-2016-4611,
+    CVE-2016-4730, CVE-2016-4734, and CVE-2016-4735.
+CVE-2016-4734:
+  author: Natalie Silvanovich of Google Project Zero
+  version: 2.14.0
+  description: WebKit in Apple iOS before 10, Safari before 10, and tvOS before 10
+    allows remote attackers to execute arbitrary code or cause a denial of service
+    (memory corruption) via a crafted web site, a different vulnerability than CVE-2016-4611,
+    CVE-2016-4730, CVE-2016-4733, and CVE-2016-4735.
+CVE-2016-4735:
+  author: André Bargull
+  version: 2.14.0
+  description: WebKit in Apple iOS before 10, Safari before 10, and tvOS before 10
+    allows remote attackers to execute arbitrary code or cause a denial of service
+    (memory corruption) via a crafted web site, a different vulnerability than CVE-2016-4611,
+    CVE-2016-4730, CVE-2016-4733, and CVE-2016-4734.
+CVE-2016-4758:
+  author: Masato Kinugawa of Cure53
+  version: 2.12.1
+  description: WebKit in Apple iOS before 10, iTunes before 12.5.1 on Windows, and
+    Safari before 10 does not properly restrict access to the location variable, which
+    allows remote attackers to obtain sensitive information via a crafted web site.
+CVE-2016-4759:
+  author: Tongbo Luo of Palo Alto Networks
+  version: 2.14.0
+  description: WebKit in Apple iOS before 10, tvOS before 10, iTunes before 12.5.1
+    on Windows, and Safari before 10 allows remote attackers to execute arbitrary
+    code or cause a denial of service (memory corruption) via a crafted web site,
+    a different vulnerability than CVE-2016-4765, CVE-2016-4766, CVE-2016-4767, and
+    CVE-2016-4768.
+CVE-2016-4760:
+  author: Jordan Milne
+  version: 2.14.0
+  description: WebKit in Apple iOS before 10, iTunes before 12.5.1 on Windows, and
+    Safari before 10 allows remote attackers to conduct DNS rebinding attacks against
+    non-HTTP Safari sessions by leveraging HTTP/0.9 support.
+CVE-2016-4761:
+  author: Apple
+  version: 2.14.0
+  description: An use-after-free vulnerability allows remote attackers to cause a
+    denial of service or possibly have unspecified other impact via unknown vectors.
+CVE-2016-4762:
+  author: Zheng Huang of Baidu Security Lab
+  version: 2.14.0
+  description: WebKit in Apple iOS before 10, iTunes before 12.5.1 on Windows, iCloud
+    before 6.0 on Windows, and Safari before 10 allows remote attackers to execute
+    arbitrary code or cause a denial of service (memory corruption) via a crafted
+    web site.
+CVE-2016-4764:
+  author: Apple
+  version: 2.14.0
+  description: Multiple memory corruption issues were addressed through improved state
+    management.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2016-4765:
+  author: Apple
+  version: 2.14.0
+  description: WebKit in Apple iOS before 10, tvOS before 10, iTunes before 12.5.1
+    on Windows, and Safari before 10 allows remote attackers to execute arbitrary
+    code or cause a denial of service (memory corruption) via a crafted web site,
+    a different vulnerability than CVE-2016-4759, CVE-2016-4766, CVE-2016-4767, and
+    CVE-2016-4768.
+CVE-2016-4766:
+  author: Apple
+  version: 2.12.4
+  description: WebKit in Apple iOS before 10, tvOS before 10, iTunes before 12.5.1
+    on Windows, and Safari before 10 allows remote attackers to execute arbitrary
+    code or cause a denial of service (memory corruption) via a crafted web site,
+    a different vulnerability than CVE-2016-4759, CVE-2016-4765, CVE-2016-4767, and
+    CVE-2016-4768.
+CVE-2016-4767:
+  author: Apple
+  version: 2.14.0
+  description: WebKit in Apple iOS before 10, tvOS before 10, iTunes before 12.5.1
+    on Windows, and Safari before 10 allows remote attackers to execute arbitrary
+    code or cause a denial of service (memory corruption) via a crafted web site,
+    a different vulnerability than CVE-2016-4759, CVE-2016-4765, CVE-2016-4766, and
+    CVE-2016-4768.
+CVE-2016-4768:
+  author: Anonymous working with Trend Micro's Zero Day Initiative
+  version: 2.14.0
+  description: WebKit in Apple iOS before 10, tvOS before 10, iTunes before 12.5.1
+    on Windows, and Safari before 10 allows remote attackers to execute arbitrary
+    code or cause a denial of service (memory corruption) via a crafted web site,
+    a different vulnerability than CVE-2016-4759, CVE-2016-4765, CVE-2016-4766, and
+    CVE-2016-4767.
+CVE-2016-4769:
+  author: Tongbo Luo of Palo Alto Networks
+  version: 2.14.0
+  description: WebKit in Apple iTunes before 12.5.1 on Windows and Safari before 10
+    allows remote attackers to execute arbitrary code or cause a denial of service
+    (memory corruption and application crash) via a crafted web site.
+CVE-2016-7578:
+  author: Apple
+  version: 2.14.0
+  description: Multiple memory corruption issues were addressed through improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.

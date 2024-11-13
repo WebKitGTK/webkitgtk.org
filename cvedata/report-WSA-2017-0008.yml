@@ -1,0 +1,129 @@
+CVE-2017-7081:
+  author: Apple
+  version: 2.16.1
+  description: A memory corruption issue was addressed through improved input validation.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-7087:
+  author: Apple
+  version: 2.18.0
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-7089:
+  author: Anton Lopanitsyn of ONSEC, Frans Rosén of Detectify
+  version: 2.18.0
+  description: A logic issue existed in the handling of the parent-tab. This issue
+    was addressed with improved state management.
+  impact: Processing maliciously crafted web content may lead to universal cross site
+    scripting.
+CVE-2017-7090:
+  author: Apple
+  version: 2.18.0
+  description: A permissions issue existed in the handling of web browser cookies.
+    This issue was addressed by no longer returning cookies for custom URL schemes.
+  impact: Cookies belonging to one origin may be sent to another origin.
+CVE-2017-7091:
+  author: Wei Yuan of Baidu Security Lab working with Trend Micro’s Zero Day Initiative
+  version: 2.18.0
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-7092:
+  author: Qixun Zhao (@S0rryMybad) of Qihoo 360 Vulcan Team, Samuel Gro and Niklas
+    Baumstark working with Trend Micro's Zero Day Initiative
+  version: 2.18.0
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-7093:
+  author: Samuel Gro and Niklas Baumstark working with Trend Micro’s Zero Day Initiative
+  version: 2.18.0
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-7094:
+  author: Tim Michaud (@TimGMichaud) of Leviathan Security Group
+  version: 2.16.3
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-7095:
+  author: Wang Junjie, Wei Lei, and Liu Yang of Nanyang Technological University working
+    with Trend Micro’s Zero Day Initiative
+  version: 2.18.0
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-7096:
+  author: Wei Yuan of Baidu Security Lab
+  version: 2.18.0
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-7098:
+  author: Felipe Freitas of Instituto Tecnológico de Aeronáutica
+  version: 2.18.0
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-7099:
+  author: Apple
+  version: 2.16.4
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-7100:
+  author: Masato Kinugawa and Mario Heiderich of Cure53
+  version: 2.18.0
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-7102:
+  author: Wang Junjie, Wei Lei, and Liu Yang of Nanyang Technological University
+  version: 2.18.0
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-7104:
+  author: likemeng of Baidu Secutity Lab
+  version: 2.18.0
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-7107:
+  author: Wang Junjie, Wei Lei, and Liu Yang of Nanyang Technological University
+  version: 2.18.0
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-7109:
+  author: avlidienbrunn
+  version: 2.18.0
+  description: Application Cache policy may be unexpectedly applied.
+  impact: Processing maliciously crafted web content may lead to a cross site scripting
+    attack.
+CVE-2017-7111:
+  author: likemeng of Baidu Security Lab (xlab.baidu.com) working with Trend Micro's
+    Zero Day Initiative
+  version: 2.18.0
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-7117:
+  author: lokihardt of Google Project Zero
+  version: 2.18.0
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-7120:
+  author: chenqin (陈钦) of Ant-financial Light-Year Security Lab
+  version: 2.18.0
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-7142:
+  author: an anonymous researcher
+  version: 2.16.1
+  description: An information leakage issue existed in the handling of website data
+    in Safari Private windows. This issue was addressed with improved data handling.
+  impact: Website data may persist after a Safari Private browsing session.

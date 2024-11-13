@@ -1,0 +1,78 @@
+CVE-2017-13783:
+  author: Ivan Fratric of Google Project Zero
+  version: 2.18.1
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-13784:
+  author: Ivan Fratric of Google Project Zero
+  version: 2.18.1
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-13785:
+  author: Ivan Fratric of Google Project Zero
+  version: 2.18.1
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-13788:
+  author: xisigr of Tencent's Xuanwu Lab (tencent.com)
+  version: 2.18.3
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-13791:
+  author: Ivan Fratric of Google Project Zero
+  version: 2.18.1
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-13792:
+  author: Ivan Fratric of Google Project Zero
+  version: 2.18.1
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-13793:
+  author: Hanul Choi working with Trend Micro's Zero Day Initiative
+  version: 2.18.1
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-13794:
+  author: Ivan Fratric of Google Project Zero
+  version: 2.18.1
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-13795:
+  author: Ivan Fratric of Google Project Zero
+  version: 2.18.1
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-13796:
+  author: Ivan Fratric of Google Project Zero
+  version: 2.18.1
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-13798:
+  author: Ivan Fratric of Google Project Zero
+  version: 2.18.3
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-13802:
+  author: Ivan Fratric of Google Project Zero
+  version: 2.18.1
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-13803:
+  author: chenqin (陈钦) of Ant-financial Light-Year Security
+  version: 2.18.3
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
