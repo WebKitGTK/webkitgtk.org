@@ -1,0 +1,23 @@
+CVE-2021-1788:
+  author: Francisco Alonso (@revskills)
+  version:
+    gtk: 2.32.0
+    wpe: 2.32.0
+  description: A use after free issue was addressed with improved memory management.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2021-1844:
+  author: Clément Lecigne of Google’s Threat Analysis Group, Alison Huffman of Microsoft
+    Browser Vulnerability Research
+  version:
+    gtk: 2.32.0
+    wpe: 2.32.0
+  description: A memory corruption issue was addressed with improved validation.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2021-1871:
+  author: an anonymous researcher
+  version:
+    gtk: 2.32.0
+    wpe: 2.32.0
+  description: A logic issue was addressed with improved restrictions.
+  impact: A remote attacker may be able to cause arbitrary code execution. Apple is
+    aware of a report that this issue may have been actively exploited.

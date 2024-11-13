@@ -1,0 +1,59 @@
+CVE-2020-27918:
+  author: Liu Long of Ant Security Light-Year Lab
+  version:
+    gtk: 2.30.6
+    wpe: 2.30.6
+  description: A use after free issue was addressed with improved memory management.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2020-29623:
+  author: Simon Hunt of OvalTwo LTD
+  version:
+    gtk: 2.30.6
+    wpe: 2.30.6
+  description: '"Clear History and Website Data" did not clear the history in some
+    circumstances. The issue was addressed with improved data deletion.'
+  impact: A user may be unable to fully delete browsing history.
+CVE-2020-9947:
+  author: cc working with Trend Micro Zero Day Initiative
+  version:
+    gtk: 2.30.0
+    wpe: 2.30.0
+  description: A use after free issue was addressed with improved memory management.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2021-1765:
+  author: Eliya Stein of Confiant
+  version:
+    gtk: 2.30.6
+    wpe: 2.30.6
+  description: This issue was addressed with improved iframe sandbox enforcement.
+  impact: Maliciously crafted web content may violate iframe sandboxing policy.
+CVE-2021-1789:
+  author: '@S0rryMybad of 360 Vulcan Team'
+  version:
+    gtk: 2.30.6
+    wpe: 2.30.6
+  description: A type confusion issue was addressed with improved state handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2021-1799:
+  author: Gregory Vishnepolsky & Ben Seri of Armis Security, and Samy Kamkar
+  version:
+    gtk: 2.30.6
+    wpe: 2.30.6
+  description: A port redirection issue was addressed with additional port validation.
+  impact: A malicious website may be able to access restricted ports on arbitrary
+    servers,
+CVE-2021-1801:
+  author: Eliya Stein of Confiant
+  version:
+    gtk: 2.30.6
+    wpe: 2.30.6
+  description: This issue was addressed with improved iframe sandbox enforcement.
+  impact: Maliciously crafted web content may violate iframe sandboxing policy.
+CVE-2021-1870:
+  author: an anonymous researcher
+  version:
+    gtk: 2.30.6
+    wpe: 2.30.6
+  description: A logic issue was addressed with improved restrictions.
+  impact: A remote attacker may be able to cause arbitrary code execution. Apple is
+    aware of a report that this issue may have been actively exploited.

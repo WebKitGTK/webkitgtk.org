@@ -1,0 +1,96 @@
+CVE-2019-8625:
+  author: Sergei Glazunov of Google Project Zero
+  version:
+    gtk: 2.26.0
+    wpe: 2.26.0
+  description: A logic issue was addressed with improved state management.
+  impact: Processing maliciously crafted web content may lead to universal cross site
+    scripting.
+CVE-2019-8674:
+  author: Sergei Glazunov of Google Project Zero
+  version:
+    gtk: 2.24.4
+    wpe: 2.24.3
+  description: A logic issue was addressed with improved state management.
+  impact: Processing maliciously crafted web content may lead to universal cross site
+    scripting.
+CVE-2019-8707:
+  author: an anonymous researcher working with Trend Micro's Zero Day Initiative,
+    cc working with Trend Micro Zero Day Initiative
+  version:
+    gtk: 2.24.4
+    wpe: 2.24.3
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2019-8719:
+  author: Sergei Glazunov of Google Project Zero
+  version:
+    gtk: 2.24.4
+    wpe: 2.24.3
+  description: A logic issue was addressed with improved state management.
+  impact: Processing maliciously crafted web content may lead to universal cross site
+    scripting.
+CVE-2019-8720:
+  author: Wen Xu of SSLab at Georgia Tech
+  version:
+    gtk: 2.26.0
+    wpe: 2.26.0
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2019-8726:
+  author: Jihui Lu of Tencent KeenLab
+  version:
+    gtk: 2.24.3
+    wpe: 2.24.3
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2019-8733:
+  author: Sergei Glazunov of Google Project Zero
+  version:
+    gtk: 2.24.4
+    wpe: 2.24.3
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2019-8735:
+  author: G. Geshev working with Trend Micro Zero Day Initiative
+  version:
+    gtk: 2.24.2
+    wpe: 2.24.2
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2019-8763:
+  author: Sergei Glazunov of Google Project Zero
+  version:
+    gtk: 2.24.4
+    wpe: 2.24.3
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2019-8768:
+  author: Hugo S. Diaz (coldpointblue)
+  version:
+    gtk: 2.24.0
+    wpe: 2.24.0
+  description: '"Clear History and Website Data" did not clear the history. The issue
+    was addressed with improved data deletion.'
+  impact: A user may be unable to delete browsing history items.
+CVE-2019-8769:
+  author: Piérre Reimertz (@reimertz)
+  version:
+    gtk: 2.26.0
+    wpe: 2.26.0
+  description: An issue existed in the drawing of web page elements. The issue was
+    addressed with improved logic.
+  impact: Visiting a maliciously crafted website may reveal browsing history.
+CVE-2019-8771:
+  author: Eliya Stein of Confiant
+  version:
+    gtk: 2.26.0
+    wpe: 2.26.0
+  description: This issue was addressed with improved iframe sandbox enforcement.
+  impact: Maliciously crafted web content may violate iframe sandboxing policy.

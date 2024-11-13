@@ -1,0 +1,78 @@
+CVE-2018-4345:
+  author: an anonymous researcher
+  version:
+    gtk: 2.22.3
+    wpe: 2.22.1
+  description: A cross-site scripting issue existed in WebKit. This issue was addressed
+    with improved URL validation.
+CVE-2018-4372:
+  author: HyungSeok Han, DongHyeon Oh, and Sang Kil Cha of KAIST Softsec Lab, Korea
+  version:
+    gtk: 2.22.4
+    wpe: 2.22.2
+  description: Processing maliciously crafted web content may lead to arbitrary code
+    execution. Multiple memory corruption issues were addressed with improved memory
+    handling.
+CVE-2018-4373:
+  author: ngg, alippai, DirtYiCE, KT of Tresorit working with Trend Micro’s Zero Day
+    Initiative
+  version: 2.22.0
+  description: Processing maliciously crafted web content may lead to arbitrary code
+    execution. Multiple memory corruption issues were addressed with improved memory
+    handling.
+CVE-2018-4375:
+  author: Yu Haiwan and Wu Hongjun From Nanyang Technological University working with
+    Trend Micro's Zero Day Initiative
+  version:
+    gtk: 2.22.1
+    wpe: 2.22.0
+  description: Processing maliciously crafted web content may lead to arbitrary code
+    execution. Multiple memory corruption issues were addressed with improved memory
+    handling.
+CVE-2018-4376:
+  author: 010 working with Trend Micro's Zero Day Initiative
+  version:
+    gtk: 2.22.1
+    wpe: 2.22.0
+  description: Processing maliciously crafted web content may lead to arbitrary code
+    execution. Multiple memory corruption issues were addressed with improved memory
+    handling.
+CVE-2018-4378:
+  author: an anonymous researcher, zhunki of 360 ESG Codesafe Team
+  version:
+    gtk: 2.22.1
+    wpe: 2.22.0
+  description: Processing maliciously crafted web content may lead to code execution.
+    A memory corruption issue was addressed with improved validation.
+CVE-2018-4382:
+  author: lokihardt of Google Project Zero
+  version:
+    gtk: 2.22.1
+    wpe: 2.22.0
+  description: Processing maliciously crafted web content may lead to arbitrary code
+    execution. Multiple memory corruption issues were addressed with improved memory
+    handling.
+CVE-2018-4386:
+  author: lokihardt of Google Project Zero
+  version:
+    gtk: 2.22.3
+    wpe: 2.22.1
+  description: Processing maliciously crafted web content may lead to arbitrary code
+    execution. Multiple memory corruption issues were addressed with improved memory
+    handling.
+CVE-2018-4392:
+  author: zhunki of 360 ESG Codesafe Team
+  version:
+    gtk: 2.22.1
+    wpe: 2.22.0
+  description: Processing maliciously crafted web content may lead to arbitrary code
+    execution. Multiple memory corruption issues were addressed with improved memory
+    handling.
+CVE-2018-4416:
+  author: lokihardt of Google Project Zero
+  version:
+    gtk: 2.22.1
+    wpe: 2.22.0
+  description: Processing maliciously crafted web content may lead to arbitrary code
+    execution. Multiple memory corruption issues were addressed with improved memory
+    handling.

@@ -1,0 +1,37 @@
+CVE-2020-3862:
+  author: Srikanth Gatta of Google Chrome
+  version:
+    gtk: 2.26.4
+    wpe: 2.26.4
+  description: A denial of service issue was addressed with improved memory handling.
+  impact: A malicious website may be able to cause a denial of service.
+CVE-2020-3864:
+  author: Ryan Pickren (ryanpickren.com)
+  version:
+    gtk: 2.26.4
+    wpe: 2.26.4
+  description: A logic issue was addressed with improved validation.
+  impact: A DOM object context may not have had a unique security origin.
+CVE-2020-3865:
+  author: Ryan Pickren (ryanpickren.com)
+  version:
+    gtk: 2.26.4
+    wpe: 2.26.4
+  description: A logic issue was addressed with improved validation.
+  impact: A top-level DOM object context may have incorrectly been considered secure.
+CVE-2020-3867:
+  author: an anonymous researcher
+  version:
+    gtk: 2.26.4
+    wpe: 2.26.4
+  description: A logic issue was addressed with improved state management.
+  impact: Processing maliciously crafted web content may lead to universal cross site
+    scripting.
+CVE-2020-3868:
+  author: Marcin Towalski of Cisco Talos
+  version:
+    gtk: 2.26.4
+    wpe: 2.26.4
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.

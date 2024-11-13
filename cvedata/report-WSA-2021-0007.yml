@@ -1,0 +1,54 @@
+CVE-2021-30809:
+  author: an anonymous researcher
+  version: 2.32.4
+  description: A use after free issue was addressed with improved memory management.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2021-30818:
+  author: Amar Menezes (@amarekano) of Zon8Research
+  version: 2.34.0
+  description: A type confusion issue was addressed with improved state handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2021-30823:
+  author: David Gullasch of Recurity Labs
+  version: 2.34.0
+  description: A logic issue was addressed with improved restrictions.
+  impact: An attacker in a privileged network position may be able to bypass HSTS.
+CVE-2021-30836:
+  author: Peter Nguyen Vu Hoang of STAR Labs
+  version: 2.32.4
+  description: An out-of-bounds read was addressed with improved input validation.
+  impact: Processing a maliciously crafted audio file may disclose restricted memory.
+CVE-2021-30884:
+  author: an anonymous researcher
+  version: 2.34.0
+  description: The issue was resolved with additional restrictions on CSS compositing.
+  impact: Visiting a maliciously crafted website may reveal a user's browsing history.
+CVE-2021-30887:
+  author: Narendra Bhati (@imnarendrabhati) of Suma Soft Pvt. Ltd.
+  version: 2.34.3
+  description: A logic issue was addressed with improved restrictions.
+  impact: Processing maliciously crafted web content may lead to unexpectedly unenforced
+    Content Security Policy.
+CVE-2021-30888:
+  author: Prakash (@1lastBr3ath)
+  version: 2.34.0
+  description: An information leakage issue was addressed.
+  impact: A malicious website using Content Security Policy reports may be able to
+    leak information via redirect behavior.
+CVE-2021-30889:
+  author: Chijin Zhou of ShuiMuYuLin Ltd and Tsinghua wingtecher lab
+  version: 2.34.0
+  description: A buffer overflow issue was addressed with improved memory handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution,
+CVE-2021-30890:
+  author: an anonymous researcher
+  version: 2.34.3
+  description: A logic issue was addressed with improved state management.
+  impact: Processing maliciously crafted web content may lead to universal cross site
+    scripting.
+CVE-2021-30897:
+  author: an anonymous researcher
+  version: 2.34.0
+  description: An issue existed in the specification for the resource timing API.
+    The specification was updated and the updated specification was implemented.
+  impact: A malicious website may exfiltrate data cross-origin.

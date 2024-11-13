@@ -1,0 +1,57 @@
+CVE-2021-30934:
+  author: Dani Biro
+  version: 2.34.4
+  description: A buffer overflow issue was addressed with improved memory handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2021-30936:
+  author: Chijin Zhou of ShuiMuYuLin Ltd and Tsinghua wingtecher lab
+  version: 2.34.4
+  description: A use after free issue was addressed with improved memory management.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2021-30951:
+  author: Pangu
+  version: 2.34.4
+  description: A use after free issue was addressed with improved memory management.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2021-30952:
+  author: WeBin
+  version: 2.34.4
+  description: An integer overflow was addressed with improved input validation.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2021-30953:
+  author: VRIJ
+  version: 2.34.4
+  description: An out-of-bounds read was addressed with improved bounds checking.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2021-30954:
+  author: Kunlun Lab
+  version: 2.34.4
+  description: A type confusion issue was addressed with improved memory handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2021-30984:
+  author: Kunlun Lab
+  version: 2.34.4
+  description: A race condition was addressed with improved state handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2022-22594:
+  author: Martin Bajanik of fingerprintjs.com
+  version: 2.34.4
+  description: 'A cross-origin issue in the IndexDB API was addressed with improved
+    input validation. Notes: There is a public PoC demonstrating this issue at safarileaks.com
+    so it may have been actively exploited.'
+  impact: A website may be able to track sensitive user information.
+CVE-2021-45481:
+  author: Chijin Zhou of ShuiMuYuLin Ltd and Tsinghua wingtecher lab
+  version: 2.34.0
+  description: Processing maliciously crafted web content may cause an application
+    crash due to an incorrect memory allocation in WebCore::ImageBufferCairoImageSurfaceBackend::create.
+CVE-2021-45482:
+  author: Chijin Zhou of ShuiMuYuLin Ltd and Tsinghua wingtecher lab
+  version: 2.32.4
+  description: Processing maliciously crafted web content may cause a memory corruption
+    issue (use-after-free) in WebCore::ContainerNode::firstChild.
+CVE-2021-45483:
+  author: Chijin Zhou of ShuiMuYuLin Ltd and Tsinghua wingtecher lab
+  version: 2.34.0
+  description: Processing maliciously crafted web content may cause a memory corruption
+    issue (heap-use-after-free) in WebCore::Frame::page.

@@ -1,0 +1,72 @@
+CVE-2017-2350:
+  author: Gareth Heyes of Portswigger Web Security
+  version: 2.14.4
+  description: A prototype access issue was addressed through improved exception handling.
+  impact: Processing maliciously crafted web content may exfiltrate data cross-origin.
+CVE-2017-2354:
+  author: Neymar of Tencent's Xuanwu Lab (tencent.com) working with Trend Micro's
+    Zero Day Initiative
+  version: 2.14.4
+  description: Multiple memory corruption issues were addressed through improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-2355:
+  author: Team Pangu and lokihardt at PwnFest 2016
+  version: 2.14.4
+  description: A memory initialization issue was addressed through improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-2356:
+  author: Team Pangu and lokihardt at PwnFest 2016
+  version: 2.14.4
+  description: Multiple memory corruption issues were addressed through improved input
+    validation.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-2362:
+  author: Ivan Fratric of Google Project Zero
+  version: 2.14.4
+  description: Multiple memory corruption issues were addressed through improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-2363:
+  author: lokihardt of Google Project Zero
+  version: 2.14.4
+  description: Multiple validation issues existed in the handling of page loading.
+    This issue was addressed through improved logic.
+  impact: Processing maliciously crafted web content may exfiltrate data cross-origin.
+CVE-2017-2364:
+  author: lokihardt of Google Project Zero
+  version: 2.14.4
+  description: Multiple validation issues existed in the handling of page loading.
+    This issue was addressed through improved logic.
+  impact: Processing maliciously crafted web content may exfiltrate data cross-origin.
+CVE-2017-2365:
+  author: lokihardt of Google Project Zero
+  version: 2.14.4
+  description: A validation issue existed in variable handling. This issue was addressed
+    through improved validation.
+  impact: Processing maliciously crafted web content may exfiltrate data cross-origin.
+CVE-2017-2366:
+  author: Kai Kang of Tencent's Xuanwu Lab (tencent.com)
+  version: 2.14.4
+  description: Multiple memory corruption issues were addressed through improved input
+    validation.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-2369:
+  author: Ivan Fratric of Google Project Zero
+  version: 2.14.4
+  description: Multiple memory corruption issues were addressed through improved input
+    validation.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-2371:
+  author: lokihardt of Google Project Zero
+  version: 2.14.4
+  description: An issue existed in the handling of blocking popups. This was addressed
+    through improved input validation.
+  impact: A malicious website can open popups.
+CVE-2017-2373:
+  author: Ivan Fratric of Google Project Zero
+  version: 2.14.4
+  description: Multiple memory corruption issues were addressed through improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.

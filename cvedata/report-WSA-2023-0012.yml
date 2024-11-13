@@ -1,0 +1,12 @@
+CVE-2023-42883:
+  author: Zoom Offensive Security Team
+  version: 2.42.4
+  description: The issue was addressed with improved memory handling.
+  bugzilla: 263349
+  impact: Processing a SVG image may lead to a denial-of-service.
+CVE-2023-42890:
+  author: Pwn2car
+  version: 2.42.0
+  description: The issue was addressed with improved memory handling.
+  bugzilla: 259830
+  impact: Processing web content may lead to arbitrary code execution.

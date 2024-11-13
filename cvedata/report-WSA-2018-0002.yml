@@ -1,0 +1,55 @@
+CVE-2018-4088:
+  author: Jeonghoon Shin of Theori
+  version: 2.18.6
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2018-4089:
+  author: Ivan Fratric of Google Project Zero
+  version: 2.18.4
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2018-4096:
+  author: OSS-Fuzz
+  version: 2.18.6
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-7153:
+  author: Jerry Decime
+  version: 2.18.6
+  description: Redirect responses to 401 Unauthorized may allow a malicious website
+    to incorrectly display the lock icon on mixed content. This issue was addressed
+    through improved URL display logic.
+  impact: Visiting a malicious website may lead to user interface spoofing.
+CVE-2017-7160:
+  author: Richard Zhu (fluorescence) working with Trend Micro's Zero Day Initiative
+  version: 2.18.6
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-7161:
+  author: Mitin Svyat
+  version: 2.18.6
+  description: A command injection issue existed in Web Inspector. This issue was
+    addressed through improved escaping of special characters.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-7165:
+  author: 360 Security working with Trend Micro's Zero Day Initiative
+  version: 2.18.6
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-13884:
+  author: 360 Security working with Trend Micro's Zero Day Initiative
+  version: 2.18.6
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2017-13885:
+  author: 360 Security working with Trend Micro's Zero Day Initiative
+  version: 2.18.6
+  description: Multiple memory corruption issues were addressed with improved memory
+    handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.

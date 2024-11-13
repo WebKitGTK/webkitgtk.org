@@ -1,0 +1,14 @@
+CVE-2023-42916:
+  author: Clément Lecigne of Google's Threat Analysis Group
+  version: 2.42.3
+  description: An out-of-bounds read was addressed with improved input validation.
+  bugzilla: 265041
+  impact: Processing web content may disclose sensitive information. Apple is aware
+    of a report that this issue may have been actively exploited.
+CVE-2023-42917:
+  author: Clément Lecigne of Google's Threat Analysis Group
+  version: 2.42.3
+  description: A memory corruption vulnerability was addressed with improved locking.
+  bugzilla: 265067
+  impact: Processing web content may lead to arbitrary code execution. Apple is aware
+    of a report that this issue may have been actively exploited.

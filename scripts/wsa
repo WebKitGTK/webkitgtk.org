@@ -1,0 +1,540 @@
+#! /usr/bin/env python3
+
+from argparse import ArgumentParser
+from dataclasses import asdict
+from pathlib import Path
+from ruamel.yaml import YAML
+from time import strftime
+
+import re
+import sys
+import logging
+import textwrap
+
+class Formatter:
+    text_width: int
+    item_indent: int
+    cve_list_indent: int
+
+    bug_bullet = ""
+
+    t_header: str
+    t_cve: str
+    t_footer: str
+
+    t_footer_common = textwrap.dedent("""\
+        We recommend updating to the latest stable versions of WebKitGTK
+        and WPE WebKit. It is the best way to ensure that you are running
+        safe versions of WebKit. Please check our websites for information
+        about the latest stable releases.""")
+
+    def __init__(self, wsa_id: str, wsa_data: dict):
+        self.wsa_id = wsa_id
+        self.wsa_data = wsa_data
+        self._data = {
+            "WSA": wsa_id,
+            "reportdate": strftime("%B %d, %Y"),
+            "affectedtext": self._line_for_print(
+                "Several vulnerabilities were discovered in WebKitGTK"
+                " and WPE WebKit."),
+        }
+
+    def _line_for_print(self, line, indent=2, width=None, dot=True):
+        if width is None:
+            width = self.text_width
+        if dot and not line.endswith('.'):
+            line += '.'
+        line = textwrap.wrap(line, width=(width - indent))
+        line = "\n".join(line)
+        line = textwrap.indent(line, " " * indent)
+        return line.strip()
+
+    def _expand_template(self, template: str, **kw) -> str:
+        tvars = dict(self._data)
+        tvars.update(kw)
+        return template % tvars
+
+    @staticmethod
+    def linkify(target: str) -> str:
+        return target
+
+    def title_spaces(self, title: str) -> str:
+        return " "
+
+    def cve_list(self) -> str:
+        raise NotImplementedError
+
+    def generate(self, write, cve_data_path: Path|None = None,
+                 fill_missing_description=False):
+        cve_cache = None
+
+        self.header(write)
+
+        for cve_id in sorted(self.wsa_data.keys()):
+            cve_data = self.wsa_data[cve_id]
+            affected_text = "Versions affected:"
+            version = cve_data["version"]
+            if isinstance(version, str):
+                affected_text += f" WebKitGTK and WPE WebKit before {version}"
+            else:
+                assert isinstance(cve_data, dict)
+                if "gtk" in version:
+                    affected_text += f" WebKitGTK before {version['gtk']}"
+                    if "wpe" in version:
+                        affected_text += f" and WPE WebKit before {version['wpe']}"
+                else:
+                    assert "wpe" in version
+                    affected_text += f" WPE WebKit before {version['wpe']}"
+            affected_text += "."
+
+            description = None
+            if "impact" in cve_data:
+                if "description" in cve_data:
+                    description = f"Impact: {cve_data['impact']} Description: {cve_data['description']}"
+                else:
+                    description = f"Impact: {cve_data['impact']}"
+            elif "description" in cve_data:
+                description = cve_data["description"]
+            elif fill_missing_description:
+                if cve_cache is None:
+                    import cve
+                    assert isinstance(cve_data_path, Path)
+                    cve_cache = cve.LRUMemDiskFetcherCache(cve_data_path)
+                cve = cve_cache.get(cve_id)
+                if cve and cve.description:
+                    description = cve.description
+
+            if description is None:
+                description = "No description was provided"
+
+            author = cve_data.get("author", "an anonymous researcher")
+
+            bug_link = ""
+            bug_bullet = ""
+            if "bugzilla" in cve_data:
+                bug_link = f"WebKit Bugzilla: {cve_data['bugzilla']}"
+                bug_bullet = self.bug_bullet
+
+            write(self._expand_template(self.t_cve,
+                                        CVE=self.linkify(cve_id),
+                                        affected=self._line_for_print(affected_text, indent=self.item_indent),
+                                        credits=self._line_for_print(author, indent=self.item_indent),
+                                        description=self._line_for_print(description, indent=self.item_indent),
+                                        maybeLinkbug=bug_link,
+                                        maybeLinkbugBullet=bug_bullet))
+
+        self.footer(write)
+
+    def header(self, write):
+        title = "WebKitGTK and WPE WebKit Security Advisory"
+        write(self._expand_template(self.t_header, title=title,
+                                    titlespaces=self.title_spaces(title),
+                                    cvelist=self.cve_list()))
+
+    def footer(self, write):
+        write(self._line_for_print(self.t_footer_common, indent=0))
+        moreinfo = "Further information about WebKitGTK and WPE WebKit" \
+            " security advisories can be found at: "
+        moreinfo += self.linkify("https://webkitgtk.org/security.html")
+        moreinfo += " or "
+        moreinfo += self.linkify("https://wpewebkit.org/security")
+        write(self._expand_template(self.t_footer, moreinfo=self._line_for_print(moreinfo, indent=0)))
+
+class Mail(Formatter):
+    text_width = 72
+    item_indent = 4
+    cve_list_indent = 26
+
+    t_header = textwrap.dedent("""\
+        Subject: %(title)s %(WSA)s
+        To: webkit-gtk@lists.webkit.org, webkit-wpe@lists.webkit.org
+        Cc: security@webkit.org, oss-security@lists.openwall.com
+
+        ------------------------------------------------------------------------
+        %(title)s%(titlespaces)s%(WSA)s
+        ------------------------------------------------------------------------
+
+        Date reported           : %(reportdate)s
+        Advisory ID             : %(WSA)s
+        WebKitGTK Advisory URL  : https://webkitgtk.org/security/%(WSA)s.html
+        WPE WebKit Advisory URL : https://wpewebkit.org/security/%(WSA)s.html
+        CVE identifiers         : %(cvelist)s
+
+        %(affectedtext)s
+
+        """)
+
+    t_cve = textwrap.dedent("""\
+        %(CVE)s
+            %(affected)s
+            Credit to %(credits)s
+            %(description)s
+            %(maybeLinkbugBullet)s%(maybeLinkbug)s
+
+        """)
+
+    t_footer = textwrap.dedent("""\
+
+
+        %(moreinfo)s
+
+        The WebKitGTK and WPE WebKit team,
+        """)
+
+    def title_spaces(self, title: str) -> str:
+        return " " * (72 - len(title) - len(self.wsa_id))
+
+    def cve_list(self) -> str:
+        return self._line_for_print(", ".join(sorted(self.wsa_data.keys())),
+                                    indent=self.cve_list_indent)
+
+class Markdown(Formatter):
+    cve_list_indent = 2
+    item_indent = 4
+    text_width = 90
+
+    bug_bullet = "* "
+
+    t_header = textwrap.dedent("""\
+        ---
+        layout: post
+        title: %(title)s%(titlespaces)s%(WSA)s
+        permalink: /security/%(WSA)s.html
+        tags: WSA
+        ---
+
+        * Date Reported: **%(reportdate)s**\n
+        * Advisory ID: **%(WSA)s**\n
+        * CVE identifiers: %(cvelist)s\n
+
+        %(affectedtext)s
+
+        """)
+
+    t_cve = textwrap.dedent("""\
+        * %(CVE)s
+          * %(affected)s
+          * Credit to %(credits)s
+          * %(description)s
+          %(maybeLinkbugBullet)s%(maybeLinkbug)s
+
+        """)
+
+    t_footer = textwrap.dedent("""\
+
+
+        %(moreinfo)s
+        """)
+
+    def cve_list(self) -> str:
+        return ", ".join(map(lambda x: self.linkify(x, anchor=True),
+                             sorted(self.wsa_data.keys())))
+
+    @staticmethod
+    def linkify(target: str, anchor=False) -> str:
+        if target.startswith("http://"):
+            text = target[len("http://"):]
+        elif target.startswith("https://"):
+            text = target[len("https://"):]
+        elif target.startswith("CVE-"):
+            if anchor:
+                return f"[{target}](#{target})"
+            else:
+                return f"<a name='{target}' href='https://cve.mitre.org/cgi-bin/cvename.cgi?name={target}'>{target}</a>"
+        else:
+            text = target
+        return f"[{text}]({target})"
+
+def get_cve_data_path(p: Path | None) -> Path:
+    if p is None:
+        p = Path(__file__).parent / "cvedata" / "cache"
+    return p.resolve()
+
+wsa_id_re = re.compile(r"(WSA-\d{4}-\d+)")
+
+def determine_wsa_id(s: str) -> str | None:
+    for m in wsa_id_re.finditer(s):
+        return m[1]
+    return None
+
+def cmd_generate(args):
+    if (not (args.email or args.markdown)) or (args.email and args.markdown):
+        raise SystemExit("Must use one of --email or --markdown")
+
+    if not args.report_yml.is_file():
+        raise SystemExit(f"File '{args.report_yml!s}' does not exist")
+
+    if args.wsa_id is None:
+        if args.report_yml.suffix.lower() in ("yml", "yaml"):
+            filename = args.report_yml.stem
+        else:
+            filename = args.report_yml.name
+        args.wsa_id = determine_wsa_id(filename)
+        if args.wsa_id is None:
+            raise SystemExit(f"Could not determine WSA identifier from '{filename}'")
+    if not wsa_id_re.match(args.wsa_id):
+        raise SystemExit(f"Invalid WSA identifier format '{args.wsa_id}'")
+
+    with args.report_yml.open("r") as f:
+        wsa_data = YAML(typ="safe").load(f)
+
+    Fmt = Mail if args.email else Markdown
+    Fmt(args.wsa_id, wsa_data).generate(sys.stdout.write if args.output is None
+                                        else args.output.open("w").write,
+                                        cve_data_path=get_cve_data_path(args.cve_data),
+                                        fill_missing_description=args.fill)
+
+def cmd_fill(args):
+    if len(args.report_yml) > 1 and not args.inplace:
+        raise SystemExit("Option --inplace needs to be used with multiple inputs")
+
+    import cve
+    cve_cache = cve.LRUMemDiskFetcherCache(get_cve_data_path(args.cve_data))
+
+    yaml = YAML()
+    yaml.indent(mapping=2, sequence=4, offset=2)
+
+    for report_yml in args.report_yml:
+        with report_yml.open("r") as f:
+            wsa_data = YAML(typ="safe").load(f)
+
+        modified = False
+        for cve_id, cve_data in wsa_data.items():
+            if cve_data is None:
+                wsa_data[cve_id] = cve_data = {}
+            if "description" not in cve_data:
+                cve = cve_cache.get(cve_id)
+                if cve and cve.description:
+                    cve_data["description"] = cve.description
+                    modified = True
+
+        if args.inplace:
+            if modified:
+                with report_yml.open("w") as f:
+                    yaml.dump(wsa_data, f)
+        else:
+            yaml.dump(wsa_data, sys.stdout)
+
+
+def cmd_check(args):
+    from httpcache import HTTPCache
+    from urllib.error import HTTPError
+    from lxml.cssselect import CSSSelector
+    from lxml import html
+
+    apple_support_url_re = re.compile(r"^https://support.apple.com/(en-us/|kb/HT)\d+$")
+    advisory_bugzilla_re = re.compile(r"^WebKit\s+Bugzilla:\s*(\d+)\s*$")
+    advisory_cve_author_re = re.compile(r"^(CVE-\d+-\d+):\s*(.*)$")
+    advisory_cve_re = re.compile(r"^(CVE-\d+-\d+)$")
+    advisory_description_re = re.compile(r"^[Dd]escription:\s*(.*)$")
+    advisory_impact_re = re.compile(r"^[Ii]mpact:\s*(.*)$")
+    webkit_boundary_re = re.compile(r"\bWebKit\b", re.IGNORECASE)
+
+    select_advisory_headers = CSSSelector("div#sections > h3")
+    select_advisory_links = CSSSelector("table > tbody > tr > td > p > a")
+    select_index_links = CSSSelector("ul > li > p > a")
+    select_paragraphs = CSSSelector("p")
+
+    if not args.cache:
+        args.cache = Path(__file__).parent / "httpcache"
+
+    if not args.report_yml:
+        from itertools import chain
+        cvedata_path = Path(__file__).parent / "cvedata"
+        args.report_yml = chain(cvedata_path.glob("*.yml"), cvedata_path.glob("*.yaml"))
+
+    if args.cache.exists() and not args.cache.is_dir():
+        raise SystemExit(f"Path {args.cache!r} is not a directory")
+
+    args.cache.mkdir(parents=True, exist_ok=True)
+    cache = HTTPCache(args.cache)
+
+    reported_cves = set()
+    for wsa_yaml_path in args.report_yml:
+        with open(wsa_yaml_path, "r") as f:
+            wsa_data = YAML(typ="safe").load(f)
+            reported_cves.update(wsa_data.keys())
+    print("CVEs already in WSAs:", len(reported_cves), file=sys.stderr)
+
+    indexes = {"https://support.apple.com/en-us/HT201222"}
+    visited = set()
+    cves = {}
+
+    def webkit_cve_entries(url):
+        entries = set()
+
+        entry = None
+        try:
+            entry, _ = cache.get(url)
+        except HTTPError as e:
+            if e.code == 404:
+                print("\x1b[2KNot found:", url, "-", e, file=sys.stderr)
+                return entries
+
+        print("\x1b[2K*", url, "- visited:", len(visited),
+              "- pending:", len(indexes), "- CVEs:", len(cves), end="\r",
+                  file=sys.stderr)
+
+        assert entry is not None
+        tree = html.fromstring(cache.read_blob(entry))
+
+        for header in select_advisory_headers(tree):
+            if header.text is None or not webkit_boundary_re.match(header.text):
+                continue
+            items = []
+            current = header.getnext()
+            while current is not None and current.tag != header.tag:
+                if current.tag == "p":
+                    items.append(current.text)
+                else:
+                    items.extend((p.text for p in select_paragraphs(current)))
+                current = current.getnext()
+
+            cve_id = None
+            author = None
+            bugzilla = None
+            impact = None
+            description = None
+
+            for text in items:
+                if not text:
+                    continue
+                text = text.strip()
+                m = advisory_cve_author_re.match(text)
+                if m:
+                    cve_id, author = m[1], m[2]
+                    continue
+                m = advisory_cve_re.match(text)
+                if m:
+                    cve_id = m[1]
+                    continue
+                m = advisory_description_re.match(text)
+                if m:
+                    description = m[1]
+                    continue
+                m = advisory_impact_re.match(text)
+                if m:
+                    impact = m[1]
+                    continue
+                m = advisory_bugzilla_re.match(text)
+                if m:
+                    bugzilla = m[1]
+                    continue
+
+            if bugzilla and cve_id:
+                entries.add((cve_id, bugzilla, author, impact, description))
+        return entries
+
+    def fetch_index(url):
+        entry = None
+        try:
+            entry, _ = cache.get(url)
+        except HTTPError as e:
+            if e.code == 404:
+                print("\x1b[2KNot found:", url, "-", e, file=sys.stderr)
+        return entry
+
+    def get_advisory_links(tree):
+        for item in select_advisory_links(tree):
+            url = item.get("href")
+            if apple_support_url_re.match(url) and url not in visited:
+                yield url
+
+    from concurrent.futures import ThreadPoolExecutor
+    with ThreadPoolExecutor(max_workers=10) as exec:
+        while indexes:
+            urls = {url for url in indexes if url not in visited}
+            indexes.clear()
+
+            for url, entry in zip(urls, exec.map(fetch_index, urls)):
+                print("\x1b[2K*", url, "- visited:", len(visited),
+                      "- pending:", len(indexes), "- CVEs:", len(cves), end="\r",
+                      file=sys.stderr)
+                visited.add(url)
+                if entry is None:
+                    continue
+
+                tree = html.fromstring(cache.read_blob(entry))
+                tree.make_links_absolute(url)
+
+                advisory_urls = set(get_advisory_links(tree))
+                visited.update(advisory_urls)
+
+                for item in select_index_links(tree):
+                    url = item.get("href")
+                    if apple_support_url_re.match(url) and url not in visited:
+                        indexes.add(url)
+
+                for entries in exec.map(webkit_cve_entries, advisory_urls):
+                    for cve_id, bugzilla, author, impact, description in entries:
+                        if cve_id in cves:
+                            continue
+                        cves[cve_id] = {"id": cve_id,
+                                        "bug": int(bugzilla),
+                                        "author": author,
+                                        "impact": impact,
+                                        "description": description,
+                                        "url": url}
+    print("\x1b[2KFetched CVEs:", len(cves), file=sys.stderr)
+
+    known_cves = set(cves.keys())
+    missing_cves = known_cves - reported_cves
+    print("Missing CVEs:", len(missing_cves), file=sys.stderr)
+
+    yaml = YAML()
+    yaml.indent(mapping=2, sequence=4, offset=2)
+    if args.cache_stats:
+        yaml.dump(dict(cache_stats=asdict(cache.stats)), sys.stderr)
+
+    if not missing_cves:
+        return
+
+    from ruamel.yaml.comments import CommentedMap
+    cve_data = CommentedMap()
+    for cve_id in sorted(missing_cves):
+        item = {"bugzilla": cves[cve_id]["bug"]}
+        for key in ("author", "impact", "description"):
+            value = cves[cve_id].get(key, None)
+            if value:
+                item[key] = value
+        cve_data[cve_id] = item
+        cve_data.yaml_add_eol_comment(cves[cve_id]["url"], cve_id, column=0)
+
+    yaml.dump(cve_data, sys.stdout)
+
+
+log_levels = {logging.getLevelName(level).lower(): level
+    for level in (logging.INFO, logging.DEBUG, logging.ERROR, logging.WARNING, logging.FATAL)}
+log_level_default_name = logging.getLevelName(logging.WARNING).lower()
+
+arg_parser = ArgumentParser()
+arg_parser.add_argument("--log", choices=log_levels.keys(), default=log_level_default_name,
+    help=f"set log level (default: {log_level_default_name})")
+subparsers = arg_parser.add_subparsers(dest="subcommand", required=True)
+
+gen_parser = subparsers.add_parser("generate", aliases=("gen",), description="Generate advisory text.")
+gen_parser.add_argument("-c", "--cve-data", type=Path, default=None, help="path to the CVE data dump")
+gen_parser.add_argument("-f", "--fill", action="store_true", default=False, help="fill missing fields from CVE data")
+gen_parser.add_argument("-w", "--wsa-id", type=str, help="manually specify generated WSA identifier")
+gen_parser.add_argument("-o", "--output", type=Path, default=None, help="output file path, instead of stdout")
+gen_parser.add_argument("-m", "--markdown", action="store_true", default=False, help="generate Markdown")
+gen_parser.add_argument("-e", "--email", action="store_true", default=False, help="generate e-mail")
+gen_parser.add_argument("report_yml", type=Path, help="path to the WSA report YAML source")
+
+fil_parser = subparsers.add_parser("fill", description="Fill missing advisory fields.")
+fil_parser.add_argument("-c", "--cve-data", type=Path, default=None, help="path to the CVE data dump")
+fil_parser.add_argument("-i", "--inplace", action="store_true", default=False, help="edit YAML file in-place")
+fil_parser.add_argument("report_yml", type=Path, nargs="+", help="path to the WSA report YAML source")
+
+chk_parser = subparsers.add_parser("check", description="Check for CVEs in Apple security advisories")
+chk_parser.add_argument("-c", "--cache", type=Path, default=None, help="path to directory used as HTTP cache")
+chk_parser.add_argument("--cache-stats", action="store_true", default=False, help="Print HTTP cache statistics")
+chk_parser.add_argument("report_yml", type=Path, nargs="*", help="path to WSA report YAML source")
+
+args = arg_parser.parse_args()
+logging.basicConfig(level=log_levels[args.log])
+({
+    "generate": cmd_generate, "gen": cmd_generate,
+    "fill": cmd_fill,
+    "check": cmd_check,
+})[args.subcommand](args)

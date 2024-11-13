@@ -1,0 +1,43 @@
+CVE-2018-4437:
+  author: HyungSeok Han, DongHyeon Oh, and Sang Kil Cha of KAIST Softsec Lab, Korea
+  version:
+    gtk: 2.22.5
+    wpe: 2.22.3
+  description: Processing maliciously crafted web content may lead to arbitrary code
+    execution. Multiple memory corruption issues were addressed with improved memory
+    handling.
+CVE-2018-4438:
+  author: lokihardt of Google Project Zero
+  version:
+    gtk: 2.22.3
+    wpe: 2.22.1
+  description: Processing maliciously crafted web content may lead to arbitrary code
+    execution. A logic issue existed resulting in memory corruption. This was addressed
+    with improved state management.
+CVE-2018-4441:
+  author: lokihardt of Google Project Zero
+  version:
+    gtk: 2.22.3
+    wpe: 2.22.1
+  description: Processing maliciously crafted web content may lead to arbitrary code
+    execution. A memory corruption issue was addressed with improved memory handling.
+CVE-2018-4442:
+  author: lokihardt of Google Project Zero
+  version:
+    gtk: 2.22.3
+    wpe: 2.22.1
+  description: Processing maliciously crafted web content may lead to arbitrary code
+    execution. A memory corruption issue was addressed with improved memory handling.
+CVE-2018-4443:
+  author: lokihardt of Google Project Zero
+  version:
+    gtk: 2.22.3
+    wpe: 2.22.1
+  description: Processing maliciously crafted web content may lead to arbitrary code
+    execution. A memory corruption issue was addressed with improved memory handling.
+CVE-2018-4464:
+  author: HyungSeok Han, DongHyeon Oh, and Sang Kil Cha of KAIST Softsec Lab, Korea
+  version: 2.22.0
+  description: Processing maliciously crafted web content may lead to arbitrary code
+    execution. Multiple memory corruption issues were addressed with improved memory
+    handling.

@@ -1,0 +1,57 @@
+CVE-2020-3885:
+  author: Ryan Pickren (ryanpickren.com)
+  version:
+    gtk: 2.28.0
+    wpe: 2.28.0
+  description: A logic issue was addressed with improved restrictions.
+  impact: A file URL may be incorrectly processed.
+CVE-2020-3894:
+  author: Sergei Glazunov of Google Project Zero
+  version:
+    gtk: 2.28.0
+    wpe: 2.28.0
+  description: A race condition was addressed with additional validation.
+  impact: An application may be able to read restricted memory.
+CVE-2020-3895:
+  author: grigoritchy
+  version:
+    gtk: 2.28.0
+    wpe: 2.28.0
+  description: A memory corruption issue was addressed with improved memory handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2020-3897:
+  author: Brendan Draper (@6r3nd4n) working with Trend Micro’s Zero Day Initiative
+  version:
+    gtk: 2.28.0
+    wpe: 2.28.0
+  description: A type confusion issue was addressed with improved memory handling.
+  impact: A remote attacker may be able to cause arbitrary code execution.
+CVE-2020-3899:
+  author: OSS-Fuzz
+  version:
+    gtk: 2.28.2
+    wpe: 2.28.2
+  description: A memory consumption issue was addressed with improved memory handling.
+  impact: A remote attacker may be able to cause arbitrary code execution.
+CVE-2020-3900:
+  author: Dongzhuo Zhao working with ADLab of Venustech
+  version:
+    gtk: 2.28.0
+    wpe: 2.28.0
+  description: A memory corruption issue was addressed with improved memory handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2020-3901:
+  author: Benjamin Randazzo (@____benjamin)
+  version:
+    gtk: 2.28.0
+    wpe: 2.28.0
+  description: A type confusion issue was addressed with improved memory handling.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2020-3902:
+  author: Yiğit Can YILMAZ (@yilmazcanyigit)
+  version:
+    gtk: 2.28.0
+    wpe: 2.28.0
+  description: An input validation issue was addressed with improved input validation.
+  impact: Processing maliciously crafted web content may lead to a cross site scripting
+    attack.

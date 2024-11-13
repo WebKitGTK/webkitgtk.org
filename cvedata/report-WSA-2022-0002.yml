@@ -1,0 +1,18 @@
+CVE-2022-22589:
+  author: Heige of KnownSec 404 Team (knownsec.com) and Bo Qu of Palo Alto Networks
+    (paloaltonetworks.com)
+  version: 2.34.5
+  description: A validation issue was addressed with improved input sanitization.
+  impact: Processing a maliciously crafted mail message may lead to running arbitrary
+    javascript.
+CVE-2022-22590:
+  author: Toan Pham from Team Orca of Sea Security (security.sea.com)
+  version: 2.34.5
+  description: A use after free issue was addressed with improved memory management.
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+CVE-2022-22592:
+  author: Prakash (@1lastBr3ath)
+  version: 2.34.5
+  description: A logic issue was addressed with improved state management.
+  impact: Processing maliciously crafted web content may prevent Content Security
+    Policy from being enforced.
