@@ -19,6 +19,8 @@ browsers such as [Epiphany](https://apps.gnome.org/Epiphany),
 [Navigator](https://gitlab.gnome.org/World/navigator), and
 [Tangram](https://apps.gnome.org/Tangram).
 
+<img src="assets/webkit-windows.webp" class="filterimg" alt="webkit browsers" />
+
 ## Accessibility
 
 Access is one of our core values. For this reason, we are committed to making

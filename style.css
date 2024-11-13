@@ -193,10 +193,12 @@ img {
   max-width: 100%;
   }
   img.full, picture.full img { width: 100%; }
+  /*
   img.pixels, picture.pixels img { 
-    image-rendering: crisp-edges; /* older firefox browsers */ 
+    image-rendering: crisp-edges;  
     image-rendering: pixelated; 
   }
+  */
   
   @media (prefers-color-scheme: dark) {
     img.filterimg {
