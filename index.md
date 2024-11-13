@@ -19,6 +19,8 @@ browsers such as [Epiphany](http://apps.gnome.org/Epiphany/),
 [Wike](https://apps.gnome.org/Wike/), and
 [Web Apps](https://codeberg.org/eyekay/webapps).
 
+<img src="assets/webkit-windows.webp" class="filterimg" alt="webkit browsers" />
+
 ## Accessibility
 
 Access is one of our core values. For this reason, we are committed to making
