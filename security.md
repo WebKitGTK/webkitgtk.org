@@ -3,7 +3,10 @@ layout: default
 title: Security Advisories
 ---
 
+<ul class="news">
 {% for post in site.tags.WSA %}
-### [{{ post.title }}]({{ post.url }})
-{{ post.date | date_to_long_string }}
-{% endfor %}
+  <li><a href="{{ post.url | prepend: site.baseurl }}"><span class="title">{{ post.title }}</span>
+    <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span></a>
+  </li>
+{%endfor%}
+</ul>
