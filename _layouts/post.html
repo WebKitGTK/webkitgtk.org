@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+    {% include head.html %}
+
+    <body>
+        {% include header.html %}
+
+        <div id="container">
+            <h2>{{ page.title }}</h2>
+            {{ content }}
+            <a href="javascript:window.history.go(-1);" class="inline-button"
+                >Go Back</a
+            >
+        </div>
+
+        {% include footer.html %}
+    </body>
+</html>

@@ -169,14 +169,6 @@ img {
     max-width: 100%;
 }
 
-/* jaggies when scaled down. images are oversampled
-img.pixels,
-picture.pixels img {
-    image-rendering: crisp-edges;
-    image-rendering: pixelated;
-}
-*/
-
 img.full,
 picture.full img {
     width: 100%;
