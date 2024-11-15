@@ -93,15 +93,6 @@ footer a {
     margin: auto;
 }
 
-footer a[href^="http"]:after {
-    content: url("assets/extlink-d.svg");
-    filter: none;
-}
-
-footer a[href^="http"]:has(svg):after {
-    content: none;
-}
-
 /* Titles */
 
 h1,
@@ -325,6 +316,8 @@ ul.news .title {
     }
 
     a[href^="http"]:after {
-        filter: invert();
+        display: inline-block;
+        margin-left: 3px;
+        content: url("assets/extlink-d.svg");
     }
 }
