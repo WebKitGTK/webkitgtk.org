@@ -32,8 +32,7 @@
     --rounded-corner: 9px;
     --fg-color: rgb(0 0 6 / 80%);
     --bg-color: #f5f5f6;
-    --term-fg: rgb(0 0 6 / 80%);
-    --term-bg: white;
+    --term-bg: #ffffff;
 }
 
 /* General */
@@ -58,7 +57,6 @@ body {
 body {
     color: var(--fg-color);
     background-color: var(--bg-color);
-    /* ⇩⇩ put footer at the bottom for short pages, such as the 404 ⇩⇩ */
     display: grid;
     min-height: 100vh;
     grid-template-rows: auto minmax(auto, 1fr) auto; /* header, stuff, footer */
@@ -82,13 +80,11 @@ hr {
 /* Footer */
 
 footer {
-    padding: 4em 0 4em;
+    padding: 4rem 0;
     text-align: center;
 }
 
 footer a {
-    text-decoration: none;
-    font-weight: 600;
     display: block;
     margin: auto;
 }
@@ -110,8 +106,6 @@ h6 {
 h1 {
     font-size: 1.5rem;
     font-weight: 100;
-    font-style: normal;
-    margin: 3rem 0 1rem;
 }
 
 h2 {
@@ -176,6 +170,7 @@ code.highlighter-rouge {
 .highlight table td {
     padding: 5px;
 }
+
 .highlight table pre {
     margin: 0;
 }
@@ -200,13 +195,12 @@ code.highlighter-rouge {
 }
 
 #logo a {
-    display: block;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    color: rgba(0 0 0 / 0%); /* make text transparent */
+    color: rgb(0 0 0 / 0%); /* make text transparent */
     cursor: pointer;
 }
 
@@ -272,8 +266,9 @@ ul.news .title {
     flex-grow: 1;
 }
 
+/* Media Queries */
+
 @media only screen and (max-device-width: 480px) {
-    /* Mobile */
     .highlighter-rouge {
         max-width: 80vw;
     }
@@ -301,9 +296,8 @@ ul.news .title {
     :root {
         color-scheme: dark;
         --primary-color: #81d0ff;
-        --fg-color: white;
+        --fg-color: #ffffff;
         --bg-color: #222226;
-        --term-fg: white;
         --term-bg: #343437;
     }
 

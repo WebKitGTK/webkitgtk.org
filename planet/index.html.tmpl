@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title><TMPL_VAR name></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="generator" content="<TMPL_VAR generator ESCAPE="HTML">">
+    <link rel="stylesheet" type="text/css" media="all" href="style.css">
+</head>
+
+<body>
+    <div id="main_wrapper">
+        <div id="global_domain_bar">
+            <div class="maxwidth">
+                <div class="tab none">
+                    <a class="root" href="https://www.webkitgtk.org/">webkitgtk.org</a>
+                </div>
+                <div class="tab webkit">
+                    <a class="root" href="https://www.webkit.org/">webkit.org</a>
+                </div>
+                <div class="tab">
+                    <a class="root" href="https://www.gnome.org/">GNOME.org</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="title_bar">
+            <div class="maxwidth">
+                <span id="site_title"><a href="/"><TMPL_VAR name></a></span>
+            </div>
+        </div>
+
+        <div id="container" class="two_columns max_width">
+            <div class="content">
+                <div class="news">
+
+                    <TMPL_LOOP Items>
+
+                    <TMPL_IF new_date>
+                    <p class="date"><TMPL_VAR new_date></p>
+                    </TMPL_IF>
+
+                    <TMPL_IF title>
+                    <h2><a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_VAR title></a></h2>
+                    </TMPL_IF>
+
+                    <p class="author">by <a href="<TMPL_VAR channel_link ESCAPE="HTML">" title="<TMPL_VAR channel_title ESCAPE="HTML">"><TMPL_VAR channel_name></a></p>
+
+                    <div>
+                        <TMPL_VAR content>
+                    </div>
+
+                    <p>
+                        <em><a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_IF author>by <TMPL_VAR author> at </TMPL_IF><TMPL_VAR date></a></em>
+                    </p>
+
+                    <br />
+                    <br />
+
+                    </TMPL_LOOP>
+
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="subtle_box">
+                    <div class="section">
+                        <div class="header feeds"><span>Feeds</span></div>
+                        <ul>
+                            <TMPL_LOOP Channels>
+                            <li><span class="subheader">&#8227; <a href="<TMPL_VAR link ESCAPE="HTML">" title="<TMPL_VAR title ESCAPE="HTML">"><TMPL_VAR name></a></span> <a href="<TMPL_VAR url ESCAPE="HTML">"><img src="images/rss.png" /></a></li>
+                            </TMPL_LOOP>
+                        </ul>
+                    </div>
+                    <div class="section">
+                        <div class="header subscribe"><span>Subscribe</span></div>
+                        <ul>
+                            <li><span class="subheader">&#8227;</span> <a href="atom.xml" title="Atom">Atom</a></li>
+                            <li><span class="subheader">&#8227;</span> <a href="rss10.xml" title="RSS 1.0">RSS 1.0</a></li>
+                            <li><span class="subheader">&#8227;</span> <a href="rss20.xml" title="RSS 2.0">RSS 2.0</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="subtle_box">
+                    <span class="subheader">Last updated:</span>
+                    <p><TMPL_VAR date></p>
+                    <p><em>All times are UTC.</em></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div id="footer">
+        <div class="maxwidth">
+            <span class="left">Copyright © 2009‒2022 The WebKitGTK+ Team</span>
+            <span class="right">Hosting kindly provided by <a href="https://www.igalia.com/">Igalia</a>.</span>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+</body>
+</html>

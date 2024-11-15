@@ -1,4 +1,16 @@
+releases
+_site/
+.jekyll-cache/
 vendor
-_site
-.bundle
-.jekyll-cache
+.bundle/
+
+# Planet
+_cache/
+_planet/
+*.tmplc
+
+# Python
+/__pycache__/
+
+# Security advisories temp files
+/cvedata/cache/
