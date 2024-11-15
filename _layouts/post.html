@@ -1,11 +1,18 @@
----
-layout: default
----
+<!doctype html>
+<html>
+    {% include head.html %}
 
-<div class="news">
+    <body>
+        {% include header.html %}
 
-<h2>{{ page.title }}</h2>
+        <div id="container">
+            <h2>{{ page.title }}</h2>
+            {{ content }}
+            <a href="javascript:window.history.go(-1);" class="inline-button"
+                >Go Back</a
+            >
+        </div>
 
-{{ content }}
-
-</div>
+        {% include footer.html %}
+    </body>
+</html>

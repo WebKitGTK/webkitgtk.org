@@ -1,8 +1,7 @@
 ---
-layout: default
+layout: post
+title: Verifying Releases
 ---
-
-# Verifying Releases
 
 WebKitGTK release tarballs are cryptographically signed and can be verified
 using [PGP signatures](#pgp-signatures) (in an `.asc` file) and their
@@ -18,7 +17,6 @@ Forging a signature is practically impossible without gaining access to the
 private key used. If that were to happen, the compromised key would be revoked
 and all files re-signed with new keys.
 
-
 ### Keys
 
 The following PGP keys are currently in use for signing releases:
@@ -28,17 +26,16 @@ The following PGP keys are currently in use for signing releases:
     <tr><th>Developer</th><th>Fingerprint</th></tr>
   </thead>
     <tr>
-      <td>Adrián Pérez de Castro (<a href="aperez.key">key</a>)</td>
+      <td>Adrián Pérez de Castro (<a href="../keys/aperez.key">key</a>)</td>
       <td><tt>5AA3 BC33 4FD7 E336 9E7C  77B2 91C5 59DB E4C9 123B</tt></td>
     </tr>
     <tr>
-      <td>Carlos García Campos (<a href="carlosgc.key">key</a>)</td>
+      <td>Carlos García Campos (<a href="../keys/carlosgc.key">key</a>)</td>
       <td><tt>013A 0127 AC9C 65B3 4FFA 6252 6C10 09B6 9397 5393</tt></td>
     </tr>
   <tbody>
   </tbody>
 </table>
-
 
 ### Importing keys
 
@@ -53,7 +50,6 @@ gpg: Total number processed: 1
 gpg:               imported: 1
 gpg: no ultimately trusted keys found
 ```
-
 
 ### Checking
 
@@ -74,7 +70,6 @@ gpg: Signature made Fri May 10 10:18:07 2024 CEST
 gpg:                using RSA key 013A0127AC9C65B34FFA62526C1009B693975393
 gpg: Good signature from "Carlos Garcia Campos <cgarcia@igalia.com>" [full]
 ```
-
 
 ## Checksums
 

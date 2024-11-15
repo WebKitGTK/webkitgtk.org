@@ -1,6 +1,8 @@
 releases
 _site/
 .jekyll-cache/
+vendor
+.bundle/
 
 # Planet
 _cache/
