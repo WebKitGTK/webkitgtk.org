@@ -1,11 +1,13 @@
-# Site settings
 title: WebKitGTK
-url: "https://webkitgtk.org" # the base hostname & protocol for your site
-sourceurl: "https://github.com/WebKitGTK/webkitgtk.org" # "edit this website" link in the footer
+url: "https://webkitgtk.org"
+sourceurl: "https://github.com/WebKitGTK/webkitgtk.org"
 description: "A WebKit port for the GTK library."
-issuesurl: "https://github.com/WebKitGTK/webkitgtk.org/issues" # issue tracker for website
+issuesurl: "https://github.com/WebKitGTK/webkitgtk.org/issues"
 permalink: /:title/
-primary-color: "#3584e4" #used in ios theme. further color customization in style.css
+primary-color: "#3584e4"
+exclude: ["README.md", "scripts", "releases", "planet", "reference", "cvedata"]
 
-# Build settings
 markdown: kramdown
+
+stable-release-version: 2.46.3
+unstable-release-version: 2.47.1

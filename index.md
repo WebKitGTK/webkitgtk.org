@@ -39,12 +39,13 @@ all over the world.
 
 ## API Reference
 
-- [WebKit](reference/webkitgtk/stable)
-- [WebKitWebProcessExtension](reference/webkitgtk-web-process-extension/stable)
-- [JavascriptCore](reference/jsc-glib/stable)
+- [WebKit](https://webkitgtk.org/reference/webkitgtk/stable)
+- [WebKitWebProcessExtension](https://webkitgtk.org/reference/webkitgtk-web-process-extension/stable)
+- [JavascriptCore](https://webkitgtk.org/reference/jsc-glib/stable)
 
 ## More Info
 
 - [News](news)
 - [Security Advisories](security)
 - [Releases](releases) & [Verifying Releases](verifying)
+- [Planet](https://planet.webkitgtk.org)
