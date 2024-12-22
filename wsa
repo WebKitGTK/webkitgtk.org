@@ -353,7 +353,8 @@ def cmd_check(args):
     for wsa_yaml_path in args.report_yml:
         with open(wsa_yaml_path, "r") as f:
             wsa_data = YAML(typ="safe").load(f)
-            reported_cves.update(wsa_data.keys())
+            if wsa_data:
+                reported_cves.update(wsa_data.keys())
     print("CVEs already in WSAs:", len(reported_cves), file=sys.stderr)
 
     indexes = {"https://support.apple.com/en-us/HT201222"}
