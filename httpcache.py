@@ -183,13 +183,13 @@ class HTTPCache:
 
         log.debug("fetch: ** Cache miss: %d" % response.status)
 
-        entry.http_expires = response.headers.get("Expires")
+        entry.http_expires = response.headers.get("Expires", "0")
         entry.http_mtime = response.headers.get("Last-Modified")
         entry.size = int(response.headers.get("Content-Length", 0))
         entry.type = response.headers.get("Content-Type")
         entry.etag = response.headers.get("ETag")
         log.debug("fetch:  - Last-Modified: %s", entry.http_mtime)
-        log.debug("fetch:  - Expires: %s", entry.http_expires)
+        log.debug("fetch:  - Expires: %s", entry.http_expires if entry.expires else None)
         log.debug("fetch:  - Content-Length: %r", entry.size)
         log.debug("fetch:  - Content-Type: %s", entry.type or "")
         log.debug("fetch:  - ETag: %s", entry.etag or "")
