@@ -423,6 +423,10 @@ def cmd_check(args):
                     continue
 
             if bugzilla and cve_id:
+                if description and not description.endswith("."):
+                    description += "."
+                if impact and not impact.endswith("."):
+                    impact += "."
                 entries.add((cve_id, bugzilla, author, impact, description))
         return entries
 
