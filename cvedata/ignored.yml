@@ -23,6 +23,7 @@ CVE-2024-23214: true
 CVE-2024-23226: true
 CVE-2024-27830: Canvas noise injection unsupported
 CVE-2024-27850: Canvas noise injection unsupported
+CVE-2024-27859: WebGPU unsupported
 CVE-2024-40785: iOS only
 CVE-2024-40794: Cocoa only
 CVE-2024-40857: WebArchive unsupported

@@ -1,0 +1,46 @@
+CVE-2024-27856: # https://support.apple.com/en-us/104191
+  bugzilla: 268765
+  version: 2.46.0
+  author: Maksymilian Motyl of Immunity Systems, Junsung Lee working with Trend Micro
+    Zero Day Initiative, and ajajfxhj
+  impact: Processing a file may lead to unexpected app termination or arbitrary code
+    execution.
+  description: The issue was addressed with improved checks.
+CVE-2024-54543: # https://support.apple.com/en-us/104191
+  bugzilla: 282450
+  version: 2.46.5
+  author: Lukas Bernhard, Gary Kwong, and an anonymous researcher
+  impact: Processing maliciously crafted web content may lead to memory corruption.
+  description: The issue was addressed with improved memory handling.
+CVE-2024-54658: # https://support.apple.com/en-us/104191
+  bugzilla: 263758
+  version: 2.44.0
+  author: anbu1024 of SecANT
+  impact: Processing web content may lead to a denial-of-service.
+  description: The issue was addressed with improved memory handling.
+CVE-2025-24143: # https://support.apple.com/en-us/104191
+  bugzilla: 283117
+  version: 2.46.6
+  author: an anonymous researcher
+  impact: A maliciously crafted webpage may be able to fingerprint the user.
+  description: The issue was addressed with improved access restrictions to the file
+    system.
+CVE-2025-24150: # https://support.apple.com/en-us/104191
+  bugzilla: 283718
+  version: 2.46.6
+  author: Johan Carlsson (joaxcar)
+  impact: Copying a URL from Web Inspector may lead to command injection.
+  description: A privacy issue was addressed with improved handling of files.
+CVE-2025-24158: # https://support.apple.com/en-us/104191
+  bugzilla: 283889
+  version: 2.46.6
+  author: Q1IQ (@q1iqF) of NUS CuriOSity and P1umer (@p1umer) of Imperial Global Singapore.
+  impact: Processing web content may lead to a denial-of-service.
+  description: The issue was addressed with improved memory handling.
+CVE-2025-24162: # https://support.apple.com/en-us/104191
+  bugzilla: 284159
+  version: 2.46.6
+  author: linjy of HKUS3Lab and chluo of WHUSecLab
+  impact: Processing maliciously crafted web content may lead to an unexpected process
+    crash.
+  description: This issue was addressed through improved state management.
