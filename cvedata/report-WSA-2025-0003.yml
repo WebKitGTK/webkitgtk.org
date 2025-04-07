@@ -1,0 +1,50 @@
+CVE-2024-54551: # https://support.apple.com/en-us/104191
+  bugzilla: 275117
+  version: 2.48.1
+  author: ajajfxhj
+  impact: Processing web content may lead to a denial-of-service.
+  description: The issue was addressed with improved memory handling.
+CVE-2025-24208: # https://support.apple.com/en-us/104191
+  bugzilla: 286381
+  version: 2.48.1
+  author: Muhammad Zaid Ghifari (Mr.ZheeV) and Kalimantan Utara
+  impact: Loading a malicious iframe may lead to a cross-site scripting attack.
+  description: A permissions issue was addressed with additional restrictions.
+CVE-2025-24209: # https://support.apple.com/en-us/104191
+  bugzilla: 286462
+  version: 2.48.1
+  author: Francisco Alonso (@revskills), and an anonymous researcher
+  impact: Processing maliciously crafted web content may lead to an unexpected process
+    crash.
+  description: A buffer overflow issue was addressed with improved memory handling.
+CVE-2025-24213: # https://support.apple.com/en-us/104191
+  bugzilla: 286694
+  version: 2.48.1
+  author: Google V8 Security Team
+  impact: A type confusion issue could lead to memory corruption.
+  description: >-
+    This issue was addressed with improved handling of floats. Note that this
+    CVE is fixed only on ARM architectures. x86_64 is not vulnerable, x86 is
+    not vulnerable when the SSE2 instruction set is enabled; but other
+    architectures remain vulnerable.
+CVE-2025-24216: # https://support.apple.com/en-us/104191
+  bugzilla: 284055
+  version: 2.48.1
+  author: Paul Bakker of ParagonERP
+  impact: Processing maliciously crafted web content may lead to an unexpected Safari
+    crash.
+  description: The issue was addressed with improved memory handling.
+CVE-2025-24264: # https://support.apple.com/en-us/104191
+  bugzilla: 285892
+  version: 2.48.1
+  author: Gary Kwong, and an anonymous researcher
+  impact: Processing maliciously crafted web content may lead to an unexpected Safari
+    crash.
+  description: The issue was addressed with improved memory handling.
+CVE-2025-30427: # https://support.apple.com/en-us/104191
+  bugzilla: 285643
+  version: 2.48.1
+  author: rheza (@ginggilBesel)
+  impact: Processing maliciously crafted web content may lead to an unexpected Safari
+    crash.
+  description: A use-after-free issue was addressed with improved memory management.
