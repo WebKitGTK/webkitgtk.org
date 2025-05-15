@@ -240,7 +240,7 @@ class Markdown(Formatter):
             if anchor:
                 return f"[{target}](#{target})"
             else:
-                return f"<a name='{target}' href='https://cve.mitre.org/cgi-bin/cvename.cgi?name={target}'>{target}</a>"
+                return f"<a name='{target}' href='https://www.cve.org/CVERecord?id={target}'>{target}</a>"
         else:
             text = target
         return f"[{text}]({target})"
