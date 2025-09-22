@@ -1,0 +1,27 @@
+CVE-2025-43272: # https://support.apple.com/en-us/104191
+  bugzilla: 294550
+  version: 2.48.7
+  author: Big Bear
+  impact: Processing maliciously crafted web content may lead to an unexpected Safari
+    crash.
+  description: The issue was addressed with improved memory handling.
+CVE-2025-43342: # https://support.apple.com/en-us/104191
+  bugzilla: 296042
+  version: 2.48.7
+  author: an anonymous researcher
+  impact: Processing maliciously crafted web content may lead to an unexpected process
+    crash.
+  description: A correctness issue was addressed with improved checks.
+CVE-2025-43356: # https://support.apple.com/en-us/104191
+  bugzilla: 296153
+  version: 2.48.7
+  author: Jaydev Ahire
+  impact: A website may be able to access sensor information without user consent.
+  description: The issue was addressed with improved handling of caches.
+CVE-2025-43368: # https://support.apple.com/en-us/104191
+  bugzilla: 296276
+  version: 2.48.7
+  author: Pawel Wylecial of REDTEAM.PL working with Trend Micro Zero Day Initiative
+  impact: Processing maliciously crafted web content may lead to an unexpected Safari
+    crash.
+  description: A use-after-free issue was addressed with improved memory management.
