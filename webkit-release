@@ -127,7 +127,7 @@ class WebKitTarball:
     def _parse_versions_cmake(self, versions):
         versions_file = self._tar.extractfile(versions)
 
-        version_pattern = re.compile('^SET_PROJECT_VERSION\(([0-9]+) ([0-9]+) ([0-9]+) ?([0-9]+)?\)$');
+        version_pattern = re.compile(r'^SET_PROJECT_VERSION\(([0-9]+) ([0-9]+) ([0-9]+) ?([0-9]+)?\)$')
 
         self._required_deps = []
         for line in versions_file.readlines():
