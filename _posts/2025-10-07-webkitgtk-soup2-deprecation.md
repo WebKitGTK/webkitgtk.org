@@ -44,10 +44,12 @@ support libsoup 2 will ease the maintenance burden on the team that develops
 WebKitGTK and WPE. Additionally, it is our responsibility to nudge WebKit users
 towards using libsoup 3, which is receiving active maintenance.
 
-As of October 2025, Linux distributions like Debian, Ubuntu, Fedora, or Chimera
-no longer provide libsoup 2 packages and their WebKitGTK packages use libsoup 3.
-Other distributions [like Arch Linux](https://archlinux.org/todo/libsoup-2-eol/)
-are actively working on removing libsoup 2 from their repositories.
+As of October 2025, Linux distributions like Debian or Chimera no longer
+provide libsoup 2 packages and their WebKitGTK packages use libsoup 3. Other
+distributions [like Arch Linux](https://archlinux.org/todo/libsoup-2-eol/) are
+actively working on removing libsoup 2 from their repositories, or no longer
+provide a WebKitGTK package built with libsoup 2, as is the case of Ubuntu
+and Fedora.
 
 The four and a half years since the first stable WebKitGTK release (2.34.0,
 October 2021) with support for libsoup 3, and the first stable release that
@@ -62,13 +64,12 @@ one: the only difference between those is that the former uses the old libsoup
 2, while the latter uses libsoup 3.
 
 - If your application uses **only** functionality provided WebKitGTK, changing
-	the dependency on the `webkit2gtk-4.0` pkg-config module to `webkit2gtk-4.1`
-	and rebuilding should be enough in most cases.
+  the dependency on the `webkit2gtk-4.0` pkg-config module to `webkit2gtk-4.1`
+  and rebuilding should be enough in most cases.
 
 - If any other libraries used by the application also require libsoup, make
   sure those are also using libsoup 3.
 
 - If your application code uses functionality from libsoup itself, follow the
   [migration guide](https://libsoup.gnome.org/libsoup-3.0/migrating-from-libsoup-2.html)
-	included in the libsoup 3 manual.
-
+  included in the libsoup 3 manual.
