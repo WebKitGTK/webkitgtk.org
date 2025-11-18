@@ -3,4 +3,4 @@ url: https://webkitgtk.org
 exclude: ['README.md', 'generate-site', 'releases', 'webkit-release', 'planet', 'generate-planet', 'generate-security-advisory', 'reference', 'cvedata']
 
 stable-release-version: 2.50.1
-unstable-release-version: 2.51.1
+unstable-release-version: 2.51.2
