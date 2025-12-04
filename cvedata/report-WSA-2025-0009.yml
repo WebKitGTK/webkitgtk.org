@@ -14,7 +14,7 @@ CVE-2025-43421: # https://support.apple.com/en-us/104191
   description: Multiple issues were addressed by disabling array allocation sinking.
 CVE-2025-13502:
   bugzilla: 302218
-  version: 2.50.3
+  version: 2.50.2
   author: Stanislav Fort, Aisle Research.
   impact: Processing maliciously crafted web content may lead to an unexpected process
     crash.
