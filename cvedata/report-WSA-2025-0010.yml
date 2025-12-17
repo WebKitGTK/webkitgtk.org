@@ -1,0 +1,53 @@
+CVE-2025-14174: # https://support.apple.com/en-us/104191
+  bugzilla: 303614
+  version: 2.50.4
+  author: Apple and Google Threat Analysis Group
+  impact: Processing maliciously crafted web content may lead to memory corruption.
+    Apple is aware of a report that this issue may have been exploited in an extremely
+    sophisticated attack against specific targeted individuals on versions of iOS
+    before iOS 26. CVE-2025-43529 was also issued in response to this report.
+  description: A memory corruption issue was addressed with improved validation.
+CVE-2025-43501: # https://support.apple.com/en-us/104191
+  bugzilla: 301371
+  version: 2.50.4
+  author: Hossein Lotfi (@hosselot) of Trend Micro Zero Day Initiative
+  impact: Processing maliciously crafted web content may lead to an unexpected process
+    crash.
+  description: A buffer overflow issue was addressed with improved memory handling.
+CVE-2025-43529: # https://support.apple.com/en-us/104191
+  bugzilla: 302502
+  version: 2.50.4
+  author: Google Threat Analysis Group
+  impact: Processing maliciously crafted web content may lead to arbitrary code execution.
+    Apple is aware of a report that this issue may have been exploited in an extremely
+    sophisticated attack against specific targeted individuals on versions of iOS
+    before iOS 26. CVE-2025-14174 was also issued in response to this report.
+  description: A use-after-free issue was addressed with improved memory management.
+CVE-2025-43531: # https://support.apple.com/en-us/104191
+  bugzilla: 301940
+  version: 2.50.4
+  author: Phil Pizlo of Epic Games
+  impact: Processing maliciously crafted web content may lead to an unexpected process
+    crash.
+  description: A race condition was addressed with improved state handling.
+CVE-2025-43535: # https://support.apple.com/en-us/104191
+  bugzilla: 301338
+  version: 2.50.4
+  author: Google Big Sleep, Nan Wang (@eternalsakura13)
+  impact: Processing maliciously crafted web content may lead to an unexpected process
+    crash.
+  description: The issue was addressed with improved memory handling.
+CVE-2025-43536: # https://support.apple.com/en-us/104191
+  bugzilla: 301726
+  version: 2.50.4
+  author: Nan Wang (@eternalsakura13)
+  impact: Processing maliciously crafted web content may lead to an unexpected process
+    crash.
+  description: A use-after-free issue was addressed with improved memory management.
+CVE-2025-43541: # https://support.apple.com/en-us/104191
+  bugzilla: 301257
+  version: 2.50.4
+  author: Hossein Lotfi (@hosselot) of Trend Micro Zero Day Initiative
+  impact: Processing maliciously crafted web content may lead to an unexpected Safari
+    crash.
+  description: A type confusion issue was addressed with improved state handling.
