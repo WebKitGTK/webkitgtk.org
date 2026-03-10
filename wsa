@@ -316,6 +316,150 @@ def cmd_fill(args):
             yaml.dump(wsa_data, sys.stdout)
 
 
+class _ExtractorDebug:
+    def emit(self, fmt, *args):
+        pass
+
+    def r(self, x):
+        return x
+
+    def s(self, x):
+        return x
+
+    def __call__(self, *args):
+        self.emit(*args)
+
+class _ExtractorDebugStderr(_ExtractorDebug):
+    def __init__(self):
+        from shutil import get_terminal_size
+        self.__term_columns = get_terminal_size((80, 25)).columns - 1
+
+    def emit(self, fmt, *args):
+        sys.stderr.write(">> ")
+        sys.stderr.write(fmt % args)
+        sys.stderr.write("\n")
+
+    def r(self, x):
+        from pprint import pformat
+        return pformat(x, width=self.__term_columns)
+
+    def s(self, x):
+        return repr(x)
+
+class _ExtractorDebugColouredStderr(_ExtractorDebugStderr):
+    def emit(self, fmt, *args):
+        sys.stderr.write("\x1b[1;31m>>\x1b[0;0m \x1b[34m")
+        sys.stderr.write(fmt % args)
+        sys.stderr.write("\x1b[0;0m\n")
+
+    def r(self, x):
+        r = super().r(x)
+        return f"\x1b[2m{r}\x1b[22m"
+
+    def s(self, x):
+        r = super().s(x)
+        return f"\x1b[1m{r}\x1b[22m"
+
+
+def extract_cve_entries(content: str, debug: _ExtractorDebug|None = None):
+    """
+    Yields a (cve_id, bugzilla, author, impact, description) tuple for
+    each WebKit related entry found in the advisory HTML input.
+    """
+    from lxml.cssselect import CSSSelector
+    from lxml import html
+
+    if debug is None:
+        debug = _ExtractorDebug()
+
+    advisory_bugzilla_re = re.compile(r"^WebKit\s+Bugzilla:\s*(\d+)\s*$")
+    advisory_cve_author_re = re.compile(r"^(CVE-\d+-\d+):\s*(.*)$")
+    advisory_cve_re = re.compile(r"^(CVE-\d+-\d+)$")
+    advisory_description_re = re.compile(r"^[Dd]escription:\s*(.*)$")
+    advisory_impact_re = re.compile(r"^[Ii]mpact:\s*(.*)$")
+    webkit_boundary_re = re.compile(r"\bWebKit\b", re.IGNORECASE)
+    select_advisory_headers = CSSSelector("div#sections > h3")
+    select_paragraphs = CSSSelector("p")
+
+    tree = html.fromstring(content)
+    for header in select_advisory_headers(tree):
+        if header.text is None or not webkit_boundary_re.match(header.text):
+            debug("advisory header skipped, text=%s", debug.s(header.text))
+            continue
+
+        debug("advisory header found, text=%s", debug.s(header.text))
+        items = []
+        current = header.getnext()
+        while current is not None and current.tag != header.tag:
+            if current.tag == "p":
+                items.append(current.text)
+            else:
+                items.extend((p.text for p in select_paragraphs(current)))
+            current = current.getnext()
+        debug("extracted text items for header:\n%s", debug.r(items))
+
+        cve_id = None
+        author = None
+        bugzilla = None
+        impact = None
+        description = None
+
+        for text in items:
+            debug("matching on text=%s", debug.s(text))
+            if not text:
+                continue
+            text = text.strip()
+
+            #
+            # Every time either CVE identifier regex is matched we ought to yield
+            # an entry, even if the author, description, and impact may have not
+            # changed. Some Apple advisories have a common description and impact,
+            # and then list more than one CVE identifiers.
+            #
+            # XXX: Sadly, there is no easy way of avoiding the duplicated code
+            #      without a big refactoring, so leave it as-is for now.
+            #
+            m = advisory_cve_author_re.match(text)
+            if m:
+                cve_id, author = m[1], m[2]
+                debug("matched advisory_cve_author_re, cve_id=%s author=%s",
+                      debug.s(cve_id), debug.s(author))
+                if bugzilla and cve_id:
+                    if description and not description.endswith("."):
+                        description += "."
+                    if impact and not impact.endswith("."):
+                        impact += "."
+                    yield (cve_id, bugzilla, author, impact, description)
+                continue
+            m = advisory_cve_re.match(text)
+            if m:
+                cve_id = m[1]
+                debug("matched advisory_cve_re, cve_id=%s", debug.s(cve_id))
+                if bugzilla and cve_id:
+                    if description and not description.endswith("."):
+                        description += "."
+                    if impact and not impact.endswith("."):
+                        impact += "."
+                    yield (cve_id, bugzilla, author, impact, description)
+                continue
+
+            m = advisory_description_re.match(text)
+            if m:
+                description = m[1]
+                debug("matched advisory_description_re=%s", debug.s(description))
+                continue
+            m = advisory_impact_re.match(text)
+            if m:
+                impact = m[1]
+                debug("matched advisory_impact_re=%s", debug.s(impact))
+                continue
+            m = advisory_bugzilla_re.match(text)
+            if m:
+                bugzilla = m[1]
+                debug("matched advisory_bugzilla_re=%s", debug.s(bugzilla))
+                continue
+
+
 def cmd_check(args):
     from httpcache import HTTPCache
     from urllib.error import HTTPError
@@ -323,17 +467,9 @@ def cmd_check(args):
     from lxml import html
 
     apple_support_url_re = re.compile(r"^https://support.apple.com/(en-us/|kb/HT)\d+$")
-    advisory_bugzilla_re = re.compile(r"^WebKit\s+Bugzilla:\s*(\d+)\s*$")
-    advisory_cve_author_re = re.compile(r"^(CVE-\d+-\d+):\s*(.*)$")
-    advisory_cve_re = re.compile(r"^(CVE-\d+-\d+)$")
-    advisory_description_re = re.compile(r"^[Dd]escription:\s*(.*)$")
-    advisory_impact_re = re.compile(r"^[Ii]mpact:\s*(.*)$")
-    webkit_boundary_re = re.compile(r"\bWebKit\b", re.IGNORECASE)
 
-    select_advisory_headers = CSSSelector("div#sections > h3")
     select_advisory_links = CSSSelector("table > tbody > tr > td > p > a")
     select_index_links = CSSSelector("ul > li > p > a")
-    select_paragraphs = CSSSelector("p")
 
     if not args.cache:
         args.cache = Path(__file__).parent / "httpcache"
@@ -361,74 +497,21 @@ def cmd_check(args):
     visited = set()
     cves = {}
 
-    def webkit_cve_entries(url):
-        entries = set()
-
+    def webkit_cve_entries(url) -> set:
         entry = None
         try:
             entry, _ = cache.get(url)
         except HTTPError as e:
             if e.code == 404:
                 print("\x1b[2KNot found:", url, "-", e, file=sys.stderr)
-                return entries
+                return set()
 
         print("\x1b[2K*", url, "- visited:", len(visited),
               "- pending:", len(indexes), "- CVEs:", len(cves), end="\r",
                   file=sys.stderr)
 
         assert entry is not None
-        tree = html.fromstring(cache.read_blob(entry))
-
-        for header in select_advisory_headers(tree):
-            if header.text is None or not webkit_boundary_re.match(header.text):
-                continue
-            items = []
-            current = header.getnext()
-            while current is not None and current.tag != header.tag:
-                if current.tag == "p":
-                    items.append(current.text)
-                else:
-                    items.extend((p.text for p in select_paragraphs(current)))
-                current = current.getnext()
-
-            cve_id = None
-            author = None
-            bugzilla = None
-            impact = None
-            description = None
-
-            for text in items:
-                if not text:
-                    continue
-                text = text.strip()
-                m = advisory_cve_author_re.match(text)
-                if m:
-                    cve_id, author = m[1], m[2]
-                    continue
-                m = advisory_cve_re.match(text)
-                if m:
-                    cve_id = m[1]
-                    continue
-                m = advisory_description_re.match(text)
-                if m:
-                    description = m[1]
-                    continue
-                m = advisory_impact_re.match(text)
-                if m:
-                    impact = m[1]
-                    continue
-                m = advisory_bugzilla_re.match(text)
-                if m:
-                    bugzilla = m[1]
-                    continue
-
-            if bugzilla and cve_id:
-                if description and not description.endswith("."):
-                    description += "."
-                if impact and not impact.endswith("."):
-                    impact += "."
-                entries.add((cve_id, bugzilla, author, impact, description))
-        return entries
+        return set(extract_cve_entries(cache.read_blob(entry)))
 
     def fetch_index(url):
         entry = None
@@ -508,6 +591,11 @@ def cmd_check(args):
     yaml.dump(cve_data, sys.stdout)
 
 
+def cmd_debug_extract(args):
+    debug = _ExtractorDebugColouredStderr() if args.colour else _ExtractorDebugStderr()
+    [print(*t) for t in extract_cve_entries(args.file[0].read_text(), debug)]
+
+
 log_levels = {logging.getLevelName(level).lower(): level
     for level in (logging.INFO, logging.DEBUG, logging.ERROR, logging.WARNING, logging.FATAL)}
 log_level_default_name = logging.getLevelName(logging.WARNING).lower()
@@ -536,10 +624,15 @@ chk_parser.add_argument("-c", "--cache", type=Path, default=None, help="path to 
 chk_parser.add_argument("--cache-stats", action="store_true", default=False, help="Print HTTP cache statistics")
 chk_parser.add_argument("report_yml", type=Path, nargs="*", help="path to WSA report YAML source")
 
+ext_parser = subparsers.add_parser("debug-extract", description="Extract CVEs from an HTML file")
+ext_parser.add_argument("--colour", "-c", action="store_true", default=False, help="coloured log on stderr")
+ext_parser.add_argument("file", type=Path, nargs=1, help="path to local HTML file")
+
 args = arg_parser.parse_args()
 logging.basicConfig(level=log_levels[args.log])
 ({
     "generate": cmd_generate, "gen": cmd_generate,
     "fill": cmd_fill,
     "check": cmd_check,
+    "debug-extract": cmd_debug_extract,
 })[args.subcommand](args)
