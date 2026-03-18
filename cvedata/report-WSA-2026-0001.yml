@@ -1,0 +1,117 @@
+CVE-2025-31223: # https://support.apple.com/en-us/104191
+  version: 2.50.0
+  bugzilla: 289387
+  author: Andreas Jaegersberger & Ro Achterberg of Nosebeard Labs
+  impact: Processing maliciously crafted web content may lead to memory corruption.
+  description: The issue was addressed with improved checks.
+CVE-2025-31277: # https://support.apple.com/en-us/104191
+  version: 2.50.0
+  bugzilla: 291745
+  author: Yuhao Hu, Yan Kang, Chenggang Wu, and Xiaojie Wei
+  impact: Processing maliciously crafted web content may lead to memory corruption.
+  description: The issue was addressed with improved memory handling.
+CVE-2025-43213: # https://support.apple.com/en-us/104191
+  version: 2.50.5
+  bugzilla: 292621
+  author: Google V8 Security Team
+  impact: Processing maliciously crafted web content may lead to an unexpected Safari
+    crash.
+  description: The issue was addressed with improved memory handling.
+CVE-2025-43214: # https://support.apple.com/en-us/104191
+  version: 2.50.5
+  bugzilla: 292599
+  author: shandikri working with Trend Micro Zero Day Initiative, Google V8 Security
+    Team
+  impact: Processing maliciously crafted web content may lead to an unexpected Safari
+    crash.
+  description: The issue was addressed with improved memory handling.
+CVE-2025-43433: # https://support.apple.com/en-us/104191
+  version: 2.50.2
+  bugzilla: 298093
+  author: Google Big Sleep
+  impact: Processing maliciously crafted web content may lead to memory corruption.
+  description: The issue was addressed with improved memory handling.
+CVE-2025-43438: # https://support.apple.com/en-us/104191
+  version: 2.50.2
+  bugzilla: 297662
+  author: rheza (@ginggilBesel), shandikri working with Trend Micro Zero Day Initiative
+  impact: Processing maliciously crafted web content may lead to an unexpected Safari
+    crash.
+  description: A use-after-free issue was addressed with improved memory management.
+CVE-2025-43441: # https://support.apple.com/en-us/104191
+  version: 2.50.2
+  bugzilla: 298496
+  author: rheza (@ginggilBesel)
+  impact: Processing maliciously crafted web content may lead to an unexpected process
+    crash.
+  description: The issue was addressed with improved memory handling.
+CVE-2025-43457: # https://support.apple.com/en-us/104191
+  version: 2.50.6
+  bugzilla: 298606
+  author: Gary Kwong, Hossein Lotfi (@hosselot) of Trend Micro Zero Day Initiative
+  impact: Processing maliciously crafted web content may lead to an unexpected Safari
+    crash.
+  description: A use-after-free issue was addressed with improved memory management.
+CVE-2025-43511: # https://support.apple.com/en-us/104191
+  version: 2.50.5
+  bugzilla: 300926
+  author: 이동하 (Lee Dong Ha of BoB 14th)
+  impact: Processing maliciously crafted web content may lead to an unexpected process
+    crash.
+  description: A use-after-free issue was addressed with improved memory management.
+CVE-2025-46299: # https://support.apple.com/en-us/104191
+  version: 2.52.0
+  bugzilla: 299518
+  author: Google Big Sleep
+  impact: Processing maliciously crafted web content may disclose internal states
+    of the app.
+  description: A memory initialization issue was addressed with improved memory handling.
+CVE-2026-20608: # https://support.apple.com/en-us/104191
+  version: 2.50.6
+  bugzilla: 303357
+  author: HanQing from TSDubhe and Nan Wang (@eternalsakura13)
+  impact: Processing maliciously crafted web content may lead to an unexpected process
+    crash.
+  description: This issue was addressed through improved state management.
+CVE-2026-20635: # https://support.apple.com/en-us/104191
+  version: 2.50.6
+  bugzilla: 304661
+  author: EntryHi
+  impact: Processing maliciously crafted web content may lead to an unexpected process
+    crash.
+  description: The issue was addressed with improved memory handling.
+CVE-2026-20636: # https://support.apple.com/en-us/104191
+  version: 2.50.6
+  bugzilla: 304657
+  author: EntryHi
+  impact: Processing maliciously crafted web content may lead to an unexpected process
+    crash.
+  description: The issue was addressed with improved memory handling.
+CVE-2026-20644: # https://support.apple.com/en-us/104191
+  version: 2.50.6
+  bugzilla: 303444
+  author: HanQing from TSDubhe and Nan Wang (@eternalsakura13)
+  impact: Processing maliciously crafted web content may lead to an unexpected process
+    crash.
+  description: The issue was addressed with improved memory handling.
+CVE-2026-20652: # https://support.apple.com/en-us/104191
+  version: 2.50.6
+  bugzilla: 303959
+  author: Nathaniel Oh (@calysteon)
+  impact: A remote attacker may be able to cause a denial-of-service.
+  description: The issue was addressed with improved memory handling.
+CVE-2026-20676: # https://support.apple.com/en-us/104191
+  version: 2.50.6
+  bugzilla: 305020
+  author: Tom Van Goethem
+  impact: A website may be able to track users through Safari web extensions.
+  description: This issue was addressed through improved state management.
+CVE-2023-43010: # https://support.apple.com/en-us/104191
+  version: 2.44.0
+  bugzilla: 260913
+  author: Apple
+  impact: Processing maliciously crafted web content may lead to memory corruption.
+    This fix associated with the Coruna exploit was shipped in iOS 17.2 on December
+    11th, 2023. This update brings that fix to devices that cannot update to the latest
+    iOS version.
+  description: The issue was addressed with improved memory handling.
