@@ -1,0 +1,57 @@
+CVE-2026-20643: # https://support.apple.com/en-us/104191
+  version: 2.52.1
+  bugzilla: 306050
+  author: Thomas Espach
+  impact: Processing maliciously crafted web content may bypass Same Origin Policy.
+  description: A cross-origin issue in the Navigation API was addressed with improved
+    input validation.
+CVE-2026-20664: # https://support.apple.com/en-us/104191
+  version: 2.52.1
+  bugzilla: 306136
+  author: Daniel Rhea, Söhnke Benedikt Fischedick (Tripton), Emrovsky & Switch, Yevhen
+    Pervushyn
+  impact: Processing maliciously crafted web content may lead to an unexpected process
+    crash.
+  description: The issue was addressed with improved memory handling.
+CVE-2026-20665: # https://support.apple.com/en-us/104191
+  version: 2.52.1
+  bugzilla: 304951
+  author: webb
+  impact: Processing maliciously crafted web content may prevent Content Security
+    Policy from being enforced.
+  description: This issue was addressed through improved state management.
+CVE-2026-20691: # https://support.apple.com/en-us/104191
+  version: 2.52.1
+  bugzilla: 306827
+  author: Gongyu Ma (@Mezone0)
+  impact: A maliciously crafted webpage may be able to fingerprint the user.
+  description: An authorization issue was addressed with improved state management.
+CVE-2026-28857: # https://support.apple.com/en-us/104191
+  version: 2.52.1
+  bugzilla: 307723
+  author: Narcis Oliveras Fontàs, Söhnke Benedikt Fischedick (Tripton), Daniel Rhea,
+    Nathaniel Oh (@calysteon)
+  impact: Processing maliciously crafted web content may lead to an unexpected process
+    crash.
+  description: The issue was addressed with improved memory handling.
+CVE-2026-28859: # https://support.apple.com/en-us/104191
+  version: 2.52.1
+  bugzilla: 308248
+  author: greenbynox, Arni Hardarson
+  impact: A malicious website may be able to process restricted web content outside
+    the sandbox.
+  description: The issue was addressed with improved memory handling.
+CVE-2026-28861: # https://support.apple.com/en-us/104191
+  version: 2.52.1
+  bugzilla: 307014
+  author: Hongze Wu and Shuaike Dong from Ant Group Infrastructure Security Team
+  impact: A malicious website may be able to access script message handlers intended
+    for other origins.
+  description: A logic issue was addressed with improved state management.
+CVE-2026-28871: # https://support.apple.com/en-us/104191
+  version: 2.52.1
+  bugzilla: 305859
+  author: '@hamayanhamayan'
+  impact: Visiting a maliciously crafted website may lead to a cross-site scripting
+    attack.
+  description: A logic issue was addressed with improved checks.
