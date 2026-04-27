@@ -377,9 +377,9 @@ you may:
 - Join the #webkitgtk:matrix.org Matrix channel.
 
 - Subscribe to the WebKitGTK mailing list,
-  https://lists.webkit.org/mailman/listinfo/webkit-gtk or the
+  https://lists.webkit.org/mailman3/lists/webkit-gtk.lists.webkit.org/ or the
   WebKit development mailing list,
-  https://lists.webkit.org/mailman/listinfo/webkit-dev
+  https://lists.webkit.org/mailman3/lists/webkit-dev.lists.webkit.org/
 '''
         body += "\n"
 
