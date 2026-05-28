@@ -702,7 +702,7 @@ are far too many to list!
         self._add_new_docs(website_dir)
         self._write_post(website_dir)
 
-        p = subprocess.Popen(['git', 'commit', '-m', "Release: %s" % self._tarball.get_version_str()], stdout=subprocess.PIPE)
+        p = subprocess.Popen(['git', 'commit', '-m', "Release: %s" % self._tarball.get_version_str()], stdout=subprocess.DEVNULL)
         if p.wait() == 0:
             sys.stdout.write("Website changes committed, run git push to update the website\n")
 
