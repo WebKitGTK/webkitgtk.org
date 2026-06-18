@@ -6,7 +6,7 @@
         {% if link.url is containing("http") %}
         <li><a class="extlink" href="{{ link.url | safe }}">{{ link.lnk }}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="12" height="12"><path fill="currentColor" d="M4.5 2h8a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V3.7L4.2 11.3a.5.5 0 1 1-.7-.7L11.3 3H4.5a.5.5 0 0 1 0-1z"/></svg></a></li>
         {% else %}
-        <li><a href="{{ link.url | safe }}">{{ link.lnk }}</a></li>
+        <li><a href="{{ config.base_url | trim_end(pat="/") }}{{ link.url | safe }}">{{ link.lnk }}</a></li>
         {% endif %}
       {% endfor %}
       <li><span class="socials">
