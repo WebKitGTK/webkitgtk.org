@@ -1,0 +1,19 @@
+base_url = "https://webkitgtk.org"
+title = "WebKitGTK"
+description = "A WebKit port for the GTK library."
+
+compile_sass = false
+build_search_index = false
+generate_feeds = true
+
+[markdown]
+
+[slugify]
+paths = "safe"
+
+[extra]
+sourceurl = "https://github.com/WebKitGTK/webkitgtk.org"
+issuesurl = "https://github.com/WebKitGTK/webkitgtk.org/issues"
+primary_color = "#3584e4"
+stable_release_version = "2.46.3"
+unstable_release_version = "2.47.1"

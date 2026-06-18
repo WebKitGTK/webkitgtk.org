@@ -1,6 +1,5 @@
 releases
-_site/
-.jekyll-cache/
+public/
 vendor
 .bundle/
 
