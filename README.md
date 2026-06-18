@@ -1,15 +1,19 @@
 <div align="center">
-  <img src="assets/favicon.svg" width="128" height="128">
+  <img src="static/assets/favicon.svg" width="128" height="128">
 
   # WebKitGTK.org
 
   The WebKitGTK website.
 </div>
 
-This site is made in [Jekyll](http://jekyllrb.com/) using the style of GNOME project pages.
+This site is made with [Zola](https://www.getzola.org/).
 
-In order to test it, see [Setup](https://jimmac.github.io/os-component-website/#setup).
+In order to test it:
+
+```
+zola serve
+```
 
 In order to write a piece of news you have to create a
-new file inside the `_posts` folder using
+new file inside the `content/news` folder using
 [Markdown](http://daringfireball.net/projects/markdown/) syntax.

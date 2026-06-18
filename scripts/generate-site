@@ -1,12 +1,11 @@
 #!/bin/sh
-jekyll build
+zola build
 
-# The following directories are excluded from the list
-# of files to copy on the jekyll build. We use symlinks
-# to them from the _site subdirectory.
+# The following directories are excluded from the Zola build.
+# We use symlinks to them from the public subdirectory.
 
-# 1. Jekyll doesn't handle ok copying a directory with
-# symlinks (references to the stable/unstable versions)
-ln -s ../reference _site/reference
+# 1. Zola doesn't handle copying a directory with symlinks
+#    (references to the stable/unstable versions)
+ln -s ../reference public/reference
 # 2. Copying many tarballs is expensive.
-ln -s ../releases _site/releases
+ln -s ../releases public/releases

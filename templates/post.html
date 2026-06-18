@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>{{ page.title }}</h2>
+{{ page.content | safe }}
+<a href="javascript:window.history.go(-1);" class="inline-button">Go Back</a>
+{% endblock content %}

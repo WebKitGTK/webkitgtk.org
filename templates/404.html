@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p><img src="{{ config.base_url }}/assets/404.png" alt="404" class="full pixels" /></p>
+
+<h1>Page Not Found</h1>
+
+<p>The requested page does not exist. If this is unexpected, you may <a href="{{ config.extra.issuesurl }}">report an issue</a>.</p>
+
+<p class="dialog-buttons"><a href="javascript:window.history.go(-1);" class="inline-button">Go Back</a></p>
+{% endblock content %}
