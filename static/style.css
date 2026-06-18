@@ -399,7 +399,21 @@ ul.news .title {
 
 /* Media Queries */
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-width: 600px) {
+    ul.bottomlinks {
+        max-width: 80%;
+        margin: 2rem auto;
+        column-count: 1;
+    }
+    ul.bottomlinks li {
+        width: auto;
+    }
+
+    .socials {
+        justify-content: center;
+        margin-top: 16px;
+    }
+
     pre {
         max-width: 80vw;
     }
