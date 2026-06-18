@@ -307,7 +307,7 @@ pre code {
 .container {
     width: 100%;
     max-width: 60rem;
-    margin: auto;
+    margin: 0 auto;
     padding: 0 2rem;
 }
 
