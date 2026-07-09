@@ -377,14 +377,12 @@ def extract_cve_entries(content: str, debug: _ExtractorDebug|None = None):
     advisory_cve_re = re.compile(r"^(CVE-\d+-\d+)$")
     advisory_description_re = re.compile(r"^[Dd]escription:\s*(.*)$")
     advisory_impact_re = re.compile(r"^[Ii]mpact:\s*(.*)$")
-    webkit_boundary_re = re.compile(r"\bWebKit\b", re.IGNORECASE)
     select_advisory_headers = CSSSelector("div#sections > h3")
     select_paragraphs = CSSSelector("p")
 
     tree = html.fromstring(content)
     for header in select_advisory_headers(tree):
-        if header.text is None or not webkit_boundary_re.match(header.text):
-            debug("advisory header skipped, text=%s", debug.s(header.text))
+        if header.text is None:
             continue
 
         debug("advisory header found, text=%s", debug.s(header.text))
