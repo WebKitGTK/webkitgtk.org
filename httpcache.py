@@ -170,7 +170,7 @@ class HTTPCache:
                     request.add_header("If-None-Match", entry.etag)
 
         try:
-            response = urlopen(request)
+            response = urlopen(request, timeout=15)
         except HTTPError as e:
             if e.status == 304:  # Not Modified
                 log.debug("fetch: ** Cache hit: 304 - Not Modified")
