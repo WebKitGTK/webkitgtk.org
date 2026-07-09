@@ -39,5 +39,16 @@ CVE-2025-43495: Cocoa only
 CVE-2025-46282: WebArchive unsupported
 CVE-2025-46298: Fixed before it reached a release
 CVE-2026-28913: Cocoa only (ANGLE Metal backend)
+CVE-2026-28917: Cocoa only (ANGLE Metal backend)
+CVE-2026-28944: libwebrtc not yet shipped
 CVE-2026-28962: Cocoa only (non-standard attachment element)
 CVE-2026-28971: Cocoa only
+CVE-2026-28979: libwebrtc not yet shipped
+CVE-2026-43700: WebGPU unsupported
+CVE-2026-43704: Cocoa only
+CVE-2026-43708: Cocoa only
+CVE-2026-43709: Cocoa only (ANGLE Metal backend)
+CVE-2026-43717: libwebrtc not yet shipped
+CVE-2026-43718: libwebrtc not yet shipped
+CVE-2026-43735: WebGPU unsupported
+CVE-2026-43746: libwebrtc not yet shipped
