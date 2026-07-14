@@ -7,20 +7,39 @@ from email.utils import format_datetime, parsedate_to_datetime
 from hashlib import sha256
 from logging import getLogger
 from pathlib import Path
-from ruamel.yaml import YAML
 from tempfile import NamedTemporaryFile
 from typing import Any, Self
 from urllib.error import HTTPError
 from urllib.request import urlopen, Request
 
+import hipack
+
 
 log = getLogger(__name__)
 
 
+def _serialize_value(value):
+    if value is None:
+        return b"", ("None",)
+    if isinstance(value, datetime):
+        return format_datetime(value).encode("utf-8"), ("DateTime",)
+
+    return hipack.value(value)
+
+
+def _deserialize_value(annotations, bytestring, value):
+    if "None" in annotations:
+        assert hipack.ANNOT_STRING in annotations
+        assert value == ""
+        return None
+    if "DateTime" in annotations:
+        assert hipack.ANNOT_STRING in annotations
+        return parsedate_to_datetime(value)
+    return value
+
+
 @dataclass(slots=True)
 class CacheEntry:
-    __YAML = YAML(typ="safe")
-
     __TIME_DEFAULT = datetime(1970, 1, 1, 0, 0, 0, 0, UTC)
 
     url: str
@@ -66,9 +85,6 @@ class CacheEntry:
                 raise ValueError("No 'blob' name set")
         return base_path / f"B:{self.blob}"
 
-    def open_blob(self, base_path: Path, mode="r"):
-        return self.get_blob_path(base_path).open(mode + "b")
-
     @classmethod
     def for_url(cls, base_path: Path, url: str) -> Self:
         entry = cls(url=url)
@@ -86,28 +102,47 @@ class CacheEntry:
     def load(self, base_path: Path) -> bool:
         meta_path = self.get_meta_path(base_path)
         if meta_path.is_file():
-            self.__load(meta_path)
-            return True
+            return self.__load(meta_path)
         return False
 
     def save(self, base_path: Path):
         self.__save(self.get_meta_path(base_path))
 
     def __load(self, meta_path: Path):
-        with meta_path.open("r") as f:
-            data = self.__YAML.load(f)
-        if data["url"] != self.url:
+        data = None
+        try:
+            with meta_path.open("rb") as f:
+                data = hipack.load(f, cast=_deserialize_value)
+        except Exception as e:
+            log.error("Error loading '%s': %s", meta_path, e)
+            raise
+
+        if data is None or "url" not in data:
+            log.warning("Removing possibly corrupt metadata '%s'", meta_path)
+            meta_path.unlink(missing_ok=True)
+            return False
+
+        url = data.get("url", None)
+        if url != self.url:
             raise RuntimeError(f"Inconsitent URL in cache entry:\n "
-                f"- Expected: {self.url}\n - Found: {data['url']}")
+                f"- Expected: {self.url}\n - Found: {url}")
         for f in fields(self):
             if f.name == "url":
                 continue
             if f.name in data:
                 setattr(self, f.name, data[f.name])
+        return True
 
     def __save(self, meta_path: Path):
-        with meta_path.open("w") as f:
-            self.__YAML.dump(asdict(self), f)
+        try:
+            with meta_path.open("w") as f:
+                hipack.dump(asdict(self), f, value=_serialize_value)
+        except Exception as e:
+            from pprint import pformat
+            log.error("Cannot serialize metadata '%s': %s", meta_path, e)
+            log.error("Metadata was: %s", pformat(asdict(self)))
+            log.warning("Removing possibly corrupt metadata '%s'", meta_path)
+            meta_path.unlink(missing_ok=True)
 
 
 @dataclass(slots=True)
