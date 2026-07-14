@@ -10,6 +10,7 @@ import re
 import sys
 import logging
 import textwrap
+import time
 
 class Formatter:
     text_width: int
@@ -535,6 +536,13 @@ def cmd_check(args):
             indexes.clear()
 
             for url, entry in zip(urls, exec.map(fetch_index, urls)):
+                # support.apple.com times out when TLS handshaking if we send
+                # too many requests too quickly. Too bad it does this at TLS
+                # level rather than HTTP level, so we can't check for an error
+                # code and know to do exponential backoff. Instead, just make
+                # every request slow.
+                time.sleep(1)
+
                 print("\x1b[2K*", url, "- visited:", len(visited),
                       "- pending:", len(indexes), "- CVEs:", len(cves), end="\r",
                       file=sys.stderr)
