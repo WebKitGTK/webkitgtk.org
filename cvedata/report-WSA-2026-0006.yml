@@ -1,0 +1,1266 @@
+CVE-2026-43670: # https://support.apple.com/en-us/104191
+  bugzilla: 309004
+  version: 2.54.0
+  author: lebr0nli of National Yang Ming Chiao Tung University, Security and 
+    Systems Lab
+  impact: Processing maliciously crafted web content may bypass Content Security
+    Policy.
+  description: A Content Security Policy bypass was addressed with improved 
+    enforcement in AudioWorklet contexts.
+CVE-2026-64715: # https://support.apple.com/en-us/104191
+  bugzilla: 316347
+  version: 2.54.0
+  author: Hossein Lotfi (@hosselot) of TrendAI Zero Day Initiative
+  impact: Processing maliciously crafted web content may lead to an unexpected 
+    process crash.
+  description: A use-after-free issue was addressed with improved memory 
+    management.
+CVE-2026-64753: # https://support.apple.com/en-us/104191
+  bugzilla: 315121
+  version: 2.54.0
+  author: Viggo Lekdorf
+  impact: Processing maliciously crafted web content may disclose sensitive user
+    information.
+  description: A permissions issue was addressed by removing the vulnerable 
+    code.
+CVE-2026-64778: # https://support.apple.com/en-us/104191
+  bugzilla: 322124
+  version: 2.54.0
+  author: Mohit Negi
+  impact: Visiting a maliciously crafted website may leak sensitive data.
+  description: The issue was addressed with improved checks.
+CVE-2026-64779: # https://support.apple.com/en-us/104191
+  bugzilla: 321485
+  version: 2.54.0
+  author: Shubham Chaskar, Tommy DeVoss from Braze Security Team (@thedawgyg)
+  impact: Processing maliciously crafted web content may lead to an unexpected 
+    crash.
+  description: A memory corruption vulnerability was addressed with improved 
+    locking.
+CVE-2026-64780: # https://support.apple.com/en-us/104191
+  bugzilla: 316918
+  version: 2.54.0
+  author: OpenAI Codex Security - Amy Burnett
+  impact: Processing maliciously crafted web content may lead to an unexpected 
+    crash.
+  description: The issue was addressed with improved checks.
+CVE-2026-64781: # https://support.apple.com/en-us/104191
+  bugzilla: 321484
+  version: 2.54.0
+  author: Thomas Guillem
+  impact: Processing maliciously crafted web content may lead to an unexpected 
+    crash.
+  description: The issue was addressed with improved input validation.
+CVE-2026-64782: # https://support.apple.com/en-us/104191
+  bugzilla: 321480
+  version: 2.54.0
+  author: Charles Kern, Shubham Chaskar, Seonwook Kim, lattice, Josef Korbel
+  impact: Processing maliciously crafted web content may lead to an unexpected 
+    crash.
+  description: A memory corruption vulnerability was addressed with improved 
+    locking.
+CVE-2026-64784: # https://support.apple.com/en-us/104191
+  bugzilla: 317632
+  version: 2.54.0
+  author: Janggoon Lee of Out of Bounds, OpenAI Codex Security - Amy Burnett
+  impact: Processing maliciously crafted web content may lead to an unexpected 
+    crash.
+  description: An out-of-bounds access issue was addressed with improved bounds 
+    checking.
+CVE-2026-65331: # https://support.apple.com/en-us/104191
+  bugzilla: 317611
+  version: 2.54.0
+  author: OpenAI Codex Security - Amy Burnett
+  impact: Processing maliciously crafted web content may lead to an unexpected 
+    crash.
+  description: This issue was addressed through improved state management.
+CVE-2026-65332: # https://support.apple.com/en-us/104191
+  bugzilla: 317450
+  version: 2.54.0
+  author: Kun Peeks (@SwayZGl1tZyyy), OpenAI Codex Security - Amy Burnett
+  impact: Processing maliciously crafted web content may lead to an unexpected 
+    crash.
+  description: This issue was addressed through improved state management.
+CVE-2026-65333: # https://support.apple.com/en-us/104191
+  bugzilla: 317603
+  version: 2.54.0
+  author: OpenAI Codex Security - Amy Burnett
+  impact: Processing maliciously crafted web content may lead to an unexpected 
+    crash.
+  description: This issue was addressed through improved state management.
+CVE-2026-65334: # https://support.apple.com/en-us/104191
+  bugzilla: 316791
+  version: 2.54.0
+  author: OpenAI Codex Security - Amy Burnett
+  impact: Processing maliciously crafted web content may lead to an unexpected 
+    crash.
+  description: A memory corruption issue was addressed with improved state 
+    management.
+CVE-2026-65336: # https://support.apple.com/en-us/104191
+  bugzilla: 317349
+  version: 2.54.0
+  author: Josef Korbel
+  impact: Processing maliciously crafted web content may lead to an unexpected 
+    crash.
+  description: This issue was addressed through improved state management.
+CVE-2026-65337: # https://support.apple.com/en-us/104191
+  bugzilla: 317142
+  version: 2.54.0
+  author: OpenAI Codex Security - Amy Burnett
+  impact: Processing maliciously crafted web content may lead to an unexpected 
+    crash.
+  description: This issue was addressed through improved state management.
+CVE-2026-65338: # https://support.apple.com/en-us/104191
+  bugzilla: 318348
+  version: 2.54.0
+  author: OpenAI Codex Security - Amy Burnett
+  impact: Processing maliciously crafted web content may lead to an unexpected 
+    crash.
+  description: The issue was addressed with improved memory handling.
+CVE-2026-65340: # https://support.apple.com/en-us/104191
+  bugzilla: 316996
+  version: 2.54.0
+  author: Claudio Bozzato and Francesco Benvenuto of Cisco Talos, Josef Korbel 
+    (Citadelo)
+  impact: Processing maliciously crafted web content may lead to an unexpected 
+    crash.
+  description: This issue was addressed through improved state management.
+CVE-2026-65341: # https://support.apple.com/en-us/104191
+  bugzilla: 318405
+  version: 2.54.0
+  author: Henock Habte
+  impact: Processing maliciously crafted web content may lead to memory 
+    corruption.
+  description: The issue was addressed with improved memory handling.
+CVE-2026-65351: # https://support.apple.com/en-us/104191
+  bugzilla: 321517
+  version: 2.54.0
+  author: Niels Hofmans
+  impact: Processing maliciously crafted web content may lead to an unexpected 
+    crash.
+  description: This issue was addressed through improved state management.
+CVE-2026-84635: # https://support.apple.com/en-us/104191
+  bugzilla: 310457
+  version: 2.54.0
+  author: Souta Sugiyama
+  impact: Processing maliciously crafted web content may lead to an unexpected 
+    process termination.
+  description: A logic issue was addressed with improved state management.
+CVE-2026-86898: # https://support.apple.com/en-us/104191
+  bugzilla: 318271
+  version: 2.54.0
+  author: Tomi Garcia (archyxsec)
+  impact: Opening a maliciously crafted webarchive file may lead to universal 
+    cross-site scripting.
+  description: A logic issue was addressed with improved state management.
+CVE-2025-10502:
+  version: 2.54.0 or earlier
+  description: 'Heap buffer overflow in ANGLE in Google Chrome prior to 140.0.7339.185
+    allowed a remote attacker to potentially exploit heap corruption via malicious
+    network traffic. (Chromium security severity: High)'
+CVE-2025-6558:
+  version: 2.54.0 or earlier
+  description: 'Insufficient validation of untrusted input in ANGLE and GPU in Google
+    Chrome prior to 138.0.7204.157 allowed a remote attacker to potentially perform
+    a sandbox escape via a crafted HTML page. (Chromium security severity: High)'
+CVE-2025-8901:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds write in ANGLE in Google Chrome prior to 139.0.7258.127
+    allowed a remote attacker to perform out of bounds memory access via a crafted
+    HTML page. (Chromium security severity: High)'
+CVE-2025-9478:
+  version: 2.54.0 or earlier
+  description: 'Use after free in ANGLE in Google Chrome prior to 139.0.7258.154 allowed
+    a remote attacker to potentially exploit heap corruption via a crafted HTML page.
+    (Chromium security severity: Critical)'
+CVE-2026-0908:
+  version: 2.54.0 or earlier
+  description: 'Use after free in ANGLE in Google Chrome prior to 144.0.7559.59 allowed
+    a remote attacker to potentially exploit heap corruption via a crafted HTML page.
+    (Chromium security severity: Low)'
+CVE-2026-3536:
+  version: 2.54.0 or earlier
+  description: 'Integer overflow in ANGLE in Google Chrome prior to 145.0.7632.159
+    allowed a remote attacker to potentially perform out of bounds memory access via
+    a crafted HTML page. (Chromium security severity: Critical)'
+CVE-2026-4448:
+  version: 2.54.0 or earlier
+  description: 'Heap buffer overflow in ANGLE in Google Chrome prior to 146.0.7680.153
+    allowed a remote attacker to potentially exploit heap corruption via a crafted
+    HTML page. (Chromium security severity: High)'
+CVE-2026-4464:
+  version: 2.54.0 or earlier
+  description: 'Integer overflow in ANGLE in Google Chrome prior to 146.0.7680.153
+    allowed a remote attacker to potentially exploit heap corruption via a crafted
+    HTML page. (Chromium security severity: Medium)'
+CVE-2026-5283:
+  version: 2.54.0 or earlier
+  description: 'Inappropriate implementation in ANGLE in Google Chrome prior to 146.0.7680.178
+    allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium
+    security severity: High)'
+CVE-2026-6296:
+  version: 2.54.0 or earlier
+  description: 'Heap buffer overflow in ANGLE in Google Chrome prior to 147.0.7727.101
+    allowed a remote attacker to potentially perform a sandbox escape via a crafted
+    HTML page. (Chromium security severity: Critical)'
+CVE-2026-7354:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds read and write in Angle in Google Chrome prior to 147.0.7727.138
+    allowed a remote attacker to potentially perform a sandbox escape via a crafted
+    HTML page. (Chromium security severity: High)'
+CVE-2026-7359:
+  version: 2.54.0 or earlier
+  description: 'Use after free in ANGLE in Google Chrome prior to 147.0.7727.138 allowed
+    a remote attacker who had compromised the renderer process to potentially perform
+    a sandbox escape via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-7900:
+  version: 2.54.0 or earlier
+  description: 'Heap buffer overflow in ANGLE in Google Chrome prior to 148.0.7778.96
+    allowed a remote attacker who had compromised the renderer process to potentially
+    perform a sandbox escape via a crafted HTML page. (Chromium security severity:
+    High)'
+CVE-2026-7942:
+  version: 2.54.0 or earlier
+  description: 'Integer overflow in ANGLE in Google Chrome prior to 148.0.7778.96
+    allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium
+    security severity: Medium)'
+CVE-2026-7943:
+  version: 2.54.0 or earlier
+  description: 'Insufficient validation of untrusted input in ANGLE in Google Chrome
+    prior to 148.0.7778.96 allowed a remote attacker who had compromised the renderer
+    process to perform arbitrary read/write via a crafted HTML page. (Chromium security
+    severity: Medium)'
+CVE-2026-9877:
+  version: 2.54.0 or earlier
+  description: 'Use after free in ANGLE in Google Chrome prior to 148.0.7778.216 allowed
+    a remote attacker who had compromised the renderer process to potentially perform
+    a sandbox escape via a crafted HTML page. (Chromium security severity: Critical)'
+CVE-2026-9878:
+  version: 2.54.0 or earlier
+  description: 'Use after free in ANGLE in Google Chrome prior to 148.0.7778.216 allowed
+    a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML
+    page. (Chromium security severity: Critical)'
+CVE-2026-9879:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds write in ANGLE in Google Chrome prior to 148.0.7778.216
+    allowed a remote attacker to execute arbitrary code via a crafted HTML page. (Chromium
+    security severity: Critical)'
+CVE-2026-9882:
+  version: 2.54.0 or earlier
+  description: 'Integer overflow in ANGLE in Google Chrome prior to 148.0.7778.216
+    allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium
+    security severity: Critical)'
+CVE-2026-9899:
+  version: 2.54.0 or earlier
+  description: 'Use after free in ANGLE in Google Chrome prior to 148.0.7778.216 allowed
+    a remote attacker who had compromised the renderer process to potentially perform
+    a sandbox escape via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-9900:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds write in ANGLE in Google Chrome prior to 148.0.7778.216
+    allowed a remote attacker who had compromised the renderer process to potentially
+    perform a sandbox escape via a crafted HTML page. (Chromium security severity:
+    High)'
+CVE-2026-9901:
+  version: 2.54.0 or earlier
+  description: 'Use after free in ANGLE in Google Chrome prior to 148.0.7778.216 allowed
+    a remote attacker who had compromised the renderer process to execute arbitrary
+    code via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-9904:
+  version: 2.54.0 or earlier
+  description: 'Use after free in ANGLE in Google Chrome prior to 148.0.7778.216 allowed
+    a remote attacker to potentially perform a sandbox escape via a crafted HTML page.
+    (Chromium security severity: High)'
+CVE-2026-9908:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds read in ANGLE in Google Chrome prior to 148.0.7778.216
+    allowed a remote attacker to obtain potentially sensitive information from process
+    memory via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-9910:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds memory access in ANGLE in Google Chrome prior to 148.0.7778.216
+    allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted
+    HTML page. (Chromium security severity: High)'
+CVE-2026-9911:
+  version: 2.54.0 or earlier
+  description: 'Integer overflow in ANGLE in Google Chrome prior to 148.0.7778.216
+    allowed a remote attacker to perform an out of bounds memory read via a crafted
+    HTML page. (Chromium security severity: High)'
+CVE-2026-9913:
+  version: 2.54.0 or earlier
+  description: 'Inappropriate implementation in ANGLE in Google Chrome prior to 148.0.7778.216
+    allowed a remote attacker to potentially perform out of bounds memory access via
+    a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-9914:
+  version: 2.54.0 or earlier
+  description: 'Insufficient validation of untrusted input in ANGLE in Google Chrome
+    prior to 148.0.7778.216 allowed a remote attacker who had compromised the renderer
+    process to potentially perform a sandbox escape via a crafted HTML page. (Chromium
+    security severity: High)'
+CVE-2026-9915:
+  version: 2.54.0 or earlier
+  description: 'Heap buffer overflow in ANGLE in Google Chrome prior to 148.0.7778.216
+    allowed a remote attacker who had compromised the renderer process to potentially
+    perform a sandbox escape via a crafted HTML page. (Chromium security severity:
+    High)'
+CVE-2026-9916:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds write in ANGLE in Google Chrome prior to 148.0.7778.216
+    allowed a remote attacker who had compromised the renderer process to potentially
+    perform a sandbox escape via a crafted HTML page. (Chromium security severity:
+    High)'
+CVE-2026-9925:
+  version: 2.54.0 or earlier
+  description: 'Use after free in ANGLE in Google Chrome prior to 148.0.7778.216 allowed
+    a remote attacker who had compromised the renderer process to potentially perform
+    a sandbox escape via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-9926:
+  version: 2.54.0 or earlier
+  description: 'Heap buffer overflow in ANGLE in Google Chrome prior to 148.0.7778.216
+    allowed a remote attacker who had compromised the renderer process to potentially
+    perform a sandbox escape via a crafted HTML page. (Chromium security severity:
+    High)'
+CVE-2026-9927:
+  version: 2.54.0 or earlier
+  description: 'Use after free in ANGLE in Google Chrome prior to 148.0.7778.216 allowed
+    a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML
+    page. (Chromium security severity: High)'
+CVE-2026-9935:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized Use in ANGLE in Google Chrome prior to 148.0.7778.216
+    allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium
+    security severity: High)'
+CVE-2026-9940:
+  version: 2.54.0 or earlier
+  description: 'Heap buffer overflow in ANGLE in Google Chrome prior to 148.0.7778.216
+    allowed a remote attacker to potentially exploit heap corruption via a crafted
+    HTML page. (Chromium security severity: High)'
+CVE-2026-9941:
+  version: 2.54.0 or earlier
+  description: 'Use after free in ANGLE in Google Chrome prior to 148.0.7778.216 allowed
+    a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML
+    page. (Chromium security severity: High)'
+CVE-2026-9942:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized Use in ANGLE in Google Chrome prior to 148.0.7778.216
+    allowed a remote attacker who had compromised the renderer process to bypass site
+    isolation via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-9944:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized Use in ANGLE in Google Chrome prior to 148.0.7778.216
+    allowed a remote attacker who had compromised the renderer process to leak cross-origin
+    data via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-9946:
+  version: 2.54.0 or earlier
+  description: 'Use after free in ANGLE in Google Chrome prior to 148.0.7778.216 allowed
+    a remote attacker who had compromised the renderer process to potentially perform
+    a sandbox escape via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-9953:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds read in ANGLE in Google Chrome prior to 148.0.7778.216
+    allowed a remote attacker to obtain potentially sensitive information from process
+    memory via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-9965:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds write in ANGLE in Google Chrome prior to 148.0.7778.216
+    allowed a remote attacker to potentially exploit heap corruption via a crafted
+    HTML page. (Chromium security severity: High)'
+CVE-2026-9969:
+  version: 2.54.0 or earlier
+  description: 'Insufficient validation of untrusted input in ANGLE in Google Chrome
+    prior to 148.0.7778.216 allowed a remote attacker to execute arbitrary code via
+    a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-9975:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds read and write in ANGLE in Google Chrome prior to 148.0.7778.216
+    allowed a remote attacker who had compromised the renderer process to potentially
+    perform a sandbox escape via a crafted HTML page. (Chromium security severity:
+    High)'
+CVE-2026-9982:
+  version: 2.54.0 or earlier
+  description: 'Insufficient validation of untrusted input in ANGLE in Google Chrome
+    prior to 148.0.7778.216 allowed a remote attacker who had compromised the renderer
+    process to potentially perform a sandbox escape via a crafted HTML page. (Chromium
+    security severity: High)'
+CVE-2026-10018:
+  version: 2.54.0 or earlier
+  description: 'Integer overflow in ANGLE in Google Chrome prior to 148.0.7778.216
+    allowed a remote attacker to obtain potentially sensitive information from process
+    memory via a crafted HTML page. (Chromium security severity: Medium)'
+CVE-2026-10019:
+  version: 2.54.0 or earlier
+  description: 'Integer overflow in ANGLE in Google Chrome prior to 148.0.7778.216
+    allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium
+    security severity: Medium)'
+CVE-2026-10881:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds read and write in ANGLE in Google Chrome prior to 149.0.7827.53
+    allowed a remote attacker to potentially perform a sandbox escape via a crafted
+    HTML page. (Chromium security severity: Critical)'
+CVE-2026-10883:
+  version: 2.54.0 or earlier
+  description: 'Type Confusion in ANGLE in Google Chrome prior to 149.0.7827.53 allowed
+    a remote attacker to potentially exploit heap corruption via a crafted HTML page.
+    (Chromium security severity: Critical)'
+CVE-2026-10889:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds read in ANGLE in Google Chrome prior to 149.0.7827.53
+    allowed a remote attacker who had compromised the renderer process to potentially
+    perform a sandbox escape via a crafted HTML page. (Chromium security severity:
+    Critical)'
+CVE-2026-10907:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds write in ANGLE in Google Chrome prior to 149.0.7827.53
+    allowed a remote attacker to potentially exploit heap corruption via a crafted
+    HTML page. (Chromium security severity: High)'
+CVE-2026-10919:
+  version: 2.54.0 or earlier
+  description: 'Use after free in ANGLE in Google Chrome prior to 149.0.7827.53 allowed
+    a remote attacker who had compromised the renderer process to potentially perform
+    a sandbox escape via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-10974:
+  version: 2.54.0 or earlier
+  description: 'Insufficient validation of untrusted input in ANGLE in Google Chrome
+    prior to 149.0.7827.53 allowed a remote attacker to potentially perform a sandbox
+    escape via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-10979:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds read in ANGLE in Google Chrome prior to 149.0.7827.53
+    allowed a remote attacker to obtain potentially sensitive information from process
+    memory via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-10994:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized Use in ANGLE in Google Chrome prior to 149.0.7827.53
+    allowed a remote attacker to obtain potentially sensitive information from process
+    memory via a crafted HTML page. (Chromium security severity: Medium)'
+CVE-2026-11004:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds read in ANGLE in Google Chrome prior to 149.0.7827.53
+    allowed a remote attacker who had compromised the renderer process to obtain potentially
+    sensitive information from process memory via a crafted HTML page. (Chromium security
+    severity: Medium)'
+CVE-2026-11040:
+  version: 2.54.0 or earlier
+  description: 'Use after free in ANGLE in Google Chrome prior to 149.0.7827.53 allowed
+    a remote attacker who had compromised the renderer process to potentially perform
+    a sandbox escape via a crafted HTML page. (Chromium security severity: Medium)'
+CVE-2026-11051:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds read in ANGLE in Google Chrome on Linux prior to 149.0.7827.53
+    allowed a remote attacker to obtain potentially sensitive information from process
+    memory via a crafted HTML page. (Chromium security severity: Medium)'
+CVE-2026-11061:
+  version: 2.54.0 or earlier
+  description: 'Type Confusion in ANGLE in Google Chrome prior to 149.0.7827.53 allowed
+    a remote attacker to potentially perform a sandbox escape via a crafted HTML page.
+    (Chromium security severity: Medium)'
+CVE-2026-11065:
+  version: 2.54.0 or earlier
+  description: 'Use after free in ANGLE in Google Chrome prior to 149.0.7827.53 allowed
+    a remote attacker who had compromised the renderer process to potentially perform
+    a sandbox escape via a crafted HTML page. (Chromium security severity: Medium)'
+CVE-2026-11066:
+  version: 2.54.0 or earlier
+  description: 'Insufficient validation of untrusted input in ANGLE in Google Chrome
+    prior to 149.0.7827.53 allowed a remote attacker to potentially perform a sandbox
+    escape via a crafted HTML page. (Chromium security severity: Medium)'
+CVE-2026-11087:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized Use in ANGLE in Google Chrome prior to 149.0.7827.53
+    allowed a remote attacker who had compromised the renderer process to leak cross-origin
+    data via a crafted HTML page. (Chromium security severity: Medium)'
+CVE-2026-11088:
+  version: 2.54.0 or earlier
+  description: 'Integer overflow in ANGLE in Google Chrome prior to 149.0.7827.53
+    allowed a remote attacker who had compromised the renderer process to potentially
+    perform a sandbox escape via a crafted HTML page. (Chromium security severity:
+    Medium)'
+CVE-2026-11090:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized Use in ANGLE in Google Chrome prior to 149.0.7827.53
+    allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium
+    security severity: Medium)'
+CVE-2026-11104:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized Use in ANGLE in Google Chrome prior to 149.0.7827.53
+    allowed a remote attacker who had compromised the renderer process to obtain potentially
+    sensitive information from process memory via a crafted HTML page. (Chromium security
+    severity: Medium)'
+CVE-2026-11109:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized Use in ANGLE in Google Chrome prior to 149.0.7827.53
+    allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium
+    security severity: Medium)'
+CVE-2026-11110:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized Use in ANGLE in Google Chrome prior to 149.0.7827.53
+    allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium
+    security severity: Medium)'
+CVE-2026-11111:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds read in ANGLE in Google Chrome prior to 149.0.7827.53
+    allowed a remote attacker to perform an out of bounds memory read via a crafted
+    HTML page. (Chromium security severity: Medium)'
+CVE-2026-11113:
+  version: 2.54.0 or earlier
+  description: 'Insufficient validation of untrusted input in ANGLE in Google Chrome
+    prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer
+    process to potentially perform a sandbox escape via a crafted HTML page. (Chromium
+    security severity: Medium)'
+CVE-2026-11123:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized Use in ANGLE in Google Chrome prior to 149.0.7827.53
+    allowed a remote attacker to obtain potentially sensitive information from process
+    memory via a crafted HTML page. (Chromium security severity: Medium)'
+CVE-2026-11137:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized Use in ANGLE in Google Chrome prior to 149.0.7827.53
+    allowed a remote attacker to obtain potentially sensitive information from process
+    memory via a crafted HTML page. (Chromium security severity: Medium)'
+CVE-2026-11138:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized Use in ANGLE in Google Chrome prior to 149.0.7827.53
+    allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium
+    security severity: Medium)'
+CVE-2026-11191:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds memory access in ANGLE in Google Chrome prior to 149.0.7827.53
+    allowed a remote attacker to potentially perform out of bounds memory access via
+    a crafted HTML page. (Chromium security severity: Medium)'
+CVE-2026-13780:
+  version: 2.54.0 or earlier
+  description: 'Insufficient validation of untrusted input in ANGLE in Google Chrome
+    prior to 150.0.7871.47 allowed a remote attacker who had compromised the renderer
+    process to potentially perform a sandbox escape via a crafted HTML page. (Chromium
+    security severity: Critical)'
+CVE-2026-13834:
+  version: 2.54.0 or earlier
+  description: 'Insufficient validation of untrusted input in ANGLE in Google Chrome
+    prior to 150.0.7871.47 allowed a remote attacker who had compromised the renderer
+    process to potentially perform a sandbox escape via a crafted HTML page. (Chromium
+    security severity: High)'
+CVE-2026-13859:
+  version: 2.54.0 or earlier
+  description: 'Inappropriate implementation in ANGLE in Google Chrome prior to 150.0.7871.47
+    allowed a remote attacker to potentially perform a sandbox escape via a crafted
+    HTML page. (Chromium security severity: Medium)'
+CVE-2026-13877:
+  version: 2.54.0 or earlier
+  description: 'Insufficient validation of untrusted input in ANGLE in Google Chrome
+    prior to 150.0.7871.47 allowed a remote attacker who had compromised the renderer
+    process to obtain potentially sensitive information from process memory via a
+    crafted HTML page. (Chromium security severity: Medium)'
+CVE-2026-13883:
+  version: 2.54.0 or earlier
+  description: 'Type Confusion in ANGLE in Google Chrome prior to 150.0.7871.47 allowed
+    a remote attacker to potentially perform a sandbox escape via a crafted HTML page.
+    (Chromium security severity: Medium)'
+CVE-2026-14044:
+  version: 2.54.0 or earlier
+  description: 'Use after free in ANGLE in Google Chrome prior to 150.0.7871.47 allowed
+    a remote attacker who had compromised the renderer process to potentially perform
+    a sandbox escape via a crafted HTML page. (Chromium security severity: Low)'
+CVE-2026-14125:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized Use in ANGLE in Google Chrome prior to 150.0.7871.47
+    allowed a remote attacker to obtain potentially sensitive information from process
+    memory via a crafted HTML page. (Chromium security severity: Low)'
+CVE-2026-14152:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds read and write in ANGLE in Google Chrome prior to 150.0.7871.47
+    allowed a remote attacker who had compromised the renderer process to potentially
+    perform a sandbox escape via a crafted HTML page. (Chromium security severity:
+    Low)'
+CVE-2026-14382:
+  version: 2.54.0 or earlier
+  description: 'Insufficient validation of untrusted input in ANGLE in Google Chrome
+    prior to 150.0.7871.46 allowed a remote attacker to potentially perform a sandbox
+    escape via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-14386:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds read in ANGLE in Google Chrome prior to 150.0.7871.46
+    allowed a remote attacker to obtain potentially sensitive information from process
+    memory via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-14388:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds read in ANGLE in Google Chrome prior to 150.0.7871.46
+    allowed a remote attacker to obtain potentially sensitive information from process
+    memory via a crafted HTML page. (Chromium security severity: Medium)'
+CVE-2026-14390:
+  version: 2.54.0 or earlier
+  description: 'Use after free in ANGLE in Google Chrome prior to 150.0.7871.46 allowed
+    a remote attacker to potentially perform a sandbox escape via a crafted HTML page.
+    (Chromium security severity: High)'
+CVE-2026-14396:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds read in ANGLE in Google Chrome prior to 150.0.7871.46
+    allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium
+    security severity: High)'
+CVE-2026-14398:
+  version: 2.54.0 or earlier
+  description: 'Use after free in ANGLE in Google Chrome prior to 150.0.7871.46 allowed
+    a remote attacker to potentially perform a sandbox escape via a crafted HTML page.
+    (Chromium security severity: Critical)'
+CVE-2026-14400:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds write in ANGLE in Google Chrome prior to 150.0.7871.46
+    allowed a remote attacker who had compromised the renderer process to potentially
+    perform a sandbox escape via a crafted HTML page. (Chromium security severity:
+    High)'
+CVE-2026-14411:
+  version: 2.54.0 or earlier
+  description: 'Insufficient validation of untrusted input in ANGLE in Google Chrome
+    prior to 150.0.7871.46 allowed a remote attacker to potentially perform a sandbox
+    escape via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-14412:
+  version: 2.54.0 or earlier
+  description: 'Insufficient validation of untrusted input in ANGLE in Google Chrome
+    prior to 150.0.7871.46 allowed a remote attacker who had compromised the renderer
+    process to potentially perform a sandbox escape via a crafted HTML page. (Chromium
+    security severity: High)'
+CVE-2026-14413:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized Use in ANGLE in Google Chrome prior to 150.0.7871.46
+    allowed a remote attacker who had compromised the renderer process to potentially
+    perform a sandbox escape via a crafted HTML page. (Chromium security severity:
+    High)'
+CVE-2026-14418:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized Use in ANGLE in Google Chrome prior to 150.0.7871.46
+    allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium
+    security severity: High)'
+CVE-2026-14425:
+  version: 2.54.0 or earlier
+  description: 'Use after free in ANGLE in Google Chrome prior to 150.0.7871.46 allowed
+    a remote attacker to potentially perform a sandbox escape via a crafted HTML page.
+    (Chromium security severity: High)'
+CVE-2026-15109:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized Use in ANGLE in Google Chrome prior to 150.0.7871.115
+    allowed a remote attacker to obtain potentially sensitive information from process
+    memory via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-16413:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds write in ANGLE in Google Chrome prior to 150.0.7871.182
+    allowed a remote attacker who had compromised the renderer process to potentially
+    perform a sandbox escape via a crafted HTML page. (Chromium security severity:
+    High)'
+CVE-2026-17655:
+  version: 2.54.0 or earlier
+  description: 'Insufficient validation of untrusted input in ANGLE in Google Chrome
+    prior to 151.0.7922.72 allowed a remote attacker to potentially perform a sandbox
+    escape via a crafted HTML page. (Chromium security severity: Critical)'
+CVE-2026-17667:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized Use in ANGLE in Google Chrome prior to 151.0.7922.72
+    allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium
+    security severity: High)'
+CVE-2026-17668:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized Use in ANGLE in Google Chrome prior to 151.0.7922.72
+    allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium
+    security severity: High)'
+CVE-2026-17671:
+  version: 2.54.0 or earlier
+  description: 'Insufficient validation of untrusted input in ANGLE in Google Chrome
+    prior to 151.0.7922.72 allowed a remote attacker who had compromised the renderer
+    process to potentially perform a sandbox escape via a crafted HTML page. (Chromium
+    security severity: High)'
+CVE-2026-17675:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds write in ANGLE in Google Chrome prior to 151.0.7922.72
+    allowed a remote attacker who had compromised the renderer process to potentially
+    perform a sandbox escape via a crafted HTML page. (Chromium security severity:
+    High)'
+CVE-2026-17678:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds read in ANGLE in Google Chrome prior to 151.0.7922.72
+    allowed a remote attacker who had compromised the renderer process to potentially
+    perform a sandbox escape via a crafted HTML page. (Chromium security severity:
+    High)'
+CVE-2026-17682:
+  version: 2.54.0 or earlier
+  description: 'Integer overflow in ANGLE in Google Chrome prior to 151.0.7922.72
+    allowed a remote attacker who had compromised the renderer process to potentially
+    perform a sandbox escape via a crafted HTML page. (Chromium security severity:
+    High)'
+CVE-2026-17683:
+  version: 2.54.0 or earlier
+  description: 'Inappropriate implementation in ANGLE in Google Chrome prior to 151.0.7922.72
+    allowed a remote attacker to obtain potentially sensitive information from process
+    memory via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-17687:
+  version: 2.54.0 or earlier
+  description: 'Type Confusion in ANGLE in Google Chrome prior to 151.0.7922.72 allowed
+    a remote attacker who had compromised the renderer process to potentially perform
+    a sandbox escape via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-17689:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized Use in ANGLE in Google Chrome prior to 151.0.7922.72
+    allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium
+    security severity: High)'
+CVE-2026-17697:
+  version: 2.54.0 or earlier
+  description: 'Type Confusion in ANGLE in Google Chrome prior to 151.0.7922.72 allowed
+    a remote attacker to potentially perform a sandbox escape via a crafted HTML page.
+    (Chromium security severity: High)'
+CVE-2026-17704:
+  version: 2.54.0 or earlier
+  description: 'Use after free in ANGLE in Google Chrome prior to 151.0.7922.72 allowed
+    a remote attacker who had compromised the renderer process to potentially perform
+    a sandbox escape via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-17714:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized Use in ANGLE in Google Chrome prior to 151.0.7922.72
+    allowed a remote attacker to obtain potentially sensitive information from process
+    memory via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-17717:
+  version: 2.54.0 or earlier
+  description: 'Integer overflow in ANGLE in Google Chrome prior to 151.0.7922.72
+    allowed a remote attacker to potentially perform a sandbox escape via a crafted
+    HTML page. (Chromium security severity: High)'
+CVE-2026-17718:
+  version: 2.54.0 or earlier
+  description: 'Use after free in ANGLE in Google Chrome prior to 151.0.7922.72 allowed
+    a remote attacker to potentially perform a sandbox escape via a crafted HTML page.
+    (Chromium security severity: High)'
+CVE-2026-17721:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds write in ANGLE in Google Chrome prior to 151.0.7922.72
+    allowed a remote attacker to potentially perform a sandbox escape via a crafted
+    HTML page. (Chromium security severity: High)'
+CVE-2026-17740:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized Use in ANGLE in Google Chrome prior to 151.0.7922.72
+    allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium
+    security severity: Medium)'
+CVE-2026-17750:
+  version: 2.54.0 or earlier
+  description: 'Use after free in ANGLE in Google Chrome prior to 151.0.7922.72 allowed
+    a remote attacker to potentially perform a sandbox escape via a crafted HTML page.
+    (Chromium security severity: Medium)'
+CVE-2026-17785:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized Use in ANGLE in Google Chrome prior to 151.0.7922.72
+    allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium
+    security severity: Medium)'
+CVE-2026-17801:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds read and write in ANGLE in Google Chrome prior to 151.0.7922.72
+    allowed a remote attacker to potentially perform a sandbox escape via a crafted
+    HTML page. (Chromium security severity: Medium)'
+CVE-2026-17832:
+  version: 2.54.0 or earlier
+  description: 'Use after free in ANGLE in Google Chrome prior to 151.0.7922.72 allowed
+    a remote attacker who had compromised the renderer process to potentially perform
+    a sandbox escape via a crafted HTML page. (Chromium security severity: Medium)'
+CVE-2026-17847:
+  version: 2.54.0 or earlier
+  description: 'Insufficient validation of untrusted input in ANGLE in Google Chrome
+    prior to 151.0.7922.72 allowed a remote attacker to potentially perform a sandbox
+    escape via a crafted HTML page. (Chromium security severity: Medium)'
+CVE-2026-78904:
+  version: 2.54.0 or earlier
+  description: 'Type confusion in ANGLE in Google Chrome prior to 152.0.7977.65 allowed
+    a remote attacker to potentially execute arbitrary code outside the sandbox via
+    a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-78905:
+  version: 2.54.0 or earlier
+  description: 'Type confusion in ANGLE in Google Chrome prior to 152.0.7977.65 allowed
+    a remote attacker to potentially execute arbitrary code outside the sandbox via
+    a crafted HTML page. (Chromium security severity: Medium)'
+CVE-2026-78906:
+  version: 2.54.0 or earlier
+  description: 'Race condition in ANGLE in Google Chrome prior to 152.0.7977.65 allowed
+    a remote attacker to potentially execute arbitrary code outside the sandbox via
+    a crafted HTML page. (Chromium security severity: Medium)'
+CVE-2026-78965:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized resource in ANGLE in Google Chrome prior to 152.0.7977.65
+    allowed a remote attacker to obtain cross-origin data via a crafted HTML page.
+    (Chromium security severity: High)'
+CVE-2026-79043:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds write in ANGLE in Google Chrome prior to 152.0.7977.65
+    allowed a remote attacker to potentially execute arbitrary code outside the sandbox
+    via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-79118:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized resource in ANGLE in Google Chrome prior to 152.0.7977.65
+    allowed a remote attacker to obtain cross-origin data via a crafted HTML page.
+    (Chromium security severity: High)'
+CVE-2026-79120:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized resource in ANGLE in Google Chrome prior to 152.0.7977.65
+    allowed a remote attacker to potentially obtain cross-origin data via a crafted
+    HTML page. (Chromium security severity: Medium)'
+CVE-2026-79127:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds write in ANGLE in Google Chrome prior to 152.0.7977.65
+    allowed a remote attacker to execute arbitrary code outside the sandbox via a
+    crafted HTML page. (Chromium security severity: Medium)'
+CVE-2026-79130:
+  version: 2.54.0 or earlier
+  description: 'Buffer overflow in ANGLE in Google Chrome prior to 152.0.7977.65 allowed
+    a remote attacker to execute arbitrary code outside the sandbox via a crafted
+    HTML page. (Chromium security severity: High)'
+CVE-2026-79131:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds write in ANGLE in Google Chrome prior to 152.0.7977.65
+    allowed a remote attacker to execute arbitrary code outside the sandbox via a
+    crafted HTML page. (Chromium security severity: High)'
+CVE-2026-79149:
+  version: 2.54.0 or earlier
+  description: 'Use after free in ANGLE in Google Chrome prior to 152.0.7977.65 allowed
+    a remote attacker to execute arbitrary code outside the sandbox via a crafted
+    HTML page. (Chromium security severity: High)'
+CVE-2026-79188:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds write in ANGLE in Google Chrome prior to 152.0.7977.65
+    allowed a remote attacker to potentially execute arbitrary code outside the sandbox
+    via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-79189:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds write in ANGLE in Google Chrome prior to 152.0.7977.65
+    allowed a remote attacker to potentially execute arbitrary code outside the sandbox
+    via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-79229:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized resource in ANGLE in Google Chrome prior to 152.0.7977.65
+    allowed a remote attacker who had compromised the renderer process to read memory
+    outside the sandbox via a crafted HTML page. (Chromium security severity: Medium)'
+CVE-2026-79269:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized resource in ANGLE in Google Chrome prior to 152.0.7977.65
+    allowed a remote attacker to potentially bypass web origin policy via a crafted
+    HTML page. (Chromium security severity: Medium)'
+CVE-2026-79270:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized resource in ANGLE in Google Chrome prior to 152.0.7977.65
+    allowed a remote attacker to read memory outside the sandbox via a crafted HTML
+    page. (Chromium security severity: Medium)'
+CVE-2026-79275:
+  version: 2.54.0 or earlier
+  description: 'Use after free in ANGLE in Google Chrome prior to 152.0.7977.65 allowed
+    a remote attacker to execute arbitrary code outside the sandbox via a crafted
+    HTML page. (Chromium security severity: High)'
+CVE-2024-1283:
+  version: 2.54.0 or earlier
+  description: 'Heap buffer overflow in Skia in Google Chrome prior to 121.0.6167.160
+    allowed a remote attacker to potentially exploit heap corruption via a crafted
+    HTML page. (Chromium security severity: High)'
+CVE-2024-43091:
+  version: 2.54.0 or earlier
+  description: In filterMask of SkEmbossMaskFilter.cpp, there is a possible out 
+    of bounds write due to an integer overflow. This could lead to remote code 
+    execution with no additional execution privileges needed. User interaction 
+    is not needed for exploitation.
+CVE-2024-43097:
+  version: 2.54.0 or earlier
+  description: In resizeToAtLeast of SkRegion.cpp, there is a possible out of 
+    bounds write due to an integer overflow. This could lead to local escalation
+    of privilege with no additional execution privileges needed. User 
+    interaction is not needed for exploitation.
+CVE-2024-43767:
+  version: 2.54.0 or earlier
+  description: In prepare_to_draw_into_mask of SkBlurMaskFilterImpl.cpp, there 
+    is a possible heap overflow due to improper input validation. This could 
+    lead to remote code execution with no additional execution privileges 
+    needed. User interaction is not needed for exploitation.
+CVE-2024-43768:
+  version: 2.54.0 or earlier
+  description: In skia_alloc_func of SkDeflate.cpp, there is a possible out of 
+    bounds write due to an integer overflow. This could lead to local escalation
+    of privilege with no additional execution privileges needed. User 
+    interaction is not needed for exploitation.
+CVE-2024-7966:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds memory access in Skia in Google Chrome prior to 128.0.6613.84
+    allowed a remote attacker who had compromised the renderer process to perform
+    out of bounds memory access via a crafted HTML page. (Chromium security severity:
+    High)'
+CVE-2024-8193:
+  version: 2.54.0 or earlier
+  description: 'Heap buffer overflow in Skia in Google Chrome prior to 128.0.6613.113
+    allowed a remote attacker who had compromised the renderer process to potentially
+    exploit heap corruption via a crafted HTML page. (Chromium security severity:
+    High)'
+CVE-2024-8198:
+  version: 2.54.0 or earlier
+  description: 'Heap buffer overflow in Skia in Google Chrome prior to 128.0.6613.113
+    allowed a remote attacker who had compromised the renderer process to potentially
+    exploit heap corruption via a crafted HTML page. (Chromium security severity:
+    High)'
+CVE-2024-8636:
+  version: 2.54.0 or earlier
+  description: 'Heap buffer overflow in Skia in Google Chrome prior to 128.0.6613.137
+    allowed a remote attacker to potentially exploit heap corruption via a crafted
+    HTML page. (Chromium security severity: High)'
+CVE-2024-9123:
+  version: 2.54.0 or earlier
+  description: 'Integer overflow in Skia in Google Chrome prior to 129.0.6668.70 allowed
+    a remote attacker to perform an out of bounds memory write via a crafted HTML
+    page. (Chromium security severity: High)'
+CVE-2025-0436:
+  version: 2.54.0 or earlier
+  description: 'Integer overflow in Skia in Google Chrome prior to 132.0.6834.83 allowed
+    a remote attacker to potentially exploit heap corruption via a crafted HTML page.
+    (Chromium security severity: High)'
+CVE-2025-0444:
+  version: 2.54.0 or earlier
+  description: 'Use after free in Skia in Google Chrome prior to 133.0.6943.53 allowed
+    a remote attacker to potentially exploit heap corruption via a crafted HTML page.
+    (Chromium security severity: High)'
+CVE-2025-26416:
+  version: 2.54.0 or earlier
+  description: In initializeSwizzler of SkBmpStandardCodec.cpp, there is a 
+    possible out of bounds write due to a heap buffer overflow. This could lead 
+    to remote escalation of privilege with no additional execution privileges 
+    needed. User interaction is not needed for exploitation.
+CVE-2025-32318:
+  version: 2.54.0 or earlier
+  description: In Skia, there is a possible out of bounds write due to a heap 
+    buffer overflow. This could lead to remote escalation of privilege with no 
+    additional execution privileges needed. User interaction is not needed for 
+    exploitation.
+CVE-2025-48622:
+  version: 2.54.0 or earlier
+  description: In ProcessArea of dng_misc_opcodes.cpp, there is a possible out 
+    of bounds read due to a buffer overflow. This could lead to local 
+    information disclosure with no additional execution privileges needed. User 
+    interaction is not needed for exploitation.
+CVE-2025-54627:
+  version: 2.54.0 or earlier
+  description: "Out-of-bounds write vulnerability in the skia module.\nImpact: Successful
+    exploitation of this vulnerability may affect service confidentiality."
+CVE-2026-10009:
+  version: 2.54.0 or earlier
+  description: 'Integer overflow in Skia in Google Chrome prior to 148.0.7778.216
+    allowed a remote attacker who had compromised the renderer process to execute
+    arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity:
+    High)'
+CVE-2026-10011:
+  version: 2.54.0 or earlier
+  description: 'Inappropriate implementation in Skia in Google Chrome prior to 148.0.7778.216
+    allowed a remote attacker who had compromised the renderer process to leak cross-origin
+    data via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-10012:
+  version: 2.54.0 or earlier
+  description: 'Use after free in Skia in Google Chrome prior to 148.0.7778.216 allowed
+    a remote attacker who had compromised the renderer process to potentially perform
+    a sandbox escape via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-10941:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds memory access in Skia in Google Chrome prior to 149.0.7827.53
+    allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted
+    HTML page. (Chromium security severity: High)'
+CVE-2026-10977:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized Use in Skia in Google Chrome prior to 149.0.7827.53
+    allowed a remote attacker who had compromised the renderer process to leak cross-origin
+    data via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-10985:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds read in Skia in Google Chrome prior to 149.0.7827.53
+    allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium
+    security severity: High)'
+CVE-2026-10993:
+  version: 2.54.0 or earlier
+  description: 'Heap buffer overflow in Skia in Google Chrome prior to 149.0.7827.53
+    allowed a remote attacker to obtain potentially sensitive information from process
+    memory via a crafted HTML page. (Chromium security severity: Medium)'
+CVE-2026-11024:
+  version: 2.54.0 or earlier
+  description: 'Stack buffer overflow in Skia in Google Chrome prior to 149.0.7827.53
+    allowed a remote attacker to potentially exploit stack corruption via a crafted
+    HTML page. (Chromium security severity: Medium)'
+CVE-2026-11039:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized Use in Skia in Google Chrome prior to 149.0.7827.53
+    allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium
+    security severity: Medium)'
+CVE-2026-11057:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized Use in Skia in Google Chrome prior to 149.0.7827.53
+    allowed a remote attacker who had compromised the renderer process to obtain potentially
+    sensitive information from process memory via a crafted HTML page. (Chromium security
+    severity: Medium)'
+CVE-2026-11121:
+  version: 2.54.0 or earlier
+  description: 'Insufficient validation of untrusted input in Skia in Google Chrome
+    prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer
+    process to leak cross-origin data via a crafted HTML page. (Chromium security
+    severity: Medium)'
+CVE-2026-11124:
+  version: 2.54.0 or earlier
+  description: 'Integer overflow in Skia in Google Chrome prior to 149.0.7827.53 allowed
+    a remote attacker to potentially exploit heap corruption via a crafted HTML page.
+    (Chromium security severity: Medium)'
+CVE-2026-11159:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized Use in Skia in Google Chrome prior to 149.0.7827.53
+    allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium
+    security severity: Medium)'
+CVE-2026-11663:
+  version: 2.54.0 or earlier
+  description: 'Use after free in Skia in Google Chrome prior to 149.0.7827.103 allowed
+    a remote attacker who had compromised the renderer process to potentially perform
+    a sandbox escape via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-11675:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds read in Skia in Google Chrome prior to 149.0.7827.103
+    allowed a remote attacker who had compromised the renderer process to leak cross-origin
+    data via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-13781:
+  version: 2.54.0 or earlier
+  description: 'Insufficient validation of untrusted input in Skia in Google Chrome
+    prior to 150.0.7871.47 allowed a remote attacker who had compromised the renderer
+    process to potentially perform a sandbox escape via a crafted HTML page. (Chromium
+    security severity: Critical)'
+CVE-2026-13841:
+  version: 2.54.0 or earlier
+  description: 'Integer overflow in Skia in Google Chrome prior to 150.0.7871.47 allowed
+    a remote attacker who had compromised the renderer process to potentially perform
+    a sandbox escape via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-13971:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized Use in Skia in Google Chrome prior to 150.0.7871.47
+    allowed a remote attacker who had compromised the renderer process to obtain potentially
+    sensitive information from process memory via a crafted HTML page. (Chromium security
+    severity: Medium)'
+CVE-2026-14387:
+  version: 2.54.0 or earlier
+  description: 'Integer overflow in Skia in Google Chrome prior to 150.0.7871.46 allowed
+    a remote attacker to potentially perform a sandbox escape via a crafted HTML page.
+    (Chromium security severity: Medium)'
+CVE-2026-14389:
+  version: 2.54.0 or earlier
+  description: 'Integer overflow in Skia in Google Chrome prior to 150.0.7871.46 allowed
+    a remote attacker who had compromised the renderer process to potentially perform
+    a sandbox escape via a crafted HTML page. (Chromium security severity: Medium)'
+CVE-2026-14410:
+  version: 2.54.0 or earlier
+  description: 'Inappropriate implementation in Skia in Google Chrome prior to 150.0.7871.46
+    allowed a remote attacker who had compromised the renderer process to perform
+    UI spoofing via a crafted HTML page. (Chromium security severity: Low)'
+CVE-2026-14414:
+  version: 2.54.0 or earlier
+  description: 'Insufficient validation of untrusted input in Skia in Google Chrome
+    prior to 150.0.7871.46 allowed a remote attacker who had compromised the renderer
+    process to obtain potentially sensitive information from process memory via a
+    crafted HTML page. (Chromium security severity: Medium)'
+CVE-2026-14419:
+  version: 2.54.0 or earlier
+  description: 'Use after free in Skia in Google Chrome prior to 150.0.7871.46 allowed
+    a remote attacker to potentially perform a sandbox escape via a crafted HTML page.
+    (Chromium security severity: Critical)'
+CVE-2026-14427:
+  version: 2.54.0 or earlier
+  description: 'Heap buffer overflow in Skia in Google Chrome prior to 150.0.7871.46
+    allowed a remote attacker who had compromised the renderer process to potentially
+    perform a sandbox escape via a crafted HTML page. (Chromium security severity:
+    Critical)'
+CVE-2026-14429:
+  version: 2.54.0 or earlier
+  description: 'Insufficient validation of untrusted input in Skia in Google Chrome
+    prior to 150.0.7871.46 allowed a remote attacker who had compromised the renderer
+    process to potentially perform a sandbox escape via a crafted HTML page. (Chromium
+    security severity: High)'
+CVE-2026-15766:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized Use in Skia in Google Chrome prior to 150.0.7871.125
+    allowed a remote attacker to obtain potentially sensitive information from process
+    memory via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-15774:
+  version: 2.54.0 or earlier
+  description: 'Use after free in Skia in Google Chrome prior to 150.0.7871.125 allowed
+    a remote attacker who had compromised the renderer process to potentially perform
+    a sandbox escape via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-16417:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized Use in Skia in Google Chrome prior to 150.0.7871.182
+    allowed a remote attacker who had compromised the renderer process to leak cross-origin
+    data via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-17653:
+  version: 2.54.0 or earlier
+  description: 'Use after free in Skia in Google Chrome prior to 151.0.7922.72 allowed
+    a remote attacker who had compromised the renderer process to potentially perform
+    a sandbox escape via a crafted HTML page. (Chromium security severity: Critical)'
+CVE-2026-17702:
+  version: 2.54.0 or earlier
+  description: 'Inappropriate implementation in Skia in Google Chrome prior to 151.0.7922.72
+    allowed a remote attacker who had compromised the renderer process to leak cross-origin
+    data via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-17745:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds read in Skia in Google Chrome prior to 151.0.7922.72
+    allowed a remote attacker who had compromised the renderer process to potentially
+    perform a sandbox escape via a crafted HTML page. (Chromium security severity:
+    Medium)'
+CVE-2026-17757:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized Use in Skia in Google Chrome prior to 151.0.7922.72
+    allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium
+    security severity: Medium)'
+CVE-2026-17771:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized Use in Skia in Google Chrome prior to 151.0.7922.72
+    allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium
+    security severity: Medium)'
+CVE-2026-17914:
+  version: 2.54.0 or earlier
+  description: 'Side-channel information leakage in Skia in Google Chrome prior to
+    151.0.7922.72 allowed a remote attacker to obtain potentially sensitive information
+    from process memory via a crafted HTML page. (Chromium security severity: Low)'
+CVE-2026-19160:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized Use in Skia in Google Chrome prior to 151.0.7922.109
+    allowed a remote attacker who had compromised the renderer process to leak cross-origin
+    data via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-19161:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized Use in Skia in Google Chrome prior to 151.0.7922.109
+    allowed a remote attacker who had compromised the renderer process to leak cross-origin
+    data via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-19173:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds write in Skia in Google Chrome prior to 151.0.7922.109
+    allowed a remote attacker who had compromised the renderer process to potentially
+    perform a sandbox escape via a crafted HTML page. (Chromium security severity:
+    High)'
+CVE-2026-19176:
+  version: 2.54.0 or earlier
+  description: 'Use after free in Skia in Google Chrome prior to 151.0.7922.109 allowed
+    a remote attacker who had compromised the renderer process to execute arbitrary
+    code inside a sandbox via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-3538:
+  version: 2.54.0 or earlier
+  description: 'Integer overflow in Skia in Google Chrome prior to 145.0.7632.159
+    allowed a remote attacker to potentially perform out of bounds memory access via
+    a crafted HTML page. (Chromium security severity: Critical)'
+CVE-2026-3909:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds write in Skia in Google Chrome prior to 146.0.7680.75
+    allowed a remote attacker to perform out of bounds memory access via a crafted
+    HTML page. (Chromium security severity: High)'
+CVE-2026-3931:
+  version: 2.54.0 or earlier
+  description: 'Heap buffer overflow in Skia in Google Chrome prior to 146.0.7680.71
+    allowed a remote attacker to perform out of bounds memory access via a crafted
+    HTML page. (Chromium security severity: Medium)'
+CVE-2026-4460:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds read in Skia in Google Chrome prior to 146.0.7680.153
+    allowed a remote attacker to perform an out of bounds memory read via a crafted
+    HTML page. (Chromium security severity: High)'
+CVE-2026-5870:
+  version: 2.54.0 or earlier
+  description: 'Integer overflow in Skia in Google Chrome prior to 147.0.7727.55 allowed
+    a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML
+    page. (Chromium security severity: High)'
+CVE-2026-6298:
+  version: 2.54.0 or earlier
+  description: 'Heap buffer overflow in Skia in Google Chrome prior to 147.0.7727.101
+    allowed a remote attacker to obtain potentially sensitive information from process
+    memory via a crafted HTML page. (Chromium security severity: Critical)'
+CVE-2026-6364:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds read in Skia in Google Chrome prior to 147.0.7727.101
+    allowed a remote attacker to obtain potentially sensitive information from process
+    memory via a crafted file. (Chromium security severity: Medium)'
+CVE-2026-7353:
+  version: 2.54.0 or earlier
+  description: 'Heap buffer overflow in Skia in Google Chrome prior to 147.0.7727.138
+    allowed a remote attacker who had compromised the renderer process to potentially
+    perform a sandbox escape via a crafted HTML page. (Chromium security severity:
+    High)'
+CVE-2026-76041:
+  version: 2.54.0 or earlier
+  description: 'Information leak in Skia in Google Chrome prior to 151.0.7922.169
+    allowed a remote attacker to potentially bypass web origin policy via a crafted
+    HTML page. (Chromium security severity: High)'
+CVE-2026-78914:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized resource in Skia in Google Chrome prior to 152.0.7977.65
+    allowed a remote attacker to potentially read memory inside the sandbox via a
+    crafted HTML page. (Chromium security severity: Low)'
+CVE-2026-78958:
+  version: 2.54.0 or earlier
+  description: 'Uninitialized resource in Skia in Google Chrome prior to 152.0.7977.65
+    allowed a remote attacker who had compromised the renderer process to potentially
+    obtain cross-origin data via a crafted HTML page. (Chromium security severity:
+    Medium)'
+CVE-2026-79020:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds read in Skia in Google Chrome prior to 152.0.7977.65
+    allowed a remote attacker to potentially read memory inside the sandbox via a
+    crafted media file. (Chromium security severity: Medium)'
+CVE-2026-79112:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds read in Skia in Google Chrome prior to 152.0.7977.65
+    allowed a remote attacker who had compromised the renderer process to read memory
+    inside the sandbox via a crafted HTML page. (Chromium security severity: Low)'
+CVE-2026-79144:
+  version: 2.54.0 or earlier
+  description: 'Information leak in Skia in Google Chrome prior to 152.0.7977.65 allowed
+    a remote attacker to obtain cross-origin data via a crafted HTML page. (Chromium
+    security severity: Medium)'
+CVE-2026-79147:
+  version: 2.54.0 or earlier
+  description: 'Information leak in Skia in Google Chrome prior to 152.0.7977.65 allowed
+    a remote attacker who had compromised the renderer process to potentially obtain
+    sensitive information via a crafted HTML page. (Chromium security severity: Low)'
+CVE-2026-7920:
+  version: 2.54.0 or earlier
+  description: 'Use after free in Skia in Google Chrome prior to 148.0.7778.96 allowed
+    a remote attacker who had compromised the renderer process to potentially perform
+    a sandbox escape via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-7923:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds write in Skia in Google Chrome prior to 148.0.7778.96
+    allowed a remote attacker who had compromised the renderer process to potentially
+    perform a sandbox escape via a crafted HTML page. (Chromium security severity:
+    High)'
+CVE-2026-7949:
+  version: 2.54.0 or earlier
+  description: 'Out of bounds read in Skia in Google Chrome prior to 148.0.7778.96
+    allowed a remote attacker who had compromised the renderer process to leak cross-origin
+    data via a crafted Chrome Extension. (Chromium security severity: Medium)'
+CVE-2026-8579:
+  version: 2.54.0 or earlier
+  description: 'Insufficient validation of untrusted input in Skia in Google Chrome
+    prior to 148.0.7778.168 allowed a remote attacker who had compromised the renderer
+    process to perform an out of bounds memory write via a crafted print file. (Chromium
+    security severity: Medium)'
+CVE-2026-9893:
+  version: 2.54.0 or earlier
+  description: 'Use after free in Skia in Google Chrome prior to 148.0.7778.216 allowed
+    a remote attacker who had compromised the renderer process to potentially perform
+    a sandbox escape via a crafted HTML page. (Chromium security severity: Critical)'
+CVE-2026-9909:
+  version: 2.54.0 or earlier
+  description: 'Integer overflow in Skia in Google Chrome prior to 148.0.7778.216
+    allowed a remote attacker who had compromised the renderer process to execute
+    arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity:
+    High)'
+CVE-2026-9923:
+  version: 2.54.0 or earlier
+  description: 'Use after free in Skia in Google Chrome prior to 148.0.7778.216 allowed
+    a remote attacker to potentially exploit heap corruption via a crafted HTML page.
+    (Chromium security severity: High)'
+CVE-2026-9981:
+  version: 2.54.0 or earlier
+  description: 'Inappropriate implementation in Skia in Google Chrome prior to 148.0.7778.216
+    allowed a remote attacker to obtain potentially sensitive information from process
+    memory via a crafted HTML page. (Chromium security severity: High)'
+CVE-2026-9983:
+  version: 2.54.0 or earlier
+  description: 'Type Confusion in Skia in Google Chrome prior to 148.0.7778.216 allowed
+    a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML
+    page. (Chromium security severity: High)'
+CVE-2026-9998:
+  version: 2.54.0 or earlier
+  description: 'Integer overflow in Skia in Google Chrome prior to 148.0.7778.216
+    allowed a remote attacker who had compromised the renderer process to potentially
+    perform a sandbox escape via a crafted HTML page. (Chromium security severity:
+    High)'

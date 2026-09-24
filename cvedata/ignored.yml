@@ -55,3 +55,5 @@ CVE-2026-43746: libwebrtc not yet shipped
 CVE-2026-43794: WebGPU unsupported
 CVE-2026-43821: Cocoa only
 CVE-2026-64718: Cocoa only
+CVE-2026-65352: Cocoa only
+CVE-2026-65391: Cocoa only
