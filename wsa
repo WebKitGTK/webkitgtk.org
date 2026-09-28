@@ -64,12 +64,11 @@ class Formatter:
     def cve_list(self) -> str:
         raise NotImplementedError
 
-    def generate(self, write, cve_data_path: Path|None = None,
-                 fill_missing_description=False):
-        cve_cache = None
+    def generate(self, write, cve_cache = None, fill_missing_description=False):
+        if fill_missing_description:
+            assert cve_cache is not None
 
         self.header(write)
-
         for cve_id in sorted(self.wsa_data.keys()):
             cve_data = self.wsa_data[cve_id]
             affected_text = "Versions affected:"
@@ -96,10 +95,6 @@ class Formatter:
             elif "description" in cve_data:
                 description = cve_data["description"]
             elif fill_missing_description:
-                if cve_cache is None:
-                    import cve
-                    assert isinstance(cve_data_path, Path)
-                    cve_cache = cve.LRUMemDiskFetcherCache(cve_data_path)
                 cve = cve_cache.get(cve_id)
                 if cve and cve.description:
                     description = cve.description
@@ -250,12 +245,30 @@ def get_cve_data_path(p: Path | None) -> Path:
         p = Path(__file__).parent / "cvedata" / "cache"
     return p.resolve()
 
+def get_cvedb_path(p: Path | None) -> Path:
+    if p is None:
+        p = Path(__file__).parent / "cvedata" / "cve.db"
+    return p.resolve()
+
 wsa_id_re = re.compile(r"(WSA-\d{4}-\d+)")
 
 def determine_wsa_id(s: str) -> str | None:
     for m in wsa_id_re.finditer(s):
         return m[1]
     return None
+
+
+class CVEDatabaseAsCache:
+    __slots__ = ("_database",)
+
+    def __init__(self, database_path: Path, initialize: bool = False):
+        from cvedb import Database
+        self._database = Database(database_path, initialize=initialize)
+
+    def get(self, cve_id: str) -> None|Entry:
+        from cve import Entry
+        return Entry(data=self._database.get(cve_id))
+
 
 def cmd_generate(args):
     if (not (args.email or args.markdown)) or (args.email and args.markdown):
@@ -278,18 +291,29 @@ def cmd_generate(args):
     with args.report_yml.open("r") as f:
         wsa_data = YAML(typ="safe").load(f)
 
+    cve_cache = None
+    if args.fill:
+        if args.legacy_cve_data:
+            import cve
+            cve_cache = cve.LRUMemDiskFetcherCache(get_cve_data_path(args.cve_data))
+        else:
+            cve_cache = CVEDatabaseAsCache(get_cvedb_path(args.cve_data))
+
     Fmt = Mail if args.email else Markdown
     Fmt(args.wsa_id, wsa_data).generate(sys.stdout.write if args.output is None
                                         else args.output.open("w").write,
-                                        cve_data_path=get_cve_data_path(args.cve_data),
+                                        cve_cache=cve_cache,
                                         fill_missing_description=args.fill)
 
 def cmd_fill(args):
     if len(args.report_yml) > 1 and not args.inplace:
         raise SystemExit("Option --inplace needs to be used with multiple inputs")
 
-    import cve
-    cve_cache = cve.LRUMemDiskFetcherCache(get_cve_data_path(args.cve_data))
+    if args.legacy_cve_data:
+        import cve
+        cve_cache = cve.LRUMemDiskFetcherCache(get_cve_data_path(args.cve_data))
+    else:
+        cve_cache = CVEDatabaseAsCache(get_cvedb_path(args.cve_data))
 
     yaml = YAML()
     yaml.indent(mapping=2, sequence=4, offset=2)
@@ -594,6 +618,73 @@ def cmd_debug_extract(args):
     [print(*t) for t in extract_cve_entries(args.file[0].read_text(), debug)]
 
 
+def cmd_cvedb_init(args):
+    cvedb_path = get_cvedb_path(args.cve_data)
+    if cvedb_path.is_file() and not args.force:
+        raise SystemExit(f"Database '{cvedb_path}' already exists")
+
+    git_clone_path = args.git_clone.resolve()
+    if not git_clone_path.is_dir():
+        raise SystemExit(f"Path '{git_clone_path}' is not a directory")
+    if not (git_clone_path / ".git" / "config").is_file():
+        raise SystemExit(f"Path '{git_clone_path}' does not seem to be a Git checkout")
+
+    # Only Git supported at the moment.
+    import cvedb
+    db = cvedb.Database(cvedb_path, initialize=True)
+    db.set_metadata("source", "git")
+    db.set_metadata("git_path", str(git_clone_path))
+
+
+def cmd_cvedb_info(args):
+    cvedb_path = get_cvedb_path(args.cve_data)
+    print("Path:", cvedb_path)
+    if not cvedb_path.exists():
+        raise SystemExit("Database does not exist")
+    if not cvedb_path.is_file():
+        raise SystemExit("Database is not a file")
+
+    import cvedb
+    db = cvedb.Database(cvedb_path, initialize=False)
+    print("Count:", len(db))
+
+    print("Metadata:")
+    metadata = list(sorted(db.list_metadata()))
+    key_length = 0
+    type_length = 0
+    for key, type_string in metadata:
+        key_length = max(key_length, len(key))
+        type_length = max(type_length, len(type_string))
+    for key, type_string in metadata:
+        value = db.get_metadata(key)
+        print(f"  {key:{key_length}}  {type_string:{type_length}}  {value}")
+
+_COMMIT_RANGE_RE = re.compile(r"^([\da-f]*)\.\.([\da-f]*)$", re.I)
+
+def cmd_cvedb_import(args):
+    git_commit_range = _COMMIT_RANGE_RE.match(args.git_commit)
+    if not git_commit_range:
+        raise SystemExit(f"Invalid commit range '{args.git_commit}'")
+
+    import cvedb
+    db = cvedb.Database(get_cvedb_path(args.cve_data), initialize=False)
+
+    if not db.git_helper.pristine_checkout:
+        raise SystemExit(f"Git checkout '{db.git_helper.path}' has "
+                "modifications. A pristine checkout is needed.")
+
+    db_git_commit = db.get_metadata("git_commit")
+    if db_git_commit is not None and args.full:
+        raise SystemExit(f"Last update at {db_git_commit}, cannot perform a full import.")
+    if db_git_commit is None and not args.full:
+        raise SystemExit("No previous import point saved, rejecting partial import (missing --full?).")
+
+    if args.full:
+        db.full_import()
+    else:
+        db.update_import(git_commit_range[1] or None, git_commit_range[2] or None)
+
+
 log_levels = {logging.getLevelName(level).lower(): level
     for level in (logging.INFO, logging.DEBUG, logging.ERROR, logging.WARNING, logging.FATAL)}
 log_level_default_name = logging.getLevelName(logging.WARNING).lower()
@@ -604,17 +695,19 @@ arg_parser.add_argument("--log", choices=log_levels.keys(), default=log_level_de
 subparsers = arg_parser.add_subparsers(dest="subcommand", required=True)
 
 gen_parser = subparsers.add_parser("generate", aliases=("gen",), description="Generate advisory text.")
-gen_parser.add_argument("-c", "--cve-data", type=Path, default=None, help="path to the CVE data dump")
+gen_parser.add_argument("-c", "--cve-data", type=Path, default=None, help="path to the CVE data")
 gen_parser.add_argument("-f", "--fill", action="store_true", default=False, help="fill missing fields from CVE data")
 gen_parser.add_argument("-w", "--wsa-id", type=str, help="manually specify generated WSA identifier")
 gen_parser.add_argument("-o", "--output", type=Path, default=None, help="output file path, instead of stdout")
 gen_parser.add_argument("-m", "--markdown", action="store_true", default=False, help="generate Markdown")
 gen_parser.add_argument("-e", "--email", action="store_true", default=False, help="generate e-mail")
+gen_parser.add_argument("--legacy-cve-data", action="store_true", default=False, help="use the legacy CVE fetch-cache")
 gen_parser.add_argument("report_yml", type=Path, help="path to the WSA report YAML source")
 
 fil_parser = subparsers.add_parser("fill", description="Fill missing advisory fields.")
-fil_parser.add_argument("-c", "--cve-data", type=Path, default=None, help="path to the CVE data dump")
+fil_parser.add_argument("-c", "--cve-data", type=Path, default=None, help="path to the CVE data")
 fil_parser.add_argument("-i", "--inplace", action="store_true", default=False, help="edit YAML file in-place")
+fil_parser.add_argument("--legacy-cve-data", action="store_true", default=False, help="use the legacy CVE fetch-cache")
 fil_parser.add_argument("report_yml", type=Path, nargs="+", help="path to the WSA report YAML source")
 
 chk_parser = subparsers.add_parser("check", description="Check for CVEs in Apple security advisories")
@@ -626,6 +719,20 @@ ext_parser = subparsers.add_parser("debug-extract", description="Extract CVEs fr
 ext_parser.add_argument("--colour", "-c", action="store_true", default=False, help="coloured log on stderr")
 ext_parser.add_argument("file", type=Path, nargs=1, help="path to local HTML file")
 
+cvedb_parser = subparsers.add_parser("cvedb", description="Manage CVE database")
+cvedb_parser.add_argument("-c", "--cve-data", type=Path, default=None, help="path to the CVE database")
+cvedb_subparsers = cvedb_parser.add_subparsers(dest="cvedb_subcommand", required=True)
+
+cvedb_init = cvedb_subparsers.add_parser("init", description="Initialize CVE database")
+cvedb_init.add_argument("git_clone", type=Path, help="path to a Git checkout")
+cvedb_init.add_argument("--force", action="store_true", default=False, help="skip sanity checks, always initialize")
+
+cvedb_info = cvedb_subparsers.add_parser("info", description="Show CVE database information")
+
+cvedb_import = cvedb_subparsers.add_parser("import", description="Import CVEs into database")
+cvedb_import.add_argument("--full", action="store_true", default=False, help="full import, do not update existing entries")
+cvedb_import.add_argument("-g", "--git-commit", type=str, default="..", help="Git commit (or range) for incremental update")
+
 args = arg_parser.parse_args()
 logging.basicConfig(level=log_levels[args.log])
 ({
@@ -633,4 +740,9 @@ logging.basicConfig(level=log_levels[args.log])
     "fill": cmd_fill,
     "check": cmd_check,
     "debug-extract": cmd_debug_extract,
+    "cvedb": lambda args: ({
+        "init": cmd_cvedb_init,
+        "info": cmd_cvedb_info,
+        "import": cmd_cvedb_import,
+    })[args.cvedb_subcommand](args),
 })[args.subcommand](args)
