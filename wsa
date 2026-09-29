@@ -659,6 +659,37 @@ def cmd_cvedb_info(args):
         value = db.get_metadata(key)
         print(f"  {key:{key_length}}  {type_string:{type_length}}  {value}")
 
+
+def cmd_cvedb_show(args):
+    cvedb_path = get_cvedb_path(args.cve_data)
+    if not cvedb_path.exists():
+        raise SystemExit("Database does not exist")
+    if not cvedb_path.is_file():
+        raise SystemExit("Database is not a file")
+
+    import cvedb
+    db = cvedb.Database(cvedb_path, initialize=False)
+    if args.pretty:
+        import json
+        def get_cve_data(cve_id):
+            data = db.get(cve_id)
+            return json.dumps(data, indent=2)
+    else:
+        get_cve_data = db.get_json
+
+    if len(args.cve_id) == 1:
+        print(get_cve_data(args.cve_id[0]))
+    else:
+        datas = map(get_cve_data, args.cve_id)
+        if args.newline:
+            [print(d) for d in datas]
+        else:
+            first = True
+            print("[")
+            print(",\n".join("  " + "\n  ".join(i.splitlines()) for i in datas))
+            print("]")
+
+
 _COMMIT_RANGE_RE = re.compile(r"^([\da-f]*)\.\.([\da-f]*)$", re.I)
 
 def cmd_cvedb_import(args):
@@ -729,6 +760,11 @@ cvedb_init.add_argument("--force", action="store_true", default=False, help="ski
 
 cvedb_info = cvedb_subparsers.add_parser("info", description="Show CVE database information")
 
+cvedb_show = cvedb_subparsers.add_parser("show", description="Show CVE data")
+cvedb_show.add_argument("-p", "--pretty", action="store_true", default=False, help="pretty-print JSON output")
+cvedb_show.add_argument("-n", "--newline", action="store_true", default=False, help="new-line separated JSON output")
+cvedb_show.add_argument("cve_id", nargs="+", help="CVE identifier")
+
 cvedb_import = cvedb_subparsers.add_parser("import", description="Import CVEs into database")
 cvedb_import.add_argument("--full", action="store_true", default=False, help="full import, do not update existing entries")
 cvedb_import.add_argument("-g", "--git-commit", type=str, default="..", help="Git commit (or range) for incremental update")
@@ -743,6 +779,7 @@ logging.basicConfig(level=log_levels[args.log])
     "cvedb": lambda args: ({
         "init": cmd_cvedb_init,
         "info": cmd_cvedb_info,
+        "show": cmd_cvedb_show,
         "import": cmd_cvedb_import,
     })[args.cvedb_subcommand](args),
 })[args.subcommand](args)
