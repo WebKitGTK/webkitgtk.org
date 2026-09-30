@@ -158,11 +158,6 @@ CVE-2025-10502:
   description: 'Heap buffer overflow in ANGLE in Google Chrome prior to 140.0.7339.185
     allowed a remote attacker to potentially exploit heap corruption via malicious
     network traffic. (Chromium security severity: High)'
-CVE-2025-6558:
-  version: 2.54.0 or earlier
-  description: 'Insufficient validation of untrusted input in ANGLE and GPU in Google
-    Chrome prior to 138.0.7204.157 allowed a remote attacker to potentially perform
-    a sandbox escape via a crafted HTML page. (Chromium security severity: High)'
 CVE-2025-8901:
   version: 2.54.0 or earlier
   description: 'Out of bounds write in ANGLE in Google Chrome prior to 139.0.7258.127
