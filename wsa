@@ -64,9 +64,9 @@ class Formatter:
     def cve_list(self) -> str:
         raise NotImplementedError
 
-    def generate(self, write, cve_cache = None, fill_missing_description=False):
+    def generate(self, write, cve_db=None, fill_missing_description=False):
         if fill_missing_description:
-            assert cve_cache is not None
+            assert cve_db is not None
 
         self.header(write)
         for cve_id in sorted(self.wsa_data.keys()):
@@ -95,7 +95,7 @@ class Formatter:
             elif "description" in cve_data:
                 description = cve_data["description"]
             elif fill_missing_description:
-                cve = cve_cache.get(cve_id)
+                cve = cve_db.get(cve_id)
                 if cve and cve.description:
                     description = cve.description
 
@@ -240,11 +240,6 @@ class Markdown(Formatter):
             text = target
         return f"[{text}]({target})"
 
-def get_cve_data_path(p: Path | None) -> Path:
-    if p is None:
-        p = Path(__file__).parent / "cvedata" / "cache"
-    return p.resolve()
-
 def get_cvedb_path(p: Path | None) -> Path:
     if p is None:
         p = Path(__file__).parent / "cvedata" / "cve.db"
@@ -256,18 +251,6 @@ def determine_wsa_id(s: str) -> str | None:
     for m in wsa_id_re.finditer(s):
         return m[1]
     return None
-
-
-class CVEDatabaseAsCache:
-    __slots__ = ("_database",)
-
-    def __init__(self, database_path: Path, initialize: bool = False):
-        from cvedb import Database
-        self._database = Database(database_path, initialize=initialize)
-
-    def get(self, cve_id: str) -> None|Entry:
-        from cve import Entry
-        return Entry(data=self._database.get(cve_id))
 
 
 def cmd_generate(args):
@@ -291,29 +274,23 @@ def cmd_generate(args):
     with args.report_yml.open("r") as f:
         wsa_data = YAML(typ="safe").load(f)
 
-    cve_cache = None
+    cve_db = None
     if args.fill:
-        if args.legacy_cve_data:
-            import cve
-            cve_cache = cve.LRUMemDiskFetcherCache(get_cve_data_path(args.cve_data))
-        else:
-            cve_cache = CVEDatabaseAsCache(get_cvedb_path(args.cve_data))
+        import cvedb
+        cve_db = cvedb.Database(get_cvedb_path(args.cve_data), initialize=False)
 
     Fmt = Mail if args.email else Markdown
     Fmt(args.wsa_id, wsa_data).generate(sys.stdout.write if args.output is None
                                         else args.output.open("w").write,
-                                        cve_cache=cve_cache,
+                                        cve_db=cve_db,
                                         fill_missing_description=args.fill)
 
 def cmd_fill(args):
     if len(args.report_yml) > 1 and not args.inplace:
         raise SystemExit("Option --inplace needs to be used with multiple inputs")
 
-    if args.legacy_cve_data:
-        import cve
-        cve_cache = cve.LRUMemDiskFetcherCache(get_cve_data_path(args.cve_data))
-    else:
-        cve_cache = CVEDatabaseAsCache(get_cvedb_path(args.cve_data))
+    import cvedb
+    cve_db = cvedb.Database(get_cvedb_path(args.cve_data))
 
     yaml = YAML()
     yaml.indent(mapping=2, sequence=4, offset=2)
@@ -327,7 +304,7 @@ def cmd_fill(args):
             if cve_data is None:
                 wsa_data[cve_id] = cve_data = {}
             if "description" not in cve_data:
-                cve = cve_cache.get(cve_id)
+                cve = cve_db.get(cve_id)
                 if cve and cve.description:
                     cve_data["description"] = cve.description
                     modified = True
@@ -735,13 +712,11 @@ gen_parser.add_argument("-w", "--wsa-id", type=str, help="manually specify gener
 gen_parser.add_argument("-o", "--output", type=Path, default=None, help="output file path, instead of stdout")
 gen_parser.add_argument("-m", "--markdown", action="store_true", default=False, help="generate Markdown")
 gen_parser.add_argument("-e", "--email", action="store_true", default=False, help="generate e-mail")
-gen_parser.add_argument("--legacy-cve-data", action="store_true", default=False, help="use the legacy CVE fetch-cache")
 gen_parser.add_argument("report_yml", type=Path, help="path to the WSA report YAML source")
 
 fil_parser = subparsers.add_parser("fill", description="Fill missing advisory fields.")
 fil_parser.add_argument("-c", "--cve-data", type=Path, default=None, help="path to the CVE data")
 fil_parser.add_argument("-i", "--inplace", action="store_true", default=False, help="edit YAML file in-place")
-fil_parser.add_argument("--legacy-cve-data", action="store_true", default=False, help="use the legacy CVE fetch-cache")
 fil_parser.add_argument("report_yml", type=Path, nargs="+", help="path to the WSA report YAML source")
 
 chk_parser = subparsers.add_parser("check", description="Check for CVEs in Apple security advisories")

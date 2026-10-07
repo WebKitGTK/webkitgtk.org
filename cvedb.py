@@ -5,6 +5,7 @@ from functools import cached_property
 from itertools import batched
 from datetime import datetime
 from pathlib import Path
+import cve
 import logging
 import sys
 
@@ -393,15 +394,28 @@ class Database:
             SELECT json(cve_json) AS json FROM cve WHERE cve_id = ?
             """, (cve_id,)).fetchone()[0]
 
-    def get(self, cve_id: str):
+    def get_dict(self, cve_id: str) -> None|dict:
         """
-        Get data for a CVE.
+        Get data for a CVE as a dictionary.
 
         Note that this returns the same data as ``get_json()`` decoded into
         into Python types.
         """
+        json_text = self.get_json(cve_id)
+        if json_text is None:
+            return None
         import json
-        return json.loads(self.get_json(cve_id))
+        return json.loads(json_text)
+
+    def get(self, cve_id: str) -> None|cve.Entry:
+        """
+        Get data for a CVE.
+        """
+        # TODO: Query database directly instead of parsing JSON via .get_dict()
+        data = self.get_dict(cve_id)
+        if data is None:
+            return None
+        return cve.Entry(data=data)
 
     def __len__(self):
         """
