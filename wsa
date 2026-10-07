@@ -704,6 +704,9 @@ def cmd_cvedb_import(args):
         raise SystemExit(f"Git checkout '{db.git_helper.path}' has "
                 "modifications. A pristine checkout is needed.")
 
+    if args.pull:
+        db.git_helper.run_git("pull")
+
     db_git_commit = db.get_metadata("git_commit")
     if db_git_commit is not None and args.full:
         raise SystemExit(f"Last update at {db_git_commit}, cannot perform a full import.")
@@ -767,6 +770,8 @@ cvedb_show.add_argument("cve_id", nargs="+", help="CVE identifier")
 
 cvedb_import = cvedb_subparsers.add_parser("import", description="Import CVEs into database")
 cvedb_import.add_argument("--full", action="store_true", default=False, help="full import, do not update existing entries")
+cvedb_import.add_argument("--pull", action="store_true", default=False,
+        help="update Git checkout using 'git pull' before incremental update")
 cvedb_import.add_argument("-g", "--git-commit", type=str, default="..", help="Git commit (or range) for incremental update")
 
 args = arg_parser.parse_args()
