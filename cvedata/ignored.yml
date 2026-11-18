@@ -57,3 +57,7 @@ CVE-2026-43821: Cocoa only
 CVE-2026-64718: Cocoa only
 CVE-2026-65352: Cocoa only
 CVE-2026-65391: Cocoa only
+CVE-2026-112669: Cocoa only
+CVE-2026-112680: WebGPU unsupported
+CVE-2026-112699: WebGPU unsupported
+CVE-2026-113952: Cocoa only

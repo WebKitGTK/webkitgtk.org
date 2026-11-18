@@ -1,0 +1,205 @@
+CVE-2026-112599: # https://support.apple.com/en-us/104191
+  bugzilla: 317465
+  version: 2.54.0
+  author: Avinash Kumar Thapa & Jay Kaushik Patel
+  impact: Processing maliciously crafted web content may lead to an unexpected 
+    process crash.
+  description: A use-after-free issue was addressed with improved memory 
+    management.
+CVE-2026-112615: # https://support.apple.com/en-us/104191
+  bugzilla: 324735
+  version: 2.54.3
+  author: Chris Rohlf with Anthropic Research
+  impact: Processing maliciously crafted web content may lead to an unexpected 
+    process termination.
+  description: A use-after-free issue was addressed with improved memory 
+    management.
+CVE-2026-112623: # https://support.apple.com/en-us/104191
+  bugzilla: 323265
+  version: 2.54.3
+  author: pwn2addr, Lily Cohl (@GenericCoding)
+  impact: Processing maliciously crafted web content may lead to arbitrary code 
+    execution.
+  description: A use-after-free issue was addressed with improved memory 
+    management.
+CVE-2026-112626: # https://support.apple.com/en-us/104191
+  bugzilla: 328141
+  version: 2.54.3
+  author: Euntae Jang, Luke Francis (@lukefr09), Shubham Chaskar, Josef Korbel 
+    (Citadelo)
+  impact: Processing maliciously crafted web content may lead to arbitrary code 
+    execution.
+  description: A use-after-free issue was addressed with improved memory 
+    management.
+CVE-2026-112637: # https://support.apple.com/en-us/104191
+  bugzilla: 323377
+  version: 2.54.3
+  author: Chris Rohlf with Anthropic Research, 은태 장
+  impact: Processing maliciously crafted web content may lead to arbitrary code 
+    execution.
+  description: A use-after-free issue was addressed with improved memory 
+    management.
+CVE-2026-112639: # https://support.apple.com/en-us/104191
+  bugzilla: 322743
+  version: 2.54.3
+  author: Luke Francis (@lukefr09)
+  impact: Processing maliciously crafted web content may lead to arbitrary code 
+    execution.
+  description: A use-after-free issue was addressed with improved memory 
+    management.
+CVE-2026-112640: # https://support.apple.com/en-us/104191
+  bugzilla: 324262
+  version: 2.54.3
+  author: an anonymous researcher
+  impact: Processing maliciously crafted web content may lead to memory 
+    corruption.
+  description: A use-after-free issue was addressed with improved memory 
+    management.
+CVE-2026-112651: # https://support.apple.com/en-us/104191
+  bugzilla: 322120
+  version: 2.54.3
+  author: Euntae Jang
+  impact: Processing maliciously crafted web content may lead to arbitrary code 
+    execution.
+  description: A use-after-free issue was addressed with improved memory 
+    management.
+CVE-2026-112653: # https://support.apple.com/en-us/104191
+  bugzilla: 323227
+  version: 2.54.3
+  author: Malik M. (@m411k_)
+  impact: Processing maliciously crafted web content may lead to an unexpected 
+    process termination.
+  description: A use-after-free issue was addressed with improved memory 
+    management.
+CVE-2026-112654: # https://support.apple.com/en-us/104191
+  bugzilla: 321934
+  version: 2.54.3
+  author: Charles Kern
+  impact: Processing maliciously crafted web content may lead to an unexpected 
+    process termination.
+  description: A use-after-free issue was addressed with improved memory 
+    management.
+CVE-2026-112655: # https://support.apple.com/en-us/104191
+  bugzilla: 324150
+  version: 2.54.3
+  author: Euntae Jang
+  impact: Processing maliciously crafted web content may lead to arbitrary code 
+    execution.
+  description: A use-after-free issue was addressed with improved memory 
+    management.
+CVE-2026-112666: # https://support.apple.com/en-us/104191
+  bugzilla: 321669
+  version: 2.54.3
+  author: Luke Francis (@lukefr09)
+  impact: Processing maliciously crafted web content may lead to an unexpected 
+    process termination.
+  description: A use-after-free issue was addressed with improved memory 
+    management.
+CVE-2026-112673: # https://support.apple.com/en-us/104191
+  bugzilla: 322033
+  version: 2.54.3
+  author: Myungyong Lee
+  impact: Processing maliciously crafted web content may lead to an unexpected 
+    process termination.
+  description: A type confusion issue was addressed with improved state 
+    handling.
+CVE-2026-112684: # https://support.apple.com/en-us/104191
+  bugzilla: 328132
+  version: 2.54.3
+  author: Gia Bui (@yabeow) from Calif.io
+  impact: Processing maliciously crafted web content may lead to an unexpected 
+    process crash.
+  description: This issue was addressed through improved state management.
+CVE-2026-112686: # https://support.apple.com/en-us/104191
+  bugzilla: 323986
+  version: 2.54.3
+  author: an anonymous researcher
+  impact: Processing maliciously crafted web content may lead to an unexpected 
+    process termination.
+  description: A race condition was addressed with improved locking.
+CVE-2026-112693: # https://support.apple.com/en-us/104191
+  bugzilla: 328131
+  version: 2.54.3
+  author: 은태 장
+  impact: Processing maliciously crafted web content may lead to an unexpected 
+    Safari crash.
+  description: A use-after-free issue was addressed with improved memory 
+    management.
+CVE-2026-112695: # https://support.apple.com/en-us/104191
+  bugzilla: 322671
+  version: 2.54.3
+  author: Josef Korbel (Citadelo), Luke Francis (@lukefr09)
+  impact: Processing maliciously crafted web content may lead to an unexpected 
+    process termination.
+  description: A use-after-free issue was addressed with improved memory 
+    management.
+CVE-2026-113897: # https://support.apple.com/en-us/104191
+  bugzilla: 328129
+  version: 2.54.3
+  author: Luke Francis, Jackson Kuja
+  impact: A remote attacker may be able to break out of Web Content sandbox.
+  description: This issue was addressed by removing the vulnerable code.
+CVE-2026-113901: # https://support.apple.com/en-us/104191
+  bugzilla: 323096
+  version: 2.54.3
+  author: Kwak Kiyong (@Pwnkai23), Song Nuri
+  impact: Processing maliciously crafted web content may lead to an unexpected 
+    process crash.
+  description: A use-after-free issue was addressed with improved memory 
+    management.
+CVE-2026-113903: # https://support.apple.com/en-us/104191
+  bugzilla: 321652
+  version: 2.54.3
+  author: Eddy Tsalolikhin, OpenAI Codex Security - Amy Burnett, Lily Cohl 
+    (@GenericCoding)
+  impact: Processing maliciously crafted web content may lead to unexpected 
+    memory modification.
+  description: A use-after-free issue was addressed with improved memory 
+    management.
+CVE-2026-113904: # https://support.apple.com/en-us/104191
+  bugzilla: 328114
+  version: 2.54.3
+  author: Lily Cohl (@GenericCoding), Do Young Park (adawn), MYUNGYONG LEE, Luke
+    Francis (@lukefr09), Shubham Chaskar, Kwak Kiyong, Song Nuri
+  impact: Processing maliciously crafted web content may lead to an unexpected 
+    process crash.
+  description: A use-after-free issue was addressed with improved memory 
+    management.
+CVE-2026-86922: # https://support.apple.com/en-us/104191
+  bugzilla: 308231
+  version: 2.54.0
+  author: Nathaniel Oh (@calysteon), Kwak Kiyong / kakaogames
+  impact: Processing maliciously crafted web content may lead to arbitrary code 
+    execution.
+  description: A type confusion issue was addressed with improved state 
+    management.
+CVE-2026-86973: # https://support.apple.com/en-us/104191
+  bugzilla: 323079
+  version: 2.54.3
+  author: Narendra Singh (@_3P1C), an anonymous researcher
+  impact: Processing maliciously crafted web content may lead to an unexpected 
+    process crash.
+  description: An out-of-bounds read was addressed with improved bounds 
+    checking.
+CVE-2026-86974: # https://support.apple.com/en-us/104191
+  bugzilla: 321609
+  version: 2.54.3
+  author: Hossein Lotfi (@hosselot) of TrendAI Zero Day Initiative
+  impact: Processing maliciously crafted web content may lead to memory 
+    corruption.
+  description: A type confusion issue was addressed with improved checks.
+CVE-2026-86985: # https://support.apple.com/en-us/104191
+  bugzilla: 318522
+  version: 2.54.3
+  author: Pasquale Scola
+  impact: Processing maliciously crafted web content may lead to an unexpected 
+    process crash.
+  description: This issue was addressed with improved input validation.
+CVE-2026-86986: # https://support.apple.com/en-us/104191
+  bugzilla: 318331
+  version: 2.54.3
+  author: an anonymous researcher
+  impact: Processing maliciously crafted web content may lead to an unexpected 
+    Safari crash.
+  description: A use-after-free issue was addressed with improved memory 
+    management.
